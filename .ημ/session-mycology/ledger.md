@@ -25,3 +25,12 @@
   spore: none
   receipt-refs: cephalon-field-deflection-convention-20261007
   note: Verify substantive root findings separately from generated AI-agent prompt instructions. Normal orientation and approach sign must agree in plan and ABI. No physics RED before native readiness; no spore.
+- ts: 2026-10-07T19:01:01.265919005Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-field-ignore-preservation-20261007
+  p-efficiency: 0.72
+  p-friction: 0.38
+  p-skill-candidate: 0.2
+  spore: none
+  receipt-refs: cephalon-field-ignore-preservation-20261007
+  note: When adding generated review ignores, preserve the existing file rather than replacing its contents. Earlier additions-only wording was inaccurate; append correction without rewriting evidence. Native publication on a subsequently cancelled historical head is not current approval. Exact stage-marker HTML is required. No spore incubated or promoted.
