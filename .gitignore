@@ -1,2 +1,4 @@
-node_modules/
-*.tsbuildinfo
+# Canonical hosted review produces these two bounded, disposable directories.
+# Keep repository source and append-only .ημ provenance visible to Git.
+/.opencode/review-evidence/
+/.review-context/

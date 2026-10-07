@@ -1,0 +1,47 @@
+{
+  "app": {
+    "id": 3152464,
+    "slug": "eta-mu-ai"
+  },
+  "personalInstallation": {
+    "id": 118318185,
+    "account": "riatzukiza",
+    "repositorySelection": "all"
+  },
+  "newForkCoveredByExistingInstallation": true,
+  "newAppOrInstallationCreated": false,
+  "credentialContentsPrinted": false,
+  "observedAt": "2026-10-07T18:35:42.398304+00:00",
+  "repository": "riatzukiza/eros-eris-field",
+  "repositorySecretsMetadata": [
+    {
+      "name": "ETA_MU_APP_ID",
+      "updatedAt": "2026-10-07T18:35:42Z"
+    },
+    {
+      "name": "ETA_MU_APP_PRIVATE_KEY",
+      "updatedAt": "2026-10-07T18:35:42Z"
+    }
+  ],
+  "scope": "existing App key encrypted into only this repository; no key material retained in evidence",
+  "reviewPublication": "not yet verified",
+  "epistemicTier": "observed setup; not approval or completed reviewer route",
+  "firstHostedAttempt": {
+    "run": 37667654730,
+    "head": "bacd8f5248e53f04309fb193c4461c5915548bdd",
+    "conclusion": "failure",
+    "modelExecuted": false,
+    "failureStep": "Verify and install the bounded review context",
+    "actualFailure": "Quoted Unicode filenames in .review-context were not accepted by the pinned prefix cleanliness filter",
+    "credentialGateReached": false,
+    "logBytes": 231135,
+    "privateLogSha256": "cafa6519ffd090076cd8243c2e3c1b104aa6b3989f7259d25d107b9c22c11cbf"
+  },
+  "realGitContextFixture": {
+    "trustedGeneratedUnicodeFilesClean": true,
+    "unrelatedUntrackedFileDetected": true,
+    "trackedSourceChangeDetected": true,
+    "strictCanonicalGuardUnchanged": true,
+    "provenanceAndSourceNotIgnored": true
+  }
+}

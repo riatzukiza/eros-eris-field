@@ -28,7 +28,7 @@ not supply an implementation test or deployment guarantee.
 | `.github/workflows/opencode-code-review.yml.disabled` | Historical Kimi caller is disabled. Do not describe it as an installed available reviewer, guessed identity, quota exception or current approval. |
 | `.github/workflows/review-resolution-gate.yml` | Retained strict shared conversation check. It does not replace the canonical full merge gate. Its actual same-head run and result remain required evidence. |
 
-On 2026-10-07, the authenticated repository secret list was empty and its native
+On 2026-10-07, the initial authenticated repository secret list was empty and its native
 workflow inventory was empty. The user-token installation inventory request
 returned HTTP 403; that observation does not establish App installation scope.
 The reusable MiMo workflow explicitly refuses missing `ETA_MU_APP_ID` /
@@ -37,6 +37,24 @@ access to this repository. A configured YAML file without those credentials and
 native execution is a missing route. Preserve an actual failure and complete
 the setup before qualification; do not invent reviewer identity or a quota exit.
 Never print private keys, tokens or webhook URLs.
+
+Later native App-authenticated reads verified existing `eta-mu-ai` App `3152464`,
+personal installation `118318185`, `repository_selection: all`, and actual
+coverage of this new fork. Its two existing publisher values were encrypted into
+this repository at `2026-10-07T18:35:42Z`; metadata readback verifies their names
+and update times, not decrypted contents. No App or installation was created.
+The [setup observation](../.ημ/plan-evidence/reviewer-route-preparation-20261007.json)
+is not a completed review or publication proof.
+
+The first native run `37667654730` failed before model execution at bounded
+context installation: Git's default quoted Unicode filenames inside the trusted
+`.review-context` failed the pinned reusable workflow's prefix filter. It did not
+reach credential validation or produce a review. The root `.gitignore` excludes
+only the two declared generated context/evidence directories. A real isolated
+Git fixture must verify that Unicode files there are ignored while an unrelated
+untracked source file and a tracked source modification still fail cleanliness.
+The strict guard itself is retained. A later successful exact-head hosted run
+must verify the repaired route.
 
 The caller pins the shared workflow, Muse compiler, canonical agent-pack revision
 and OpenCode runner. Full hosted artifacts and native review publication need

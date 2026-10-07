@@ -283,10 +283,15 @@ operations for the relevant card. Existing upstream Rheos work owns this gap.
 Neither this file nor a local parser/validator/writer can substitute for it.
 An approved source plan may remain unmerged while that independent gate is open.
 
-Current review setup has no repository App publisher secrets observed, and the
-inherited active YAML requests eager squash auto-merge. This plan disables that
-caller and proposes the pinned canonical evidence-review caller. A missing
-publisher route remains a setup failure, not a quota exception or approval.
+Initial review setup had no repository App publisher secrets observed, and the
+inherited active YAML requested eager squash auto-merge. This plan disables that
+caller and adds the pinned canonical evidence-review caller. Later verified
+existing App installation coverage and encrypted repository secret setup are
+recorded in the workflow document and setup observation. First hosted review
+`37667654730` failed before model execution on quoted Unicode paths in trusted
+generated context; narrow root ignores preserve the strict source cleanliness
+guard. A successful current-head hosted publication remains required. A missing
+or failed route remains a setup failure, not a quota exception or approval.
 `docs/agent-workflows.md` reports actual routes; canonical PR policy remains in
 the external skill pack. Auto-merge stays off.
 
