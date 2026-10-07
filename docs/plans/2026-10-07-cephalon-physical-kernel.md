@@ -108,12 +108,29 @@ Its exact names and fields require this source plan's review.
   exhausted and failed outcomes are distinct.
 - `apply-outcome` takes an immutable observed choice/outcome identity and the
   admitted prior recall reference. It proposes attributed semantic feedback
-  once. The outer writer returns success only after actual storage success;
+  once, retaining effect/outcome identity, payload hash, scope and recall reference
+  in pending state. The outer writer returns success only after actual storage
+  success;
   refusal/failure never becomes a success receipt. Pending feedback and confirmed
   feedback are distinct. Retrying a failed outer write uses the same effect ID;
   only an actual writer acknowledgement admits the completed outcome and its
   persistent reinforcement. A prepared proposal is not success or permission to
   emit a second effect.
+- `confirm-feedback` takes that state and a trusted outer writer acknowledgement
+  carrying observation ID, writer principal, effect ID, outcome ID, payload hash,
+  scope revision and actual storage result. It matches the retained pending
+  effect/outcome/payload/scope, current scope and authorized writer before confirming
+  that existing feedback once. The adapter resolves writer authority through
+  the existing authorization boundary; a model assertion is not a trusted ack.
+  A failed storage result leaves feedback pending without reinforcement; the
+  writer retries the same effect ID. Repeated matching success acknowledgements
+  return the existing confirmation without a second reinforcement. Conflicting,
+  mismatched, revoked-scope or untrusted acknowledgements refuse unchanged state.
+  The confirmation retains effect/outcome/payload/scope/writer/ack provenance so
+  checkpoint/restart preserves idempotency; storage results are `persisted` or
+  `failed`, never an attempted-write success.
+  This pure operation records the independently observed result; it performs no
+  write/publication, admits no time and draws no RNG.
 - `checkpoint` encodes a canonical snapshot and transition/event cursor.
   Canonical encoding and hash format are adopted from the existing contract/event
   authorities where available, not invented locally.
@@ -339,6 +356,10 @@ The following are **future RED/GREEN obligations**, not tests run by this plan:
   contact, compaction or feedback; projection revision prevents stale use.
 - Polling/repeated requests do not emit/reinforce twice; failed storage returns
   failure; successful outcome feedback requires independently observed evidence.
+- Feedback confirmation tests actual success/failure acknowledgements, duplicate
+  success and retry after failure with the same effect ID; mismatched payload,
+  outcome, scope or writer and conflicting acknowledgements refuse unchanged.
+  Confirmation performs no storage/publication, time advance or RNG draw.
 - Two outside encounters under fixed seed change field and independent mood/
   attention, then recall and meaningful choice; continuity survives restart.
 - Full integration verifies actual scoped social effects and artifact quality,

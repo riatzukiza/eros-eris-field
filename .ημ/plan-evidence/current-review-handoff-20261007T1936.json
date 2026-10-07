@@ -1,0 +1,91 @@
+{
+  "epistemic_tier": "observed",
+  "kind": "selected-native-command-observation",
+  "not_provider_review_or_approval": true,
+  "observed_at": "2026-10-07T19:37:28.384602+00:00",
+  "source": {
+    "repository": "riatzukiza/eros-eris-field",
+    "pr": 1,
+    "head": "81477e7705dc4cfa7e05e375e4685e348b1f9a02",
+    "base": "3af779f3ec306834710719ccb46f49370343eed9",
+    "files": 13,
+    "insertions": 1025,
+    "deletions": 101,
+    "committed_receipts": 7,
+    "committed_reflections": 6,
+    "native_local_personal_binding": "matched",
+    "auto_merge": null,
+    "native_description": {
+      "bytes": 12966,
+      "sha256": "8e4b9f395c9b39c777a57386a2dc753dcb87c22e996566156c2d1516cebf9013"
+    },
+    "review_body_settlement": {
+      "id": 6045347017,
+      "bytes": 2955,
+      "sha256": "4ee656b737fb1b4408bba2c3ef8eb34b1a389f2fa403915c3e48dd5abc67cdaf",
+      "exact_readback": true
+    },
+    "historical_200_review": {
+      "id": 5447269472,
+      "state": "COMMENTED",
+      "finding": 4211058117,
+      "fixed_in": "81477e7705dc4cfa7e05e375e4685e348b1f9a02",
+      "run": 37671281511,
+      "native_run_conclusion": "success",
+      "raw_review_sha256": "4295eeb0a23986154457c9bea88d5c7f0a0c4de0671ff259bd3e9c38395fbca5"
+    },
+    "current_mimo": {
+      "run": 37675180817,
+      "job": 112977174081,
+      "last_actual_status": "in_progress",
+      "actual_job_start": "2026-10-07T19:32:58Z",
+      "current_approval_observed": false
+    },
+    "current_coderabbit": {
+      "request": 6045354688,
+      "reply": 6045356644,
+      "actual_reply": "Full review triggered.",
+      "last_actual_state": "pending",
+      "cooldown_respected_after": "2026-10-07T19:32:36Z"
+    },
+    "canonical_status_at_1934": {
+      "checks_pass": 4,
+      "threads_total": 4,
+      "unresolved": 0,
+      "unsettled": 0,
+      "planning_cohorts": 0,
+      "eligible_agents": [
+        "coderabbit",
+        "mimo"
+      ],
+      "quota_unavailable_optional_codex_source": 6044311543,
+      "gate": "BLOCKED",
+      "reasons": [
+        "no exact-head approval",
+        "review convergence"
+      ]
+    }
+  },
+  "installed_policy": {
+    "canonical_main": "4b4f48dae1b804b2581974e604cca618ecedadf1",
+    "matched_files_and_modes": 40,
+    "entry_sha256": "efe5e0818d673b8aab6f962a711ba80c10b7a1877b24b0e986217601b6042472",
+    "remote_verified_at_1933": true,
+    "unchanged_tests_not_repeated": true
+  },
+  "automation": {
+    "id": "cephalon-runtime-follow-up",
+    "status": "PAUSED",
+    "exact_prompt_readback": true,
+    "bytes": 26223,
+    "sha256": "764668f40fbdf90689452d8f6dc914180d3a42405ddfd843d31f5f8ed0de671f"
+  },
+  "boundaries": [
+    "owning plan only; no physical implementation/RED/build/native readiness/deployment",
+    "full character goal active",
+    "no provider credentials retained",
+    "no runtime/owner/PM2/cloud/board/maker/publication replay",
+    "no observation-only commit/push",
+    "all prior append-only bytes preserved"
+  ]
+}

@@ -53,3 +53,23 @@
   spore: none
   receipt-refs: cephalon-field-checkpoint-restore-20261007T1931
   note: Current native availability and findings control; old failed or pending snapshots stay historical. The available-agent policy is installed canonical law, not a local waiver. Checkpoint restoration needs a declared causal admission path; workflow evidence scope must be inspected at its actual immutable path. Shared-worktree fetches should be sequential and targeted. No spore incubated or promoted.
+
+- ts: 2026-10-07T19:37:28.384602+00:00
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-field-current-review-handoff-20261007T1936
+  p-efficiency: 0.86
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-current-review-handoff-20261007T1936
+  note: Persist current native IDs and reviewed policy without erasing historical observations. A real finding supplies a reason for a new source head; a quota or acknowledgement supplies no approval. Restored checkpoint ABI is a plan, not implemented graph or mood. Exact saved handoff prevents future agents from reviving obsolete quota blockers. No spore.
+
+- ts: 2026-10-07T20:00:35.789247+00:00
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-field-feedback-confirmation-20261007T2000
+  p-efficiency: 0.8
+  p-friction: 0.35
+  p-skill-candidate: 0.15
+  spore: none
+  receipt-refs: cephalon-field-feedback-confirmation-20261007T2000
+  note: A prepared feedback effect needs a declared operation consuming a trusted writer result. Exact provider failure stays distinct from completed review or quota evidence. Fix a shared receiver in its owner; caller ignores are mitigation, not a central repair or Major settlement. Canonical current available-agent policy and immutable installed pack prevent old rate-limit blockage. No spore incubated or promoted.

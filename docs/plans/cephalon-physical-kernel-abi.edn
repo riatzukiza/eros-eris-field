@@ -29,7 +29,7 @@
                   :residual-us :backlog-us :pending-events :event-cursor
                   :ordered-entities :intent-bonds :sparse-cells
                   :contribution-provenance :recall-requests :rng
-                  :pending-feedback :confirmed-outcome-ids]
+                  :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
@@ -69,7 +69,26 @@
                   :idempotency :immutable-outcome-id
                   :storage-success :outer-writer-observation-required
                   :pending-feedback :retry-same-effect-id
+                  :pending/required [:effect-id :outcome-id :payload-hash
+                                     :scope-revision :prior-recall-reference]
                   :confirmation :actual-writer-acknowledgement}
+  :confirm-feedback
+  {:input [:state :trusted-writer-acknowledgement]
+   :output [:state :confirmation-or-unchanged-refusal]
+   :acknowledgement/required [:observation-id :writer-principal :effect-id
+                              :outcome-id :payload-hash :scope-revision
+                              :storage-result]
+   :storage-result [:persisted :failed]
+   :matches [:pending-effect-id :pending-outcome-id :pending-payload-hash
+             :pending-scope-revision :current-scope-revision
+             :authorized-writer-principal]
+   :success :confirm-existing-pending-feedback-once
+   :retains [:effect-id :outcome-id :payload-hash
+             :scope-revision :writer-principal :ack-observation-id]
+   :idempotency :same-effect-and-matching-acknowledgement
+   :failure :pending-without-reinforcement
+   :conflicting-or-untrusted-ack :unchanged-refusal
+   :effects :none :new-elapsed-time :none :rng-draws :none}
   :checkpoint {:input [:state] :output [:canonical-snapshot :event-cursor]
                :encoding :consume-existing-contract-authority}
   :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor

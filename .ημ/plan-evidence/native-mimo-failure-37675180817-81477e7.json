@@ -1,0 +1,36 @@
+{
+  "schema": "cephalon.selected-native-observation/v1",
+  "observed_at": "2026-10-07T20:00:35.789247+00:00",
+  "evidence_tier": "observed-command-output-transcription",
+  "not_provider_approval": true,
+  "source": {
+    "repository": "riatzukiza/eros-eris-field",
+    "pull_request": 1,
+    "head": "81477e7705dc4cfa7e05e375e4685e348b1f9a02",
+    "run_id": 37675180817,
+    "run_url": "https://github.com/riatzukiza/eros-eris-field/actions/runs/37675180817",
+    "job_id": 112977174081
+  },
+  "native_jobs": {
+    "deterministic": "success",
+    "context": "success",
+    "model": "failure",
+    "terminal_gate": "failure"
+  },
+  "model_step": "Run bounded evidence-first OpenCode review",
+  "error": {
+    "at": "2026-10-07T19:46:37.3501219Z",
+    "provider_status": 400,
+    "message": "messages[90]: tool messages must include a non-empty string tool_call_id",
+    "attempt": 1,
+    "exit_code": 1
+  },
+  "publication": "skipped",
+  "native_review_published": false,
+  "limits": [
+    "No completed review, passing verdict, approval or cohort credit",
+    "Failed provider attempt is not quota-unavailability",
+    "All historical native rows and prior selected observations retained",
+    "This is a selected transcription, not a raw REST response or a runtime probe"
+  ]
+}
