@@ -36,6 +36,11 @@
                   :mantle-lineage :intent-wallet :emission-id :recall-request-id]
  :bond/required [:id :endpoints :intent :contributions :provenance]
  :collision {:operations [:absorb-full :deflect :exchange-bounded]
+             :normal :outward-from-recipient-surface-toward-incident-particle
+             :relative-velocity :particle-world-minus-recipient-world
+             :deflect-when :dot-relative-velocity-normal-strictly-negative
+             :separating-or-tangent :unchanged-relative-velocity
+             :world-velocity :resolved-relative-plus-recipient-world
              :partial-absorption :exchange-bounded-surviving-particle
              :exchange :min-sender-available-recipient-capacity-configured-cap
              :pass-order :canonical-contact-and-intent-kind

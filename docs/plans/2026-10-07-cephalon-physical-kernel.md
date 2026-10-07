@@ -196,11 +196,16 @@ Debit and credit commit atomically; per-kind totals are exactly conserved.
 No implicit fallback between operations, fractional rounding, minting, borrowing
 or owner handoff. Any overflow refuses the entire transition.
 
-Deflection uses a finite normalized contact normal and restitution `e∈[0,1]`:
-for an approaching relative velocity, `v' = v-(1+e)*(v·n)*n`. Separating contact
-does not reflect again. The adapter-independent domain restores the recipient's
-world velocity after resolving that relative velocity. Degenerate normal refuses
-the operation. Admitted
+Deflection uses a finite normalized contact normal `n` pointing outward from
+the recipient's contact surface toward the incident particle. Relative velocity
+is `v = particleWorldVelocity - recipientWorldVelocity`, with restitution
+`e∈[0,1]`. Reflection applies exactly when `(v·n) < 0`:
+`v' = v-(1+e)*(v·n)*n`. For `(v·n) >= 0`, separating or tangent contact keeps
+the relative velocity unchanged. The adapter-independent domain adds the
+recipient's world velocity back after resolution. Degenerate normal refuses
+the operation. For a stationary recipient, `n=[1,0]` and `e=1`, approaching
+`v=[-1,0]` must become `[1,0]`; separating `v=[1,0]` must stay `[1,0]`.
+These are required future RED cases, not executed solver tests. Admitted
 classification/geometry and coefficients are explicit configuration/input;
 random exploration cannot decide ownership, authorization or resource transfer.
 The reviewed RED matrix must cover multi-contact ordering, insufficient
@@ -307,6 +312,9 @@ The following are **future RED/GREEN obligations**, not tests run by this plan:
   work; one explicit dissimilar bond avoids double force and lost intent.
 - Same-seed/noise/permutation/restart replay and ordered collisions preserve
   exact contacts, wallets, owners, paths and choices within scalar tolerance.
+- Deflection approaching `(v·n)<0`, separating `(v·n)>0` and tangent `(v·n)=0`
+  cases bind the outward normal, restitution and restoration of a moving
+  recipient's world velocity. Only the approaching case reflects.
 - Absorb/deflect/exchange capacity, zero/multiple contacts and exact conserved
   integer provenance falsify fractional, minted or respent units.
 - A changed bond/deposit under fixed seed changes actual traced physical recall
