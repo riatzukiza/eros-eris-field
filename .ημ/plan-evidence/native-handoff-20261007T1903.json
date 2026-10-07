@@ -1,0 +1,126 @@
+{
+  "evidenceKind": "Selected native-command observations; not a raw provider review, approval or completed current-head cohort",
+  "observedAt": "2026-10-07T19:03:55.657542+00:00",
+  "repository": "riatzukiza/eros-eris-field",
+  "pullRequest": 1,
+  "head": "200ece03e17843dc11296ec6a389720183554515",
+  "base": "3af779f3ec306834710719ccb46f49370343eed9",
+  "bindingsFreshlyFetchedAndNativeMatched": true,
+  "committedDiff": {
+    "files": 11,
+    "insertions": 851,
+    "deletions": 101,
+    "receipts": 5,
+    "reflectionEntries": 4
+  },
+  "nativeDescription": {
+    "bytes": 9794,
+    "sha256": "b68079f65fca9e4d4b8fe532d9e39212db27d0470eebe14a0e3daec34e5c22c7",
+    "exactWholeBodyReadback": true,
+    "autoMerge": null
+  },
+  "stage": {
+    "recognized": "planning",
+    "correctedUneditedDeclaration": 6044752595,
+    "currentHeadDeclarationAndReviewBodySettlement": 6044811275,
+    "earlierMalformedBareTextCommentPreserved": 6044658533,
+    "currentDeclarationReadback": {
+      "bytes": 2837,
+      "sha256": "7e3696e7b0e9982fe2b428c3b557ae0de86c1c0dd25f59a59a205441aabf21fa"
+    }
+  },
+  "findings": {
+    "coderabbit": {
+      "review": 5446714426,
+      "root": 4210584910,
+      "thread": "PRRT_kwDOU_2F986qCyAX",
+      "fix": "b899d4bfb0210e6a6ba42d39b1e84ef772d4598f",
+      "settled": true
+    },
+    "mimo": {
+      "review": 5446916677,
+      "reviewHead": "dc8d6de90f509aecb59b6f9eeb9642e95e339bdc",
+      "state": "COMMENTED",
+      "submittedAt": "2026-10-07T18:55:29Z",
+      "root": 4210760026,
+      "thread": "PRRT_kwDOU_2F986qDNBJ",
+      "fix": "200ece03e17843dc11296ec6a389720183554515",
+      "settled": true,
+      "bodyNotesAnswered": 6044811275,
+      "historicalPublisherActuallyWorked": true,
+      "noCurrentHeadApproval": true
+    }
+  },
+  "latestCanonicalStatus": {
+    "checks": {
+      "pass": 2,
+      "pending": 2
+    },
+    "threads": 2,
+    "unresolved": 0,
+    "unsettledFindingBlockers": 0,
+    "exactHeadApprovals": [],
+    "planningRounds": 0,
+    "cohort": [
+      "coderabbit",
+      "mimo"
+    ],
+    "gate": "BLOCKED",
+    "blockers": [
+      "no current-head trusted approval",
+      "pending required checks",
+      "review convergence"
+    ]
+  },
+  "reviewRuns": {
+    "current": {
+      "id": 37671281511,
+      "head": "200ece03e17843dc11296ec6a389720183554515",
+      "status": "pending"
+    },
+    "b899": {
+      "id": 37670195544,
+      "head": "b899d4bfb0210e6a6ba42d39b1e84ef772d4598f",
+      "status": "in_progress"
+    },
+    "dc8": {
+      "id": 37668627774,
+      "conclusion": "cancelled",
+      "actuallyPublishedFindingReview": 5446916677
+    },
+    "initial": {
+      "id": 37667654730,
+      "conclusion": "failure",
+      "modelExecuted": false,
+      "credentialGateReached": false
+    }
+  },
+  "availability": {
+    "coderabbitRequestWithheldUntil": "2026-10-07T19:32:36Z",
+    "withheldRequestIsNotQuotaException": true,
+    "codexAccountQuota": 6044311543,
+    "codexReset": "UNKNOWN",
+    "paidOrOnDemandUsage": false
+  },
+  "verification": {
+    "baseIgnoreBytesRestored": true,
+    "realGitFixture": [
+      "developer outputs ignored",
+      "generated Unicode review context ignored",
+      "unrelated source detected",
+      "tracked change detected",
+      "provenance visible"
+    ],
+    "canonicalGuardUnchanged": true,
+    "priorLedgerPrefixesByteIdentical": true,
+    "diffHygiene": "PASS",
+    "physicsTestsExecuted": false,
+    "nativeRheosReady": false,
+    "deployed": false
+  },
+  "canonicalSkill": {
+    "freshNativeMain": "4b4f48dae1b804b2581974e604cca618ecedadf1",
+    "entrySha256": "efe5e0818d673b8aab6f962a711ba80c10b7a1877b24b0e986217601b6042472",
+    "unchangedPackReinstalledOrRetested": false
+  }
+}

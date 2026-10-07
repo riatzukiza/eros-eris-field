@@ -34,3 +34,22 @@
   spore: none
   receipt-refs: cephalon-field-ignore-preservation-20261007
   note: When adding generated review ignores, preserve the existing file rather than replacing its contents. Earlier additions-only wording was inaccurate; append correction without rewriting evidence. Native publication on a subsequently cancelled historical head is not current approval. Exact stage-marker HTML is required. No spore incubated or promoted.
+- ts: 2026-10-07T19:03:55.706151324Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-field-native-handoff-20261007T1903
+  p-efficiency: 0.8
+  p-friction: 0.3
+  p-skill-candidate: 0.15
+  spore: none
+  receipt-refs: cephalon-field-native-handoff-20261007T1903
+  note: Use the current coherent canonical skill to distinguish quota availability from actual review execution and mandatory checks. Bare stage text was malformed; corrected HTML marker proves planning, not a review. Historical publication can survive cancelled workflow without becoming current approval. No observation-only commit or spore.
+
+- ts: 2026-10-07T19:31:37.339815+00:00
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-field-checkpoint-restore-20261007T1931
+  p-efficiency: 0.84
+  p-friction: 0.24
+  p-skill-candidate: 0.12
+  spore: none
+  receipt-refs: cephalon-field-checkpoint-restore-20261007T1931
+  note: Current native availability and findings control; old failed or pending snapshots stay historical. The available-agent policy is installed canonical law, not a local waiver. Checkpoint restoration needs a declared causal admission path; workflow evidence scope must be inspected at its actual immutable path. Shared-worktree fetches should be sequential and targeted. No spore incubated or promoted.

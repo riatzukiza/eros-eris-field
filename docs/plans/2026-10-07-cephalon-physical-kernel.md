@@ -114,10 +114,22 @@ Its exact names and fields require this source plan's review.
   only an actual writer acknowledgement admits the completed outcome and its
   persistent reinforcement. A prepared proposal is not success or permission to
   emit a second effect.
-- `checkpoint` encodes a canonical snapshot and transition/event cursor. Restore
-  validates kernel/config/projection revisions, grants, seed counters and causal
-  contributions before use. Canonical encoding and hash format are adopted from
-  the existing contract/event authorities where available, not invented locally.
+- `checkpoint` encodes a canonical snapshot and transition/event cursor.
+  Canonical encoding and hash format are adopted from the existing contract/event
+  authorities where available, not invented locally.
+- `restore` takes the prior state (or an explicit empty state), that snapshot and
+  cursor, the current trusted visible projection and physical configuration.
+  Before any causal use it validates kernel/config/hash/scope/projection
+  revisions, current grants, snapshot/cursor agreement, exact time accounting,
+  seed state/draw counter and attributed causal contributions. It returns the
+  restored state and cursor, or refuses with unchanged prior state and a specific
+  reason. A mismatched or revoked scope refuses the snapshot; filtering its
+  displayed memories cannot authorize retained pressure or trails. The adapter
+  may separately admit a fresh current projection through `admit-state`.
+  Restore admits no elapsed time, draws no RNG, performs no storage/publication
+  and does not replay confirmed outcomes. Later ordered replay uses the validated
+  cursor and the existing `advance`/`catch-up` operations; pending feedback keeps
+  its original effect identity and still requires an actual writer acknowledgement.
 
 JS strings/arrays/objects convert at the adapter boundary to Clojure data. Native
 provider and storage output is untrusted input. Both sides of replaceable seams
@@ -312,6 +324,10 @@ The following are **future RED/GREEN obligations**, not tests run by this plan:
   work; one explicit dissimilar bond avoids double force and lost intent.
 - Same-seed/noise/permutation/restart replay and ordered collisions preserve
   exact contacts, wallets, owners, paths and choices within scalar tolerance.
+- Checkpoint/restore preserves state and cursor without time, RNG or effect
+  replay. Malformed snapshots, inconsistent cursors/time/seed counters, mismatched
+  kernel/config/scope/projection revisions, revoked grants and unattributed
+  causal contributions refuse unchanged prior state before causal use.
 - Deflection approaching `(v·n)<0`, separating `(v·n)>0` and tangent `(v·n)=0`
   cases bind the outward normal, restitution and restoration of a moving
   recipient's world velocity. Only the approaching case reflects.

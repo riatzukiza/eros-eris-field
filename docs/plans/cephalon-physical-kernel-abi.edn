@@ -71,7 +71,17 @@
                   :pending-feedback :retry-same-effect-id
                   :confirmation :actual-writer-acknowledgement}
   :checkpoint {:input [:state] :output [:canonical-snapshot :event-cursor]
-               :encoding :consume-existing-contract-authority}}
+               :encoding :consume-existing-contract-authority}
+  :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor
+                    :trusted-visible-projection :physical-configuration]
+            :output [:restored-state-and-cursor-or-unchanged-refusal]
+            :validates [:kernel-revision :config-revision :config-hash
+                        :scope-revision :projection-revision :current-grants
+                        :snapshot-cursor-agreement :time-accounting
+                        :seed-state-and-draw-counter :causal-contributions]
+            :scope-mismatch :refused-before-causal-use
+            :effects :none :new-elapsed-time :none :rng-draws :none
+            :outcome-replay :forbidden}}
  :result/statuses [:admitted :refused :denied :no-contact :complete
                    :incomplete :stale :exhausted :failed]
  :replay {:continuous {:absolute 1.0e-9 :relative 1.0e-9}
