@@ -1,0 +1,81 @@
+;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
+{:proposal/version "cephalon-physical-kernel/2026-10-07"
+ :proposal/status :unimplemented
+ :source/base "3af779f3ec306834710719ccb46f49370343eed9"
+ :selection/repository "riatzukiza/foresight"
+ :selection/revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/path "docs/notes/2026-10-07-cephalon-field-kernel-selection.md"
+ :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
+ :task/owner-selection "b5f2ba9e-8d67-4c73-9919-e275983aca87"
+ :target {:runtime :compiled-cljs-node :scalar :finite-binary64
+          :dimensions 2 :distance-unit :world-unit
+          :safe-integer-range [0 9007199254740991]
+          :cross-runtime-parity :not-claimed}
+ :clock {:elapsed-unit :integer-microsecond :quantum 10000
+         :max-substeps-per-call 100 :carry :exact-residual-and-backlog
+         :zero :exact-no-op :catch-up :distinct-operation-no-new-time
+         :event-time :ordered-kernel-time-boundaries
+         :host-utc :observation-provenance-only}
+ :seed {:sampler :xorshift32 :shifts [13 17 5]
+        :range [1 4294967295] :draw-counter :exact-safe-integer
+        :noise :lazy-2d-simplex :permutation :qualified-seeded-table}
+ :field {:layers 8 :layer-indices [0 1 2 3 4 5 6 7]
+         :key [:scope-revision :layer-index :cell-x :cell-y]
+         :deposit :velocity-amplitude-times-gain-weight-step
+         :buffers :prior-and-next :decay :elapsed-exponential
+         :semantic-bindings :required-versioned-configuration}
+ :state/required [:kernel-revision :config-revision :config-hash
+                  :scope-revision :projection-revision :kernel-time-us
+                  :residual-us :backlog-us :pending-events :event-cursor
+                  :ordered-entities :intent-bonds :sparse-cells
+                  :contribution-provenance :recall-requests :rng
+                  :pending-feedback :confirmed-outcome-ids]
+ :entity/required [:id :kind :position :velocity :mass :scope-revision]
+ :entity/kinds [:presence :nexus :daimoi]
+ :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
+                  :mantle-lineage :intent-wallet :emission-id :recall-request-id]
+ :bond/required [:id :endpoints :intent :contributions :provenance]
+ :collision {:operations [:absorb-full :deflect :exchange-bounded]
+             :partial-absorption :exchange-bounded-surviving-particle
+             :exchange :min-sender-available-recipient-capacity-configured-cap
+             :pass-order :canonical-contact-and-intent-kind
+             :incoming-units :not-respent-in-contact-pass
+             :wallet-commit :atomic-exact-conservation
+             :insufficient-full-absorption :refused
+             :implicit-fallback :forbidden
+             :emitted-owner-change :forbidden}
+ :functions
+ {:admit-state {:input [:trusted-visible-projection :physical-configuration]
+                :output [:admitted-state-or-unchanged-refusal]}
+  :advance {:input [:state :elapsed-us :ordered-boundary-events]
+            :output [:state :observations :residual-us :backlog-us :completeness]}
+  :catch-up {:input [:state]
+             :output [:state :observations :residual-us :backlog-us :completeness]
+             :new-elapsed-time :none :max-substeps 100}
+  :emit-recall {:input [:state :scoped-immutable-request :validated-seed
+                       :physical-budget :mood-lens-revision]
+                :output [:state :request-result] :idempotency :request-id}
+  :read-recall {:input [:state :request-id :current-scope-revision]
+                :output [:status :motion :bonds :contacts :included-memory-ids
+                         :inclusion-reasons :kernel-horizon :budget-result]
+                :effects :none}
+  :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference]
+                  :output [:state :proposed-feedback-or-refusal]
+                  :idempotency :immutable-outcome-id
+                  :storage-success :outer-writer-observation-required
+                  :pending-feedback :retry-same-effect-id
+                  :confirmation :actual-writer-acknowledgement}
+  :checkpoint {:input [:state] :output [:canonical-snapshot :event-cursor]
+               :encoding :consume-existing-contract-authority}}
+ :result/statuses [:admitted :refused :denied :no-contact :complete
+                   :incomplete :stale :exhausted :failed]
+ :replay {:continuous {:absolute 1.0e-9 :relative 1.0e-9}
+          :exact [:identity :event-order :residual-time :seed-counter
+                  :wallets :contacts :paths :grants :included-memories
+                  :selected-actions :actual-byte-hashes]}
+ :adoption/requires [:current-source-review :native-rheos-readiness
+                     :source-rights-and-notices :standalone-build
+                     :complete-calibration-and-load-evidence
+                     :red-laws-and-tests :green-domain-and-adapters
+                     :qualified-compiled-artifact :scoped-integration
+                     :full-character-loop-deployed-verification]}

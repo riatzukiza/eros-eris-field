@@ -1,101 +1,71 @@
-# Agent Workflows: Kanban → GitHub → Kimi → Review Gates
+# Agent workflows and observed setup
 
-This repository participates in the shared OpenHax / Octave Commons automation stack. Agents working here should understand the following workflow before opening or reviewing PRs.
+License: GPL-3.0-or-later (new process documentation).
 
-## GitHub event visibility
+Read `~/.agents/skills/pr-flow/SKILL.md` for every PR phase. The current canonical
+pack owns review, availability, findings, convergence and merge policy. Native
+evidence and actual repository routes control each qualification; historical
+workflow descriptions or a model's summary cannot substitute for them.
 
-GitHub events are mirrored to Discord through `.github/workflows/github-events-discord.yml` using the `DISCORD_REVIEW_WEBHOOK_URL` secret.
+## Source work
 
-Mirrored events include:
+Development head and base are `riatzukiza/eros-eris-field`. Organizational
+publication requires separate release qualification. Plans link Foresight's
+existing workspace cards and explicit UUIDs, rather than maintaining another
+board. Rheos alone supplies board state, dependency admission and readiness.
 
-- issues and issue comments
-- pull request lifecycle events
-- pull request reviews
-- releases
-- pushes to `main`, `master`, `dev`, and `device/**`
-- selected workflow completions for OpenCode/Kimi review workflows
+The [owning physical-kernel plan](plans/2026-10-07-cephalon-physical-kernel.md)
+records the current source map, proposed ABI, numeric/collision decisions and
+remaining build/licensing/calibration/integration gates. Planning review does
+not supply an implementation test or deployment guarantee.
 
-Do not print or copy webhook URLs, bot tokens, GitHub tokens, Kimi keys, or other secrets into logs, issues, PR comments, or commits.
+## Review routes
 
-## Kimi issue agent
+| Surface | Actual scope and limitation |
+| --- | --- |
+| Native CodeRabbit and Codex mentions | Request on a ready PR through canonical `pr.cljs`. Verify actual response identity, completed input, exact head, findings and native quota/pending state. An invitation is not evidence that an App is installed or has finished. |
+| `.github/workflows/eta-mu-review.yml` | Proposed pinned canonical evidence-first MiMo caller. It grants read scopes, supplies exact PR head and forwards only the two App publisher secrets. Its diff/EDN gates check planning input; they do not compile or verify physical behavior. |
+| `.github/workflows/opencode-code-review.yml.disabled` | Historical Kimi caller is disabled. Do not describe it as an installed available reviewer, guessed identity, quota exception or current approval. |
+| `.github/workflows/review-resolution-gate.yml` | Retained strict shared conversation check. It does not replace the canonical full merge gate. Its actual same-head run and result remain required evidence. |
 
-`.github/workflows/opencode-issue-agent.yml` runs OpenCode with Kimi For Coding on issue events and on a daily schedule.
+On 2026-10-07, the authenticated repository secret list was empty and its native
+workflow inventory was empty. The user-token installation inventory request
+returned HTTP 403; that observation does not establish App installation scope.
+The reusable MiMo workflow explicitly refuses missing `ETA_MU_APP_ID` /
+`ETA_MU_APP_PRIVATE_KEY`. Its actual publisher requires the existing App to have
+access to this repository. A configured YAML file without those credentials and
+native execution is a missing route. Preserve an actual failure and complete
+the setup before qualification; do not invent reviewer identity or a quota exit.
+Never print private keys, tokens or webhook URLs.
 
-Kimi may:
+The caller pins the shared workflow, Muse compiler, canonical agent-pack revision
+and OpenCode runner. Full hosted artifacts and native review publication need
+their own exact-head verification. Keep paid/on-demand credits disabled.
 
-- triage new, reopened, or edited issues;
-- ask for clarification when an issue is underspecified;
-- close issues that are clearly irrelevant, spam, duplicates, or out of scope, with a concise reason;
-- open a linked PR for a small safe fix.
+## Merge and operational automation
 
-Kimi must not close ambiguous issues or make broad/destructive changes.
+`.github/workflows/auto-merge.yml.disabled` preserves the historical eager
+`SQUASH` caller as inactive evidence. It cannot be the merge authority. New PRs
+stay ready with native auto-merge off; eventual authorized merge uses the
+canonical current-head gate and its merge-commit guard.
 
-## Kimi PR code review
+GitHub visibility workflows remain inherited. Their external Discord writes
+depend on the existing private webhook configuration. This plan neither
+configures a webhook nor proves message delivery.
 
-`.github/workflows/opencode-code-review.yml` runs OpenCode with Kimi For Coding on pull requests.
+The inherited Kanban sync workflow targets `kanban/` and schedules issue writes.
+There is no source board authored here, and issues were observed disabled on
+the new fork. Do not run this workflow to manufacture cards or enable repository
+settings as a shortcut. Workspace board work uses native Rheos in Foresight.
 
-Kimi should:
+Running creative work is independent from review setup. Keep one event/gateway
+owner and the existing native creative clock. Do not restart active makers,
+replay social publication, change unrelated PM2 services or enable cloud event
+runtime to maintain this source plan.
 
-- review correctness, security, maintainability, tests, and repository conventions;
-- submit concrete findings as GitHub PR inline review comments on exact changed lines whenever GitHub can attach them;
-- leave a short passing summary when there are no actionable findings;
-- treat linked Kanban/GitHub issues as the source of task intent.
+## Evidence
 
-Inline PR review comments are mirrored to Discord by `.github/workflows/code-review-comments-discord.yml`.
-
-## CodeRabbit and review gates
-
-CodeRabbit may add inline review comments. Repositories with branch protection enabled require review-thread resolution before merge when GitHub permits `required_conversation_resolution`.
-
-Agent rules:
-
-1. Do not merge while actionable inline review threads remain unresolved.
-2. Resolve CodeRabbit/Kimi comments by patching the code or explicitly explaining why no change is needed.
-3. Prefer small targeted commits over broad rewrites.
-4. Re-run or wait for required checks after pushing fixes.
-
-## Kanban → GitHub issue sync
-
-Markdown Kanban cards are the local planning source. GitHub issues are the collaboration and automation surface.
-
-The eta-mu CLI supports syncing Kanban cards to GitHub issues:
-
-```bash
-eta-mu kanban sync github --tasks-dir <kanban-dir> --repo <owner/repo> --dry-run
-eta-mu kanban sync github --tasks-dir <kanban-dir> --repo <owner/repo> --max-writes 25 --write-delay-ms 5000
-```
-
-The underlying package command is also available:
-
-```bash
-openhax-kanban sync github --tasks-dir <kanban-dir> --repo <owner/repo>
-```
-
-Sync behavior:
-
-- Issues are keyed by an idempotent marker: `<!-- openhax-kanban-sync uuid="..." -->`.
-- Labels include `kanban`, `status:<status>`, `priority:<priority>`, and task frontmatter labels.
-- Existing issues are updated when the Kanban title/body/status/labels change.
-- Existing issues are closed when the task becomes `done` or `rejected`.
-- New issues are not created for tasks already marked `done` or `rejected`.
-
-GitHub enforces secondary content-creation limits. Always dry-run first and use `--max-writes` plus `--write-delay-ms` for live syncs.
-
-## Kanban label vocabulary
-
-Typical labels produced by sync:
-
-- `kanban`
-- `status:icebox`, `status:incoming`, `status:accepted`, `status:breakdown`, `status:blocked`, `status:ready`, `status:todo`, `status:in_progress`, `status:review`, `status:document`, `status:done`, `status:rejected`
-- `priority:P0`, `priority:P1`, `priority:P2`, `priority:P3`
-- task-specific frontmatter labels, normalized for GitHub
-
-## Agent expectations
-
-When working on this repo:
-
-1. Look for local Kanban cards before creating new issues.
-2. If an issue has an `openhax-kanban-sync` marker, treat the synced Kanban card as the source of truth.
-3. Keep status labels consistent with actual task progress.
-4. Mention or link the synced issue/PR relationship when opening fixes.
-5. Preserve auditability: receipts, PR descriptions, and comments should explain what changed and why.
+Record owned work append-only under `.ημ/receipts.edn` and retain explicit source,
+configuration, artifact and native record hashes. Preserve observed, derived,
+provisional and accepted claims separately. Reflections go in
+`.ημ/session-mycology/ledger.md`; a reflection is not a review or a policy waiver.
