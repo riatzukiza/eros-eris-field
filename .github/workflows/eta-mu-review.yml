@@ -1,0 +1,27 @@
+name: eta-mu evidence review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  review:
+    name: Evidence-first review (eta-mu)
+    uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415
+    with:
+      pr_head_sha: ${{ github.event.pull_request.head.sha }}
+      muse_revision: 0b9a91492c8355e6933dc2164d35668cb76d9e60
+      agents_revision: 4b4f48dae1b804b2581974e604cca618ecedadf1
+      opencode_version: 1.18.31
+      setup_eta_mu_toolchain: false
+      evidence_gates_script: |
+        run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
+        run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
+        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [clojure.edn :as edn]) (quote ["node:fs" :as fs])) (edn/read-string (.readFileSync fs "docs/plans/cephalon-physical-kernel-abi.edn" "utf8")) (println "Proposed ABI EDN parsed; no domain law executed")'
+    secrets:
+      ETA_MU_APP_ID: ${{ secrets.ETA_MU_APP_ID }}
+      ETA_MU_APP_PRIVATE_KEY: ${{ secrets.ETA_MU_APP_PRIVATE_KEY }}
