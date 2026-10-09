@@ -1,0 +1,113 @@
+{
+  "evidence_kind": "observed native-command-output projection and Git readback; not raw REST or synthesized provider approval",
+  "receiver": {
+    "repository": "riatzukiza/eta-mu",
+    "pull_request": 8,
+    "url": "https://github.com/riatzukiza/eta-mu/pull/8",
+    "reviewed_head": "0b67623201b0e9740767d21672fab0e031ec235a",
+    "base": "084cd150b8d5b9848d026e9ef8717747964dcd6d",
+    "merged": true,
+    "merged_at": "2026-10-09T13:29:05Z",
+    "merge_commit": "b03cb58407cc333b7cabd77431842d44f0deb415",
+    "parents": [
+      "084cd150b8d5b9848d026e9ef8717747964dcd6d",
+      "0b67623201b0e9740767d21672fab0e031ec235a"
+    ],
+    "reviewed_and_merged_tree": "3c7f987028285e55c1bdfff3758ee776217961ea",
+    "auto_merge": null,
+    "canonical_gate": "PASS",
+    "completed_available_code_cohorts": 1,
+    "latest_passing_checks": 16,
+    "native_threads": 7,
+    "unresolved_threads": 0
+  },
+  "review": {
+    "coderabbit_request": 6081692871,
+    "coderabbit_completion": 6081695924,
+    "coderabbit_summary": 6045982441,
+    "coderabbit_summary_updated_at": "2026-10-09T13:24:07Z",
+    "coderabbit_inputs": 18,
+    "coderabbit_verdict": "completed native no-actionable verdict with current reviewed coverage; not formal GitHub APPROVED",
+    "mimo_review": 5468626701,
+    "mimo_state": "APPROVED",
+    "mimo_submitted_at": "2026-10-09T10:05:05Z",
+    "mimo_inputs": 18,
+    "mimo_diff_pages": 27,
+    "writer_notes": [
+      6081687723,
+      6081859415
+    ]
+  },
+  "hosted": {
+    "run": 37910504856,
+    "attempt": 1,
+    "conclusion": "SUCCESS",
+    "artifact": 11607511601,
+    "zip_sha256": "44949c1451773a0849d4039d80de88e23da1f7ab48f0ad4b978da798b732454f",
+    "all_seven_gates_exit_zero": true,
+    "exact_clean_head": "0b67623201b0e9740767d21672fab0e031ec235a",
+    "eta_tests": 196,
+    "eta_assertions": 708,
+    "workflow_tests": 6,
+    "workflow_assertions": 78,
+    "compiler_limit": "The full workspace test log retains one pre-existing terminal-ui infer-warning; owned receipt and release targets report zero warnings. Generated docstring metric remains50%, not claimed passing."
+  },
+  "receipt_reader": {
+    "owning_source_merge": "e8673f46fd96065ef6b14228b6eb217b7bb47ce7",
+    "consumer_cli_sha256": "56fa6e0b8c83f337b673a0debdfdbb741ef9c00b9e378d41612a945d0dd67b0b",
+    "base_prefix_bytes": 307743,
+    "base_prefix_rows": 254,
+    "base_prefix_preserved": true,
+    "contextual_rows_255_through_267": "13/13 pass through actual compiled owning validateLine API; all exactrawlines retained",
+    "context_free_rows_256_through_258": "retain original missing required key:repo",
+    "all_other_ten_appended_rows": "strict context-free pass",
+    "whole_historical_journal": "separate baseline failures remain, not claimed valid"
+  },
+  "qualified_source_inputs": [
+    {
+      "path": ".github/workflows/opencode-code-review.yml",
+      "blob": "963af170bc8226d63a3e07dec6e164ddb4c57d13",
+      "bytes": 78237,
+      "sha256": "a863c87944119fa619a39f432237f862327bb28cfe8285211386f1ef85531927"
+    },
+    {
+      "path": ".github/scripts/opencode-code-review-workflow.test.mjs",
+      "blob": "58e9a9cb30ae0be6060709d36599b00fa30176bb",
+      "bytes": 99602,
+      "sha256": "80533ccdafa542bcc8dc437cc62546d2409413fccee3e3982c8f94a23ba40661"
+    },
+    {
+      "path": "packages/receipt-river/src/cljs/eta_mu/receipt_river/infra/cli.cljs",
+      "blob": "db68feba98253fbf25bb52f8212a13c01c5c3016",
+      "bytes": 10348,
+      "sha256": "56fa6e0b8c83f337b673a0debdfdbb741ef9c00b9e378d41612a945d0dd67b0b"
+    },
+    {
+      "path": "packages/receipt-river/src/cljs/eta_mu/receipt_river/api.cljs",
+      "blob": "e922559bcf3c838b95497231785a837ad5b5d130",
+      "bytes": 2822,
+      "sha256": "38481efb05bb15533d0549f5339ba2a131eae5e8952abfaf8b133664363e41ad"
+    },
+    {
+      "path": "packages/receipt-river/src/cljs/eta_mu/receipt_river/law/receipt.cljc",
+      "blob": "422990fdb8df49cef26433ff355e1fafccf39a75",
+      "bytes": 6017,
+      "sha256": "4e1920ed0846025e91090f7fc33cd5bcb9be2c38d7892113fdb23648eeab2326"
+    }
+  ],
+  "consumer": {
+    "repository": "riatzukiza/eros-eris-field",
+    "pull_request": 1,
+    "finding": 4211178862,
+    "thread": "PRRT_kwDOU_2F986qEOGO",
+    "caller_path": ".github/workflows/eta-mu-review.yml",
+    "uses": "riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415",
+    "qualification": "fresh own hosted execution and complete current-input review still owed; no transferred approval or round"
+  },
+  "limits": [
+    "Planning workflow adoption only; no kernel implementation or physics tests",
+    "No native board readiness from this file",
+    "No live maker, model, grant, runtime, PM2, gateway, scheduler, publication, deployment or paid usage change",
+    "Prior owned receipt/reflection prefixes and raw historical MiMo evidence remain unchanged"
+  ]
+}

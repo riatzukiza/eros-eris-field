@@ -87,3 +87,33 @@ Record owned work append-only under `.ημ/receipts.edn` and retain explicit sou
 configuration, artifact and native record hashes. Preserve observed, derived,
 provisional and accepted claims separately. Reflections go in
 `.ημ/session-mycology/ledger.md`; a reflection is not a review or a policy waiver.
+
+## Qualified receiver consumption — 2026-10-09 UTC
+
+The evidence caller now pins personal receiver PR8's actual normal merge,
+`b03cb58407cc333b7cabd77431842d44f0deb415`. Its parents are base
+`084cd150b8d5b9848d026e9ef8717747964dcd6d` and reviewed head
+`0b67623201b0e9740767d21672fab0e031ec235a`; merge and reviewed trees are
+identical. The canonical gate passed with one completed available-cohort code
+round, current CodeRabbit and MiMo evidence, sixteen latest passing check
+contexts and seven settled conversations. Native GitHub confirms the merge at
+13:29:05 UTC with no remaining auto-merge request.
+
+That receiver repairs Git's quoted Unicode path handling in all three
+clean-tree filters and exercises real Git fixtures with quoting on and off.
+It also consumes the qualified Receipt River containing-repository reader and
+the actual non-Git refusal: context is supplied only when Git discovery
+succeeds. Original receipt bytes and context-free diagnostics remain intact.
+The current receiver's complete eighteen-input CodeRabbit review and MiMo's
+twenty-seven-page review are separate from this source plan's fresh review.
+
+The [consumption evidence](../.ημ/plan-evidence/qualified-receiver-b03cb584.json)
+records the exact native IDs, source hashes and execution boundaries. Its
+command-output observations are not synthetic approval records. The caller's
+own fresh hosted execution and complete changed-input review remain required
+before this plan qualifies. No receiver approval or round transfers here.
+The retained terminal-ui test inference warning and generated docstring metric
+are disclosed in receiver evidence; neither is claimed to be zero or passing.
+
+This adoption changes the review route. It does not implement the physical
+kernel, establish native board readiness or change the running character.
