@@ -135,3 +135,11 @@
 - Preserve the full held receipts/reflections and rawhistoricalMiMo bytes; a new receipt states current scope. Fresh field hosted execution/review and native readiness remain required.
 - B1 actual scoped persistent physical state, B2 separately consumed mood and B3 automatic traced recall remain unfinished. Private source/test handoff identifies donor clamp, per-call damping, duplicate topology, unseeded graph-ant visits and provider-coupled cosine seams; no solver implementation or execution was claimed.
 - No spore incubated/promoted; no runtime or publication operation; heartbeat remains paused.
+
+## 2026-10-09T13:55:58.170381Z — make proposed ABI match required refusal and replay law
+
+- Receipt `physical-field-abi-refusal-schedule-bond-correction-20261009`; efficiency0.80, friction0.20, skill-candidate0.10.
+- Fresh native review exposes three concrete omissions in declarative ABI. Add explicit prior-state input/shared refusal contract, existing-only recorded catch-up schedule, and bond evidence/single-force invariant; no solver behavior claimed.
+- Actual receiver source inspection answers the new pinned-environment question without reading secret values. Complete ac2 MiMo approval remains historical once this concrete fix advances head. CodeRabbit automatic6-input review explicitly skipped two inputs and grants no full review credit.
+- Original receipt, reflection and raw native review bytes remain intact. Fixes need their own fresh full review and hosted qualification, followed by native Rheos gates; they support B1 and do not finish B1/B2/B3.
+- No spore incubated/promoted; no runtime/publication/deployment operation; heartbeat paused.

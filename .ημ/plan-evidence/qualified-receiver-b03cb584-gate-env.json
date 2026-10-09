@@ -1,0 +1,32 @@
+{
+  "tier": "observed-qualified-source-static-inspection",
+  "observed_at": "2026-10-09T13:53:27.155540Z",
+  "receiver_revision": "b03cb58407cc333b7cabd77431842d44f0deb415",
+  "receiver_path": ".github/workflows/opencode-code-review.yml",
+  "receiver_bytes": 78237,
+  "receiver_sha256": "a863c87944119fa619a39f432237f862327bb28cfe8285211386f1ef85531927",
+  "receiver_git_blob": "963af170bc8226d63a3e07dec6e164ddb4c57d13",
+  "root_env": {},
+  "deterministic_job_env": {},
+  "deterministic_step_env_keys": [
+    "PR_BASE_SHA",
+    "PR_HEAD_SHA",
+    "PR_NUMBER",
+    "EVIDENCE_GATES_SCRIPT",
+    "CHECKOUT_EXACT_HEAD",
+    "CHECKOUT_CLEAN"
+  ],
+  "deterministic_step_app_secret_mapping": false,
+  "model_step_env_keys": [
+    "PR_NUMBER",
+    "REVIEW_MODEL",
+    "REVIEW_PROMPT_FILE",
+    "REVIEW_EVIDENCE_DIR"
+  ],
+  "model_step_app_secret_mapping": false,
+  "credential_detection_condition": "${{ !contains(toJSON(inputs), '\"setup_eta_mu_toolchain\"') || inputs.setup_eta_mu_toolchain }}",
+  "caller_setup_eta_mu_toolchain": false,
+  "credential_detection_observed_run_status": "skipped in native run37937914746",
+  "publisher_private_key_use": "explicit require-credentials and create-App-token boundaries; no secret values read",
+  "scope": "Static mapping and actual skipped step metadata; not a claim about runner/process compromise or physics execution"
+}

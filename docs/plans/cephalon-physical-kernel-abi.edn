@@ -34,7 +34,10 @@
  :entity/kinds [:presence :nexus :daimoi]
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
                   :mantle-lineage :intent-wallet :emission-id :recall-request-id]
- :bond/required [:id :endpoints :intent :contributions :provenance]
+ :bond/required [:id :endpoints :intent :contributions :provenance
+                 :evidence-kinds :force-invariant]
+ :bond/evidence-kinds [:authored :reply :pin :inspiration :contradiction]
+ :bond/force-invariant :structural-and-semantic-counted-once
  :collision {:operations [:absorb-full :deflect :exchange-bounded]
              :normal :outward-from-recipient-surface-toward-incident-particle
              :relative-velocity :particle-world-minus-recipient-world
@@ -49,14 +52,29 @@
              :insufficient-full-absorption :refused
              :implicit-fallback :forbidden
              :emitted-owner-change :forbidden}
+ :state-transition-result
+ {:revision 1
+  :applies-to [:admit-state :advance :catch-up :emit-recall :apply-outcome
+               :confirm-feedback :restore]
+  :success :declared-operation-result
+  :refusal {:state :unchanged-prior-state
+            :reason :operation-specific-refusal-reason
+            :reason-revision 1}
+  :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow]}
  :functions
- {:admit-state {:input [:trusted-visible-projection :physical-configuration]
-                :output [:admitted-state-or-unchanged-refusal]}
+ {:admit-state {:input [:prior-state-or-empty
+                       :trusted-visible-projection :physical-configuration]
+                :output [:state-transition-result]
+                :operation-result [:admitted-state]}
   :advance {:input [:state :elapsed-us :ordered-boundary-events]
-            :output [:state :observations :residual-us :backlog-us :completeness]}
+            :output [:state-transition-result]
+            :operation-result [:state :observations :residual-us :backlog-us :completeness]}
   :catch-up {:input [:state]
-             :output [:state :observations :residual-us :backlog-us :completeness]
-             :new-elapsed-time :none :max-substeps 100}
+             :output [:state-transition-result]
+             :operation-result [:state :observations :residual-us :backlog-us :completeness]
+             :new-elapsed-time :none :max-substeps 100
+             :backlog :drain-existing-only
+             :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
                        :physical-budget :mood-lens-revision]
                 :output [:state :request-result] :idempotency :request-id}

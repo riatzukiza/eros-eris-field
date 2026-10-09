@@ -117,3 +117,20 @@ are disclosed in receiver evidence; neither is claimed to be zero or passing.
 
 This adoption changes the review route. It does not implement the physical
 kernel, establish native board readiness or change the running character.
+
+## Qualified receiver environment inspection — 2026-10-09 UTC
+
+The actual `b03cb58407cc333b7cabd77431842d44f0deb415` workflow was inspected
+for MiMo review5470947044's environment question. Its 78,237 bytes match Git blob
+`963af170bc8226d63a3e07dec6e164ddb4c57d13` and SHA256
+`a863c87944119fa619a39f432237f862327bb28cfe8285211386f1ef85531927`.
+The workflow and deterministic job declare no inherited environment. The gate
+step maps only head/base/PR identifiers, the caller's gate script and checkout
+guard outputs; it maps no App credential. The model step also maps no App key.
+The caller retains `setup_eta_mu_toolchain: false`; the credential-detection
+step was actually skipped in run37937914746. Publication uses the existing
+explicit credential and token steps. The
+[source inspection](../.ημ/plan-evidence/qualified-receiver-b03cb584-gate-env.json)
+retains the exact declarations and inspection boundary without secret values.
+This resolves that source-mapping question; it does not establish immunity to
+runner or process compromise, or execute physical behavior.

@@ -87,8 +87,9 @@ The companion [ABI declaration](cephalon-physical-kernel-abi.edn) is proposed
 data, not an implemented schema, executable validator or published package API.
 Its exact names and fields require this source plan's review.
 
-- `admit-state` takes a trusted, sealed visible projection and complete
-  revisioned physical configuration. It returns either an admitted kernel state
+- `admit-state` takes the prior state (or an explicit empty state), a trusted,
+  sealed visible projection and complete revisioned physical configuration.
+  It returns either an admitted kernel state
   or a refusal with unchanged prior state and specific reason.
 - `advance` takes that state, an exact integer-microsecond elapsed interval and
   ordered boundary events. It returns a new state, actual emitted observations,
@@ -152,6 +153,18 @@ JS strings/arrays/objects convert at the adapter boundary to Clojure data. Nativ
 provider and storage output is untrusted input. Both sides of replaceable seams
 are validated. ABI refusal reason names remain explicit and revisioned.
 
+All seven state-changing operations use the shared revision1 transition result:
+success carries the operation's declared result; refusal carries the exact
+unchanged prior state, an operation-specific reason and reason revision1.
+The required reasons include `invalid-elapsed-us`, `unsafe-arithmetic` and
+`overflow`; these three do not replace the other specific admission, revision,
+scope, identity or writer refusal reasons. `admit-state` receives an explicit
+empty prior state on first admission, so refusal has no implicit host state.
+The ABI preserves the advancement observation, residual, backlog and completeness
+fields inside the successful operation result. Its `catch-up` declaration
+explicitly drains existing backlog only and reproduces the recorded quantum and
+event schedule; it cannot admit new elapsed time or select a new schedule.
+
 ## Numeric, temporal and replay commitments
 
 1. The authoritative initial target is compiled CLJS on Node with finite
@@ -185,6 +198,10 @@ are validated. ABI refusal reason names remain explicit and revisioned.
    contradiction evidence. Structural and semantic representations cannot
    double its force. Dissimilar explicit pinning retains its purpose and
    flexible bond. Stable content embeddings never change to encode current mood.
+   Each bond declares its actual evidence kinds from those five allowed kinds,
+   and the shared force invariant counts one logical bond once across its
+   structural and semantic representations. A bond need not invent evidence
+   of all five kinds; declaring the invariant is not proof it has been enforced.
 8. Eight sparse velocity layers use keys
    `[scope-revision, layer-index, floor(x/cell-size), floor(y/cell-size)]`.
    Indices `0..7` have versioned semantic bindings, not English keyword counters.
