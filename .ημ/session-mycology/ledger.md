@@ -183,3 +183,13 @@
   spore: none
   receipt-refs: cephalon-finite-field-native-speed-cap-order-correction-20261014
   note: Confirmed native finding is fixed in matching prose/data: after force velocity integration and elapsed friction, apply kind radial speed cap before movement; after the entire canonical contact pass, apply the same cap before motion deposits with no further position advance. No cap interleaving between contact pairs. Preserve raw contact response separately from final constrained velocity and record cap stage/before-after/applied. Finite nonnegative kind limit in wu/s supports zero cap and overflow refusal. Cap is explicit dissipative constraint, not fabricated raw-response or kinetic-energy conservation; wallet/ownership laws remain. This is plan semantics and future RED coverage, not executed physical behavior, calibrated production source, readiness or B1/B2/B3 proof. New head requires fresh own reviews/checks; prior review and snapshot bytes remain historical. No observation-only source churn, policy/Rheos workaround, card/status/points/dependency, runtime/maker/clock/gateway/grant/model/auth/credential/paid/social/deployment/spore change. Existing OpenPlanner full request6176739296 actually triggered through6176741577 on unchanged7e; MiMo original38615534310 remains live. GoalACTIVE, heartbeat humanPAUSED, liveproofs0of3.
+
+- ts: 2026-10-14T20:21:41.427Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing physical field ff3e628b; no added task or native estimate
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-finite-field-force-deposit-threshold-plan-20261014
+  note: Force components now divide ordered total by positive mass, multiply actual quantum-seconds then add prior velocity before friction, with no fused arithmetic and unsafe refusal. Daimoi deposit weights bind same unique immutable same-scope recall request; passive weights bind explicit physical kind configuration, not global/latest/average/read fallback. Strict speed-below static thresholds apply after each cap, before one movement and after complete contact pass before deposit; equality retained/zero-threshold/nonfinite/trace explicit. Own EDN/ABI binds actually qualified signed-index amendment020d, original6a retained. These are unimplemented proposal corrections needing fresh independent review, no solver test/readiness/kernel/runtime/storage/mood/liveproof or board mutation. Current4b MiMo approval is historical after this concrete source advance. GoalACTIVE/heartbeatPAUSED/B1B2B3live0of3; no paidreview/secret/maker/publication/spore.

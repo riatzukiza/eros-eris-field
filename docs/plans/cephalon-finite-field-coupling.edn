@@ -3,8 +3,10 @@
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
- :selection/revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
- :selection/compatibility :pending-reviewed-coordinator-cell-index-amendment
+ :selection/original-revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/revision "020d97fecae4a8d0d277b9b2695d9482620b4a76"
+ :selection/merge "8c649fee2e95e5ec6b5304a3351a0e16fca60533"
+ :selection/compatibility :reviewed-signed-cell-index-amendment
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
             :cell-key [:scope-revision :layer-index :floor-x-over-cell-size
@@ -40,6 +42,23 @@
                :sum :left-fold-binary64-from-zero-vector
                :duplicate-contribution :unchanged-refusal
                :bond-semantic-double-count :forbidden}
+ :integration {:force-unit :world-unit-per-second-squared-times-dimensionless-inertia
+               :mass :positive-finite-dimensionless-inertia
+               :step-seconds :quantum-us-divided-by-one-million
+               :component-order [:force-sum-divide-mass :acceleration-times-step
+                                 :prior-velocity-plus-delta :elapsed-friction]
+               :fused-arithmetic :forbidden
+               :position-order [:thresholded-velocity-times-step :prior-position-plus-delta]
+               :unsafe-intermediate :unchanged-refusal}
+ :static-threshold {:range :finite-nonnegative-by-kind :unit :world-unit-per-second
+                    :ordering [:presence-greater-than-nexus :nexus-greater-than-daimoi]
+                    :rule :zero-only-when-speed-strictly-below-threshold
+                    :equality :retain :zero-threshold :retain-nonzero-velocity
+                    :stages [:after-pre-movement-cap :after-final-post-contact-cap]
+                    :between-contact-pairs :forbidden :second-position-advance :none
+                    :trace [:stage :velocity-before :velocity-after :stopped]
+                    :comparison :exact-no-replay-tolerance
+                    :unsafe-intermediate :unchanged-refusal}
  :speed-cap {:range :finite-nonnegative-by-kind :unit :world-unit-per-second
              :rule :radial-min-one-kind-cap-over-norm :zero-velocity :zero-vector
              :zero-cap :zero-vector :overflow :unchanged-refusal
@@ -53,9 +72,14 @@
            :gain-unit :inverse-second :gain :finite-nonnegative
            :weights :distinct-from-read-weights
            :deposit-weights :exact-eight-finite-nonnegative-revisioned-inputs
+           :daimoi-weight-source :same-unique-admitted-same-scope-recall-request-id
+           :passive-weight-source :physical-configuration-by-entity-kind
+           :request-binding :immutable-and-revision-bound
+           :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
+           :latest-global-average-or-read-weight-fallback :forbidden
            :invalid-deposit-weights :unchanged-refusal
            :position :survivor-post-contact-resolved-position
-           :velocity :survivor-post-contact-and-cap-velocity
+           :velocity :survivor-post-contact-cap-and-threshold-velocity
            :absorbed-entity :no-motion-deposit
            :order [:entity-id :deposit-contribution-id]
            :id-order :unsigned-utf8-byte-order

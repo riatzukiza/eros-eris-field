@@ -116,23 +116,38 @@ state; no donor constant becomes a default.
    contributions by `(target-id, source-id, contribution-id)` using ascending
    unsigned UTF-8 ID bytes; duplicate contribution identities refuse. A semantic
    pair represented by an intent bond belongs only to the unified bond class;
-   structural/semantic evidence cannot add its force twice. Update velocity,
-   apply `exp(-gamma_kind*h)`, apply the kind's radial speed cap, then move.
+   structural/semantic evidence cannot add its force twice. Every contribution
+   is a force in wu/s^2 times positive dimensionless inertia. For each component,
+   after the ordered sum `F_total`, compute `a = F_total / mass`, then
+   `delta_v = a * h`, then `v_pre_friction = v_prior + delta_v`, in that
+   binary64 operation order, with `h = quantum_us / 1,000,000` seconds. There
+   is no fused arithmetic, omitted mass division or timestep substitution.
+   Refuse nonfinite intermediate results before state commit. Multiply each
+   component by `exp(-gamma_kind*h)`, apply the kind's radial speed cap,
+   apply the static-threshold rule below, then move once using
+   `p_move = p_prior + v_move * h` (multiply, then add per component).
    Resolve the canonically ordered contact pass using those velocities; only
-   after the whole pass apply the same kind cap to each resolved velocity.
+   after the whole pass apply the same kind cap, then static threshold, to each
+   resolved velocity.
    Contact response is computed before this second cap and retained in the
    trace; do not interleave caps between contact pairs. Motion deposits use the
-   final post-contact-and-cap velocity, with no second position advance.
+   final post-contact-cap-and-threshold velocity, with no second position advance.
    Deposits/contact outputs enter the following buffer, not other entities
    midway through the same prior-buffer pass. Class order and contribution
    order are revision-bound semantics, not collection insertion order.
 6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
    selected by the surviving entity's **post-contact resolved position**.
-   Use its final post-contact-and-cap velocity too; do not use the old position or
+   Use its final post-contact-cap-and-threshold velocity too; do not use the old position or
    pre-contact velocity. An absorbed entity has no motion deposit. For
    velocity-valued cells, `gain_i` is finite nonnegative with units s^-1.
-   Read/deposit weights are distinct revisioned inputs; each deposit vector has
-   exactly eight finite nonnegative weights with its mapping revision. Negative,
+   Read/deposit weights are distinct revisioned inputs. A daimoi takes exactly
+   eight deposit weights and their mapping revision from the same unique
+   immutable admitted same-scope request bound by its `recall-request-id`. A
+   presence or nexus instead takes its kind's eight deposit weights and mapping
+   revision from the complete physical configuration, independent of any
+   recall request order. No global, latest-request, average, read-weight reuse
+   or other-entity fallback is admitted. Missing, ambiguous, stale or foreign
+   bindings refuse unchanged state before either sampling or depositing. Negative,
    missing, wrong-length or nonfinite deposit weights refuse unchanged state.
    A supported zero-weight
    or zero-velocity case deposits nothing. Sort deposits by entity ID and
@@ -152,6 +167,16 @@ state; no donor constant becomes a default.
    dissipative constraint; do not relabel capped velocity as the raw exact
    contact response or claim kinetic-energy conservation. Wallet conservation
    and immutable ownership remain independent unchanged laws.
+9. Each kind's static threshold `s_kind` is finite nonnegative in wu/s, with
+   `s_presence > s_nexus > s_daimoi >= 0` as the owning contract requires.
+   Define `T(v)=[0,0]` exactly when `norm(v) < s_kind`; otherwise retain `v`.
+   Equality retains the velocity, and a zero threshold never stops a nonzero
+   velocity. Apply `T` immediately after the pre-movement cap and after the
+   final post-contact cap, with no threshold/cap interleaving between contact
+   pairs and no second movement. Trace the velocity before/after each threshold
+   and whether it stopped. Contact response remains separately inspectable.
+   All norm/intermediate overflow refuses the unchanged transition; threshold
+   comparison never uses the continuous replay tolerance.
 
 The historical Fork Tales `nooi.py` at
 `f4c43d7b9c832a54bc5d224cb4d5d2497c04423b` samples one dense normalized cell
@@ -286,3 +311,21 @@ or saturation hiding the deposit, numeric threshold divergence, mis-scoped
 retained influence, unclear persistent atomicity and a decorative coupling
 fixture. The reviewed finite calibration and sensitive physical ablation must
 resolve these risks; the plan alone does not establish performance or behavior.
+
+## Current4b planning corrections
+
+Codex review5523734461 on4b08fdd identified three missing deterministic rules:
+4275496845 (force integration), 4275496853 (entity deposit binding), and
+4275496863 (static-threshold placement). The proposal now specifies component
+divide/multiply/add ordering before friction, the same immutable request or
+passive-kind configuration as deposit-weight authority, and strict-below
+thresholds after both speed caps. Matching EDN records the same boundaries.
+These are reviewed proposal corrections, not executed physical behavior.
+
+The separate coordinator selection amendment is actually MERGED as personal
+ForesightPR36 at `8c649fee2e95e5ec6b5304a3351a0e16fca60533` on
+2026-10-14T20:18:50Z, after current020d approvals/checks and canonical gate PASS.
+The owning proposal binds its exact selected decision commit
+`020d97fecae4a8d0d277b9b2695d9482620b4a76`; original6a selection remains
+historical provenance. This does not qualify this separate PR or establish
+native readiness, an implemented kernel or any live B1/B2/B3 proof.

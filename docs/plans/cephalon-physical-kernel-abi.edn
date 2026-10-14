@@ -12,7 +12,8 @@
           :dimensions 2 :distance-unit :world-unit
           :safe-integer-range [0 9007199254740991]
           :field-cell-index-range [-9007199254740991 9007199254740991]
-          :field-cell-index-exception :requires-reviewed-selection-amendment
+          :field-cell-index-exception :reviewed-selection-amendment
+          :field-cell-index-selection "020d97fecae4a8d0d277b9b2695d9482620b4a76"
           :cross-runtime-parity :not-claimed}
  :clock {:elapsed-unit :integer-microsecond :quantum 10000
          :max-substeps-per-call 100 :carry :exact-residual-and-backlog
