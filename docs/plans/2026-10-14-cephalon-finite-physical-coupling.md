@@ -91,9 +91,11 @@ root and no fused arithmetic. Check each intermediate for finiteness; a final
 unrepresentable norm refuses unchanged state. Do not substitute naive squaring,
 `Math.hypot`, approximation or replay tolerance. A representable large norm
 therefore does not refuse merely because unscaled component squares overflow.
-For each radial cap, compute the scalar division, then `min(1,ratio)`, then
-multiply x and y separately by that scalar; exact zero norms use the declared
-zero case without division. These rules remain unimplemented proposal data.
+For every radial cap, return exact zero for zero norm or zero cap; otherwise
+compare n to the cap first. If n is at or below the cap, retain the original
+vector without division. Only when n exceeds the cap compute `ratio=cap/n`,
+then multiply x and y separately by ratio in that order with finite checks.
+Do not evaluate an overflowing inactive division for subnormal input. These rules remain unimplemented proposal data.
 
 1. For each admitted entity position `p=(x,y)`, compute the declared cell key
    using mathematical floor and positive world-unit `cell-size`. Read only
@@ -114,6 +116,12 @@ zero case without division. These rules remain unimplemented proposal data.
    refuse before force computation; there is no latest-request/average fallback.
    Compute
    `V(p) = sum_i(weight_i * cell_velocity_i(p))` in ascending layer order.
+   Start each component accumulator at exact zero. For each layer i, compute
+   `product_x=weight_i*cell_x`, then `sum_x=prior_sum_x+product_x`, then
+   `product_y=weight_i*cell_y`, then `sum_y=prior_sum_y+product_y`. Check each
+   product and each sum for finiteness before continuing; no fused multiply-add,
+   reassociation, tree reduction or tolerance-based arithmetic is admitted.
+   A nonfinite intermediate refuses the entire unchanged transition.
    The mapping is explicit validated input from the owning projection; this
    plan invents neither English keyword categories nor mood dimensions.
 3. Apply one declared radial saturation to the aggregate:
@@ -175,13 +183,29 @@ zero case without division. These rules remain unimplemented proposal data.
    or zero-velocity case deposits nothing. Sort deposits by entity ID and
    deposit/contribution ID using the same UTF-8 ordering.
 7. A substep samples `F_i(t)` from the prior buffer. Its next cell value is
-   `prune_i(saturate_cell_i(exp(-lambda_i*h) * F_i(t) + sum_ordered(D_i)))`,
+   `prune_i(saturate_cell_i(fold_deposits(decayed_prior_i, ordered_D_i)))`,
    with `lambda_i=ln(2)/half_life_i` and required positive half-lives. The
    substep's deposit is recorded at the end boundary and is not decayed for
    time before its creation. Empty prior cells start at zero. Cell saturation
    and pruning have required separate revisioned calibration; their declared
    order is decay old field, add ordered new deposits, saturate, then prune.
-   Per-contribution creation times/provenance must replay this schedule.
+   Compute lambda as ln(2) divided by positive half-life, multiply lambda by h,
+   negate, then exponentiate. Multiply each prior component by that decay
+   factor to initialize the accumulator (absent cell: exact [0,0]). Left-fold
+   each canonically sorted deposit directly into this accumulator: x addition
+   then y addition, checking each result immediately. Do not sum deposits from
+   zero first or reassociate additions. All decay intermediates/products must
+   be finite. Per-contribution creation times/provenance replay this schedule.
+   Cell saturation is the same explicit radial cap algorithm, using a required
+   positive finite velocity cap `cell_cap_i` per layer; it is not componentwise
+   clipping. Then compute the same scaled norm of the saturated cell and prune
+   (omit that cell from the next sparse buffer) exactly when the norm is at or
+   below required finite `epsilon_i`, with `0 <= epsilon_i < cell_cap_i`.
+   Equality prunes; epsilon zero prunes only exact zero. Calibration is
+   revision-bound input with no default. Any invalid calibration or unsafe
+   intermediate refuses the entire unchanged transition. Pruning retains
+   immutable contribution/event provenance and an explicit prune observation;
+   it does not erase admission/effect receipts or ownership.
 8. The kind speed cap is finite nonnegative, in wu/s. Its rule is
    `C(v)=v*min(1, max-speed_kind/norm(v))`, with `C(0)=0`; a zero cap returns
    zero velocity. Overflow refuses unchanged state. Record both cap stages'
@@ -366,3 +390,16 @@ cover representable large norms, unrepresentable results and product overflow
 versus reordering, alongside zero/equality cases. Proposed EDN parse is the
 current verification; no solver, numerical behavior or native readiness is
 claimed. MiMo's actual finding-bearing review does not approve the source.
+
+
+## Explicit field-fold and calibration algorithms
+
+Later Codex review5524401966 repeats the introductory selection status concern
+already corrected in c79 and identifies four further unspecified operations:
+weighted sampling arithmetic, next-cell accumulation, cell saturation/pruning
+and inactive-cap division. Their exact ordered binary64 operations and zero/
+equality/refusal cases are now declared above and in the EDN. No per-component
+cell clamping, reassociation or ignored intermediate overflow is admitted.
+Future RED includes cancellation-sensitive folds, subnormal inactive caps,
+prune equality/zero and unsafe products. Current verification is declaration
+parse/hygiene; implementation and causal behavioral proof remain outstanding.

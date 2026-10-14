@@ -24,7 +24,11 @@
             :request-binding :immutable-and-revision-bound
             :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
             :latest-request-or-average-fallback :forbidden
-            :accumulation :ascending-layer-order}
+            :accumulation :ascending-layer-order
+            :component-accumulator :exact-zero
+            :component-order [:multiply-weight-x :add-to-x :multiply-weight-y :add-to-y]
+            :finite-check :after-every-product-and-addition
+            :fused-reassociated-or-tree-arithmetic :forbidden}
  :norm {:rule :scaled-binary64-components
         :order [:validate-finite-x-y :max-absolute-component
                 :x-divide-scale :y-divide-scale :square-scaled-x :square-scaled-y
@@ -35,6 +39,12 @@
         :substitutions [:naive-unscaled-squares :math-hypot :approximation]
         :substitution-policy :forbidden
         :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds]}
+ :radial-cap {:zero-norm-or-cap :exact-zero-vector
+              :at-or-below-cap :retain-original-vector-before-division
+              :above-cap-order [:divide-cap-by-norm :multiply-x-by-ratio :multiply-y-by-ratio]
+              :finite-check :after-every-intermediate
+              :inactive-division :forbidden
+              :applies-to [:aggregate-wind :both-speed-caps :cell-saturation]}
  :aggregate-saturation {:rule :radial-min-one-cap-over-norm :zero :zero-vector
                         :cap :required-positive-finite-wind-cap
                         :overflow :unchanged-refusal}
@@ -105,8 +115,23 @@
  :decay {:rule :elapsed-exponential :lambda :ln-two-over-positive-half-life
          :sample :prior-field-at-substep-start
          :next-order [:decay-prior :add-ordered-new-deposits :saturate-cell :prune]
+         :prior-decay-order [:ln-two-divide-half-life :lambda-times-step :negate :exponentiate
+                            :multiply-prior-x :multiply-prior-y]
+         :deposit-accumulator :decayed-prior-vector
+         :deposit-fold :left-fold-canonical-deposits-directly-into-accumulator
+         :component-add-order [:x :y]
+         :finite-check :after-every-intermediate
+         :zero-deposit-sum-before-prior-addition :forbidden
+         :reassociated-or-fused-arithmetic :forbidden
          :new-deposit-time :substep-end-boundary
          :pre-creation-deposit-decay :forbidden}
+ :cell-saturation {:rule :declared-radial-cap :cap :positive-finite-per-layer
+                   :unit :world-unit-per-second :componentwise-clipping :forbidden}
+ :pruning {:rule :omit-cell-when-scaled-norm-at-or-below-epsilon
+           :epsilon :finite-nonnegative-strictly-below-layer-cell-cap
+           :equality :prune :epsilon-zero :prune-only-exact-zero
+           :retained-provenance :immutable-contribution-events-and-effect-receipts
+           :observation :explicit-pruned-cell :unsafe-intermediate :unchanged-refusal}
  :calibration {:production-defaults :none :complete-input :required
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal}
