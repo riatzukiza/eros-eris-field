@@ -16,6 +16,12 @@
             :interpolation :none :border-clamping :forbidden
             :scope-fallback :forbidden
             :read-weights :exact-eight-finite-nonnegative-revisioned-inputs
+            :daimoi-weight-source :unique-admitted-same-scope-recall-request-id
+            :passive-weight-source :physical-configuration-by-entity-kind
+            :passive-kinds [:presence :nexus]
+            :request-binding :immutable-and-revision-bound
+            :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
+            :latest-request-or-average-fallback :forbidden
             :accumulation :ascending-layer-order}
  :aggregate-saturation {:rule :radial-min-one-cap-over-norm :zero :zero-vector
                         :cap :required-positive-finite-wind-cap
@@ -37,6 +43,8 @@
  :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
            :gain-unit :inverse-second :gain :finite-nonnegative
            :weights :distinct-from-read-weights
+           :deposit-weights :exact-eight-finite-nonnegative-revisioned-inputs
+           :invalid-deposit-weights :unchanged-refusal
            :position :survivor-post-contact-resolved-position
            :velocity :survivor-post-contact-resolved-velocity
            :absorbed-entity :no-motion-deposit
@@ -59,7 +67,8 @@
                :fixed [:principal :graph :query :embeddings :configuration
                        :seed :event-order :timestep-schedule :mood-revision
                        :lens-revision :attention-inputs :exact-eight-read-weights
-                       :read-weight-mapping-revision]
+                       :read-weight-mapping-revision :entity-request-bindings
+                       :passive-kind-read-weights :passive-weight-mapping-revisions]
                :varied :field-vector-contribution
                :required-change [:physical-contact :included-memory]
                :altered-buffer-admission-storage-or-restore :forbidden}

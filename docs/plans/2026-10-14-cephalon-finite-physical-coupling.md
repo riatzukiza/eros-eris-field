@@ -88,8 +88,15 @@ state; no donor constant becomes a default.
    safe integer in `[-(2^53-1), 2^53-1]`; an out-of-range quotient/floor refuses
    unchanged state. This is the proposed field-index exception, not permission
    for negative counts, wallets, elapsed time, residuals or RNG counters.
-2. An admitted immutable request carries exactly eight finite nonnegative
-   layer weights and the revision of their semantic mapping. Compute
+2. Every sampled entity has one explicit weight source. A daimoi resolves its
+   immutable `recall-request-id` to exactly one admitted same-scope request,
+   which carries eight finite nonnegative weights and their semantic mapping
+   revision. A passive presence or nexus instead uses the complete physical
+   configuration's eight wind-read weights for its kind and their mapping
+   revision, independent of recall request creation/order. Missing, ambiguous,
+   stale or foreign-scope request bindings and invalid passive configuration
+   refuse before force computation; there is no latest-request/average fallback.
+   Compute
    `V(p) = sum_i(weight_i * cell_velocity_i(p))` in ascending layer order.
    The mapping is explicit validated input from the owning projection; this
    plan invents neither English keyword categories nor mood dimensions.
@@ -119,7 +126,10 @@ state; no donor constant becomes a default.
    Use its post-contact resolved velocity too; do not use the old position or
    pre-contact velocity. An absorbed entity has no motion deposit. For
    velocity-valued cells, `gain_i` is finite nonnegative with units s^-1.
-   Read/deposit weights are distinct revisioned inputs. A supported zero-weight
+   Read/deposit weights are distinct revisioned inputs; each deposit vector has
+   exactly eight finite nonnegative weights with its mapping revision. Negative,
+   missing, wrong-length or nonfinite deposit weights refuse unchanged state.
+   A supported zero-weight
    or zero-velocity case deposits nothing. Sort deposits by entity ID and
    deposit/contribution ID using the same UTF-8 ordering.
 7. A substep samples `F_i(t)` from the prior buffer. Its next cell value is
@@ -163,8 +173,9 @@ The physical causal control is a separate **lower-level pure kernel
 intervention**, not another admitted persisted state or restore proof. It varies
 only a field-vector contribution passed to the sampling/force/motion/contact
 calculation. Fix graph/query/principal/embeddings/calibration/seed/event schedule,
-the exact mood/lens revision, attention inputs, eight read weights and their
-mapping revision in both arms. The resulting contact and inclusion must differ.
+the exact mood/lens revision, attention inputs, each daimoi's request/read weights
+and mapping revision, and both passive-kind configuration/read weights and
+mapping revisions in both arms. The resulting contact and inclusion must differ.
 Do not pass the altered buffer to production admission, storage or restore,
 forge its source hashes, or report it as valid encounter history. The fixture
 tests the physical causal mechanism; the separate positive persistence/replay
@@ -202,7 +213,9 @@ commit. Hidden field contributors must not affect allowed motion or inclusion.
    test namespaces; their declaration here is not test execution.
 3. Sampling tests cover all eight layers, signed safe cell coordinates and their
    positive/negative bounds, cell edges,
-   absent/zero cells, exact scope refusal, weight/revision mismatch, saturation,
+   absent/zero cells, exact scope refusal, entity/request/weight/revision mismatch,
+   multiple request ordering with fixed bindings, passive weight invariance,
+   saturation,
    finite-value/overflow refusal and declared canonical accumulation. Units tests
    bind gain, wind coupling, velocity, acceleration and timestep calibration.
 4. The selected finite case covers force-class/contribution ordering,

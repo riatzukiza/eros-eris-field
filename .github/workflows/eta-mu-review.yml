@@ -21,7 +21,7 @@ jobs:
       evidence_gates_script: |
         run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
         run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
-        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [clojure.edn :as edn]) (quote ["node:fs" :as fs])) (edn/read-string (.readFileSync fs "docs/plans/cephalon-physical-kernel-abi.edn" "utf8")) (println "Proposed ABI EDN parsed; no domain law executed")'
+        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [clojure.edn :as edn]) (quote ["node:fs" :as fs])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (edn/read-string (.readFileSync fs p "utf8")) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
     secrets:
       ETA_MU_APP_ID: ${{ secrets.ETA_MU_APP_ID }}
       ETA_MU_APP_PRIVATE_KEY: ${{ secrets.ETA_MU_APP_PRIVATE_KEY }}
