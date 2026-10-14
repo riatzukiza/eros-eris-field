@@ -3,9 +3,11 @@
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
- :selection/revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/original-revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/revision "020d97fecae4a8d0d277b9b2695d9482620b4a76"
+ :selection/merge "8c649fee2e95e5ec6b5304a3351a0e16fca60533"
  :selection/path "docs/notes/2026-10-07-cephalon-field-kernel-selection.md"
- :selection/compatibility :pending-reviewed-coordinator-cell-index-amendment
+ :selection/compatibility :reviewed-signed-cell-index-amendment
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
  :task/owner-selection "b5f2ba9e-8d67-4c73-9919-e275983aca87"
  :target {:runtime :compiled-cljs-node :scalar :finite-binary64

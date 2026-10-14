@@ -79,6 +79,19 @@ calibration. All coefficients, bounds, layer bindings and vectors are required
 revision-bound inputs. Missing/nonfinite/mismatched inputs refuse unchanged
 state; no donor constant becomes a default.
 
+Every norm in aggregate wind saturation, both speed caps and both static
+thresholds uses this same scaled binary64 algorithm. Validate finite components
+`x,y`; set `m=max(abs(x),abs(y))`. If `m=0`, return exact zero. Otherwise compute
+`u=x/m`, `w=y/m`, then `u2=u*u`, `w2=w*w`, then `q=u2+w2`, then `r=sqrt(q)`,
+then `n=m*r`, in that order, with the selected compiled Node binary64 square
+root and no fused arithmetic. Check each intermediate for finiteness; a final
+unrepresentable norm refuses unchanged state. Do not substitute naive squaring,
+`Math.hypot`, approximation or replay tolerance. A representable large norm
+therefore does not refuse merely because unscaled component squares overflow.
+For each radial cap, compute the scalar division, then `min(1,ratio)`, then
+multiply x and y separately by that scalar; exact zero norms use the declared
+zero case without division. These rules remain unimplemented proposal data.
+
 1. For each admitted entity position `p=(x,y)`, compute the declared cell key
    using mathematical floor and positive world-unit `cell-size`. Read only
    the exact authorized scope revision and indices 0 through 7 from the prior
@@ -137,6 +150,12 @@ state; no donor constant becomes a default.
    order are revision-bound semantics, not collection insertion order.
 6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
    selected by the surviving entity's **post-contact resolved position**.
+   For each layer compute `a=gain_i*deposit_weight_i`, then `b_x=a*v_x`,
+   then `D_x=b_x*h`; use the same a followed by `b_y=a*v_y`, then `D_y=b_y*h`.
+   This is left-associated binary64 multiplication, without reordered or fused
+   arithmetic. Check a, each b and each D for finiteness immediately and refuse
+   the whole unchanged transition on overflow. Zero layer weight or an exact
+   zero velocity vector skips that layer's deposit before these products.
    Use its final post-contact-cap-and-threshold velocity too; do not use the old position or
    pre-contact velocity. An absorbed entity has no motion deposit. For
    velocity-valued cells, `gain_i` is finite nonnegative with units s^-1.
@@ -329,3 +348,18 @@ The owning proposal binds its exact selected decision commit
 `020d97fecae4a8d0d277b9b2695d9482620b4a76`; original6a selection remains
 historical provenance. This does not qualify this separate PR or establish
 native readiness, an implemented kernel or any live B1/B2/B3 proof.
+
+
+## Later native consistency and arithmetic corrections
+
+Codex review5524217029 roots4275894355/4363/4368 and MiMo
+review5524305119 root4275970732 identified a stale ABI compatibility marker,
+an unspecified norm algorithm, and unspecified deposit association. The ABI
+now distinguishes original6a from qualified020d/merge8c and exposes the same
+reviewed amendment state as the finite declaration. All wind/cap/threshold
+norms use the explicit scaled component algorithm; deposits use declared
+left-associated products with immediate intermediate checks. Future RED must
+cover representable large norms, unrepresentable results and product overflow
+versus reordering, alongside zero/equality cases. Proposed EDN parse is the
+current verification; no solver, numerical behavior or native readiness is
+claimed. MiMo's actual finding-bearing review does not approve the source.

@@ -25,6 +25,16 @@
             :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
             :latest-request-or-average-fallback :forbidden
             :accumulation :ascending-layer-order}
+ :norm {:rule :scaled-binary64-components
+        :order [:validate-finite-x-y :max-absolute-component
+                :x-divide-scale :y-divide-scale :square-scaled-x :square-scaled-y
+                :add-squares-x-then-y :selected-node-square-root :scale-times-root]
+        :zero-scale :exact-zero
+        :finite-check :after-every-intermediate
+        :unsafe-result :unchanged-refusal
+        :substitutions [:naive-unscaled-squares :math-hypot :approximation]
+        :substitution-policy :forbidden
+        :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds]}
  :aggregate-saturation {:rule :radial-min-one-cap-over-norm :zero :zero-vector
                         :cap :required-positive-finite-wind-cap
                         :overflow :unchanged-refusal}
@@ -70,6 +80,13 @@
              :constraint :explicit-dissipative-not-kinetic-energy-conservation}
  :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
            :gain-unit :inverse-second :gain :finite-nonnegative
+           :component-order [:gain-times-weight :result-times-velocity-component
+                             :result-times-step]
+           :gain-weight-intermediate :shared-for-x-and-y
+           :finite-check :after-every-product
+           :reordered-or-fused-arithmetic :forbidden
+           :unsafe-intermediate :unchanged-refusal
+           :zero-weight-or-zero-vector :skip-before-products
            :weights :distinct-from-read-weights
            :deposit-weights :exact-eight-finite-nonnegative-revisioned-inputs
            :daimoi-weight-source :same-unique-admitted-same-scope-recall-request-id
