@@ -172,7 +172,12 @@ event schedule; it cannot admit new elapsed time or select a new schedule.
    numerical parity claim. Velocities are wu/s, accelerations wu/s², mass
    positive dimensionless inertia; friction and decay are s⁻¹. Embeddings stay
    immutable and model/dimension-revision-bound, not spatial coordinates.
-2. Integer inputs and arithmetic results are exact within `[0, 2^53-1]`.
+2. Counts, wallets, elapsed time, residuals, backlog and RNG counters are exact
+   integers within `[0, 2^53-1]`. This candidate proposes one explicit exception:
+   floor-derived field cell indices are signed safe integers within
+   `[-(2^53-1), 2^53-1]`. This exception requires independently reviewed
+   coordinator selection amendment before implementation; the original
+   positive-only selection remains historical, not compatible admission.
    Nonfinite scalars, missing coefficients, duplicate IDs, missing endpoints,
    unsafe integer arithmetic and mismatched revisions refuse unchanged state.
 3. Host UTC observation identity is separate from monotonic elapsed integer

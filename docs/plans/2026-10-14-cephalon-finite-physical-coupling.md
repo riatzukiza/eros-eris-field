@@ -11,7 +11,11 @@ runtime or deployment authority. Foresight remains the native board owner.
 
 The independently merged [kernel plan](2026-10-07-cephalon-physical-kernel.md)
 and [ABI](cephalon-physical-kernel-abi.edn) at personal MERGE
-`a2c64bee9878fef3abd2b38481b972e6aa29cd37` remain the broader source contract.
+`a2c64bee9878fef3abd2b38481b972e6aa29cd37` remain the historical broader source
+contract. This candidate makes one explicit prospective numeric amendment:
+signed safe cell indices; counts, wallets and elapsed time remain nonnegative.
+The amended source plan/ABI and matching coordinator selection must be reviewed
+before that exception is admitted. Original Git blobs and ledger history remain.
 This proposal makes the finite causal proof and the previously unspecified
 field-sampling/force boundary concrete. It requires its own current planning
 review; existing approvals do not transfer. The corresponding coordinator
@@ -20,8 +24,10 @@ decomposition remains proposed until reviewed native adoption.
 The selected owner decision remains Foresight
 `6a4438982fdf1eca98f856748bb23b19ab017c0a`, path
 `docs/notes/2026-10-07-cephalon-field-kernel-selection.md`.
-If this proposal conflicts with that decision, retain the conflict and review
-the owning decision before implementation; do not overwrite its provenance.
+Its positive-only integer statement does not admit negative floor-cell indices.
+The signed cell-index amendment is therefore a pending coordinator decision
+change, not a claim of compatibility with the old selection. Review and record
+the new decision revision before implementation; do not overwrite provenance.
 
 ## Outcome
 
@@ -78,7 +84,10 @@ state; no donor constant becomes a default.
    the exact authorized scope revision and indices 0 through 7 from the prior
    buffer. An absent cell contributes the zero vector. There is no coordinate
    normalization, border clamping, cross-scope fallback or interpolation in
-   this selected finite rule.
+   this selected finite rule. Each logical/storage cell index is an exact signed
+   safe integer in `[-(2^53-1), 2^53-1]`; an out-of-range quotient/floor refuses
+   unchanged state. This is the proposed field-index exception, not permission
+   for negative counts, wallets, elapsed time, residuals or RNG counters.
 2. An admitted immutable request carries exactly eight finite nonnegative
    layer weights and the revision of their semantic mapping. Compute
    `V(p) = sum_i(weight_i * cell_velocity_i(p))` in ascending layer order.
@@ -94,16 +103,33 @@ state; no donor constant becomes a default.
    so acceleration is wu/s^2 and force is `mass * a_wind`. No normalization
    to unit direction hides speed. Passive entities may respond to this external
    force; they receive no daimoi self-propulsion.
-5. Other admitted forces compose in the existing declared canonical order;
-   this rule does not replace or duplicate semantic/bond forces. Update velocity,
+5. For each entity, left-fold binary64 vector addition from exact `[0,0]` in
+   this force-class order: non-bond semantic attraction, unified intent-bond,
+   repulsion, boundary, wind, seeded exploration. Within each class, sort
+   contributions by `(target-id, source-id, contribution-id)` using ascending
+   unsigned UTF-8 ID bytes; duplicate contribution identities refuse. A semantic
+   pair represented by an intent bond belongs only to the unified bond class;
+   structural/semantic evidence cannot add its force twice. Update velocity,
    apply `exp(-gamma_kind*h)`, move and resolve canonically ordered contacts.
-   Deposits and contact output affect the following buffer, not other entities
-   midway through the same prior-buffer pass.
-6. Deposit remains `gain_i * deposit_weight_i * velocity * h` at the declared
-   cell. For velocity-valued cells, `gain_i` has units s^-1. Read weights and
-   deposit weights are distinct revisioned inputs. Apply elapsed decay using
-   `lambda_i=ln(2)/half_life_i`. Require declared positive half-lives; any
-   supported zero-weight/zero-velocity case is a deterministic no-deposit.
+   Deposits/contact outputs enter the following buffer, not other entities
+   midway through the same prior-buffer pass. Class order and contribution
+   order are revision-bound semantics, not collection insertion order.
+6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
+   selected by the surviving entity's **post-contact resolved position**.
+   Use its post-contact resolved velocity too; do not use the old position or
+   pre-contact velocity. An absorbed entity has no motion deposit. For
+   velocity-valued cells, `gain_i` is finite nonnegative with units s^-1.
+   Read/deposit weights are distinct revisioned inputs. A supported zero-weight
+   or zero-velocity case deposits nothing. Sort deposits by entity ID and
+   deposit/contribution ID using the same UTF-8 ordering.
+7. A substep samples `F_i(t)` from the prior buffer. Its next cell value is
+   `prune_i(saturate_cell_i(exp(-lambda_i*h) * F_i(t) + sum_ordered(D_i)))`,
+   with `lambda_i=ln(2)/half_life_i` and required positive half-lives. The
+   substep's deposit is recorded at the end boundary and is not decayed for
+   time before its creation. Empty prior cells start at zero. Cell saturation
+   and pruning have required separate revisioned calibration; their declared
+   order is decay old field, add ordered new deposits, saturate, then prune.
+   Per-contribution creation times/provenance must replay this schedule.
 
 The historical Fork Tales `nooi.py` at
 `f4c43d7b9c832a54bc5d224cb4d5d2497c04423b` samples one dense normalized cell
@@ -127,18 +153,43 @@ a subsequent sample and elapsed decay, retaining:
 `encounter -> deposit -> sampled vector -> force/velocity -> trajectory/contact -> included memory`.
 
 Independently read the committed graph and field revision through OpenPlanner's
-actual scoped storage port. Replay from that readback. In the paired case, keep
-graph/query/principal/embeddings/config/seed/event timing fixed and remove only
-the attributed deposit: physical contact/inclusion must change. The trace must
-reach the automatic maker's actual bounded recall input and provider prompt.
-The separate mood model binds the same independently loaded field revision.
+actual scoped storage port. Replay the **unchanged admitted snapshot and causal
+history** from that readback. The trace must reach the automatic maker's actual
+bounded recall input and provider prompt. The separate mood model binds this
+same independently loaded field revision. A snapshot with its deposit removed
+while retaining the original effect/hash/cursor is invalid and must refuse.
+
+The physical causal control is a separate **lower-level pure kernel
+intervention**, not another admitted persisted state or restore proof. It varies
+only a field-vector contribution passed to the sampling/force/motion/contact
+calculation. Fix graph/query/principal/embeddings/calibration/seed/event schedule,
+the exact mood/lens revision, attention inputs, eight read weights and their
+mapping revision in both arms. The resulting contact and inclusion must differ.
+Do not pass the altered buffer to production admission, storage or restore,
+forge its source hashes, or report it as valid encounter history. The fixture
+tests the physical causal mechanism; the separate positive persistence/replay
+and actual consumer case supplies the lawful end-to-end proof. B2 tests mood
+influence separately while holding physical inputs fixed; it cannot confound
+the physical intervention.
 
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
 API200 or writer-returned snapshot is not independent persisted readback.
-Idempotent replay recovers the admitted effect rather than depositing again.
-Partial/failed writes, duplicate/conflicting identities and stale revisions stay
-explicit. Hidden field contributors must not affect allowed motion or inclusion.
+For this finite effect, the owning OpenPlanner port must atomically commit its
+graph projection update, field checkpoint and immutable effect receipt in one
+transaction, with a unique owner-scoped effect identity and expected graph/field
+revision checks. Unsupported transactions refuse before either update. This is
+a required future adapter capability, not observed SDK behavior.
+
+After an uncertain commit result, read the matching effect receipt and both
+referenced component revisions independently. A complete matching transaction
+recovers its prior result without depositing again. Absence permits retry of
+the same transaction/identity only under the same expected revisions. Hash,
+scope or revision conflict refuses. A receipt with a missing/mismatched graph
+or field component is quarantined as inconsistent; do not replay both sides or
+declare success. Transaction fault tests must establish neither-half persistence
+before commit and complete matching recovery after an acknowledged or uncertain
+commit. Hidden field contributors must not affect allowed motion or inclusion.
 
 ## Acceptance criteria and RED obligations
 
@@ -149,15 +200,22 @@ explicit. Hidden field contributors must not affect allowed motion or inclusion.
    per-call damping, missing field coupling and unseeded graph exploration.
    Proposed modules are `eros-eris-field.shape`, `.law`, `.domain`, with matching
    test namespaces; their declaration here is not test execution.
-3. Sampling tests cover all eight layers, negative cell coordinates, cell edges,
+3. Sampling tests cover all eight layers, signed safe cell coordinates and their
+   positive/negative bounds, cell edges,
    absent/zero cells, exact scope refusal, weight/revision mismatch, saturation,
    finite-value/overflow refusal and declared canonical accumulation. Units tests
    bind gain, wind coupling, velocity, acceleration and timestep calibration.
-4. The selected finite case covers elapsed decay/friction, zero-time no-op,
+4. The selected finite case covers force-class/contribution ordering,
+   post-contact deposit position/velocity, decay-before-new-deposit,
+   elapsed decay/friction, zero-time no-op,
    split/catch-up, immutable ownership, single-counted bonds and actual contact
    deflection. Unavailable operations refuse unchanged state.
-5. Real owning storage tests establish once-only admitted persistence, independent
-   readback, conflicts/failures and frozen replay. A hidden contributor variation
+5. Real owning transaction tests establish once-only graph/field/effect persistence,
+   independent component readback, uncertain-commit recovery, quarantine of an
+   inconsistent pair, conflicts/failures and unchanged admitted-snapshot replay.
+   Altered contribution/hash/cursor restore refuses. The separate kernel
+   intervention freezes mood/lens/attention and exact eight read weights; a
+   hidden contributor variation
    changes no authorized result. Production calibration remains separately
    qualified before live use; fixture values are never implicit defaults.
 6. Actual Knoxx consumption demonstrates field-to-contact-to-inclusion causality,
@@ -173,6 +231,9 @@ finite loop completion may not. Existing whole-story edges remain until reviewed
 replacement interfaces are applied through Rheos; no larger task is marked Done
 from this subset. The selected kernel needs standalone build/license adoption,
 complete calibration and current source/consumer qualification before deployment.
+The signed field-index exception also requires an independently reviewed
+coordinator selection amendment; the old positive-only decision is retained as
+provenance and supplies no admission for that exception.
 
 Independent local audit sizes this as several substantial kernel packets—
 ABI/time/order/build; forces/bonds/winds/seed; contact/trace/replay—plus storage

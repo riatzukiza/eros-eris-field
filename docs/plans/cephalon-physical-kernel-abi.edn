@@ -1,15 +1,18 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-07"
+{:proposal/version "cephalon-physical-kernel/2026-10-14-cell-index-amendment"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
  :selection/revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
  :selection/path "docs/notes/2026-10-07-cephalon-field-kernel-selection.md"
+ :selection/compatibility :pending-reviewed-coordinator-cell-index-amendment
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
  :task/owner-selection "b5f2ba9e-8d67-4c73-9919-e275983aca87"
  :target {:runtime :compiled-cljs-node :scalar :finite-binary64
           :dimensions 2 :distance-unit :world-unit
           :safe-integer-range [0 9007199254740991]
+          :field-cell-index-range [-9007199254740991 9007199254740991]
+          :field-cell-index-exception :requires-reviewed-selection-amendment
           :cross-runtime-parity :not-claimed}
  :clock {:elapsed-unit :integer-microsecond :quantum 10000
          :max-substeps-per-call 100 :carry :exact-residual-and-backlog

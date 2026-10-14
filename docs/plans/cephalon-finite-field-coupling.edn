@@ -4,10 +4,14 @@
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
  :selection/revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/compatibility :pending-reviewed-coordinator-cell-index-amendment
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
             :cell-key [:scope-revision :layer-index :floor-x-over-cell-size
                        :floor-y-over-cell-size]
+            :cell-index-range [-9007199254740991 9007199254740991]
+            :cell-index-overflow :unchanged-refusal
+            :negative-counts-wallets-or-time :forbidden
             :buffer :prior :absence :zero-vector
             :interpolation :none :border-clamping :forbidden
             :scope-fallback :forbidden
@@ -23,22 +27,54 @@
         :force :positive-mass-times-acceleration
         :direction-normalization :forbidden
         :passive-entity-self-propulsion :forbidden}
+ :force-order {:classes [:non-bond-semantic-attraction :unified-intent-bond
+                        :repulsion :boundary :wind :seeded-exploration]
+               :contributions [:target-id :source-id :contribution-id]
+               :id-order :unsigned-utf8-byte-order
+               :sum :left-fold-binary64-from-zero-vector
+               :duplicate-contribution :unchanged-refusal
+               :bond-semantic-double-count :forbidden}
  :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
-           :gain-unit :inverse-second :weights :distinct-from-read-weights
+           :gain-unit :inverse-second :gain :finite-nonnegative
+           :weights :distinct-from-read-weights
+           :position :survivor-post-contact-resolved-position
+           :velocity :survivor-post-contact-resolved-velocity
+           :absorbed-entity :no-motion-deposit
+           :order [:entity-id :deposit-contribution-id]
+           :id-order :unsigned-utf8-byte-order
            :target :next-buffer :zero-weight-or-velocity :no-deposit
            :saturation-and-pruning :required-separate-calibration}
- :decay {:rule :elapsed-exponential :lambda :ln-two-over-positive-half-life}
+ :decay {:rule :elapsed-exponential :lambda :ln-two-over-positive-half-life
+         :sample :prior-field-at-substep-start
+         :next-order [:decay-prior :add-ordered-new-deposits :saturate-cell :prune]
+         :new-deposit-time :substep-end-boundary
+         :pre-creation-deposit-decay :forbidden}
  :calibration {:production-defaults :none :complete-input :required
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal}
  :causal-proof [:admitted-encounter :attributed-deposit :sampled-vector
                 :force-and-velocity :trajectory-and-contact :consumed-memory]
- :paired-case {:fixed [:principal :graph :query :embeddings :configuration
-                      :seed :event-order :timestep-schedule]
-               :varied :attributed-deposit
-               :required-change [:physical-contact :included-memory]}
+ :paired-case {:kind :lower-level-pure-kernel-intervention
+               :not-proof-of [:admitted-persisted-control :restore :actual-live-maker]
+               :fixed [:principal :graph :query :embeddings :configuration
+                       :seed :event-order :timestep-schedule :mood-revision
+                       :lens-revision :attention-inputs :exact-eight-read-weights
+                       :read-weight-mapping-revision]
+               :varied :field-vector-contribution
+               :required-change [:physical-contact :included-memory]
+               :altered-buffer-admission-storage-or-restore :forbidden}
  :persistence {:owner :openplanner :independent-readback :required
+               :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
+               :transaction-and-unique-effect-identity :required
+               :expected-revisions [:graph :field]
+               :unsupported-transaction :refuse-before-either-write
+               :uncertain-commit :read-matching-receipt-and-both-components
                :duplicate-effect :recover-prior-result-without-second-deposit
+               :absent-effect :retry-same-transaction-with-same-expected-revisions
+               :conflicting-hash-scope-or-revision :refuse
+               :inconsistent-component-pair :quarantine-without-replay-or-success
+               :persistent-replay :unchanged-admitted-snapshot-and-history
+               :tampered-contribution-hash-or-cursor :unchanged-refusal
                :failed-or-partial-write :explicit-not-success}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt
