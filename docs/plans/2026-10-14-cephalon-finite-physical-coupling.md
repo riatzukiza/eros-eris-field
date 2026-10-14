@@ -21,13 +21,16 @@ field-sampling/force boundary concrete. It requires its own current planning
 review; existing approvals do not transfer. The corresponding coordinator
 decomposition remains proposed until reviewed native adoption.
 
-The selected owner decision remains Foresight
+The original owner decision is Foresight
 `6a4438982fdf1eca98f856748bb23b19ab017c0a`, path
 `docs/notes/2026-10-07-cephalon-field-kernel-selection.md`.
-Its positive-only integer statement does not admit negative floor-cell indices.
-The signed cell-index amendment is therefore a pending coordinator decision
-change, not a claim of compatibility with the old selection. Review and record
-the new decision revision before implementation; do not overwrite provenance.
+Its positive-only integer statement did not admit negative floor-cell indices.
+The matching signed-index amendment is now independently reviewed and merged
+as decision `020d97fecae4a8d0d277b9b2695d9482620b4a76`, merge
+`8c649fee2e95e5ec6b5304a3351a0e16fca60533` (personal ForesightPR36).
+It retains the owner and changes only the field-index numeric exception.
+This owning proposal/ABI still needs its own review and lawful native readiness
+before implementation; original6a and all prior provenance remain intact.
 
 ## Outcome
 
