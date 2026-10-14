@@ -382,7 +382,11 @@ guarantees. The finite selected persistence/privacy/replay proofs stay mandatory
 ## Verification and risks
 
 Review this document and its matching declared-rule data; parse the data with
-the existing EDN surface. No new solver or mirrored implementation test is
+the existing pinned NBB surface. The gate consumes the entire file and requires
+exactly one EDN map for each declaration; comments and whitespace after the map
+are allowed, while a second form or malformed trailing bytes refuse the gate.
+Its existing parse messages remain, and parsing executes no domain law.
+No new solver or mirrored implementation test is
 claimed. Later RED/GREEN follows lawful native readiness in the owning packages.
 Retain the frozen input, actual source/configuration hashes, commands, prior/new
 state, independent readbacks, observed refusals and consumed causal trace.
