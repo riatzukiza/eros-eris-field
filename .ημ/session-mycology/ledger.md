@@ -273,3 +273,13 @@
   spore: none
   receipt-refs: cephalon-field-whole-edn-gate-green-20261014
   note: Use existing edamame.core parse-string-all alreadyexposed by pinnednbb1.4.207, then require one map. No customEDN parser, newdependency, schema, numericalsolver or domainlaw execution. Entiretext parse rejects malformedtrailingbytes, count rejects validadditionalforms includingnil or sentinel-looking keyword; comments stayvalid and existing messages preserved. No claim from unsupported cljs.tools.reader namespace probe; npm always-auth notice loggedseparately. ExistingfieldABI/rules/numericalsource unchanged; proposal verification textstates exactgateboundary. Newhead needsfresh native source review/checks; currentb512 MiMo approval and completedCRfinding don'ttransfer. No paidcredits/newscope/boardstatus/readiness/runtime/credential/model/liveB1B2B3/deployment or spore change.
+
+- ts: 2026-10-14T22:52:19.015Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite physical planning parsegate
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field51-edn-reader-macro-red-20261014
+  note: Confirmed narrower nativefinding: defaultfullreader accepts quote shorthand. Regex alreadyrefuses, so no fabricated regexRED. Firstoperator matrix incorrectlyexpected all14refusals and assertionfailed; followingmissingJSONattempt wasoperatorfailure becausefailedprobe neverwrotefile, notsource proof. Correctedmatrix writesallrawattempts andrecords actual twoquote falsepasses. Normal EDN list(quote foo) is data, not reader syntax, andmust stayvalid. Newgate will explicitly disable documented Clojure reader macros with existinglibrary. No customparser/dependency/runtime/board/numerical behavior, currenthead stillunapproved. Preserve all prior32journalrows and sourcehistory.
