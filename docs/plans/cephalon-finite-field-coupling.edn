@@ -9,8 +9,17 @@
  :selection/compatibility :reviewed-signed-cell-index-amendment
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
-            :cell-key [:scope-revision :layer-index :floor-x-over-cell-size
-                       :floor-y-over-cell-size]
+            :cell-key [:scope-revision :layer-index :exact-floor-x-over-cell-size
+                       :exact-floor-y-over-cell-size]
+            :floor-rule :exact-integer-floor-of-binary64-rational-ratio
+            :binary64-decode {:subnormal-significand :fraction-bits :subnormal-exponent -1074
+                              :normal-significand :two-to-52-plus-fraction-bits
+                              :normal-exponent :exponent-bits-minus-1023-minus-52}
+            :ratio-arithmetic :exact-integer-shifts-quotient-and-remainder
+            :negative-nonintegral-quotient :round-toward-negative-infinity
+            :stored-index :signed-safe-integer-checked-before-conversion
+            :zero-and-negative-zero :canonical-zero
+            :rounded-floating-quotient :forbidden
             :cell-index-range [-9007199254740991 9007199254740991]
             :cell-index-overflow :unchanged-refusal
             :negative-counts-wallets-or-time :forbidden
@@ -40,13 +49,24 @@
         :substitution-policy :forbidden
         :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds
                      :cell-saturation :cell-pruning]}
- :radial-cap {:zero-norm-or-cap :exact-zero-vector
+ :radial-cap {:input-order [:validate-finite-components-and-nonnegative-finite-cap
+                            :zero-cap-shortcut-before-norm :scaled-norm]
+              :zero-norm-or-cap :exact-zero-vector
               :at-or-below-cap :retain-original-vector-before-division
               :above-cap-order [:divide-cap-by-norm :branch-on-zero-ratio]
               :nonzero-ratio-order [:multiply-x-by-ratio :multiply-y-by-ratio]
               :positive-cap-zero-ratio-order [:x-divide-norm :unit-x-times-cap
                                               :y-divide-norm :unit-y-times-cap]
               :trace :actual-ratio-branch
+              :result-certification :same-declared-scaled-norm-at-or-below-cap
+              :inward-correction {:maximum-passes 2
+                                  :order [:cap-divide-current-norm :preceding-nonnegative-binary64
+                                          :multiply-current-x :multiply-current-y :recertify]
+                                  :predecessor :positive-ieee64-bit-pattern-minus-one
+                                  :zero-factor :unchanged-refusal
+                                  :unsafe-intermediate :unchanged-refusal
+                                  :after-limit-over-cap :unchanged-refusal
+                                  :trace [:factor :vector-before :vector-after :certified-norm]}
               :finite-check :after-every-intermediate
               :inactive-division :forbidden
               :applies-to [:aggregate-wind :both-speed-caps :cell-saturation]}

@@ -27,10 +27,10 @@ The original owner decision is Foresight
 Its positive-only integer statement did not admit negative floor-cell indices.
 The matching signed-index amendment is now independently reviewed and merged
 as decision `020d97fecae4a8d0d277b9b2695d9482620b4a76`, merge
-`8c649fee2e95e5ec6b5304a3351a0e16fca60533` (personal ForesightPR36).
+`8c649fee2e95e5ec6b5304a3351a0e16fca60533` (personal Foresight PR36).
 It retains the owner and changes only the field-index numeric exception.
 This owning proposal/ABI still needs its own review and lawful native readiness
-before implementation; original6a and all prior provenance remain intact.
+before implementation; original 6a and all prior provenance remain intact.
 
 ## Outcome
 
@@ -91,7 +91,10 @@ root and no fused arithmetic. Check each intermediate for finiteness; a final
 unrepresentable norm refuses unchanged state. Do not substitute naive squaring,
 `Math.hypot`, approximation or replay tolerance. A representable large norm
 therefore does not refuse merely because unscaled component squares overflow.
-For every radial cap, return exact zero for zero norm or zero cap; otherwise
+For every radial cap, validate finite components and the finite nonnegative
+cap first. If cap is zero, return exact [0,0] before evaluating any norm, even
+when the original finite vector's norm would be unrepresentable. Otherwise
+evaluate the scaled norm; exact zero norm returns exact [0,0]. Then
 compare n to the cap first. If n is at or below the cap, retain the original
 vector without division. Only when n exceeds the cap compute `ratio=cap/n`.
 If ratio is nonzero, multiply x then y by ratio with finite checks. If a
@@ -100,10 +103,31 @@ compute `unit_x=x/n`, then `result_x=unit_x*cap`, then `unit_y=y/n`, then
 `result_y=unit_y*cap`, checking each operation. This underflow branch preserves
 representable nonzero capped components such as [MAX_VALUE,0] capped at
 MIN_VALUE. Pin the branch in the trace; no reassociation outside it is allowed.
+Certify the resulting vector with the same declared scaled norm. If it exceeds
+the cap through rounding, perform at most two inward correction passes: compute
+`r=cap/result_norm`, then the immediately preceding nonnegative binary64 value
+`r_down` (positive finite IEEE64 bit pattern minus one), then multiply result_x
+and result_y by r_down in that order with finite checks and recertify. A zero
+r_down or unrepresentable intermediate refuses unchanged state. After two
+passes a still-over-cap norm also refuses as unsafe arithmetic; never return an
+uncertified vector. Record every correction's factor, before/after vector and
+certified norm. The bounded correction count is a versioned algorithm limit,
+not production calibration or a claim of exact real-number direction.
 Do not evaluate an overflowing inactive division for subnormal input. These rules remain unimplemented proposal data.
 
 1. For each admitted entity position `p=(x,y)`, compute the declared cell key
-   using mathematical floor and positive world-unit `cell-size`. Read only
+   using exact floor of the binary64 inputs' rational ratio and positive
+   world-unit `cell-size`. Decode each finite binary64 operand into sign,
+   integer significand M and power-of-two exponent E: subnormal/zero use
+   M=fraction_bits, E=-1074; normals use M=2^52+fraction_bits,
+   E=exponent_bits-1023-52. Form the exact signed coordinate/cell-size ratio
+   with integer shifts and apply integer quotient/remainder; a negative
+   nonintegral quotient rounds toward negative infinity, never toward zero.
+   Use exact integer scratch arithmetic, then enforce the declared signed
+   safe-index range before conversion to the stored numeric index. Zero and
+   negative zero both map to canonical cell 0; a tiny negative coordinate maps
+   to -1 even when floating division would underflow. No rounded floating
+   quotient, clamping or shifted origin defines identity. Read only
    the exact authorized scope revision and indices 0 through 7 from the prior
    buffer. An absent cell contributes the zero vector. There is no coordinate
    normalization, border clamping, cross-scope fallback or interpolation in
@@ -371,7 +395,7 @@ resolve these risks; the plan alone does not establish performance or behavior.
 
 ## Current4b planning corrections
 
-Codex review5523734461 on4b08fdd identified three missing deterministic rules:
+Codex review 5523734461 on4b08fdd identified three missing deterministic rules:
 4275496845 (force integration), 4275496853 (entity deposit binding), and
 4275496863 (static-threshold placement). The proposal now specifies component
 divide/multiply/add ordering before friction, the same immutable request or
@@ -380,20 +404,20 @@ thresholds after both speed caps. Matching EDN records the same boundaries.
 These are reviewed proposal corrections, not executed physical behavior.
 
 The separate coordinator selection amendment is actually MERGED as personal
-ForesightPR36 at `8c649fee2e95e5ec6b5304a3351a0e16fca60533` on
+Foresight PR36 at `8c649fee2e95e5ec6b5304a3351a0e16fca60533` on
 2026-10-14T20:18:50Z, after current020d approvals/checks and canonical gate PASS.
 The owning proposal binds its exact selected decision commit
-`020d97fecae4a8d0d277b9b2695d9482620b4a76`; original6a selection remains
+`020d97fecae4a8d0d277b9b2695d9482620b4a76`; original 6a selection remains
 historical provenance. This does not qualify this separate PR or establish
 native readiness, an implemented kernel or any live B1/B2/B3 proof.
 
 
 ## Later native consistency and arithmetic corrections
 
-Codex review5524217029 roots4275894355/4363/4368 and MiMo
-review5524305119 root4275970732 identified a stale ABI compatibility marker,
+Codex review 5524217029 roots4275894355/4363/4368 and MiMo
+review 5524305119 root 4275970732 identified a stale ABI compatibility marker,
 an unspecified norm algorithm, and unspecified deposit association. The ABI
-now distinguishes original6a from qualified020d/merge8c and exposes the same
+now distinguishes original 6a from qualified020d/merge 8c and exposes the same
 reviewed amendment state as the finite declaration. All wind/cap/threshold
 norms use the explicit scaled component algorithm; deposits use declared
 left-associated products with immediate intermediate checks. Future RED must
@@ -405,7 +429,7 @@ claimed. MiMo's actual finding-bearing review does not approve the source.
 
 ## Explicit field-fold and calibration algorithms
 
-Later Codex review5524401966 repeats the introductory selection status concern
+Later Codex review 5524401966 repeats the introductory selection status concern
 already corrected in c79 and identifies four further unspecified operations:
 weighted sampling arithmetic, next-cell accumulation, cell saturation/pruning
 and inactive-cap division. Their exact ordered binary64 operations and zero/
@@ -418,7 +442,7 @@ parse/hygiene; implementation and causal behavioral proof remain outstanding.
 
 ## Active-cap underflow and strict ID encoding
 
-Codex5524555284 roots4276175354/5366/5369 add three confirmed boundaries:
+Codex 5524555284 roots4276175354/5366/5369 add three confirmed boundaries:
 active cap ratio underflow, cell-operation norm applicability, and noninjective
 replacement UTF8 encoding of lone surrogates. The cap now has an explicit
 underflow fallback, the norm declaration includes cell saturation/pruning, and
@@ -426,3 +450,16 @@ IDs require well-formed Unicode scalars and unique exact bytes. Future RED
 includes MAX_VALUE capped to MIN_VALUE, unequal tiny components, malformed
 surrogates and preserved distinct composed/decomposed valid ID spellings.
 No numerical behavior or solver execution is claimed by this plan correction.
+
+
+## Zero-cap, coordinate-floor and final-cap certification
+
+Codex 5524722331 roots4276317791/7801/7807 confirm three further numerical
+ambiguities. Zero speed caps now precede norm evaluation after finite-input
+validation. Cell identity uses exact integer floor of the decoded binary64
+rational ratio, covering negative underflow and near-integer boundaries while
+retaining safe stored indices. Active caps recertify the rounded result with
+at most two ordered inward corrections; an uncertifiable result refuses the
+whole transition. Future RED includes huge finite zero-cap vectors, tiny
+negative cell ratios, quotient boundaries and 5*MIN_VALUE caps of diagonal
+large vectors. These are algorithm declarations, not executed solver proof.
