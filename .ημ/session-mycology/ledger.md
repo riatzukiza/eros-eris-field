@@ -283,3 +283,23 @@
   spore: none
   receipt-refs: cephalon-field51-edn-reader-macro-red-20261014
   note: Confirmed narrower nativefinding: defaultfullreader accepts quote shorthand. Regex alreadyrefuses, so no fabricated regexRED. Firstoperator matrix incorrectlyexpected all14refusals and assertionfailed; followingmissingJSONattempt wasoperatorfailure becausefailedprobe neverwrotefile, notsource proof. Correctedmatrix writesallrawattempts andrecords actual twoquote falsepasses. Normal EDN list(quote foo) is data, not reader syntax, andmust stayvalid. Newgate will explicitly disable documented Clojure reader macros with existinglibrary. No customparser/dependency/runtime/board/numerical behavior, currenthead stillunapproved. Preserve all prior32journalrows and sourcehistory.
+
+- ts: 2026-10-14T22:59:58.453Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite physical planning
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field51-edn-symbol-probe-correction-20261014
+  note: Prior33 quote falsepass/causalRED/expansion interpretation incorrect: valid EDN symbol was mistaken for a Clojure quote macro. Correctcriterion compares parsedvalue/type, not requires invalid rejection of validdata. Optionsfalse attemptedGREEN assertion thereforefailed and suppliesnoGREEN; no productionbug or quoteexpansion established. Earlier correction-script malformedparenthesis/missingrecord failures wereoperatoronly and arepreserved in toolhistory; successful precise Node22/JVM probes nowcaptured. Priorrows/nativefindings remain untouched; independent opener recheck needed, no selfsettlement or approval. Localunpublisheda7355da receipt-only observation retained, remote source51 retains32reviewedreceiptrows; keep correction uncommitted for next concreteownedchange, no observation-only headchurn. No newtransport/provider/auth/runtime/board/deployment/liveproof/spore effect.
+
+- ts: 2026-10-14T23:16:52.740Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite physical planning parsegate
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-standard-edn-eof-interface-20261014
+  note: Address requested standardparser interface directly: clojure.edn/read owns syntax, existingEdamame API suppliesreaderhandleonly. Exactlyone mapandtrueEOF requiredwithobjectsentinel; preserveparsemessages/No domainlawexecuted. Earlierquoteexample isvalidEDNsymbol, notquotedexpression; no invalidrejection isintroduced merelytopleasefinding. Currentnewmethod is a concrete supportedinterface refinement, notclaim ofrepairingnonexistentquoteexpansion. It consumes priorheldcorrectiveprovenance atthis realownedchange, no observation-onlypush. Unavailablecljs.tools.reader probe and malformedoperator/falseexpectation attempts stayexplicit. No newlibrary/customparser/semanticvalidator/schema/solver/board/modelauth/paid/runtime/deployment/liveB1B2B3 orspore. Newhead requiresfresh currentnative review/checks; no syntheticapproval or originalfindinghistory removal.

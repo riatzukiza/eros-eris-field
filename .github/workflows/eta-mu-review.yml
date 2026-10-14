@@ -21,7 +21,7 @@ jobs:
       evidence_gates_script: |
         run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
         run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
-        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [edamame.core :as edn]) (quote ["node:fs" :as fs])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (let [forms (edn/parse-string-all (.readFileSync fs p "utf8"))] (assert (and (= 1 (count forms)) (map? (first forms))) (str "Expected one complete EDN map: " p))) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
+        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [clojure.edn :as edn]) (quote [edamame.core :as reader]) (quote ["node:fs" :as fs])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (let [r (reader/reader (.readFileSync fs p "utf8")) eof (js-obj)] (assert (map? (edn/read {:eof eof} r)) (str "Expected an EDN map: " p)) (assert (identical? eof (edn/read {:eof eof} r)) (str "Unexpected trailing EDN form: " p))) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
     secrets:
       ETA_MU_APP_ID: ${{ secrets.ETA_MU_APP_ID }}
       ETA_MU_APP_PRIVATE_KEY: ${{ secrets.ETA_MU_APP_PRIVATE_KEY }}
