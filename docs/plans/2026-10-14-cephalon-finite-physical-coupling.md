@@ -363,9 +363,11 @@ finite loop completion may not. Existing whole-story edges remain until reviewed
 replacement interfaces are applied through Rheos; no larger task is marked Done
 from this subset. The selected kernel needs standalone build/license adoption,
 complete calibration and current source/consumer qualification before deployment.
-The signed field-index exception also requires an independently reviewed
-coordinator selection amendment; the old positive-only decision is retained as
-provenance and supplies no admission for that exception.
+The signed field-index coordinator amendment is satisfied by reviewed decision
+`020d97fecae4a8d0d277b9b2695d9482620b4a76` and actual merge
+`8c649fee2e95e5ec6b5304a3351a0e16fca60533`. Current owning-plan review and
+native readiness remain outstanding. The old positive-only decision stays
+provenance and supplies no admission for the exception by itself.
 
 Independent local audit sizes this as several substantial kernel packets—
 ABI/time/order/build; forces/bonds/winds/seed; contact/trace/replay—plus storage
@@ -382,11 +384,16 @@ guarantees. The finite selected persistence/privacy/replay proofs stay mandatory
 ## Verification and risks
 
 Review this document and its matching declared-rule data; parse the data with
-the existing pinned NBB surface. The gate consumes the entire file and requires
+the standard EDN reader in Babashka, supplied by the existing pinned shared
+workflow toolchain (Babashka 1.13.219). The gate consumes the entire file and requires
 exactly one EDN map for each declaration; comments and whitespace after the map
 are allowed, while a second form or malformed trailing bytes refuse the gate.
 The standard `clojure.edn/read` API reads one map and then requires actual EOF
-using an identity-distinct sentinel; Edamame supplies only the reader handle.
+using an identity-distinct sentinel and a closed PushbackReader. NBB’s EDN
+facade accepted unsupported `#!` reader comments, so this check uses Babashka’s
+standard reader; strings and semicolon comments containing literal `#!` remain
+valid. The shared toolchain setup is enabled for this dependency; the caller’s
+explicit evidence script still supplies the gates, without a package install.
 Apostrophe-prefixed symbols and ordinary lists remain valid EDN data, not
 executed quote expressions. Its existing parse messages remain, and parsing
 executes no domain law.

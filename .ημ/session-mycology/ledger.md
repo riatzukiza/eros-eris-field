@@ -313,3 +313,13 @@
   spore: none
   receipt-refs: cephalon-field-b632-shebang-causal-red-20261014
   note: The NBB public EDN facade still accepts shebang extensions; previous API refinement did not repair this newly demonstrated counterexample. Original quote premise remains corrected append-only. This causal RED precedes a standard-reader repair; no source syntax filter or fabricated pass. No domain, board, live runtime, credentials, paid models or deployment changed.
+
+- ts: 2026-10-14T23:37:49.320Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Finite physical owning plan review
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-standard-bb-edn-green-20261014
+  note: Use standard Babashka clojure.edn/read with PushbackReader/closedresource/identityEOF. Existing shared setup enabled to supply declared Babashka; explicit caller gates prevent default package install. This changes CI tooling, not application runtime. Local observed version differs from hosted declaredversion, so exact hosted execution remains required. No custom parser or text rejection filter. Owning plan now names actual completed numeric amendment, retaining current owning review/native readiness. Preserve prior quote correction and true shebang RED. No board/solver/runtime/deployment/credential/paid changes or live proof.
