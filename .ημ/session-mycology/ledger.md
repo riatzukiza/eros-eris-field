@@ -233,3 +233,13 @@
   spore: none
   receipt-refs: cephalon-field-sampling-fold-cell-calibration-arithmetic-20261014
   note: Weighted sampling pins exact zero-initialized multiply/add x then y per ascending layer, finite checks after every operation and no FMA/tree reassociation. Cell accumulation initializes with decayed prior and directly left-folds ordered deposits with x/y immediate checks, not zero-sum thenprior. Cell saturation is required positive perlayer radial cap; prune norm<=epsilon (epsilon0 exactzero, bound0<=epsilon<cap), equality/immutableprovenance/refusal/observation explicit. Every radial cap short-circuits zero or inactive before division, preventing overflow for tiny under-cap inputs; onlyactive ratio/component products evaluated. Numeric algorithms remain unimplemented, future boundary/cancellation/overflow RED explicit; no numerical behavior tests/admission/solver/liveB1B2B3 claimed. Current Codex new completed review restores canonical availability after earlier quota, no independent native override. Own new source requires fresh reviews/checks; no paid/early CodeRabbitretry, metadatawaiver or unrelated changes. GoalACTIVE/heartbeatPAUSED; no newtask/points/board/runtime/maker/auth/social/deployment/spore.
+
+- ts: 2026-10-14T21:06:43.988Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite physical planning
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-active-cap-underflow-strict-id-encoding-20261014
+  note: Active positive cap that underflows cap/n to zero uses explicit x/n*cap then y/n*cap branch; nonzero ratio retains direct scaling, with ordered finite checks and branch trace. Norm applicability explicitly includes cell saturation/pruning. All ID namespaces reject lone surrogate halves before UTF8 encoding, require nonempty well-formed Unicode scalars and unique exact bytes, preserve spelling without normalization/replacement so sort keys cannot tie for distinct IDs. Future numerical/malformed-ID RED cases explicit but unexecuted. No solver/readiness/liveproof or newimplementationinventory claim. New source needs fresh independent review/CI; no paidearlyquota retry, sourcewaiver, nativeboard/runtime/maker/model/auth/social/deployment/spore change. GoalACTIVE/heartbeatPAUSED/B1B2B3live0of3.

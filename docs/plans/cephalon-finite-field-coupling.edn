@@ -38,10 +38,15 @@
         :unsafe-result :unchanged-refusal
         :substitutions [:naive-unscaled-squares :math-hypot :approximation]
         :substitution-policy :forbidden
-        :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds]}
+        :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds
+                     :cell-saturation :cell-pruning]}
  :radial-cap {:zero-norm-or-cap :exact-zero-vector
               :at-or-below-cap :retain-original-vector-before-division
-              :above-cap-order [:divide-cap-by-norm :multiply-x-by-ratio :multiply-y-by-ratio]
+              :above-cap-order [:divide-cap-by-norm :branch-on-zero-ratio]
+              :nonzero-ratio-order [:multiply-x-by-ratio :multiply-y-by-ratio]
+              :positive-cap-zero-ratio-order [:x-divide-norm :unit-x-times-cap
+                                              :y-divide-norm :unit-y-times-cap]
+              :trace :actual-ratio-branch
               :finite-check :after-every-intermediate
               :inactive-division :forbidden
               :applies-to [:aggregate-wind :both-speed-caps :cell-saturation]}
@@ -55,6 +60,13 @@
         :force :positive-mass-times-acceleration
         :direction-normalization :forbidden
         :passive-entity-self-propulsion :forbidden}
+ :ids {:shape :nonempty-well-formed-unicode-scalar-strings
+       :lone-utf16-surrogates :unchanged-refusal-before-encoding
+       :encoding :exact-utf8-no-normalization-or-replacement
+       :uniqueness :exact-utf8-bytes-within-declared-id-namespace
+       :different-id-sort-key-ties :unchanged-refusal
+       :applies-to [:entity :target :source :contribution :deposit]
+       :order :unsigned-utf8-byte-order}
  :force-order {:classes [:non-bond-semantic-attraction :unified-intent-bond
                         :repulsion :boundary :wind :seeded-exploration]
                :contributions [:target-id :source-id :contribution-id]

@@ -93,8 +93,13 @@ unrepresentable norm refuses unchanged state. Do not substitute naive squaring,
 therefore does not refuse merely because unscaled component squares overflow.
 For every radial cap, return exact zero for zero norm or zero cap; otherwise
 compare n to the cap first. If n is at or below the cap, retain the original
-vector without division. Only when n exceeds the cap compute `ratio=cap/n`,
-then multiply x and y separately by ratio in that order with finite checks.
+vector without division. Only when n exceeds the cap compute `ratio=cap/n`.
+If ratio is nonzero, multiply x then y by ratio with finite checks. If a
+positive cap yields exact zero ratio through binary64 underflow, instead
+compute `unit_x=x/n`, then `result_x=unit_x*cap`, then `unit_y=y/n`, then
+`result_y=unit_y*cap`, checking each operation. This underflow branch preserves
+representable nonzero capped components such as [MAX_VALUE,0] capped at
+MIN_VALUE. Pin the branch in the trace; no reassociation outside it is allowed.
 Do not evaluate an overflowing inactive division for subnormal input. These rules remain unimplemented proposal data.
 
 1. For each admitted entity position `p=(x,y)`, compute the declared cell key
@@ -138,7 +143,13 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    this force-class order: non-bond semantic attraction, unified intent-bond,
    repulsion, boundary, wind, seeded exploration. Within each class, sort
    contributions by `(target-id, source-id, contribution-id)` using ascending
-   unsigned UTF-8 ID bytes; duplicate contribution identities refuse. A semantic
+   unsigned UTF-8 ID bytes. Every entity/target/source/contribution/deposit ID
+   must be a nonempty well-formed Unicode-scalar string: reject lone UTF16
+   surrogate halves before encoding. Preserve exact scalar spelling and bytes,
+   with no normalization or replacement encoding. Require unique exact UTF8
+   bytes within each declared ID namespace; different IDs cannot share a sort
+   key. Duplicate contribution identities refuse. The same admission applies
+   to deposit ordering and every other canonical ID/tuple order. A semantic
    pair represented by an intent bond belongs only to the unified bond class;
    structural/semantic evidence cannot add its force twice. Every contribution
    is a force in wu/s^2 times positive dimensionless inertia. For each component,
@@ -403,3 +414,15 @@ cell clamping, reassociation or ignored intermediate overflow is admitted.
 Future RED includes cancellation-sensitive folds, subnormal inactive caps,
 prune equality/zero and unsafe products. Current verification is declaration
 parse/hygiene; implementation and causal behavioral proof remain outstanding.
+
+
+## Active-cap underflow and strict ID encoding
+
+Codex5524555284 roots4276175354/5366/5369 add three confirmed boundaries:
+active cap ratio underflow, cell-operation norm applicability, and noninjective
+replacement UTF8 encoding of lone surrogates. The cap now has an explicit
+underflow fallback, the norm declaration includes cell saturation/pruning, and
+IDs require well-formed Unicode scalars and unique exact bytes. Future RED
+includes MAX_VALUE capped to MIN_VALUE, unequal tiny components, malformed
+surrogates and preserved distinct composed/decomposed valid ID spellings.
+No numerical behavior or solver execution is claimed by this plan correction.
