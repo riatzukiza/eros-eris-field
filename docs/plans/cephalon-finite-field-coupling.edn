@@ -40,13 +40,22 @@
                :sum :left-fold-binary64-from-zero-vector
                :duplicate-contribution :unchanged-refusal
                :bond-semantic-double-count :forbidden}
+ :speed-cap {:range :finite-nonnegative-by-kind :unit :world-unit-per-second
+             :rule :radial-min-one-kind-cap-over-norm :zero-velocity :zero-vector
+             :zero-cap :zero-vector :overflow :unchanged-refusal
+             :stages [:after-elapsed-friction-before-movement
+                      :after-entire-ordered-contact-pass-before-deposit]
+             :between-contact-pairs :forbidden :second-position-advance :none
+             :trace [:stage :velocity-before :velocity-after :limit-applied]
+             :raw-contact-response :retained-separately
+             :constraint :explicit-dissipative-not-kinetic-energy-conservation}
  :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
            :gain-unit :inverse-second :gain :finite-nonnegative
            :weights :distinct-from-read-weights
            :deposit-weights :exact-eight-finite-nonnegative-revisioned-inputs
            :invalid-deposit-weights :unchanged-refusal
            :position :survivor-post-contact-resolved-position
-           :velocity :survivor-post-contact-resolved-velocity
+           :velocity :survivor-post-contact-and-cap-velocity
            :absorbed-entity :no-motion-deposit
            :order [:entity-id :deposit-contribution-id]
            :id-order :unsigned-utf8-byte-order

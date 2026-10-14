@@ -117,13 +117,18 @@ state; no donor constant becomes a default.
    unsigned UTF-8 ID bytes; duplicate contribution identities refuse. A semantic
    pair represented by an intent bond belongs only to the unified bond class;
    structural/semantic evidence cannot add its force twice. Update velocity,
-   apply `exp(-gamma_kind*h)`, move and resolve canonically ordered contacts.
+   apply `exp(-gamma_kind*h)`, apply the kind's radial speed cap, then move.
+   Resolve the canonically ordered contact pass using those velocities; only
+   after the whole pass apply the same kind cap to each resolved velocity.
+   Contact response is computed before this second cap and retained in the
+   trace; do not interleave caps between contact pairs. Motion deposits use the
+   final post-contact-and-cap velocity, with no second position advance.
    Deposits/contact outputs enter the following buffer, not other entities
    midway through the same prior-buffer pass. Class order and contribution
    order are revision-bound semantics, not collection insertion order.
 6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
    selected by the surviving entity's **post-contact resolved position**.
-   Use its post-contact resolved velocity too; do not use the old position or
+   Use its final post-contact-and-cap velocity too; do not use the old position or
    pre-contact velocity. An absorbed entity has no motion deposit. For
    velocity-valued cells, `gain_i` is finite nonnegative with units s^-1.
    Read/deposit weights are distinct revisioned inputs; each deposit vector has
@@ -140,6 +145,13 @@ state; no donor constant becomes a default.
    and pruning have required separate revisioned calibration; their declared
    order is decay old field, add ordered new deposits, saturate, then prune.
    Per-contribution creation times/provenance must replay this schedule.
+8. The kind speed cap is finite nonnegative, in wu/s. Its rule is
+   `C(v)=v*min(1, max-speed_kind/norm(v))`, with `C(0)=0`; a zero cap returns
+   zero velocity. Overflow refuses unchanged state. Record both cap stages'
+   before/after velocities and whether a limit applied. A cap is an explicit
+   dissipative constraint; do not relabel capped velocity as the raw exact
+   contact response or claim kinetic-energy conservation. Wallet conservation
+   and immutable ownership remain independent unchanged laws.
 
 The historical Fork Tales `nooi.py` at
 `f4c43d7b9c832a54bc5d224cb4d5d2497c04423b` samples one dense normalized cell
@@ -220,7 +232,8 @@ commit. Hidden field contributors must not affect allowed motion or inclusion.
    bind gain, wind coupling, velocity, acceleration and timestep calibration.
 4. The selected finite case covers force-class/contribution ordering,
    post-contact deposit position/velocity, decay-before-new-deposit,
-   elapsed decay/friction, zero-time no-op,
+   elapsed decay/friction, both over-cap stages (including zero cap),
+   raw-contact-versus-final-cap trace, zero-time no-op,
    split/catch-up, immutable ownership, single-counted bonds and actual contact
    deflection. Unavailable operations refuse unchanged state.
 5. Real owning transaction tests establish once-only graph/field/effect persistence,
