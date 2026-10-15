@@ -196,6 +196,16 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    project onto a surface or advance position again. Deposit-cell selection
    uses that unchanged `p_move`, including at cell boundaries. Any later
    positional solver requires a separately versioned rule and requalification.
+   Re-evaluate geometric overlap afresh at each substep from its moved positions.
+   Each currently overlapping unordered pair emits exactly one contact observation
+   in canonical pair order for that substep, even when velocity is tangent,
+   zero or separating and the response applies no impulse. There is no
+   cross-substep suppression or extra observation within the same pair/substep.
+   A separated pair emits none. Bind observation identity to step and exact pair;
+   replay does not mint another effect or reinforce retrieval. Penetration
+   fixtures continue through the next substep and assert its exact overlap,
+   contact count/order and inclusion trace, including a pair that stays overlapped
+   and one that separates. Existing work/trace caps still refuse overflow.
    Deposits/contact outputs enter the following buffer, not other entities
    midway through the same prior-buffer pass. Class order and contribution
    order are revision-bound semantics, not collection insertion order.
@@ -332,6 +342,18 @@ Neither arm can be a self-post relabeled as outside input or a duplicate
 assigned a new effect identity. This is future RED/GREEN acceptance, not an
 executed proof.
 
+Run the two atomic arms in distinct owned fixture stores or isolated namespaces,
+each initialized from and independently verified against the same qualified
+graph/field baseline contents, hashes, revisions and stored authority. Store
+routing is an outer fixture adapter input, never a kernel/recall parameter or
+payload-selected grant. Each arm validates its own actual expected revisions,
+commits only to its own store and independently reads that store back. The first
+commit cannot advance the second arm's baseline. Reversing execution order on
+fresh isolated baselines must reproduce each arm's result. No shared mutable
+store reset, historical hash/cursor edit or invalid buffer substitution qualifies.
+Bound fixture storage and snapshot work under the existing disk/concurrency
+rules; this declares future tests, not a store clone performed now.
+
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
 API200 or writer-returned snapshot is not independent persisted readback.
@@ -350,6 +372,19 @@ or field component is quarantined as inconsistent; do not replay both sides or
 declare success. Transaction fault tests must establish neither-half persistence
 before commit and complete matching recovery after an acknowledged or uncertain
 commit. Hidden field contributors must not affect allowed motion or inclusion.
+Require a finite revoke-after-deposit fixture: retain an initially authorized
+contribution, revoke it, then rebuild the retained field/trails and any causally
+affected world projection under the new permitted scope before the next sample.
+Use immutable contribution history and a compatible trusted checkpoint; record
+the new scope/projection/field bindings without rewriting old history. Compare
+with a clean permitted-history control: remaining authorized contributions must
+survive and revoked pressure/trail influence must disappear from subsequent
+motion, contact and inclusion. Successful bounded rebuild is required where
+complete admissible history exists. Missing or ambiguous reconstruction inputs
+refuse unchanged/quarantined state before sampling; filtering display, retagging
+the old aggregate or zeroing all fields cannot pass. Keep this selected
+revocation case in the finite proof; broader sustained revocation/restart remains
+later work.
 
 ## Reference numerical execution profile
 
@@ -445,39 +480,53 @@ The signed field-index coordinator amendment is satisfied by reviewed decision
 native readiness remain outstanding. The old positive-only decision stays
 provenance and supplies no admission for the exception by itself.
 
-Foresight's native Rheos now created the eight selected packets below in
-Incoming for independent planning review in personal Foresight PR37. The three
-physical packets total13, atomic storage5, with encounter3, graph5, mood5 and
-automatic proof5: total36, plus the existing separate selection3. Initial
-creation estimates are provisional; they are not a subtraction remainder from
-the original8-point larger field story. Existing aggregate estimates remain
-historical and must not be double-counted with these allocations. Fair
-aggregation and full native graph readiness require reviewed adoption through
-Rheos before RED. Incoming creation alone grants no implementation readiness.
+Foresight's native Rheos created twelve Incoming planning cards in personal
+Foresight PR37: eleven selected execution packets and the existing automatic
+integration parent. The three physical execution packets total 13 points,
+atomic storage 5, encounter 3, scoped graph reads 5, feedback 3, mood 5,
+deployment 3, served causal proof 5 and terminal closeout 2: total 44, plus the
+existing separate selection 3. The earlier eight-packet total 36 is estimate
+history; the automatic parent's recorded 5 points are aggregate history and
+excluded from these child allocations. Initial estimates remain provisional
+for independent review and lawful aggregation before Ready. They are not a
+subtraction remainder from the original 8-point larger field story. No Incoming
+creation, table or source plan grants implementation readiness.
 
-| Packet | Canonical UUID | Proposed points |
-| --- | --- | --- |
-| admission | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a` | 3 |
-| graph | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` | 5 |
-| abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 3 |
-| forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 |
-| contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 5 |
-| atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 5 |
-| mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 |
-| automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 |
+The table records exact native `uuid`-namespace values, including feedback's
+actual native default slug identity. `dependency` is the canonical Foresight
+predecessor field; these are its complete selected values rather than a new
+`blocked_by` parser or admission rule. Preserve native identity; never infer it
+from a title or replace it locally. Parent/epic/dependency reads and writes
+remain Rheos operations. Source qualification and full lawful graph readiness
+remain mandatory before RED.
 
-The native cards carry their original story parent, character epic UUID and
-exact selected predecessor UUIDs. Initial admission prepares an envelope;
-ABI/time follows admission, scoped graph and completed selection; forces then
-contact follow in order; atomic persistence consumes their outputs; persisted
-mood and the actual automatic proof follow the atomic graph/field contract.
-Source qualification and lawful current predecessor admission stay mandatory.
-The owning Foresight planning PR and these source plans retain independent gates.
+| Packet | Canonical task identity (`uuid`) | Proposed points | Exact parent | Exact epic | Exact dependency identities |
+| --- | --- | --- | --- | --- | --- |
+| admission | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a` | 3 | `6eb77110-8cf4-44d5-a242-f495d25d6aaf` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | None |
+| graph | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` | 5 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | None |
+| abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 3 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `b5f2ba9e-8d67-4c73-9919-e275983aca87` |
+| forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` |
+| contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` |
+| atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `ba078119-482c-49dc-bd18-c2dfcaad9024` |
+| mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
+| automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback` |
+| feedback | `deliver-outcome-attributed-once-only-graph-feedback` | 3 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
+| deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 3 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback` |
+| causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 5 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
+| closeout | `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` | 2 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` |
+
+Graph read completion supplies ABI and atomic inputs without waiting for its
+separate feedback successor. Deployment depends on graph, atomic, mood and
+feedback; causal proof depends on deployment; terminal closeout depends on
+causal proof. The existing automatic card integrates those children. These
+edges are observed initial planning state, not installed readiness/admission.
+The owning Foresight plan and this source plan retain independent gates.
 
 
 Later work retains full absorption/bounded exchange and multi-contact
 conservation, the complete bond/association matrix, sustained quiet/load/restart
-and revocation behavior, outcome-confirmed reinforcement, long-running mood and
+and broader revocation behavior beyond the required finite revoke-after-deposit
+case, long-running outcome-reinforcement studies, long-running mood and
 traits, concurrent continuity, social/artistic outcomes and reserved-head/recovery
 guarantees. The finite selected persistence/privacy/replay proofs stay mandatory.
 

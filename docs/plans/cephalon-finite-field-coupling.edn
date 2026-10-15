@@ -124,6 +124,16 @@
              :trace [:stage :velocity-before :velocity-after :limit-applied]
              :raw-contact-response :retained-separately
              :constraint :explicit-dissipative-not-kinetic-energy-conservation}
+ :contact-observation {:overlap :recompute-from-each-substep-moved-positions
+                       :overlapping-unordered-pair :one-observation-per-substep
+                       :tangent-zero-or-separating-velocity :observe-without-required-impulse
+                       :separated-pair :no-observation
+                       :order :canonical-pair-order
+                       :identity [:step-id :exact-unordered-pair]
+                       :cross-substep-suppression :none
+                       :repeat-replay-effect-or-feedback :forbidden
+                       :fixture :penetration-through-next-substep
+                       :work-or-trace-overflow :unchanged-refusal}
  :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
            :gain-unit :inverse-second :gain :finite-nonnegative
            :component-order [:gain-times-weight :result-times-velocity-component
@@ -194,6 +204,11 @@
   :atomic-packet-each-arm [:consistent-atomic-commit :independent-readback
                            :unchanged-persisted-history-replay]
   :contact-completion-requires-atomic-successor false
+  :atomic-isolation :distinct-owned-fixture-stores-or-namespaces
+  :each-store-baseline [:independent-content-hash-revision-readback :same-stored-authority]
+  :store-routing :outer-adapter-only-never-kernel-input-or-payload-grant
+  :shared-revision-advancement :forbidden
+  :execution-order-control :same-per-arm-result-on-fresh-isolated-baselines
   :required-change [:motion :contact :recall-path :included-memory]
   :fixed [:scope :principal :query :seed :calibration :mood-lens-attention
           :exact-read-weights-and-mapping-revisions
@@ -214,6 +229,15 @@
                :persistent-replay :unchanged-admitted-snapshot-and-history
                :tampered-contribution-hash-or-cursor :unchanged-refusal
                :failed-or-partial-write :explicit-not-success}
+ :retained-revocation
+ {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
+  :rebuild [:retained-field :trails :causally-affected-world-projection]
+  :source [:immutable-contribution-history :compatible-trusted-checkpoint]
+  :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
+  :required-control :same-clean-permitted-history-with-authorized-contributions-retained
+  :complete-admissible-history :successful-bounded-rebuild-required
+  :missing-or-ambiguous-input :unchanged-refusal-or-quarantine-before-sample
+  :forbidden [:display-only-filter :old-aggregate-retag :zero-all-fields :rewrite-old-history]}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt
             :mood :separate-persisted-model-with-same-field-revision}

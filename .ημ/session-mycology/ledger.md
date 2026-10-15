@@ -363,3 +363,13 @@
   spore: none
   receipt-refs: cephalon-field-contact-boundary-deposit-freeze-position-cap-replay-20261015
   note: Four actual current-head findings fixed within existing plan. Contact each-arm acceptance ends at admitted uncommitted candidate/pure kernel/replay; later atomic packet exclusively owns commit/readback/persisted replay. Both valid input arms freeze exact per-entity read weights and deposit weights/mapping revisions, including request-scoped daimoi and configured passive kinds. Finite contact changes velocity only; positions remain p_move, no snap/penetration correction/second advance; that exact position selects deposit cell. Replay exact list includes radial-cap applicability, zero-ratio branch and ordered correction-count/branch/refusal decisions; continuous tolerance cannot hide them. Matching future negative/boundary fixtures are declared, not executed tests. No kernel implementation, nativeReady, runtime, deployment, credentials, paid usage or batching inclusion. GoalACTIVE heartbeat humanPAUSED live0/3.
+
+- ts: 2026-10-15T01:09:44.216Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite physical coupling plan and selected privacy/persistence obligations
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-exact-edges-overlap-isolation-and-retained-revocation-20261015
+  note: Exact nativeedges now repositoryvisible for11provisional execution packets plusautomaticintegrationparent. Proposed44points supersede historical36 without countingparent5 ororiginalaggregatepoints twice; independentaggregation/Readyadoption required. Estimate words/numbers spaced; numericalchange separatelyattributed to existing-work split, notgrammarfix. Repeatedgeometricoverlap emits onecanonicalpair/substep observation evenzero/tangent/separatingresponse, no crossstepsuppression, separatedpairnone; futurepenetrationfixture spans nextsubstep, boundedtrace andidempotence retained. Two validatomiccomparison arms useindependentownedstores/namespaces withverifiedidenticalpriorbaseline/authority, ownexpectedrevisions/readback andexecutionordercontrol. Requiredfinite revoke-after-deposit rebuild removesrevokedfield/trail/affectedworldinfluence before nextsample, preservesauthorizedcontributions, comparescleanpermittedhistory; missingrebuildinputs refuse/quarantine, no retag/filter/zeroall/rewritehistory. MatchingEDN/prose, futuretestsdeclarednotexecuted. No kernelimplementation, Ready, runtime/deployment/credentials/paid/batchingchange. GoalACTIVE heartbeatPAUSED live0/3.
