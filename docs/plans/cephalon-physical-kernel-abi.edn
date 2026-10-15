@@ -64,17 +64,21 @@
           :scope-authority-and-graph-versions :field-history :start-checkpoint
           :selected-end-checkpoint :processed-contact-cursor :executed-horizon-quanta
           :accumulated-semantic-fold-work :first-witnesses-in-canonical-contact-order
-          :dedup-memory-ids :canonical-result-byte-count :trace-record-count]
+          :dedup-memory-ids :canonical-result-byte-count :trace-record-count
+          :accumulated-trace-utf8-byte-count]
   :dedup-memory-ids :exactly-the-unique-memory-ids-of-ordered-first-witnesses
   :snapshot :all-fields-included-in-canonical-state-and-snapshot-hash
   :transition :charge-new-contact-fold-work-before-use-and-never-reset-horizon-counters
+  :trace-byte-counter :complete-finite-field-trace-1-envelope-bytes-across-entire-horizon
   :whole-call-work :also-charge-all-actual-decode-validate-encode-hash-and-restore-work
   :restore :validate-all-fields-and-budgets-against-qualified-checkpoint-history-and-current-authority
   :missing-stale-conflicting-or-reset-counter :whole-unchanged-refusal
   :unqualified-scratch-cache :not-a-restorable-fold
   :fixtures [:contact-then-checkpoint-restore-repeat-same-memory
              :split-versus-unsplit-same-horizon-and-first-witnesses
-             :tampered-dedup-order-cursor-or-budget :missing-fold-revision]}
+             :tampered-dedup-order-cursor-or-budget :missing-fold-revision
+             :split-restore-trace-byte-exact-cap-and-one-over
+             :revoke-already-witnessed-memory-before-next-fold-use]}
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision

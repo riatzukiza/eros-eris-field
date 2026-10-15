@@ -533,3 +533,13 @@
   spore: none
   receipt-refs: cephalon-field-canonical-trace-checkpoint-fold-and-backlog-parity-20261015
   note: Historical62 explicitly superseded by current65. finite-field-trace/1 fixes whole-envelope UTF8 byte semantics, typed values, exact escaped scalar strings, finite binary64-bit tokens and canonical map keys; alternate host printers cannot control admission. ABI requires complete inclusion-fold state in canonical checkpoint/hash: revisions/authority/request/history/horizon/cursor/counters/ordered witnesses/deriveddedup; restore rejects bare caches or missing/forged/reset state. Whole-call restore/serialization cost remains charged as well as retained semantic horizon work. Valid101 elapsed quanta executes100 with1explicitbacklog/incomplete then catch-up drains1 without adding elapsed; previous unchanged-refusal requirement was wrong and explicitly superseded. Existing source/calibration/contact obligations only; no implementation, native board/readiness, runtime/paid/credential/points/scope/deployment change.
+
+- ts: 2026-10-15T12:14:15.977Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-field-plan
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-retained-fold-revocation-and-trace-byte-custody-20261015
+  note: Revocation rebuild explicitly includes active/restored inclusion folds: reauthorize/reconstruct ordered witnesses/dedup/reasons/counters under current principal/scope/graph authority and admissible history, or invalidate/refuse/quarantine before causal use. ABI checkpoints persist accumulated complete canonical trace UTF8 byte count across the same horizon; missing/forged/reset accounting refuses. Exact cap/one-more-byte split-restore fixtures must equal unsplit admission. Whole-rebuild/call budgets and14execution65/selection3 inventory remain unchanged; no local board protocol, nativeReady, implementation/deploy/live proof or paid/credential/runtime/heartbeat change. Original rows remain immutable; source must requalify at new exact head. GoalACTIVE heartbeat humanPAUSED live0/3; no spore.

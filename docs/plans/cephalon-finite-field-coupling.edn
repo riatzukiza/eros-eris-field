@@ -485,7 +485,14 @@
                :failed-or-partial-write :explicit-not-success}
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
-  :rebuild [:retained-field :trails :causally-affected-world-projection]
+  :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds]
+  :active-inclusion-folds
+  {:before :every-next-causal-use-including-restored-or-completed-inclusion
+   :reauthorize :all-retained-first-witnesses-under-current-principal-scope-and-graph-authority
+   :reconstruct :ordered-first-witnesses-dedup-reasons-and-budget-counters-from-admissible-history
+   :unreconstructable :invalidate-and-refuse-or-quarantine-before-use
+   :forbidden :retag-or-reuse-an-old-fold-result-under-new-authority
+   :control :revoke-memory-after-first-witness-then-checkpoint-restore-and-finish-horizon}
   :source [:immutable-contribution-history :compatible-trusted-checkpoint]
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained

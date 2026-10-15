@@ -466,8 +466,16 @@ declare success. Transaction fault tests must establish neither-half persistence
 before commit and complete matching recovery after an acknowledged or uncertain
 commit. Hidden field contributors must not affect allowed motion or inclusion.
 Require a finite revoke-after-deposit fixture: retain an initially authorized
-contribution, revoke it, then rebuild the retained field/trails and any causally
-affected world projection under the new permitted scope before the next sample.
+contribution, revoke it, then rebuild the retained field/trails, any causally
+affected world projection and every active inclusion fold under the new permitted
+scope before the next causal sample or inclusion use. Reauthorize retained
+first witnesses against the current stored principal, scope and graph authority;
+reconstruct canonical first-witness order, exact dedup IDs, reasons and budget
+counters from admissible history. If reconstruction cannot establish them,
+invalidate the fold and refuse or quarantine before causal use. Never retag or
+reuse an old fold result under new authority. The causal control revokes a memory
+after its first witness, checkpoints/restores and finishes the same horizon;
+neither that revoked witness nor its dedup/result influence may survive.
 Use immutable contribution history and a compatible trusted checkpoint; record
 the new scope/projection/field bindings without rewriting old history. Compare
 with a clean permitted-history control: remaining authorized contributions must
@@ -865,6 +873,27 @@ The owning state/work/trace byte/record caps apply before exposure; exhaustion r
 
 The8388608-byte trace bound includes the entire envelope, tags, separators, brackets and escaping, including its fixed empty-envelope overhead. Count/charge before byte/record exposure with the same whole-call work guard. EDN, host JSON number formatting or compacted output cannot determine this semantic admission. ABI defines the shape/bit representation and portable codec contract before implementation; contact/calibration consume it. Future RED/GREEN includes golden Unicode/control/map-order/binary64/zero vectors and independent complete-envelope exact/one-over limits. No codec implementation is asserted by this planning declaration.
 
-The canonical ABI now requires `inclusion-folds` (empty with no active request horizon) and complete revisioned entries with actual request/daimoi/authority/graph/field/start/end bindings, contact cursor, accumulated horizon quanta and semantic fold work, ordered first witnesses, exact derived dedup IDs and byte/record counts. Every entry is hashed into the checkpoint. Each contact update charges new fold work before use; a new transport call cannot reset the same horizon. The whole-call/rebuild budget additionally charges every actual decode/validate/hash/serialization operation, including restore work. Restore verifies the complete qualified checkpoint state and current authority before further inclusion; missing fields, mismatched history, reordered witnesses, forged/reset counters or a bare scratch cache refuse. Source fixtures checkpoint after a contact, restore, then repeat that memory and compare with the unsplit horizon: identical unique IDs/reasons/order/counters and no reset. Atomic storage remains a later owning packet; this defines and tests the pure checkpoint interface first.
+The canonical ABI now requires `inclusion-folds` (empty with no active request horizon) and complete revisioned entries with actual request/daimoi/authority/graph/field/start/end bindings, contact cursor, accumulated horizon quanta and semantic fold work, ordered first witnesses, exact derived dedup IDs, canonical result bytes, trace-record count and the explicit accumulated finite-field-trace/1 UTF8 byte count for the whole horizon. Every entry is hashed into the checkpoint. Each contact update charges new fold work before use; a new transport call cannot reset the same horizon. The whole-call/rebuild budget additionally charges every actual decode/validate/hash/serialization operation, including restore work. Restore verifies the complete qualified checkpoint state and current authority before further inclusion; missing fields, mismatched history, reordered witnesses, forged/reset counters or a bare scratch cache refuse. Source fixtures checkpoint after a contact, restore, then repeat that memory and compare with the unsplit horizon: identical unique IDs/reasons/order/counters and no reset. Atomic storage remains a later owning packet; this defines and tests the pure checkpoint interface first.
 
 The maximum100 substeps is an execution cap, not admission rejection for otherwise valid longer elapsed time. The finite101-quantum elapsed control must execute100, preserve one quantum as explicit backlog with incomplete status, and drain that same backlog through catch-up without inventing elapsed time. Other unsafe/resource-limit inputs retain their distinct unchanged refusals. The earlier unchanged101 refusal requirement was incorrect and is explicitly superseded; historical native receipts/comments remain immutable.
+
+
+### Restored inclusion authority and complete trace accounting
+
+A split or checkpoint restore retains the accumulated canonical trace UTF8 byte
+count, including the complete finite-field-trace/1 envelope overhead and every
+emitted tag, escaped scalar and separator. It cannot restart the same horizon's
+8,388,608-byte counter, discard earlier bytes or count only records. Restore
+validates that counter against the retained qualified trace/history under the
+same existing work budget. The unsplit and split/restore fixtures at the exact
+complete-envelope byte cap must agree, and one additional canonical byte must
+refuse identically without accepted partial inclusion or changed prior state.
+A missing, forged or reset trace-byte count refuses. These are required future
+source fixtures, not executed implementation tests or a larger horizon budget.
+
+Revocation rebuilding includes active/restored inclusion folds as well as fields,
+trails and affected world projection. A retained first witness or dedup entry is
+causal state: reauthorize/reconstruct it before the next inclusion or recall use,
+or invalidate and refuse/quarantine it when reconstruction is unestablished.
+The existing bounded whole-rebuild limits cover all fold work; no independent
+counter reset, new persistence authority or unbounded replay is permitted.
