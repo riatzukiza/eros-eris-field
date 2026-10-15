@@ -38,7 +38,38 @@ jobs:
           [[ "$PR_HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]
           test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
           test -z "$(git status --porcelain --untracked-files=all)"
-          bb --config /dev/null -e '(require (quote [clojure.edn :as edn]) (quote [clojure.java.io :as io])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (with-open [r (java.io.PushbackReader. (io/reader p))] (let [eof (Object.)] (assert (map? (edn/read {:eof eof} r)) (str "Expected an EDN map: " p)) (assert (identical? eof (edn/read {:eof eof} r)) (str "Unexpected trailing EDN form: " p)))) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
+          bb --config /dev/null - <<'CLJ'
+          (require '[clojure.edn :as edn] '[clojure.java.io :as io])
+          (defn read-single-map! [reader label]
+            (let [eof (Object.)
+                  value (edn/read {:eof eof} reader)]
+              (assert (map? value) (str "Expected an EDN map: " label))
+              (assert (identical? eof (edn/read {:eof eof} reader))
+                      (str "Unexpected trailing EDN form: " label))
+              value))
+          (doseq [[label source accepted?]
+                  [["plain map" "{:safe true}" true]
+                   ["comments and commas" "{:safe true}, ; #_ inert comment\n" true]
+                   ["marker inside string" "{:marker \"#_\"}" true]
+                   ["Unicode whitespace" "{:safe true}\u2003" true]
+                   ["second map" "{:safe true} {:second true}" false]
+                   ["second scalar" "{:safe true} nil" false]
+                   ["discarded trailing map" "{:safe true} #_ {:second true}" false]
+                   ["nested trailing discards" "{:safe true} #_ #_ nil true" false]]]
+            (let [observed (try
+                             (with-open [reader (java.io.PushbackReader. (java.io.StringReader. source))]
+                               (read-single-map! reader label))
+                             true
+                             (catch Throwable _ false))]
+              (assert (= accepted? observed) (str "Parser contract control: " label))))
+          (println "EDN parser positive/refusal controls passed: 8")
+          (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn"
+                     "docs/plans/cephalon-finite-field-coupling.edn"]]
+            (with-open [reader (java.io.PushbackReader. (io/reader p))]
+              (read-single-map! reader p))
+            (println "Proposed EDN parsed:" p))
+          (println "No domain law executed")
+          CLJ
           test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
           test -z "$(git status --porcelain --untracked-files=all)"
 
