@@ -1236,3 +1236,37 @@ read-task confirmed all three current Incoming estimates. Physical source21
 and every selected packet are counted once; selection3 and containing parents
 remain separate. Earlier65 and the dated handoff below remain history. This
 mirror changes no native card, point, relationship, scope or readiness.
+
+## Current checkpoint custody and calibration corrections — 2026-10-15
+
+Native Codex review5539152429 on fdd9 identified three further contract gaps.
+These corrections remain unimplemented proposals within the same selected ABI
+and physical scope; they add no delivery, estimate or native readiness.
+
+- Root4287695743: the authoritative `read-recall` refusal-reasons union now
+  includes finite-input-byte-limit, finite-state-continuation-byte-limit and
+  finite-work-budget-exceeded, matching its existing reason/status table.
+  Each returns refused/revision1 without recall payload or state mutation.
+- Root4287695751: complete validated physical configuration is a required
+  canonical state value, retained with its revision and exact canonical hash.
+  Every causal transition consumes it; advance/catch-up cannot consult an
+  undeclared external configuration or defaults. Checkpoint includes it, and
+  restore/rebuild require exact agreement with their explicit configuration.
+  Complete configuration bytes and validation work count under the unchanged
+  state/checkpoint/input/work limits. Future replay and tamper controls cover
+  missing values, copied hashes and exact/one-over continuation limits.
+- Root4287695756: a self-contained SHA256 is integrity, not authentication.
+  Restore and rebuild take separate trusted checkpoint evidence from an
+  independent authenticated read of the existing qualified atomic persistence
+  record, binding expected snapshot digest, cursor, field revision, effect ID,
+  actual stored principal and scope. Compare actual payload/wrapper digests to
+  that expected digest before admission. A snapshot or the same untrusted
+  storage response cannot attest to itself. A forged velocity/cell/fold with a
+  recomputed self-hash refuses; matching independently admitted evidence is the
+  future positive control. Existing Clio/OpenPlanner/Axxium owners retain event,
+  persistence and authorization authority; pure checkpoint grants none.
+
+All new evidence is explicit, counted input. No network, clock, signature
+scheme, second event engine, hidden configuration source or persistence effect
+is added to the pure kernel. Future domain fixtures are declared, not executed
+by this planning correction. Preserve all prior native findings and ledgers.

@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-snapshot-refusal-closure"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-checkpoint-custody"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -367,7 +367,7 @@
   :state-shape {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"
                 :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
                 :values :qualified-owning-abi-values-only
-                :coverage :all-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
+                :coverage :all-physical-configuration-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
                 :projection-omission-or-unqualified-cache-substitution :forbidden}
   :hash-payload ["finite-field-snapshot/1" :encoded-complete-canonical-state-map]
   :value-encoding :exact-finite-field-trace-1-tagged-value-algebra-not-the-trace-record-envelope
@@ -377,6 +377,20 @@
   :strings :exact-trace-1-scalar-validation-and-escaping
   :hash {:algorithm :sha256 :input :exact-complete-hash-payload-bytes :output :exact64-lowercase-hex
          :wrapper-sha256-field :not-in-its-own-payload-no-self-reference}
+  :authentication {:self-contained-digest :integrity-only-never-origin-or-persistence-authentication
+                   :applies-to [:restore :rebuild-revocation-checkpoint-admission]
+                   :input :current-trusted-checkpoint-evidence-separate-from-untrusted-snapshot-and-storage-response
+                   :owner :existing-qualified-clio-immutable-history-and-openplanner-atomic-effect-receipt-under-axxium-authority
+                   :outer-read :independently-authenticate-and-admit-the-actual-persistence-record-through-those-existing-owners
+                   :binding [:actual-stored-principal :permitted-scope :field-revision
+                             :checkpoint-effect-id :event-cursor :expected-snapshot-sha256]
+                   :expected-digest :exact-lowercase-sha256-in-the-separately-trusted-committed-record
+                   :comparison :snapshot-payload-digest-wrapper-digest-and-trusted-expected-digest-all-equal-with-exact-cursor-scope-principal-and-field-binding
+                   :copied-self-asserted-or-same-storage-response-evidence :not-authority
+                   :missing-unknown-stale-conflicting-or-mismatched-evidence :whole-unchanged-refusal-before-any-state-admission
+                   :pure-kernel :compare-admitted-owner-data-only-no-authority-lookup-signature-system-or-second-event-engine
+                   :checkpoint-output :not-a-persistence-receipt-or-authentication-grant
+                   :bounds :all-evidence-is-an-explicit-counted-argument-under-existing-input-work-and-continuation-limits}
   :abi-checkpoint-cursor :exactly-the-snapshot-state-event-cursor
   :input-argument :the-closed-domain-map-encoded-once-as-an-argument-by-finite-field-input-1
   :input-argument-byte-cap :complete-map-encoding-including-codec-state-hash-keys-tags-and-separators-not-payload-only
@@ -388,6 +402,9 @@
              :known-payload-bytes-and-sha256-golden :signed-zero-and-multibyte-string-hash-difference
              :wrapper-hash-not-self-referential :missing-extra-or-duplicate-wrapper-or-state-key-refused
              :changed-producing-identity-fold-or-pending-event-changes-hash
+             :changed-authorized-velocity-cell-or-fold-with-recomputed-self-hash-but-original-trusted-digest-refused
+             :missing-copied-or-foreign-checkpoint-evidence-refused
+             :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
              :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
              :complete-checkpoint-argument-exact1048576-and-one-over
              :payload-under-cap-but-complete-wrapper-one-over-refused]}
@@ -533,6 +550,19 @@
              :qualified-rebuild-under-current-authority-then-read :authority-change-before-exposure
              :horizon-exact-one-over :work-and-trace-exact-one-over]}
  :calibration {:production-defaults :none :complete-input :required
+               :state-carrier :physical-configuration-in-the-complete-canonical-state
+               :admission :retain-the-complete-validated-configuration-value-with-its-revision-and-hash
+               :hash :sha256-of-exact-existing-trace-1-tagged-encoding-of-the-complete-configuration-value
+               :hash-input :configuration-value-only-not-the-surrounding-state-or-its-config-hash-field
+               :all-causal-operations :consume-the-retained-configuration-never-external-cache-clock-or-defaults
+               :restore-and-rebuild :explicit-configuration-must-exactly-match-the-snapshot-value-revision-and-canonical-hash-before-use
+               :silent-mid-history-configuration-replacement :forbidden
+               :byte-and-work-bounds :count-the-complete-retained-configuration-in-state-snapshot-and-all-explicit-operation-arguments-with-existing-limits
+               :fixtures [:admit-then-advance-and-catch-up-with-no-external-configuration-source
+                          :checkpoint-restore-then-repeat-same-physical-transition
+                          :missing-configuration-value-with-retained-hash-refused
+                          :changed-configuration-with-copied-revision-or-hash-refused
+                          :configuration-carrying-state-exact-continuation-limit-and-one-over]
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal
                :task "4f4c7cf6-9be8-47b9-b03a-be235c4dd519"
@@ -621,6 +651,8 @@
                :stale-local-policy-or-locally-minted-version :not-authority
                :unsupported-authority-guard :refuse-all-components-before-commit :independent-readback :required
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
+               :checkpoint-authentication :record-the-exact-canonical-snapshot-digest-cursor-field-revision-scope-principal-and-checkpoint-effect-id-in-the-same-qualified-atomic-effect-receipt
+               :restore-evidence :independent-owner-authenticated-read-of-that-committed-record-not-the-snapshot-or-storage-response-asserting-its-own-digest
                :transaction-and-unique-effect-identity :required
                :expected-revisions [:graph :field]
                :current-authority :independently-reload-stored-principal-grants-policy-scope-before-transaction

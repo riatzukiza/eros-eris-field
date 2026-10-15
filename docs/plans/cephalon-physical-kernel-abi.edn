@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-snapshot-refusal-closure"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-checkpoint-custody"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -49,7 +49,7 @@
          :deposit :velocity-amplitude-times-gain-weight-step
          :buffers :prior-and-next :decay :elapsed-exponential
          :semantic-bindings :required-versioned-configuration}
- :state/required [:kernel-revision :config-revision :config-hash
+ :state/required [:kernel-revision :config-revision :config-hash :physical-configuration
                   :compiled-artifact-sha256 :build-qualification-id
                   :launch-profile-id :launch-profile-sha256
                   :numeric-profile-id :scope-revision :projection-revision :authority-projection-binding :kernel-time-us
@@ -197,12 +197,14 @@
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
                 :refusal-reasons [:invalid-recall-request :current-authority-unestablished
-                                  :stale-recall-authority :denied-recall-authority]
+                                  :stale-recall-authority :denied-recall-authority
+                                  :finite-input-byte-limit :finite-state-continuation-byte-limit
+                                  :finite-work-budget-exceeded]
                 :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
   {:version "finite-revocation-rebuild/4"
-   :input [:prior-state :compatible-trusted-checkpoint
+   :input [:prior-state :compatible-trusted-checkpoint :current-trusted-checkpoint-evidence
            :immutable-complete-ordered-boundary-event-tail :current-trusted-authority-projection
            :physical-configuration]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
@@ -226,7 +228,7 @@
    :replay-schedule :original-consumed-elapsed-quanta-residual-backlog-boundary-order-and-recorded-seeds-no-new-time-or-draws
    :replay-permitted-world :recompute-all-derived-motion-contacts-trails-and-inclusion-under-current-authority-with-revoked-influence-excluded
    :history-filtering :retain-complete-immutable-events-while-refusing-denied-causal-influence-never-rewrite-source-events
-   :checkpoint-validates :all-existing-restore-identity-state-cursor-and-configuration-obligations
+   :checkpoint-validates :all-existing-restore-identity-state-cursor-configuration-and-separate-trusted-digest-obligations
    :output [:state-transition-result]
    :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
                       :new-scope-and-authority-binding :new-projection-revision :new-field-revision
@@ -311,14 +313,16 @@
                                     :launch-profile-id :launch-profile-sha256]
                :identity-evidence :independently-verified-qualified-source-build-runtime
                :canonical-snapshot-hash :lowercase-sha256-of-exact-finite-field-snapshot-1-payload-bytes
-               :hash-coverage :complete-state-including-producing-identity-cursors-pending-events-and-all-inclusion-state}
-  :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor
+               :hash-coverage :complete-state-including-physical-configuration-producing-identity-cursors-pending-events-and-all-inclusion-state
+               :authentication :not-created-by-this-pure-operation-requires-independent-qualified-atomic-persistence-evidence}
+  :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor :current-trusted-checkpoint-evidence
                     :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
             :output [:state-transition-result]
             :operation-result [:restored-state :event-cursor]
             :snapshot-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
             :snapshot-decoding :exact-version-shape-canonical-payload-and-sha256-before-state-admission
-            :validates [:kernel-revision :config-revision :config-hash
+            :validates [:separately-trusted-persisted-checkpoint-digest-and-binding
+                        :kernel-revision :config-revision :config-hash :complete-physical-configuration
                         :scope-revision :projection-revision :current-grants :authority-projection-binding
                         :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact
                         :stored-producing-artifact-build-launch-equals-actual-qualified-loaded-identity
@@ -327,6 +331,7 @@
             :scope-mismatch :refused-before-causal-use
             :missing-or-different-producing-identity :unchanged-refusal-before-causal-use
             :same-revision-label-different-binary :refused
+            :missing-untrusted-stale-or-mismatched-checkpoint-evidence :unchanged-refusal-before-causal-use
             :silent-migration-or-copied-producer-label :forbidden
             :effects :none :new-elapsed-time :none :rng-draws :none
             :outcome-replay :forbidden}}

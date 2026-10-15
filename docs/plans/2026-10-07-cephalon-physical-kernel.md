@@ -143,7 +143,21 @@ Its exact names and fields require this source plan's review.
   codec or a replacement for Clio event authority. Source qualification of
   the specified bytes/hash and continuation bounds is required before use.
 - `restore` takes the prior state (or an explicit empty state), that snapshot and
-  cursor, the current trusted visible projection and physical configuration.
+  cursor, separately trusted checkpoint evidence, the current trusted visible
+  projection and physical configuration. The complete validated calibration is
+  retained as `:physical-configuration` in the canonical state and snapshot,
+  alongside its revision and canonical hash. `advance`, `catch-up` and every
+  causal operation consume those actual values without an external cache or
+  default; explicit restore/rebuild configuration must match them exactly.
+  The snapshot's unkeyed SHA256 proves byte integrity only. Existing qualified
+  Clio/OpenPlanner/Axxium adapters must independently admit the committed atomic
+  effect record binding its expected snapshot digest, cursor, field revision,
+  checkpoint effect ID, stored principal and scope. Restore/rebuild compare that
+  separate trusted binding with the actual payload and wrapper digest before
+  admission. Changing a velocity, cell or fold and recomputing a self-hash
+  cannot replace that authority. Missing, stale, foreign or conflicting evidence
+  refuses unchanged. Pure checkpoint does not create persistence authority;
+  no new signature system, event engine or policy evaluator is introduced.
   Before any causal use it validates kernel/config/hash/scope/projection
   revisions, current grants, snapshot/cursor agreement, exact time accounting,
   seed state/draw counter and attributed causal contributions. It returns the
