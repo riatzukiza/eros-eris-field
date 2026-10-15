@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-maximum-call-byte-budgets-and-typed-cause-precedence"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-exact-order-result-rebuild-and-request-identity"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -95,7 +95,11 @@
        :encoding :exact-utf8-no-normalization-or-replacement
        :uniqueness :exact-utf8-bytes-within-declared-id-namespace
        :different-id-sort-key-ties :unchanged-refusal
-       :applies-to [:entity :target :source :contribution :deposit]
+       :applies-to [:entity :target :source :contribution :deposit :recall-request]
+       :request-namespace :same-principal-and-scope-admitted-recall-requests
+       :request-admission :before-recall-state-fold-creation-ordering-or-checkpoint-hashing
+       :request-reference :exact-match-to-one-previously-admitted-request
+       :utf8-byte-cap 128
        :order :unsigned-utf8-byte-order}
  :force-order {:classes [:non-bond-semantic-attraction :unified-intent-bond
                         :repulsion :boundary :wind :seeded-exploration]
@@ -312,9 +316,30 @@
   :tuple-key :componentwise-qualified-abi-order
   :algorithm :bounded-most-significant-component-trie
   :insertion :scan-each-complete-key-once-charge-each-unit-before-use
-  :node-creation :once-per-distinct-prefix
   :traversal :terminator-first-then-all-256-unsigned-byte-branches
-  :numeric-component :qualified-abi-signed-integer-key-order
+  :fixed-branch-probes {:per-visited-node 257
+                        :order [:non-byte-terminator :unsigned-bytes-0-through-255]
+                        :absent-branches :charged
+                        :terminator :charged-including-empty-component
+                        :followed-edge :charge-one-for-byte-or-terminator-before-following}
+  :tuple-components :ordered-component-tries-with-distinct-component-roots
+  :component-boundary :terminator-edge-enters-next-component-root-or-final-key
+  :component-types :fixed-by-qualified-abi-key-position-no-mixed-type-coercion
+  :node-creation :once-per-distinct-component-prefix-including-each-component-root
+  :numeric-component
+  {:version "finite-integer-trie-key/1"
+   :domain :qualified-abi-signed-safe-integers
+   :width-unsigned-bytes 8
+   :nonnegative {:first-byte 128 :remaining-seven :unsigned-big-endian-magnitude}
+   :negative {:first-byte 127 :remaining-seven :bytewise-255-minus-big-endian-abs-n-minus-one}
+   :arithmetic :validate-safe-integer-first-then-abs-n-and-minus-one-before-seven-base256-digits
+   :unsafe-wide-bias-or-out-of-range-intermediate :forbidden
+   :zero :positive-and-negative-zero-use-the-same-integer-key
+   :float-trace-zero-bits :remain-distinct-under-finite-field-trace-1
+   :golden-hex [[-9007199254740991 "7fe0000000000001"] [-1 "7fffffffffffffff"]
+                [0 "8000000000000000"] [1 "8000000000000001"]
+                [9007199254740991 "801fffffffffffff"]]
+   :key-work :charge-all-eight-bytes-plus-each-actual-encoding-operation-before-use}
   :charge [:all-input-code-units-and-key-bytes :each-trie-edge-visit
            :each-distinct-node-creation :each-fixed-branch-probe :each-emitted-key]
   :adaptive-sort-comparison-charge :forbidden
@@ -323,7 +348,34 @@
   :budget :same-whole-call-or-whole-rebuild-counter-no-reset
   :no-partial-output :true
   :fixtures [:sorted-reversed-shuffled-same-multiset-at-exact-work-bound
-             :same-multiset-one-unit-short :long-prefix-unicode-and-tuples]}
+             :same-multiset-one-unit-short :long-prefix-unicode-and-tuples
+             :signed-integer-golden-boundaries-and-zero :charged-terminator-and-absent-branches]}
+ :inclusion-result-codec
+ {:version "finite-contact-inclusion-result/1"
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :value-algebra-and-escaping :exact-finite-field-trace-1-tags-map-order-and-scalar-escaping
+  :envelope ["finite-contact-inclusion-result/1" :encoded-closed-result-map]
+  :payload/required [:included-memory-ids :inclusion-reasons]
+  :payload/additional-keys :refused
+  :included-memory-ids :unique-canonical-memory-id-vector-in-first-witness-order
+  :inclusion-reasons :same-length-vector-of-contact-inclusion-reason-maps-in-matching-id-order
+  :reason/required [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
+                    :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
+  :reason/additional-keys :refused
+  :reason/value-shapes :consume-qualified-owning-abi-and-memory-bindings
+  :byte-count :complete-version-envelope-tags-map-keys-values-separators-and-escapes
+  :counter-field :canonical-result-byte-count
+  :counter-in-payload :forbidden-no-self-reference
+  :status-motion-bonds-contacts-and-fold-custody :outside-this-two-field-payload-with-their-own-full-trace-state-and-work-accounting
+  :utf8-bytes-per-horizon 8388608
+  :trace-cap :separate-unchanged-complete-trace-envelope-cap
+  :split-restore :recompute-exact-same-full-result-bytes-and-counter-from-qualified-first-witnesses
+  :encoding-hashing-and-restore-work :charged-before-every-operation-under-existing-whole-call-or-rebuild-budget
+  :invalid-or-unsupported :whole-unchanged-refusal
+  :byte-overflow :whole-unchanged-refusal-with-existing-finite-trace-budget-exceeded-code
+  :fixtures [:empty-inclusion-envelope :unicode-control-and-map-order-goldens
+             :duplicate-memory-first-witness :exact-byte-cap-and-one-over
+             :unsplit-split-restored-identical-result-bytes-and-count]}
  :contact-inclusion
  {:version "finite-contact-inclusion/1"
   :owner-task "ba078119-482c-49dc-bd18-c2dfcaad9024"
@@ -334,6 +386,7 @@
   :maximum-quanta :qualified-abi-maximum-substeps-across-entire-horizon
   :split-calls :restore-qualified-canonical-checkpoint-fold-state-without-horizon-budget-reset
   :checkpoint-contract "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"
+  :result-codec "finite-contact-inclusion-result/1"
   :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
   :presence-contact :trace-only-no-memory-inclusion
   :other-daimoi-or-separated-pair :no-memory-inclusion
@@ -485,6 +538,8 @@
                :failed-or-partial-write :explicit-not-success}
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
+  :abi-operation :rebuild-revocation
+  :abi-operation-version "finite-revocation-rebuild/2"
   :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds]
   :active-inclusion-folds
   {:before :every-next-causal-use-including-restored-or-completed-inclusion

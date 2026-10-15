@@ -543,3 +543,13 @@
   spore: none
   receipt-refs: cephalon-field-retained-fold-revocation-and-trace-byte-custody-20261015
   note: Revocation rebuild explicitly includes active/restored inclusion folds: reauthorize/reconstruct ordered witnesses/dedup/reasons/counters under current principal/scope/graph authority and admissible history, or invalidate/refuse/quarantine before causal use. ABI checkpoints persist accumulated complete canonical trace UTF8 byte count across the same horizon; missing/forged/reset accounting refuses. Exact cap/one-more-byte split-restore fixtures must equal unsplit admission. Whole-rebuild/call budgets and14execution65/selection3 inventory remain unchanged; no local board protocol, nativeReady, implementation/deploy/live proof or paid/credential/runtime/heartbeat change. Original rows remain immutable; source must requalify at new exact head. GoalACTIVE heartbeat humanPAUSED live0/3; no spore.
+
+- ts: 2026-10-15T13:58:41.694Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-physical-coupling
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-exact-order-result-rebuild-request-contracts-20261015
+  note: Define eight-byte order-preserving safe-integer component keys with fixed tuple component roots and charge every terminator/absent branch. Define closed two-field inclusion-result envelope with existing tagged algebra/escaping/map order, full byte count outside payload and unchanged independent8388608 trace bound; inclusion result explicitly uses same engineering cap. Add pure versioned rebuild-revocation ABI with exact checkpoint/history/current Axxium authority/config inputs, complete atomic result, existing bounds and unchanged typed refusal/outer quarantine. Apply scalar128UTF8byte/namespace uniqueness contract to recall-request IDs before state/fold/sort/hash. All are missing details of existing reviewed obligations; no implementation, calibration, readiness, new estimate/dependency or liveproof asserted. No board mutation, local semantics parser, paid/model/credential/runtime/deploy/publication/heartbeat/spore change. GoalACTIVE humanPAUSEDheartbeat live0of3.

@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-producing-artifact-custody"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-inclusion-and-rebuild"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -67,6 +67,10 @@
           :dedup-memory-ids :canonical-result-byte-count :trace-record-count
           :accumulated-trace-utf8-byte-count]
   :dedup-memory-ids :exactly-the-unique-memory-ids-of-ordered-first-witnesses
+  :result-byte-counter-codec "finite-contact-inclusion-result/1"
+  :result-byte-counter :complete-canonical-two-field-inclusion-result-envelope-not-host-edn-or-json
+  :result-byte-cap 8388608
+  :request-id-contract :exact-validated-scalar-utf8-id-at-admission-and-every-restored-reference
   :snapshot :all-fields-included-in-canonical-state-and-snapshot-hash
   :transition :charge-new-contact-fold-work-before-use-and-never-reset-horizon-counters
   :trace-byte-counter :complete-finite-field-trace-1-envelope-bytes-across-entire-horizon
@@ -105,7 +109,7 @@
  :state-transition-result
  {:revision 1
   :applies-to [:admit-state :advance :catch-up :emit-recall :apply-outcome
-               :confirm-feedback :restore]
+               :confirm-feedback :restore :rebuild-revocation]
   :success :declared-operation-result
   :refusal {:state :unchanged-prior-state
             :reason :operation-specific-refusal-reason
@@ -127,11 +131,47 @@
              :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
                        :physical-budget :mood-lens-revision]
-                :output [:state :request-result] :idempotency :request-id}
+                :output [:state :request-result] :idempotency :request-id
+                :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
+                :request-uniqueness :within-same-principal-and-scope-admitted-request-namespace
+                :invalid-duplicate-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
+                :retry :existing-request-idempotency-with-exact-matching-admitted-input-not-second-admission}
   :read-recall {:input [:state :request-id :current-scope-revision]
                 :output [:status :motion :bonds :contacts :included-memory-ids
                          :inclusion-reasons :kernel-horizon :budget-result]
+                :inclusion-result-codec "finite-contact-inclusion-result/1"
                 :effects :none}
+  :rebuild-revocation
+  {:version "finite-revocation-rebuild/2"
+   :input [:prior-state :compatible-trusted-checkpoint
+           :immutable-ordered-contribution-event-tail :current-trusted-authority-projection
+           :physical-configuration]
+   :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
+   :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
+   :checkpoint-validates :all-existing-restore-identity-state-cursor-and-configuration-obligations
+   :output [:state-transition-result]
+   :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
+                      :new-scope-and-authority-binding :new-projection-revision :new-field-revision
+                      :complete-inclusion-folds :rebuild-budget-accounting]
+   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds]
+   :success :complete-authorized-equivalent-of-clean-permitted-history-with-atomic-result-exposure
+   :budget-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation"
+   :budget {:tail-events 128 :canonical-clio-tail-utf8-bytes 1048576
+            :kernel-quanta 64 :work-units 67108864
+            :entities 32 :bonds 64 :scoped-layer-cells 256
+            :variable-input-string-and-complete-trace-result-byte-caps :finite-character-load-v2-and-inclusion-result-codec}
+   :refusal {:state :exact-unchanged-prior-state :status :refused :reason-revision 1
+             :reason :one-of-declared-codes
+             :codes [:revocation-rebuild-budget-exceeded :missing-or-ambiguous-rebuild-history
+                     :invalid-rebuild-binding :current-authority-unestablished
+                     :unsafe-arithmetic :overflow]}
+   :partial-replacement-or-retagging :forbidden
+   :effects :none :new-elapsed-time :none
+   :randomness :replay-only-recorded-qualified-seed-schedule-no-new-draws
+   :outcome-or-publication-replay :forbidden
+   :outer-disposition :quarantine-or-refuse-retained-reference-before-causal-use-until-success
+   :outer-wall-budget-ms 2000
+   :outer-timeout :no-accepted-replacement-never-a-pure-clock-read}
   :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference]
                   :output [:state :proposed-feedback-or-refusal]
                   :idempotency :immutable-outcome-id

@@ -897,3 +897,84 @@ causal state: reauthorize/reconstruct it before the next inclusion or recall use
 or invalidate and refuse/quarantine it when reconstruction is unestablished.
 The existing bounded whole-rebuild limits cover all fold work; no independent
 counter reset, new persistence authority or unbounded replay is permitted.
+
+## Exact ordering, inclusion result bytes, rebuild ABI and request identity
+
+The four native Codex findings in review5533052161 refine existing finite
+contracts. These remain unimplemented planning declarations and required future
+RED/GREEN fixtures, with no readiness or measured behavior implied.
+
+`finite-integer-trie-key/1` defines an eight-byte, unsigned-lexicographic key
+for admitted safe integers. For a nonnegative integer, emit byte128 then its
+seven-byte unsigned big-endian magnitude. For a negative integer, emit byte127
+then the bytewise complement (255 minus each byte) of the seven-byte unsigned
+big-endian representation of `abs(n)-1`. Derive the seven base256 digits using
+bounded safe-integer operations; never form an unsafe wide bias. Thus -1 maps
+to `7fffffffffffffff`, zero to `8000000000000000`, one to
+`8000000000000001`, and the signed safe limits to `7fe0000000000001` and
+`801fffffffffffff`. Positive and negative zero are the same integer key;
+float trace values still retain their distinct binary64 bits. Each qualified
+key position has a fixed component type. Tuple components use distinct
+component-root tries; their non-byte terminator edge enters the next component
+root, or emits the final key. Every visited node incurs exactly257 ordered
+branch probes: terminator first, then bytes0 through255, including every absent
+branch and the terminator. Charge followed byte/terminator edges and each
+once-created distinct component-prefix/root node as well as actual encoding
+operations and all eight numeric bytes before use. This fixes the prefix and
+work count independently of input insertion order. Future fixtures cover the
+signed golden keys, tuple boundaries, empty components where allowed, and the
+terminator/absent-branch charges at exact and one-short work budgets.
+
+`finite-contact-inclusion-result/1` defines the exact persisted result-byte
+counter. Its complete UTF8 JSON envelope is
+`["finite-contact-inclusion-result/1", encoded-result-map]`, using precisely
+the existing finite-field-trace/1 tagged value algebra, canonical map-key
+ordering and scalar escaping. The closed payload contains only
+`:included-memory-ids` and `:inclusion-reasons`: unique canonical memory IDs
+in first-witness order, paired one-for-one with the closed reason maps declared
+in the contact fold. All ten reason keys and their actual qualified values
+are included; no extra payload or reason key is accepted. Count the entire
+version envelope, tags, map keys, values, separators and escapes. The count
+itself stays outside the payload, avoiding self-reference. Motion, status,
+bonds, contacts and fold custody retain their complete trace/state/work
+accounting; they are not silently treated as these two inclusion fields.
+The complete inclusion envelope is independently bounded by the existing
+8,388,608-byte engineering limit, as the complete trace envelope is; neither
+counter is reset on a split or restore. Restore recomputes the exact same
+ordered inclusion bytes/count from qualified first witnesses. All encoding,
+hashing, validation and restoration work is charged to the existing whole
+call/rebuild budget. Future golden and exact/one-over controls distinguish
+empty inclusion, Unicode/control escaping, map insertion order, duplicate
+memory witnesses and split/restored equality. Host EDN/JSON printer choices
+cannot determine the count.
+
+The ABI now exposes `rebuild-revocation`, version finite-revocation-rebuild/2.
+Its exact inputs are prior state, compatible trusted checkpoint, complete
+ordered immutable contribution-event tail, current trusted authority projection,
+and physical configuration. Consume qualified Axxium decisions/versions and
+Clio envelopes/history; the kernel does no authorization lookup or history I/O.
+Validate the existing restore artifact/configuration/cursor obligations and
+reconstruct all retained fields, trails, affected world projection and active/
+restored inclusion folds. Success returns the complete rebuilt state,
+replacement checkpoint/cursor, new scope/authority/projection/field bindings,
+complete folds and budget accounting as one operation result. A budget, binding,
+authority or missing/ambiguous-history refusal returns the exact unchanged prior
+state with its declared reason. Tail128events/1,048,576canonicalClio bytes,
+64quanta/67,108,864work units and the existing state/input/trace/result limits
+apply across the whole private rebuild. No partial replacement, retagging,
+new elapsed time, new random draws, outcome or publication replay is allowed.
+The outer adapter owns the2,000ms observation and quarantine/refusal before
+causal use; a timeout supplies no accepted replacement or pure clock read.
+`admit-state` remains its existing operation and is not an implicit history
+replay interface.
+
+Recall-request IDs now explicitly use the same nonempty well-formed scalar
+string, exact unsigned UTF8 spelling,128-byte bound and namespace uniqueness
+contract as the other declared IDs. Validate before recall state, fold creation,
+ordering or hashing, and require every restored/reference ID to match exactly
+one admitted request under the actual principal/scope. Reject lone surrogates,
+replacement-encoding collisions and conflicting duplicate admissions. An exact
+idempotent retry refers to its original admitted request and is not a second
+admission. Future controls include malformed/multibyte/exact-and-over-byte IDs,
+conflicting duplicates and valid retry/readback. The provisional packet estimates
+and existing board dependencies are unchanged by these contract corrections.
