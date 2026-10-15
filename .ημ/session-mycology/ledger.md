@@ -513,3 +513,13 @@
   spore: none
   receipt-refs: cephalon-field-existing-revocation-allocation-and-readable-native-corrections-20261015
   note: Current confirmed findings corrected within already accepted scope. Historical compressed/stale native notes remain unchanged and are explicitly superseded by readable appended corrections. Includes all existing held receipt/reflection bytes without head-only observation churn. New head requires fresh complete review/checks; no approval transfer, paid/credential/model/runtime/heartbeat/Ready change. GoalACTIVE heartbeat humanPAUSED live0/3; no spore.
+
+- ts: 2026-10-15T10:56:55.332Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-slice
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-contact-order-contract-parity-20261015
+  note: Owning contract now enforces existing gamma inequality, defines deterministic request/horizon-bound contact-to-memory fold with canonical dedup/order/reasons and whole-refusal caps, and fixes input-order-dependent work accounting using ABI-keyed bounded trie traversal/charge schedule. Sorted/reversed/shuffled exact/one-short work fixtures mandatory. Native roster18 explicitly counts separate selection; execution14 total65 remains provisional. No solver/storage/runtime/paid/credentials/board mutation, readiness, production calibration or live proof. All prior receipt/reflection prefixes preserved; full new current source review remains required.

@@ -110,6 +110,11 @@
                                       :positive-isolated-fixture :three-distinct-gamma-values
                                       :separate-controls [:each-kind-own-exponential :daimoi-motion
                                                           :valid-zero-friction :quiet-repeated-split]
+                                      :required-order [:presence-greater-than-nexus :nexus-greater-than-daimoi
+                                                       :daimoi-nonnegative]
+                                      :source-order "gamma-presence > gamma-nexus > gamma-daimoi >= 0"
+                                      :invalid-order :whole-transition-unchanged-refusal
+                                      :order-controls [:equal-adjacent :reversed-distinct :negative-daimoi]
                                       :new-inferred-ordering :forbidden}
                :friction-order [:gamma-times-step :negate :numeric-profile-exp
                                 :multiply-pre-friction-x :multiply-pre-friction-y]
@@ -279,6 +284,51 @@
            :equality :prune :epsilon-zero :prune-only-exact-zero
            :retained-provenance :immutable-contribution-events-and-effect-receipts
            :observation :explicit-pruned-cell :unsafe-intermediate :unchanged-refusal}
+ :canonical-order-work
+ {:version "finite-order-work/1"
+  :owner :field-pure-law-and-domain-consuming-qualified-abi-key-shapes
+  :id-key :exact-unsigned-utf8-no-normalization
+  :tuple-key :componentwise-qualified-abi-order
+  :algorithm :bounded-most-significant-component-trie
+  :insertion :scan-each-complete-key-once-charge-each-unit-before-use
+  :node-creation :once-per-distinct-prefix
+  :traversal :terminator-first-then-all-256-unsigned-byte-branches
+  :numeric-component :qualified-abi-signed-integer-key-order
+  :charge [:all-input-code-units-and-key-bytes :each-trie-edge-visit
+           :each-distinct-node-creation :each-fixed-branch-probe :each-emitted-key]
+  :adaptive-sort-comparison-charge :forbidden
+  :collection-order :cannot-change-total-charge-acceptance-or-canonical-output
+  :duplicates-or-invalid-keys :whole-transition-unchanged-refusal
+  :budget :same-whole-call-or-whole-rebuild-counter-no-reset
+  :no-partial-output :true
+  :fixtures [:sorted-reversed-shuffled-same-multiset-at-exact-work-bound
+             :same-multiset-one-unit-short :long-prefix-unicode-and-tuples]}
+ :contact-inclusion
+ {:version "finite-contact-inclusion/1"
+  :owner-task "ba078119-482c-49dc-bd18-c2dfcaad9024"
+  :pure-owner :field-contact-domain-fold-not-consumer-reimplementation
+  :binding [:actual-request-daimoi :principal :scope :authority :graph-revision
+            :field-history :start-checkpoint :end-checkpoint :fold-revision]
+  :horizon :explicit-validated-request-emission-to-selected-checkpoint
+  :maximum-quanta :qualified-abi-maximum-substeps-across-entire-horizon
+  :split-calls :retain-same-horizon-cursor-and-private-fold-state-without-budget-reset
+  :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
+  :presence-contact :trace-only-no-memory-inclusion
+  :other-daimoi-or-separated-pair :no-memory-inclusion
+  :memory-binding :actual-qualified-nexus-to-canonical-memory-and-content-revision
+  :fold-order [:step-end-time-us :canonical-unordered-contact-pair]
+  :deduplicate :exact-memory-id-keep-first-canonical-contact-witness
+  :output-order :first-canonical-witness-order
+  :reason [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
+           :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
+  :missing-denied-or-conflicting-binding :whole-transition-unchanged-refusal
+  :budget :owning-finite-state-work-trace-byte-and-record-caps-before-exposure
+  :partial-ranking-or-truncation :forbidden
+  :later-prompt-budget :explicit-consumer-subselection-with-full-fold-custody-not-altered-physical-result
+  :fixtures [:two-memory-contacts :repeat-one-memory-across-substeps
+             :several-nexuses-same-memory :reversed-input :split-catchup-restored-replay
+             :presence-only :other-request-daimoi :denied-or-missing-memory-binding
+             :horizon-exact-one-over :work-and-trace-exact-one-over]}
  :calibration {:production-defaults :none :complete-input :required
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal
@@ -292,7 +342,9 @@
                                 :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
                                 :work-units-per-call 67108864
                                 :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
-                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append]
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
+                                            :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
+                                :canonical-order-work "finite-order-work/1"
                                 :counter :before-every-operation-across-preflight-and-entire-call
                                 :bounded-input-read :before-full-allocation-or-decode
                                 :bounded-trace :before-append-or-whole-result-exposure
@@ -416,7 +468,9 @@
            :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000
            :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
-                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append]
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
+                                            :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
+                                :canonical-order-work "finite-order-work/1"
            :counter :before-every-operation-across-entire-private-rebuild
            :count-byte-preflight :before-replay :effects :none-before-complete-authorization-and-bounds
            :exhaustion {:status :refused :code :revocation-rebuild-budget-exceeded
