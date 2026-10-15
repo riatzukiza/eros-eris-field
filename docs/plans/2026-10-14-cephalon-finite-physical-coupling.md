@@ -514,17 +514,17 @@ The signed field-index coordinator amendment is satisfied by reviewed decision
 native readiness remain outstanding. The old positive-only decision stays
 provenance and supplies no admission for the exception by itself.
 
-Foresight's native Rheos created twelve Incoming planning cards in personal
-Foresight PR37: eleven selected execution packets and the existing automatic
-integration parent. The three physical execution packets total 13 points,
-atomic storage 5, encounter 3, scoped graph reads 5, feedback 3, mood 5,
-deployment 3, served causal proof 5 and terminal closeout 2: total 44, plus the
-existing separate selection 3. The earlier eight-packet total 36 is estimate
-history; the automatic parent's recorded 5 points are aggregate history and
-excluded from these child allocations. Initial estimates remain provisional
-for independent review and lawful aggregation before Ready. They are not a
-subtraction remainder from the original 8-point larger field story. No Incoming
-creation, table or source plan grants implementation readiness.
+Foresight's native Rheos created fourteen Incoming planning cards in personal
+Foresight PR37: twelve selected execution packets and the retained mood and
+automatic integration parents. Physical execution remains13, atomic5, encounter3,
+scoped graph5, feedback3, mood transition/persistence3 and appraisal/consumer3,
+deployment3, served proof5 and closeout2: proposed total45 plus separate selection3.
+Earlier44 and36 totals remain estimate history. Both integration parents retain
+recorded5 as non-additive aggregate history, excluded from execution totals.
+The mood split refines existing work and independently proposed estimates,
+not an adopted increase or new behavior/prerequisite. Independent fair estimate/
+reuse/type/aggregation review through Rheos precedes Ready. No subtraction from
+the original8-point field story or Incoming creation grants implementation.
 
 The table records exact native `uuid`-namespace values, including feedback's
 actual native default slug identity. `dependency` is the canonical Foresight
@@ -542,7 +542,9 @@ remain mandatory before RED.
 | forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` |
 | contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` |
 | atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `ba078119-482c-49dc-bd18-c2dfcaad9024` |
-| mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
+| mood-state | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
+| mood-consumer | `5450c07d-1e90-4640-90e9-995f1e32d28a` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
+| mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 (aggregate history; excluded) | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `5450c07d-1e90-4640-90e9-995f1e32d28a` |
 | automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback` |
 | feedback | `deliver-outcome-attributed-once-only-graph-feedback` | 3 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 3 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback` |
@@ -552,7 +554,10 @@ remain mandatory before RED.
 Graph read completion supplies ABI and atomic inputs without waiting for its
 separate feedback successor. Deployment depends on graph, atomic, mood and
 feedback; causal proof depends on deployment; terminal closeout depends on
-causal proof. The existing automatic card integrates those children. These
+causal proof. Atomic persistence feeds the independently completable mood
+transition/persistence interface; the separate bounded appraisal/actual-consumer
+child consumes it and the scoped graph interface. The mood parent integrates
+both; the automatic parent integrates deployment/proof/closeout. These
 edges are observed initial planning state, not installed readiness/admission.
 The owning Foresight plan and this source plan retain independent gates.
 
