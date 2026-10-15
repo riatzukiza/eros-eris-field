@@ -175,9 +175,11 @@ event schedule; it cannot admit new elapsed time or select a new schedule.
 2. Counts, wallets, elapsed time, residuals, backlog and RNG counters are exact
    integers within `[0, 2^53-1]`. This candidate proposes one explicit exception:
    floor-derived field cell indices are signed safe integers within
-   `[-(2^53-1), 2^53-1]`. This exception requires independently reviewed
-   coordinator selection amendment before implementation; the original
-   positive-only selection remains historical, not compatible admission.
+   `[-(2^53-1), 2^53-1]`. The coordinator amendment is satisfied by reviewed
+   decision `020d97fecae4a8d0d277b9b2695d9482620b4a76` and actual merge
+   `8c649fee2e95e5ec6b5304a3351a0e16fca60533`. This owning plan's current
+   review and native readiness remain required before implementation; the
+   original positive-only selection stays historical provenance.
    Nonfinite scalars, missing coefficients, duplicate IDs, missing endpoints,
    unsafe integer arithmetic and mismatched revisions refuse unchanged state.
 3. Host UTC observation identity is separate from monotonic elapsed integer

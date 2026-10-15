@@ -301,6 +301,21 @@ and actual consumer case supplies the lawful end-to-end proof. B2 tests mood
 influence separately while holding physical inputs fixed; it cannot confound
 the physical intervention.
 
+In addition, require a lawful admitted-input comparison. From the same qualified
+initial graph/field snapshot, construct two independently valid outside
+encounters, each with its own canonical external revision, causal effect,
+payload hash, cursor and expected revisions. Each arm passes actual admission
+and projection validation, computes and atomically commits its own consistent
+graph/field/effect state, and receives independent readback. Hold initial scope,
+principal, query, seed, calibration, mood/lens/attention and read bindings fixed;
+choose encounter inputs whose resulting deposit/bond changes actual motion,
+contact, recall path and included association. Preserve both complete admitted
+histories and replay each unchanged. An edited buffer carrying the other arm's
+hash/effect/cursor refuses. This tests the different-admitted-input outcome;
+the separate non-admitted pure ablation remains the mechanism control. Neither
+arm can be a self-post relabeled as outside input or a duplicate assigned a new
+effect identity. This is future RED/GREEN acceptance, not an executed proof.
+
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
 API200 or writer-returned snapshot is not independent persisted readback.
@@ -319,6 +334,45 @@ or field component is quarantined as inconsistent; do not replay both sides or
 declare success. Transaction fault tests must establish neither-half persistence
 before commit and complete matching recovery after an acknowledged or uncertain
 commit. Hidden field contributors must not affect allowed motion or inclusion.
+
+## Reference numerical execution profile
+
+The ABI defines one proposed reference profile: Node22.20.0, V8
+12.4.254.21-node.33, Linux x64, executable SHA256
+`b1cbec894e45a5814b6ab756e1e14f8a76516273197e67e0412b57c1e10d0d9f`.
+`LN2` is the binary64 constant with bits `3fe62e42fefa39ef`
+(decimal `0.6931471805599453`), not a fresh logarithm calculation. Decay and
+elapsed friction use the unmodified `Math.exp` builtin from that selected
+Node/V8 revision; the norm uses its `Math.sqrt`. The selected Node source
+identifies `MathExp`/`Float64Exp` and the V8 exponential implementation.
+
+Compute `h = quantum_us / 1000000` once. Decay computes `lambda = LN2 /
+half_life`, then `z = lambda * h`, `a = -z`, one shared `factor = Math.exp(a)`,
+then prior x and prior y times that factor, in order. Friction computes
+`z = gamma_kind * h`, `a = -z`, one shared factor with the same exponential,
+then pre-friction x and y times that factor, in order. Preserve every immediate
+finite check and unchanged-state refusal; a later finite underflow cannot hide
+an overflowing intermediate. Reassociation and fused arithmetic remain forbidden.
+
+Pure `.cljc` law/domain owns formulas, order, validation and discrete decisions.
+The narrow numerical binding supplies this deterministic primitive; outer
+adapters inspect and qualify runtime identity before causal use, without runtime
+discovery inside a pure transition. Bind profile, compiled kernel/configuration
+and executable hashes plus actual launch/build options in qualification and
+checkpoint/restore evidence. Runtime/profile mismatch refuses. This declaration
+is not an implemented numerical binding or qualified kernel artifact.
+
+Future RED includes decay/prune equality and adjacent binary64 values, strict
+static-threshold equality, contact-sensitive motion, zero friction, finite
+underflow and unsafe intermediates. Continuous tolerance never excuses a
+different prune/static-stop/contact/path/inclusion decision. Identical schedules
+remain mandatory; repeated quantum decay need not bit-match one aggregated
+exponential. Portability of `.cljc` is not JVM/browser/Python or arbitrary Node
+build numerical parity; another runtime requires its own reviewed qualification.
+
+Primary references: [ECMAScript exponential](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.exp),
+[Node22.20 MathExp source](https://github.com/nodejs/node/blob/v22.20.0/deps/v8/src/builtins/math.tq),
+[V8 exponential implementation](https://github.com/nodejs/node/blob/v22.20.0/deps/v8/src/base/ieee754.cc).
 
 ## Acceptance criteria and RED obligations
 
@@ -369,11 +423,35 @@ The signed field-index coordinator amendment is satisfied by reviewed decision
 native readiness remain outstanding. The old positive-only decision stays
 provenance and supplies no admission for the exception by itself.
 
-Independent local audit sizes this as several substantial kernel packets—
-ABI/time/order/build; forces/bonds/winds/seed; contact/trace/replay—plus storage
-and consumer integration. It assigns no native points and does not obtain a
-remainder by subtracting from the original eight-point story. Native estimates
-and any aggregation change need reviewed planning and the canonical writer.
+Foresight's native Rheos now created the eight selected packets below in
+Incoming for independent planning review in personal Foresight PR37. The three
+physical packets total13, atomic storage5, with encounter3, graph5, mood5 and
+automatic proof5: total36, plus the existing separate selection3. Initial
+creation estimates are provisional; they are not a subtraction remainder from
+the original8-point larger field story. Existing aggregate estimates remain
+historical and must not be double-counted with these allocations. Fair
+aggregation and full native graph readiness require reviewed adoption through
+Rheos before RED. Incoming creation alone grants no implementation readiness.
+
+| Packet | Canonical UUID | Proposed points |
+| --- | --- | --- |
+| admission | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a` | 3 |
+| graph | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` | 5 |
+| abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 3 |
+| forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 |
+| contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 5 |
+| atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 5 |
+| mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 |
+| automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 |
+
+The native cards carry their original story parent, character epic UUID and
+exact selected predecessor UUIDs. Initial admission prepares an envelope;
+ABI/time follows admission, scoped graph and completed selection; forces then
+contact follow in order; atomic persistence consumes their outputs; persisted
+mood and the actual automatic proof follow the atomic graph/field contract.
+Source qualification and lawful current predecessor admission stay mandatory.
+The owning Foresight planning PR and these source plans retain independent gates.
+
 
 Later work retains full absorption/bounded exchange and multi-contact
 conservation, the complete bond/association matrix, sustained quiet/load/restart

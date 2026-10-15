@@ -8,6 +8,7 @@
  :selection/merge "8c649fee2e95e5ec6b5304a3351a0e16fca60533"
  :selection/compatibility :reviewed-signed-cell-index-amendment
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
+ :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
             :cell-key [:scope-revision :layer-index :exact-floor-x-over-cell-size
                        :exact-floor-y-over-cell-size]
@@ -94,7 +95,10 @@
                :sum :left-fold-binary64-from-zero-vector
                :duplicate-contribution :unchanged-refusal
                :bond-semantic-double-count :forbidden}
- :integration {:force-unit :world-unit-per-second-squared-times-dimensionless-inertia
+ :integration {:friction-order [:gamma-times-step :negate :numeric-profile-exp
+                                :multiply-pre-friction-x :multiply-pre-friction-y]
+               :friction-factor :shared-by-both-components
+               :force-unit :world-unit-per-second-squared-times-dimensionless-inertia
                :mass :positive-finite-dimensionless-inertia
                :step-seconds :quantum-us-divided-by-one-million
                :component-order [:force-sum-divide-mass :acceleration-times-step
@@ -145,6 +149,8 @@
            :target :next-buffer :zero-weight-or-velocity :no-deposit
            :saturation-and-pruning :required-separate-calibration}
  :decay {:rule :elapsed-exponential :lambda :ln-two-over-positive-half-life
+         :ln-two-source :numeric-profile :exp-source :numeric-profile
+         :factor :shared-by-both-components
          :sample :prior-field-at-substep-start
          :next-order [:decay-prior :add-ordered-new-deposits :saturate-cell :prune]
          :prior-decay-order [:ln-two-divide-half-life :lambda-times-step :negate :exponentiate
@@ -179,6 +185,15 @@
                :varied :field-vector-contribution
                :required-change [:physical-contact :included-memory]
                :altered-buffer-admission-storage-or-restore :forbidden}
+ :admitted-input-comparison
+ {:arms :two-independently-valid-outside-encounter-effect-histories
+  :prior :same-qualified-graph-field-snapshot
+  :each-arm [:admission :validated-projection :kernel-transition :atomic-commit
+             :independent-readback :unchanged-history-replay]
+  :required-change [:motion :contact :recall-path :included-memory]
+  :fixed [:scope :principal :query :seed :calibration :mood-lens-attention :read-bindings]
+  :identity-hash-cursor-and-revision-consistency :required-per-arm
+  :forged-or-duplicate-history :refused}
  :persistence {:owner :openplanner :independent-readback :required
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
                :transaction-and-unique-effect-identity :required

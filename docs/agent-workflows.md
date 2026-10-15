@@ -134,3 +134,27 @@ explicit credential and token steps. The
 retains the exact declarations and inspection boundary without secret values.
 This resolves that source-mapping question; it does not establish immunity to
 runner or process compromise, or execute physical behavior.
+
+
+## Current enabled toolchain inspection — 2026-10-15 UTC
+
+The current caller enables `setup_eta_mu_toolchain: true` for standard Babashka
+EDN parsing. This supersedes the October9 disabled-setup observation above. The
+shared workflow remains exactb03cb58407cc333b7cabd77431842d44f0deb415; caller
+Muse/agents/OpenCode selectors and explicit secret mappings remain unchanged.
+The enabled path installs declared Java21/Clojure1.12.5.1654/Babashka1.13.219/
+clj-kondo2025.10.23/pnpm10.14.0 plus configured Node22. The caller's custom gate
+script replaces default dependency-install gates. Actual producer116163403965
+completedSUCCESS, declaring bb1.13.219 and proposed_abi_parse exit0.
+
+Unlike the old skipped path, credential detection now receives the existing
+ETA_MU_APP_ID and ETA_MU_APP_PRIVATE_KEY secret mappings and, if both are present,
+the shared workflow can mint the existing scoped cross-repository read token
+for katamorph and mirror that dependency. These steps are not isolated merely
+because they are outside the gate step. The deterministic gate environment
+still maps only PR identifiers/script/checkout outputs, and the model step
+declares no App key; that declaration is not proof against process/runner
+compromise or later-step environment inheritance. No secret value, new secret,
+provider credential or runtime deployment is introduced by this caller change.
+Actual privileged-step outcomes and exact source/check bindings remain part of
+qualification; previous receiver approval does not transfer to the caller.

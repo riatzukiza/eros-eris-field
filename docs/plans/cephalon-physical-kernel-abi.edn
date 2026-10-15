@@ -11,6 +11,21 @@
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
  :task/owner-selection "b5f2ba9e-8d67-4c73-9919-e275983aca87"
  :target {:runtime :compiled-cljs-node :scalar :finite-binary64
+         :numeric-profile {:id "cephalon-node22.20.0-linux-x64/1"
+                            :ln-two {:value 0.6931471805599453
+                                     :ieee754-binary64-hex "3fe62e42fefa39ef"}
+                            :exp {:primitive "Math.exp"
+                                  :implementation "v8::base::ieee754::exp"
+                                  :source-revision "nodejs/node@caa20e28dc1f21a97f7b2a7134973fd6435b65f0"}
+                            :sqrt {:primitive "Math.sqrt"}
+                            :runtime {:node "22.20.0" :v8 "12.4.254.21-node.33"
+                                      :platform :linux :architecture :x64
+                                      :executable-sha256 "b1cbec894e45a5814b6ab756e1e14f8a76516273197e67e0412b57c1e10d0d9f"}
+                            :qualification :requires-compiled-artifact-and-execution-profile-evidence
+                            :launch-options :record-and-qualify
+                            :builtin-replacement :forbidden
+                            :runtime-discovery :outer-adapter-before-causal-use
+                            :cross-runtime-parity :not-claimed}
           :dimensions 2 :distance-unit :world-unit
           :safe-integer-range [0 9007199254740991]
           :field-cell-index-range [-9007199254740991 9007199254740991]
@@ -31,7 +46,7 @@
          :buffers :prior-and-next :decay :elapsed-exponential
          :semantic-bindings :required-versioned-configuration}
  :state/required [:kernel-revision :config-revision :config-hash
-                  :scope-revision :projection-revision :kernel-time-us
+                  :numeric-profile-id :scope-revision :projection-revision :kernel-time-us
                   :residual-us :backlog-us :pending-events :event-cursor
                   :ordered-entities :intent-bonds :sparse-cells
                   :contribution-provenance :recall-requests :rng
@@ -120,7 +135,7 @@
             :output [:restored-state-and-cursor-or-unchanged-refusal]
             :validates [:kernel-revision :config-revision :config-hash
                         :scope-revision :projection-revision :current-grants
-                        :snapshot-cursor-agreement :time-accounting
+                        :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact
                         :seed-state-and-draw-counter :causal-contributions]
             :scope-mismatch :refused-before-causal-use
             :effects :none :new-elapsed-time :none :rng-draws :none
@@ -128,7 +143,7 @@
  :result/statuses [:admitted :refused :denied :no-contact :complete
                    :incomplete :stale :exhausted :failed]
  :replay {:continuous {:absolute 1.0e-9 :relative 1.0e-9}
-          :exact [:identity :event-order :residual-time :seed-counter
+          :exact [:pruning-decisions :static-threshold-decisions :identity :event-order :residual-time :seed-counter
                   :wallets :contacts :paths :grants :included-memories
                   :selected-actions :actual-byte-hashes]}
  :adoption/requires [:current-source-review :native-rheos-readiness
