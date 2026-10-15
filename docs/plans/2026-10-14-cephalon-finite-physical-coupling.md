@@ -312,9 +312,14 @@ choose encounter inputs whose resulting deposit/bond changes actual motion,
 contact, recall path and included association. Preserve both complete admitted
 histories and replay each unchanged. An edited buffer carrying the other arm's
 hash/effect/cursor refuses. This tests the different-admitted-input outcome;
-the separate non-admitted pure ablation remains the mechanism control. Neither
-arm can be a self-post relabeled as outside input or a duplicate assigned a new
-effect identity. This is future RED/GREEN acceptance, not an executed proof.
+the separate non-admitted pure ablation remains the mechanism control. The
+fixture spans distinct packet outputs: contact/inclusion supplies independently
+admitted valid candidate inputs, pure kernel sensitivity and per-arm kernel
+replay; the later atomic packet supplies actual transaction/readback and
+persisted-history replay for both arms. Contact completion does not depend on
+its future storage successor. Neither arm can be a self-post relabeled as
+outside input or a duplicate assigned a new effect identity. This is future
+RED/GREEN acceptance, not an executed proof.
 
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
