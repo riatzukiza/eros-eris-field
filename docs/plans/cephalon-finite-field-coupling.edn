@@ -262,6 +262,13 @@
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
                :transaction-and-unique-effect-identity :required
                :expected-revisions [:graph :field]
+               :current-authority :independently-reload-stored-principal-grants-policy-scope-before-transaction
+               :commit-authority :assert-same-authority-and-policy-versions-through-commit
+               :authority-change :abort-all-components-before-commit
+               :new-encounter-embedding [:admitted-content-revision-and-hash :exact-bytes-and-hash
+                                         :shape-and-dimensions :model-and-configuration-revision]
+               :embedding-custody [:same-candidate-projection :same-atomic-commit :independent-readback]
+               :missing-pending-or-conflicting-embedding :not-complete-physical-effect
                :unsupported-transaction :refuse-before-either-write
                :uncertain-commit :read-matching-receipt-and-both-components
                :duplicate-effect :recover-prior-result-without-second-deposit
@@ -282,6 +289,21 @@
   :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
   :pure-quarantine-state-mutation :forbidden
   :forbidden [:display-only-filter :old-aggregate-retag :zero-all-fields :rewrite-old-history]}
+ :served-selected-intervention
+ {:source :same-selected-outside-encounter-and-effect-as-b1-readback
+  :equal-lineage [:encounter-id :content-revision-and-hash :effect-id
+                  :deposit-or-bond-source :prior-and-derived-graph-field-bindings]
+  :varied :one-declared-admitted-physical-deposit-or-bond-value
+  :all-other-inputs :fixed :history-rewrite :forbidden
+  :unrelated-valid-encounter-deposit :refuse-proof
+  :scope :distinct-from-two-lawful-different-encounter-storage-arms}
+ :evidence-audience
+ {:artifact-and-destination :independently-classified
+  :restricted-full-inspection :authorized-protected-seam-outside-git-and-public-logs
+  :retained-public-or-reviewer :only-explicitly-audience-authorized-digest-redacted-binding
+  :maker-access :not-reviewer-or-public-permission
+  :unsafe-or-unavailable-protected-proof :refuse-outcome-and-reinforcement
+  :publication-replay :forbidden}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt
             :mood :separate-persisted-model-with-same-field-revision}
