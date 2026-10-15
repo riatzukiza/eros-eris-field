@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-wire-completed-recall-rebuild"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-snapshot-refusal-closure"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -178,7 +178,10 @@
                           :reason-status {:invalid-recall-request :refused
                                           :current-authority-unestablished :refused
                                           :stale-recall-authority :stale
-                                          :denied-recall-authority :denied}
+                                          :denied-recall-authority :denied
+                                          :finite-input-byte-limit :refused
+                                          :finite-state-continuation-byte-limit :refused
+                                          :finite-work-budget-exceeded :refused}
                           :prior-state :untouched-and-not-returned
                           :recall-payload :absent}
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
@@ -287,20 +290,34 @@
              :scope-revision :writer-principal :ack-observation-id]
    :idempotency :same-effect-and-matching-acknowledgement
    :failure :pending-without-reinforcement
+   :matching-failed-storage-result
+   {:variant :refusal :status :refused :reason :feedback-storage-failed :reason-revision 1
+    :state :exact-unchanged-prior-state :pending-feedback :unchanged
+    :confirmation :absent :reinforcement :none
+    :confirmed-outcome-ids :unchanged
+    :observation-provenance :outer-qualified-clio-retains-the-actual-failed-writer-observation
+    :retry :same-pending-effect-id-with-a-new-actual-authorized-writer-observation
+    :already-confirmed-or-conflicting-reference :not-a-matching-pending-failure}
    :conflicting-or-untrusted-ack :unchanged-refusal
    :effects :none :new-elapsed-time :none :rng-draws :none}
   :checkpoint {:input [:state :current-trusted-authority-projection]
                :output [:state-transition-result]
                :operation-result [:canonical-snapshot :event-cursor]
-               :encoding :consume-existing-contract-authority
+               :encoding "finite-field-snapshot/1"
+               :snapshot-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
+               :snapshot-contract-status :proposed-requires-owning-source-qualification-before-consumption
+               :snapshot-value :closed-tagged-domain-map-not-a-string-or-host-byte-object
                :producing-identity [:compiled-artifact-sha256 :build-qualification-id
                                     :launch-profile-id :launch-profile-sha256]
                :identity-evidence :independently-verified-qualified-source-build-runtime
-               :canonical-snapshot-hash :includes-producing-identity-and-complete-inclusion-fold-state}
+               :canonical-snapshot-hash :lowercase-sha256-of-exact-finite-field-snapshot-1-payload-bytes
+               :hash-coverage :complete-state-including-producing-identity-cursors-pending-events-and-all-inclusion-state}
   :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor
                     :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
             :output [:state-transition-result]
             :operation-result [:restored-state :event-cursor]
+            :snapshot-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
+            :snapshot-decoding :exact-version-shape-canonical-payload-and-sha256-before-state-admission
             :validates [:kernel-revision :config-revision :config-hash
                         :scope-revision :projection-revision :current-grants :authority-projection-binding
                         :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact

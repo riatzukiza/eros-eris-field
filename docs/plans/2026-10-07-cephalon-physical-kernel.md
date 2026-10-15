@@ -124,7 +124,10 @@ Its exact names and fields require this source plan's review.
   that existing feedback once. The adapter resolves writer authority through
   the existing authorization boundary; a model assertion is not a trusted ack.
   A failed storage result leaves feedback pending without reinforcement; the
-  writer retries the same effect ID. Repeated matching success acknowledgements
+  shared transition union returns the explicit `feedback-storage-failed`
+  refusal with the exact unchanged prior state and no confirmation. The actual
+  failed writer observation remains outer Clio provenance; retry keeps the same
+  pending effect ID with a new actual authorized writer observation. Repeated matching success acknowledgements
   return the existing confirmation without a second reinforcement. Conflicting,
   mismatched, revoked-scope or untrusted acknowledgements refuse unchanged state.
   The confirmation retains effect/outcome/payload/scope/writer/ack provenance so
@@ -133,8 +136,12 @@ Its exact names and fields require this source plan's review.
   This pure operation records the independently observed result; it performs no
   write/publication, admits no time and draws no RNG.
 - `checkpoint` encodes a canonical snapshot and transition/event cursor.
-  Canonical encoding and hash format are adopted from the existing contract/event
-  authorities where available, not invented locally.
+  This candidate binds the proposed `finite-field-snapshot/1` contract in
+  `cephalon-finite-field-coupling.edn#snapshot-codec`: a closed domain map with
+  codec, complete validated state and SHA256, reusing the exact existing
+  field trace tagged-value algebra. It is not an already qualified runtime
+  codec or a replacement for Clio event authority. Source qualification of
+  the specified bytes/hash and continuation bounds is required before use.
 - `restore` takes the prior state (or an explicit empty state), that snapshot and
   cursor, the current trusted visible projection and physical configuration.
   Before any causal use it validates kernel/config/hash/scope/projection

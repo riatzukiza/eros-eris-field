@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-wire-completed-recall-rebuild"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-snapshot-refusal-closure"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -355,6 +355,42 @@
              :exact4194304-complete-bytes :one-byte-over
              :alternate-edn-optional-escape-whitespace-and-bom-refused-as-wire
              :bounded-decode-and-no-large-allocation-before-preflight]}
+ :snapshot-codec
+ {:version "finite-field-snapshot/1"
+  :status :proposed-not-an-existing-qualified-implementation
+  :owner :same-portable-field-law-and-shape-consuming-the-owning-abi-complete-state
+  :qualification :owning-source-review-native-readiness-red-laws-green-code-and-qualified-artifact-before-consumption
+  :domain-value {:kind :closed-map :exact-keys [:codec :state :sha256]
+                 :codec "finite-field-snapshot/1"
+                 :state :complete-validated-canonical-kernel-state
+                 :sha256 :exact64-lowercase-hex}
+  :state-shape {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"
+                :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
+                :values :qualified-owning-abi-values-only
+                :coverage :all-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
+                :projection-omission-or-unqualified-cache-substitution :forbidden}
+  :hash-payload ["finite-field-snapshot/1" :encoded-complete-canonical-state-map]
+  :value-encoding :exact-finite-field-trace-1-tagged-value-algebra-not-the-trace-record-envelope
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :maps :strictly-increasing-complete-encoded-key-unsigned-utf8-duplicates-refused-before-construction
+  :numbers :exact-big-endian-binary64-bits-including-distinct-signed-zero-nonfinite-refused
+  :strings :exact-trace-1-scalar-validation-and-escaping
+  :hash {:algorithm :sha256 :input :exact-complete-hash-payload-bytes :output :exact64-lowercase-hex
+         :wrapper-sha256-field :not-in-its-own-payload-no-self-reference}
+  :abi-checkpoint-cursor :exactly-the-snapshot-state-event-cursor
+  :input-argument :the-closed-domain-map-encoded-once-as-an-argument-by-finite-field-input-1
+  :input-argument-byte-cap :complete-map-encoding-including-codec-state-hash-keys-tags-and-separators-not-payload-only
+  :string-opaque-bytes-host-printer-or-alternate-wrapper :whole-unchanged-refusal
+  :restore :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-before-admission
+  :work :charge-all-actual-encode-validate-order-and-hash-work-under-the-existing-whole-call-or-rebuild-counter
+  :allocation :bounded-measurement-before-full-payload-or-argument-allocation
+  :fixtures [:complete-state-roundtrip-and-map-insertion-order-golden
+             :known-payload-bytes-and-sha256-golden :signed-zero-and-multibyte-string-hash-difference
+             :wrapper-hash-not-self-referential :missing-extra-or-duplicate-wrapper-or-state-key-refused
+             :changed-producing-identity-fold-or-pending-event-changes-hash
+             :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
+             :complete-checkpoint-argument-exact1048576-and-one-over
+             :payload-under-cap-but-complete-wrapper-one-over-refused]}
  :causal-entry-authority
  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
   :current-owner-projection :explicit-argument-at-every-abi-entry-including-advance-catch-up
@@ -369,7 +405,10 @@
   :checkpoint-argument-encoded-byte-cap 1048576
   :event-tail-argument-encoded-byte-cap 1048576
   :other-arguments-and-complete-framing-aggregate-byte-cap 524288
-  :component-byte-measure :exact-complete-encoded-argument-as-it-occurs-in-finite-field-input-1-including-snapshot-string-escaping
+  :component-byte-measure :exact-complete-encoded-argument-as-it-occurs-in-finite-field-input-1-including-the-declared-snapshot-domain-map-wrapper
+  :checkpoint-codec "finite-field-snapshot/1"
+  :checkpoint-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
+  :checkpoint-contract-qualification :required-before-any-continuation-admission-or-consumption
   :remaining-byte-measure :all-other-argument-encodings-plus-entire-input-envelope-and-separators-without-double-counting-components
   :existing-canonical-clio-tail-byte-cap :separate-unchanged1048576-raw-clio-and-encoded-argument-caps-both-required
   :maximum-carriers :rebuild-prior-state-plus-checkpoint-plus-complete-event-tail
@@ -387,7 +426,8 @@
   :overflow-or-unestablished-closure :whole-unchanged-refusal-with-finite-state-continuation-byte-limit
   :partial-inclusion-state-truncation-or-eviction-to-fit :forbidden
   :fixtures [:exact-state-argument-cap-and-one-over :exact-checkpoint-encoded-cap-and-one-over
-             :escaped-snapshot-string-bytes-not-underlying-raw-bytes
+             :complete-snapshot-tagged-map-wrapping-bytes-not-payload-only
+             :snapshot-string-or-opaque-host-value-refused
              :complete-remaining-framing-and-tail-encoded-cap-and-one-over
              :largest-accepted-state-through-read-catchup-checkpoint-restore-and-rebuild
              :inclusion-result-below8mib-but-state-one-over-refuses-before-success

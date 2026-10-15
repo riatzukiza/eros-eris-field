@@ -810,6 +810,47 @@ The tuple of end-boundary step ID and canonical unordered pair is a deterministi
 
 Checkpoint state includes the actual producing compiled-artifact SHA256, build-qualification identity and exact launch-profile identity/digest, alongside kernel/config/numeric revisions. Bind these to independently verified qualified producing source/build/runtime evidence and include them in the canonical checkpoint hash. Restore independently verifies the actual currently loaded artifact/build/launch qualification and requires equality with that producing identity before causal use; same revision labels alone cannot pass. Missing producer fields or a byte-different artifact/build/launch identity refuses unchanged state. No silent migration, copied producer label or new snapshot hash can qualify a different producing executable; a separate reviewed migration would be required outside this finite same-artifact replay proof.
 
+The proposed checkpoint codec is now specifically `finite-field-snapshot/1`
+in the companion coupling data, rather than an unnamed existing authority.
+Its ABI value is exactly the closed domain map with `:codec`, `:state` and
+`:sha256`; string, opaque bytes and alternative wrappers refuse. State has
+exactly the owning ABI's required state keys and their qualified values, with
+no omitted producer identity, cursors, pending event, feedback, recall result
+or inclusion-fold state. The hash payload is the JSON array
+`["finite-field-snapshot/1", E(complete-state)]`, where `E` is the exact existing
+`finite-field-trace/1` tagged-value encoder, not the trace-record envelope.
+Encode that whole array as canonical UTF8 JSON with no whitespace/BOM/newline,
+using the declared strict map order, scalar escaping and binary64 bit strings;
+SHA256 of those exact payload bytes yields the lowercase64-hex wrapper hash.
+The hash field is outside its own payload, avoiding self-reference.
+
+The separate 1,048,576-byte checkpoint **argument** cap measures the complete
+domain-map argument as encoded once inside `finite-field-input/1`, including
+the codec/state/hash fields, tags, separators and all required escaping.
+Payload bytes alone do not determine admission. The checkpoint's separately
+returned cursor must equal the state cursor. Restore validates version, closed
+shape, complete state, exact canonical payload/hash, cursor and actual producing
+identity before admission. Golden byte/hash/roundtrip fixtures, map-order and
+signed-zero controls, wrong/missing/extra/duplicate fields, opaque/string
+refusals, and complete-wrapper exact/one-over controls belong to the owning
+ABI source delivery before this contract can be consumed. This remains an
+unimplemented proposal with its own source qualification/readiness/RED/GREEN;
+it does not claim an existing qualified codec or replace event/authorization
+authority.
+
+The closed `read-recall` refusal union also admits the already required
+`finite-input-byte-limit`, `finite-state-continuation-byte-limit` and
+`finite-work-budget-exceeded` reasons, each with status `refused`, revision1
+and no recall payload. These valid bounded-input refusals do not expose prior
+state or become successful incomplete recall. A matching trusted failed
+storage acknowledgement now has a declared `confirm-feedback` refusal:
+`feedback-storage-failed`, status `refused`, revision1, exact unchanged state
+and pending effect, no confirmation, no reinforced contribution and unchanged
+confirmed-outcome IDs. The real failed observation remains in outer qualified
+Clio provenance; an actual authorized retry keeps the pending effect ID.
+This branch cannot demote an already confirmed or conflicting reference into
+pending failure, and does not invent a successful confirmation or storage write.
+
 Require independently bound reviewed friction coefficients for presence, nexus and daimoi; none may inherit a shared/default coefficient. Positive isolated fixtures use three distinct reviewed gamma values, fixed elapsed schedule and initial velocity with other forces/contact/caps/threshold effects neutralized, checking each kind against its own elapsed exponential and mechanics/calibration revision. Include the moving daimoi case explicitly, a valid zero-friction case, repeated/quiet/split schedules and wrong/default/shared coefficient negatives. Enforce the existing mechanics inequality `gamma-presence > gamma-nexus > gamma-daimoi >= 0` before any transition; it is independent of static-threshold ordering. Equal adjacent, distinct reversed and negative-daimoi values refuse the whole unchanged transition. Zero is valid only for daimoi with both strict predecessor inequalities satisfied; no shared/default coefficient or newly inferred ordering is admitted. All operation-specific cap domains are validated before generic radial shortcuts: wind and cell caps are strictly positive; only kind speed caps permit zero. Zero invalid wind/cell calibration refuses unchanged state even for zero vectors; valid zero speed returns zero before norm arithmetic.
 
 The actual submitted model-visible authorized node/edge path and traversal trace explicitly carries BOTH matching graph/projection revision and physical-field revision, bound to the selected encounter/effect lineage and independently read states from served-proof packet `f503ae5a-e414-4da8-a8d4-328a7218bcf3` acceptance criterion1. A singular traversal/graph revision plus a field revision only in protected diagnostic metadata cannot satisfy B3. Add stale/mixed/omitted model-visible field-revision negatives while preserving protected full-prompt inspection and audience-safe retained evidence.
