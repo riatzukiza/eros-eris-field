@@ -423,3 +423,13 @@
   spore: none
   receipt-refs: cephalon-field-contact-norm-applicability-correction-20261015
   note: Verified P2 scope omission repaired under existing finite norm contract, not new behavior/prerequisite. Preserve all source and ledger history, exact current-head review remains required. No paid/model/credentials/runtime/deployment/heartbeat/publication change; no spore.
+
+- ts: 2026-10-15T03:19:13.296Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-canonical-authority-checkpoint-and-independent-exits-field-20261015
+  note: Verified planning findings repaired under existing finite scope. Same selected physical field/mood/graph causal chain retained with explicit canonical owners and source-vs-served boundaries; no larger story or liveB1/B2/B3 completion. Actual runtime/source ports must be qualified; unsupported authority/event/restore operation refuses, not a local substitute. Preserve all immutable receipts and containing-repo context, no repo field. No paid/model/credentials/runtime/deployment/clock/heartbeat/publication replay changes; no spore.

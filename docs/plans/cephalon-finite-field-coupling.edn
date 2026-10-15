@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-14"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-authority"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -50,9 +50,17 @@
         :substitution-policy :forbidden
         :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds
                      :cell-saturation :cell-pruning :contact-normal-and-overlap]}
- :radial-cap {:input-order [:validate-finite-components-and-nonnegative-finite-cap
-                            :zero-cap-shortcut-before-norm :scaled-norm]
-              :zero-norm-or-cap :exact-zero-vector
+ :radial-cap {:operation-cap-domains {:aggregate-wind :finite-strictly-positive
+                                      :cell-saturation :finite-strictly-positive
+                                      :kind-speed :finite-nonnegative}
+              :operation-domain-validation :before-any-generic-shortcut
+              :invalid-zero-wind-or-cell-cap :whole-transition-unchanged-refusal
+              :zero-cap-shortcut :kind-speed-only
+              :input-order [:validate-operation-specific-cap-domain
+                            :validate-finite-components-and-nonnegative-finite-cap
+                            :valid-zero-kind-speed-cap-shortcut-before-norm :scaled-norm]
+              :zero-norm :exact-zero-vector
+              :valid-zero-kind-speed-cap :exact-zero-vector
               :at-or-below-cap :retain-original-vector-before-division
               :above-cap-order [:divide-cap-by-norm :branch-on-zero-ratio]
               :nonzero-ratio-order [:multiply-x-by-ratio :multiply-y-by-ratio]
@@ -95,7 +103,14 @@
                :sum :left-fold-binary64-from-zero-vector
                :duplicate-contribution :unchanged-refusal
                :bond-semantic-double-count :forbidden}
- :integration {:friction-order [:gamma-times-step :negate :numeric-profile-exp
+ :integration {:friction-coefficients {:kinds [:presence :nexus :daimoi]
+                                      :source :reviewed-mechanics-and-complete-calibration-revision
+                                      :shared-or-default-fallback :forbidden
+                                      :positive-isolated-fixture :three-distinct-gamma-values
+                                      :separate-controls [:each-kind-own-exponential :daimoi-motion
+                                                          :valid-zero-friction :quiet-repeated-split]
+                                      :new-inferred-ordering :forbidden}
+               :friction-order [:gamma-times-step :negate :numeric-profile-exp
                                 :multiply-pre-friction-x :multiply-pre-friction-y]
                :friction-factor :shared-by-both-components
                :force-unit :world-unit-per-second-squared-times-dimensionless-inertia
@@ -158,7 +173,13 @@
                        :tangent-zero-or-separating-velocity :observe-without-required-impulse
                        :separated-pair :no-observation
                        :order :canonical-pair-order
-                       :identity [:step-id :exact-unordered-pair]
+                       :domain-key [:step-id :exact-unordered-pair]
+                       :domain-key-namespace :same-admitted-kernel-history
+                       :emitted-event-identity :canonical-clio-envelope
+                       :causal-stream-and-idempotency :canonical-clio-admission
+                       :outward-binding :retain-admitted-clio-reference-with-domain-key
+                       :domain-tuple-only-effect-admission :forbidden
+                       :unsupported-clio-admission :refuse-outward-effect
                        :step-id {:value :exact-safe-integer-substep-end-kernel-time-us
                                  :derivation :prior-kernel-time-plus-quantum-us
                                  :namespace :same-admitted-immutable-kernel-history
@@ -258,7 +279,13 @@
           :presence-and-nexus-config-exact-deposit-weights-and-mapping-revisions]
   :identity-hash-cursor-and-revision-consistency :required-per-arm
   :forged-or-duplicate-history :refused}
- :persistence {:owner :openplanner :independent-readback :required
+ :persistence {:owner :openplanner
+               :authorization-owner :axxium
+               :current-decision :qualified-axxium-decision-and-policy-grant-version
+               :decision-binding [:actual-stored-principal :action :resource :permitted-scope]
+               :commit-decision-guard :qualified-axxium-admission-or-fencing-through-commit
+               :stale-local-policy-or-locally-minted-version :not-authority
+               :unsupported-authority-guard :refuse-all-components-before-commit :independent-readback :required
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
                :transaction-and-unique-effect-identity :required
                :expected-revisions [:graph :field]
@@ -306,6 +333,8 @@
   :publication-replay :forbidden}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt
+            :model-visible-revisions [:matching-graph-projection :matching-physical-field]
+            :field-revision-only-in-diagnostics :not-b3-proof
             :mood :separate-persisted-model-with-same-field-revision}
  :admission :reviewed-native-readiness-before-red-green
  :board-mutation :none :behavioral-proof :not-performed}
