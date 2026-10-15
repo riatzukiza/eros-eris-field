@@ -96,9 +96,9 @@
        :uniqueness :exact-utf8-bytes-within-declared-id-namespace
        :different-id-sort-key-ties :unchanged-refusal
        :applies-to [:entity :target :source :contribution :deposit :recall-request]
-       :request-namespace :same-principal-and-scope-admitted-recall-requests
+       :request-namespace :all-admitted-recall-requests-in-one-kernel-state-across-principals-and-scopes
        :request-admission :before-recall-state-fold-creation-ordering-or-checkpoint-hashing
-       :request-reference :exact-match-to-one-previously-admitted-request
+       :request-reference :exact-match-to-one-previously-admitted-request-with-its-original-principal-and-scope-binding
        :utf8-byte-cap 128
        :order :unsigned-utf8-byte-order}
  :force-order {:classes [:non-bond-semantic-attraction :unified-intent-bond

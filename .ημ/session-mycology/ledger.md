@@ -553,3 +553,13 @@
   spore: none
   receipt-refs: cephalon-field-exact-order-result-rebuild-request-contracts-20261015
   note: Define eight-byte order-preserving safe-integer component keys with fixed tuple component roots and charge every terminator/absent branch. Define closed two-field inclusion-result envelope with existing tagged algebra/escaping/map order, full byte count outside payload and unchanged independent8388608 trace bound; inclusion result explicitly uses same engineering cap. Add pure versioned rebuild-revocation ABI with exact checkpoint/history/current Axxium authority/config inputs, complete atomic result, existing bounds and unchanged typed refusal/outer quarantine. Apply scalar128UTF8byte/namespace uniqueness contract to recall-request IDs before state/fold/sort/hash. All are missing details of existing reviewed obligations; no implementation, calibration, readiness, new estimate/dependency or liveproof asserted. No board mutation, local semantics parser, paid/model/credential/runtime/deploy/publication/heartbeat/spore change. GoalACTIVE humanPAUSEDheartbeat live0of3.
+
+- ts: 2026-10-15T14:14:50.755Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-physical-coupling
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-state-unique-recall-id-correction-20261015
+  note: The earlier per-principal request uniqueness choice was ambiguous because existing fold keys/order and read input use request ID alone. Correct the proposal to unique IDs across all admitted requests in one kernel state regardless of principal/scope, preserving the original principal/scope binding for every lookup and exact retry. No compound-key/API implementation or new scope/estimate; historical receipt60/nativefinding preserved. Hold this concrete local correction while current c5MiMo completes, then group any further verified findings for one ordinary push. Source c5four earlier findings actually Fixed; new root4284004806 remains open until this correction is published/verified. GoalACTIVE humanPAUSEDheartbeat live0of3; no board/runtime/paid/credential/model/deployment/publication/spore change.

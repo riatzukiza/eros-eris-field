@@ -970,11 +970,30 @@ replay interface.
 
 Recall-request IDs now explicitly use the same nonempty well-formed scalar
 string, exact unsigned UTF8 spelling,128-byte bound and namespace uniqueness
-contract as the other declared IDs. Validate before recall state, fold creation,
-ordering or hashing, and require every restored/reference ID to match exactly
-one admitted request under the actual principal/scope. Reject lone surrogates,
+contract as the other declared IDs. Request IDs are unique across all admitted
+requests in one kernel state, independently of principal and scope. Validate
+before recall state, fold creation, ordering or hashing, and require every
+restored/reference ID to match exactly one admitted request with its unchanged
+original principal/scope binding. Reject lone surrogates,
 replacement-encoding collisions and conflicting duplicate admissions. An exact
 idempotent retry refers to its original admitted request and is not a second
 admission. Future controls include malformed/multibyte/exact-and-over-byte IDs,
 conflicting duplicates and valid retry/readback. The provisional packet estimates
 and existing board dependencies are unchanged by these contract corrections.
+
+### State-unique recall identity
+
+Native Codex5534454109/root4284004806 identified that the earlier per-principal
+request namespace allowed ambiguous same-ID folds in one state, while the
+existing fold order and read API use the request ID directly. Request IDs are
+therefore unique across all admitted requests in the state, across principals
+and scopes. A different principal or scope cannot admit a second request with
+that ID. A retry can only reference the single original request with identical
+input and original ownership/scope bindings. Fold ordering and lookup retain
+their existing request-ID key without a new compound-key interpretation. Future
+fixtures admit the same proposed ID from two principals in one scope, and from
+two scopes in one state: the conflicting second admission refuses unchanged,
+while the original exact retry remains idempotent and cannot select another
+principal's fold. This is a correction to the existing proposed identity
+contract, with no new implementation or claimed authorization proof. Historical
+native findings and the earlier receipt remain unchanged.

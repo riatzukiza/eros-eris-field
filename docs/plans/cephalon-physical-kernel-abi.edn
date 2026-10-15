@@ -133,13 +133,14 @@
                        :physical-budget :mood-lens-revision]
                 :output [:state :request-result] :idempotency :request-id
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
-                :request-uniqueness :within-same-principal-and-scope-admitted-request-namespace
+                :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
                 :invalid-duplicate-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
-                :retry :existing-request-idempotency-with-exact-matching-admitted-input-not-second-admission}
+                :retry :existing-request-idempotency-with-exact-matching-admitted-input-including-original-principal-and-scope-not-second-admission}
   :read-recall {:input [:state :request-id :current-scope-revision]
                 :output [:status :motion :bonds :contacts :included-memory-ids
                          :inclusion-reasons :kernel-horizon :budget-result]
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
+                :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
                 :effects :none}
   :rebuild-revocation
   {:version "finite-revocation-rebuild/2"
