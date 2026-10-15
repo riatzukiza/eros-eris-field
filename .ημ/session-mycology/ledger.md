@@ -563,3 +563,13 @@
   spore: none
   receipt-refs: cephalon-field-state-unique-recall-id-correction-20261015
   note: The earlier per-principal request uniqueness choice was ambiguous because existing fold keys/order and read input use request ID alone. Correct the proposal to unique IDs across all admitted requests in one kernel state regardless of principal/scope, preserving the original principal/scope binding for every lookup and exact retry. No compound-key/API implementation or new scope/estimate; historical receipt60/nativefinding preserved. Hold this concrete local correction while current c5MiMo completes, then group any further verified findings for one ordinary push. Source c5four earlier findings actually Fixed; new root4284004806 remains open until this correction is published/verified. GoalACTIVE humanPAUSEDheartbeat live0of3; no board/runtime/paid/credential/model/deployment/publication/spore change.
+
+- ts: 2026-10-15T15:23:52.579Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-field
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-complete-boundary-history-and-input-wire-20261015
+  note: Valid existing P1/P2 contract gaps corrected within unimplemented plan. Rebuild consumes every admitted state-relevant boundary event from independently established clean baseline through consumed cursor, replays original timing/seed schedules and suppresses revoked influence without rewriting events or live outcome effects. Unchanged128event/1MiBtail/64quanta/67108864work/2000ms outer bounds count whole replay and refuse missing/unknown/contaminated input. Canonical input uses exact trace1 tagged algebra/escaping/order/binary64, closed operation+allarguments and full version-envelope UTF8 count; external noncanonical wire refuses, no parsed-value bypass. No board readiness, field code, live behavior, paid/model/credential/runtime/deployment/publication/heartbeat or spore change. Current source still independently requires complete current-head reviews/checks/settlements.

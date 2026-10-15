@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-exact-order-result-rebuild-and-request-identity"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-complete-history-and-input-wire"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -309,6 +309,38 @@
   :alternate-edn-json-or-native-printer :cannot-determine-admission
   :fixtures [:map-insertion-order :multibyte-and-control-strings :positive-negative-zero
              :finite-binary64-vectors :complete-envelope-exact-one-over-bytes]}
+ :input-wire-codec
+ {:version "finite-field-input/1"
+  :owner :portable-field-shape-consuming-qualified-abi
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :envelope ["finite-field-input/1" :encoded-closed-invocation-map]
+  :invocation/required [:operation :arguments]
+  :invocation/additional-keys :refused
+  :operation :exact-keyword-from-owning-abi-functions
+  :arguments :ordered-vector-of-all-operation-arguments-in-exact-owning-abi-input-order
+  :values :exact-finite-field-trace-1-tagged-algebra-including-keywords-maps-vectors-and-finite-binary64-bits
+  :maps :pairs-sorted-by-complete-canonical-encoded-key-unsigned-utf8
+  :strings :exact-trace-1-scalar-validation-and-escaping-no-unicode-normalization-or-optional-ascii-escaping
+  :numbers :exact-trace-1-binary64-including-distinct-signed-zero-nonfinite-refused
+  :prior-state-checkpoint-configuration-and-tail :included-in-complete-arguments-not-unmetered-side-input
+  :byte-count :complete-version-envelope-tags-operation-argument-values-keys-separators-and-escapes
+  :counter-in-wire :forbidden-no-self-reference
+  :max-complete-wire-utf8-bytes 4194304
+  :preflight :bounded-stream-or-known-length-before-full-allocation-and-before-decode
+  :semantic-input-adapter :same-canonical-encoder-and-bound-before-transition-or-hashing
+  :alternate-edn-json-whitespace-bom-escaping-or-native-printer :not-an-authoritative-admission-length
+  :external-transport :accept-only-exact-canonical-wire-before-decode
+  :already-resident-domain-input :qualified-abi-values-only-same-canonical-encoder-bound-and-work-before-transition
+  :alternate-wire-to-parsed-value-bypass :forbidden
+  :unsupported-or-noncanonical-untrusted-wire :whole-unchanged-refusal
+  :over-budget :whole-unchanged-refusal-with-finite-input-byte-limit
+  :work :charge-all-encoding-validation-byte-and-order-work-under-existing-whole-call-or-rebuild-counter
+  :fixtures [:empty-and-complete-operation-envelope-goldens :map-insertion-order-equality
+             :multibyte-control-quote-and-backslash-goldens :signed-zero-bits
+             :all-arguments-including-prior-state-and-rebuild-tail-counted
+             :exact4194304-complete-bytes :one-byte-over
+             :alternate-edn-optional-escape-whitespace-and-bom-refused-as-wire
+             :bounded-decode-and-no-large-allocation-before-preflight]}
  :canonical-order-work
  {:version "finite-order-work/1"
   :owner :field-pure-law-and-domain-consuming-qualified-abi-key-shapes
@@ -419,6 +451,7 @@
                                                        :catch-up :drain-one-without-new-elapsed-time}
                                 :trace-records-per-call 131072 :trace-utf8-bytes-per-call 8388608
                                 :trace-codec "finite-field-trace/1"
+                                :input-wire-codec "finite-field-input/1"
                                 :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
                                 :work-units-per-call 67108864
                                 :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
@@ -539,7 +572,7 @@
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
-  :abi-operation-version "finite-revocation-rebuild/2"
+  :abi-operation-version "finite-revocation-rebuild/3"
   :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds]
   :active-inclusion-folds
   {:before :every-next-causal-use-including-restored-or-completed-inclusion
@@ -548,11 +581,28 @@
    :unreconstructable :invalidate-and-refuse-or-quarantine-before-use
    :forbidden :retag-or-reuse-an-old-fold-result-under-new-authority
    :control :revoke-memory-after-first-witness-then-checkpoint-restore-and-finish-horizon}
-  :source [:immutable-contribution-history :compatible-trusted-checkpoint]
+  :source [:immutable-complete-ordered-boundary-event-history :compatible-verified-clean-checkpoint]
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :budget {:version "finite-revocation-rebuild/2" :tail-events 128
+  :history {:coverage :every-admitted-boundary-event-after-checkpoint-through-current-consumed-cursor
+            :not-only :contribution-events
+            :retain [:all-mutating-abi-inputs :consumed-advance-events :catch-up-events
+                     :elapsed-quanta-residual-backlog-schedule :recall-emissions
+                     :outcome-and-confirmation-state-events :recorded-seed-schedule
+                     :original-clio-identities-order-payloads-and-parent-links]
+            :baseline :independently-established-before-earliest-revoked-causal-influence-or-qualified-clean-equivalent
+            :unknown-or-gapped-or-contaminated :typed-unchanged-refusal-and-outer-quarantine
+            :authority :recompute-derived-world-and-folds-with-only-currently-authorized-influence
+            :source-event-rewrite-or-live-effect-reexecution :forbidden
+            :count-all-events-and-quanta :under-unchanged-whole-rebuild-caps}
+  :history-controls [:revoked-deposit-then-advance-motion-before-current-cursor
+                     :interleaved-permitted-and-revoked-deposits-with-advance-and-catch-up
+                     :retained-recall-emission-and-inclusion-fold-after-boundary
+                     :omitted-or-reordered-advance-event :missing-cursor-range
+                     :contaminated-checkpoint-before-insufficient-tail
+                     :clean-permitted-world-motion-contact-fold-and-residual-equality]
+  :budget {:version "finite-revocation-rebuild/3" :tail-events 128
            :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 67108864
            :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000

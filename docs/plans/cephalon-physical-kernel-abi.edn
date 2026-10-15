@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-inclusion-and-rebuild"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-complete-history-and-input-wire"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -115,6 +115,8 @@
             :reason :operation-specific-refusal-reason
             :reason-revision 1}
   :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow]}
+ :input-wire-codec "finite-field-input/1"
+ :input-wire-contract "docs/plans/cephalon-finite-field-coupling.edn#input-wire-codec"
  :functions
  {:admit-state {:input [:prior-state-or-empty
                        :trusted-visible-projection :physical-configuration]
@@ -143,12 +145,26 @@
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
                 :effects :none}
   :rebuild-revocation
-  {:version "finite-revocation-rebuild/2"
+  {:version "finite-revocation-rebuild/3"
    :input [:prior-state :compatible-trusted-checkpoint
-           :immutable-ordered-contribution-event-tail :current-trusted-authority-projection
+           :immutable-complete-ordered-boundary-event-tail :current-trusted-authority-projection
            :physical-configuration]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
+   :history-coverage {:from :exclusive-verified-checkpoint-cursor
+                      :through :inclusive-current-consumed-boundary-event-cursor
+                      :required :every-admitted-boundary-event-not-only-contributions
+                      :kinds :all-abi-mutating-operation-inputs-and-consumed-elapsed-quantum-event-schedules
+                      :includes [:admit-state :advance :catch-up :emit-recall :apply-outcome :confirm-feedback]
+                      :read-or-no-op-events :retain-when-present-in-admitted-cursor-history-with-no-invented-effect
+                      :ordering :exact-qualified-clio-stream-order-with-original-identities-payloads-and-parent-links
+                      :missing-unknown-duplicate-or-conflicting-event :typed-unchanged-refusal}
+   :checkpoint-revocation-safety :independently-established-before-earliest-revoked-causal-influence-or-qualified-already-clean-equivalent
+   :already-clean-equivalent :independently-verified-qualified-complete-history-rebuild-result-under-exact-current-authority-and-producing-artifact-identity-not-copied-label
+   :contaminated-or-unestablished-baseline :typed-unchanged-refusal-not-removable-by-relabeling
+   :replay-schedule :original-consumed-elapsed-quanta-residual-backlog-boundary-order-and-recorded-seeds-no-new-time-or-draws
+   :replay-permitted-world :recompute-all-derived-motion-contacts-trails-and-inclusion-under-current-authority-with-revoked-influence-excluded
+   :history-filtering :retain-complete-immutable-events-while-refusing-denied-causal-influence-never-rewrite-source-events
    :checkpoint-validates :all-existing-restore-identity-state-cursor-and-configuration-obligations
    :output [:state-transition-result]
    :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
