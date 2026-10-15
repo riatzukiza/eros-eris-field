@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-complete-history-and-input-wire"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-admitted-pending-history-and-input-wire"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -572,8 +572,9 @@
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
-  :abi-operation-version "finite-revocation-rebuild/3"
-  :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds]
+  :abi-operation-version "finite-revocation-rebuild/4"
+  :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds
+            :complete-admitted-pending-boundary-queue]
   :active-inclusion-folds
   {:before :every-next-causal-use-including-restored-or-completed-inclusion
    :reauthorize :all-retained-first-witnesses-under-current-principal-scope-and-graph-authority
@@ -585,7 +586,14 @@
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :history {:coverage :every-admitted-boundary-event-after-checkpoint-through-current-consumed-cursor
+  :history {:coverage  :every-admitted-boundary-event-after-checkpoint-through-current-admitted-cursor-including-pending
+            :consumed-cursor :independently-bound-separate-from-admitted-cursor
+            :consumed-prefix :recompute-only-already-consumed-schedule
+            :pending-tail :reconstruct-original-ordered-admitted-future-queue-with-current-authority-before-exposure
+            :permitted-pending :retain-original-ids-inputs-order-and-boundary-schedules-no-early-application
+            :denied-pending :explicit-current-authority-bound-cancelled-no-op-disposition-with-original-event-retained
+            :future-catch-up :cannot-reactivate-denied-pending-influence-and-must-revalidate-current-authority
+            :checkpoint :hash-both-cursors-and-complete-pending-queue-dispositions
             :not-only :contribution-events
             :retain [:all-mutating-abi-inputs :consumed-advance-events :catch-up-events
                      :elapsed-quanta-residual-backlog-schedule :recall-emissions
@@ -601,8 +609,13 @@
                      :retained-recall-emission-and-inclusion-fold-after-boundary
                      :omitted-or-reordered-advance-event :missing-cursor-range
                      :contaminated-checkpoint-before-insufficient-tail
-                     :clean-permitted-world-motion-contact-fold-and-residual-equality]
-  :budget {:version "finite-revocation-rebuild/3" :tail-events 128
+                     :clean-permitted-world-motion-contact-fold-and-residual-equality
+                     :admitted-future-revoked-event-beyond-consumed-cursor
+                     :mixed-permitted-and-revoked-pending-events-after-capped-advance
+                     :rebuild-checkpoint-restore-catch-up-no-revoked-causal-effect
+                     :permitted-pending-executes-once-at-original-boundary-not-during-rebuild
+                     :both-cursor-gap-or-tamper-refusal :pending-tail-counts-toward-all-exact-and-one-over-caps]
+  :budget {:version "finite-revocation-rebuild/4" :tail-events 128
            :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 67108864
            :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000

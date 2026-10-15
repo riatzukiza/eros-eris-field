@@ -573,3 +573,13 @@
   spore: none
   receipt-refs: cephalon-field-complete-boundary-history-and-input-wire-20261015
   note: Valid existing P1/P2 contract gaps corrected within unimplemented plan. Rebuild consumes every admitted state-relevant boundary event from independently established clean baseline through consumed cursor, replays original timing/seed schedules and suppresses revoked influence without rewriting events or live outcome effects. Unchanged128event/1MiBtail/64quanta/67108864work/2000ms outer bounds count whole replay and refuse missing/unknown/contaminated input. Canonical input uses exact trace1 tagged algebra/escaping/order/binary64, closed operation+allarguments and full version-envelope UTF8 count; external noncanonical wire refuses, no parsed-value bypass. No board readiness, field code, live behavior, paid/model/credential/runtime/deployment/publication/heartbeat or spore change. Current source still independently requires complete current-head reviews/checks/settlements.
+
+- ts: 2026-10-15T15:43:16.436Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-field
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-admitted-pending-event-revocation-custody-20261015
+  note: Valid P1 existing privacy/rebuild obligation corrected: complete history through admitted cursor includes pending events beyond consumed cursor. Recompute consumed prefix only, reconstruct and reauthorize all queued inputs before replacement, retain allowed original schedule and immutable cancelled/no-op disposition for denied influence, revalidate authority at later causal use. Hash both cursors/full queue in checkpoint; count pending toward unchanged event/byte/work caps. Unknown/conflicting/gapped history refuses unchanged/quarantines. Initial Python syntax error occurred before any mutation and is not production evidence. Hold concrete fix locally until original e156 native review attempt finishes; no cancellation, premature settlement, board/runtime/model/credential/paid/deployment/publication/heartbeat or spore change.

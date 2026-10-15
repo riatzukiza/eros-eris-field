@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-complete-history-and-input-wire"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-admitted-pending-history-and-input-wire"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -53,10 +53,16 @@
                   :compiled-artifact-sha256 :build-qualification-id
                   :launch-profile-id :launch-profile-sha256
                   :numeric-profile-id :scope-revision :projection-revision :kernel-time-us
-                  :residual-us :backlog-us :pending-events :event-cursor
+                  :residual-us :backlog-us :pending-events :event-cursor :admitted-event-cursor
                   :ordered-entities :intent-bonds :sparse-cells
                   :contribution-provenance :recall-requests :inclusion-folds :rng
                   :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
+ :event-cursors {:event-cursor :last-consumed-boundary-event
+                 :admitted-event-cursor :last-admitted-event-including-queued-future-boundaries
+                 :source :independently-verified-qualified-clio-cursor-order-and-payloads
+                 :pending-events :exact-ordered-admitted-not-yet-consumed-queue-with-current-authority-dispositions
+                 :snapshot :both-cursors-and-complete-pending-queue-identities-schedules-dispositions-hashed
+                 :missing-gap-duplicate-conflict-or-copied-label :unchanged-refusal}
  :inclusion-fold-state
  {:version "finite-contact-inclusion/1"
   :container :ordered-vector-by-exact-request-id-empty-when-no-active-horizon
@@ -145,14 +151,19 @@
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
                 :effects :none}
   :rebuild-revocation
-  {:version "finite-revocation-rebuild/3"
+  {:version "finite-revocation-rebuild/4"
    :input [:prior-state :compatible-trusted-checkpoint
            :immutable-complete-ordered-boundary-event-tail :current-trusted-authority-projection
            :physical-configuration]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
    :history-coverage {:from :exclusive-verified-checkpoint-cursor
-                      :through :inclusive-current-consumed-boundary-event-cursor
+                       :through :inclusive-current-admitted-event-cursor-including-all-pending-events
+                      :consumed-boundary :separately-verified-current-consumed-cursor
+                      :consumed-prefix :replay-to-consumed-cursor-only-with-original-quanta-and-effects
+                      :pending-tail :reconstruct-and-reauthorize-every-admitted-not-yet-consumed-event-before-result
+                      :permitted-pending :retain-original-identity-input-order-and-schedule-with-no-early-execution
+                      :denied-pending :retain-immutable-history-and-explicit-bound-cancelled-no-op-disposition-never-later-causal-use
                       :required :every-admitted-boundary-event-not-only-contributions
                       :kinds :all-abi-mutating-operation-inputs-and-consumed-elapsed-quantum-event-schedules
                       :includes [:admit-state :advance :catch-up :emit-recall :apply-outcome :confirm-feedback]
@@ -169,8 +180,9 @@
    :output [:state-transition-result]
    :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
                       :new-scope-and-authority-binding :new-projection-revision :new-field-revision
-                      :complete-inclusion-folds :rebuild-budget-accounting]
-   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds]
+                      :complete-inclusion-folds :rebuild-budget-accounting
+                      :verified-consumed-and-admitted-cursors :reauthorized-complete-pending-queue]
+   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds :all-admitted-pending-boundary-events]
    :success :complete-authorized-equivalent-of-clean-permitted-history-with-atomic-result-exposure
    :budget-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation"
    :budget {:tail-events 128 :canonical-clio-tail-utf8-bytes 1048576
