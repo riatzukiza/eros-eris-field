@@ -253,9 +253,12 @@ Deflection uses a finite normalized contact normal `n` pointing outward from
 the recipient's contact surface toward the incident particle. Relative velocity
 is `v = particleWorldVelocity - recipientWorldVelocity`, with restitution
 `e∈[0,1]`. Reflection applies exactly when `(v·n) < 0`:
-`v' = v-(1+e)*(v·n)*n`. For `(v·n) >= 0`, separating or tangent contact keeps
-the relative velocity unchanged. The adapter-independent domain adds the
-recipient's world velocity back after resolution. Degenerate normal refuses
+`v' = v-(1+e)*(v·n)*n`. Only that negative-dot reflection branch adds the
+recipient's world velocity back after resolution. For `(v·n) >= 0`, separating
+or tangent contact returns the original particle world components bit for bit;
+it does not reconstruct them from the rounded relative subtraction. With
+particle world x=1 and recipient world x=-2^53, the latter round trip would
+incorrectly return0. Preserve original signed-zero bits as well. Degenerate normal refuses
 the operation. For a stationary recipient, `n=[1,0]` and `e=1`, approaching
 `v=[-1,0]` must become `[1,0]`; separating `v=[1,0]` must stay `[1,0]`.
 These are required future RED cases, not executed solver tests. Admitted

@@ -583,3 +583,13 @@
   spore: none
   receipt-refs: cephalon-field-admitted-pending-event-revocation-custody-20261015
   note: Valid P1 existing privacy/rebuild obligation corrected: complete history through admitted cursor includes pending events beyond consumed cursor. Recompute consumed prefix only, reconstruct and reauthorize all queued inputs before replacement, retain allowed original schedule and immutable cancelled/no-op disposition for denied influence, revalidate authority at later causal use. Hash both cursors/full queue in checkpoint; count pending toward unchanged event/byte/work caps. Unknown/conflicting/gapped history refuses unchanged/quarantines. Initial Python syntax error occurred before any mutation and is not production evidence. Hold concrete fix locally until original e156 native review attempt finishes; no cancellation, premature settlement, board/runtime/model/credential/paid/deployment/publication/heartbeat or spore change.
+
+- ts: 2026-10-15T16:36:27.011Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-field
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-current-read-authority-continuation-and-noimpulse-correction-20261015
+  note: Four valid existing planning defects corrected together: nonnegative-dot retains original world components instead of rounded relative reconstruction; obsolete current /2 contribution-only prose is replaced by /4 complete boundary/pending contract; read-recall consumes current trusted qualified Axxium decision/grant/policy binding for original principal/scope/all retained influence and exposes no payload on stale authority; successful candidate/state/checkpoint encoded caps1MiB, event-tail encoded1MiB and all remaining args+framing512KiB keep largest continuation3.5MiB below unchanged4MiB. Raw Clio1MiB and8MiB result/trace caps remain separate upperbounds; growing fold refuses before success rather than truncating/evicting or persisting dead-end state. New caps remain proposed/calibration-dependent; existing finite work/time budgets stay unchanged. No new board story/status/estimate/admission, field implementation, model/credential/paid/runtime/maker/clock/cloud/PM2/deployment/publication/heartbeat or spore change. Original source/history/events retained; goalACTIVE/live0of3. Prior whole6e review is terminal before next grouped push; no stale approval transfer.

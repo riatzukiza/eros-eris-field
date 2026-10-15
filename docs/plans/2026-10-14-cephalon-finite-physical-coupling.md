@@ -233,11 +233,15 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    `d_x=v_relative_x*n_x`, then `d_y=v_relative_y*n_y`, then `d=d_x+d_y` in that
    order. When `d < 0`, compute `a=1+e`, then `b=a*d`, then `c_x=b*n_x` and
    `r_x=v_relative_x-c_x`, then `c_y=b*n_y` and `r_y=v_relative_y-c_y`.
-   Otherwise retain the relative components without evaluating that reflection
-   branch. Restore world x then y by adding the recipient working velocity to
-   the resolved relative component, including the non-impulse branch; no
-   bit-identical original-world-velocity shortcut replaces this declared
-   round trip. Every product, sum, subtraction and division receives an immediate
+   Only in this negative-dot branch, restore world x then y by adding the
+   recipient working velocity to the resolved relative component. Otherwise
+   return the original particle world x/y components bit for bit, including
+   signed zero, without reflection or world-restoration arithmetic. The relative
+   subtraction/dot remains branch-selection and trace evidence, not a lossless
+   world encoding: world x=1 relative to recipient x=-2^53 rounds to2^53 and
+   reconstructs as0. Later contacts, caps, deposits and movement must receive
+   the preserved original world vector on a non-impulse contact. Every executed
+   product, sum, subtraction and division receives an immediate
    finite check; nonfinite arithmetic refuses the entire unchanged transition.
    Fused multiply-add, reassociation and alternate dot/norm primitives are
    forbidden. Record raw/normalized normal, dot terms/sign branch, resolved
@@ -948,25 +952,39 @@ empty inclusion, Unicode/control escaping, map insertion order, duplicate
 memory witnesses and split/restored equality. Host EDN/JSON printer choices
 cannot determine the count.
 
-The ABI now exposes `rebuild-revocation`, version finite-revocation-rebuild/2.
-Its exact inputs are prior state, compatible trusted checkpoint, complete
-ordered immutable contribution-event tail, current trusted authority projection,
-and physical configuration. Consume qualified Axxium decisions/versions and
-Clio envelopes/history; the kernel does no authorization lookup or history I/O.
-Validate the existing restore artifact/configuration/cursor obligations and
-reconstruct all retained fields, trails, affected world projection and active/
-restored inclusion folds. Success returns the complete rebuilt state,
-replacement checkpoint/cursor, new scope/authority/projection/field bindings,
-complete folds and budget accounting as one operation result. A budget, binding,
-authority or missing/ambiguous-history refusal returns the exact unchanged prior
-state with its declared reason. Tail128events/1,048,576canonicalClio bytes,
-64quanta/67,108,864work units and the existing state/input/trace/result limits
-apply across the whole private rebuild. No partial replacement, retagging,
-new elapsed time, new random draws, outcome or publication replay is allowed.
-The outer adapter owns the2,000ms observation and quarantine/refusal before
-causal use; a timeout supplies no accepted replacement or pure clock read.
-`admit-state` remains its existing operation and is not an implicit history
-replay interface.
+The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/4.
+Its exact inputs are prior state, compatible independently established clean
+trusted checkpoint, complete ordered immutable boundary-event tail, current
+trusted authority projection and physical configuration. Cover every admitted
+event through the separately verified admitted cursor, including the complete
+pending queue beyond the consumed cursor. Replay only the consumed prefix with
+its original quanta, elapsed/residual/backlog, seed and operation schedule;
+reconstruct and reauthorize every pending event before atomic replacement.
+Allowed pending events retain original identity/order/inputs/schedule without
+early execution. Denied influence retains immutable source history and an
+explicit current-authority-bound cancelled/no-op disposition, never later
+reactivated by catch-up. Contribution-only history is insufficient. This
+replaces the obsolete proposed/2 contract in this section; prior Git and native
+receipt/comment evidence remains unchanged.
+
+Consume qualified Axxium decisions/versions and Clio complete cursor/history
+bindings; the pure kernel does no authorization or history I/O. Validate all
+restore artifact/configuration/cursor obligations, both consumed/admitted
+cursors and every pending identity/schedule/disposition. Reconstruct retained
+fields, trails, affected world motion/contact projection and active/restored
+inclusion folds. Success returns the complete rebuilt state, qualified
+replacement checkpoint, both verified cursors, reauthorized complete pending
+queue, new scope/authority/projection/field bindings, complete folds and budget
+accounting atomically. Missing/unknown/ambiguous/gapped/conflicting history,
+contaminated or unestablished baseline, failed authority/binding or excess
+returns exact unchanged prior state with the declared reason. The unchanged
+128events/1,048,576canonicalClio bytes/64consumed quanta/67,108,864work units,
+complete input/trace/result bounds and the continuation caps below cover the
+entire private rebuild, including pending events. No partial replacement,
+retagging, new elapsed/draws or live outcome/publication replay. The outer
+adapter owns the2,000ms observation and quarantine/refusal before causal use;
+timeout supplies no accepted replacement. `admit-state` is not an implicit
+history replay interface.
 
 Recall-request IDs now explicitly use the same nonempty well-formed scalar
 string, exact unsigned UTF8 spelling,128-byte bound and namespace uniqueness
@@ -1011,3 +1029,69 @@ Canonical finite-field-input/1 now fixes the previously unspecified4194304-byte 
 Actual native Codex root4284986081 on e156 identifies a valid gap in the prior proposed consumed-cursor boundary. A capped advance can admit an event that remains pending beyond that cursor. Proposed rebuild/4 now binds both actual consumed and admitted cursors, covers every admitted event through the latter, replays only the consumed prefix and reconstructs/reauthorizes the complete pending queue before exposing any replacement. Allowed pending events retain original IDs/order/inputs/scheduled boundaries and cannot execute early; denied pending influence retains its immutable source event with an explicit current-authority-bound cancelled/no-op disposition and cannot later activate during catch-up. Current authority still revalidates before later causal use. Both cursors and all queue identities/schedules/dispositions enter checkpoint custody/hash; unknown, missing, duplicated, conflicting or unestablished queue history refuses unchanged and quarantines externally.
 
 Pending events count toward the same existing128-event/1MiB canonical-Clio-tail and complete-input/work bounds; only original consumed quanta replay under the unchanged64-quantum cap. No new elapsed time, draw, clock, live outcome or publication replay is introduced. Future capped-advance/pending-revocation, mixed pending permissions, checkpoint/restore/catch-up, exact/one-over queue bounds and cursor-tamper controls are declared, not executed. Existing active/restored fold, complete trace/input codecs and independent source qualification remain. Previous proposed/3 text and native receipts stay history; no implemented snapshot migration or runtime mutation occurs.
+
+### Current recall authority and continuable state
+
+Actual Codex roots4285229409/4285229423/4285229437/4285229453 on6e identify
+four existing unimplemented contract gaps. Nonnegative-dot contacts now retain
+the original particle world components exactly; negative-dot reflection alone
+restores the recipient velocity. The older rebuild/2 contribution-only section
+above is replaced with current/4 and complete consumed/admitted/pending custody.
+These corrections change prospective contracts, not an implemented kernel.
+
+`read-recall` additionally receives a current trusted authority projection from
+the qualified Axxium boundary. Validate its original stored principal, actual
+read action/resources, permitted scope and current policy/grant versions before
+exposing any recalled ID, reason, motion, bond or contact. Compare the request,
+fold and every retained causal influence with that exact current authority.
+An unchanged scope revision does not make a revoked grant or changed policy
+current. Missing, denied, forged, stale or unestablished authority returns no
+partial recall payload. A changed binding requires a complete qualified rebuild
+under that exact current authority before a read may succeed. An independently
+verified already-rebuilt state must match that actual binding, not a copied
+version label. The outer adapter obtains current qualified admission/fencing
+through result exposure and refuses if it cannot establish freshness. The pure
+kernel consumes the owner's decision shape; it performs no lookup, mints no
+local authority and implements no alternate policy evaluator.
+
+Every successful state must remain encodable for its required continuation
+operations under the unchanged4,194,304-byte complete-input bound. The proposed
+`continuation-closure` data makes this finite and testable: the complete
+canonical argument encoding of state is capped at1,048,576bytes, the actual
+qualified checkpoint argument encoding at1,048,576bytes, and an event-tail
+argument encoding at1,048,576bytes. All other argument encodings plus the
+complete operation/version envelope, keys, separators and framing together
+are capped at524,288bytes. Measure each component exactly as it occurs in
+finite-field-input/1, including escaped checkpoint strings; underlying snapshot
+bytes or raw Clio bytes alone are insufficient. Raw canonical Clio history
+retains its separate1MiB cap, and the encoded-tail cap must also pass.
+
+The largest declared continuation carrier is rebuild with prior state,
+checkpoint and tail:3*1,048,576+524,288=3,670,016bytes, below4,194,304. Restore
+has at most prior-state and checkpoint carriers; read/catch-up/checkpoint have
+one. Their remaining arguments include actual current authority, configuration,
+projection, cursors, request IDs and full framing under the aggregate bound.
+Apply these component/aggregate limits to every actual input before use.
+Before any state-producing success, privately encode the complete candidate
+and its actual qualified checkpoint argument, verify each required zero-advance,
+catch-up/read/checkpoint/restore/rebuild shape and reject any unestablished or
+excess bound before atomic exposure. No witness, dedup ID, pending event or
+prior state may be truncated or silently evicted to make the encoding fit.
+
+The separate8MiB inclusion-result/trace ceilings are upper bounds, not permission
+to retain an oversized state. A growing fold that would exceed the state or
+checkpoint continuation cap refuses unchanged before reporting success, even
+when its result remains below8MiB. All actual encoding, checkpoint, validation
+and closure work is bounded before full allocation and charged under the
+existing whole-call/rebuild work counter. No larger input/time/work budget or
+new runtime is proposed. These are provisional finite-profile limits requiring
+the already selected calibration and source qualification before use.
+
+Future causal fixtures cover the large-opposite-velocity separating case,
+tangent/signed-zero preservation and later ordered contacts; completed-fold
+grant/policy revocation with unchanged scope, missing authority, change before
+exposure and qualified rebuilt read; exact/one-over state/checkpoint/tail and
+remaining-framing bounds; escaped snapshots; largest accepted state through
+every continuation; and a below8MiB inclusion result whose state exceeds1MiB.
+The numeric counterexample and EDN syntax/coherence checks are preparation,
+not executed field laws, implementation RED/GREEN, board Ready or live B proof.

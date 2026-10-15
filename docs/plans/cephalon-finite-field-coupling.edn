@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-admitted-pending-history-and-input-wire"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-current-read-authority-and-continuable-state"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -192,10 +192,15 @@
   :reflection-order [:one-plus-restitution :result-times-dot
                      :scale-times-normal-x :relative-x-minus-scaled-x
                      :scale-times-normal-y :relative-y-minus-scaled-y]
-  :nonnegative-dot :retain-relative-without-reflection-arithmetic
+  :nonnegative-dot :retain-original-particle-world-x-y-bit-exact-without-reflection-or-world-restore
   :world-restore-order [:resolved-relative-x-plus-recipient-x
                         :resolved-relative-y-plus-recipient-y]
-  :world-restore-applies :both-reflection-and-non-impulse-branches
+  :world-restore-applies :strictly-negative-dot-reflection-branch-only
+  :non-impulse-relative-subtract-add-round-trip :forbidden
+  :non-impulse-fixtures [:separating-1-versus-minus2pow53-world-x-preserved
+                         :tangent-with-large-recipient-world-component
+                         :signed-zero-original-components-preserved
+                         :later-ordered-contact-observes-original-world-velocity]
   :finite-check :after-every-intermediate
   :unsafe-arithmetic :whole-transition-unchanged-refusal
   :fused-reassociated-or-alternate-primitives :forbidden
@@ -326,6 +331,7 @@
   :byte-count :complete-version-envelope-tags-operation-argument-values-keys-separators-and-escapes
   :counter-in-wire :forbidden-no-self-reference
   :max-complete-wire-utf8-bytes 4194304
+  :component-and-continuation-bounds :apply-declared-continuation-closure-bounds-to-every-input-before-use-and-every-candidate-before-success
   :preflight :bounded-stream-or-known-length-before-full-allocation-and-before-decode
   :semantic-input-adapter :same-canonical-encoder-and-bound-before-transition-or-hashing
   :alternate-edn-json-whitespace-bom-escaping-or-native-printer :not-an-authoritative-admission-length
@@ -341,6 +347,36 @@
              :exact4194304-complete-bytes :one-byte-over
              :alternate-edn-optional-escape-whitespace-and-bom-refused-as-wire
              :bounded-decode-and-no-large-allocation-before-preflight]}
+ :continuation-closure
+ {:owner :same-portable-field-shape-law-and-domain-before-any-successful-state-exposure
+  :applies-to :every-operation-producing-or-restoring-a-state-or-checkpoint
+  :state-argument-encoded-byte-cap 1048576
+  :checkpoint-argument-encoded-byte-cap 1048576
+  :event-tail-argument-encoded-byte-cap 1048576
+  :other-arguments-and-complete-framing-aggregate-byte-cap 524288
+  :component-byte-measure :exact-complete-encoded-argument-as-it-occurs-in-finite-field-input-1-including-snapshot-string-escaping
+  :remaining-byte-measure :all-other-argument-encodings-plus-entire-input-envelope-and-separators-without-double-counting-components
+  :existing-canonical-clio-tail-byte-cap :separate-unchanged1048576-raw-clio-and-encoded-argument-caps-both-required
+  :maximum-carriers :rebuild-prior-state-plus-checkpoint-plus-complete-event-tail
+  :maximum-composed-input-bytes 3670016
+  :whole-input-byte-cap :unchanged4194304
+  :before-success [:bounded-encode-complete-candidate-state
+                   :bounded-encode-its-actual-qualified-checkpoint-argument
+                   :check-all-full-continuation-envelope-shapes-against-declared-component-and-remaining-bounds]
+  :required-continuations [:zero-advance :catch-up :read-recall :checkpoint :restore :rebuild-revocation]
+  :current-read-authority-projection :included-in-the-remaining-arguments-and-framing-bound-never-unmetered
+  :candidate-and-next-input-custody :same-canonical-value-and-checkpoint-with-no-dropped-fold-witness-dedup-id-or-pending-event
+  :result-trace-limits :separate-upper-bounds-never-permission-to-exceed-state-continuation-caps
+  :counter-work :all-actual-encode-validate-checkpoint-and-closure-work-charged-under-existing-whole-call-or-rebuild-limit
+  :allocation :bounded-before-full-encoding-allocation
+  :overflow-or-unestablished-closure :whole-unchanged-refusal-with-finite-state-continuation-byte-limit
+  :partial-inclusion-state-truncation-or-eviction-to-fit :forbidden
+  :fixtures [:exact-state-argument-cap-and-one-over :exact-checkpoint-encoded-cap-and-one-over
+             :escaped-snapshot-string-bytes-not-underlying-raw-bytes
+             :complete-remaining-framing-and-tail-encoded-cap-and-one-over
+             :largest-accepted-state-through-read-catchup-checkpoint-restore-and-rebuild
+             :inclusion-result-below8mib-but-state-one-over-refuses-before-success
+             :split-restored-horizon-overflow-preserves-prior-state-and-all-original-witnesses]}
  :canonical-order-work
  {:version "finite-order-work/1"
   :owner :field-pure-law-and-domain-consuming-qualified-abi-key-shapes
@@ -429,12 +465,17 @@
   :reason [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
            :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
   :missing-denied-or-conflicting-binding :whole-transition-unchanged-refusal
+  :read-revalidation :current-qualified-axxium-policy-grant-decision-for-original-principal-scope-and-all-retained-influences-before-exposure
+  :unchanged-scope-with-revoked-grant :stale-or-denied-with-no-recall-payload-until-qualified-current-authority-rebuild
   :budget :owning-finite-state-work-trace-byte-and-record-caps-before-exposure
   :partial-ranking-or-truncation :forbidden
   :later-prompt-budget :explicit-consumer-subselection-with-full-fold-custody-not-altered-physical-result
   :fixtures [:two-memory-contacts :repeat-one-memory-across-substeps
              :several-nexuses-same-memory :reversed-input :split-catchup-restored-replay
              :presence-only :other-request-daimoi :denied-or-missing-memory-binding
+             :completed-fold-revoked-before-read-with-unchanged-scope-revision
+             :policy-version-change-with-same-scope :missing-or-forged-current-authority
+             :qualified-rebuild-under-current-authority-then-read :authority-change-before-exposure
              :horizon-exact-one-over :work-and-trace-exact-one-over]}
  :calibration {:production-defaults :none :complete-input :required
                :layer-semantic-bindings :versioned-input-not-keyword-counters
@@ -453,6 +494,10 @@
                                 :trace-codec "finite-field-trace/1"
                                 :input-wire-codec "finite-field-input/1"
                                 :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
+                                :state-argument-encoded-bytes 1048576 :checkpoint-argument-encoded-bytes 1048576
+                                :event-tail-argument-encoded-bytes 1048576
+                                :other-arguments-and-framing-aggregate-encoded-bytes 524288
+                                :successful-state-continuation :required-before-atomic-exposure
                                 :work-units-per-call 67108864
                                 :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
                                             :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
@@ -462,7 +507,8 @@
                                 :bounded-input-read :before-full-allocation-or-decode
                                 :bounded-trace :before-append-or-whole-result-exposure
                                 :identity-shortening-or-normalization :forbidden
-                                :byte-overflow {:input :finite-input-byte-limit :trace :finite-trace-budget-exceeded}
+                                :byte-overflow {:input :finite-input-byte-limit :trace :finite-trace-budget-exceeded
+                                                :state-continuation :finite-state-continuation-byte-limit}
                                 :work-overflow :finite-work-budget-exceeded
                                 :overflow-state :whole-unchanged-refusal
                                 :ordinary-workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]

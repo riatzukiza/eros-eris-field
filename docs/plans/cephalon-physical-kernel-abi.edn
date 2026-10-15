@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-admitted-pending-history-and-input-wire"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-current-read-authority-and-continuable-state"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -102,8 +102,9 @@
              :normal :outward-from-recipient-surface-toward-incident-particle
              :relative-velocity :particle-world-minus-recipient-world
              :deflect-when :dot-relative-velocity-normal-strictly-negative
-             :separating-or-tangent :unchanged-relative-velocity
-             :world-velocity :resolved-relative-plus-recipient-world
+             :separating-or-tangent :retain-original-particle-world-components-exactly
+             :world-velocity :resolved-relative-plus-recipient-world-only-on-negative-dot-reflection
+             :non-impulse-subtract-add-reconstruction :forbidden
              :partial-absorption :exchange-bounded-surviving-particle
              :exchange :min-sender-available-recipient-capacity-configured-cap
              :pass-order :canonical-contact-and-intent-kind
@@ -120,9 +121,11 @@
   :refusal {:state :unchanged-prior-state
             :reason :operation-specific-refusal-reason
             :reason-revision 1}
-  :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow]}
+  :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
+                    :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
  :input-wire-contract "docs/plans/cephalon-finite-field-coupling.edn#input-wire-codec"
+ :state-continuation-contract "docs/plans/cephalon-finite-field-coupling.edn#continuation-closure"
  :functions
  {:admit-state {:input [:prior-state-or-empty
                        :trusted-visible-projection :physical-configuration]
@@ -144,11 +147,21 @@
                 :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
                 :invalid-duplicate-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
                 :retry :existing-request-idempotency-with-exact-matching-admitted-input-including-original-principal-and-scope-not-second-admission}
-  :read-recall {:input [:state :request-id :current-scope-revision]
+  :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection]
                 :output [:status :motion :bonds :contacts :included-memory-ids
                          :inclusion-reasons :kernel-horizon :budget-result]
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
+                :authority-owner :qualified-axxium-current-decision-and-policy-grant-version
+                :authority-shape :consume-qualified-axxium-binding-no-local-decision-or-version-authority
+                :required-current-binding [:stored-principal :actual-read-action-and-resources
+                                           :permitted-scope :current-policy-and-grant-versions]
+                :before-exposure :verify-request-fold-and-all-retained-causal-influences-under-exact-current-authority
+                :same-scope-with-changed-authority :stale-no-memory-ids-reasons-motion-bonds-or-contacts
+                :changed-binding :requires-complete-qualified-rebuild-result-under-that-exact-current-authority-before-read
+                :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
+                :refusal-reasons [:current-authority-unestablished :stale-recall-authority :denied-recall-authority]
+                :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
   {:version "finite-revocation-rebuild/4"
