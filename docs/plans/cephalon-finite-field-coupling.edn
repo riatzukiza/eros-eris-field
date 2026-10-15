@@ -303,6 +303,7 @@
                                 :ordinary-workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]
                                 :ordinary-quanta-per-workload-arm 64 :warmup-calls 5 :seed 42
                                 :arms [:zero-varied-field-baseline :selected-contribution]
+                                :arm-kind :lower-level-workload-fixture-not-served-comparison
                                 :call-wall-ms 1000 :peak-rss-mib 512 :whole-job-wall-ms 120000
                                 :freeze-before-execution [:reviewed-layout-and-fixture-bytes :calibration :source-build-runtime-host]
                                 :sensitivity {:different-eligible-contacts-min 1 :different-included-memories-beyond-seed-min 1}
@@ -427,11 +428,24 @@
   :pure-quarantine-state-mutation :forbidden
   :forbidden [:display-only-filter :old-aggregate-retag :zero-all-fields :rewrite-old-history]}
  :served-selected-intervention
- {:source :same-selected-outside-encounter-and-effect-as-b1-readback
-  :equal-lineage [:encounter-id :content-revision-and-hash :effect-id
-                  :deposit-or-bond-source :prior-and-derived-graph-field-bindings]
-  :varied :one-declared-admitted-physical-deposit-or-bond-value
-  :all-other-inputs :fixed :history-rewrite :forbidden
+ {:source :same-selected-outside-encounter-and-root-effect-as-b1-readback
+  :manifest-version "selected-encounter-comparison/1"
+  :equal-lineage [:encounter-id :content-revision-and-hash :root-effect-reference
+                  :deposit-or-bond-domain-source :qualified-pre-selected-effect-graph-field-checkpoint]
+  :comparison-identities :distinct-canonical-clio-admitted-event-and-effect-per-arm
+  :admission :qualified-clio-interface-or-refuse-proof
+  :parent-links :same-selected-root-and-exact-manifest-arm-value
+  :isolation :distinct-authorized-diagnostic-stores-and-streams
+  :apply :one-comparison-effect-from-shared-pre-effect-baseline-not-both-production-and-comparison
+  :varied :one-declared-admitted-nonzero-physical-deposit-or-bond-value
+  :control-value :same-as-observed-natural-value
+  :permitted-differences [:declared-value :necessary-comparison-manifest-and-identity-provenance]
+  :comparison-provenance :independently-prove-no-extra-physical-or-recall-input
+  :all-other-causal-inputs :fixed
+  :derived-history-graph-field-bindings :independently-traced-and-read-back-per-arm-not-equal
+  :replay :reuse-existing-admitted-comparison-identities
+  :production-reinforcement-or-publication :forbidden
+  :history-rewrite :forbidden
   :unrelated-valid-encounter-deposit :refuse-proof
   :scope :distinct-from-two-lawful-different-encounter-storage-arms}
  :evidence-audience
@@ -441,6 +455,20 @@
   :maker-access :not-reviewer-or-public-permission
   :unsafe-or-unavailable-protected-proof :refuse-outcome-and-reinforcement
   :publication-replay :forbidden}
+ :reinforcement-contribution
+ {:owner :openplanner-feedback-interface
+  :task "deliver-outcome-attributed-once-only-graph-feedback"
+  :field-kernel-implementation :none
+  :version "recalled-item-contribution/1"
+  :required-with :independent-artifact-and-destination-outcome-readbacks
+  :binding [:recalled-item-content-and-graph-revision :actual-turn-action-and-effect
+            :actual-persisted-artifact-bytes-and-hash :actual-destination-outcome]
+  :witness [:independent-qualified-consumed-input-or-choice-to-artifact-provenance
+            :matched-bounded-causal-intervention]
+  :intervention {:max-isolated-transformation-executions 2 :wall-ms 10000
+                 :publication :disabled :other-inputs :frozen}
+  :unqualified-or-uncertain :no-reinforcement
+  :mere-prompt-inclusion-unused-metadata-or-item-label :not-a-contribution-witness}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt
             :model-visible-revisions [:matching-graph-projection :matching-physical-field]
