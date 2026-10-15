@@ -284,6 +284,27 @@
            :equality :prune :epsilon-zero :prune-only-exact-zero
            :retained-provenance :immutable-contribution-events-and-effect-receipts
            :observation :explicit-pruned-cell :unsafe-intermediate :unchanged-refusal}
+ :trace-codec
+ {:version "finite-field-trace/1"
+  :owner :portable-field-law-and-shape-consuming-qualified-abi-binary64-bits
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :envelope ["finite-field-trace/1" :ordered-encoded-record-vector]
+  :values {:nil ["nil"] :boolean ["bool" :literal-true-or-false]
+           :number ["f64" :exact-16-lowercase-hex-big-endian-ieee754-bits]
+           :string ["str" :exact-scalar-string]
+           :keyword ["kw" :namespace-or-empty-string :name]
+           :vector ["vec" :ordered-encoded-values]
+           :map ["map" :pairs-sorted-by-canonical-encoded-key-unsigned-utf8]}
+  :string-escaping {:quote :backslash-quote :backslash :double-backslash
+                    :controls :lowercase-u00xx-for-u0000-through-u001f
+                    :other-scalars :exact-utf8-no-normalization-no-optional-ascii-escaping}
+  :numbers {:positive-and-negative-zero :distinct-bits :nonfinite :unchanged-refusal}
+  :unsupported-values :whole-unchanged-refusal
+  :byte-count :complete-envelope-including-tags-separators-brackets-and-escapes
+  :counter :before-each-byte-or-record-exposure-in-the-whole-call-work-budget
+  :alternate-edn-json-or-native-printer :cannot-determine-admission
+  :fixtures [:map-insertion-order :multibyte-and-control-strings :positive-negative-zero
+             :finite-binary64-vectors :complete-envelope-exact-one-over-bytes]}
  :canonical-order-work
  {:version "finite-order-work/1"
   :owner :field-pure-law-and-domain-consuming-qualified-abi-key-shapes
@@ -311,7 +332,8 @@
             :field-history :start-checkpoint :end-checkpoint :fold-revision]
   :horizon :explicit-validated-request-emission-to-selected-checkpoint
   :maximum-quanta :qualified-abi-maximum-substeps-across-entire-horizon
-  :split-calls :retain-same-horizon-cursor-and-private-fold-state-without-budget-reset
+  :split-calls :restore-qualified-canonical-checkpoint-fold-state-without-horizon-budget-reset
+  :checkpoint-contract "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"
   :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
   :presence-contact :trace-only-no-memory-inclusion
   :other-daimoi-or-separated-pair :no-memory-inclusion
@@ -337,8 +359,13 @@
                                 :entities {:presence 8 :nexus 8 :daimoi 16 :total 32}
                                 :bonds 64 :scoped-layer-cells 256 :max-substeps-per-call 100
                                 :ordinary-workload-partition [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4]
-                                :maximum-call-workload {:quanta 100 :partition [100] :over-limit-quanta 101}
+                                :maximum-call-workload {:quanta 100 :partition [100]
+                                                       :valid-elapsed-over-cap-quanta 101
+                                                       :expected-executed-quanta 100 :expected-backlog-quanta 1
+                                                       :expected-completeness :incomplete
+                                                       :catch-up :drain-one-without-new-elapsed-time}
                                 :trace-records-per-call 131072 :trace-utf8-bytes-per-call 8388608
+                                :trace-codec "finite-field-trace/1"
                                 :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
                                 :work-units-per-call 67108864
                                 :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application

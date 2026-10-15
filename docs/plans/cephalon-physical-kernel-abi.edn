@@ -55,8 +55,26 @@
                   :numeric-profile-id :scope-revision :projection-revision :kernel-time-us
                   :residual-us :backlog-us :pending-events :event-cursor
                   :ordered-entities :intent-bonds :sparse-cells
-                  :contribution-provenance :recall-requests :rng
+                  :contribution-provenance :recall-requests :inclusion-folds :rng
                   :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
+ :inclusion-fold-state
+ {:version "finite-contact-inclusion/1"
+  :container :ordered-vector-by-exact-request-id-empty-when-no-active-horizon
+  :entry [:fold-revision :request-id :daimoi-id :stored-principal-binding
+          :scope-authority-and-graph-versions :field-history :start-checkpoint
+          :selected-end-checkpoint :processed-contact-cursor :executed-horizon-quanta
+          :accumulated-semantic-fold-work :first-witnesses-in-canonical-contact-order
+          :dedup-memory-ids :canonical-result-byte-count :trace-record-count]
+  :dedup-memory-ids :exactly-the-unique-memory-ids-of-ordered-first-witnesses
+  :snapshot :all-fields-included-in-canonical-state-and-snapshot-hash
+  :transition :charge-new-contact-fold-work-before-use-and-never-reset-horizon-counters
+  :whole-call-work :also-charge-all-actual-decode-validate-encode-hash-and-restore-work
+  :restore :validate-all-fields-and-budgets-against-qualified-checkpoint-history-and-current-authority
+  :missing-stale-conflicting-or-reset-counter :whole-unchanged-refusal
+  :unqualified-scratch-cache :not-a-restorable-fold
+  :fixtures [:contact-then-checkpoint-restore-repeat-same-memory
+             :split-versus-unsplit-same-horizon-and-first-witnesses
+             :tampered-dedup-order-cursor-or-budget :missing-fold-revision]}
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
@@ -140,7 +158,7 @@
                :producing-identity [:compiled-artifact-sha256 :build-qualification-id
                                     :launch-profile-id :launch-profile-sha256]
                :identity-evidence :independently-verified-qualified-source-build-runtime
-               :canonical-snapshot-hash :includes-producing-identity}
+               :canonical-snapshot-hash :includes-producing-identity-and-complete-inclusion-fold-state}
   :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor
                     :trusted-visible-projection :physical-configuration]
             :output [:restored-state-and-cursor-or-unchanged-refusal]
@@ -148,6 +166,7 @@
                         :scope-revision :projection-revision :current-grants
                         :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact
                         :stored-producing-artifact-build-launch-equals-actual-qualified-loaded-identity
+                        :complete-inclusion-fold-state-cursor-dedup-order-and-budgets
                         :seed-state-and-draw-counter :causal-contributions]
             :scope-mismatch :refused-before-causal-use
             :missing-or-different-producing-identity :unchanged-refusal-before-causal-use
