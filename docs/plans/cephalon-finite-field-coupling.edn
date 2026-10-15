@@ -49,7 +49,7 @@
         :substitutions [:naive-unscaled-squares :math-hypot :approximation]
         :substitution-policy :forbidden
         :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds
-                     :cell-saturation :cell-pruning]}
+                     :cell-saturation :cell-pruning :contact-normal-and-overlap]}
  :radial-cap {:input-order [:validate-finite-components-and-nonnegative-finite-cap
                             :zero-cap-shortcut-before-norm :scaled-norm]
               :zero-norm-or-cap :exact-zero-vector

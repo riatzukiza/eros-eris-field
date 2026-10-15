@@ -413,3 +413,13 @@
   spore: none
   receipt-refs: cephalon-selected-effect-authority-and-protected-outcome-field-20261015
   note: Current plan repairs verified review findings under existing scope. Independently refresh actual stored principal/grants/policy/scope before transaction and assert matching versions through commit; bind exact new encounter embedding bytes/hash/shape/model/configuration across admission/candidate/commit/readback. Protected artifact/destination inspection is separate from maker access; only audience-authorized digest/redacted evidence may enter Git. Exact selected-encounter physical lineage remains mandatory. Root300/301 manifests corrected by append only, no repo key. GoalACTIVE heartbeat humanPAUSED live0/3. No deployment/model/credentials/paid route/publication replay; no spore.
+
+- ts: 2026-10-15T02:51:09.162Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-physical-plan
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-contact-norm-applicability-correction-20261015
+  note: Verified P2 scope omission repaired under existing finite norm contract, not new behavior/prerequisite. Preserve all source and ledger history, exact current-head review remains required. No paid/model/credentials/runtime/deployment/heartbeat/publication change; no spore.

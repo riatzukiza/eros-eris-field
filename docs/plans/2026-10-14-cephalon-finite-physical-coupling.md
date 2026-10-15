@@ -82,8 +82,9 @@ calibration. All coefficients, bounds, layer bindings and vectors are required
 revision-bound inputs. Missing/nonfinite/mismatched inputs refuse unchanged
 state; no donor constant becomes a default.
 
-Every norm in aggregate wind saturation, both speed caps and both static
-thresholds uses this same scaled binary64 algorithm. Validate finite components
+Every norm in aggregate wind saturation, both speed caps, both static
+thresholds, cell saturation/pruning and contact normal/overlap geometry uses
+this same scaled binary64 algorithm. Validate finite components
 `x,y`; set `m=max(abs(x),abs(y))`. If `m=0`, return exact zero. Otherwise compute
 `u=x/m`, `w=y/m`, then `u2=u*u`, `w2=w*w`, then `q=u2+w2`, then `r=sqrt(q)`,
 then `n=m*r`, in that order, with the selected compiled Node binary64 square
