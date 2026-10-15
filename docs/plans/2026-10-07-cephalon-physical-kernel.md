@@ -103,10 +103,25 @@ Its exact names and fields require this source plan's review.
 - `emit-recall` takes a scoped immutable request identity, validated seed
   snapshot, budget and Knoxx mood/lens revision. It emits once or returns the
   existing request result; identical polling never emits or reinforces.
-- `read-recall` projects committed motion/contact/bond traces for that request
-  and includes actual authorized memory IDs with reasons. It has no write,
-  emission, RNG advance or time advance. Denied, no-contact, stale, incomplete,
-  exhausted and failed outcomes are distinct.
+- `read-recall` exposes the admitted request's retained motion/contact/bond
+  result and authorized memory IDs with reasons, without mutation, emission,
+  RNG advance or time advance. Its successful statuses are admitted, no-contact,
+  complete, incomplete and exhausted; refusals use the closed ABI reason/status
+  union and expose no recall payload. Outer computation, provider or storage
+  failures belong to their owning operations. This read neither records nor
+  synthesizes a failed request. The cross-boundary `:failed` vocabulary remains
+  available to the declared embedding-production failure operation; it does not
+  add a variant to another operation's closed union.
+- `rebuild-revocation` privately reconstructs the complete permitted world from
+  a compatible independently established clean checkpoint, separate trusted
+  checkpoint evidence and complete ordered immutable history under current
+  Axxium authority. Its exact inputs, replacement-history closure, pending and
+  completed recall obligations and bounded refusal union are owned by
+  `cephalon-physical-kernel-abi.edn#functions/rebuild-revocation` and
+  `cephalon-finite-field-coupling.edn#retained-revocation`. A successful result
+  replaces the complete state atomically; incomplete history or exhausted
+  bounds preserves the prior state. No new elapsed time, random draw, storage,
+  outcome execution or publication is admitted by this pure operation.
 - `apply-outcome` takes an immutable observed choice/outcome identity and the
   admitted prior recall reference. It proposes attributed semantic feedback
   once, retaining effect/outcome identity, payload hash, scope and recall reference
@@ -156,7 +171,14 @@ Its exact names and fields require this source plan's review.
   separate trusted binding with the actual payload and wrapper digest before
   admission. Changing a velocity, cell or fold and recomputing a self-hash
   cannot replace that authority. Missing, stale, foreign or conflicting evidence
-  refuses unchanged. Pure checkpoint does not create persistence authority;
+  returns `:status :refused`, `:reason :checkpoint-evidence-unestablished` and
+  `:reason-revision 1` with the exact unchanged prior state, before admitting any
+  restored or rebuilt state/cursor. The same code applies to checkpoint admission
+  during rebuild; it is distinct from an invalid snapshot or causal-authority
+  refusal. Future fixtures include a genuinely qualified independent atomic
+  record and matching snapshot as the positive control, plus each missing,
+  stale, foreign and mismatched evidence case with this exact refusal.
+  Pure checkpoint does not create persistence authority;
   no new signature system, event engine or policy evaluator is introduced.
   Before any causal use it validates kernel/config/hash/scope/projection
   revisions, current grants, snapshot/cursor agreement, exact time accounting,
@@ -174,7 +196,12 @@ JS strings/arrays/objects convert at the adapter boundary to Clojure data. Nativ
 provider and storage output is untrusted input. Both sides of replaceable seams
 are validated. ABI refusal reason names remain explicit and revisioned.
 
-All seven state-changing operations use the shared revision1 transition result:
+All nine operations listed in `:state-transition-result :applies-to` use the
+shared revision1 transition result: `admit-state`, `advance`, `catch-up`,
+`emit-recall`, `apply-outcome`, `confirm-feedback`, `checkpoint`, `restore` and
+`rebuild-revocation`. This is a result-shape list, not a claim that the pure
+`checkpoint` operation changes state. The separate `read-recall` union remains
+read-only. For the shared transition result,
 success carries the operation's declared result; refusal carries the exact
 unchanged prior state, an operation-specific reason and reason revision1.
 The required reasons include `invalid-elapsed-us`, `unsafe-arithmetic` and

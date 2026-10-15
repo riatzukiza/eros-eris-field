@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-checkpoint-custody"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-replacement-closure"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -388,6 +388,9 @@
                    :comparison :snapshot-payload-digest-wrapper-digest-and-trusted-expected-digest-all-equal-with-exact-cursor-scope-principal-and-field-binding
                    :copied-self-asserted-or-same-storage-response-evidence :not-authority
                    :missing-unknown-stale-conflicting-or-mismatched-evidence :whole-unchanged-refusal-before-any-state-admission
+                   :evidence-refusal {:status :refused :reason :checkpoint-evidence-unestablished
+                                      :reason-revision 1 :state :exact-unchanged-prior-state
+                                      :scope [:restore :rebuild-revocation-checkpoint-admission]}
                    :pure-kernel :compare-admitted-owner-data-only-no-authority-lookup-signature-system-or-second-event-engine
                    :checkpoint-output :not-a-persistence-receipt-or-authentication-grant
                    :bounds :all-evidence-is-an-explicit-counted-argument-under-existing-input-work-and-continuation-limits}
@@ -398,12 +401,17 @@
   :restore :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-before-admission
   :work :charge-all-actual-encode-validate-order-and-hash-work-under-the-existing-whole-call-or-rebuild-counter
   :allocation :bounded-measurement-before-full-payload-or-argument-allocation
+  :fixture-ownership {:atomic-predecessor :qualifies-real-independent-persistence-and-authenticated-digest-readback-with-actual-abi-forces-snapshots
+                      :contact-successor :qualifies-positive-restore-and-rebuild-with-that-completed-port-and-its-actual-candidate-artifact-identity
+                      :earlier-artifact-fixture :does-not-qualify-a-different-later-contact-binary
+                      :full-paired-persistence :existing-later-causal-eight-point-packet}
   :fixtures [:complete-state-roundtrip-and-map-insertion-order-golden
              :known-payload-bytes-and-sha256-golden :signed-zero-and-multibyte-string-hash-difference
              :wrapper-hash-not-self-referential :missing-extra-or-duplicate-wrapper-or-state-key-refused
              :changed-producing-identity-fold-or-pending-event-changes-hash
              :changed-authorized-velocity-cell-or-fold-with-recomputed-self-hash-but-original-trusted-digest-refused
              :missing-copied-or-foreign-checkpoint-evidence-refused
+             :missing-stale-foreign-and-mismatched-evidence-exact-revision1-checkpoint-evidence-unestablished-refusal
              :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
              :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
              :complete-checkpoint-argument-exact1048576-and-one-over
@@ -554,6 +562,8 @@
                :admission :retain-the-complete-validated-configuration-value-with-its-revision-and-hash
                :hash :sha256-of-exact-existing-trace-1-tagged-encoding-of-the-complete-configuration-value
                :hash-input :configuration-value-only-not-the-surrounding-state-or-its-config-hash-field
+               :hash-output {:type :string :encoding :lowercase-ascii-hex :length 64
+                             :pattern "^[0-9a-f]{64}$" :prefix :none}
                :all-causal-operations :consume-the-retained-configuration-never-external-cache-clock-or-defaults
                :restore-and-rebuild :explicit-configuration-must-exactly-match-the-snapshot-value-revision-and-canonical-hash-before-use
                :silent-mid-history-configuration-replacement :forbidden
@@ -562,6 +572,8 @@
                           :checkpoint-restore-then-repeat-same-physical-transition
                           :missing-configuration-value-with-retained-hash-refused
                           :changed-configuration-with-copied-revision-or-hash-refused
+                          :configuration-hash-known-bytes-and-lowercase64-string-golden
+                          :raw-byte-uppercase-prefixed-or-wrong-length-configuration-hash-refused
                           :configuration-carrying-state-exact-continuation-limit-and-one-over]
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal
@@ -628,9 +640,13 @@
   :prior :same-qualified-graph-field-snapshot
   :contact-packet-each-arm [:admission :validated-uncommitted-candidate-projection
                             :kernel-transition :contact-inclusion :unchanged-kernel-replay]
-  :atomic-packet-each-arm [:consistent-atomic-commit :independent-readback
-                           :unchanged-persisted-history-replay]
-  :contact-completion-requires-atomic-successor false
+  :causal-packet "f503ae5a-e414-4da8-a8d4-328a7218bcf3"
+  :causal-packet-each-arm [:contact-driven-consistent-atomic-commit :independent-readback
+                           :unchanged-persisted-history-replay :served-recall-and-prompt-causality]
+  :contact-checkpoint-evidence-predecessor :qualified-atomic-packet
+  :contact-completion-requires-later-paired-persistence-proof false
+  :atomic-qualification-fixtures :actual-qualified-abi-and-forces-produced-complete-canonical-snapshots-without-contact-execution
+  :atomic-qualification-not-proof-of [:contact-inclusion :revocation-rebuild :full-contact-driven-paired-persistence]
   :atomic-isolation :distinct-owned-fixture-stores-or-namespaces
   :each-store-baseline [:independent-content-hash-revision-readback :same-stored-authority]
   :store-routing :outer-adapter-only-never-kernel-input-or-payload-grant
@@ -644,6 +660,12 @@
   :identity-hash-cursor-and-revision-consistency :required-per-arm
   :forged-or-duplicate-history :refused}
  :persistence {:owner :openplanner
+               :qualification-task "2f4421ee-2e48-405e-96d2-fee1a5597ff2"
+               :independent-qualification :actual-qualified-abi-and-forces-produced-complete-canonical-state-snapshots
+               :before-contact :transaction-identity-authority-fencing-fault-recovery-and-authenticated-checkpoint-readback
+               :empty-folds-and-requests :valid-only-when-no-request-or-fold-was-produced
+               :handwritten-snapshot-or-synthetic-authentication-flag :not-qualification
+               :full-contact-driven-paired-consumer-proof-task "f503ae5a-e414-4da8-a8d4-328a7218bcf3"
                :authorization-owner :axxium
                :current-decision :qualified-axxium-decision-and-policy-grant-version
                :decision-binding [:actual-stored-principal :action :resource :permitted-scope]
@@ -705,7 +727,7 @@
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
-  :abi-operation-version "finite-revocation-rebuild/4"
+  :abi-operation-version "finite-revocation-rebuild/5"
   :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds
             :completed-and-restored-recall-results-under-recall-requests
             :complete-admitted-pending-boundary-queue]
@@ -742,12 +764,24 @@
             :retain [:all-mutating-abi-inputs :consumed-advance-events :catch-up-events
                      :elapsed-quanta-residual-backlog-schedule :recall-emissions
                      :outcome-and-confirmation-state-events :recorded-seed-schedule
+                     :restore-inputs :prior-rebuild-inputs :complete-replacement-reference-closure
                      :original-clio-identities-order-payloads-and-parent-links]
             :baseline :independently-established-before-earliest-revoked-causal-influence-or-qualified-clean-equivalent
             :unknown-or-gapped-or-contaminated :typed-unchanged-refusal-and-outer-quarantine
             :authority :recompute-derived-world-and-folds-with-only-currently-authorized-influence
             :source-event-rewrite-or-live-effect-reexecution :forbidden
             :count-all-events-and-quanta :under-unchanged-whole-rebuild-caps}
+  :replacement-reference-closure
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/replacement-reference-closure"
+   :input :explicit-complete-materialized-target-checkpoints-evidence-and-supporting-history-in-existing-counted-argument
+   :well-founded :references-strictly-precede-referring-operation-in-qualified-clio-provenance-order-not-restored-state-cursor
+   :clean-root :every-reconstruction-path-needs-independent-clean-pre-revocation-baseline-or-qualified-clean-current-authority-equivalent
+   :replacement :install-complete-current-authority-reconstructed-target-at-recorded-boundary-not-historical-output
+   :dedup :exact-qualified-identity-and-bytes-only-never-scheduled-occurrences-or-actual-reconstruction-work
+   :missing-conflicting-forward-self-or-cyclic-reference :missing-or-ambiguous-rebuild-history
+   :bounds :entire-closure-shares-all-existing-input-tail-checkpoint-event-byte-quanta-work-and-wall-bounds
+   :copy-retag-pure-lookup-new-effect-or-nested-budget-reset :forbidden
+   :complete-admissible-closure-within-bounds :successful-bounded-rebuild-required}
   :history-controls [:revoked-deposit-then-advance-motion-before-current-cursor
                      :interleaved-permitted-and-revoked-deposits-with-advance-and-catch-up
                      :retained-recall-emission-and-inclusion-fold-after-boundary
@@ -759,7 +793,19 @@
                      :rebuild-checkpoint-restore-catch-up-no-revoked-causal-effect
                      :permitted-pending-executes-once-at-original-boundary-not-during-rebuild
                      :both-cursor-gap-or-tamper-refusal :pending-tail-counts-toward-all-exact-and-one-over-caps]
-  :budget {:version "finite-revocation-rebuild/4" :tail-events 128
+  :replacement-controls [:restore-then-later-revoke-successful-clean-rebuild-and-read
+                         :prior-rebuild-then-later-revoke-successful-clean-rebuild-and-read
+                         :interleaved-permitted-control-retained-after-each-replacement
+                         :backward-shared-reference-with-distinct-scheduled-occurrences
+                         :rewound-state-cursor-does-not-reorder-provenance
+                         :missing-forward-cyclic-conflicting-or-contaminated-reference-refusal
+                         :each-complete-closure-exact-and-one-over-limit]
+  :budget {:version "finite-revocation-rebuild/5" :tail-events 128
+           :coverage :complete-main-tail-plus-all-materialized-replacement-reference-closure
+           :event-count :distinct-qualified-envelopes-with-exact-identical-bytes-and-bindings-only
+           :history-argument-utf8-bytes 1048576
+           :all-materialized-checkpoint-evidence-and-reference-values :also-counted-in-existing-argument-and-complete-input-limits
+           :quanta-and-work :every-reconstruction-path-and-repeated-execution-with-no-nested-counter-reset
            :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 67108864
            :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000

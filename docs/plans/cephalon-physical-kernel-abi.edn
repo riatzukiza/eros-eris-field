@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-checkpoint-custody"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-replacement-closure"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -140,6 +140,7 @@
             :reason-revision 1}
   :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
+                    :checkpoint-evidence-unestablished
                     :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
  :input-wire-contract "docs/plans/cephalon-finite-field-coupling.edn#input-wire-codec"
@@ -203,9 +204,9 @@
                 :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
-  {:version "finite-revocation-rebuild/4"
+  {:version "finite-revocation-rebuild/5"
    :input [:prior-state :compatible-trusted-checkpoint :current-trusted-checkpoint-evidence
-           :immutable-complete-ordered-boundary-event-tail :current-trusted-authority-projection
+           :immutable-complete-ordered-history-and-replacement-closure :current-trusted-authority-projection
            :physical-configuration]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
@@ -218,10 +219,35 @@
                       :denied-pending :retain-immutable-history-and-explicit-bound-cancelled-no-op-disposition-never-later-causal-use
                       :required :every-admitted-boundary-event-not-only-contributions
                       :kinds :all-abi-mutating-operation-inputs-and-consumed-elapsed-quantum-event-schedules
-                      :includes [:admit-state :advance :catch-up :emit-recall :apply-outcome :confirm-feedback]
+                      :includes [:admit-state :advance :catch-up :emit-recall :apply-outcome :confirm-feedback
+                                 :restore :rebuild-revocation]
                       :read-or-no-op-events :retain-when-present-in-admitted-cursor-history-with-no-invented-effect
                       :ordering :exact-qualified-clio-stream-order-with-original-identities-payloads-and-parent-links
                       :missing-unknown-duplicate-or-conflicting-event :typed-unchanged-refusal}
+   :replacement-reference-closure
+   {:input :complete-explicit-materialized-checkpoint-evidence-and-supporting-history-in-the-counted-history-argument
+    :main-tail :original-ordered-checkpoint-to-admitted-cursor-events
+    :support :every-referenced-replacement-target-checkpoint-evidence-and-its-complete-reconstruction-history
+    :reference-authority :qualified-clio-identities-order-and-lineage
+    :well-founded :every-reference-precedes-its-referring-operation-in-qualified-provenance-order
+    :restored-state-cursor :may-rewind-never-used-as-reference-order
+    :clean-root :each-path-reaches-independently-established-pre-revocation-clean-checkpoint-or-exact-current-authority-qualified-clean-equivalent
+    :identity-dedup :same-qualified-immutable-identity-with-exact-matching-bytes-and-bindings-only
+    :missing-conflicting-forward-self-or-cyclic-reference :missing-or-ambiguous-rebuild-history
+    :replacement-effect :replace-private-working-state-with-current-authority-reconstruction-of-recorded-target-at-original-boundary
+    :replacement-state :complete-reconstructed-time-rng-cursors-queue-folds-recall-and-feedback-not-added-to-abandoned-branch
+    :historical-output-copy-or-authority-retag :forbidden
+    :scheduled-occurrence-dedup :forbidden
+    :pure-reference-lookup-or-new-effect-execution :forbidden
+    :bounds :whole-materialized-closure-and-every-reconstruction-share-existing-event-byte-input-quanta-work-and-outer-wall-limits
+    :budget-reset-or-discounted-repeated-reconstruction-work :forbidden
+    :complete-admissible-closure-within-bounds :successful-rebuild-required-with-authorized-control-retained
+    :fixtures [:restore-before-later-revocation-then-successful-clean-rebuild
+               :prior-rebuild-before-later-revocation-then-successful-clean-rebuild
+               :shared-backward-reference-with-distinct-scheduled-occurrences
+               :rewound-state-cursor-with-well-founded-provenance-order
+               :missing-forward-cyclic-conflicting-or-contaminated-closure-refused
+               :all-closure-exact-and-one-over-bounds]}
    :checkpoint-revocation-safety :independently-established-before-earliest-revoked-causal-influence-or-qualified-already-clean-equivalent
    :already-clean-equivalent :independently-verified-qualified-complete-history-rebuild-result-under-exact-current-authority-and-producing-artifact-identity-not-copied-label
    :contaminated-or-unestablished-baseline :typed-unchanged-refusal-not-removable-by-relabeling
@@ -249,6 +275,11 @@
    :success :complete-authorized-equivalent-of-clean-permitted-history-with-atomic-result-exposure
    :budget-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation"
    :budget {:tail-events 128 :canonical-clio-tail-utf8-bytes 1048576
+            :coverage :complete-materialized-tail-plus-replacement-reference-closure
+            :event-identity-count :distinct-qualified-envelope-identities-only-with-exact-byte-binding
+            :history-argument-utf8-bytes 1048576
+            :all-checkpoint-evidence-and-reference-bytes :also-counted-under-existing-complete-input-argument-bounds
+            :quanta-and-work :every-actual-reconstruction-no-nested-reset
             :kernel-quanta 64 :work-units 67108864
             :entities 32 :bonds 64 :scoped-layer-cells 256
             :variable-input-string-and-complete-trace-result-byte-caps :finite-character-load-v2-and-inclusion-result-codec}
@@ -258,6 +289,7 @@
                      :finite-trace-budget-exceeded :finite-work-budget-exceeded
                      :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
+                     :checkpoint-evidence-unestablished
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden
@@ -332,11 +364,16 @@
             :missing-or-different-producing-identity :unchanged-refusal-before-causal-use
             :same-revision-label-different-binary :refused
             :missing-untrusted-stale-or-mismatched-checkpoint-evidence :unchanged-refusal-before-causal-use
+            :checkpoint-evidence-refusal {:status :refused :reason :checkpoint-evidence-unestablished
+                                          :reason-revision 1 :state :exact-unchanged-prior-state
+                                          :restored-state-and-cursor :absent}
             :silent-migration-or-copied-producer-label :forbidden
             :effects :none :new-elapsed-time :none :rng-draws :none
             :outcome-replay :forbidden}}
  :result/statuses [:admitted :refused :denied :no-contact :complete
                    :incomplete :stale :exhausted :failed]
+ :result/statuses-scope :cross-boundary-vocabulary-only
+ :result/status-authority :operation-specific-closed-result-unions
  :replay {:continuous {:absolute 1.0e-9 :relative 1.0e-9}
           :exact [:pruning-decisions :static-threshold-decisions
                   :radial-cap-applicability :radial-cap-zero-ratio-branch

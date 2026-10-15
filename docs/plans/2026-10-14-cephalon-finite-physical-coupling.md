@@ -416,11 +416,25 @@ do not permit different deposit-weight values or mapping revisions. Choose
 encounter inputs whose resulting deposit/bond changes actual motion, contact,
 recall path and included association. Preserve both complete admitted candidate
 histories. An edited buffer carrying the other arm's hash/effect/cursor refuses.
-The later atomic packet, after contact is complete, commits each arm's consistent
-graph/field/effect state and independently reads it back, then replays its
-unchanged persisted history. That later storage qualification supplies both
-arms' persistence proof; it is not a prerequisite for the earlier contact
-packet. The separate non-admitted pure ablation remains the mechanism control.
+The existing later causal8 packet `f503ae5a-e414-4da8-a8d4-328a7218bcf3`,
+after contact and the existing deployment prerequisites complete, commits each
+arm's consistent contact-driven graph/field/effect state, independently reads it
+back and replays its unchanged persisted history. It retains the complete paired
+persistence proof together with actual served recall/prompt causality.
+The earlier atomic8 packet independently qualifies the transaction port,
+authenticated checkpoint readback, revisions, once-only effects, authority
+fencing, fault/uncertain-commit recovery and bounded embedding resubmission
+using actual ABI/forces-produced complete canonical snapshots. Such snapshots
+may have legitimately empty request/fold collections when none were produced;
+handwritten substitute state or a synthetic authentication flag cannot qualify
+them. Atomic completion needs neither contact execution nor an inclusion result.
+Contact8 then consumes that completed checkpoint-evidence interface for its
+required positive restore/rebuild controls, while its two encounter arms still
+prove pure candidate contact/inclusion sensitivity and unchanged kernel replay.
+It does not wait for the later complete paired persistence proof. The separate
+non-admitted pure ablation remains the mechanism control. Each later contact
+artifact still needs its own actual producing/loading identity and qualification;
+an earlier ABI/forces artifact fixture cannot qualify that different binary.
 Neither arm can be a self-post relabeled as outside input or a duplicate
 assigned a new effect identity. This is future RED/GREEN acceptance, not an
 executed proof.
@@ -459,6 +473,14 @@ graph projection update, field checkpoint and immutable effect receipt in one
 transaction, with a unique owner-scoped effect identity and expected graph/field
 revision checks. Unsupported transactions refuse before either update. This is
 a required future adapter capability, not observed SDK behavior.
+
+These transaction, failure and authenticated-readback obligations belong to
+the independently completable atomic8 packet, using the actual ABI/forces
+snapshot fixtures above. The complete contact-driven two-arm commit/readback/
+persisted-history comparison belongs to the existing later causal8 packet.
+Contact8 retains every successful bounded rebuild/privacy control; its completed
+atomic predecessor supplies genuine checkpoint evidence without waiting for
+contact-owned rebuild execution to qualify the persistence port.
 
 After an uncertain commit result, read the matching effect receipt and both
 referenced component revisions independently. A complete matching transaction
@@ -642,6 +664,27 @@ remain mandatory before RED.
 | causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 8 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
 | closeout | `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` | 2 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` |
 
+The table above preserves the observed native relationship snapshot. Review
+found a hidden acceptance cycle and a missing feedback prerequisite in those
+relationships; it is not a claim of lawful readiness. The following replacement
+is an **unapplied proposal**, to be reviewed with the owning Foresight cards and
+applied through Rheos before any affected card may enter Ready or RED:
+
+| Existing packet | Complete proposed dependency identities | Acceptance correction |
+| --- | --- | --- |
+| atomic8 `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | Replace contact predecessor with completed forces. Qualify the complete transaction/evidence port using actual complete ABI/forces snapshots; no contact-dependent paired exit. |
+| contact8 `ba078119-482c-49dc-bd18-c2dfcaad9024` | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | Add completed atomic port before all positive authenticated restore/rebuild controls. Retain the full contact/inclusion/replay and three-point bounded rebuild allocation. |
+| feedback5 `deliver-outcome-attributed-once-only-graph-feedback` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | Add the finalized ABI owning pending effect, recall reference and writer acknowledgement contracts before RED. |
+
+The existing causal8 packet owns the complete contact-driven paired persistence,
+independent readback and unchanged persisted-history replay alongside the served
+recall/prompt causality proof. Its existing deployment predecessor remains.
+No packet, point estimate, parent or epic changes: fourteen execution packets
+remain75, physical source21 remains ABI8/forces5/contact8, and selection3 remains
+separate. These estimates still require independent fair review. No new fixture,
+native edge adoption, Ready, code, event/auth engine or local board validator is
+claimed. The proposed order is ABI → forces → atomic → contact → calibration.
+
 Graph read completion supplies ABI and atomic inputs without waiting for its
 separate feedback successor. Deployment depends on graph, atomic, mood and
 feedback; causal proof depends on deployment; terminal closeout depends on
@@ -650,9 +693,9 @@ transition/persistence interface; the separate bounded appraisal/actual-consumer
 child consumes it and the scoped graph interface. The mood parent integrates
 both; the automatic parent's additional terminal-closeout dependency prevents
 its completion before deployment/proof/closeout. Children have parent links,
-not dependencies on the automatic parent, so this introduces no dependency
-cycle. These
-edges are observed initial planning state, not installed readiness/admission.
+not dependencies on the automatic parent. The explicit replacement proposal
+also removes the contact/atomic acceptance cycle; until Rheos applies that
+reviewed correction, the observed rows remain insufficient for readiness.
 The owning Foresight plan and this source plan retain independent gates.
 
 
@@ -872,7 +915,7 @@ Before timing, freeze reviewed fixture bytes/layouts/seed42, calibration and sou
 
 A dedicated fixed causal fixture must produce at least one different eligible contact and at least one different actually included authorized memory beyond the vector seed between permitted field-intervention arms, with every other declared input fixed. A finite nonzero vector alone or saturation hiding every downstream change fails calibration. Retain complete force/contact/bounds/layer/threshold/radius/restitution/half-life/noise/prune/saturation values, domains, source/review and revisions. Missing values fail; no library default or source pin adopts calibration.
 
-The current finite revocation profile `finite-revocation-rebuild/4` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
+The current finite revocation profile `finite-revocation-rebuild/5` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
 
 Embedding production failure returns failed/embedding-failed with a bounded typed category from timeout,unavailable,rate-limited,invalid-output,internal-error,unclassified. The existing qualified embedding-provider seam consumed by atomic8 owns versioned mapping `embedding-failure-category/1`; consumers retain that category/mapping revision verbatim rather than reinterpret errors. At that protected seam, shape validated actual HTTP status and explicit transport-timeout/unavailable, invalid-output and internal-failure indicators from the actual provider outcome. Do not parse or retain exception prose. If the bound indicator attestation is unavailable or malformed, return unclassified before evaluating rules1–5. Otherwise apply FIRST matching rule: (1) HTTP429 => rate-limited; (2) explicit timeout OR HTTP408/504 => timeout; (3) explicit transport-unavailable OR other HTTP500–599 => unavailable; (4) explicit validated invalid-output => invalid-output; (5) explicit validated internal-failure => internal-error; (6) no match, unavailable/malformed attestation or unknown => unclassified. A contradictory lower-priority flag cannot override the first match. Tests require timed-out429=>rate-limited,503+invalid-output=>unavailable,timeout+invalid-output=>timeout,invalid-output+internal=>invalid-output, and missing/unknown=>unclassified, with exact stable replay/category/revision and no raw-string heuristics. Atomic8 owns delivery/qualification at the actual existing provider seam as part of its failure handling, not a second classifier in Eros/Eris or another unowned prerequisite.
 
@@ -918,7 +961,7 @@ The owning state/work/trace byte/record caps apply before exposure; exhaustion r
 
 The8388608-byte trace bound includes the entire envelope, tags, separators, brackets and escaping, including its fixed empty-envelope overhead. Count/charge before byte/record exposure with the same whole-call work guard. EDN, host JSON number formatting or compacted output cannot determine this semantic admission. ABI defines the shape/bit representation and portable codec contract before implementation; contact/calibration consume it. Future RED/GREEN includes golden Unicode/control/map-order/binary64/zero vectors and independent complete-envelope exact/one-over limits. No codec implementation is asserted by this planning declaration.
 
-The canonical ABI now requires `inclusion-folds` (empty with no active request horizon) and complete revisioned entries with actual request/daimoi/authority/graph/field/start/end bindings, contact cursor, accumulated horizon quanta and semantic fold work, ordered first witnesses, exact derived dedup IDs, canonical result bytes, trace-record count and the explicit accumulated finite-field-trace/1 UTF8 byte count for the whole horizon. Every entry is hashed into the checkpoint. Each contact update charges new fold work before use; a new transport call cannot reset the same horizon. The whole-call/rebuild budget additionally charges every actual decode/validate/hash/serialization operation, including restore work. Restore verifies the complete qualified checkpoint state and current authority before further inclusion; missing fields, mismatched history, reordered witnesses, forged/reset counters or a bare scratch cache refuse. Source fixtures checkpoint after a contact, restore, then repeat that memory and compare with the unsplit horizon: identical unique IDs/reasons/order/counters and no reset. Atomic storage remains a later owning packet; this defines and tests the pure checkpoint interface first.
+The canonical ABI now requires `inclusion-folds` (empty with no active request horizon) and complete revisioned entries with actual request/daimoi/authority/graph/field/start/end bindings, contact cursor, accumulated horizon quanta and semantic fold work, ordered first witnesses, exact derived dedup IDs, canonical result bytes, trace-record count and the explicit accumulated finite-field-trace/1 UTF8 byte count for the whole horizon. Every entry is hashed into the checkpoint. Each contact update charges new fold work before use; a new transport call cannot reset the same horizon. The whole-call/rebuild budget additionally charges every actual decode/validate/hash/serialization operation, including restore work. Restore verifies the complete qualified checkpoint state and current authority before further inclusion; missing fields, mismatched history, reordered witnesses, forged/reset counters or a bare scratch cache refuse. Source fixtures checkpoint after a contact, restore, then repeat that memory and compare with the unsplit horizon: identical unique IDs/reasons/order/counters and no reset. The reviewed proposed order qualifies the atomic checkpoint-evidence port before contact; contact still defines and tests its own pure checkpoint/restore/rebuild behavior with that real interface. The existing later causal8 packet retains the full contact-driven paired persistence proof. Earlier later-atomic ordering is superseded, with native history preserved.
 
 The maximum100 substeps is an execution cap, not admission rejection for otherwise valid longer elapsed time. The finite101-quantum elapsed control must execute100, preserve one quantum as explicit backlog with incomplete status, and drain that same backlog through catch-up without inventing elapsed time. Other unsafe/resource-limit inputs retain their distinct unchanged refusals. The earlier unchanged101 refusal requirement was incorrect and is explicitly superseded; historical native receipts/comments remain immutable.
 
@@ -998,9 +1041,10 @@ empty inclusion, Unicode/control escaping, map insertion order, duplicate
 memory witnesses and split/restored equality. Host EDN/JSON printer choices
 cannot determine the count.
 
-The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/4.
+The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/5.
 Its exact inputs are prior state, compatible independently established clean
-trusted checkpoint, complete ordered immutable boundary-event tail, current
+trusted checkpoint, separate trusted checkpoint evidence, complete ordered
+immutable history with materialized replacement-reference closure, current
 trusted authority projection and physical configuration. Cover every admitted
 event through the separately verified admitted cursor, including the complete
 pending queue beyond the consumed cursor. Replay only the consumed prefix with
@@ -1038,6 +1082,36 @@ retagging, new elapsed/draws or live outcome/publication replay. The outer
 adapter owns the2,000ms observation and quarantine/refusal before causal use;
 timeout supplies no accepted replacement. `admit-state` is not an implicit
 history replay interface.
+
+The complete history includes every intervening `restore` and prior
+`rebuild-revocation` input. Materialize every referenced target checkpoint,
+its separate evidence and all supporting reconstruction history in the counted
+history argument. References strictly precede their referring operation in
+qualified Clio provenance order; a restored state cursor may rewind and is not
+that order. Every reconstruction path reaches an independently established
+clean pre-revocation baseline or a qualified clean equivalent under the exact
+current authority. At each recorded replacement boundary, install the complete
+currently authorized reconstruction of its target, including its time/RNG,
+cursors, pending queue, folds, recall and feedback state. Never copy an old
+authenticated output, retag its authority, add it to an abandoned branch or
+execute live effects. Shared immutable identities deduplicate only with exact
+matching bytes/bindings; scheduled occurrences and actual reconstruction work
+never deduplicate. Missing, conflicting, forward, self or cyclic references
+return `missing-or-ambiguous-rebuild-history` with unchanged state and outer
+quarantine. No pure I/O or separate reference-resolution service is introduced.
+
+The entire materialized closure shares the existing128 distinct qualified event
+envelopes/1MiB canonical-Clio-envelope cap and1MiB encoded history-argument cap.
+All checkpoint/evidence/reference values also count under existing argument and
+complete-input limits. Every actually replayed quantum and repeated
+reconstruction shares64 quanta/67,108,864 work units/2,000ms outer wall; no nested
+reset or discounted work. Complete admissible closure within every bound still
+requires successful clean rebuild with the permitted control retained. Future
+positive fixtures include restore → later revoke → rebuild/read and prior
+rebuild → later revoke → rebuild/read, plus shared backward-reference/distinct
+occurrence, rewound-cursor, bad-reference and complete-closure exact/one-over
+controls. Requiring a baseline after the latest replacement is not a substitute
+for these retained positive obligations.
 
 Recall-request IDs now explicitly use the same nonempty well-formed scalar
 string, exact unsigned UTF8 spelling,128-byte bound and namespace uniqueness
@@ -1270,3 +1344,45 @@ All new evidence is explicit, counted input. No network, clock, signature
 scheme, second event engine, hidden configuration source or persistence effect
 is added to the pure kernel. Future domain fixtures are declared, not executed
 by this planning correction. Preserve all prior native findings and ledgers.
+
+
+## Replacement closure and independently completable handoff — 2026-10-15
+
+Current Codex reviews5539506144 and5539721653 on4d0 identified seven planning
+concerns. This correction retains the observed native roster and proposes the
+three explicit dependency replacements above; no native edge is changed here.
+Atomic8 qualifies its actual ABI/forces snapshot transaction and authenticated
+readback before contact8. Contact retains all successful restore/rebuild and
+permitted-history controls; causal8 retains the full contact-driven paired
+persistence/readback/persisted-history comparison. The same fourteen packets
+remain75, with ABI8/forces5/contact8 and physical21. Owning Foresight review,
+independent estimate assessment and native Rheos correction precede Ready/RED.
+
+The current proposed rebuild/5 includes intervening restore and prior rebuild
+transitions with their complete well-founded materialized reference closure.
+Every target is reconstructed under current authority from a separately
+established clean root; authenticated old output cannot simply be copied or
+retagged. The complete closure, every actual repeated reconstruction and all
+explicit checkpoint/evidence values share the unchanged limits. The operative
+ABI now enumerates rebuild and all nine shared-result operations, with checkpoint
+correctly distinguished from state mutation. Configuration SHA256 is exactly a
+64-character lowercase ASCII hex string, without prefix. Missing/stale/foreign/
+mismatched checkpoint evidence returns revision1 checkpoint-evidence-unestablished
+with refused status and exact unchanged prior state, in restore and rebuild.
+The declared golden, positive, negative and exact/one-over fixtures remain future
+source obligations: this edit executes only the existing standard EDN parser.
+
+For4287979863, the draft corrects the unsupported prose promise rather than
+inventing a failure-recording operation: read-recall exposes only its declared
+retained success/refusal union. Existing embedding production remains a concrete
+outer failed-status producer. A local independent design assessment found no
+declared producer of a retained failed recall request. This is not a native Bot
+withdrawal, rejection agreement or settlement; request explicit native Codex
+assessment and keep that root unsettled until the correction is accepted or a
+grounded distinct failed variant is specified. Preserve all genuine failures in
+their owning operation and never translate one into successful creative output.
+
+No kernel, resolver, new event/auth engine, local Rheos implementation, qualified
+fixture, source deployment or live B proof is claimed. Earlier proposed/4 text
+and estimate/readback history remain provenance, superseded by the operative/5
+contract and the explicit unapplied handoff above.
