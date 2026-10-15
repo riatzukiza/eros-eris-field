@@ -141,7 +141,8 @@
            :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
            :latest-global-average-or-read-weight-fallback :forbidden
            :invalid-deposit-weights :unchanged-refusal
-           :position :survivor-post-contact-resolved-position
+           :position :survivor-p-move-unchanged-after-contact
+           :contact-position-rule :velocity-only-no-snap-penetration-correction-or-second-advance
            :velocity :survivor-post-contact-cap-and-threshold-velocity
            :absorbed-entity :no-motion-deposit
            :order [:entity-id :deposit-contribution-id]
@@ -188,10 +189,16 @@
  :admitted-input-comparison
  {:arms :two-independently-valid-outside-encounter-effect-histories
   :prior :same-qualified-graph-field-snapshot
-  :each-arm [:admission :validated-projection :kernel-transition :atomic-commit
-             :independent-readback :unchanged-history-replay]
+  :contact-packet-each-arm [:admission :validated-uncommitted-candidate-projection
+                            :kernel-transition :contact-inclusion :unchanged-kernel-replay]
+  :atomic-packet-each-arm [:consistent-atomic-commit :independent-readback
+                           :unchanged-persisted-history-replay]
+  :contact-completion-requires-atomic-successor false
   :required-change [:motion :contact :recall-path :included-memory]
-  :fixed [:scope :principal :query :seed :calibration :mood-lens-attention :read-bindings]
+  :fixed [:scope :principal :query :seed :calibration :mood-lens-attention
+          :exact-read-weights-and-mapping-revisions
+          :daimoi-request-exact-eight-deposit-weights-and-mapping-revision
+          :presence-and-nexus-config-exact-deposit-weights-and-mapping-revisions]
   :identity-hash-cursor-and-revision-consistency :required-per-arm
   :forged-or-duplicate-history :refused}
  :persistence {:owner :openplanner :independent-readback :required

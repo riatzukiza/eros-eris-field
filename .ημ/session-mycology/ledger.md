@@ -353,3 +353,13 @@
   spore: none
   receipt-refs: cephalon-field-contact-versus-atomic-completion-boundary-20261015
   note: Jointsourcecontractclarification fixesanactualcompletioncycle; no metadata, mathsemantics or runtimechange. No solver/liveloop/Readyadmission or pendingthroughputimplementation. GoalACTIVE heartbeatPAUSED live0/3.
+
+- ts: 2026-10-15T00:40:54.236Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing finite field implementation planning
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-contact-boundary-deposit-freeze-position-cap-replay-20261015
+  note: Four actual current-head findings fixed within existing plan. Contact each-arm acceptance ends at admitted uncommitted candidate/pure kernel/replay; later atomic packet exclusively owns commit/readback/persisted replay. Both valid input arms freeze exact per-entity read weights and deposit weights/mapping revisions, including request-scoped daimoi and configured passive kinds. Finite contact changes velocity only; positions remain p_move, no snap/penetration correction/second advance; that exact position selects deposit cell. Replay exact list includes radial-cap applicability, zero-ratio branch and ordered correction-count/branch/refusal decisions; continuous tolerance cannot hide them. Matching future negative/boundary fixtures are declared, not executed tests. No kernel implementation, nativeReady, runtime, deployment, credentials, paid usage or batching inclusion. GoalACTIVE heartbeat humanPAUSED live0/3.

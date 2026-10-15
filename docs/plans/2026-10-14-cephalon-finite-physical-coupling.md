@@ -191,11 +191,16 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    Contact response is computed before this second cap and retained in the
    trace; do not interleave caps between contact pairs. Motion deposits use the
    final post-contact-cap-and-threshold velocity, with no second position advance.
+   For this finite contact pass, positions remain exactly `p_move`: contact
+   changes velocity only. Do not snap to a contact point, correct penetration,
+   project onto a surface or advance position again. Deposit-cell selection
+   uses that unchanged `p_move`, including at cell boundaries. Any later
+   positional solver requires a separately versioned rule and requalification.
    Deposits/contact outputs enter the following buffer, not other entities
    midway through the same prior-buffer pass. Class order and contribution
    order are revision-bound semantics, not collection insertion order.
 6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
-   selected by the surviving entity's **post-contact resolved position**.
+   selected by the surviving entity's **unchanged `p_move` after contact**.
    For each layer compute `a=gain_i*deposit_weight_i`, then `b_x=a*v_x`,
    then `D_x=b_x*h`; use the same a followed by `b_y=a*v_y`, then `D_y=b_y*h`.
    This is left-associated binary64 multiplication, without reordered or fused
@@ -304,22 +309,28 @@ the physical intervention.
 In addition, require a lawful admitted-input comparison. From the same qualified
 initial graph/field snapshot, construct two independently valid outside
 encounters, each with its own canonical external revision, causal effect,
-payload hash, cursor and expected revisions. Each arm passes actual admission
-and projection validation, computes and atomically commits its own consistent
-graph/field/effect state, and receives independent readback. Hold initial scope,
-principal, query, seed, calibration, mood/lens/attention and read bindings fixed;
-choose encounter inputs whose resulting deposit/bond changes actual motion,
-contact, recall path and included association. Preserve both complete admitted
-histories and replay each unchanged. An edited buffer carrying the other arm's
-hash/effect/cursor refuses. This tests the different-admitted-input outcome;
-the separate non-admitted pure ablation remains the mechanism control. The
-fixture spans distinct packet outputs: contact/inclusion supplies independently
-admitted valid candidate inputs, pure kernel sensitivity and per-arm kernel
-replay; the later atomic packet supplies actual transaction/readback and
-persisted-history replay for both arms. Contact completion does not depend on
-its future storage successor. Neither arm can be a self-post relabeled as
-outside input or a duplicate assigned a new effect identity. This is future
-RED/GREEN acceptance, not an executed proof.
+payload hash, cursor and expected revisions. The contact/inclusion packet
+passes each arm through actual admission and candidate-projection validation,
+then computes its pure kernel/contact/inclusion result and unchanged per-arm
+kernel replay. Candidate state remains uncommitted; atomic commit, storage
+readback and persisted-history replay are not contact completion requirements.
+Hold initial scope, principal, query, seed, calibration, mood/lens/attention,
+exact per-entity read weights and mapping revisions fixed. Also freeze the
+exact eight deposit weights and deposit-mapping revision for every daimoi's
+own immutable admitted request, and the exact configured per-kind deposit
+weights/mapping revision for presence and nexus. Distinct request identities
+do not permit different deposit-weight values or mapping revisions. Choose
+encounter inputs whose resulting deposit/bond changes actual motion, contact,
+recall path and included association. Preserve both complete admitted candidate
+histories. An edited buffer carrying the other arm's hash/effect/cursor refuses.
+The later atomic packet, after contact is complete, commits each arm's consistent
+graph/field/effect state and independently reads it back, then replays its
+unchanged persisted history. That later storage qualification supplies both
+arms' persistence proof; it is not a prerequisite for the earlier contact
+packet. The separate non-admitted pure ablation remains the mechanism control.
+Neither arm can be a self-post relabeled as outside input or a duplicate
+assigned a new effect identity. This is future RED/GREEN acceptance, not an
+executed proof.
 
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
@@ -370,7 +381,12 @@ is not an implemented numerical binding or qualified kernel artifact.
 Future RED includes decay/prune equality and adjacent binary64 values, strict
 static-threshold equality, contact-sensitive motion, zero friction, finite
 underflow and unsafe intermediates. Continuous tolerance never excuses a
-different prune/static-stop/contact/path/inclusion decision. Identical schedules
+different prune/static-stop/contact/path/inclusion decision. At every aggregate
+wind cap, either speed cap and cell saturation, replay must also match cap
+applicability, the zero-ratio versus nonzero-ratio branch, inward-correction
+count and ordered correction/refusal decisions exactly. Test equality and
+adjacent binary64 norms, ratio underflow and zero/one/two correction passes;
+continuous vector tolerance cannot conceal a changed discrete cap trace. Identical schedules
 remain mandatory; repeated quantum decay need not bit-match one aggregated
 exponential. Portability of `.cljc` is not JVM/browser/Python or arbitrary Node
 build numerical parity; another runtime requires its own reviewed qualification.
@@ -396,7 +412,8 @@ Primary references: [ECMAScript exponential](https://tc39.es/ecma262/multipage/n
    finite-value/overflow refusal and declared canonical accumulation. Units tests
    bind gain, wind coupling, velocity, acceleration and timestep calibration.
 4. The selected finite case covers force-class/contribution ordering,
-   post-contact deposit position/velocity, decay-before-new-deposit,
+   unchanged `p_move` deposit position at penetration and cell-boundary fixtures,
+   post-contact deposit velocity, decay-before-new-deposit,
    elapsed decay/friction, both over-cap stages (including zero cap),
    raw-contact-versus-final-cap trace, zero-time no-op,
    split/catch-up, immutable ownership, single-counted bonds and actual contact

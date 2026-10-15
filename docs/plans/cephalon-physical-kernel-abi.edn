@@ -143,7 +143,10 @@
  :result/statuses [:admitted :refused :denied :no-contact :complete
                    :incomplete :stale :exhausted :failed]
  :replay {:continuous {:absolute 1.0e-9 :relative 1.0e-9}
-          :exact [:pruning-decisions :static-threshold-decisions :identity :event-order :residual-time :seed-counter
+          :exact [:pruning-decisions :static-threshold-decisions
+                  :radial-cap-applicability :radial-cap-zero-ratio-branch
+                  :radial-cap-inward-correction-count-and-ordered-branch-decisions
+                  :identity :event-order :residual-time :seed-counter
                   :wallets :contacts :paths :grants :included-memories
                   :selected-actions :actual-byte-hashes]}
  :adoption/requires [:current-source-review :native-rheos-readiness
