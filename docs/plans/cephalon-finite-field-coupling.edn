@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-authority"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-contact-pair-order"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -173,6 +173,21 @@
                        :tangent-zero-or-separating-velocity :observe-without-required-impulse
                        :separated-pair :no-observation
                        :order :canonical-pair-order
+                       :pair-normalization {:input :unordered-two-distinct-canonical-entity-ids
+                                            :id-comparator :declared-unsigned-exact-utf8-byte-order
+                                            :output [:lower-id :higher-id]
+                                            :encoding-normalization :none
+                                            :proper-byte-prefix :shorter-first
+                                            :particle-recipient-role-swap :forbidden}
+                       :pair-comparator [:first-normalized-id-unsigned-utf8
+                                         :second-normalized-id-unsigned-utf8]
+                       :pair-enumeration :every-eligible-unordered-pair-exactly-once
+                       :pair-traversal :strict-lexicographic-pair-order-per-substep
+                       :invalid-or-duplicate-pair :whole-transition-unchanged-refusal
+                       :order-fixture [:three-or-more-overlapping-eligible-entities
+                                       :reversed-entity-pair-and-map-input
+                                       :non-ascii-ids-and-common-prefixes
+                                       :identical-private-velocity-observations-deposits-and-state]
                        :domain-key [:step-id :exact-unordered-pair]
                        :domain-key-namespace :same-admitted-kernel-history
                        :emitted-event-identity :canonical-clio-envelope

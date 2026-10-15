@@ -547,7 +547,7 @@ These are packet acceptance obligations: ABI `d68344c4-f18b-4b96-8585-bd8f7ac7c6
 owns the standalone compiled build/facade/dependency contract and actual selected
 bytes' source-rights/license/notices decision before extraction/distribution;
 new library LGPL-3.0-or-later does not relicense ungranted historical bytes. Contact
-`ba078119-482c-49dc-bd18-c2dfcaad9024` consumes force calibration and completes
+`ba078119-482c-49dc-bd18-c2dfcaad9024` completes kernel/inclusion/replay source fixtures with valid fixture inputs. Separate proposed3-point calibration `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` consumes that completed kernel and reviewed force inputs, then completes
 one revisioned artifact with all force/contact/bounds/layer/threshold/radius/
 restitution/half-life/noise/prune/saturation values and finite configured load/
 time/memory/rejection evidence, without requiring storage or live deployment.
@@ -563,13 +563,7 @@ The signed field-index coordinator amendment is satisfied by reviewed decision
 native readiness remain outstanding. The old positive-only decision stays
 provenance and supplies no admission for the exception by itself.
 
-Foresight's native Rheos created fourteen Incoming planning cards in personal
-Foresight PR37: twelve selected execution packets and the retained mood and
-automatic integration parents. Physical execution remains13, atomic5, encounter3,
-scoped graph5, feedback3, mood transition/persistence3 and appraisal/consumer3,
-deployment3, served proof5 and closeout2: proposed total45 plus separate selection3.
-Earlier44 and36 totals remain estimate history. Both integration parents retain
-recorded5 as non-additive aggregate history, excluded from execution totals.
+The current Foresight plan describes sixteen Incoming records: thirteen selected execution packets and retained field/mood/automatic aggregate parents. Earlier fourteen-card creation remains history; calibration `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` is first-class initial Markdown with native readback/comment, not an invented creation event. Physical source execution remains13 plus calibration3, atomic5, encounter3, scoped graph5, feedback3, mood transition/persistence3 and appraisal/consumer3, deployment3, served proof5 and closeout2: proposed total48 plus separate selection3. Earlier45/44/36 totals remain estimate history. Native Rheos classifies original field `ff3e628b-cd5c-4a89-a397-42cc88dbde70` through native category=aggregate-history and an explicit non-additive comment, preserving8/type/relationships and broader obligations. Conditional type=epic correctly refused without mutation because current children bind the character epic; no graph/type/aggregate-points adoption is claimed. Field8/mood5/automatic5 are containing history and excluded; do not add any containing-story/epic estimate to exact selected execution IDs.
 The mood split refines existing work and independently proposed estimates,
 not an adopted increase or new behavior/prerequisite. Independent fair estimate/
 reuse/type/aggregation review through Rheos precedes Ready. No subtraction from
@@ -587,16 +581,18 @@ remain mandatory before RED.
 | --- | --- | --- | --- | --- | --- |
 | admission | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a` | 3 | `6eb77110-8cf4-44d5-a242-f495d25d6aaf` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | None |
 | graph | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` | 5 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | None |
+| field-history | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | 8 (native aggregate-history category; excluded) | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701`, `6eb77110-8cf4-44d5-a242-f495d25d6aaf`, `b5f2ba9e-8d67-4c73-9919-e275983aca87` (broader history; excluded) |
 | abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 3 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `b5f2ba9e-8d67-4c73-9919-e275983aca87` |
 | forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` |
 | contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` |
+| calibration | `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` | 3 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `ba078119-482c-49dc-bd18-c2dfcaad9024` |
 | atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `ba078119-482c-49dc-bd18-c2dfcaad9024` |
 | mood-state | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
 | mood-consumer | `5450c07d-1e90-4640-90e9-995f1e32d28a` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 (aggregate history; excluded) | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `5450c07d-1e90-4640-90e9-995f1e32d28a` |
 | automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback`, `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` |
 | feedback | `deliver-outcome-attributed-once-only-graph-feedback` | 3 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
-| deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 3 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback` |
+| deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 3 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback`, `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` |
 | causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 5 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
 | closeout | `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` | 2 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` |
 
@@ -742,3 +738,9 @@ Checkpoint state includes the actual producing compiled-artifact SHA256, build-q
 Require independently bound reviewed friction coefficients for presence, nexus and daimoi; none may inherit a shared/default coefficient. Positive isolated fixtures use three distinct reviewed gamma values, fixed elapsed schedule and initial velocity with other forces/contact/caps/threshold effects neutralized, checking each kind against its own elapsed exponential and mechanics/calibration revision. Include the moving daimoi case explicitly, a valid zero-friction case, repeated/quiet/split schedules and wrong/default/shared coefficient negatives. Retain the mechanics' required differences without inventing a new ordering from static thresholds. All operation-specific cap domains are validated before generic radial shortcuts: wind and cell caps are strictly positive; only kind speed caps permit zero. Zero invalid wind/cell calibration refuses unchanged state even for zero vectors; valid zero speed returns zero before norm arithmetic.
 
 The actual submitted model-visible authorized node/edge path and traversal trace explicitly carries BOTH matching graph/projection revision and physical-field revision, bound to the selected encounter/effect lineage and independently read states from AC1. A singular traversal/graph revision plus a field revision only in protected diagnostic metadata cannot satisfy B3. Add stale/mixed/omitted model-visible field-revision negatives while preserving protected full-prompt inspection and audience-safe retained evidence.
+
+## Canonical contact-pair traversal — 2026-10-15
+
+Reuse exact well-formed scalar entity IDs and unsigned UTF8 byte comparison. Normalize each unordered distinct-entity pair into `(lower-ID, higher-ID)` without Unicode normalization, locale, case folding or replacement. Compare normalized pairs lexicographically by first-ID bytes, then second-ID bytes; a proper byte prefix sorts before its extension. Enumerate each eligible unordered pair exactly once in that strict substep order. Normalization defines identity/traversal only; it cannot swap validated particle/recipient roles or reflection orientation. Duplicate/malformed IDs, self pairs or duplicate supplied pairs refuse the unchanged transition rather than acquire insertion-order ties.
+
+With at least3 eligible overlapping entities/several contacts, reverse entity/pair/map input order, including non-ASCII IDs/common prefixes. Require identical ordered pair/domain-key observations, private contact-velocity updates, final deposits/state and admission references under the same numeric profile/seed. Map order cannot define physical outcomes.
