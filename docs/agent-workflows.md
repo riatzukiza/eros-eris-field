@@ -162,7 +162,7 @@ qualification; previous receiver approval does not transfer to the caller.
 
 ## Isolated parser and disabled private dependency path — 2026-10-15 UTC
 
-The caller now runs the standard EDN map/true-EOF check in a separate
+The caller now runs the standard EDN single-map and actual trailing-source check in a separate
 `proposed_abi_parse` job with permissions exactly contents:read and no App
 secrets, inherited secrets, private dependency mirror or candidate dependency
 installation. It checks the immutable event head and clean checkout before and
@@ -179,3 +179,24 @@ workflow evidence, distinct from local Babashka1.12.207 parser fixtures and
 requested hosted1.13.219. New heads still require fresh native checks/reviews;
 no secret/private content, actual exploit or physical solver behavior was read
 or executed to establish this boundary.
+
+
+## Trailing reader-discard correction — 2026-10-15 UTC
+
+Native Codex4286659389 exposed a limit in the earlier true-EOF claim: a second
+standard edn/read skips trailing #_ forms. On the isolated committed fixture,
+the actual old abce job exited0 for a map followed by a discarded map. The
+updated job still uses the standard reader for the map and checks the raw
+remainder for only EDN whitespace, commas and line comments. It rejects
+trailing data and reader-discard forms without rejecting marker text inside a
+valid map string or tail comment. Eight inline contract controls and seven
+actual extracted-step source cases cover positive and refusal behavior.
+
+The initial new-control run used unsupported `bb -` syntax and stopped before
+the intended test. Commit54e9eea corrects the invocation to /dev/stdin and
+records the actual causal RED: discarded trailing map accepted by the old
+second-read logic. GREEN then passes the real declarations and valid marker/
+Unicode controls and refuses each ordinary/discarded extra-form source. These
+are actual local parser results, not hosted qualification or a field solver
+test. Permissions, pins, secrets, private-mirror disablement, immutable-head
+and clean-checkout guards remain unchanged; fresh hosted proof is required.

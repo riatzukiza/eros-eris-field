@@ -608,7 +608,7 @@ The signed field-index coordinator amendment is satisfied by reviewed decision
 native readiness remain outstanding. The old positive-only decision stays
 provenance and supplies no admission for the exception by itself.
 
-The current Foresight native roster contains eighteen Incoming records: fourteen selected execution packets, retained field/mood/automatic aggregate parents, and the separate three-point selection predecessor `b5f2ba9e-8d67-4c73-9919-e275983aca87`. Selection is outside the fourteen-packet execution total; it is included in the native roster count and retains its existing relationships. Earlier fourteen-card creation remains history; calibration `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` and source-rights `5ce9c975-1d30-4679-b607-e2dcd76f8192` are first-class initial Markdown with native readback/comment, not an invented creation event. Physical source execution now allocates16 plus separately estimated existing source-rights qualification2 and calibration8, atomic8, encounter3, scoped graph5, feedback5, mood transition/persistence3 and appraisal/consumer3, deployment5, served proof5 and closeout2: proposed total65 plus separate selection3; prior48 remains history. Earlier45/44/36 totals remain estimate history. Native Rheos classifies original field `ff3e628b-cd5c-4a89-a397-42cc88dbde70` through native category=aggregate-history and an explicit non-additive comment, preserving8/type/relationships and broader obligations. Conditional type=epic correctly refused without mutation because current children bind the character epic; no graph/type/aggregate-points adoption is claimed. Field8/mood5/automatic5 are containing history and excluded; do not add any containing-story/epic estimate to exact selected execution IDs.
+The current Foresight native roster contains eighteen Incoming records: fourteen selected execution packets, retained field/mood/automatic aggregate parents, and the separate three-point selection predecessor `b5f2ba9e-8d67-4c73-9919-e275983aca87`. Selection is outside the fourteen-packet execution total; it is included in the native roster count and retains its existing relationships. Earlier fourteen-card creation remains history; calibration `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` and source-rights `5ce9c975-1d30-4679-b607-e2dcd76f8192` are first-class initial Markdown with native readback/comment, not an invented creation event. The current independently reviewed Foresight proposal allocates physical source execution21 (ABI8 + forces5 + contact8), separately estimated existing source-rights qualification2 and calibration8, atomic8, encounter3, scoped graph5, feedback5, mood transition/persistence3 and appraisal/consumer5, deployment5, served proof8 and closeout2: the same fourteen execution packets propose75 plus separate selection3. Native read-task confirms ABI8, appraisal/consumer5 and served proof8 remain Incoming. This is the current estimate proposal, not Ready or aggregate adoption; prior65/62/50/48 remain history. Earlier45/44/36 totals remain estimate history. Native Rheos classifies original field `ff3e628b-cd5c-4a89-a397-42cc88dbde70` through native category=aggregate-history and an explicit non-additive comment, preserving8/type/relationships and broader obligations. Conditional type=epic correctly refused without mutation because current children bind the character epic; no graph/type/aggregate-points adoption is claimed. Field8/mood5/automatic5 are containing history and excluded; do not add any containing-story/epic estimate to exact selected execution IDs.
 The mood split refines existing work and independently proposed estimates,
 not an adopted increase or new behavior/prerequisite. Independent fair estimate/
 reuse/type/aggregation review through Rheos precedes Ready. No subtraction from
@@ -628,18 +628,18 @@ remain mandatory before RED.
 | graph | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` | 5 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | None |
 | field-history | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | 8 (native aggregate-history category; excluded) | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701`, `6eb77110-8cf4-44d5-a242-f495d25d6aaf`, `b5f2ba9e-8d67-4c73-9919-e275983aca87` (broader history; excluded) |
 | source-rights | `5ce9c975-1d30-4679-b607-e2dcd76f8192` | 2 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `b5f2ba9e-8d67-4c73-9919-e275983aca87` |
-| abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 3 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `b5f2ba9e-8d67-4c73-9919-e275983aca87`, `5ce9c975-1d30-4679-b607-e2dcd76f8192` |
+| abi | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` | 8 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `b5f2ba9e-8d67-4c73-9919-e275983aca87`, `5ce9c975-1d30-4679-b607-e2dcd76f8192` |
 | forces | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` | 5 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2` |
 | contact | `ba078119-482c-49dc-bd18-c2dfcaad9024` | 8 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2eebbcf3-875d-4b7e-aad8-50a1c46472d2` |
 | calibration | `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` | 8 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `ba078119-482c-49dc-bd18-c2dfcaad9024` |
 | atomic | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` | 8 | `ff3e628b-cd5c-4a89-a397-42cc88dbde70` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `a0176ec0-0616-4d7f-86e1-e6cf9a160a7a`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `ba078119-482c-49dc-bd18-c2dfcaad9024` |
 | mood-state | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
-| mood-consumer | `5450c07d-1e90-4640-90e9-995f1e32d28a` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
+| mood-consumer | `5450c07d-1e90-4640-90e9-995f1e32d28a` | 5 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 (aggregate history; excluded) | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `5450c07d-1e90-4640-90e9-995f1e32d28a` |
 | automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback`, `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` |
 | feedback | `deliver-outcome-attributed-once-only-graph-feedback` | 5 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 5 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback`, `4f4c7cf6-9be8-47b9-b03a-be235c4dd519` |
-| causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 5 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
+| causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 8 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
 | closeout | `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` | 2 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` |
 
 Graph read completion supplies ABI and atomic inputs without waiting for its
@@ -1175,3 +1175,23 @@ obligations; these remain proposed contracts and future implementation fixtures.
 The same finite limits, authority owners, source qualification and native
 readiness gates remain. No solver/codec/rebuild fixture was executed by these
 declaration edits. Preserve original reviews, native history and ledgers.
+
+
+## Current parser boundary and coherent estimate mirror
+
+Native Codex review5537877682, completed18:15:47UTC on abce, found two more
+existing qualification defects. Root4286659389 demonstrates that a second
+standard edn/read consumes a trailing reader-discard form and returns EOF.
+The existing isolated job now validates the actual source remainder after the
+one standard-reader map: only EDN whitespace, commas and line comments remain.
+It rejects ordinary extra forms and discarded/nested-discard forms, while
+retaining valid marker strings/comments and Unicode whitespace. Eight built-in
+controls and seven actual isolated step cases execute this boundary; this is
+parser qualification only, with no kernel/codec/rebuild domain proof.
+
+Root4286659397: the operative roster summary and identity table now agree with
+the same75-point Foresight proposal (ABI8, appraisal/consumer5, served8). Native
+read-task confirmed all three current Incoming estimates. Physical source21
+and every selected packet are counted once; selection3 and containing parents
+remain separate. Earlier65 and the dated handoff below remain history. This
+mirror changes no native card, point, relationship, scope or readiness.

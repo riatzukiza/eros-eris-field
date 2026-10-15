@@ -39,13 +39,18 @@ jobs:
           test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
           test -z "$(git status --porcelain --untracked-files=all)"
           bb --config /dev/null /dev/stdin <<'CLJ'
-          (require '[clojure.edn :as edn] '[clojure.java.io :as io])
+          (require '[clojure.edn :as edn] '[clojure.java.io :as io]
+                   '[clojure.string :as str])
           (defn read-single-map! [reader label]
             (let [eof (Object.)
                   value (edn/read {:eof eof} reader)]
               (assert (map? value) (str "Expected an EDN map: " label))
-              (assert (identical? eof (edn/read {:eof eof} reader))
-                      (str "Unexpected trailing EDN form: " label))
+              ;; A second edn/read silently consumes reader-discard forms.
+              ;; After the one map, inspect the remaining source itself: only
+              ;; standard EDN whitespace, commas and line comments may remain.
+              (assert (every? #(or (= \, %) (Character/isWhitespace (char %)))
+                              (str/replace (slurp reader) #";[^\r\n]*" ""))
+                      (str "Unexpected trailing EDN source: " label))
               value))
           (doseq [[label source accepted?]
                   [["plain map" "{:safe true}" true]

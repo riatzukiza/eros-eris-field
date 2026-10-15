@@ -613,3 +613,13 @@
   spore: none
   receipt-refs: cephalon-field-canonical-keys-specific-rebuild-reasons-completed-recall-correction-20261015
   note: Require unique strictly increasing complete encoded keys in every tagged map and reject duplicate required/nested keys before map construction/hashing/admission. Preserve shared input/trace/work/continuation reasons in the rebuild closed union; generic rebuild code is limited to its own tail/event/quanta/cardinality caps. Inventory every retained completed/restored recall result even when active folds are empty; reconstruct under exact current authority or explicitly invalidate/remove exposable payload, return stale on invalidated reads, and refuse/quarantine if safe invalidation is unestablished. Declare completed-horizon/revoke/checkpoint/rebuild/read controls plus permitted-result positive; these fixtures remain future work, not executed solver proof. All fixes are within existing codec, finite bounds and revocation scope, with no new points/edges/readiness/runtime/paid/credential or spore. Correct prior custody134 and commentary: first100 native roots had0unresolved but complete106 has3; never rewrite old custody. Hold concrete owned correction locally until actual current Codex full attempt is terminal; no cancellation, stale-head full CodeRabbit request or premature Fixed. GoalACTIVE/heartbeat humanPAUSED/live0of3.
+
+- ts: 2026-10-15T18:23:46.891Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/B1/field-source-qualification
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-parser-discard-red-green-and-current-estimate-mirror-20261015
+  note: Within existing qualification scope, standard clojure.edn still reads the sole map; raw remaining source must contain only EDN whitespace/commas/line comments, so reader-discard syntax cannot masquerade as EOF. Valid marker strings/comments and Unicode whitespace remain supported. Preserve isolated contents-read job, no-secrets/private-mirror disablement and all review/publication guards. Correct the initial operator invocation/RED-message error through ordinary54e9eea history and this new receipt; do not amend or rewrite it as a provider/domain failure. Mirror the existing current75 proposal in the operative table/summary, physicalsource21, with earlier65 historical and selection3/aggregates separate. No adopted estimate, native Ready, new scope/points/dependencies, source/kernel implementation, runtime/paid/model/credential/heartbeat or spore change. Actual current abce reviewer attempt is terminal before the grouped next source push; previous approvals remain historical afterward. GoalACTIVE/live0of3.
