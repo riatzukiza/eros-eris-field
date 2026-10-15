@@ -289,7 +289,14 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    revision-bound input with no default. Any invalid calibration or unsafe
    intermediate refuses the entire unchanged transition. Pruning retains
    immutable contribution/event provenance and an explicit prune observation;
-   it does not erase admission/effect receipts or ownership.
+   it does not erase admission/effect receipts or ownership. Traverse the union
+   of prior-cell and current-deposit keys in lexicographic complete-key order:
+   scope revision by exact unsigned UTF8 bytes, then layer index, signed cell x
+   and signed cell y by numeric integer comparison. Emit each prune observation
+   in that traversal order after its cell decision; never persistent-map or
+   serialized-number lexical order. A multi-cell pruning fixture inserts the
+   same keys in reversed/map-layout orders and requires an identical exact
+   ordered prune trace, including negative cell indices and numeric 2 versus 10.
 8. The kind speed cap is finite nonnegative, in wu/s. Its rule is
    `C(v)=v*min(1, max-speed_kind/norm(v))`, with `C(0)=0`; a zero cap returns
    zero velocity. Overflow refuses unchanged state. Record both cap stages'
@@ -388,6 +395,20 @@ store reset, historical hash/cursor edit or invalid buffer substitution qualifie
 Bound fixture storage and snapshot work under the existing disk/concurrency
 rules; this declares future tests, not a store clone performed now.
 
+Each executed quantum has one schedule-local stable `:step-id`: the exact safe
+integer `:kernel-time-us` at that quantum's end boundary (prior kernel time plus
+10,000 microseconds). It is scoped to the same admitted immutable kernel history;
+existing owner/scope/effect identity supplies the outward namespace. Calculate
+and validate it before committing that substep and record it on every contact
+observation. Overflow refuses the unchanged whole transition. Advancing the
+same admitted schedule in one call, split calls or later `catch-up` yields the
+same ordered step IDs and unordered-pair contact identities. Restore preserves
+kernel time and the recorded schedule; zero-time/no-op, observations, read,
+emission, API-call count, wall UTC and event-cursor allocation cannot mint or
+advance step IDs. Include split/catch-up/restore/zero-time contact identity
+fixtures and once-only outward effect replay. This is identity within one
+history, not a global uniqueness claim across independent histories.
+
 OpenPlanner owns persistence and identity-safe projection; Knoxx owns its stored
 principal, mood and prompt composition. A selected write count, in-memory map,
 API200 or writer-returned snapshot is not independent persisted readback.
@@ -415,8 +436,13 @@ with a clean permitted-history control: remaining authorized contributions must
 survive and revoked pressure/trail influence must disappear from subsequent
 motion, contact and inclusion. Successful bounded rebuild is required where
 complete admissible history exists. Missing or ambiguous reconstruction inputs
-refuse unchanged/quarantined state before sampling; filtering display, retagging
-the old aggregate or zeroing all fields cannot pass. Keep this selected
+make the pure transition return exactly its typed unchanged-prior-state refusal;
+it does not mutate that state into a quarantined alternative. The outer adapter
+must separately quarantine the retained snapshot reference or refuse to load it,
+blocking every causal sample/contact/inclusion until a successful authorized
+rebuild. Retained bytes remain inspectable provenance. Test pure byte-identical
+refusal separately from adapter no-causal-use enforcement; filtering display,
+retagging the old aggregate or zeroing all fields cannot pass. Keep this selected
 revocation case in the finite proof; broader sustained revocation/restart remains
 later work.
 
@@ -495,9 +521,14 @@ Primary references: [ECMAScript exponential](https://tc39.es/ecma262/multipage/n
    hidden contributor variation
    changes no authorized result. Production calibration remains separately
    qualified before live use; fixture values are never implicit defaults.
-6. Actual Knoxx consumption demonstrates field-to-contact-to-inclusion causality,
-   separate persisted/consumed mood and the same actual principal/revisions in
-   the maker prompt. Source fixtures alone do not complete B1/B2/B3.
+6. The mood-state predecessor completes at its deterministic transition,
+   atomic persistence and independent changed-state/revision readback, without
+   waiting for appraisal or the blocked runtime consumer. The separate
+   mood-consumer owns validated bounded appraisal and actual recall/prompt
+   consumption. Actual Knoxx consumption in the served-proof successor then
+   demonstrates field-to-contact-to-inclusion causality, separate persisted and
+   consumed mood, and the same actual principal/revisions in the submitted
+   maker prompt. Source fixtures alone do not complete B1/B2/B3.
 
 ## Dependencies, estimates and later obligations
 
@@ -508,6 +539,20 @@ finite loop completion may not. Existing whole-story edges remain until reviewed
 replacement interfaces are applied through Rheos; no larger task is marked Done
 from this subset. The selected kernel needs standalone build/license adoption,
 complete calibration and current source/consumer qualification before deployment.
+These are packet acceptance obligations: ABI `d68344c4-f18b-4b96-8585-bd8f7ac7c6a2`
+owns the standalone compiled build/facade/dependency contract and actual selected
+bytes' source-rights/license/notices decision before extraction/distribution;
+new library LGPL-3.0-or-later does not relicense ungranted historical bytes. Contact
+`ba078119-482c-49dc-bd18-c2dfcaad9024` consumes force calibration and completes
+one revisioned artifact with all force/contact/bounds/layer/threshold/radius/
+restitution/half-life/noise/prune/saturation values and finite configured load/
+time/memory/rejection evidence, without requiring storage or live deployment.
+Deployment `885a4b34-74fb-4e4e-a42a-6dbb54d54829` independently verifies those
+completed artifacts, exact currently qualified Eros/Eris/OpenPlanner/Knoxx and
+Foresight source/consumer merges, compiled hashes/configuration and applicable
+promotion/rollback gates before any served change. Missing calibration or
+unqualified source refuses deployment; prose or an earlier packet's fixture
+constants cannot supply adoption.
 The signed field-index coordinator amendment is satisfied by reviewed decision
 `020d97fecae4a8d0d277b9b2695d9482620b4a76` and actual merge
 `8c649fee2e95e5ec6b5304a3351a0e16fca60533`. Current owning-plan review and
@@ -545,7 +590,7 @@ remain mandatory before RED.
 | mood-state | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2` |
 | mood-consumer | `5450c07d-1e90-4640-90e9-995f1e32d28a` | 3 | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | mood | `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795` | 5 (aggregate history; excluded) | `4cac8ac8-1a9f-441d-ac87-aa09f874eb57` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `7f7b6b5b-2df1-4e52-a167-8e631ca598e4`, `5450c07d-1e90-4640-90e9-995f1e32d28a` |
-| automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback` |
+| automatic | `2df3d26b-394a-436d-9e02-fe18a55132dd` | 5 (aggregate history; excluded) | `5ea872c3-1db4-47c5-a63d-d49f99f79497` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `deliver-outcome-attributed-once-only-graph-feedback`, `7bdedd43-30a2-41b6-8f5c-e5c3aa5e9f71` |
 | feedback | `deliver-outcome-attributed-once-only-graph-feedback` | 3 | `a1e9d6af-0233-4dcb-9677-5c76fa9a2701` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b` |
 | deployment | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` | 3 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `1eb3aa1f-53d2-4a6a-828c-57ffe990e23b`, `2f4421ee-2e48-405e-96d2-fee1a5597ff2`, `8bcaa0f3-37ec-44e2-8f20-4798dfc4b795`, `deliver-outcome-attributed-once-only-graph-feedback` |
 | causal | `f503ae5a-e414-4da8-a8d4-328a7218bcf3` | 5 | `2df3d26b-394a-436d-9e02-fe18a55132dd` | `63a0e4ff-353f-4c90-ab8a-7241d958d54c` | `885a4b34-74fb-4e4e-a42a-6dbb54d54829` |
@@ -557,7 +602,10 @@ feedback; causal proof depends on deployment; terminal closeout depends on
 causal proof. Atomic persistence feeds the independently completable mood
 transition/persistence interface; the separate bounded appraisal/actual-consumer
 child consumes it and the scoped graph interface. The mood parent integrates
-both; the automatic parent integrates deployment/proof/closeout. These
+both; the automatic parent's additional terminal-closeout dependency prevents
+its completion before deployment/proof/closeout. Children have parent links,
+not dependencies on the automatic parent, so this introduces no dependency
+cycle. These
 edges are observed initial planning state, not installed readiness/admission.
 The owning Foresight plan and this source plan retain independent gates.
 

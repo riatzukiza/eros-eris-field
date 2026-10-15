@@ -159,6 +159,13 @@
                        :separated-pair :no-observation
                        :order :canonical-pair-order
                        :identity [:step-id :exact-unordered-pair]
+                       :step-id {:value :exact-safe-integer-substep-end-kernel-time-us
+                                 :derivation :prior-kernel-time-plus-quantum-us
+                                 :namespace :same-admitted-immutable-kernel-history
+                                 :advance-split-catch-up-restore :identical-recorded-schedule
+                                 :zero-time-and-non-time-operations :no-new-step
+                                 :call-counter-wall-utc-event-cursor :not-identity
+                                 :overflow :whole-transition-unchanged-refusal}
                        :cross-substep-suppression :none
                        :repeat-replay-effect-or-feedback :forbidden
                        :fixture :penetration-through-next-substep
@@ -215,6 +222,12 @@
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal}
  :causal-proof [:admitted-encounter :attributed-deposit :sampled-vector
                 :force-and-velocity :trajectory-and-contact :consumed-memory]
+ :cell-traversal {:keys :union-of-prior-and-current-deposit-keys
+                  :order [:scope-revision-unsigned-utf8 :layer-index-numeric
+                          :signed-cell-x-numeric :signed-cell-y-numeric]
+                  :prune-observations :same-canonical-complete-key-order
+                  :persistent-map-and-serialized-number-order :forbidden
+                  :fixture :multi-cell-pruning-reversed-insertion-same-exact-trace}
  :paired-case {:kind :lower-level-pure-kernel-intervention
                :not-proof-of [:admitted-persisted-control :restore :actual-live-maker]
                :fixed [:principal :graph :query :embeddings :configuration
@@ -265,7 +278,9 @@
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :missing-or-ambiguous-input :unchanged-refusal-or-quarantine-before-sample
+  :missing-or-ambiguous-input :pure-typed-unchanged-prior-state-refusal
+  :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
+  :pure-quarantine-state-mutation :forbidden
   :forbidden [:display-only-filter :old-aggregate-retag :zero-all-fields :rewrite-old-history]}
  :consumer {:owner :knoxx :actual-stored-principal :required
             :physical-causal-trace :actual-automatic-recall-and-provider-prompt

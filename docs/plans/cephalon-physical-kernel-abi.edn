@@ -36,7 +36,11 @@
          :max-substeps-per-call 100 :carry :exact-residual-and-backlog
          :zero :exact-no-op :catch-up :distinct-operation-no-new-time
          :event-time :ordered-kernel-time-boundaries
-         :host-utc :observation-provenance-only}
+         :host-utc :observation-provenance-only
+         :step-id :exact-safe-substep-end-kernel-time-us-within-admitted-history
+         :step-id-call-partition-or-cursor-dependence :forbidden
+         :step-id-zero-time-or-observation-advance :forbidden
+         :step-id-split-catch-up-restore :identical-recorded-schedule}
  :seed {:sampler :xorshift32 :shifts [13 17 5]
         :range [1 4294967295] :draw-counter :exact-safe-integer
         :noise :lazy-2d-simplex :permutation :qualified-seeded-table}

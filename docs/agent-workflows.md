@@ -139,13 +139,13 @@ runner or process compromise, or execute physical behavior.
 ## Current enabled toolchain inspection — 2026-10-15 UTC
 
 The current caller enables `setup_eta_mu_toolchain: true` for standard Babashka
-EDN parsing. This supersedes the October9 disabled-setup observation above. The
-shared workflow remains exactb03cb58407cc333b7cabd77431842d44f0deb415; caller
+EDN parsing. This supersedes the October 9 disabled-setup observation above. The
+shared workflow remains exact b03cb58407cc333b7cabd77431842d44f0deb415; caller
 Muse/agents/OpenCode selectors and explicit secret mappings remain unchanged.
-The enabled path installs declared Java21/Clojure1.12.5.1654/Babashka1.13.219/
-clj-kondo2025.10.23/pnpm10.14.0 plus configured Node22. The caller's custom gate
-script replaces default dependency-install gates. Actual producer116163403965
-completedSUCCESS, declaring bb1.13.219 and proposed_abi_parse exit0.
+The enabled path installs declared Java 21/Clojure 1.12.5.1654/Babashka 1.13.219/
+clj-kondo 2025.10.23/pnpm 10.14.0 plus configured Node 22. The caller's custom gate
+script replaces default dependency-install gates. Actual producer 116163403965
+completed SUCCESS, declaring bb 1.13.219 and proposed_abi_parse exit 0.
 
 Unlike the old skipped path, credential detection now receives the existing
 ETA_MU_APP_ID and ETA_MU_APP_PRIVATE_KEY secret mappings and, if both are present,
