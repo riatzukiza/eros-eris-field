@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-every-causal-entry-current-authority"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-wire-completed-recall-rebuild"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -303,7 +303,10 @@
            :string ["str" :exact-scalar-string]
            :keyword ["kw" :namespace-or-empty-string :name]
            :vector ["vec" :ordered-encoded-values]
-           :map ["map" :pairs-sorted-by-canonical-encoded-key-unsigned-utf8]}
+           :map ["map" :pairs-strictly-increasing-by-canonical-encoded-key-unsigned-utf8]}
+  :map-keys {:order :strictly-increasing-complete-encoded-key-unsigned-utf8
+             :duplicates :whole-unchanged-refusal-before-map-construction-hashing-or-admission
+             :scope :every-nested-tagged-map}
   :string-escaping {:quote :backslash-quote :backslash :double-backslash
                     :controls :lowercase-u00xx-for-u0000-through-u001f
                     :other-scalars :exact-utf8-no-normalization-no-optional-ascii-escaping}
@@ -312,7 +315,8 @@
   :byte-count :complete-envelope-including-tags-separators-brackets-and-escapes
   :counter :before-each-byte-or-record-exposure-in-the-whole-call-work-budget
   :alternate-edn-json-or-native-printer :cannot-determine-admission
-  :fixtures [:map-insertion-order :multibyte-and-control-strings :positive-negative-zero
+  :fixtures [:map-insertion-order :duplicate-map-key-refused :nonincreasing-map-key-refused
+             :multibyte-and-control-strings :positive-negative-zero
              :finite-binary64-vectors :complete-envelope-exact-one-over-bytes]}
  :input-wire-codec
  {:version "finite-field-input/1"
@@ -324,7 +328,9 @@
   :operation :exact-keyword-from-owning-abi-functions
   :arguments :ordered-vector-of-all-operation-arguments-in-exact-owning-abi-input-order
   :values :exact-finite-field-trace-1-tagged-algebra-including-keywords-maps-vectors-and-finite-binary64-bits
-  :maps :pairs-sorted-by-complete-canonical-encoded-key-unsigned-utf8
+  :maps :pairs-strictly-increasing-by-complete-canonical-encoded-key-unsigned-utf8
+  :duplicate-map-keys :whole-unchanged-refusal-before-map-construction-hashing-or-admission
+  :required-key-duplicates :operation-or-arguments-refused-never-first-or-last-wins
   :strings :exact-trace-1-scalar-validation-and-escaping-no-unicode-normalization-or-optional-ascii-escaping
   :numbers :exact-trace-1-binary64-including-distinct-signed-zero-nonfinite-refused
   :prior-state-checkpoint-configuration-and-tail :included-in-complete-arguments-not-unmetered-side-input
@@ -342,6 +348,8 @@
   :over-budget :whole-unchanged-refusal-with-finite-input-byte-limit
   :work :charge-all-encoding-validation-byte-and-order-work-under-existing-whole-call-or-rebuild-counter
   :fixtures [:empty-and-complete-operation-envelope-goldens :map-insertion-order-equality
+             :duplicate-operation-key-refused :duplicate-arguments-key-refused
+             :duplicate-nested-map-key-refused :nonincreasing-encoded-map-key-refused
              :multibyte-control-quote-and-backslash-goldens :signed-zero-bits
              :all-arguments-including-prior-state-and-rebuild-tail-counted
              :exact4194304-complete-bytes :one-byte-over
@@ -627,6 +635,7 @@
   :abi-operation :rebuild-revocation
   :abi-operation-version "finite-revocation-rebuild/4"
   :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds
+            :completed-and-restored-recall-results-under-recall-requests
             :complete-admitted-pending-boundary-queue]
   :active-inclusion-folds
   {:before :every-next-causal-use-including-restored-or-completed-inclusion
@@ -635,6 +644,16 @@
    :unreconstructable :invalidate-and-refuse-or-quarantine-before-use
    :forbidden :retag-or-reuse-an-old-fold-result-under-new-authority
    :control :revoke-memory-after-first-witness-then-checkpoint-restore-and-finish-horizon}
+  :completed-recall-results
+  {:inventory :all-retained-recall-requests-including-completed-horizons-with-no-active-fold
+   :reconstruct :result-ids-reasons-and-derived-influence-from-clean-currently-permitted-history
+   :unreconstructable :explicitly-invalidate-result-before-success-and-refuse-read-with-stale-recall-authority
+   :invalidation :remove-exposable-recall-payload-and-retain-original-request-and-immutable-history
+   :unsafe-or-unestablished-invalidation :whole-unchanged-refusal-and-outer-quarantine
+   :read :requires-this-result-reconstructed-under-exact-current-authority-not-only-state-binding
+   :forbidden :copy-or-retag-completed-result-or-its-checkpoint-under-new-authority
+   :control :finish-horizon-with-empty-active-folds-then-revoke-rebuild-and-read-without-revoked-ids-or-reasons
+   :permitted-control :unrelated-authorized-completed-result-retained-after-qualified-reconstruction}
   :source [:immutable-complete-ordered-boundary-event-history :compatible-verified-clean-checkpoint]
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
@@ -678,10 +697,19 @@
                                 :canonical-order-work "finite-order-work/1"
            :counter :before-every-operation-across-entire-private-rebuild
            :count-byte-preflight :before-replay :effects :none-before-complete-authorization-and-bounds
-           :exhaustion {:status :refused :code :revocation-rebuild-budget-exceeded
+           :shared-limit-refusals {:input-wire-id-or-other-string :finite-input-byte-limit
+                                   :trace-records-or-utf8-bytes :finite-trace-budget-exceeded
+                                   :work-units :finite-work-budget-exceeded
+                                   :continuation :finite-state-continuation-byte-limit}
+           :exhaustion {:status :refused
+                        :rebuild-specific-code :revocation-rebuild-budget-exceeded
+                        :rebuild-specific-bounds [:tail-events :tail-canonical-clio-utf8-bytes :kernel-quanta
+                                                  :entities :bonds :scoped-layer-cells]
+                        :shared-bounds :preserve-shared-limit-refusals-never-remap-to-rebuild-specific-code
                         :prior-state :byte-identical :adapter :quarantine-before-any-causal-use}
            :outer-timeout :no-accepted-replacement-and-quarantine
-           :controls [:each-exact-cap :each-one-over]}
+           :controls [:each-exact-cap :each-one-over-with-other-bounds-valid
+                      :each-shared-overflow-keeps-its-declared-specific-reason]}
   :missing-or-ambiguous-input :pure-typed-unchanged-prior-state-refusal
   :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
   :pure-quarantine-state-mutation :forbidden

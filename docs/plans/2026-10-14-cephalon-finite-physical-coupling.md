@@ -831,7 +831,7 @@ Before timing, freeze reviewed fixture bytes/layouts/seed42, calibration and sou
 
 A dedicated fixed causal fixture must produce at least one different eligible contact and at least one different actually included authorized memory beyond the vector seed between permitted field-intervention arms, with every other declared input fixed. A finite nonzero vector alone or saturation hiding every downstream change fails calibration. Retain complete force/contact/bounds/layer/threshold/radius/restitution/half-life/noise/prune/saturation values, domains, source/review and revisions. Missing values fail; no library default or source pin adopts calibration.
 
-The current finite revocation profile `finite-revocation-rebuild/4` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Pure rebuild count/byte/step/work exhaustion returns refused/revocation-rebuild-budget-exceeded with byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
+The current finite revocation profile `finite-revocation-rebuild/4` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
 
 Embedding production failure returns failed/embedding-failed with a bounded typed category from timeout,unavailable,rate-limited,invalid-output,internal-error,unclassified. The existing qualified embedding-provider seam consumed by atomic8 owns versioned mapping `embedding-failure-category/1`; consumers retain that category/mapping revision verbatim rather than reinterpret errors. At that protected seam, shape validated actual HTTP status and explicit transport-timeout/unavailable, invalid-output and internal-failure indicators from the actual provider outcome. Do not parse or retain exception prose. If the bound indicator attestation is unavailable or malformed, return unclassified before evaluating rules1–5. Otherwise apply FIRST matching rule: (1) HTTP429 => rate-limited; (2) explicit timeout OR HTTP408/504 => timeout; (3) explicit transport-unavailable OR other HTTP500–599 => unavailable; (4) explicit validated invalid-output => invalid-output; (5) explicit validated internal-failure => internal-error; (6) no match, unavailable/malformed attestation or unknown => unclassified. A contradictory lower-priority flag cannot override the first match. Tests require timed-out429=>rate-limited,503+invalid-output=>unavailable,timeout+invalid-output=>timeout,invalid-output+internal=>invalid-output, and missing/unknown=>unclassified, with exact stable replay/category/revision and no raw-string heuristics. Atomic8 owns delivery/qualification at the actual existing provider seam as part of its failure handling, not a second classifier in Eros/Eris or another unowned prerequisite.
 
@@ -895,8 +895,10 @@ refuse identically without accepted partial inclusion or changed prior state.
 A missing, forged or reset trace-byte count refuses. These are required future
 source fixtures, not executed implementation tests or a larger horizon budget.
 
-Revocation rebuilding includes active/restored inclusion folds as well as fields,
-trails and affected world projection. A retained first witness or dedup entry is
+Revocation rebuilding includes active/restored inclusion folds and every retained
+completed/restored recall result under :recall-requests, as well as fields,
+trails and affected world projection. Completed results remain causal state even
+when the active inclusion-fold map is empty. A retained first witness or dedup entry is
 causal state: reauthorize/reconstruct it before the next inclusion or recall use,
 or invalidate and refuse/quarantine it when reconstruction is unestablished.
 The existing bounded whole-rebuild limits cover all fold work; no independent
@@ -933,7 +935,10 @@ terminator/absent-branch charges at exact and one-short work budgets.
 counter. Its complete UTF8 JSON envelope is
 `["finite-contact-inclusion-result/1", encoded-result-map]`, using precisely
 the existing finite-field-trace/1 tagged value algebra, canonical map-key
-ordering and scalar escaping. The closed payload contains only
+ordering and scalar escaping. Encoded keys in every nested tagged map must be
+strictly increasing by complete unsigned UTF8 bytes and unique; duplicate keys
+refuse before map construction, hashing or admission, with no first/last-wins
+decoding. The closed payload contains only
 `:included-memory-ids` and `:inclusion-reasons`: unique canonical memory IDs
 in first-witness order, paired one-for-one with the closed reason maps declared
 in the contact fold. All ten reason keys and their actual qualified values
@@ -971,11 +976,18 @@ Consume qualified Axxium decisions/versions and Clio complete cursor/history
 bindings; the pure kernel does no authorization or history I/O. Validate all
 restore artifact/configuration/cursor obligations, both consumed/admitted
 cursors and every pending identity/schedule/disposition. Reconstruct retained
-fields, trails, affected world motion/contact projection and active/restored
-inclusion folds. Success returns the complete rebuilt state, qualified
+fields, trails, affected world motion/contact projection, active/restored
+inclusion folds and every retained completed/restored recall result. Reconstruct
+each completed result from clean currently permitted history under the exact
+current authority, or explicitly invalidate it before success: remove exposable
+IDs/reasons/derived influence while retaining original request and immutable
+history. Reads of an invalidated result return stale-recall-authority with no
+payload; changing only the state authority binding cannot qualify that result.
+Unsafe or unestablished invalidation refuses the whole rebuild unchanged and
+requires outer quarantine. Success returns the complete rebuilt state, qualified
 replacement checkpoint, both verified cursors, reauthorized complete pending
-queue, new scope/authority/projection/field bindings, complete folds and budget
-accounting atomically. Missing/unknown/ambiguous/gapped/conflicting history,
+queue, new scope/authority/projection/field bindings, complete folds, completed
+result reconstruction/invalidation dispositions and budget accounting atomically. Missing/unknown/ambiguous/gapped/conflicting history,
 contaminated or unestablished baseline, failed authority/binding or excess
 returns exact unchanged prior state with the declared reason. The unchanged
 128events/1,048,576canonicalClio bytes/64consumed quanta/67,108,864work units,
@@ -1136,3 +1148,30 @@ fields/status/revision and complete non-leakage, and exact continuation-overflow
 rebuild refusal. This is still an unimplemented proposal, not executed domain
 tests or native Ready. The existing physical scope, finite work/time/input
 limits and all actual immutable provenance remain unchanged.
+
+
+## Three current native contract corrections — 2026-10-15
+
+Native Codex review5537144039 on abce identified three existing codec/rebuild
+obligations; these remain proposed contracts and future implementation fixtures.
+
+- Root4286093600: finite-field-trace/1 and finite-field-input/1 require strictly
+  increasing, unique complete encoded map keys at every depth. Refuse duplicate
+  :operation, :arguments and nested keys before constructing a map, hashing or
+  admitting an invocation; first-value and last-value decoding are forbidden.
+  Add duplicate-required-key, nested duplicate and nonincreasing-key controls.
+- Root4286093613: the rebuild closed refusal union includes the shared input,
+  trace, work and continuation codes. The generic rebuild reason applies only
+  to its own event/tail/quanta/cardinality bounds. No shared code is remapped.
+  Independent exact/one-over controls hold other bounds valid and assert the
+  specific reason, unchanged state and outer quarantine before causal use.
+- Root4286093621: inventory and reconstruct or explicitly invalidate completed
+  recall results under :recall-requests, including when :inclusion-folds is
+  empty. A successful rebuild cannot copy/retag a revoked completed result.
+  Complete a horizon, checkpoint/restore, revoke, rebuild and read: no revoked
+  IDs, reasons or derived influence may escape or reinforce. An unrelated
+  permitted completed result is the positive reconstruction control.
+
+The same finite limits, authority owners, source qualification and native
+readiness gates remain. No solver/codec/rebuild fixture was executed by these
+declaration edits. Preserve original reviews, native history and ledgers.

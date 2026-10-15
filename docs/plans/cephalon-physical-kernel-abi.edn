@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-every-causal-entry-current-authority"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-wire-completed-recall-rebuild"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -190,6 +190,8 @@
                 :before-exposure :verify-request-fold-and-all-retained-causal-influences-under-exact-current-authority
                 :same-scope-with-changed-authority :stale-no-memory-ids-reasons-motion-bonds-or-contacts
                 :changed-binding :requires-complete-qualified-rebuild-result-under-that-exact-current-authority-before-read
+                :completed-result-binding :this-retained-result-must-be-reconstructed-under-exact-current-authority
+                :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
                 :refusal-reasons [:invalid-recall-request :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority]
@@ -226,8 +228,19 @@
    :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
                       :new-scope-and-authority-binding :new-projection-revision :new-field-revision
                       :complete-inclusion-folds :rebuild-budget-accounting
+                      :reconstructed-or-explicitly-invalidated-completed-recall-result-dispositions
                       :verified-consumed-and-admitted-cursors :reauthorized-complete-pending-queue]
-   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds :all-admitted-pending-boundary-events]
+   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds
+             :all-completed-and-restored-recall-results-under-recall-requests
+             :all-admitted-pending-boundary-events]
+   :completed-recall-results {:inventory :every-retained-request-even-when-active-inclusion-folds-are-empty
+                              :reconstruct :clean-currently-permitted-history-under-exact-current-authority
+                              :otherwise :explicit-invalidation-removes-exposable-payload-before-success
+                              :invalidated-read :stale-recall-authority-no-ids-reasons-or-derived-influence
+                              :unsafe-invalidation :whole-unchanged-refusal-and-outer-quarantine
+                              :original-request-and-immutable-history :preserved
+                              :state-binding-retag-alone :never-qualifies-a-result
+                              :control :completed-horizon-revoke-rebuild-read-and-checkpoint-restore}
    :success :complete-authorized-equivalent-of-clean-permitted-history-with-atomic-result-exposure
    :budget-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation"
    :budget {:tail-events 128 :canonical-clio-tail-utf8-bytes 1048576
@@ -236,7 +249,9 @@
             :variable-input-string-and-complete-trace-result-byte-caps :finite-character-load-v2-and-inclusion-result-codec}
    :refusal {:state :exact-unchanged-prior-state :status :refused :reason-revision 1
              :reason :one-of-declared-codes
-             :codes [:revocation-rebuild-budget-exceeded :missing-or-ambiguous-rebuild-history
+             :codes [:revocation-rebuild-budget-exceeded :finite-input-byte-limit
+                     :finite-trace-budget-exceeded :finite-work-budget-exceeded
+                     :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
