@@ -1226,10 +1226,10 @@ finite-field-input/1, including escaped checkpoint strings; underlying snapshot
 bytes or raw Clio bytes alone are insufficient. Raw canonical Clio history
 retains its separate1MiB cap, and the encoded-tail cap must also pass.
 
-The largest declared continuation carrier is rebuild with prior state,
-checkpoint and tail:3*1,048,576+524,288=3,670,016bytes, below4,194,304. Restore
-has at most prior-state and checkpoint carriers; read/catch-up/checkpoint have
-one. Their remaining arguments include actual current authority, configuration,
+The largest declared continuation carriers are rebuild and restore/2, each
+with prior state, checkpoint and complete history/closure:
+3*1,048,576+524,288=3,670,016bytes, below4,194,304. Read/catch-up/checkpoint have
+one state carrier. Their remaining arguments include actual current authority, configuration,
 projection, cursors, request IDs and full framing under the aggregate bound.
 Apply these component/aggregate limits to every actual input before use.
 Before any state-producing success, privately encode the complete candidate
@@ -1345,6 +1345,27 @@ read-task confirmed all three current Incoming estimates. Physical source21
 and every selected packet are counted once; selection3 and containing parents
 remain separate. Earlier65 and the dated handoff below remain history. This
 mirror changes no native card, point, relationship, scope or readiness.
+
+## Current restore reconciliation correction — 2026-10-15
+
+Native current Codex root4289000353 identified that authenticating an old
+checkpoint does not retain facts admitted afterward. Public restore/2 now takes
+the independently current Clio horizon and complete counted checkpoint-to-tip
+history/replacement closure. The decoded checkpoint stays private until the
+existing bounded current-authority reconstruction returns the full current
+physical state, both cursors, original pending queue, recall IDs, pending
+feedback, actual acknowledgements and confirmed outcome IDs. No later fact may
+wait for a future revocation or post-return catch-up before it is respected.
+Historical nested replacements use their own recorded preceding horizons, not
+the outer tip; shared checkpoint decoding never calls public restore recursively.
+All existing closure/cap/refusal/admission/fencing requirements apply, including
+any stricter ordinary-call cap; no budget or second reconstruction engine is
+added. No new elapsed time/random draw or external outcome/write/publication/
+acknowledgement is replayed. Future controls restore an older checkpoint after a
+recall/outcome/confirmation/contact and require original identities and retained
+effects with no duplicate write or reinforcement, plus empty-tail success and
+missing/truncated/changing-tip refusal before exposure. These remain proposed
+source fixtures, not executed domain proof or native readiness.
 
 ## Current checkpoint custody and calibration corrections — 2026-10-15
 
@@ -1480,3 +1501,46 @@ reinforcement, prove a synthetic private marker absent, and preserve every norma
 success/refusal. No production fault-injection flag or process-completion guarantee
 is implied. This is still an unimplemented contract requiring source/native Ready/
 RED/GREEN/qualified-artifact/consumer proof, within the same14packets75/ABI8.
+
+
+## Current canonical configuration, RNG and restore precedence — 2026-10-15
+
+The one normative `finite-physical-configuration/1` grammar is the coupling
+EDN `:configuration-schema`, referenced by the ABI and source plan. Every root,
+field, layer, kind, force, contact and noise map is closed, with exact ordered
+vectors and numeric domains. Its coefficient mapping names each actual consumer;
+complete value bytes use the existing trace tagged encoder before SHA256, with
+no envelope/default/host-printer ambiguity. The complete schema/revision/tables
+enter the hash. These explicitly proposed carrier/range/contact-profile choices
+are subject to owning review, not adopted donor mechanics. Qualified forces/noise
+laws and complete reviewed calibration remain predecessors of use. No opaque
+parameter bag or revision label supplies missing coefficients or code authority.
+Per-pair profile selection comes from retained canonical admitted geometry or
+its original recorded boundary input, covered by state/snapshot/history custody;
+automatic enumeration cannot choose by kind or first table entry. Bond coefficients
+and request weights stay in their explicit state/input carriers with complete hash coverage.
+
+ABI `xorshift32/1` fixes sequential left13/logical-right17/left5, unsigned32
+coercion after each stage and post-update output divided by2^32, retained original
+seed/current word/counter and refusal on invalid input/overflow. Twenty independent
+arithmetic words and first-output bit goldens include high-bit seeds. Future
+compiled domain tests must verify them; this does not qualify shuffle/noise/table
+indexing or introduce runtime randomness.
+
+Replacement reconstruction gives applicable once-only facts precedence over an
+older physical target in the existing recall/feedback collections. Exact actual
+request/outcome/effect/payload/principal/scope bindings applicable to each fact and current
+authority/privacy remain required; otherwise refuse/quarantine, never erase the
+guard or mint a new acknowledgement. Test checkpoint→outcome→confirmation→older
+restore before allowing ID reuse, including nested historical replacements.
+Confirmation alone requires an actual successful writer acknowledgement.
+Unconfirmed facts retain pending status; failed writer observations preserve
+their existing refusal and no-reinforcement disposition.
+Restore/2 returns reconciled current cursors, while its input cursor binds the
+checkpoint. A qualified historical restore without a horizon input keeps its
+recorded target/predecessor provenance and is not retroactively upgraded. The
+existing clean-root closure and stricter ordinary-call caps remain. Complete
+restore now includes three large carriers under the unchanged4MiB input bound;
+all other arguments/framing still share512KiB. These are unimplemented source
+contracts and future controls within the same14packets75, with no new operation,
+engine, native estimate/edge/readiness, executed domain proof or live behavior.

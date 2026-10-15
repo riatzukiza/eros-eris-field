@@ -172,8 +172,10 @@ Its exact names and fields require this source plan's review.
   codec or a replacement for Clio event authority. Source qualification of
   the specified bytes/hash and continuation bounds is required before use.
 - `restore` takes the prior state (or an explicit empty state), that snapshot and
-  cursor, separately trusted checkpoint evidence, the current trusted visible
-  projection and physical configuration. The complete validated calibration is
+  cursor, separately trusted checkpoint evidence, the independently current Clio
+  provenance horizon and complete counted post-checkpoint history/replacement
+  closure, the current trusted visible projection and physical configuration.
+  The complete validated calibration is
   retained as `:physical-configuration` in the canonical state and snapshot,
   alongside its revision and canonical hash. `advance`, `catch-up` and every
   causal operation consume those actual values without an external cache or
@@ -207,14 +209,29 @@ Its exact names and fields require this source plan's review.
   Before any causal use it validates kernel/config/hash/scope/projection
   revisions, current grants, snapshot/cursor agreement, exact time accounting,
   seed state/draw counter and attributed causal contributions. It returns the
-  restored state and cursor, or refuses with unchanged prior state and a specific
+  fully reconciled current state and cursor, or refuses with unchanged prior state and a specific
   reason. A mismatched or revoked scope refuses the snapshot; filtering its
   displayed memories cannot authorize retained pressure or trails. The adapter
   may separately admit a fresh current projection through `admit-state`.
-  Restore admits no elapsed time, draws no RNG, performs no storage/publication
-  and does not replay confirmed outcomes. Later ordered replay uses the validated
-  cursor and the existing `advance`/`catch-up` operations; pending feedback keeps
-  its original effect identity and still requires an actual writer acknowledgement.
+  Restore/2 keeps the decoded checkpoint private until the existing bounded
+  history/replacement reconstruction reconciles every operation after its
+  owner-attested covered prefix through the independently current Clio tip.
+  Retain later recall IDs, pending feedback, actual acknowledgement facts and
+  confirmed outcome IDs, as well as physical state, both cursors and the pending
+  queue; an old checkpoint cannot enable a second outcome/write/reinforcement.
+  Replay only the original consumed physical and seed schedule. Reconstruct a
+  historical nested replacement through its own recorded preceding horizon,
+  never the outer current tip; shared checkpoint decoding does not call public
+  restore recursively. All work and closure count under existing reconstruction
+  limits and any stricter ordinary-call cap, without a budget reset or increase.
+  Missing, stale, truncated, conflicting or changing history returns revision1
+  `missing-or-ambiguous-rebuild-history` with exact unchanged prior state and no
+  exposed restored result. Qualified owners retain admission/fencing through
+  exposure; unsupported capability refuses. Restore admits no new elapsed time
+  or random draw, performs no storage/publication and never reexecutes an
+  external outcome or acknowledgement. Original immutable admitted facts are
+  reconstructed once, not republished. Pending feedback retains its original
+  effect identity and still requires an actual writer acknowledgement.
 
 JS strings/arrays/objects convert at the adapter boundary to Clojure data. Native
 provider and storage output is untrusted input. Both sides of replaceable seams
@@ -287,9 +304,20 @@ event schedule; it cannot admit new elapsed time or select a new schedule.
    Deposit is `gain-layer * weight-layer * velocity * h`: actual speed changes
    amplitude. Radial saturation and sparse pruning are explicit configured
    observations; retained event provenance permits reconstruction/revocation.
-9. Record nonzero uint32 seed and draw counter. Proposed discrete xorshift32
-   shifts are `13,17,5`, with unsigned output divided by `2^32` and canonically
-   ordered candidates. Lazy 2D simplex uses a qualified seeded permutation and
+9. `xorshift32/1` has exact state `{:initial-seed s :word x :draw-counter n}`.
+   Validate nonzero uint32 seed/word and an exact safe nonnegative counter.
+   Sequentially compute `a=U32(x XOR U32(x<<13))`,
+   `b=U32(a XOR floor(a/131072))`, `y=U32(b XOR U32(b<<5))`.
+   U32 means unsigned modulo2^32 for validated internal integers; right shift
+   is zero-fill, never arithmetic. Store and emit post-update `y`; unit output
+   is exactly `y/4294967296`. Increment once per actual draw, including rejected
+   selection draws; invalid external values or counter overflow refuse without
+   reseeding/coercion, and a refused transition commits neither word nor counter.
+   No read/checkpoint/zero-advance draws or unbounded seed-to-counter validation.
+   ABI goldens give20 independently calculated successive words, including high-bit
+   seeds, and first-draw binary64 unit bits. These are arithmetic references,
+   not executed kernel tests or qualification of shuffle/noise draw placement.
+   Candidate order remains canonical. Lazy 2D simplex uses a qualified seeded permutation and
    pinned gradient table/scales/octaves; the donor identity permutation is not
    adopted as proof of independent seeds. No clock or `Math.random` enters it.
 10. Same-target continuous replay tolerance is
@@ -490,3 +518,50 @@ Actual preparation checks are recorded append-only in `.ημ/receipts.edn`:
 source-manifest byte equality, EDN parse, YAML parse and diff hygiene. They check
 the submitted planning artifacts and workflow syntax. They do not test physics,
 compile the future kernel, validate board readiness or establish deployment.
+
+
+## Canonical configuration and replacement identity precedence — 2026-10-15
+
+Current Codex roots4289000341/4289000362 expose real missing configuration and
+sampler representation. The single normative configuration grammar is
+`cephalon-finite-field-coupling.edn#configuration-schema`, version
+`finite-physical-configuration/1`: every map is closed, vectors ordered and
+numeric types/ranges explicit. It locates all configuration-owned field/layer/
+kind/force/noise/contact coefficients in one complete retained value, encoded with the existing
+trace tagged-value algebra and hashed without a trace-record envelope. State
+revision equals its revision; the digest is exactly64 lowercase hex characters.
+Eight-vector index is the same layer throughout; daimoi weights remain in the
+immutable request, while passive read/deposit vectors belong to configuration.
+One admitted bond carries its own nonnegative strength/rest-length once;
+bond coefficients and request weights retain their declared state/input carriers
+and complete state/snapshot hash coverage.
+Revision-bound contact geometry selects exactly one ID/revision parameter set;
+its recipient kind/radii/restitution must match, with no independent override.
+Automatic eligible-pair enumeration consumes the profile selection retained in
+canonical admitted geometry or its original recorded boundary input. Complete
+state/snapshot/history custody preserves it for replay; kind matching or the
+first table entry cannot supply a missing selection.
+The named force families/ranges, per-bond coefficient carriers, contact-profile
+references and explicit256-entry permutation/gradient/scale/octave carriers are
+**proposed representation choices in this correction**, not recovered qualified
+defaults. Owning source review must accept them; forces/noise laws, table generation/
+indexing and draw placement still require qualification. A revision string does
+not adopt hidden donor formulas, clamps, constants, defaults or arbitrary code.
+
+Restore/2 input cursor identifies the authenticated checkpoint; output cursor
+identifies the reconciled current consumed state, with admitted cursor retained.
+Empty-tail roundtrip remains exact. An older checkpoint is valid input without
+promising historical output. Across every replacement, the physical target is
+reconstructed, but applicable once-only recall/effect/outcome/confirmation facts
+from the qualified provenance prefix survive in existing collections, with exact
+payload/principal/scope matching applicable to each fact variant and current authority/
+privacy; unestablished binding refuses/quarantines. Never erase them solely
+because a target is old or invent an acknowledgement, journal or live effect.
+Actual successful writer acknowledgement is required for confirmation only;
+absent acknowledgement preserves pending status, and a failed writer preserves
+its existing refusal/no-reinforcement disposition.
+Recorded restore/2 uses its own original pre-operation horizon. An actually
+qualified older restore without that input preserves its recorded target and
+uses original owner-qualified predecessor evidence; no synthetic historical
+argument or reinterpretation as restore/2. Existing clean-root requirements apply;
+an authenticated historical digest alone cannot establish clean revocation state.

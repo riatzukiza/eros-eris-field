@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-public-read-failure"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-configuration-rng-restore"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -41,9 +41,38 @@
          :step-id-call-partition-or-cursor-dependence :forbidden
          :step-id-zero-time-or-observation-advance :forbidden
          :step-id-split-catch-up-restore :identical-recorded-schedule}
- :seed {:sampler :xorshift32 :shifts [13 17 5]
-        :range [1 4294967295] :draw-counter :exact-safe-integer
+ :seed {:sampler "xorshift32/1" :shifts [13 17 5]
+        :range [1 4294967295] :draw-counter :exact-safe-nonnegative-integer
+        :state {:closed-keys [:initial-seed :word :draw-counter]
+                :initial-seed-and-word :validated-nonzero-uint32
+                :initialization :word-equals-initial-seed-and-counter-zero
+                :checkpoint :all-three-values-retained-and-hashed}
+        :u32 :modulo-4294967296-of-validated-internal-integer-represented-unsigned
+        :sequential-recurrence ["a = U32(x XOR U32(x << 13))"
+                                "b = U32(a XOR floor(a / 131072))"
+                                "y = U32(b XOR U32(b << 5))"]
+        :right-shift :zero-fill-logical-never-signed-arithmetic
+        :coercion :after-each-xor-and-left-shift-before-next-stage
+        :output {:stored-next-word :y :emitted-integer :y
+                 :unit-binary64 :y-divided-by-4294967296 :pre-update-output :forbidden}
+        :counter :increment-once-per-actual-draw-including-rejected-selection-draws
+        :refused-whole-transition :commit-neither-word-nor-counter
+        :invalid-external-seed-or-state :refuse-never-coerce-modulo-clamp-or-reseed
+        :counter-overflow :refuse-before-exposure
+        :read-checkpoint-and-zero-advance-draws :none
+        :replay :original-qualified-schedule-only-no-new-draws-or-unbounded-seed-to-counter-validation
+        :goldens [{:seed 1 :words [270369 67634689 2647435461 307599695 2398689233]
+                   :first-a 8193 :first-b 8193 :first-unit-bits "3f10808400000000"}
+                  {:seed 42 :words [11355432 2836018348 476557059 3648046016 3759983556]
+                   :first-a 344106 :first-b 344104 :first-unit-bits "3f65a8a500000000"}
+                  {:seed 2147483648 :words [2148024320 2299036804 2861646152 3585606292 1756881985]
+                   :first-a 2147483648 :first-b 2147500032 :first-unit-bits "3fe0010800000000"}
+                  {:seed 4294967295 :words [253983 4228382207 1958451267 4056713434 2049502865]
+                   :first-a 8191 :first-b 8191 :first-unit-bits "3f0f00f800000000"}]
+        :golden-status :independently-calculated-arithmetic-not-executed-kernel-proof
+        :selection-shuffle-noise-indexing-and-draw-placement :separate-reviewed-force-law-obligations-not-defined-by-recurrence-alone
         :noise :lazy-2d-simplex :permutation :qualified-seeded-table}
+ :physical-configuration-contract "docs/plans/cephalon-finite-field-coupling.edn#configuration-schema"
  :field {:layers 8 :layer-indices [0 1 2 3 4 5 6 7]
          :key [:scope-revision :layer-index :cell-x :cell-y]
          :deposit :velocity-amplitude-times-gain-weight-step
@@ -94,7 +123,9 @@
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
                   :mantle-lineage :intent-wallet :emission-id :recall-request-id]
  :bond/required [:id :endpoints :intent :contributions :provenance
-                 :evidence-kinds :force-invariant]
+                 :evidence-kinds :force-invariant :strength :rest-length]
+ :bond/coefficients {:strength :finite-nonnegative :rest-length :finite-nonnegative
+                     :source :one-admitted-logical-bond-never-a-second-global-multiplier}
  :bond/evidence-kinds [:authored :reply :pin :inspiration :contradiction]
  :bond/force-invariant :structural-and-semantic-counted-once
  :collision {:operations [:absorb-full :deflect :exchange-bounded]
@@ -278,7 +309,20 @@
     :identity-dedup :same-qualified-immutable-identity-with-exact-matching-bytes-and-bindings-only
     :missing-conflicting-forward-self-or-cyclic-reference :missing-or-ambiguous-rebuild-history
     :replacement-effect :replace-private-working-state-with-current-authority-reconstruction-of-recorded-target-at-original-boundary
-    :replacement-state :complete-reconstructed-time-rng-cursors-queue-folds-recall-and-feedback-not-added-to-abandoned-branch
+    :replacement-state :complete-reconstructed-physical-time-rng-cursors-queue-and-fold-target-with-once-only-precedence-below
+    :once-only-precedence
+    {:source :complete-qualified-original-provenance-prefix-through-the-applicable-replacement-boundary
+     :collections [:recall-requests :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
+     :rule :reconstruct-applicable-original-idempotency-facts-in-existing-collections-never-erase-them-solely-because-target-checkpoint-is-older
+     :matching :same-exact-original-request-outcome-effect-payload-principal-and-scope-bindings-applicable-to-each-fact-variant
+     :acknowledgement :successful-actual-writer-ack-required-for-confirmation-only
+     :absent-acknowledgement :preserve-pending-status-never-invent-confirmation
+     :failed-writer-observation :preserve-existing-refusal-and-no-reinforcement-disposition
+     :authority-and-privacy :qualified-current-owner-admission-and-dispositions-no-denied-payload-exposure-or-new-authority
+     :unknown-conflicting-or-unestablished-binding :whole-unchanged-refusal-and-outer-quarantine
+     :new-journal-acknowledgement-or-effect-reexecution :forbidden
+     :fixtures [:checkpoint-outcome-confirmation-historical-restore-retains-once-only-identities
+                :changed-payload-or-ack-binding-cannot-reuse-confirmed-id]}
     :historical-output-copy-or-authority-retag :forbidden
     :scheduled-occurrence-dedup :forbidden
     :pure-reference-lookup-or-new-effect-execution :forbidden
@@ -392,12 +436,49 @@
                :canonical-snapshot-hash :lowercase-sha256-of-exact-finite-field-snapshot-1-payload-bytes
                :hash-coverage :complete-state-including-physical-configuration-producing-identity-cursors-pending-events-and-all-inclusion-state
                :authentication :not-created-by-this-pure-operation-requires-independent-qualified-atomic-persistence-evidence}
-  :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor :current-trusted-checkpoint-evidence
+  :restore {:version "finite-field-restore/2"
+            :input [:prior-state-or-empty :canonical-snapshot :event-cursor :current-trusted-checkpoint-evidence
+                    :current-trusted-clio-provenance-horizon
+                    :immutable-complete-ordered-history-and-replacement-closure
                     :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
             :output [:state-transition-result]
             :operation-result [:restored-state :event-cursor]
+            :input-event-cursor :authenticated-checkpoint-state-cursor-before-reconciliation
+            :output-event-cursor :reconciled-current-state-consumed-cursor-with-separate-admitted-cursor-retained
+            :older-checkpoint :valid-input-not-a-promise-to-return-old-state-or-erase-post-checkpoint-facts
+            :empty-tail :exact-qualified-checkpoint-roundtrip
             :snapshot-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
             :snapshot-decoding :exact-version-shape-canonical-payload-and-sha256-before-state-admission
+            :decoded-checkpoint :private-intermediate-never-returned-or-causally-used-before-complete-reconciliation
+            :history-reconciliation
+            {:protocol :reuse-existing-rebuild-revocation-complete-history-and-replacement-reconstruction-not-a-second-engine
+             :range :exclusive-owner-attested-checkpoint-covered-provenance-prefix-through-inclusive-independent-current-clio-tip
+             :state-cursors :never-substitute-for-provenance-range-or-authorize-omitted-post-checkpoint-operations
+             :authority :same-qualified-current-axxium-and-clio-admission-before-every-causal-influence-and-through-result-exposure
+             :reconstruct [:complete-physical-state :both-state-cursors :original-pending-event-queue
+                           :recall-requests :inclusion-folds :pending-feedback
+                           :feedback-confirmations :confirmed-outcome-ids]
+             :recorded-state-inputs :reapply-original-admitted-outcome-and-acknowledgement-facts-once-with-original-identities-never-reexecute-external-effects
+             :schedule :only-original-consumed-quanta-residual-backlog-boundary-order-and-recorded-seed-schedule
+             :nested-replacement {:restore-v2 :its-actual-recorded-owner-qualified-pre-operation-horizon-excluding-the-referring-operation
+                                  :qualified-older-restore-without-horizon-input :recorded-target-under-existing-replacement-protocol-with-predecessor-evidence-from-original-qualified-clio-provenance
+                                  :prior-rebuild :its-original-qualified-horizon-and-recorded-schedule
+                                  :outer-current-tip-or-invented-historical-input :forbidden
+                                  :unknown-version-or-missing-original-evidence :missing-or-ambiguous-rebuild-history
+                                  :once-only-facts :replacement-reference-closure-once-only-precedence-before-exposure}
+             :clean-root :same-existing-independent-pre-revocation-root-or-qualified-already-clean-equivalent-never-historical-digest-alone
+             :checkpoint-decoding :shared-pure-validation-never-recursively-calls-public-restore-or-fetches-owners
+             :exposure :only-complete-reconciled-current-state-and-cursors-after-all-existing-authority-identity-and-history-checks
+             :limits :all-actual-reconstruction-and-explicit-closure-share-existing-caps-and-any-stricter-ordinary-call-cap-no-reset-or-increase
+             :historical-copy-partial-exposure-or-post-return-catch-up :forbidden
+             :missing-stale-truncated-foreign-conflicting-forward-or-cyclic-history :missing-or-ambiguous-rebuild-history
+             :fixtures [:checkpoint-then-complete-recall-and-confirm-outcome-then-restore-older-checkpoint
+                        :restored-current-request-and-confirmed-outcome-identities-cannot-be-reused
+                        :pending-feedback-and-acknowledgement-state-preserved-with-no-second-write-or-reinforcement
+                        :later-physical-contact-and-fold-effects-preserved-after-historical-checkpoint
+                        :nested-restore-and-prior-rebuild-use-their-own-recorded-horizons
+                        :empty-tail-current-checkpoint-positive :truncated-tail-and-changing-tip-refuse-before-exposure
+                        :all-existing-exact-and-one-over-input-history-work-and-continuation-controls]}
             :validates [:separately-trusted-persisted-checkpoint-digest-and-binding
                         :kernel-revision :config-revision :config-hash :complete-physical-configuration
                         :scope-revision :projection-revision :current-grants :authority-projection-binding
@@ -413,8 +494,11 @@
                                           :reason-revision 1 :state :exact-unchanged-prior-state
                                           :restored-state-and-cursor :absent}
             :silent-migration-or-copied-producer-label :forbidden
-            :effects :none :new-elapsed-time :none :rng-draws :none
-            :outcome-replay :forbidden}}
+            :effects :none :new-elapsed-time :none :new-rng-draws :none
+            :history-refusal {:status :refused :reason :missing-or-ambiguous-rebuild-history
+                              :reason-revision 1 :state :exact-unchanged-prior-state
+                              :restored-state-and-cursor :absent}
+            :external-outcome-publication-or-writer-ack-reexecution :forbidden}}
  :result/statuses [:admitted :refused :denied :no-contact :complete
                    :incomplete :stale :exhausted :failed]
  :result/statuses-scope :cross-boundary-vocabulary-only

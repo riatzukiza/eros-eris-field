@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-public-read-failure"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-configuration-rng-restore"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -178,6 +178,14 @@
                                   :omit-or-reorder-separated-eligible-pair-with-state-and-contacts-unchanged]}
   :radii :finite-nonnegative-particle-and-positive-recipient
   :roles-and-restitution :revision-bound-validated-input
+  :configuration-binding {:input [:configuration-contact-id :configuration-contact-revision]
+                          :source :exactly-one-matching-configuration-contact-parameter-set
+                          :selection-source :retained-canonical-admitted-geometry-or-its-original-recorded-boundary-input
+                          :custody :selection-retained-in-complete-canonical-state-snapshot-and-original-history-for-identical-replay
+                          :automatic-enumeration :consume-that-bound-selection-for-each-eligible-pair-before-contact
+                          :kind-only-first-table-entry-or-unrecorded-selection :forbidden
+                          :recipient-kind-radii-and-restitution :exact-match-with-admitted-geometry-no-override
+                          :missing-duplicate-foreign-or-conflicting-profile :whole-unchanged-refusal}
   :restitution :finite-zero-through-one-inclusive
   :normal-construction [:particle-minus-recipient-moved-x
                         :particle-minus-recipient-moved-y :declared-scaled-norm
@@ -406,7 +414,16 @@
   :input-argument :the-closed-domain-map-encoded-once-as-an-argument-by-finite-field-input-1
   :input-argument-byte-cap :complete-map-encoding-including-codec-state-hash-keys-tags-and-separators-not-payload-only
   :string-opaque-bytes-host-printer-or-alternate-wrapper :whole-unchanged-refusal
-  :restore :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-before-admission
+  :restore {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/restore"
+            :version "finite-field-restore/2"
+            :checkpoint :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-as-private-intermediate
+            :required-history :independent-current-clio-horizon-and-complete-counted-post-checkpoint-tail-and-replacement-closure
+            :reconciliation :existing-qualified-current-authority-reconstruction-before-any-state-result-or-causal-use
+            :retained-facts :complete-recall-outcome-pending-feedback-confirmation-and-once-only-identities-plus-physical-state-cursors-and-queue
+            :nested-replacement :own-recorded-preceding-provenance-horizon-never-the-outer-current-tip
+            :bounds :existing-reconstruction-caps-and-any-stricter-ordinary-call-cap-for-entire-call-no-reset-or-increase
+            :history-failure :revision1-missing-or-ambiguous-rebuild-history-with-exact-unchanged-prior-state
+            :external-effect-reexecution-or-post-return-catch-up :forbidden}
   :work :charge-all-actual-encode-validate-order-and-hash-work-under-the-existing-whole-call-or-rebuild-counter
   :allocation :bounded-measurement-before-full-payload-or-argument-allocation
   :fixture-ownership {:atomic-predecessor :qualifies-real-independent-persistence-and-authenticated-digest-readback-with-actual-abi-forces-snapshots
@@ -579,7 +596,80 @@
                     :prior-state-unchanged-no-payload-no-reinforcement
                     :private-exception-marker-never-returned-or-retained
                     :every-existing-refusal-and-success-unchanged]}
+ :configuration-schema
+ {:version "finite-physical-configuration/1"
+  :status :proposed-owning-representation-not-executable-validator-or-qualified-mechanics
+  :maps :exact-listed-keyword-keys-no-missing-extra-duplicate-alias-string-key-nil-or-extension
+  :vectors :ordered-vectors-only-never-lists-or-sets
+  :types {:F :finite-binary64 :N :finite-binary64-at-least-zero :P :finite-binary64-strictly-positive
+          :U :finite-binary64-zero-through-one-inclusive :S :finite-binary64-minus-one-through-one-inclusive
+          :R :nonempty-scalar-utf8-revision-under-existing-byte-limits :ID :existing-qualified-scalar-utf8-identifier
+          :u32 :exact-integer-one-through-4294967295 :u8 :exact-integer-zero-through-255}
+  :root {:schema "finite-physical-configuration/1" :revision :R :mechanics-revision :R
+         :field :field-shape :kinds :kinds-shape :forces :forces-shape :contact :contact-shape}
+  :field-shape {:cell-size :P :mapping-revision :R :layers [:layer-shape :exactly-eight]}
+  :layer-shape {:binding :ID :gain :N :half-life :P :cell-cap :P :prune-epsilon :N}
+  :kinds-shape {:presence :passive-kind-shape :nexus :passive-kind-shape :daimoi :moving-kind-shape}
+  :moving-kind-shape {:gamma :N :static-threshold :N :speed-cap :N :wind-coupling-rate :N}
+  :passive-kind-shape {:gamma :N :static-threshold :N :speed-cap :N :wind-coupling-rate :N
+                       :read-weights [:N :exactly-eight] :deposit-weights [:N :exactly-eight]}
+  :forces-shape {:non-bond-semantic-attraction :attraction-shape :unified-intent-bond :bond-parameter-shape
+                 :repulsion :repulsion-shape :boundary :boundary-shape :wind :wind-shape :seeded-exploration :exploration-shape}
+  :attraction-shape {:threshold :S :strength :N :rest-length :N}
+  :bond-parameter-shape {:parameter-source :admitted-intent-bonds}
+  :repulsion-shape {:barnes-hut :barnes-hut-shape :local :local-repulsion-shape :separation :separation-shape :semantic :semantic-repulsion-shape}
+  :barnes-hut-shape {:theta :P :strength :N :softening :N}
+  :local-repulsion-shape {:radius :N :strength :N :power :P}
+  :separation-shape {:radius :N :strength :N}
+  :semantic-repulsion-shape {:threshold :S :strength :N :radius :N}
+  :boundary-shape {:target-radius :N :thickness :N :pressure :N :edge-fraction :U}
+  :wind-shape {:cap :P}
+  :exploration-shape {:law-revision :R :permutation-seed :u32 :permutation [:u8 :exactly-256-each-value-once]
+                      :gradients [[:F :F] :nonempty-ordered-vector] :coordinate-scales [:P :P]
+                      :octaves [:octave-shape :nonempty-ordered-vector]}
+  :octave-shape {:frequency :P :amplitude :N}
+  :contact-shape {:matrix-revision "finite-particle-recipient/1" :geometry :declared-spherical-recipient
+                  :parameter-sets [:contact-parameter-shape :nonempty-vector-in-unsigned-utf8-id-order]}
+  :contact-parameter-shape {:id :ID :revision :R :recipient-kind [:enum :presence :nexus]
+                            :particle-radius :N :recipient-radius :P :restitution :U}
+  :invariants {:gamma-and-static-threshold :presence-strictly-greater-than-nexus-strictly-greater-than-daimoi-at-least-zero
+               :prune-epsilon :strictly-less-than-corresponding-layer-cap
+               :vector-index :same-layer-zero-through-seven-in-every-corresponding-vector
+               :contact-ids :unique-under-exact-existing-identifier-identity
+               :gradients :each-exact-two-vector-nonzero-with-finite-components
+               :variable-vectors :complete-values-count-under-existing-input-state-checkpoint-and-work-caps
+               :signed-zero :existing-exact-bit-preservation-no-normalization}
+  :hash {:input :complete-root-value-using-exact-existing-trace-1-tagged-value-encoding
+         :trace-record-envelope-bom-whitespace-or-newline :none :algorithm :sha256 :output :exact64-lowercase-ascii-hex
+         :state-config-revision :exactly-root-revision :state-config-hash :exactly-this-digest :self-hash-or-host-printer :forbidden}
+  :coefficient-mapping
+  {:barnes-hut :forces-repulsion-barnes-hut-theta-strength-softening-with-softening-as-squared-distance-addend-not-squared-again
+   :local :forces-repulsion-local-radius-strength-power :separation :forces-repulsion-separation-radius-strength
+   :non-bond-attraction :forces-non-bond-semantic-attraction-threshold-strength-rest-length-excludes-represented-logical-bond
+   :semantic-repulsion :forces-repulsion-semantic-threshold-strength-radius
+   :boundary :forces-boundary-target-radius-thickness-pressure-edge-fraction
+   :logical-bond :actual-admitted-bond-strength-and-rest-length-once-no-global-duplicate
+   :field :field-cell-size-and-layer-gain-half-life-cell-cap-prune-values-in-index-order
+   :passive-vectors :kinds-presence-or-nexus-read-and-deposit-vectors-with-field-mapping-revision
+   :daimoi-vectors :immutable-admitted-request-with-same-mapping-revision-no-configuration-fallback
+   :motion :kinds-kind-gamma-static-threshold-speed-cap-wind-coupling-rate-and-forces-wind-cap
+   :contact :exact-profile-id-revision-in-admitted-geometry-selects-recipient-kind-radii-and-restitution-no-override
+   :exploration :complete-retained-law-revision-seed-permutation-gradients-scales-and-octaves-no-passive-propulsion}
+  :excluded-carriers [:actual-entity-mass-position-velocity :actual-graph-and-bond-instances :request-weights-wallets-authority
+                      :fixed-abi-quantum-substep-resource-and-numeric-profile-laws]
+  :explicit-proposed-choices [:named-force-parameter-families-and-ranges :per-bond-strength-and-rest-length
+                              :revision-bound-contact-parameter-reference :256-entry-permutation-and-explicit-gradient-scale-octave-carriers]
+  :qualification :owning-reviewed-shape-force-law-noise-indexing-generation-and-draw-placement-before-consumption
+  :revision-label-or-opaque-parameter-map :not-qualification-or-permission-to-load-code
+  :donor-formulas-defaults-hidden-clamps-or-constants :not-adopted-by-this-representation
+  :absorption-exchange-or-unqualified-profile :existing-unsupported-unchanged-refusal
+  :future-controls [:independent-canonical-value-bytes-and-hash-golden :map-insertion-order-identical-bytes
+                    :missing-extra-wrong-key-tag-nesting-length-or-revision-refused
+                    :every-coefficient-or-table-change-alters-hash :matching-and-foreign-duplicate-or-overridden-contact-profile
+                    :retained-values-consumed-after-admit-advance-catch-up-restore-and-rebuild
+                    :existing-exact-and-one-over-input-state-checkpoint-and-work-bounds]}
  :calibration {:production-defaults :none :complete-input :required
+               :configuration-contract "docs/plans/cephalon-finite-field-coupling.edn#configuration-schema"
                :state-carrier :physical-configuration-in-the-complete-canonical-state
                :admission :retain-the-complete-validated-configuration-value-with-its-revision-and-hash
                :hash :sha256-of-exact-existing-trace-1-tagged-encoding-of-the-complete-configuration-value
@@ -815,6 +905,10 @@
    :well-founded :references-strictly-precede-referring-operation-in-qualified-clio-provenance-order-not-restored-state-cursor
    :clean-root :every-reconstruction-path-needs-independent-clean-pre-revocation-baseline-or-qualified-clean-current-authority-equivalent
    :replacement :install-complete-current-authority-reconstructed-target-at-recorded-boundary-not-historical-output
+   :once-only-precedence :reconstruct-applicable-qualified-original-idempotency-facts-through-that-boundary-in-existing-recall-and-feedback-collections
+   :once-only-binding :same-original-bindings-applicable-to-each-fact-variant-or-refuse-no-new-journal
+   :acknowledgement :successful-actual-writer-ack-required-only-for-confirmation-absent-ack-preserves-pending-failed-writer-preserves-refusal-and-no-reinforcement
+   :older-target-erases-later-applicable-once-only-fact :forbidden
    :dedup :exact-qualified-identity-and-bytes-only-never-scheduled-occurrences-or-actual-reconstruction-work
    :missing-conflicting-forward-self-or-cyclic-reference :missing-or-ambiguous-rebuild-history
    :bounds :entire-closure-shares-all-existing-input-tail-checkpoint-event-byte-quanta-work-and-wall-bounds
