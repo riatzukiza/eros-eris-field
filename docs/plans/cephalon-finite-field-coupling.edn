@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-contact-pair-order"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-contact-eligibility"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -141,6 +141,28 @@
              :constraint :explicit-dissipative-not-kinetic-energy-conservation}
  :contact-deflection
  {:geometry :declared-spherical-recipient
+  :eligibility {:revision "finite-particle-recipient/1"
+                :kind-role {:presence :recipient :nexus :recipient :daimoi :particle}
+                :unordered-kind-matrix {[:presence :presence] :excluded
+                                        [:presence :nexus] :excluded
+                                        [:nexus :nexus] :excluded
+                                        [:daimoi :presence] :eligible
+                                        [:daimoi :nexus] :eligible
+                                        [:daimoi :daimoi] :excluded}
+                :matrix-pair-order :unordered-kind-combination-not-entity-id-order
+                :roles :derived-from-kind-and-validated-against-revision-bound-role
+                :validation :all-entities-before-enumeration
+                :unknown-kind-or-missing-conflicting-role :whole-transition-unchanged-refusal
+                :excluded-overlap-and-separation :no-contact-or-observation
+                :explicit-excluded-contact-pair :whole-transition-unchanged-refusal
+                :eligible-separated :no-contact-or-observation
+                :eligible-overlap :declared-finite-deflection
+                :unsupported-absorption-or-exchange :whole-transition-unchanged-refusal
+                :fixtures [:six-kind-combinations-overlap-and-separation
+                           :eligible-pairs-both-input-orders :unknown-kind :missing-conflicting-role
+                           :explicit-excluded-pair :late-pair-refusal-discards-all-private-updates]
+                :refusal :no-state-observation-or-deposit-commit
+                :trace [:matrix-revision :actual-eligible-ordered-pairs]}
   :radii :finite-nonnegative-particle-and-positive-recipient
   :roles-and-restitution :revision-bound-validated-input
   :restitution :finite-zero-through-one-inclusive

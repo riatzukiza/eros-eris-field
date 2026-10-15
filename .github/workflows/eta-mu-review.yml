@@ -9,19 +9,54 @@ permissions:
   pull-requests: read
 
 jobs:
+  proposed_abi_parse:
+    name: Parse proposed EDN
+    if: ${{ github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout exact pull request head
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Set up Babashka for the isolated parser
+        uses: DeLaGuardo/setup-clojure@ada62bb3282a01a296659d48378b812b8e097360 # 13.4
+        with:
+          bb: "1.13.219"
+
+      # Candidate parsing has no App secrets or private dependency mirror.
+      - name: Parse standard EDN maps with true EOF
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          [[ "$PR_HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
+          test -z "$(git status --porcelain --untracked-files=all)"
+          bb --config /dev/null -e '(require (quote [clojure.edn :as edn]) (quote [clojure.java.io :as io])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (with-open [r (java.io.PushbackReader. (io/reader p))] (let [eof (Object.)] (assert (map? (edn/read {:eof eof} r)) (str "Expected an EDN map: " p)) (assert (identical? eof (edn/read {:eof eof} r)) (str "Unexpected trailing EDN form: " p)))) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
+          test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
+          test -z "$(git status --porcelain --untracked-files=all)"
+
   review:
     name: Evidence-first review (eta-mu)
+    needs: proposed_abi_parse
     uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415
     with:
       pr_head_sha: ${{ github.event.pull_request.head.sha }}
       muse_revision: 0b9a91492c8355e6933dc2164d35668cb76d9e60
       agents_revision: 4b4f48dae1b804b2581974e604cca618ecedadf1
       opencode_version: 1.18.31
-      setup_eta_mu_toolchain: true
+      # The pinned producer gates credential detection and private mirrors on this input.
+      setup_eta_mu_toolchain: false
       evidence_gates_script: |
         run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
         run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
-        run_gate proposed_abi_parse bb -e '(require (quote [clojure.edn :as edn]) (quote [clojure.java.io :as io])) (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn" "docs/plans/cephalon-finite-field-coupling.edn"]] (with-open [r (java.io.PushbackReader. (io/reader p))] (let [eof (Object.)] (assert (map? (edn/read {:eof eof} r)) (str "Expected an EDN map: " p)) (assert (identical? eof (edn/read {:eof eof} r)) (str "Unexpected trailing EDN form: " p)))) (println "Proposed EDN parsed:" p)) (println "No domain law executed")'
+        run_gate proposed_abi_parse_job test "${{ needs.proposed_abi_parse.result }}" = success
     secrets:
       ETA_MU_APP_ID: ${{ secrets.ETA_MU_APP_ID }}
       ETA_MU_APP_PRIVATE_KEY: ${{ secrets.ETA_MU_APP_PRIVATE_KEY }}

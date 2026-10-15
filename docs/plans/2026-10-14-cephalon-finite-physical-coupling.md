@@ -192,6 +192,29 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    Resolve the canonically ordered contact pass using those velocities; only
    after the whole pass apply the same kind cap, then static threshold, to each
    resolved velocity.
+   Before pair enumeration, validate every entity's revision-bound kind and
+   contact role. This finite pass admits only the following complete matrix;
+   kind names below are unordered, while the roles remain directed:
+
+   | Entity kinds | Eligibility and roles |
+   | --- | --- |
+   | presence / presence | Excluded; no contact or contact observation. |
+   | presence / nexus | Excluded; no contact or contact observation. |
+   | nexus / nexus | Excluded; no contact or contact observation. |
+   | daimoi / presence | Eligible; daimoi is particle, presence is recipient. |
+   | daimoi / nexus | Eligible; daimoi is particle, nexus is recipient. |
+   | daimoi / daimoi | Excluded; no contact or contact observation. |
+
+   Presence and nexus have the recipient role; daimoi has the particle role.
+   Missing/unknown kinds or missing/conflicting roles refuse the entire
+   unchanged transition before the pass. Exclusion applies at both overlapping
+   and separated positions; it is not an unsupported reflection or absorption.
+   Enumerate every eligible unordered pair once, then test its overlap. An
+   explicitly supplied contact pair outside this matrix refuses rather than
+   bypassing eligibility; unknown absorption/exchange intents retain their
+   existing refusal. Canonical ID sorting never selects or swaps roles. This
+   finite case does not add passive/passive or particle/particle collision
+   mechanics to the broader historical ABI.
    The finite deflection case supports declared spherical contact geometry with
    finite nonnegative particle/recipient radii and a positive recipient radius,
    plus revision-bound particle/recipient roles and restitution `0 <= e <= 1`.
@@ -225,6 +248,12 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    after the whole contact pass. Future RED covers non-axis normals, moving
    recipients, near-zero/cancellation-sensitive dots, tangent/separating round
    trips, coincident normals and unsafe intermediates under the reference profile.
+   Exercise all six matrix rows with overlap and separation, each eligible row
+   in both input orders, malformed kind/role inputs and excluded explicit pairs.
+   A later refusal in a multi-pair pass must discard every earlier private
+   velocity update and all candidate observations/deposits; prior state remains
+   unchanged. Record the matrix revision and actual eligible ordered pairs in
+   the replay trace, not just the supplied input-pair count.
    Contact response is computed before this second cap and retained in the
    trace; do not interleave caps between contact pairs. Motion deposits use the
    final post-contact-cap-and-threshold velocity, with no second position advance.
