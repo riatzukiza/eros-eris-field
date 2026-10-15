@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-eligibility-replay-and-embedding-outcomes"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-measurable-workload-rebuild-and-safe-failure"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -7,6 +7,7 @@
  :selection/revision "020d97fecae4a8d0d277b9b2695d9482620b4a76"
  :selection/merge "8c649fee2e95e5ec6b5304a3351a0e16fca60533"
  :selection/compatibility :reviewed-signed-cell-index-amendment
+ :source-rights-task "5ce9c975-1d30-4679-b607-e2dcd76f8192"
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
  :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
@@ -280,7 +281,22 @@
            :observation :explicit-pruned-cell :unsafe-intermediate :unchanged-refusal}
  :calibration {:production-defaults :none :complete-input :required
                :layer-semantic-bindings :versioned-input-not-keyword-counters
-               :missing-nonfinite-or-revision-mismatch :unchanged-refusal}
+               :missing-nonfinite-or-revision-mismatch :unchanged-refusal
+               :task "4f4c7cf6-9be8-47b9-b03a-be235c4dd519"
+               :finite-profile {:version "finite-character-load/1"
+                                :entities {:presence 8 :nexus 8 :daimoi 16 :total 32}
+                                :bonds 64 :scoped-layer-cells 256 :substeps-per-call 4
+                                :trace-records-per-call 32768 :work-units-per-call 1000000
+                                :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application]
+                                :counter :before-operation-including-attempted-visits
+                                :workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]
+                                :quanta-per-workload-arm 64 :warmup-calls 5 :seed 42
+                                :arms [:zero-varied-field-baseline :selected-contribution]
+                                :call-wall-ms 1000 :peak-rss-mib 512 :whole-job-wall-ms 120000
+                                :freeze-before-execution [:reviewed-layout-and-fixture-bytes :calibration :source-build-runtime-host]
+                                :sensitivity {:different-eligible-contacts-min 1 :different-included-memories-beyond-seed-min 1}
+                                :exits [:all-complete-values :all-budgets :exact-cap-and-one-over :causal-sensitivity]
+                                :failure :no-qualification :adopted-production-defaults :none}}
  :causal-proof [:admitted-encounter :attributed-deposit :sampled-vector
                 :force-and-velocity :trajectory-and-contact :consumed-memory]
  :cell-traversal {:keys :union-of-prior-and-current-deposit-keys
@@ -338,12 +354,20 @@
                :embedding-unavailable-outcomes
                {:missing {:status :refused :code :embedding-missing}
                 :indexing-pending {:status :refused :code :embedding-pending}
-                :production-failed {:status :failed :code :embedding-failed :cause :retain-actual}
+                :production-failed {:status :failed :code :embedding-failed :cause {:category [:timeout :unavailable :rate-limited :invalid-output :internal-error :unclassified]
+                                                        :unknown :unclassified :diagnostic-ref-max-utf8-bytes 128
+                                                        :diagnostic-ref :optional-opaque-independently-audience-authorized
+                                                        :raw-provider-data :protected-diagnostic-store-only}}
                 :binding-mismatch {:status :refused :code :embedding-binding-mismatch}}
                :embedding-unavailable-state [:graph-unchanged :field-unchanged :effect-receipt-unchanged
                                              :existing-admitted-envelope-unchanged :cursor-unchanged]
                :embedding-unavailable-retained-incomplete-state :none
-               :embedding-retry {:automatic :none :authority :separately-authorized-bounded-attempt
+               :embedding-retry {:owner "2f4421ee-2e48-405e-96d2-fee1a5597ff2"
+                                 :scope :finite-source-caller-fixture-and-idempotent-entry-point
+                                 :trigger :caller-only-after-controlled-valid-embedding-availability
+                                 :max-total-calls 2 :max-resubmissions 1 :fixture-wall-ms 10000
+                                 :production-retry-orchestration :outside-this-fixture-exit
+                                 :automatic :none :authority :fresh-qualified-owner-decision
                                  :binding :same-admitted-content-and-effect-identity
                                  :validation :fresh-authority-and-valid-embedding
                                  :changed-content :new-admitted-predecessor-binding
@@ -364,6 +388,16 @@
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
+  :budget {:version "finite-revocation-rebuild/1" :tail-events 128
+           :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 1000000
+           :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000
+           :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application]
+           :counter :before-every-operation-across-entire-private-rebuild
+           :count-byte-preflight :before-replay :effects :none-before-complete-authorization-and-bounds
+           :exhaustion {:status :refused :code :revocation-rebuild-budget-exceeded
+                        :prior-state :byte-identical :adapter :quarantine-before-any-causal-use}
+           :outer-timeout :no-accepted-replacement-and-quarantine
+           :controls [:each-exact-cap :each-one-over]}
   :missing-or-ambiguous-input :pure-typed-unchanged-prior-state-refusal
   :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
   :pure-quarantine-state-mutation :forbidden
