@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-contact-eligibility"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-eligibility-replay-and-embedding-outcomes"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -162,7 +162,10 @@
                            :eligible-pairs-both-input-orders :unknown-kind :missing-conflicting-role
                            :explicit-excluded-pair :late-pair-refusal-discards-all-private-updates]
                 :refusal :no-state-observation-or-deposit-commit
-                :trace [:matrix-revision :actual-eligible-ordered-pairs]}
+                :trace [:contact-eligibility-matrix-revision :eligible-ordered-contact-pairs]
+                :replay-comparison :exact-including-separated-eligible-pairs
+                :replay-negative [:alter-only-matrix-revision
+                                  :omit-or-reorder-separated-eligible-pair-with-state-and-contacts-unchanged]}
   :radii :finite-nonnegative-particle-and-positive-recipient
   :roles-and-restitution :revision-bound-validated-input
   :restitution :finite-zero-through-one-inclusive
@@ -332,7 +335,19 @@
                :new-encounter-embedding [:admitted-content-revision-and-hash :exact-bytes-and-hash
                                          :shape-and-dimensions :model-and-configuration-revision]
                :embedding-custody [:same-candidate-projection :same-atomic-commit :independent-readback]
-               :missing-pending-or-conflicting-embedding :not-complete-physical-effect
+               :embedding-unavailable-outcomes
+               {:missing {:status :refused :code :embedding-missing}
+                :indexing-pending {:status :refused :code :embedding-pending}
+                :production-failed {:status :failed :code :embedding-failed :cause :retain-actual}
+                :binding-mismatch {:status :refused :code :embedding-binding-mismatch}}
+               :embedding-unavailable-state [:graph-unchanged :field-unchanged :effect-receipt-unchanged
+                                             :existing-admitted-envelope-unchanged :cursor-unchanged]
+               :embedding-unavailable-retained-incomplete-state :none
+               :embedding-retry {:automatic :none :authority :separately-authorized-bounded-attempt
+                                 :binding :same-admitted-content-and-effect-identity
+                                 :validation :fresh-authority-and-valid-embedding
+                                 :changed-content :new-admitted-predecessor-binding
+                                 :complete-effect :once-only-atomic-commit}
                :unsupported-transaction :refuse-before-either-write
                :uncertain-commit :read-matching-receipt-and-both-components
                :duplicate-effect :recover-prior-result-without-second-deposit

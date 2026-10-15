@@ -254,6 +254,11 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    velocity update and all candidate observations/deposits; prior state remains
    unchanged. Record the matrix revision and actual eligible ordered pairs in
    the replay trace, not just the supplied input-pair count.
+   Compare the eligibility-matrix revision and full actual eligible ordered-pair
+   sequence exactly during replay, including separated eligible pairs that emit
+   no contact. Negative replay fixtures alter only that revision or omit/reorder
+   an eligible separated pair while state and contact observations stay equal;
+   exact trace comparison must fail before causal use or outward effects.
    Contact response is computed before this second cap and retained in the
    trace; do not interleave caps between contact pairs. Motion deposits use the
    final post-contact-cap-and-threshold velocity, with no second position advance.
@@ -649,16 +654,21 @@ guarantees. The finite selected persistence/privacy/replay proofs stay mandatory
 ## Verification and risks
 
 Review this document and its matching declared-rule data; parse the data with
-the standard EDN reader in Babashka, supplied by the existing pinned shared
-workflow toolchain (Babashka 1.13.219). The gate consumes the entire file and requires
+the standard EDN reader in Babashka, supplied by the isolated
+`proposed_abi_parse` job (Babashka 1.13.219). The gate consumes the entire file and requires
 exactly one EDN map for each declaration; comments and whitespace after the map
 are allowed, while a second form or malformed trailing bytes refuse the gate.
 The standard `clojure.edn/read` API reads one map and then requires actual EOF
 using an identity-distinct sentinel and a closed PushbackReader. NBB’s EDN
 facade accepted unsupported `#!` reader comments, so this check uses Babashka’s
 standard reader; strings and semicolon comments containing literal `#!` remain
-valid. The shared toolchain setup is enabled for this dependency; the caller’s
-explicit evidence script still supplies the gates, without a package install.
+valid. This job has only contents:read, no App secrets/private mirror, and parses
+with `bb --config /dev/null` after exact clean-head checks, repeated afterward.
+The reusable reviewer depends on parser success and receives explicit
+`setup_eta_mu_toolchain: false`; the pinned producer's credential detector,
+dependency-token and private-mirror chain must stay skipped. Its explicit
+evidence script checks the successful parser-job result plus diff gates,
+without reinstalling the parser or running candidate `bb.edn` initialization.
 Apostrophe-prefixed symbols and ordinary lists remain valid EDN data, not
 executed quote expressions. Its existing parse messages remain, and parsing
 executes no domain law.
@@ -749,7 +759,28 @@ large vectors. These are algorithm declarations, not executed solver proof.
 
 Immediately before entering the atomic transaction, independently reload the actual stored principal, grants/sharing/visibility, admission policy and scope revision from their authoritative owner. Require equality with the admitted/current computation binding and authorization for every relationship/embedding/field/effect write. Bind the transaction's commit condition to those authority/policy versions as well as expected graph/field revisions; a revocation or version conflict during the transaction aborts before any component is committed. No payload authority or earlier snapshot can substitute. Fixtures revoke/change private/shared access after admission, during computation and between the final authority read and commit, requiring no graph/field/effect write or partial success.
 
-Before physical candidate projection, bind one new-encounter content embedding identity to the exact admitted content revision/hash: exact embedding bytes/hash, shape/dimensions and embedding model/configuration revision. Use those same bytes/revisions in semantic projection, atomic commit and independent after-state readback. Missing/indexing-pending/failed/mismatched embedding cannot count as a complete physical effect; refuse or retain explicit incomplete admission without graph/field/effect success. Reuse the existing bounded embedding route without changing model routing or credentials. Preserve unchanged existing-memory embeddings separately; test E1 candidate versus E2/missing persisted embedding and content/model/config drift as refusals.
+Before physical candidate projection, bind one new-encounter content embedding identity to the exact admitted content revision/hash: exact embedding bytes/hash, shape/dimensions and embedding model/configuration revision. Use those same bytes/revisions in semantic projection, atomic commit and independent after-state readback. Reuse the existing bounded embedding route without changing model routing or credentials. Preserve unchanged existing-memory embeddings separately; test E1 candidate versus E2/missing persisted embedding and content/model/config drift as refusals.
+
+The selected projection has one exact outcome for each unavailable embedding:
+
+| Input condition | Status | Code |
+| --- | --- | --- |
+| Missing embedding | refused | embedding-missing |
+| Indexing pending | refused | embedding-pending |
+| Embedding production failed | failed | embedding-failed, retaining its actual cause |
+| Content/hash/shape/dimensions/model/configuration binding mismatch | refused | embedding-binding-mismatch |
+
+Every row preserves the complete prior graph, field and effect-receipt state,
+the existing admitted envelope and cursor. This projection writes no retained
+incomplete-admission or retry/cursor state and reports no complete physical
+effect. It does not roll back an envelope already admitted by the separate
+intake authority. No automatic retry occurs here. A later separately authorized
+bounded attempt consumes the same admitted content/effect identity with fresh
+current authority and newly validated embedding; it cannot mint another effect.
+A changed content revision requires its own admitted predecessor binding.
+Future RED asserts each exact status/code and unchanged state, plus a successful
+same-identity retry after an embedding becomes available and once-only atomic
+commit. This does not implement an additional ingestion/recovery state machine.
 
 The sole varied physical deposit/bond must be the one produced by the same selected outside encounter and immutable effect observed in AC1. Freeze and require exact equality of encounter ID/content revision/hash, effect identity, attributed deposit/bond source/lineage and prior/derived graph/field revision bindings from B1 through physical contact/path to the actual B3 submitted prompt association. Both controlled arms reference that same selected source; never substitute another valid older encounter/effect/deposit. Preserve immutable history and all declared single-variable equality constraints; if the permitted intervention cannot be established safely, refuse proof. Add a valid unrelated-encounter B deposit as a negative even when all other recall inputs match. This is distinct from two valid different-encounter storage arms, which cannot satisfy the selected chain.
 

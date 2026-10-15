@@ -136,10 +136,11 @@ This resolves that source-mapping question; it does not establish immunity to
 runner or process compromise, or execute physical behavior.
 
 
-## Current enabled toolchain inspection — 2026-10-15 UTC
+## Historical enabled toolchain inspection — 2026-10-15 UTC
 
-The current caller enables `setup_eta_mu_toolchain: true` for standard Babashka
-EDN parsing. This supersedes the October 9 disabled-setup observation above. The
+The former caller enabled `setup_eta_mu_toolchain: true` for standard Babashka
+EDN parsing. This historical state superseded the October 9 observation, and
+is itself superseded by the isolated parser boundary below. The
 shared workflow remains exact b03cb58407cc333b7cabd77431842d44f0deb415; caller
 Muse/agents/OpenCode selectors and explicit secret mappings remain unchanged.
 The enabled path installs declared Java 21/Clojure 1.12.5.1654/Babashka 1.13.219/
@@ -158,3 +159,23 @@ compromise or later-step environment inheritance. No secret value, new secret,
 provider credential or runtime deployment is introduced by this caller change.
 Actual privileged-step outcomes and exact source/check bindings remain part of
 qualification; previous receiver approval does not transfer to the caller.
+
+## Isolated parser and disabled private dependency path — 2026-10-15 UTC
+
+The caller now runs the standard EDN map/true-EOF check in a separate
+`proposed_abi_parse` job with permissions exactly contents:read and no App
+secrets, inherited secrets, private dependency mirror or candidate dependency
+installation. It checks the immutable event head and clean checkout before and
+after parsing. `bb --config /dev/null` excludes candidate initialization.
+The reusable reviewer needs parser success and passes
+`setup_eta_mu_toolchain: false`; its diff evidence records the actual successful
+dependency result. Existing reviewer/publication source pins and guards remain.
+
+At exact2d7a02d61ffc8118704d3778f9b06bc984ddbca7, actual run38685018571 parser
+job116257775574 passed both declarations and true EOF. Actual deterministic
+producer116257825490 passed while credential detection, cross-repository token
+creation and private-mirror steps were all skipped. This is observed hosted
+workflow evidence, distinct from local Babashka1.12.207 parser fixtures and
+requested hosted1.13.219. New heads still require fresh native checks/reviews;
+no secret/private content, actual exploit or physical solver behavior was read
+or executed to establish this boundary.
