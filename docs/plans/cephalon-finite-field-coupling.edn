@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-measurable-workload-rebuild-and-safe-failure"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-maximum-call-byte-budgets-and-typed-cause-precedence"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -283,14 +283,25 @@
                :layer-semantic-bindings :versioned-input-not-keyword-counters
                :missing-nonfinite-or-revision-mismatch :unchanged-refusal
                :task "4f4c7cf6-9be8-47b9-b03a-be235c4dd519"
-               :finite-profile {:version "finite-character-load/1"
+               :finite-profile {:version "finite-character-load/2"
                                 :entities {:presence 8 :nexus 8 :daimoi 16 :total 32}
-                                :bonds 64 :scoped-layer-cells 256 :substeps-per-call 4
-                                :trace-records-per-call 32768 :work-units-per-call 1000000
-                                :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application]
-                                :counter :before-operation-including-attempted-visits
-                                :workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]
-                                :quanta-per-workload-arm 64 :warmup-calls 5 :seed 42
+                                :bonds 64 :scoped-layer-cells 256 :max-substeps-per-call 100
+                                :ordinary-workload-partition [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4]
+                                :maximum-call-workload {:quanta 100 :partition [100] :over-limit-quanta 101}
+                                :trace-records-per-call 131072 :trace-utf8-bytes-per-call 8388608
+                                :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
+                                :work-units-per-call 67108864
+                                :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append]
+                                :counter :before-every-operation-across-preflight-and-entire-call
+                                :bounded-input-read :before-full-allocation-or-decode
+                                :bounded-trace :before-append-or-whole-result-exposure
+                                :identity-shortening-or-normalization :forbidden
+                                :byte-overflow {:input :finite-input-byte-limit :trace :finite-trace-budget-exceeded}
+                                :work-overflow :finite-work-budget-exceeded
+                                :overflow-state :whole-unchanged-refusal
+                                :ordinary-workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]
+                                :ordinary-quanta-per-workload-arm 64 :warmup-calls 5 :seed 42
                                 :arms [:zero-varied-field-baseline :selected-contribution]
                                 :call-wall-ms 1000 :peak-rss-mib 512 :whole-job-wall-ms 120000
                                 :freeze-before-execution [:reviewed-layout-and-fixture-bytes :calibration :source-build-runtime-host]
@@ -355,6 +366,17 @@
                {:missing {:status :refused :code :embedding-missing}
                 :indexing-pending {:status :refused :code :embedding-pending}
                 :production-failed {:status :failed :code :embedding-failed :cause {:category [:timeout :unavailable :rate-limited :invalid-output :internal-error :unclassified]
+                                                        :mapping-revision "embedding-failure-category/1"
+                                                        :authority :qualified-existing-embedding-provider-seam
+                                                        :attestation-preflight :unclassified-before-rules-on-unavailable-or-malformed
+                                                        :consumers :retain-category-and-revision-without-reinterpretation
+                                                        :precedence [{:when :http429 :category :rate-limited}
+                                                                     {:when :explicit-timeout-or-http408-or504 :category :timeout}
+                                                                     {:when :explicit-transport-unavailable-or-other-http5xx :category :unavailable}
+                                                                     {:when :explicit-validated-invalid-output :category :invalid-output}
+                                                                     {:when :explicit-validated-internal-failure :category :internal-error}
+                                                                     {:when :unknown-unavailable-malformed-or-no-match :category :unclassified}]
+                                                        :raw-error-prose-classification :forbidden
                                                         :unknown :unclassified :diagnostic-ref-max-utf8-bytes 128
                                                         :diagnostic-ref :optional-opaque-independently-audience-authorized
                                                         :raw-provider-data :protected-diagnostic-store-only}}
@@ -388,10 +410,12 @@
   :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :budget {:version "finite-revocation-rebuild/1" :tail-events 128
-           :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 1000000
+  :budget {:version "finite-revocation-rebuild/2" :tail-events 128
+           :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 67108864
+           :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000
-           :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application]
+           :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append]
            :counter :before-every-operation-across-entire-private-rebuild
            :count-byte-preflight :before-replay :effects :none-before-complete-authorization-and-bounds
            :exhaustion {:status :refused :code :revocation-rebuild-budget-exceeded
