@@ -38,7 +38,7 @@ jobs:
           [[ "$PR_HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]
           test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
           test -z "$(git status --porcelain --untracked-files=all)"
-          bb --config /dev/null - <<'CLJ'
+          bb --config /dev/null /dev/stdin <<'CLJ'
           (require '[clojure.edn :as edn] '[clojure.java.io :as io])
           (defn read-single-map! [reader label]
             (let [eof (Object.)
