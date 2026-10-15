@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-configuration-rng-restore"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-carriers"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -179,8 +179,10 @@
   :radii :finite-nonnegative-particle-and-positive-recipient
   :roles-and-restitution :revision-bound-validated-input
   :configuration-binding {:input [:configuration-contact-id :configuration-contact-revision]
+                          :state-contract "docs/plans/cephalon-physical-kernel-abi.edn#contact-profile-binding-state"
+                          :state-field :contact-profile-bindings
                           :source :exactly-one-matching-configuration-contact-parameter-set
-                          :selection-source :retained-canonical-admitted-geometry-or-its-original-recorded-boundary-input
+                          :selection-source :closed-canonical-binding-container-populated-by-explicit-projection-or-new-particle-emission-input
                           :custody :selection-retained-in-complete-canonical-state-snapshot-and-original-history-for-identical-replay
                           :automatic-enumeration :consume-that-bound-selection-for-each-eligible-pair-before-contact
                           :kind-only-first-table-entry-or-unrecorded-selection :forbidden
@@ -377,6 +379,9 @@
                 :values :qualified-owning-abi-values-only
                 :coverage :all-physical-configuration-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
                 :projection-omission-or-unqualified-cache-substitution :forbidden}
+  :retained-carrier-contracts {:trails "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
+                               :contact-profiles "docs/plans/cephalon-physical-kernel-abi.edn#contact-profile-binding-state"
+                               :nexus-memory "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"}
   :hash-payload ["finite-field-snapshot/1" :encoded-complete-canonical-state-map]
   :value-encoding :exact-finite-field-trace-1-tagged-value-algebra-not-the-trace-record-envelope
   :wire :utf8-json-no-whitespace-no-bom-no-newline
@@ -564,7 +569,9 @@
   :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
   :presence-contact :trace-only-no-memory-inclusion
   :other-daimoi-or-separated-pair :no-memory-inclusion
-  :memory-binding :actual-qualified-nexus-to-canonical-memory-and-content-revision
+  :memory-binding :closed-versioned-ordered-entities-nexus-memory-binding-with-actual-owner-memory-content-and-graph-revisions
+  :memory-binding-contract "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"
+  :explicit-non-memory-nexus :physical-contact-without-memory-inclusion-not-an-inferred-missing-binding
   :fold-order [:step-end-time-us :canonical-unordered-contact-pair]
   :deduplicate :exact-memory-id-keep-first-canonical-contact-witness
   :output-order :first-canonical-witness-order
@@ -840,7 +847,7 @@
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
   :abi-operation-version "finite-revocation-rebuild/6"
-  :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds
+  :rebuild [:retained-field :trails :contact-profile-bindings :nexus-memory-bindings :causally-affected-world-projection :active-inclusion-folds
             :completed-and-restored-recall-results-under-recall-requests
             :complete-admitted-pending-boundary-queue]
   :active-inclusion-folds

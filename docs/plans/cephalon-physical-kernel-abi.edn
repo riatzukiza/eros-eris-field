@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-configuration-rng-restore"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-carriers"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -83,9 +83,93 @@
                   :launch-profile-id :launch-profile-sha256
                   :numeric-profile-id :scope-revision :projection-revision :authority-projection-binding :kernel-time-us
                   :residual-us :backlog-us :pending-events :event-cursor :admitted-event-cursor
-                  :ordered-entities :intent-bonds :sparse-cells
+                  :ordered-entities :intent-bonds :sparse-cells :trails :contact-profile-bindings
                   :contribution-provenance :recall-requests :inclusion-folds :rng
                   :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
+ :trail-state
+ {:version "finite-physical-trails/1" :state-key :trails
+  :root-closed-keys [:version :entries] :version-value "finite-physical-trails/1"
+  :entry-closed-keys [:entity-id :origin-provenance-id :samples]
+  :sample-tuple [:step-id :moved-position :final-velocity :causal-provenance-ids :deposit-contribution-ids]
+  :sample-tuple-length 5
+  :types {:id :existing-qualified-nonempty-scalar-utf8-id-under-existing-id-byte-cap
+          :step-id :exact-safe-executed-quantum-end-kernel-time-us
+          :moved-position :exact-two-finite-binary64-world-components
+          :final-velocity :exact-two-finite-binary64-world-unit-per-second-components
+          :references :ordered-vector-of-distinct-actual-qualified-provenance-or-contribution-ids}
+  :empty {:version "finite-physical-trails/1" :entries []}
+  :empty-admission :only-a-genuinely-trail-free-initial-or-reconstructed-state-never-copy-empty-over-retained-history
+  :entry-identity [:entity-id :origin-provenance-id]
+  :entries :ordered-vector-of-closed-entries-unique-by-entity-id-and-origin-provenance-id
+  :sample-collection :ordered-vector-of-exact-five-element-sample-tuples
+  :entry-order :unsigned-utf8-entity-id-then-origin-provenance-id
+  :samples :strictly-increasing-executed-step-id-within-that-source-incarnation-and-reconstructed-physical-branch
+  :reference-order :unsigned-utf8-id-order-not-force-or-deposit-execution-order
+  :origin :actual-qualified-admission-or-emission-origin-retained-in-contribution-provenance
+  :causal-support :complete-direct-origin-force-sampled-field-bond-contact-support-with-transitive-qualified-provenance-closure
+  :deposit-support :actual-existing-layer-deposit-contribution-identities-for-this-sample-no-extra-deposit
+  :reference-validation :unique-exact-source-bytes-and-authority-bindings-before-use-not-id-equality-alone
+  :missing-provenance-shape-or-unknown-reference :refuse-until-owning-abi-provenance-shape-and-original-source-are-qualified
+  :producer :existing-executed-quantum-after-ordered-contact-final-cap-and-threshold
+  :sample-values :actual-frozen-moved-position-and-final-surviving-velocity-used-by-existing-deposits
+  :append :one-sample-per-surviving-entity-per-actually-executed-quantum
+  :zero-deposit :empty-deposit-reference-vector-valid-no-invented-contribution
+  :zero-advance-read-checkpoint-or-queued-future-event :no-sample-or-step-invention
+  :ended-source :retained-qualified-origin-resolves-incarnation-without-requiring-live-entity
+  :current-authority :before-append-any-causal-use-or-exposure-for-source-request-principal-scope-and-all-transitive-support
+  :reconstruct :existing-clean-history-motion-contact-deposit-field-and-trail-reconstruction-together-preserving-permitted-control
+  :delete-row-alone-while-retaining-downstream-revoked-effects :forbidden
+  :replacement :reconstructed-physical-target-branch-not-union-with-abandoned-trails-or-once-only-feedback-precedence
+  :snapshot :complete-carrier-and-retained-support-values-in-existing-state-and-snapshot-tagged-hash
+  :bounds :all-entries-samples-references-inputs-and-materialized-reconstruction-within-existing-state-checkpoint-history-work-time-and-continuation-caps
+  :work :charge-each-entry-sample-and-support-visit-under-existing-entity-contribution-byte-and-order-counters-without-reset
+  :no-fit :existing-exact-unchanged-finite-input-state-continuation-work-or-rebuild-budget-refusal-no-partial-commit
+  :invalid-data {:status :refused :reason :invalid-trail-state :reason-revision 1 :state :exact-unchanged-prior-state}
+  :new-force-pheromone-coefficient-decay-ring-eviction-truncation-resampling-or-compaction-law :none
+  :historical-sample-redeposit-new-event-id-or-disposable-ui-sidecar :forbidden
+  :owning-review-choice :explicit-physical-motion-deposit-carrier-interpretation-stage-frequency-and-support-layout-not-adopted-donor-physics
+  :fixtures [:nonempty-trail-checkpoint-restore-continuation :split-unsplit-catch-up-identical-samples
+             :wrong-version-key-tuple-step-order-or-unresolved-support-refused
+             :revoked-upstream-cause-full-derived-trail-and-field-rebuild-with-permitted-control
+             :ended-source-legitimate-trail :nested-replacement-no-ghost-or-duplicated-samples
+             :zero-read-checkpoint-pending-no-append :existing-exact-and-one-over-work-and-complete-continuation-bounds]}
+ :contact-profile-binding-state
+ {:version "finite-contact-profile-bindings/1"
+  :state-field :contact-profile-bindings
+  :closed-container-keys [:version :bindings]
+  :version-value "finite-contact-profile-bindings/1"
+  :bindings :ordered-vector-with-exactly-one-entry-per-actual-particle-recipient-entity-pair-admitted-by-eligibility-matrix-including-separated-pairs
+  :closed-entry-keys [:particle-id :recipient-id :configuration-contact-id :configuration-contact-revision]
+  :id-values :exact-existing-qualified-scalar-utf8-identifiers
+  :revision-value :configuration-schema-R
+  :ordering :existing-canonical-eligible-contact-pair-order-not-map-or-projection-input-order
+  :roles :actual-daimoi-and-presence-or-nexus-entities-in-the-same-admitted-state-and-authority
+  :profile :exactly-one-complete-configuration-parameter-set-matching-id-revision-and-recipient-kind
+  :geometry-values :radii-and-restitution-from-that-profile-no-independent-numeric-override
+  :admit-source :explicit-contact-profile-bindings-container-in-the-trusted-visible-projection
+  :admit-record :complete-container-in-original-qualified-admit-state-input-before-admission
+  :emit-source :explicit-new-particle-contact-profile-bindings-argument
+  :closed-emit-entry-keys [:recipient-id :configuration-contact-id :configuration-contact-revision]
+  :emit-container :ordered-vector-by-exact-recipient-id-unsigned-utf8-with-one-entry-per-current-recipient
+  :emit-population :bind-existing-qualified-emitted-particle-id-to-each-validated-input-entry-and-reorder-by-canonical-pair-order
+  :emit-record :complete-original-input-entries-and-actual-emitted-particle-identity-in-qualified-boundary-history
+  :idempotent-emit-retry :no-second-binding-population-or-change-to-existing-bindings
+  :projection-replacement :explicit-complete-validated-new-container-in-original-admission-input-no-hidden-pair-selection
+  :other-operations :preserve-bindings-except-original-qualified-replayed-admission-or-emission-inputs
+  :zero-eligible-pairs :explicit-empty-bindings-vector-valid
+  :unknown-missing-duplicate-extra-foreign-kind-revision-or-conflicting-binding :whole-unchanged-refusal-before-contact-enumeration
+  :kind-only-first-entry-unrecorded-selection-or-local-lookup :forbidden
+  :snapshot-and-replay :complete-version-and-bindings-retained-hashed-and-reconstructed-from-original-counted-inputs
+  :limits :existing-eligible-pair-count-input-state-checkpoint-history-and-work-limits-no-new-budget
+  :refusal {:status :refused :reason :invalid-contact-profile-binding :reason-revision 1
+             :state :exact-unchanged-prior-state :new-state-contact-or-binding-result :absent}
+  :fixtures [:multiple-same-kind-profiles-explicit-distinct-pair-bindings
+             :admit-then-advance-separated-pair-later-contact-with-same-profile
+             :emit-input-binding-population-and-exact-idempotent-retry
+             :checkpoint-restore-and-rebuild-identical-profile-ids-radii-and-restitution
+             :missing-extra-duplicate-unknown-foreign-or-numeric-override-refused
+             :reverse-projection-map-and-input-order-same-canonical-state
+             :all-existing-exact-and-one-over-input-continuation-and-work-bounds]}
  :event-cursors {:event-cursor :last-consumed-boundary-event
                  :admitted-event-cursor :last-admitted-event-including-queued-future-boundaries
                  :source :independently-verified-qualified-clio-cursor-order-and-payloads
@@ -120,6 +204,36 @@
              :revoke-already-witnessed-memory-before-next-fold-use]}
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
+ :nexus/required [:memory-binding]
+ :nexus-memory-binding
+ {:version "finite-nexus-memory-binding/1" :location :ordered-entities-nexus-memory-binding
+  :memory-closed-keys [:version :binding-kind :memory-id :content-revision :graph-revision]
+  :memory-values {:version "finite-nexus-memory-binding/1" :binding-kind :memory
+                  :memory-id :actual-qualified-canonical-memory-id
+                  :content-revision :exact-qualified-owning-memory-content-revision
+                  :graph-revision :exact-qualified-owning-graph-snapshot-revision}
+  :non-memory-closed-keys [:version :binding-kind]
+  :non-memory-value {:version "finite-nexus-memory-binding/1" :binding-kind :non-memory}
+  :missing-field-nil-alias-or-inferred-non-memory :forbidden
+  :population :explicit-owner-qualified-visible-projection-nexus-record-in-original-admit-state-or-existing-boundary-entity-update-input
+  :source :actual-matching-memory-content-and-graph-records-with-original-principal-scope-and-qualified-provenance-retained-in-state
+  :graph-revision :actual-qualified-source-graph-read-binding-not-field-storage-or-projection-rule-label
+  :other-operations :preserve-exact-binding-unless-original-qualified-admitted-update-is-replayed
+  :snapshot-replay-and-rebuild :complete-binding-retained-hashed-and-reconstructed-with-original-source-records
+  :inclusion :only-currently-authorized-memory-variant-with-exact-owner-id-and-revisions
+  :non-memory-contact :existing-physical-contact-behavior-with-no-memory-inclusion
+  :current-authority :before-every-causal-influence-or-inclusion-even-with-unchanged-scope-revision
+  :memory-to-non-memory-retag-to-preserve-denied-influence :forbidden
+  :missing-duplicate-unknown-stale-foreign-or-conflicting-source :whole-unchanged-refusal-before-inclusion-no-memory-lookup-or-grant-minting
+  :invalid-data {:status :refused :reason :invalid-nexus-memory-binding :reason-revision 1
+                 :state :exact-unchanged-prior-state :partial-memory-result :absent}
+  :authority-and-finite-refusals :retain-their-own-existing-codes
+  :bounds :existing-input-state-snapshot-history-and-work-caps-no-new-budget
+  :fixtures [:qualified-memory-and-explicit-non-memory-nexus-controls
+             :same-memory-multiple-nexuses-with-identical-source-revisions
+             :missing-field-owner-id-revision-or-source-conflict-refused
+             :checkpoint-restore-rebuild-identical-binding-and-inclusion
+             :unchanged-scope-revocation-and-denied-retag-control]}
  :daimoi/required [:emitted-owner :seed-embedding :embedding-revision
                   :mantle-lineage :intent-wallet :emission-id :recall-request-id]
  :bond/required [:id :endpoints :intent :contributions :provenance
@@ -172,6 +286,7 @@
   :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :checkpoint-evidence-unestablished
+                    :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
                     :finite-input-byte-limit :finite-trace-budget-exceeded
                     :finite-work-budget-exceeded :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
@@ -181,7 +296,8 @@
  {:admit-state {:input [:prior-state-or-empty
                        :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
                 :output [:state-transition-result]
-                :operation-result [:admitted-state]}
+                :operation-result [:admitted-state]
+                :contact-profiles :validate-and-retain-complete-explicit-projection-contact-profile-bindings-under-contact-profile-binding-state}
   :advance {:input [:state :elapsed-us :ordered-boundary-events :current-trusted-authority-projection]
             :output [:state-transition-result]
             :operation-result [:state :observations :residual-us :backlog-us :completeness]}
@@ -192,13 +308,28 @@
              :backlog :drain-existing-only
              :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
-                       :physical-budget :mood-lens-revision :current-trusted-authority-projection]
+                       :physical-budget :mood-lens-revision :new-particle-contact-profile-bindings
+                       :current-trusted-authority-projection]
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
                 :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
-                :invalid-duplicate-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
-                :retry :existing-request-idempotency-with-exact-matching-admitted-input-including-original-principal-and-scope-not-second-admission}
+                :invalid-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
+                :request-refusal {:status :refused :reason :invalid-recall-request :reason-revision 1
+                                  :state :exact-unchanged-prior-state :request-result :absent}
+                :request-refusal-cases [:malformed-request-or-id :same-id-with-any-different-immutable-admission-input
+                                        :same-id-with-different-original-principal-or-scope]
+                :retry :existing-authorized-current-request-result-with-exact-original-input-match-not-second-admission
+                :retry-match-includes [:original-principal-and-scope :request-and-seed :physical-budget
+                                       :mood-lens-revision :original-new-particle-contact-profile-bindings]
+                :retry-source :retained-canonical-recall-request-record-not-external-cache-or-revived-historical-result
+                :retry-effects :no-new-particle-binding-time-draw-feedback-or-budget-reset
+                :authority-and-other-finite-refusals :retain-their-own-existing-codes-never-remap-to-invalid-request
+                :contact-profiles :validate-new-particle-input-before-any-new-state-commit-under-contact-profile-binding-state
+                :fixtures [:invalid-empty-malformed-or-overlong-id-exact-request-refusal
+                           :conflicting-input-principal-scope-or-contact-binding-same-id-exact-refusal
+                           :exact-authorized-retry-same-result-and-unchanged-state-counters
+                           :denied-stale-or-unestablished-authority-keeps-own-refusal]}
   :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection]
                 :output [:recall-result]
                 :result-boundary :qualified-public-read-facade
@@ -211,6 +342,9 @@
                           :additional-fields :forbidden
                           :reason-revision 1
                           :reason-status {:invalid-recall-request :refused
+                                          :invalid-contact-profile-binding :refused
+                                          :invalid-trail-state :refused
+                                          :invalid-nexus-memory-binding :refused
                                           :current-authority-unestablished :refused
                                           :stale-recall-authority :stale
                                           :denied-recall-authority :denied
@@ -252,7 +386,8 @@
                 :completed-result-binding :this-retained-result-must-be-reconstructed-under-exact-current-authority
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
-                :refusal-reasons [:invalid-recall-request :current-authority-unestablished
+                :refusal-reasons [:invalid-recall-request :invalid-contact-profile-binding
+                                 :invalid-trail-state :invalid-nexus-memory-binding :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
                                   :finite-work-budget-exceeded]
@@ -350,7 +485,7 @@
                       :verified-consumed-and-admitted-cursors :reauthorized-complete-pending-queue]
    :operation-result-provenance :verified-current-clio-provenance-horizon-separate-from-reconstructed-state-cursors
    :persistent-field-revision :qualified-outer-atomic-record-output-not-minted-or-returned-by-pure-rebuild
-   :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds
+   :rebuilds [:retained-field :trails :contact-profile-bindings :nexus-memory-bindings :causally-affected-world-projection :active-and-restored-inclusion-folds
              :all-completed-and-restored-recall-results-under-recall-requests
              :all-admitted-pending-boundary-events]
    :completed-recall-results {:inventory :every-retained-request-even-when-active-inclusion-folds-are-empty
@@ -379,6 +514,7 @@
                      :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
                      :checkpoint-evidence-unestablished
+                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden
@@ -455,7 +591,7 @@
              :range :exclusive-owner-attested-checkpoint-covered-provenance-prefix-through-inclusive-independent-current-clio-tip
              :state-cursors :never-substitute-for-provenance-range-or-authorize-omitted-post-checkpoint-operations
              :authority :same-qualified-current-axxium-and-clio-admission-before-every-causal-influence-and-through-result-exposure
-             :reconstruct [:complete-physical-state :both-state-cursors :original-pending-event-queue
+             :reconstruct [:complete-physical-state :trails :contact-profile-bindings :nexus-memory-bindings :both-state-cursors :original-pending-event-queue
                            :recall-requests :inclusion-folds :pending-feedback
                            :feedback-confirmations :confirmed-outcome-ids]
              :recorded-state-inputs :reapply-original-admitted-outcome-and-acknowledgement-facts-once-with-original-identities-never-reexecute-external-effects
@@ -485,6 +621,9 @@
                         :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact
                         :stored-producing-artifact-build-launch-equals-actual-qualified-loaded-identity
                         :complete-inclusion-fold-state-cursor-dedup-order-and-budgets
+                        :closed-contact-profile-bindings-and-original-admission-or-emission-inputs
+                        :complete-versioned-trails-and-qualified-causal-support
+                        :closed-nexus-memory-binding-with-actual-owning-source-revisions
                         :seed-state-and-draw-counter :causal-contributions]
             :scope-mismatch :refused-before-causal-use
             :missing-or-different-producing-identity :unchanged-refusal-before-causal-use

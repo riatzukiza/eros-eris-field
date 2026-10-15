@@ -1544,3 +1544,73 @@ restore now includes three large carriers under the unchanged4MiB input bound;
 all other arguments/framing still share512KiB. These are unimplemented source
 contracts and future controls within the same14packets75, with no new operation,
 engine, native estimate/edge/readiness, executed domain proof or live behavior.
+
+
+## Closed retained carriers and request refusal — 2026-10-15
+
+Current Codex roots4289184904/4289184913/4289184922 identify missing canonical
+contact/trail carriers and an unspecified request refusal. The ABI now owns
+`finite-contact-profile-bindings/1` at the required root state key
+`:contact-profile-bindings`: closed version/bindings container and exact
+particle-ID/recipient-ID/profile-ID/profile-revision entries for every actual
+particle/recipient entity pair admitted by the eligibility matrix, including
+separated pairs, in canonical pair order. Admission receives
+the complete explicit map from the qualified projection; emission receives an
+explicit recipient/profile/revision vector and binds the actual qualified newly
+emitted particle identity. Original admission/emission payloads retain those
+values. Exact retries do not populate again. No kind-only, first-table-entry,
+unrecorded geometry or external lookup can supply a missing selection. The
+complete carrier is hashed and replayed under existing authority and all caps;
+invalid data returns refused/invalid-contact-profile-binding/revision1 unchanged.
+
+Mandatory `:trails` is a closed `finite-physical-trails/1` carrier. Each entry
+identifies entity plus actual qualified origin and ordered samples; each sample
+is exactly [executed-step, moved-position, final-velocity, causal-support-IDs,
+actual-deposit-IDs]. Append once per surviving entity after an executed quantum's
+ordered contact/final-cap/threshold stage, using actual values already used for
+the existing deposits. Zero/read/checkpoint/queued events append nothing. Actual
+origin/support references remain in existing qualified provenance, including
+ended sources; no trail producer mints native event authority. Snapshot includes
+every retained sample/reference. Current authority applies to transitive support,
+and revoked influence requires reconstruction of affected motion, contacts,
+fields and trails together, with permitted control. Historical replacement uses
+the reconstructed physical branch; the once-only feedback rule never unions
+abandoned trails back in. Charge all visits, values, validation and reconstruction
+under existing state/checkpoint/input/history/work/time caps and stricter ordinary
+limits. No ring eviction, truncation, new decay/force, summary or uncharged scan is
+introduced. Complete unchanged workload targets still require future proof.
+This motion/deposit trail interpretation, stage/frequency/layout/support and work
+mapping are explicit proposed representation choices for owning review, not donor
+pheromone adoption, a UI-only retag or an already qualified trail-force mechanism.
+
+The same state-closure audit found the already required nexus-to-memory binding
+had no named nested home. Every nexus in `:ordered-entities` now has a closed
+`finite-nexus-memory-binding/1` value at `:memory-binding`, with explicit memory
+or non-memory tag. The memory variant carries actual owner memory ID, content
+revision and graph snapshot revision; non-memory has no invented memory fields.
+Missing/nil is not the non-memory tag. Qualified projection/original boundary
+inputs populate it with original principal/scope/provenance, snapshot/hash retains
+it, and restore/rebuild recovers it before inclusion without another memory
+lookup. Same-current authority and exact actual source revisions are required;
+retagging denied memory to preserve its influence is forbidden. Explicit
+non-memory contacts preserve existing physics and produce no memory inclusion.
+This closes an existing inclusion requirement, without a new lookup/classifier,
+operation, grant or packet. Actual owner revision types remain authoritative;
+field storage or projection-rule labels cannot replace a graph snapshot revision.
+
+Malformed or conflicting request admission now returns exactly
+`:status :refused`, `:reason :invalid-recall-request`, `:reason-revision 1`, exact
+unchanged prior state and no request result. Exact authorized immutable-input
+retry remains idempotent with the current retained request result, including
+original contact inputs, and no new particle/time/draw/binding/feedback/budget.
+Authority and finite failures keep their own codes. Invalid trail or nexus
+binding uses respectively invalid-trail-state or invalid-nexus-memory-binding,
+refused/revision1; both the authoritative read reason/status table and reason
+vector include all three new invalid-carrier codes with no recall payload.
+
+Future controls cover complete nonempty carrier checkpoint/restore/continuation,
+split/catch-up/unsplit equality, missing/extra/duplicate/foreign/mismatched data,
+ended legitimate source, revocation and nested replacement, genuine explicit
+non-memory nexus and exact/conflicting request retry, plus all existing exact/
+one-over bounds. No domain/carrier/transaction/load fixture was executed by this
+planning edit; same14 packets75/physical21 and no native readiness/estimate change.
