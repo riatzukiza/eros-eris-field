@@ -115,7 +115,11 @@ Its exact names and fields require this source plan's review.
 - `rebuild-revocation` privately reconstructs the complete permitted world from
   a compatible independently established clean checkpoint, separate trusted
   checkpoint evidence and complete ordered immutable history under current
-  Axxium authority. Its exact inputs, replacement-history closure, pending and
+  Axxium authority, plus an independently trusted current Clio provenance
+  horizon. Snapshot state cursors may rewind; the main history range runs from
+  the owner-attested checkpoint covered prefix through that unrewound tip.
+  The checkpoint's storage position is not proof of the prefix it represents.
+  Its exact inputs, replacement-history closure, pending and
   completed recall obligations and bounded refusal union are owned by
   `cephalon-physical-kernel-abi.edn#functions/rebuild-revocation` and
   `cephalon-finite-field-coupling.edn#retained-revocation`. A successful result
@@ -168,8 +172,18 @@ Its exact names and fields require this source plan's review.
   Clio/OpenPlanner/Axxium adapters must independently admit the committed atomic
   effect record binding its expected snapshot digest, cursor, field revision,
   checkpoint effect ID, stored principal and scope. Restore/rebuild compare that
-  separate trusted binding with the actual payload and wrapper digest before
-  admission. Changing a velocity, cell or fold and recomputing a self-hash
+  separately admitted expected digest with the actual payload and wrapper
+  digest, snapshot-state cursor, principal/scope and existing artifact/config
+  bindings before admission. Field revision remains authenticated outer record
+  metadata: qualified owners validate its actual record/effect, expected graph/
+  field revisions and independently read back the committed component association.
+  No field-revision value is invented in the closed snapshot state, compared
+  to its graph projection revision or minted by the pure kernel. Pure digest
+  comparison alone does not establish outer record authority.
+  Separate checkpoint covered-provenance evidence and qualified Clio admission/
+  fencing retain the independent current horizon through replacement exposure;
+  missing capability refuses rather than creating a local event/fence engine.
+  Changing a velocity, cell or fold and recomputing a self-hash
   cannot replace that authority. Missing, stale, foreign or conflicting evidence
   returns `:status :refused`, `:reason :checkpoint-evidence-unestablished` and
   `:reason-revision 1` with the exact unchanged prior state, before admitting any
@@ -306,7 +320,7 @@ recipient's world velocity back after resolution. For `(v·n) >= 0`, separating
 or tangent contact returns the original particle world components bit for bit;
 it does not reconstruct them from the rounded relative subtraction. With
 particle world x=1 and recipient world x=-2^53, the latter round trip would
-incorrectly return0. Preserve original signed-zero bits as well. Degenerate normal refuses
+incorrectly return 0. Preserve original signed-zero bits as well. Degenerate normal refuses
 the operation. For a stationary recipient, `n=[1,0]` and `e=1`, approaching
 `v=[-1,0]` must become `[1,0]`; separating `v=[1,0]` must stay `[1,0]`.
 These are required future RED cases, not executed solver tests. Admitted

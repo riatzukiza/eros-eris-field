@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-replacement-closure"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-provenance-horizon"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -141,7 +141,8 @@
   :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :checkpoint-evidence-unestablished
-                    :finite-state-continuation-byte-limit]}
+                    :finite-input-byte-limit :finite-trace-budget-exceeded
+                    :finite-work-budget-exceeded :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
  :input-wire-contract "docs/plans/cephalon-finite-field-coupling.edn#input-wire-codec"
  :state-continuation-contract "docs/plans/cephalon-finite-field-coupling.edn#continuation-closure"
@@ -204,16 +205,18 @@
                 :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
-  {:version "finite-revocation-rebuild/5"
+  {:version "finite-revocation-rebuild/6"
    :input [:prior-state :compatible-trusted-checkpoint :current-trusted-checkpoint-evidence
+           :current-trusted-clio-provenance-horizon
            :immutable-complete-ordered-history-and-replacement-closure :current-trusted-authority-projection
            :physical-configuration]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
-   :history-coverage {:from :exclusive-verified-checkpoint-cursor
-                       :through :inclusive-current-admitted-event-cursor-including-all-pending-events
+   :history-coverage {:from :exclusive-owner-verified-checkpoint-covered-provenance-cursor
+                      :through :inclusive-independently-trusted-current-clio-provenance-tip
+                      :state-admitted-cursor :separately-verified-physical-schedule-cursor-never-the-main-provenance-endpoint
                       :consumed-boundary :separately-verified-current-consumed-cursor
-                      :consumed-prefix :replay-to-consumed-cursor-only-with-original-quanta-and-effects
+                      :consumed-prefix :replay-each-main-operations-recorded-consumed-physical-schedule-never-truncate-provenance-at-state-cursor
                       :pending-tail :reconstruct-and-reauthorize-every-admitted-not-yet-consumed-event-before-result
                       :permitted-pending :retain-original-identity-input-order-and-schedule-with-no-early-execution
                       :denied-pending :retain-immutable-history-and-explicit-bound-cancelled-no-op-disposition-never-later-causal-use
@@ -224,6 +227,23 @@
                       :read-or-no-op-events :retain-when-present-in-admitted-cursor-history-with-no-invented-effect
                       :ordering :exact-qualified-clio-stream-order-with-original-identities-payloads-and-parent-links
                       :missing-unknown-duplicate-or-conflicting-event :typed-unchanged-refusal}
+   :provenance-horizon
+   {:owner :qualified-clio-current-history-snapshot-and-admission-or-fence
+    :input :independently-obtained-current-tip-bound-to-actual-retained-state-record-and-selected-stream-or-lineage
+    :checkpoint-start :separate-owner-attested-prefix-covered-by-checkpoint-not-its-storage-event-position-or-state-cursor
+    :main-range :every-original-operation-through-unrewound-current-tip-including-restores-and-rebuilds
+    :state-cursor-rewind :cannot-rewind-main-provenance-range-or-hide-replacement-operations
+    :supporting-references :cannot-substitute-for-omitted-main-range-operations
+    :outer-freshness :qualified-owner-admission-or-fence-retains-this-tip-through-result-exposure-otherwise-refuse
+    :untrusted-state-tail-storage-time-or-self-asserted-tip :not-authority
+    :missing-stale-foreign-gapped-or-changed-horizon :missing-or-ambiguous-rebuild-history
+    :pure-lookup-local-fencing-or-new-event-engine :forbidden
+    :bounds :all-horizon-and-coverage-evidence-counted-within-existing-argument-input-and-work-caps
+    :fixtures [:restore-rewinds-state-cursor-but-later-operations-remain-in-main-history
+               :prior-rebuild-rewinds-state-cursor-with-complete-permitted-control
+               :truncated-tail-ending-at-rewound-cursor :omitted-restore
+               :missing-stale-copied-or-foreign-horizon :horizon-changes-before-exposure
+               :checkpoint-storage-position-is-not-covered-prefix :existing-exact-and-one-over-bounds]}
    :replacement-reference-closure
    {:input :complete-explicit-materialized-checkpoint-evidence-and-supporting-history-in-the-counted-history-argument
     :main-tail :original-ordered-checkpoint-to-admitted-cursor-events
@@ -257,10 +277,12 @@
    :checkpoint-validates :all-existing-restore-identity-state-cursor-configuration-and-separate-trusted-digest-obligations
    :output [:state-transition-result]
    :operation-result [:rebuilt-state :qualified-replacement-checkpoint :event-cursor
-                      :new-scope-and-authority-binding :new-projection-revision :new-field-revision
+                      :new-scope-and-authority-binding :new-projection-revision
                       :complete-inclusion-folds :rebuild-budget-accounting
                       :reconstructed-or-explicitly-invalidated-completed-recall-result-dispositions
                       :verified-consumed-and-admitted-cursors :reauthorized-complete-pending-queue]
+   :operation-result-provenance :verified-current-clio-provenance-horizon-separate-from-reconstructed-state-cursors
+   :persistent-field-revision :qualified-outer-atomic-record-output-not-minted-or-returned-by-pure-rebuild
    :rebuilds [:retained-field :trails :causally-affected-world-projection :active-and-restored-inclusion-folds
              :all-completed-and-restored-recall-results-under-recall-requests
              :all-admitted-pending-boundary-events]

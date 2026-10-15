@@ -915,7 +915,7 @@ Before timing, freeze reviewed fixture bytes/layouts/seed42, calibration and sou
 
 A dedicated fixed causal fixture must produce at least one different eligible contact and at least one different actually included authorized memory beyond the vector seed between permitted field-intervention arms, with every other declared input fixed. A finite nonzero vector alone or saturation hiding every downstream change fails calibration. Retain complete force/contact/bounds/layer/threshold/radius/restitution/half-life/noise/prune/saturation values, domains, source/review and revisions. Missing values fail; no library default or source pin adopts calibration.
 
-The current finite revocation profile `finite-revocation-rebuild/5` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
+The current finite revocation profile `finite-revocation-rebuild/6` admits at most128 complete immutable boundary events from an independently established clean checkpoint covered-provenance prefix through the independently trusted unrewound current Clio horizon, including replacement operations and every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
 
 Embedding production failure returns failed/embedding-failed with a bounded typed category from timeout,unavailable,rate-limited,invalid-output,internal-error,unclassified. The existing qualified embedding-provider seam consumed by atomic8 owns versioned mapping `embedding-failure-category/1`; consumers retain that category/mapping revision verbatim rather than reinterpret errors. At that protected seam, shape validated actual HTTP status and explicit transport-timeout/unavailable, invalid-output and internal-failure indicators from the actual provider outcome. Do not parse or retain exception prose. If the bound indicator attestation is unavailable or malformed, return unclassified before evaluating rules1–5. Otherwise apply FIRST matching rule: (1) HTTP429 => rate-limited; (2) explicit timeout OR HTTP408/504 => timeout; (3) explicit transport-unavailable OR other HTTP500–599 => unavailable; (4) explicit validated invalid-output => invalid-output; (5) explicit validated internal-failure => internal-error; (6) no match, unavailable/malformed attestation or unknown => unclassified. A contradictory lower-priority flag cannot override the first match. Tests require timed-out429=>rate-limited,503+invalid-output=>unavailable,timeout+invalid-output=>timeout,invalid-output+internal=>invalid-output, and missing/unknown=>unclassified, with exact stable replay/category/revision and no raw-string heuristics. Atomic8 owns delivery/qualification at the actual existing provider seam as part of its failure handling, not a second classifier in Eros/Eris or another unowned prerequisite.
 
@@ -1041,14 +1041,19 @@ empty inclusion, Unicode/control escaping, map insertion order, duplicate
 memory witnesses and split/restored equality. Host EDN/JSON printer choices
 cannot determine the count.
 
-The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/5.
+The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/6.
 Its exact inputs are prior state, compatible independently established clean
 trusted checkpoint, separate trusted checkpoint evidence, complete ordered
-immutable history with materialized replacement-reference closure, current
-trusted authority projection and physical configuration. Cover every admitted
-event through the separately verified admitted cursor, including the complete
-pending queue beyond the consumed cursor. Replay only the consumed prefix with
-its original quanta, elapsed/residual/backlog, seed and operation schedule;
+immutable history with materialized replacement-reference closure, independently
+trusted current Clio provenance horizon, current trusted authority projection
+and physical configuration. Cover every main provenance operation from the
+owner-attested checkpoint covered prefix through that unrewound current tip,
+including every restore and prior rebuild. The snapshot's consumed/admitted
+state cursors separately determine physical execution and the complete
+pending queue beyond the consumed cursor. Replay every main operation in
+qualified provenance order. For each operation, execute only its recorded
+already-consumed physical schedule with the original quanta, elapsed/residual/
+backlog and seed; a state cursor cannot cut off later provenance operations.
 reconstruct and reauthorize every pending event before atomic replacement.
 Allowed pending events retain original identity/order/inputs/schedule without
 early execution. Denied influence retains immutable source history and an
@@ -1071,7 +1076,7 @@ payload; changing only the state authority binding cannot qualify that result.
 Unsafe or unestablished invalidation refuses the whole rebuild unchanged and
 requires outer quarantine. Success returns the complete rebuilt state, qualified
 replacement checkpoint, both verified cursors, reauthorized complete pending
-queue, new scope/authority/projection/field bindings, complete folds, completed
+queue, new scope/authority/projection bindings, complete folds, completed
 result reconstruction/invalidation dispositions and budget accounting atomically. Missing/unknown/ambiguous/gapped/conflicting history,
 contaminated or unestablished baseline, failed authority/binding or excess
 returns exact unchanged prior state with the declared reason. The unchanged
@@ -1112,6 +1117,34 @@ rebuild → later revoke → rebuild/read, plus shared backward-reference/distin
 occurrence, rewound-cursor, bad-reference and complete-closure exact/one-over
 controls. Requiring a baseline after the latest replacement is not a substitute
 for these retained positive obligations.
+
+The outer qualified Clio owner independently supplies the current history tip,
+bound to the actual retained state/record and selected stream or lineage. The
+checkpoint's separately authenticated record must attest the prefix that its
+snapshot represents; neither its storage position nor the snapshot state cursor
+establishes that prefix. Qualified owner admission/fencing retains the selected
+tip through result exposure, or the operation refuses unchanged. Restores may
+rewind physical consumed/admitted state cursors, but cannot rewind this main
+provenance range. Supporting references cannot hide an omitted main-range
+replacement. All explicit horizon and coverage evidence counts under existing
+input/framing/work caps. Missing, stale, foreign, truncated or changing horizon
+uses `missing-or-ambiguous-rebuild-history`; invalid checkpoint evidence keeps
+`checkpoint-evidence-unestablished`. Future positives retain restore/prior-rebuild
+to an older state cursor, later operations and revocation, plus truncated-at-
+rewound-cursor, omitted-replacement, bad-horizon, owner-tip-change and unchanged
+exact/one-over controls. The pure operation performs no owner lookup or local
+fencing; an unsupported owner capability remains an upstream gap.
+
+Pure snapshot authentication compares only represented values: complete payload
+and wrapper digests equal the independently admitted expected digest; the state
+cursor equals the bound snapshot-state cursor; principal/scope and existing
+artifact/configuration bindings match. Field revision remains authenticated
+outer record metadata. Qualified OpenPlanner/Clio/Axxium still check its actual
+record/effect, expected graph/field revisions and component association with
+independent graph/checkpoint/effect readback. No field revision is added to the
+closed snapshot state, substituted from projection revision or minted/returned
+by the pure rebuild. Pure equality alone cannot establish the outer association
+or authorize an arbitrary historical record.
 
 Recall-request IDs now explicitly use the same nonempty well-formed scalar
 string, exact unsigned UTF8 spelling,128-byte bound and namespace uniqueness
@@ -1386,3 +1419,31 @@ No kernel, resolver, new event/auth engine, local Rheos implementation, qualifie
 fixture, source deployment or live B proof is claimed. Earlier proposed/4 text
 and estimate/readback history remain provenance, superseded by the operative/5
 contract and the explicit unapplied handoff above.
+
+
+## Unrewound history and payload-checkable evidence — 2026-10-15
+
+Codex5540187865 roots4288485532/4288485542 identify two further gaps in the
+preceding proposed/5. The operative rebuild/6 now consumes the independently
+trusted current Clio provenance horizon and an independently attested checkpoint
+covered prefix. State consumed/admitted cursors retain their physical meaning
+and may rewind; they cannot truncate provenance coverage. The qualified owner
+holds admission/fencing through exposure or refuses. All evidence and work still
+share the existing bounds and successful permitted-history controls.
+
+The checkpoint record's field revision remains mandatory outer authenticated
+metadata with owner expected-revision/component/readback checks. Pure comparison
+uses only actual snapshot/argument values and the independently admitted expected
+digest. The closed state has no invented field-revision carrier or storage-revision
+transition; pure rebuild does not promise that outer persistence output. Earlier
+proposed/5 statements remain history, superseded by these operative distinctions.
+
+CodeRabbit5540180267 also found three corrections: the shared transition union
+now declares all input/work/trace/continuation limit reasons; the reflection
+example says return 0; and the older2d7a hosted parser is accurately described as
+passing its earlier second-read check, not true trailing-source EOF. The actual
+immutable2d7a workflow was retrieved and verified; no historical receipt is
+rewritten. Current parser verification remains separately bound to its actual
+head and job. These are unimplemented owning-plan corrections, no domain law or
+solver execution. Same fourteen packets75/physical21; all source, owning Foresight,
+fair estimate, native Rheos and live-proof gates remain.

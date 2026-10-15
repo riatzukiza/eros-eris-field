@@ -172,7 +172,10 @@ The reusable reviewer needs parser success and passes
 dependency result. Existing reviewer/publication source pins and guards remain.
 
 At exact2d7a02d61ffc8118704d3778f9b06bc984ddbca7, actual run38685018571 parser
-job116257775574 passed both declarations and true EOF. Actual deterministic
+job116257775574 passed both declarations and its earlier second-`edn/read`
+check. The actual workflow at that immutable run head uses a second read, which
+silently consumes trailing reader-discard forms; this is not true trailing-source
+EOF evidence. Actual deterministic
 producer116257825490 passed while credential detection, cross-repository token
 creation and private-mirror steps were all skipped. This is observed hosted
 workflow evidence, distinct from local Babashka1.12.207 parser fixtures and

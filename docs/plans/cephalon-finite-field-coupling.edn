@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-replacement-closure"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-provenance-horizon"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -383,9 +383,17 @@
                    :owner :existing-qualified-clio-immutable-history-and-openplanner-atomic-effect-receipt-under-axxium-authority
                    :outer-read :independently-authenticate-and-admit-the-actual-persistence-record-through-those-existing-owners
                    :binding [:actual-stored-principal :permitted-scope :field-revision
-                             :checkpoint-effect-id :event-cursor :expected-snapshot-sha256]
+                             :checkpoint-effect-id :event-cursor :checkpoint-covered-provenance-cursor
+                             :expected-snapshot-sha256]
+                   :event-cursor-role :snapshot-state-cursor-distinct-from-owner-attested-covered-provenance-prefix
+                   :covered-provenance-cursor :qualified-clio-prefix-represented-by-this-checkpoint-not-inferred-from-storage-time-or-record-position
                    :expected-digest :exact-lowercase-sha256-in-the-separately-trusted-committed-record
-                   :comparison :snapshot-payload-digest-wrapper-digest-and-trusted-expected-digest-all-equal-with-exact-cursor-scope-principal-and-field-binding
+                   :comparison :snapshot-payload-digest-wrapper-digest-and-trusted-expected-digest-all-equal-with-exact-snapshot-state-cursor-scope-principal-and-existing-artifact-configuration-bindings
+                   :field-revision :outer-authenticated-record-metadata-not-a-pure-snapshot-field-comparison
+                   :outer-record-validation :authenticate-actual-record-effect-and-field-revision-expected-graph-field-revisions-and-record-component-association-through-qualified-owners
+                   :outer-readback :independently-bind-committed-graph-checkpoint-and-effect-record-no-arbitrary-historical-record
+                   :pure-pass-alone :does-not-establish-outer-record-authority-or-storage-revision
+                   :projection-revision-as-field-revision-or-local-storage-revision-minting :forbidden
                    :copied-self-asserted-or-same-storage-response-evidence :not-authority
                    :missing-unknown-stale-conflicting-or-mismatched-evidence :whole-unchanged-refusal-before-any-state-admission
                    :evidence-refusal {:status :refused :reason :checkpoint-evidence-unestablished
@@ -413,6 +421,7 @@
              :missing-copied-or-foreign-checkpoint-evidence-refused
              :missing-stale-foreign-and-mismatched-evidence-exact-revision1-checkpoint-evidence-unestablished-refusal
              :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
+             :outer-field-revision-and-component-mismatch-refused-without-invented-snapshot-field
              :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
              :complete-checkpoint-argument-exact1048576-and-one-over
              :payload-under-cap-but-complete-wrapper-one-over-refused]}
@@ -673,7 +682,7 @@
                :stale-local-policy-or-locally-minted-version :not-authority
                :unsupported-authority-guard :refuse-all-components-before-commit :independent-readback :required
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
-               :checkpoint-authentication :record-the-exact-canonical-snapshot-digest-cursor-field-revision-scope-principal-and-checkpoint-effect-id-in-the-same-qualified-atomic-effect-receipt
+               :checkpoint-authentication :record-the-exact-canonical-snapshot-digest-snapshot-state-cursor-owner-attested-covered-provenance-prefix-field-revision-scope-principal-and-checkpoint-effect-id-in-the-same-qualified-atomic-effect-receipt
                :restore-evidence :independent-owner-authenticated-read-of-that-committed-record-not-the-snapshot-or-storage-response-asserting-its-own-digest
                :transaction-and-unique-effect-identity :required
                :expected-revisions [:graph :field]
@@ -727,7 +736,7 @@
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
-  :abi-operation-version "finite-revocation-rebuild/5"
+  :abi-operation-version "finite-revocation-rebuild/6"
   :rebuild [:retained-field :trails :causally-affected-world-projection :active-inclusion-folds
             :completed-and-restored-recall-results-under-recall-requests
             :complete-admitted-pending-boundary-queue]
@@ -749,12 +758,15 @@
    :control :finish-horizon-with-empty-active-folds-then-revoke-rebuild-and-read-without-revoked-ids-or-reasons
    :permitted-control :unrelated-authorized-completed-result-retained-after-qualified-reconstruction}
   :source [:immutable-complete-ordered-boundary-event-history :compatible-verified-clean-checkpoint]
-  :binding [:new-permitted-scope :new-projection-revision :new-field-revision]
+  :binding [:new-permitted-scope :new-projection-revision]
+  :persistent-field-revision :qualified-outer-atomic-record-output-not-a-pure-rebuild-result-or-snapshot-state-field
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :history {:coverage  :every-admitted-boundary-event-after-checkpoint-through-current-admitted-cursor-including-pending
+  :history {:coverage :every-main-provenance-operation-after-owner-verified-checkpoint-covered-prefix-through-independent-current-clio-tip-including-replacements
+            :independent-current-horizon :explicit-qualified-clio-owner-snapshot-admission-or-fence-through-result-exposure
+            :snapshot-state-cursors :separate-physical-consumed-and-admitted-schedule-cursors-never-provenance-range-endpoints
             :consumed-cursor :independently-bound-separate-from-admitted-cursor
-            :consumed-prefix :recompute-only-already-consumed-schedule
+            :consumed-prefix :recompute-each-main-operations-recorded-consumed-physical-schedule-never-cut-provenance-at-state-cursor
             :pending-tail :reconstruct-original-ordered-admitted-future-queue-with-current-authority-before-exposure
             :permitted-pending :retain-original-ids-inputs-order-and-boundary-schedules-no-early-application
             :denied-pending :explicit-current-authority-bound-cancelled-no-op-disposition-with-original-event-retained
@@ -771,6 +783,19 @@
             :authority :recompute-derived-world-and-folds-with-only-currently-authorized-influence
             :source-event-rewrite-or-live-effect-reexecution :forbidden
             :count-all-events-and-quanta :under-unchanged-whole-rebuild-caps}
+  :provenance-horizon
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/provenance-horizon"
+   :input :current-trusted-clio-provenance-horizon-independent-of-state-tail-and-checkpoint-self-assertions
+   :checkpoint-start :owner-attested-covered-prefix-not-checkpoint-storage-position-or-rewound-state-cursor
+   :rewind :restored-state-cursors-cannot-remove-main-range-restore-or-subsequent-events
+   :missing-foreign-stale-truncated-or-changing-tip :missing-or-ambiguous-rebuild-history-with-exact-unchanged-state
+   :outer-freshness :qualified-clio-owner-holds-admission-or-fence-through-result-exposure-otherwise-refuse
+   :unsupported-owner-capability :upstream-owner-gap-no-local-fence-or-event-engine
+   :bounds :all-explicit-horizon-and-covered-prefix-evidence-counted-within-existing-limits
+   :fixtures [:restore-and-prior-rebuild-to-older-state-cursor-then-later-operations-and-revocation
+              :tail-truncated-at-rewound-cursor :omitted-replacement
+              :missing-copied-stale-or-foreign-horizon :owner-tip-change-before-exposure
+              :storage-position-does-not-prove-checkpoint-covered-prefix]}
   :replacement-reference-closure
   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/replacement-reference-closure"
    :input :explicit-complete-materialized-target-checkpoints-evidence-and-supporting-history-in-existing-counted-argument
@@ -800,7 +825,7 @@
                          :rewound-state-cursor-does-not-reorder-provenance
                          :missing-forward-cyclic-conflicting-or-contaminated-reference-refusal
                          :each-complete-closure-exact-and-one-over-limit]
-  :budget {:version "finite-revocation-rebuild/5" :tail-events 128
+  :budget {:version "finite-revocation-rebuild/6" :tail-events 128
            :coverage :complete-main-tail-plus-all-materialized-replacement-reference-closure
            :event-count :distinct-qualified-envelopes-with-exact-identical-bytes-and-bindings-only
            :history-argument-utf8-bytes 1048576
