@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-provenance-horizon"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-public-read-failure"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -170,7 +170,9 @@
                 :retry :existing-request-idempotency-with-exact-matching-admitted-input-including-original-principal-and-scope-not-second-admission}
   :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection]
                 :output [:recall-result]
-                :result-variants [:success :refusal]
+                :result-boundary :qualified-public-read-facade
+                :result-variants [:success :refusal :failure]
+                :pure-result-variants [:success :refusal]
                 :success {:status [:admitted :no-contact :complete :incomplete :exhausted]
                           :fields [:motion :bonds :contacts :included-memory-ids
                                    :inclusion-reasons :kernel-horizon :budget-result]}
@@ -186,6 +188,27 @@
                                           :finite-work-budget-exceeded :refused}
                           :prior-state :untouched-and-not-returned
                           :recall-payload :absent}
+                :failure {:required [:status :reason :reason-revision]
+                          :additional-fields :forbidden
+                          :status :failed :reason :recall-evaluation-failed :reason-revision 1
+                          :prior-state :untouched-and-not-returned :recall-payload :absent}
+                :failure-producer
+                {:owner :existing-qualified-outer-read-facade
+                 :requires :qualified-current-authority-admission-before-local-read-evaluation
+                 :source :actual-unexpected-local-read-evaluation-throw-caught-at-that-facade-only
+                 :first :preserve-existing-typed-declared-refusal-mapping-and-returned-refusals
+                 :excluded [:authority-acquisition :policy-decision :finite-limit-refusal
+                            :result-exposure-freshness :provider-or-storage-io-failure
+                            :uncaught-process-termination]
+                 :blanket-catch-to-failed-or-exception-prose-classification :forbidden
+                 :raw-message-stack-private-id-or-partial-payload-disclosure :forbidden
+                 :failure-state-storage-or-reinforcement :none
+                 :bounds :existing-complete-result-and-work-bounds-no-reset
+                 :fixtures [:actual-facade-evaluator-throw-after-valid-authority-exact-three-key-failure
+                            :unchanged-prior-state-no-reinforcement-or-recorded-failed-request
+                            :synthetic-private-exception-marker-absent-from-returned-and-retained-output
+                            :each-declared-authority-policy-and-finite-limit-refusal-unchanged
+                            :ordinary-success-unchanged]}
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
                 :authority-owner :qualified-axxium-current-decision-and-policy-grant-version

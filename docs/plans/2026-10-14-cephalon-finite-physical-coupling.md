@@ -1280,13 +1280,15 @@ State-producing operations and checkpoint explicitly return the existing
 state-transition-result union, with their declared operation payload only on
 success. Rebuild's closed refusal-code list includes the continuation-limit
 code and current causal authority codes. The read-only recall result has a
-separate explicit success/refusal union: a refusal contains exactly status,
+separate pure success/refusal union, exposed by the qualified public facade as
+success/refusal/failure. A refusal contains exactly status,
 reason and reason-revision1, with invalid request/current-authority-unestablished
 →refused, stale-recall-authority→stale and denied-recall-authority→denied.
 It returns no state or partial recall payload. Thus callers can distinguish the
 promised reason without exposing old memory IDs, contacts or motion. All
-operative revocation qualification prose now names /4 with complete boundary
-history and both cursors; /2 references describe superseded history only.
+At this earlier correction, operative revocation prose named /4. The current
+ABI and later provenance-horizon correction name /6; earlier versions remain
+superseded history.
 
 Required future causal fixtures include grant/policy changes after admission
 or rebuild but before advance/catch-up or pending execution, unchanged-scope
@@ -1405,15 +1407,20 @@ with refused status and exact unchanged prior state, in restore and rebuild.
 The declared golden, positive, negative and exact/one-over fixtures remain future
 source obligations: this edit executes only the existing standard EDN parser.
 
-For4287979863, the draft corrects the unsupported prose promise rather than
-inventing a failure-recording operation: read-recall exposes only its declared
-retained success/refusal union. Existing embedding production remains a concrete
-outer failed-status producer. A local independent design assessment found no
-declared producer of a retained failed recall request. This is not a native Bot
-withdrawal, rejection agreement or settlement; request explicit native Codex
-assessment and keep that root unsettled until the correction is accepted or a
-grounded distinct failed variant is specified. Preserve all genuine failures in
-their owning operation and never translate one into successful creative output.
+For4287979863, the operative correction now supplies a grounded planned public
+invocation-failure producer in the existing ABI8 facade. After qualified current-
+authority admission, an actual unexpected local read-evaluation throw produces
+exactly `{:status :failed :reason :recall-evaluation-failed :reason-revision 1}`.
+The pure kernel keeps success/refusal, and no failed request is stored or invented.
+Typed/returned refusals retain their original status/reason before the unexpected-
+exception branch. Authority/policy/finite-limit/freshness, provider/storage and
+uncaught process failure are not relabeled. No raw exception or partial recall
+payload is returned/retained and no reinforcement occurs. Actual facade throw,
+private-marker, unchanged-state and ordinary-success/refusal controls remain
+future qualification obligations within ABI8. This supersedes the earlier prose-
+only direction without rewriting its native comments/receipts or inventing a
+native agreement. The root stays unsettled until this concrete changed contract
+is published, verified and settled through the actual canonical channel.
 
 No kernel, resolver, new event/auth engine, local Rheos implementation, qualified
 fixture, source deployment or live B proof is claimed. Earlier proposed/4 text
@@ -1447,3 +1454,29 @@ rewritten. Current parser verification remains separately bound to its actual
 head and job. These are unimplemented owning-plan corrections, no domain law or
 solver execution. Same fourteen packets75/physical21; all source, owning Foresight,
 fair estimate, native Rheos and live-proof gates remain.
+
+
+## Grounded public read failure — 2026-10-15
+
+The original failed-outcome concern4287979863 is addressed by a planned producer
+in the already selected ABI8 facade, rather than removing the intended distinct
+public outcome. This supersedes the earlier prose-only direction in receipts70/71
+and its retained native comments; those records remain exact. The public result
+unions include success/refusal/failure, while the pure kernel still returns only
+success/refusal. After qualified current-authority admission, an actual unexpected
+local read-evaluation throw caught by that facade yields exactly status failed,
+reason recall-evaluation-failed and reason-revision1, with no fourth returned key.
+There is no retained failed-request state, failure-recording operation, partial
+payload, state return/write, memory reinforcement or model-authored failure claim.
+
+Existing returned or typed refusals preserve their original reason/status before
+the unexpected-exception branch. Authority acquisition, policy, each finite-limit
+refusal and exposure-freshness failures retain their owners; provider/storage I/O
+and uncaught process termination are outside this evaluation catch. No exception
+message parsing, raw message, stack or private identifier is returned/retained.
+Future controls run the actual facade with a real injected evaluator throw after
+valid authority, require the exact three-key result and unchanged prior state/no
+reinforcement, prove a synthetic private marker absent, and preserve every normal
+success/refusal. No production fault-injection flag or process-completion guarantee
+is implied. This is still an unimplemented contract requiring source/native Ready/
+RED/GREEN/qualified-artifact/consumer proof, within the same14packets75/ABI8.

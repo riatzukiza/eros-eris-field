@@ -107,11 +107,21 @@ Its exact names and fields require this source plan's review.
   result and authorized memory IDs with reasons, without mutation, emission,
   RNG advance or time advance. Its successful statuses are admitted, no-contact,
   complete, incomplete and exhausted; refusals use the closed ABI reason/status
-  union and expose no recall payload. Outer computation, provider or storage
-  failures belong to their owning operations. This read neither records nor
-  synthesizes a failed request. The cross-boundary `:failed` vocabulary remains
-  available to the declared embedding-production failure operation; it does not
-  add a variant to another operation's closed union.
+  union and expose no recall payload. After qualified current-authority admission,
+  the existing outer public read facade catches an actual unexpected local read-
+  evaluation throw and returns exactly `{:status :failed :reason
+  :recall-evaluation-failed :reason-revision 1}`. Pure kernel results remain
+  success/refusal; this public invocation failure neither records nor synthesizes
+  a failed request, returns prior state or recall payload, nor reinforces memory.
+  Returned refusals and existing typed refusal mappings pass through unchanged
+  before this unexpected-exception branch. Authority acquisition, policy,
+  finite-limit and exposure-freshness failures retain their own contracts and
+  are never converted to evaluation failure; provider/storage I/O and uncaught
+  process termination also remain outside this catch. No exception-prose parsing,
+  raw message/stack/private identifier or partial payload is returned or retained.
+  Future actual-facade controls inject a genuine evaluator throw after valid
+  authority, assert the exact three-key result and unchanged state, and preserve
+  each ordinary success/refusal. No production fault-injection flag is required.
 - `rebuild-revocation` privately reconstructs the complete permitted world from
   a compatible independently established clean checkpoint, separate trusted
   checkpoint evidence and complete ordered immutable history under current

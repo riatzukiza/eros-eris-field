@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-provenance-horizon"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-public-read-failure"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -566,6 +566,19 @@
              :policy-version-change-with-same-scope :missing-or-forged-current-authority
              :qualified-rebuild-under-current-authority-then-read :authority-change-before-exposure
              :horizon-exact-one-over :work-and-trace-exact-one-over]}
+ :public-read-failure
+ {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/read-recall/failure"
+  :producer :actual-unexpected-local-read-evaluation-throw-at-existing-qualified-outer-facade-after-current-authority-admission
+  :pure-result :success-or-existing-declared-refusal-only
+  :public-result :success-refusal-or-declared-closed-failure
+  :retained-request-failure-state-or-failure-recording-operation :none
+  :typed-or-returned-declared-refusal-remapping :forbidden
+  :authority-policy-freshness-or-provider-storage-failure-remapping :forbidden
+  :result-work-and-byte-bounds :existing-shared-limits-no-reset
+  :future-controls [:real-facade-injected-evaluation-throw-exact-three-key-failure
+                    :prior-state-unchanged-no-payload-no-reinforcement
+                    :private-exception-marker-never-returned-or-retained
+                    :every-existing-refusal-and-success-unchanged]}
  :calibration {:production-defaults :none :complete-input :required
                :state-carrier :physical-configuration-in-the-complete-canonical-state
                :admission :retain-the-complete-validated-configuration-value-with-its-revision-and-hash
