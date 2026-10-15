@@ -373,3 +373,13 @@
   spore: none
   receipt-refs: cephalon-field-exact-edges-overlap-isolation-and-retained-revocation-20261015
   note: Exact nativeedges now repositoryvisible for11provisional execution packets plusautomaticintegrationparent. Proposed44points supersede historical36 without countingparent5 ororiginalaggregatepoints twice; independentaggregation/Readyadoption required. Estimate words/numbers spaced; numericalchange separatelyattributed to existing-work split, notgrammarfix. Repeatedgeometricoverlap emits onecanonicalpair/substep observation evenzero/tangent/separatingresponse, no crossstepsuppression, separatedpairnone; futurepenetrationfixture spans nextsubstep, boundedtrace andidempotence retained. Two validatomiccomparison arms useindependentownedstores/namespaces withverifiedidenticalpriorbaseline/authority, ownexpectedrevisions/readback andexecutionordercontrol. Requiredfinite revoke-after-deposit rebuild removesrevokedfield/trail/affectedworldinfluence before nextsample, preservesauthorizedcontributions, comparescleanpermittedhistory; missingrebuildinputs refuse/quarantine, no retag/filter/zeroall/rewritehistory. MatchingEDN/prose, futuretestsdeclarednotexecuted. No kernelimplementation, Ready, runtime/deployment/credentials/paid/batchingchange. GoalACTIVE heartbeatPAUSED live0/3.
+
+- ts: 2026-10-15T01:25:44.354Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Current Codexe372 root4277981141
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-reference-contact-normal-dot-reflection-arithmetic-20261015
+  note: Finite spherical geometry/radii and role/restitution validated; normal from frozen moved-center x/y difference, declared scalednorm, inclusive radius-sumoverlap, q>0 orunchangedrefusal, x/q theny/q withoutsecondnormalization. Canonical privatecontactvelocitybuffer, relativex/y subtraction, ordered2products-plus-sumdot, strictnegative reflection1+e then timesdot thencomponentproducts/subtractions, worldx/y restorebothbranches; immediate finitechecks everywhere, no fusion/reassociation/alternateprimitives. Positionsremainfrozen; world/fieldpublishafterpass, finalcap/thresholdonce. Explicittrace andexactrole/geometry/dot-branchreplay, futureREDnonaxis/cancellation/movingrecipient/degenerate/unsafe cases. Unsupportedgeometryrefuses. Theseareunimplementedproposals, notsolverproof. GoalACTIVE heartbeatPAUSED live0/3; no runtime/deployment/credentials/paid/batching change.

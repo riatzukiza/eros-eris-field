@@ -124,6 +124,35 @@
              :trace [:stage :velocity-before :velocity-after :limit-applied]
              :raw-contact-response :retained-separately
              :constraint :explicit-dissipative-not-kinetic-energy-conservation}
+ :contact-deflection
+ {:geometry :declared-spherical-recipient
+  :radii :finite-nonnegative-particle-and-positive-recipient
+  :roles-and-restitution :revision-bound-validated-input
+  :restitution :finite-zero-through-one-inclusive
+  :normal-construction [:particle-minus-recipient-moved-x
+                        :particle-minus-recipient-moved-y :declared-scaled-norm
+                        :divide-x-by-norm :divide-y-by-norm]
+  :overlap :norm-at-or-below-single-finite-particle-plus-recipient-radius
+  :coincident-centers :unchanged-refusal
+  :alternative-or-renormalized-normal :forbidden
+  :velocity-input :private-canonical-contact-pass-working-buffer-initialized-v-move
+  :relative-order [:particle-minus-recipient-x :particle-minus-recipient-y]
+  :dot-order [:relative-x-times-normal-x :relative-y-times-normal-y :x-product-plus-y-product]
+  :reflection-when :dot-strictly-negative
+  :reflection-order [:one-plus-restitution :result-times-dot
+                     :scale-times-normal-x :relative-x-minus-scaled-x
+                     :scale-times-normal-y :relative-y-minus-scaled-y]
+  :nonnegative-dot :retain-relative-without-reflection-arithmetic
+  :world-restore-order [:resolved-relative-x-plus-recipient-x
+                        :resolved-relative-y-plus-recipient-y]
+  :world-restore-applies :both-reflection-and-non-impulse-branches
+  :finite-check :after-every-intermediate
+  :unsafe-arithmetic :whole-transition-unchanged-refusal
+  :fused-reassociated-or-alternate-primitives :forbidden
+  :positions :frozen-p-move-through-pass
+  :within-pass-mutation :private-contact-velocity-only
+  :trace [:geometry-and-configuration :raw-and-normalized-normal :dot-terms
+          :dot-sign-branch :resolved-relative-and-world-response]}
  :contact-observation {:overlap :recompute-from-each-substep-moved-positions
                        :overlapping-unordered-pair :one-observation-per-substep
                        :tangent-zero-or-separating-velocity :observe-without-required-impulse

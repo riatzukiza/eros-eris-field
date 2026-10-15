@@ -188,6 +188,39 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    Resolve the canonically ordered contact pass using those velocities; only
    after the whole pass apply the same kind cap, then static threshold, to each
    resolved velocity.
+   The finite deflection case supports declared spherical contact geometry with
+   finite nonnegative particle/recipient radii and a positive recipient radius,
+   plus revision-bound particle/recipient roles and restitution `0 <= e <= 1`.
+   Other geometry requires its own reviewed normal construction; unsupported or
+   ambiguous geometry/roles refuse rather than supplying an arbitrary normal.
+   At the frozen moved positions, compute `w_x=p_particle_x-p_recipient_x`,
+   then `w_y=p_particle_y-p_recipient_y`, then `q=norm(w)` using the declared
+   scaled norm. Check every intermediate immediately. Overlap uses inclusive
+   `q <= (radius_particle + radius_recipient)`, with that finite sum evaluated
+   once. A valid overlapping pair requires `q > 0`; coincident centers refuse
+   unchanged state. Compute `n_x=w_x/q`, then `n_y=w_y/q`, checking each finite
+   result. These exact constructed components are the validated outward normal;
+   no supplied alternative, fuzzy replacement or second normalization is used.
+   Read world velocities from the private contact-pass working buffer, initially
+   `v_move`. Compute relative x then y by particle minus recipient. Compute
+   `d_x=v_relative_x*n_x`, then `d_y=v_relative_y*n_y`, then `d=d_x+d_y` in that
+   order. When `d < 0`, compute `a=1+e`, then `b=a*d`, then `c_x=b*n_x` and
+   `r_x=v_relative_x-c_x`, then `c_y=b*n_y` and `r_y=v_relative_y-c_y`.
+   Otherwise retain the relative components without evaluating that reflection
+   branch. Restore world x then y by adding the recipient working velocity to
+   the resolved relative component, including the non-impulse branch; no
+   bit-identical original-world-velocity shortcut replaces this declared
+   round trip. Every product, sum, subtraction and division receives an immediate
+   finite check; nonfinite arithmetic refuses the entire unchanged transition.
+   Fused multiply-add, reassociation and alternate dot/norm primitives are
+   forbidden. Record raw/normalized normal, dot terms/sign branch, resolved
+   relative/world response and source geometry/configuration in the trace.
+   Only the private contact velocity buffer evolves between canonical pairs;
+   positions remain frozen and fields/forces/deposits cannot observe those
+   updates before the pass completes. The final cap/threshold still runs once
+   after the whole contact pass. Future RED covers non-axis normals, moving
+   recipients, near-zero/cancellation-sensitive dots, tangent/separating round
+   trips, coincident normals and unsafe intermediates under the reference profile.
    Contact response is computed before this second cap and retained in the
    trace; do not interleave caps between contact pairs. Motion deposits use the
    final post-contact-cap-and-threshold velocity, with no second position advance.
@@ -197,7 +230,7 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    uses that unchanged `p_move`, including at cell boundaries. Any later
    positional solver requires a separately versioned rule and requalification.
    Re-evaluate geometric overlap afresh at each substep from its moved positions.
-   Each currently overlapping unordered pair emits exactly one contact observation
+   Each valid admitted overlapping unordered pair emits exactly one contact observation
    in canonical pair order for that substep, even when velocity is tangent,
    zero or separating and the response applies no impulse. There is no
    cross-substep suppression or extra observation within the same pair/substep.
@@ -206,8 +239,9 @@ Do not evaluate an overflowing inactive division for subnormal input. These rule
    fixtures continue through the next substep and assert its exact overlap,
    contact count/order and inclusion trace, including a pair that stays overlapped
    and one that separates. Existing work/trace caps still refuse overflow.
-   Deposits/contact outputs enter the following buffer, not other entities
-   midway through the same prior-buffer pass. Class order and contribution
+   Deposits and completed contact outputs enter the following world/field buffer;
+   the ordered private contact velocity buffer is the sole within-pass exception.
+   Class order and contribution
    order are revision-bound semantics, not collection insertion order.
 6. Deposit `D_i = gain_i * deposit_weight_i * v_resolved * h` in the cell
    selected by the surviving entity's **unchanged `p_move` after contact**.
