@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-current-read-authority-and-continuable-state"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-every-causal-entry-current-authority"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -52,7 +52,7 @@
  :state/required [:kernel-revision :config-revision :config-hash
                   :compiled-artifact-sha256 :build-qualification-id
                   :launch-profile-id :launch-profile-sha256
-                  :numeric-profile-id :scope-revision :projection-revision :kernel-time-us
+                  :numeric-profile-id :scope-revision :projection-revision :authority-projection-binding :kernel-time-us
                   :residual-us :backlog-us :pending-events :event-cursor :admitted-event-cursor
                   :ordered-entities :intent-bonds :sparse-cells
                   :contribution-provenance :recall-requests :inclusion-folds :rng
@@ -113,43 +113,74 @@
              :insufficient-full-absorption :refused
              :implicit-fallback :forbidden
              :emitted-owner-change :forbidden}
+ :causal-authority
+ {:owner :qualified-axxium-current-authority-projection-and-admission-or-fence
+  :entry-points :every-declared-abi-operation-including-advance-catch-up-and-read
+  :input :explicit-current-trusted-authority-projection-never-a-locally-minted-version-or-state-only-cache
+  :binding :qualified-owner-decision-policy-and-grant-versions-for-every-actual-stored-principal-scope-request-and-retained-causal-influence
+  :stored :authority-projection-binding-in-complete-state-and-checkpoint-hash
+  :before-causal-work :validate-current-owner-binding-against-retained-state-before-field-sampling-contacts-pending-events-or-result-exposure
+  :ordinary-binding-change :whole-unchanged-refusal-until-complete-qualified-current-authority-rebuild
+  :rebuild-exception :old-prior-binding-only-inside-complete-private-reconstruction-under-current-qualified-authority
+  :fresh-admission :empty-prior-state-only-with-qualified-current-visible-projection-and-authority
+  :outer-custody :qualified-axxium-admission-or-fence-through-whole-call-and-result-exposure-otherwise-refuse
+  :pure-authority-lookup-policy-evaluation-or-local-fence-implementation :forbidden
+  :state-transition-refusal-reasons [:current-authority-unestablished :stale-causal-authority :denied-causal-authority]
+  :read-only-refusal :read-recall-declared-closed-reason-status-union
+  :fixtures [:grant-revoked-at-unchanged-scope-before-advance :denied-pending-event-before-catch-up
+             :policy-changed-before-recall-emission-outcome-or-checkpoint
+             :owner-binding-changes-before-exposure :qualified-rebuild-then-authorized-causal-call]}
  :state-transition-result
  {:revision 1
   :applies-to [:admit-state :advance :catch-up :emit-recall :apply-outcome
-               :confirm-feedback :restore :rebuild-revocation]
+               :confirm-feedback :checkpoint :restore :rebuild-revocation]
   :success :declared-operation-result
   :refusal {:state :unchanged-prior-state
             :reason :operation-specific-refusal-reason
             :reason-revision 1}
   :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
+                    :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
  :input-wire-contract "docs/plans/cephalon-finite-field-coupling.edn#input-wire-codec"
  :state-continuation-contract "docs/plans/cephalon-finite-field-coupling.edn#continuation-closure"
  :functions
  {:admit-state {:input [:prior-state-or-empty
-                       :trusted-visible-projection :physical-configuration]
+                       :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
                 :output [:state-transition-result]
                 :operation-result [:admitted-state]}
-  :advance {:input [:state :elapsed-us :ordered-boundary-events]
+  :advance {:input [:state :elapsed-us :ordered-boundary-events :current-trusted-authority-projection]
             :output [:state-transition-result]
             :operation-result [:state :observations :residual-us :backlog-us :completeness]}
-  :catch-up {:input [:state]
+  :catch-up {:input [:state :current-trusted-authority-projection]
              :output [:state-transition-result]
              :operation-result [:state :observations :residual-us :backlog-us :completeness]
              :new-elapsed-time :none :max-substeps 100
              :backlog :drain-existing-only
              :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
-                       :physical-budget :mood-lens-revision]
-                :output [:state :request-result] :idempotency :request-id
+                       :physical-budget :mood-lens-revision :current-trusted-authority-projection]
+                :output [:state-transition-result]
+                :operation-result [:state :request-result] :idempotency :request-id
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
                 :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
                 :invalid-duplicate-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
                 :retry :existing-request-idempotency-with-exact-matching-admitted-input-including-original-principal-and-scope-not-second-admission}
   :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection]
-                :output [:status :motion :bonds :contacts :included-memory-ids
-                         :inclusion-reasons :kernel-horizon :budget-result]
+                :output [:recall-result]
+                :result-variants [:success :refusal]
+                :success {:status [:admitted :no-contact :complete :incomplete :exhausted]
+                          :fields [:motion :bonds :contacts :included-memory-ids
+                                   :inclusion-reasons :kernel-horizon :budget-result]}
+                :refusal {:required [:status :reason :reason-revision]
+                          :additional-fields :forbidden
+                          :reason-revision 1
+                          :reason-status {:invalid-recall-request :refused
+                                          :current-authority-unestablished :refused
+                                          :stale-recall-authority :stale
+                                          :denied-recall-authority :denied}
+                          :prior-state :untouched-and-not-returned
+                          :recall-payload :absent}
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
                 :authority-owner :qualified-axxium-current-decision-and-policy-grant-version
@@ -160,7 +191,8 @@
                 :same-scope-with-changed-authority :stale-no-memory-ids-reasons-motion-bonds-or-contacts
                 :changed-binding :requires-complete-qualified-rebuild-result-under-that-exact-current-authority-before-read
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
-                :refusal-reasons [:current-authority-unestablished :stale-recall-authority :denied-recall-authority]
+                :refusal-reasons [:invalid-recall-request :current-authority-unestablished
+                                  :stale-recall-authority :denied-recall-authority]
                 :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
@@ -206,6 +238,7 @@
              :reason :one-of-declared-codes
              :codes [:revocation-rebuild-budget-exceeded :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
+                     :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden
    :effects :none :new-elapsed-time :none
@@ -214,8 +247,9 @@
    :outer-disposition :quarantine-or-refuse-retained-reference-before-causal-use-until-success
    :outer-wall-budget-ms 2000
    :outer-timeout :no-accepted-replacement-never-a-pure-clock-read}
-  :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference]
-                  :output [:state :proposed-feedback-or-refusal]
+  :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference :current-trusted-authority-projection]
+                  :output [:state-transition-result]
+                  :operation-result [:state :proposed-feedback]
                   :idempotency :immutable-outcome-id
                   :storage-success :outer-writer-observation-required
                   :pending-feedback :retry-same-effect-id
@@ -223,8 +257,9 @@
                                      :scope-revision :prior-recall-reference]
                   :confirmation :actual-writer-acknowledgement}
   :confirm-feedback
-  {:input [:state :trusted-writer-acknowledgement]
-   :output [:state :confirmation-or-unchanged-refusal]
+  {:input [:state :trusted-writer-acknowledgement :current-trusted-authority-projection]
+   :output [:state-transition-result]
+   :operation-result [:state :confirmation]
    :acknowledgement/required [:observation-id :writer-principal :effect-id
                               :outcome-id :payload-hash :scope-revision
                               :storage-result]
@@ -239,17 +274,20 @@
    :failure :pending-without-reinforcement
    :conflicting-or-untrusted-ack :unchanged-refusal
    :effects :none :new-elapsed-time :none :rng-draws :none}
-  :checkpoint {:input [:state] :output [:canonical-snapshot :event-cursor]
+  :checkpoint {:input [:state :current-trusted-authority-projection]
+               :output [:state-transition-result]
+               :operation-result [:canonical-snapshot :event-cursor]
                :encoding :consume-existing-contract-authority
                :producing-identity [:compiled-artifact-sha256 :build-qualification-id
                                     :launch-profile-id :launch-profile-sha256]
                :identity-evidence :independently-verified-qualified-source-build-runtime
                :canonical-snapshot-hash :includes-producing-identity-and-complete-inclusion-fold-state}
   :restore {:input [:prior-state-or-empty :canonical-snapshot :event-cursor
-                    :trusted-visible-projection :physical-configuration]
-            :output [:restored-state-and-cursor-or-unchanged-refusal]
+                    :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
+            :output [:state-transition-result]
+            :operation-result [:restored-state :event-cursor]
             :validates [:kernel-revision :config-revision :config-hash
-                        :scope-revision :projection-revision :current-grants
+                        :scope-revision :projection-revision :current-grants :authority-projection-binding
                         :snapshot-cursor-agreement :time-accounting :numeric-profile-and-qualified-artifact
                         :stored-producing-artifact-build-launch-equals-actual-qualified-loaded-identity
                         :complete-inclusion-fold-state-cursor-dedup-order-and-budgets

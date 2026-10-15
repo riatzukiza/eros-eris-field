@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-current-read-authority-and-continuable-state"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-every-causal-entry-current-authority"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -347,6 +347,13 @@
              :exact4194304-complete-bytes :one-byte-over
              :alternate-edn-optional-escape-whitespace-and-bom-refused-as-wire
              :bounded-decode-and-no-large-allocation-before-preflight]}
+ :causal-entry-authority
+ {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
+  :current-owner-projection :explicit-argument-at-every-abi-entry-including-advance-catch-up
+  :ordinary-mismatch :unchanged-refusal-before-any-sampling-pending-event-or-causal-work
+  :complete-rebuild :only-declared-old-state-to-current-authority-reconstruction-exception
+  :through-exposure :outer-qualified-axxium-admission-or-fence-not-an-epoch-label
+  :pure-lookup-or-second-policy-engine :forbidden}
  :continuation-closure
  {:owner :same-portable-field-shape-law-and-domain-before-any-successful-state-exposure
   :applies-to :every-operation-producing-or-restoring-a-state-or-checkpoint

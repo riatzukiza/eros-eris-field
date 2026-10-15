@@ -831,7 +831,7 @@ Before timing, freeze reviewed fixture bytes/layouts/seed42, calibration and sou
 
 A dedicated fixed causal fixture must produce at least one different eligible contact and at least one different actually included authorized memory beyond the vector seed between permitted field-intervention arms, with every other declared input fixed. A finite nonzero vector alone or saturation hiding every downstream change fails calibration. Retain complete force/contact/bounds/layer/threshold/radius/restitution/half-life/noise/prune/saturation values, domains, source/review and revisions. Missing values fail; no library default or source pin adopts calibration.
 
-The versioned finite revocation profile `finite-revocation-rebuild/2` admits at most128 immutable contribution events after the trusted checkpoint,1048576 canonical Clio envelope UTF8 bytes for that tail,64 replayed quanta and67108864 total rebuild work units. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Pure rebuild count/byte/step/work exhaustion returns refused/revocation-rebuild-budget-exceeded with byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
+The current finite revocation profile `finite-revocation-rebuild/4` admits at most128 complete immutable boundary events from an independently established clean checkpoint through the verified admitted cursor, including every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Pure rebuild count/byte/step/work exhaustion returns refused/revocation-rebuild-budget-exceeded with byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
 
 Embedding production failure returns failed/embedding-failed with a bounded typed category from timeout,unavailable,rate-limited,invalid-output,internal-error,unclassified. The existing qualified embedding-provider seam consumed by atomic8 owns versioned mapping `embedding-failure-category/1`; consumers retain that category/mapping revision verbatim rather than reinterpret errors. At that protected seam, shape validated actual HTTP status and explicit transport-timeout/unavailable, invalid-output and internal-failure indicators from the actual provider outcome. Do not parse or retain exception prose. If the bound indicator attestation is unavailable or malformed, return unclassified before evaluating rules1–5. Otherwise apply FIRST matching rule: (1) HTTP429 => rate-limited; (2) explicit timeout OR HTTP408/504 => timeout; (3) explicit transport-unavailable OR other HTTP500–599 => unavailable; (4) explicit validated invalid-output => invalid-output; (5) explicit validated internal-failure => internal-error; (6) no match, unavailable/malformed attestation or unknown => unclassified. A contradictory lower-priority flag cannot override the first match. Tests require timed-out429=>rate-limited,503+invalid-output=>unavailable,timeout+invalid-output=>timeout,invalid-output+internal=>invalid-output, and missing/unknown=>unclassified, with exact stable replay/category/revision and no raw-string heuristics. Atomic8 owns delivery/qualification at the actual existing provider seam as part of its failure handling, not a second classifier in Eros/Eris or another unowned prerequisite.
 
@@ -1095,3 +1095,44 @@ remaining-framing bounds; escaped snapshots; largest accepted state through
 every continuation; and a below8MiB inclusion result whose state exceeds1MiB.
 The numeric counterexample and EDN syntax/coherence checks are preparation,
 not executed field laws, implementation RED/GREEN, board Ready or live B proof.
+
+
+### Every causal entry consumes current authority; typed failure is observable
+
+Native Codex roots4285761799/4285761810/4285761818/4285761828 refine
+the same existing privacy and typed-result obligations. Every declared ABI
+entry now receives an explicit current trusted Axxium authority projection,
+including advance, catch-up, recall emission, outcome/feedback, checkpoint,
+restore and read. The complete state/checkpoint binds that owner projection.
+Before any retained-field sample, contact, pending event or other causal work,
+validate its current owner decision/policy/grant binding for every actual
+stored principal, scope, request and retained influence. A cached scope or
+version label is insufficient. Ordinary mismatch refuses unchanged until a
+complete qualified rebuild; only that private rebuild may consume an old
+prior binding while reconstructing fully under current authority. Empty-state
+admission still needs the current qualified visible projection and authority.
+The owning outer admission/fence must hold through the whole call and exposure;
+without it, refuse. The pure kernel performs no authority I/O or second policy
+evaluation. All added authority arguments count in the existing512KiB remaining
+argument/framing bound, with the same3.5MiB maximum continuation carrier.
+
+State-producing operations and checkpoint explicitly return the existing
+state-transition-result union, with their declared operation payload only on
+success. Rebuild's closed refusal-code list includes the continuation-limit
+code and current causal authority codes. The read-only recall result has a
+separate explicit success/refusal union: a refusal contains exactly status,
+reason and reason-revision1, with invalid request/current-authority-unestablished
+→refused, stale-recall-authority→stale and denied-recall-authority→denied.
+It returns no state or partial recall payload. Thus callers can distinguish the
+promised reason without exposing old memory IDs, contacts or motion. All
+operative revocation qualification prose now names /4 with complete boundary
+history and both cursors; /2 references describe superseded history only.
+
+Required future causal fixtures include grant/policy changes after admission
+or rebuild but before advance/catch-up or pending execution, unchanged-scope
+revocation, every causal entry's missing/stale authority and exposure change,
+positive current-authority rebuild then continuation, closed read refusal
+fields/status/revision and complete non-leakage, and exact continuation-overflow
+rebuild refusal. This is still an unimplemented proposal, not executed domain
+tests or native Ready. The existing physical scope, finite work/time/input
+limits and all actual immutable provenance remain unchanged.
