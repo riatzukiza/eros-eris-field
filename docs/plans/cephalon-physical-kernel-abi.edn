@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-retained-recall-records"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-original-query-owner"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -409,6 +409,38 @@
   :fixtures [:distinct-read-and-deposit-vectors-positive :each-closed-key-and-vector-negative
              :mapping-mismatch-refuses-before-emission :same-id-different-weight-bits-refuses
              :checkpoint-restore-rebuild-preserves-both-vectors-and-mapping-revision]}
+ :original-query-carrier
+ {:status :proposed-consumption-of-observed-owner-contract-not-qualified-integration
+  :owner-contract :openplanner.graph.recall.contract/request
+  :owner-source
+  {:repository "riatzukiza/openplanner"
+   :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+   :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc"
+   :sha256 "350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94"
+   :registry :openplanner.graph.recall.contract/registry
+   :validator :openplanner.graph.recall.contract/valid-request?}
+  :observed-producer
+  {:repository "riatzukiza/knoxx"
+   :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+   :path "backend/src/cljs/knoxx/backend/infra/agent/hydration.cljs"
+   :sha256 "a7632b6194e190c560e343c6148807bb9de3a0bfdf96fa96a48ccec83744769e"
+   :function :graph-hydration!
+   :observation :complete-request-map-passed-to-scoped-graph-recall-with-original-message-query}
+  :value :entire-original-owner-request-map-not-only-its-query-string
+  :shape :consume-the-exact-pinned-owner-closed-request-schema-no-field-owned-copy-or-new-registry
+  :preserved-owner-keys [:version :recall-id :query :k :fetch :max-nodes :max-cost :feedback]
+  :query-text :exact-original-message-scalar-string-with-original-utf8-bytes-no-normalization-truncation-or-hash-substitution
+  :request-id :owner-recall-id-must-equal-the-enclosing-request-id-and-original-emitted-entity-recall-request-id-under-the-existing128-byte-id-cap
+  :options :retain-every-original-value-and-type-for-exact-immutable-retry-comparison
+  :feedback :retain-owner-required-none-without-changing-separate-field-outcome-and-confirmation-operations
+  :retrieval-versus-physical :k-fetch-max-nodes-and-max-cost-are-original-graph-request-options-not-physical-inclusion-cutoffs-physical-budget-or-authority
+  :bounds :both-owner-schema-and-existing-field-limits-apply-including512-utf8-bytes-for-other-strings-and-complete-input-state-work-and-checkpoint-bounds
+  :oversize-owner-valid-query :existing-finite-input-byte-limit-refusal-with-exact-unchanged-prior-state-never-truncate-or-widen-the-field-profile
+  :producer-identity-risk :observed-recall-id-derivation-uses-conversation-id-and-message-not-options-or-principal-scope-so-changed-options-or-principal-scope-with-the-same-id-follow-existing-conflicting-retry-refusal-never-mint-a-replacement-id-here
+  :id-namespace :existing-owner-request-id-not-a-clio-event-uuid-or-new-effect-identity
+  :authority :a-valid-owner-request-and-its-id-confer-no-principal-scope-source-grant-or-current-permission
+  :qualification :observed-candidate-source-blobs-only-review-compiled-owner-consumption-actual-physical-adapter-mapping-and-selected-fixture-fit-still-required-before-ready
+  :unchanged-unselected-leaves [:embedding-source :validated-seed :physical-budget :owner-custody :history :result-lifecycle]}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
@@ -430,7 +462,7 @@
      :fields {:stored-principal :ID :scope-revision :Revision}}
     :projection-revision :Revision
     :graph-revision :Revision
-    :query :FullOriginalQuery
+    :query {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-query-carrier"}
     :embedding
     {:kind :closed-map :exact-keys [:vector :embedding-revision :source]
      :fields {:vector :nonempty-ordered-finite-binary64-vector

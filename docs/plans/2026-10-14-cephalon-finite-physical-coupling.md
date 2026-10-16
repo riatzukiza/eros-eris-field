@@ -1933,7 +1933,19 @@ principal/scope without freezing changing input state, current authority,
 producing-identity checks, evolved RNG or current population. It returns the
 unchanged current state and authorized retained result without another emission
 or budget reset. The single retained-success contract supplies the result;
-invalidated disposition has no result key. Query, seed, budget and original
+invalidated disposition has no result key. Seed, budget and original
 owner/source leaves still need exact selected definitions, with every original
 byte and duplicate value counted under the same bounds. No new producer, input
 branch, event/grant, recovery rule or complete-state qualification is supplied.
+
+The [original-query selection](2026-10-07-cephalon-physical-kernel.md#original-query-owner--2026-10-16)
+consumes the complete observed OpenPlanner request under its pinned native
+portable contract: original text and all options, exact existing recall ID,
+and feedback none. Exact retries retain every value/type. Graph retrieval limits
+do not truncate physical inclusion or become physical budgets or authority.
+The existing 128-byte ID and 512-UTF8-byte other-string caps still apply; an
+owner-valid oversized query refuses unchanged rather than being shortened.
+The observed Knoxx producer derives its ID without retrieval options or
+principal/scope, so changed options or principal/scope under the same ID retain
+conflicting-retry refusal. These are proposed
+owner-consumption choices, not qualified wiring, fixture fit or Ready.

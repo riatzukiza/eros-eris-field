@@ -1009,7 +1009,9 @@ original principal/scope, projection/graph bindings, full query, complete embedd
 vector/source, kernel/configuration binding and exact read/deposit weights. The
 existing weight/contact/entity/scalar contracts apply without normalization,
 new producer or ID generation. Closed key layout does not close the explicitly
-unselected query/seed/budget/owner/history leaves.
+unselected seed/budget/owner/history leaves. The original query consumes the
+observed owner contract below; candidate source observation does not qualify its
+Field adapter.
 
 Exact retry compares all original immutable input values and their original
 principal/scope, not changing input state, fresh authority or evolved RNG/live
@@ -1031,9 +1033,56 @@ Every original source and duplicate value counts under existing budgets; no
 recovery/admission/cutoff/eviction change or whole-state closure is claimed.
 
 
-The complete original query and validated seed remain exact unselected input
-shapes. In particular, the source permits vector seeds; naming xorshift RNG
+The validated seed remains an exact unselected input shape. In particular, the
+source permits vector seeds; naming xorshift RNG
 state does not determine the request seed. The original physical budget is
 also distinct from global call/rebuild limits. Those definitions and actual
 producer compatibility must be selected before native readiness; the closed
 wrapper does not supply them by name.
+
+## Original query owner — 2026-10-16
+
+The proposed `original-query-carrier` consumes OpenPlanner's existing portable
+`openplanner.graph.recall.contract/request` schema and its native validator. The
+scoped Field request's `query` value is the **whole original native request map**:
+version, recall ID, query text, k, fetch, max-nodes, max-cost and feedback. There
+is no Field-owned duplicate schema or registry. Source is pinned to candidate
+`riatzukiza/openplanner` commit
+`3ab5ffbb6e34a2ee3607a74bf421785d47d5391d`, file
+`packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc`,
+SHA256 `350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94`.
+
+The actual observed Knoxx producer is `graph-hydration!` in
+`backend/src/cljs/knoxx/backend/infra/agent/hydration.cljs` at candidate
+`b6f4dfbb4a006934a191c8fb3f26f270579e7e62`, file SHA256
+`a7632b6194e190c560e343c6148807bb9de3a0bfdf96fa96a48ccec83744769e`.
+It passes that complete map to scoped graph recall with the original message as
+query text. These source bytes matched their immutable Git blobs at inspection.
+This selects a representation from actual owner source; it does not establish
+protected review, compiled compatibility, deployment or a physical producer.
+
+Retain all eight original values and their types for exact retries, including
+the full query text with unchanged scalar UTF8 spelling. The nested native
+recall ID must equal the enclosing request ID and the original emitted daimoi's
+recall-request ID. This remains an owner request ID, not a Clio event UUID or a
+new effect identity. No new ID, hash-only query, normalization or text truncation
+is allowed. Knoxx's observed ID derives from conversation ID and message, without
+the retrieval options or principal/scope. Reusing that ID with changed options or
+original principal/scope therefore follows the existing conflicting-retry
+refusal; this wrapper cannot repair it by silently minting a new identity.
+
+Native retrieval options retain their original graph meaning. They do not become
+physical inclusion cutoffs, the separate physical budget, or grants. Owner
+feedback remains `:none`, without changing Field's separate outcome/confirmation
+operations. A valid query supplies no source/principal permission;
+existing current-authority checks still govern every causal use and exposure.
+
+Both the owner schema and the existing Field profile apply. In particular, the
+owner's query length limit does not widen Field's 512-UTF8-byte other-string cap
+or 128-byte request-ID cap. An owner-valid query exceeding a Field byte bound
+returns the existing `finite-input-byte-limit` unchanged-state refusal, without
+truncation, normalization or a changed profile. All original bytes, copies and
+validation count under the existing input/state/checkpoint/work limits. Before
+Ready, qualify exact owner consumption, the actual adapter/ID mapping and real
+selected-fixture fit. Embedding source, seed, physical budget, original custody,
+history and lifecycle leaves remain open.
