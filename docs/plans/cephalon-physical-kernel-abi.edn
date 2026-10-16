@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-presence-seed-source"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-original-emission-birth-source"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -532,7 +532,7 @@
   {:before-ready :exact-owner-source-interface-and-adapter-id-mapping-selection-complete-fixture-plan-and-existing-required-upstream-native-prerequisites
    :after-lawful-ready :own-consumer-implementation-compiled-owner-consumption-actual-adapter-mapping-and-executed-fixture-fit-qualified-before-consumption-and-done
    :current-evidence :observed-candidate-source-blobs-only-not-implementation-or-executed-proof}
-  :unchanged-unselected-leaves [:query-embedding-producer-capture-and-loaded-source-qualification :qualified-loaded-presence-seed-source-and-capture :physical-birth-mapping :owner-custody :history :lifecycle-caller-counter-and-cut-qualification]}
+  :unchanged-unselected-leaves [:query-embedding-producer-capture-and-loaded-source-qualification :qualified-loaded-presence-seed-source-and-capture :physical-birth-source-population-and-qualification :owner-custody :history :lifecycle-caller-counter-and-cut-qualification]}
  :query-embedding-source-carrier
  {:version "finite-original-query-embedding-source/1"
   :status :proposed-field-owned-capture-of-observed-owner-boundary-not-an-existing-native-record
@@ -918,7 +918,7 @@
   :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
   :still-unselected [:qualified-original-presence-to-principal-scope-source-binding
                      :qualified-loaded-meaning-source-to-exact-semantic-vector-and-revision-production
-                     :physical-birth-position-velocity-mass-wallet-mantle-and-emission-identity-mapping]
+                     :qualified-physical-birth-population-source-and-executed-projection]
   :bounds :native-schema-and-existing-field-id-string-finite-value-state-input-history-work-and-continuation-bounds-all-apply-open-owner-snapshot-does-not-waive-them
   :qualification
   {:before-ready :exact-original-source-schema-identity-purpose-vector-producer-interface-and-birth-mapping-plus-complete-fixture-plan-and-existing-required-upstream-native-prerequisites
@@ -980,7 +980,7 @@
     :coincident-output :same-formatted-query-and-passage-input-model-dimension-cache-key-may-return-equal-vector-values-distinct-observed-invocation-and-source-role-remain-required}
    :producer-source {:kind :literal-vector :value :exact-selected-source-manifest-below
                      :role :observed-interface-source-not-loaded-capture-artifact-authored-origin-or-model-weight-revision}}
-  :location :existing-validated-recall-seed-source-without-another-field-abi-argument
+  :location :existing-validated-recall-seed-source-presence-seed-source-component-without-another-field-abi-argument
   :association-agreement :entire-original-association-equals-corresponding-original-principal-presence-source-custody-no-id-only-or-current-character-substitution
   :interface-selection :existing-passage-formatter-and-separate-public-generate-for-actual-original-query-selected-model-not-a-current-native-presence-seed-path
   :capture-order :qualified-original-association-before-query-then-actual-original-query-source-before-separate-presence-generation-then-validated-source-and-seed-before-field-emission-no-query-seed-source-cycle
@@ -990,7 +990,7 @@
   :embedding-revision
   {:meaning :field-owned-content-revision-of-complete-original-presence-source-not-native-model-version-or-grant
    :prefix "presence-seed-source/1:" :suffix :exact64-lowercase-ascii-sha256
-   :hash-input :complete-source-map-under-existing-exact-finite-field-trace-1-tagged-value-algebra-no-trace-record-envelope-or-host-printer
+   :hash-input :complete-presence-seed-source-component-map-under-existing-exact-finite-field-trace-1-tagged-value-algebra-not-outer-emission-wrapper-trace-envelope-or-host-printer
    :parent-agreement :parent-seed-and-original-emitted-entity-embedding-revision-equal-exact-prefix-plus-digest
    :self-reference :source-map-has-no-own-derived-revision-enclosing-state-result-snapshot-or-own-source-hash}
   :replay :validate-and-retain-entire-original-association-source-vector-and-revision-without-new-formatting-model-routing-provider-cache-or-network-call-independent-current-owner-authorization-still-required
@@ -1001,7 +1001,7 @@
    :after-lawful-ready :own-source-recorder-content-revision-and-compiled-consumer-implementation-then-independent-actual-loaded-source-capture-vector-origin-and-selected-fit-controls-before-consumption-or-done
    :still-open [:complete-original-principal-presence-source-admission :current-authority-and-owner-history
                 :purpose-preserving-actual-formatter-model-configuration-and-semantic-compatibility-qualification
-                :loaded-source-recorder-and-vector-production :physical-birth-and-emission-mapping]}
+                :loaded-source-recorder-and-vector-production :qualified-physical-birth-population-and-emission-source-binding]}
   :future-controls [:exact-original-persona-distinct-from-rendered-prompt-query-snapshot-and-mood
                     :empty-or-whitespace-persona-returns-before-environment-read-and-refuses-seed-source-success
                     :template-precedence-records-unread-prefix-without-extra-read
@@ -1044,9 +1044,116 @@
     :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo.cljs" :sha256 "6f87640e0c0f4bb43078d2a1776de248a081c02309aa5b7730252d5c8a8ca917"}
    {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
     :path "backend/src/cljs/knoxx/backend/extern/openplanner_sdk.cljs" :sha256 "c0d6359a9f679cc4ecf7c78dcf55b992dee407398f77cf6e098c0fcf25400172"}]}
+ :original-emission-source-carrier
+ {:version "finite-original-emission-source/1"
+  :status :proposed-owned-composition-of-semantic-and-birth-values-not-qualified-emission-production
+  :kind :closed-map
+  :exact-keys [:version :presence-seed-source :physical-birth-source]
+  :fields {:version {:literal "finite-original-emission-source/1"}
+           :presence-seed-source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#presence-seed-source-carrier"}
+           :physical-birth-source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#physical-birth-source-carrier"}}
+  :location :existing-validated-recall-seed-source-no-new-parent-seed-key-or-emit-argument
+  :semantic-source :entire-existing-seven-key-original-presence-source-component-without-birth-values-mixed-into-persona-or-vector-input
+  :semantic-revision :existing-presence-seed-source-1-content-revision-hashes-only-this-complete-presence-seed-source-component-not-the-outer-emission-wrapper
+  :original-input-equality :compare-and-retain-entire-wrapper-and-both-components-for-existing-exact-request-retry-state-checkpoint-and-original-history-custody
+  :birth-change :changes-original-input-and-state-custody-even-when-semantic-vector-and-embedding-revision-remain-identical
+  :bare-semantic-record :not-a-complete-emission-source-no-silent-wrapper-birth-default-or-migration
+  :self-reference :neither-component-contains-the-resulting-entity-wrapper-enclosing-state-or-result-as-its-own-producing-source
+  :qualification :both-components-complete-matching-original-owner-source-and-admission-history-required-before-consumption-not-version-label-or-map-validation-alone
+  :bounds :whole-wrapper-components-and-every-retained-copy-count-under-all-existing-input-state-checkpoint-history-work-trace-and-continuation-limits}
+ :physical-birth-source-carrier
+ {:version "finite-original-physical-birth-source/1"
+  :status :proposed-owned-birth-value-layout-and-value-projection-not-selected-or-qualified-birth-population-policy
+  :kind :closed-map
+  :exact-keys [:version :entity-id :position :velocity :mass :scope-revision
+               :mantle-lineage :intent-wallet :emission-id]
+  :fields
+  {:version {:literal "finite-original-physical-birth-source/1"}
+   :entity-id :ID :position :Vector2 :velocity :Vector2
+   :mass {:contract "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract/mass"}
+   :scope-revision :Revision
+   :mantle-lineage {:contract "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract/mantle-lineage"}
+   :intent-wallet {:contract "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract/intent-wallet"}
+   :emission-id :ID}
+  :types :existing-ID-Revision-Vector2-and-entity-positive-finite-mass-qualified-lineage-and-exact-safe-nonnegative-integer-wallet-requirements-no-new-numeric-default
+  :scope-equality :birth-scope-revision-exactly-equals-original-scoped-request-principal-scope-scope-revision-and-existing-admitted-state-binding-never-a-native-policy-fingerprint-alias
+  :identities :actual-independently-qualified-original-entity-and-emission-values-not-inferred-from-request-id-each-other-presence-label-hash-counter-or-clio-reference
+  :original-source :complete-birth-values-match-actual-qualified-original-source-evidence-and-admission-history-in-existing-original-custody
+  :source-attestation :birth-map-version-values-and-digest-cannot-attest-to-their-own-origin
+  :population-interface :planned-qualified-owning-outer-original-birth-input-before-emit-not-an-existing-native-birth-api
+  :still-unselected-or-unqualified [:actual-geometry-mass-wallet-lineage-and-identity-population-policy-source
+                                   :native-owner-source-and-domain-admission-binding
+                                   :loaded-owning-birth-capture-implementation-and-executed-fit]
+  :domain-owner :portable-field-domain-validates-and-projects-explicit-original-values-into-the-existing-entity-no-second-physics-in-an-adapter
+  :entity-projection
+  {:id [:validated-seed :source :physical-birth-source :entity-id]
+   :kind {:literal :daimoi}
+   :position [:validated-seed :source :physical-birth-source :position]
+   :velocity [:validated-seed :source :physical-birth-source :velocity]
+   :mass [:validated-seed :source :physical-birth-source :mass]
+   :scope-revision [:validated-seed :source :physical-birth-source :scope-revision]
+   :emitted-owner [:scoped-immutable-request :principal-scope :stored-principal]
+   :seed-embedding [:validated-seed :embedding]
+   :embedding-revision [:validated-seed :embedding-revision]
+   :mantle-lineage [:validated-seed :source :physical-birth-source :mantle-lineage]
+   :intent-wallet [:validated-seed :source :physical-birth-source :intent-wallet]
+   :emission-id [:validated-seed :source :physical-birth-source :emission-id]
+   :recall-request-id [:scoped-immutable-request :request-id]}
+  :projection-agreement :exactly-existing-thirteen-daimoi-keys-eight-birth-payload-values-plus-five-existing-derived-values-no-extra-entity-tag-or-source-field
+  :owner-agreement :projected-emitted-owner-also-exact-parent-seed-emitted-owner-and-original-qualified-association-membership-principal
+  :semantic-agreement :projected-vector-and-revision-match-parent-seed-and-wrapped-complete-presence-source-under-its-existing-hash-rule
+  :wallet-and-lineage :retain-every-actual-original-entry-unit-and-order-empty-only-when-complete-original-owner-source-really-has-empty-values-not-a-simplification-or-inferred-presence-wallet
+  :no-hidden-input :do-not-store-or-infer-birth-from-CharacterContext-snapshot-current-authority-role-prompt-existing-read-result-or-later-live-entity
+  :no-donor-policy-adoption :donor-time-hash-screen-orbit-clipping-default-mass-spawn-counter-and-floating-resource-hints-do-not-populate-this-contract-or-supply-canonical-identities
+  :clio-source-observation :pinned-native-make-event-stamps-event-id-type-schema-and-time-and-native-historical-schema-validation-owns-event-identity-no-claim-that-entity-emission-or-request-id-equals-that-event-id
+  :pure-effects :no-clock-random-model-provider-history-fetch-id-minter-extra-rng-draw-or-wallet-spend-created-by-this-value-projection
+  :replay :whole-original-wrapper-and-entity-projection-retained-through-retry-checkpoint-restore-rebuild-no-new-birth-reconstruction-from-current-presence-or-moved-live-entity
+  :retry-order :existing-exact-authorized-request-retry-compares-original-source-and-returns-existing-result-without-inserting-a-new-particle-or-rebinding-contacts
+  :changed-source :existing-conflicting-immutable-request-refusal-no-remint-reset-partial-entity-or-source-rewrite
+  :refusals :existing-specific-request-seed-entity-current-authority-and-finite-codes-and-precedence-unchanged-no-new-error-vocabulary-or-silent-normalization
+  :qualification-order :exact-source-interface-projection-and-full-fixture-plan-with-existing-required-upstream-prerequisites-before-ready-own-implementation-after-lawful-ready-independent-executed-original-source-and-fit-proof-before-consumption-or-done
+  :future-controls [:all-thirteen-projected-entity-fields-exact-from-nine-key-birth-plus-parent-values
+                    :nonempty-original-wallet-and-lineage-retained-with-legitimate-original-empty-control
+                    :missing-extra-malformed-nonfinite-or-unqualified-birth-values-refuse-before-emission
+                    :birth-scope-conflict-refuses-without-new-scope-choice-or-native-fingerprint-alias
+                    :entity-emission-request-and-clio-identities-remain-independent-qualified-namespaces
+                    :same-semantic-component-different-birth-changes-full-original-input-not-necessarily-semantic-revision
+                    :no-result-entity-or-enclosing-state-self-source-cycle
+                    :exact-authorized-retry-after-motion-keeps-original-source-no-second-entity-binding-time-or-draw
+                    :checkpoint-restore-rebuild-preserve-complete-original-birth-not-current-pose
+                    :every-existing-source-authority-privacy-and-exact-one-over-byte-work-state-history-and-continuation-control]
+  :source-manifest [
+   {:repository "riatzukiza/eros-eris-field" :revision "2e7cb1cb6beb86ac8e1c8c68e40faa3f58781834"
+    :path "docs/plans/cephalon-physical-kernel-abi.edn" :sha256 "02b9051af8cad4a11799bfdcc1212943e57a348356e185d3a5d7b1134e144f04"}
+   {:repository "riatzukiza/eros-eris-field" :revision "2e7cb1cb6beb86ac8e1c8c68e40faa3f58781834"
+    :path "src/types.ts" :sha256 "71415c293be511b98e289de57ee0b73c16d8114adbdc6017c8879e1a848b1c22"}
+   {:repository "riatzukiza/eros-eris-field" :revision "2e7cb1cb6beb86ac8e1c8c68e40faa3f58781834"
+    :path "src/sim.ts" :sha256 "f5027154801f060cca515e23c5dd5a9928485d5d6f2506c1af83e73326df0a2f"}
+   {:repository "riatzukiza/eros-eris-field" :revision "2e7cb1cb6beb86ac8e1c8c68e40faa3f58781834"
+    :path "src/graph-ant.ts" :sha256 "b92efd839a571eba71bcc885b50918e41a0662fdecbc819187af0a942a59f9db"}
+   {:repository "riatzukiza/eros-eris-field" :revision "2e7cb1cb6beb86ac8e1c8c68e40faa3f58781834"
+    :path "src/index.ts" :sha256 "b1e36a9d1c84cdcf6a2260afe71200dfb291212a7e3e9b149698ccaeac7a671d"}
+   {:repository "octave-commons/fork_tales" :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+    :path "part64/code/world_web/daimoi_probabilistic.py" :sha256 "be5da8022cfa15498c46db3b4fa95f1193f7e7d4bf7ec80b84c83201061009b2"}
+   {:repository "octave-commons/fork_tales" :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+    :path "docs/notes/system_design/2026-02-20-design-hole-responses-field-and-collisions.md" :sha256 "c4ef760eb2b1cd050a95391a0b36675c2971e351d17d3559dd97e962373185fc"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/encounter_runtime.cljs" :sha256 "d7441acc7f1b2b2157cd1a6f6b80608d800ec07909a67585eff9344da7b5322f"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/turn_context.cljs" :sha256 "946b6f8d2ba29867893ea9c36613987284cb89d3e3fbcf04b9e5e9bddb7e2f44"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/agent/hydration.cljs" :sha256 "a7632b6194e190c560e343c6148807bb9de3a0bfdf96fa96a48ccec83744769e"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "README.md" :sha256 "4030c2a4be57b1e2804d49699687177414dc8bea9c104ed4b049821b8eaa420f"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/law/event.cljc" :sha256 "f2d355a0aa99771c36c7638e0aa44eace8df645c14848ee211185875cd521143"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/infra/event.cljs" :sha256 "40d20f1600cf338471a389704ebedc32ece306e769719188db8836f505547e4e"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/domain/schema.cljc" :sha256 "fd0b8f1ee6bcef6d37aa2a4375992222aa78ab695e373a52762d405820c2e7a9"}]}
  :validated-recall-seed-carrier
  {:version "finite-origin-presence-seed/1"
-  :status :proposed-owned-layout-with-selected-presence-source-interface-and-unqualified-producer-and-birth-mapping
+  :status :proposed-owned-layout-with-selected-emission-source-and-birth-projection-and-unqualified-producer-and-birth-population
   :revision-binding :this-exact-five-key-representation-bound-by-qualified-kernel-revision
   :kind :closed-map
   :exact-keys [:origin-presence-id :emitted-owner :embedding :embedding-revision :source]
@@ -1055,7 +1162,7 @@
    :emitted-owner :ID
    :embedding :nonempty-ordered-vector-of-finite-binary64-values-with-source-established-exact-dimension
    :embedding-revision :Revision
-   :source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#presence-seed-source-carrier"}}
+   :source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-source-carrier"}}
   :selected-design
   {:repository "octave-commons/fork_tales"
    :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
@@ -1071,11 +1178,12 @@
   :seed-stability :retain-the-original-emission-snapshot-never-substitute-a-later-presence-lens-or-change-an-emitted-particle-seed
   :distinct-roles [:request-query-vector :ranked-graph-entry-node :nearby-particle-mantle :weighted-intent-embedding :mood-lens-revision :global-xorshift-state]
   :coincident-values :numerically-equal-vectors-do-not-establish-identical-origin-role-or-authority
-  :source :complete-original-qualified-presence-seed-source-values-not-only-id-model-alias-digest-or-fabricated-prompt-embedding
+  :source :complete-original-qualified-emission-wrapper-with-presence-seed-source-and-birth-not-id-model-alias-digest-or-fabricated-prompt-embedding
   :source-custody :existing-original-admission-source-projection-and-history-without-a-new-input-parameter
   :presence-entity-shape :unchanged-the-closed-physical-presence-variant-has-no-seed-lens-field-so-it-cannot-supply-the-source-by-itself
   :retry :compare-this-entire-original-seed-map-under-existing-exact-input-equality-without-requiring-a-current-live-origin-presence
-  :physical-birth :position-velocity-mass-wallet-mantle-lineage-and-emission-identity-retain-their-existing-original-qualified-emission-source-obligations-not-inferred-from-this-vector
+  :physical-birth {:contract "docs/plans/cephalon-physical-kernel-abi.edn#physical-birth-source-carrier"
+                   :population :actual-qualified-source-and-population-policy-remain-unselected-or-unqualified-no-derivation-from-semantic-vector}
   :rng :no-scalar-seed-substitution-no-reseed-reset-or-extra-draw
   :authority :source-provenance-is-not-current-authority-existing-fresh-principal-scope-and-source-checks-still-apply-before-causal-use-and-exposure
   :bounds :complete-source-vector-originals-and-copies-count-under-all-existing-input-state-checkpoint-history-work-and-trace-limits-no-fixed-dimension-or-new-default

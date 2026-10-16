@@ -2338,8 +2338,9 @@ difference or independent network origin is claimed. No query-vector assignment,
 donor hash fallback, slicing, padding or adapter normalization is selected.
 
 The parent seed/emitted embedding revision is presence-seed-source/1: followed by
-the lowercase SHA256 of the complete original source map under the existing exact
-trace tagged-value algebra, without a trace envelope, host printer or self-hash.
+the lowercase SHA256 of the complete seven-key presence-seed-source component,
+excluding the outer emission wrapper, under the existing exact trace tagged-value
+algebra without a trace envelope, host printer or self-hash.
 That content revision grants no authority. Replay retains the original source,
 vector and revision without reformatting/routing/provider/cache/network work;
 independent current owner authorization is still required.
@@ -2353,3 +2354,56 @@ under existing finite bounds, with no truncation/cap change. Existing before-Rea
 source/interface/fixture/upstream prerequisites remain; own implementation follows
 lawful Ready and independent executed source/fit controls precede consumption/Done.
 No vector, provider call, physical seed or live B behavior was executed here.
+
+
+## Explicit original physical birth source and entity projection — 2026-10-16
+
+The existing seed source slot now selects an explicit three-key original emission
+wrapper: version, presence-seed-source and physical-birth-source. The parent
+seed still has five keys and emit-recall still has eight arguments. Its existing
+seven-key semantic source remains a complete separate component. The semantic
+embedding revision hashes only that component, using its unchanged prefix and
+tagged-value content recipe. Exact original-input comparison and state/checkpoint/
+history custody include the whole wrapper, so changed birth data cannot masquerade
+as an exact retry even when semantic vector/revision are unchanged.
+
+Birth has nine keys including its version: entity-id, position, velocity, mass,
+scope-revision, mantle-lineage, intent-wallet and emission-id are its eight
+payload fields. Reuse the existing entity ID, Vector2, positive finite mass,
+lineage and safe-integer wallet requirements. Its scope revision must exactly
+equal the original request's physical scope revision and existing state binding;
+it cannot introduce another scope or alias the native policy fingerprint.
+
+Field's selected value projection fills exactly the existing **13** daimoi
+fields: those eight birth values, fixed kind daimoi, original request principal,
+parent semantic vector/revision and original request ID. Projected principal
+also equals parent emitted-owner and original association membership. There is
+no additional entity field and no resulting-entity/source-wrapper self-cycle.
+The retained admission-output entity cannot bootstrap its own first-emission
+input. After motion, retry/replay retains original birth values rather than
+copying the current live pose or recreating the original presence.
+
+This selects the value layout and projection, not the population policy or
+actual producer of geometry, mass, wallet, lineage or identities. Each value
+must match complete actual qualified original source/admission/history evidence.
+Retain nonempty original wallet entries and lineage, and accept emptiness only
+when that actual original source was empty. Select no default geometry, inferred
+presence wallet, donor screen-orbit/hash/time rule, float-resource conversion,
+extra RNG draw, clock read or identity minter. Birth is not hidden in character
+snapshot, current authority, role or prompt data. Map validity does not prove origin.
+
+The donor source and legacy Field Particle/stepField do not establish that
+qualified producer. The local Clio submodule is uninitialized; bounded native
+commit/tree/blob reads recovered the pinned Clio event interface without cloning
+or executing it. Native make-event stamps event/id, type, schema identity and
+time; native UUID/stream/sequence/causal and historical schema validation retain
+their authority. This supplies no physical birth API or equality between a
+domain entity ID, emission ID, request ID and Clio event ID. Actual producer and
+domain-history/source bindings remain unqualified.
+
+All source values/copies remain under existing bounds and exact immutable-retry
+rules. Bare semantic source is not silently wrapped with missing birth defaults.
+Existing source/interface/fixture/upstream prerequisites precede Ready; own
+implementation follows lawful Ready and independent executed source/projection/
+fit controls precede consumption/Done. No native birth, particle, history write
+or runtime behavior was executed by this source-only amendment.
