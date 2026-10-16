@@ -313,7 +313,13 @@
            :string ["str" :exact-scalar-string]
            :keyword ["kw" :namespace-or-empty-string :name]
            :vector ["vec" :ordered-encoded-values]
-           :map ["map" :pairs-strictly-increasing-by-canonical-encoded-key-unsigned-utf8]}
+           :map ["map" :one-untagged-outer-vector-of-untagged-two-element-key-value-vectors-strictly-increasing-by-canonical-encoded-key-unsigned-utf8]}
+  :map-pair-elements [:recursively-encoded-key :recursively-encoded-value]
+  :map-container-vec-tags :forbidden-for-the-outer-pair-array-and-two-element-pair-arrays
+  :map-domain-vector-values :normal-vec-tag-applies-only-when-the-actual-key-or-value-is-a-domain-vector
+  :map-goldens [{:value {} :utf8-json "[\"map\",[]]"}
+                {:value {:k "v"} :utf8-json "[\"map\",[[[\"kw\",\"\",\"k\"],[\"str\",\"v\"]]]]"}]
+  :map-golden-status :independent-literal-encoding-reference-not-executed-kernel-codec-proof
   :map-keys {:order :strictly-increasing-complete-encoded-key-unsigned-utf8
              :duplicates :whole-unchanged-refusal-before-map-construction-hashing-or-admission
              :scope :every-nested-tagged-map}

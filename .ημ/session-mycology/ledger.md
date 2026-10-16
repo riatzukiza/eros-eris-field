@@ -723,3 +723,13 @@
   spore: none
   receipt-refs: cephalon-field-closed-bonds-and-original-memory-source-20261016
   note: Proposed finite-physical-intent-bond/1 closes collection/keys/nestedvalue and referenceorder, exactowner-declaredendpoints, intent/evidencekinds, invariant/coefficients, actualsourcecustody and snapshot/replay. No silentmerge/reordering/coefficientaggregation or newintentauthority. Memorybinding/2 includes complete closed original storedprincipal/memoryowner/scope/resource/Clioevent/originalauthoritysource revision value, populated from qualifiedoriginalprojection/envelope and retained in entity/state/snapshot/history. ExplicitcurrentAxxium input/retainedClio evidence validates actual identities/resources beforecausaluse; immutable originalprovenance is notcurrentgrant, purecode fetchesnoowner. Sharedrequiredreasonset includes invalid-recall-request,missing-or-ambiguous-rebuild-history,invalid-rebuild-binding,revocation-rebuild-budget-exceeded; newinvalid-intent-bond appears consistently shared/readmap/readvector/rebuild. Pairedproposalversions/prose updated. No board/Ready/domainimplementation/runtime/provider/credential/paid/deployment/social/spore change; goalACTIVE/live0of3/heartbeat humanPAUSED.
+
+- ts: 2026-10-16T01:43:37.008Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-map-pair-layout-and-documentation-spacing-20261016
+  note: Use the exact reviewer map-layout clarification: ["map", one untagged outer vector of untagged two-element key/value vectors], sorted by existing complete encoded-key order. Pair elements recursively use the existing tagged value algebra; vec tags apply only to actual domain vector keys or values, never these map containers. Add explicit empty and one-pair JSON goldens and the honest independent-reference status; paired operative prose states the same layout. The 180-byte wrapper, state/checkpoint/whole-input limits and other semantics are unchanged. Separately insert spaces around the identified run/job/producer/version labels and exited 0 in current documentation; preserve every ID, version and surrounding claim. No historical receipt, event or raw snapshot rewrite. This is a concrete two-finding source correction, not an observation-only review retry. Goal ACTIVE, live B1/B2/B3 remain 0/3, heartbeat human-paused; no board readiness, runtime, provider, credential, budget, paid, deployment, social or spore change.

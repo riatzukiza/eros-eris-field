@@ -866,6 +866,11 @@ Encode that whole array as canonical UTF8 JSON with no whitespace/BOM/newline,
 using the declared strict map order, scalar escaping and binary64 bit strings;
 SHA256 of those exact payload bytes yields the lowercase64-hex wrapper hash.
 The hash field is outside its own payload, avoiding self-reference.
+Every encoded map is exactly `["map",[[encoded-key,encoded-value],...]]`:
+one untagged outer pair array and untagged two-element pair arrays. Only actual
+domain vector keys/values receive the normal `vec` tag. The trace codec's empty
+and one-pair literal goldens make the 180-byte checkpoint wrapper derivation
+unambiguous; they remain reference bytes for future executed codec qualification.
 
 The separate 1,048,756-byte checkpoint **argument** cap measures the complete
 domain-map argument as encoded once inside `finite-field-input/1`, including

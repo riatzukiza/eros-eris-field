@@ -171,15 +171,15 @@ The reusable reviewer needs parser success and passes
 `setup_eta_mu_toolchain: false`; its diff evidence records the actual successful
 dependency result. Existing reviewer/publication source pins and guards remain.
 
-At exact2d7a02d61ffc8118704d3778f9b06bc984ddbca7, actual run38685018571 parser
-job116257775574 passed both declarations and its earlier second-`edn/read`
+At exact 2d7a02d61ffc8118704d3778f9b06bc984ddbca7, actual run 38685018571 parser
+job 116257775574 passed both declarations and its earlier second-`edn/read`
 check. The actual workflow at that immutable run head uses a second read, which
 silently consumes trailing reader-discard forms; this is not true trailing-source
 EOF evidence. Actual deterministic
-producer116257825490 passed while credential detection, cross-repository token
+producer 116257825490 passed while credential detection, cross-repository token
 creation and private-mirror steps were all skipped. This is observed hosted
-workflow evidence, distinct from local Babashka1.12.207 parser fixtures and
-requested hosted1.13.219. New heads still require fresh native checks/reviews;
+workflow evidence, distinct from local Babashka 1.12.207 parser fixtures and
+requested hosted 1.13.219. New heads still require fresh native checks/reviews;
 no secret/private content, actual exploit or physical solver behavior was read
 or executed to establish this boundary.
 
@@ -188,7 +188,7 @@ or executed to establish this boundary.
 
 Native Codex4286659389 exposed a limit in the earlier true-EOF claim: a second
 standard edn/read skips trailing #_ forms. On the isolated committed fixture,
-the actual old abce job exited0 for a map followed by a discarded map. The
+the actual old abce job exited 0 for a map followed by a discarded map. The
 updated job still uses the standard reader for the map and checks the raw
 remainder for only EDN whitespace, commas and line comments. It rejects
 trailing data and reader-discard forms without rejecting marker text inside a
