@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-elementary-carriers-and-transition-envelope"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-retained-recall-records"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -384,6 +384,8 @@
                 :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
                 :values :qualified-owning-abi-values-only
                 :elementary-carriers "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers"
+                :recall-request-admission "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state"
+                :retained-recall-success "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier"
                 :whole-state-closure :not-established-by-elementary-carriers-complete-remaining-owned-and-owner-leaf-bindings-before-consumption
                 :ordered-entities "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract"
                 :intent-bonds "docs/plans/cephalon-physical-kernel-abi.edn#bond-state-contract"
@@ -560,6 +562,7 @@
                     :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
   :reason/additional-keys :refused
   :reason/value-shapes :consume-qualified-owning-abi-and-memory-bindings
+  :reason/closed-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/inclusion-reason"
   :byte-count :complete-version-envelope-tags-map-keys-values-separators-and-escapes
   :counter-field :canonical-result-byte-count
   :counter-in-payload :forbidden-no-self-reference

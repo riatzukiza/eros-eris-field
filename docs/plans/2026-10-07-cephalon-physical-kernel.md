@@ -948,3 +948,92 @@ also do not demonstrate that a new upstream feature or additional packet is
 necessary: an existing qualified owning interface may still supply them. No
 owner reassignment, policy implementation, scope/point change or native Ready
 transition is made by this source inventory.
+
+
+## Retained recall success representation — 2026-10-16
+
+The proposed ABI `finite-retained-recall-success/1` gives read success exactly
+status, motion, bonds, contacts, included-memory-ids, inclusion-reasons,
+kernel-horizon and budget-result. It retains the existing five statuses; the
+actual lifecycle source and positive controls for each still require owning
+qualification. An empty vector or hit count cannot invent a status. Pure refusal
+and qualified public failure remain their existing separate three-key results.
+
+Motion contains the original emitted particle ID and every produced sample in
+its retained horizon, using the existing five-value sample tuple. The separate
+global derived-trail window cannot truncate this request result. Bond trace
+entries retain step ID and the full actual logical bond evaluated for that
+particle. Contact trace separates the complete per-step eligible-pair inventory
+from actual overlaps, so a separated pair is evidence of eligibility without an
+invented contact. Closed overlap records retain original geometry/profile,
+frozen moved positions, actual dot intermediates and the actual response branch.
+The nonnegative branch keeps original world velocity bit for bit and has no
+inactive reflection fields. Negative reflection retains its actual intermediate
+values. Per-contact raw response remains distinct from final post-pass speed
+cap/threshold velocity; the existing operation trace and causal support remain.
+
+Inclusion IDs and their ten-key reasons remain in exact first-witness order,
+with the same two-field inclusion codec and byte counter. A request budget
+result retains its original complete physical budget and the existing horizon,
+fold-work, result-byte, trace-record and trace-byte counters. Reading validates
+and charges its own work without mutating or resetting the retained request.
+No counter is encoded into the payload it counts.
+
+A checkpoint position has exactly kernel-time-us, event-cursor and
+admitted-event-cursor under the same qualified request history and identity.
+It identifies the physical cut; it does not authenticate persistence or mint a
+native checkpoint/effect identity. The existing outer qualified checkpoint
+record must match that cut and independently bind the actual snapshot. A
+retained result cannot contain its enclosing snapshot or that snapshot's digest:
+that would make the state/hash recursive. Original checkpoint/history custody
+and all authentication requirements remain. Historical replacement preserves
+the original result horizon or explicitly invalidates it under the existing
+rules; the current root clock alone cannot judge a retained historical result.
+
+Original request/physical-budget types, actual owner history/checkpoint/authority
+leaves and the five lifecycle-status meanings still require their exact source
+selection. These representation choices supply no complete-state closure or
+Ready claim. No original physical law, stage order, trace coverage, positive
+fixture, admission/recovery rule, budget, effect or native owner was changed.
+
+
+## Retained recall request and retry
+
+Proposed on 2026-10-16 under the existing ABI8 authoring boundary.
+
+`recall-requests` is a request-ID-ordered unique vector of the exact proposed
+admission records. Each retains the entire five-value original emit input tuple,
+complete original qualified custody and original actual emitted daimoi, plus a
+current or safely invalidated result disposition. The scoped request retains its
+original principal/scope, projection/graph bindings, full query, complete embedding
+vector/source, kernel/configuration binding and exact read/deposit weights. The
+existing weight/contact/entity/scalar contracts apply without normalization,
+new producer or ID generation. Closed key layout does not close the explicitly
+unselected query/seed/budget/owner/history leaves.
+
+Exact retry compares all original immutable input values and their original
+principal/scope, not changing input state, fresh authority or evolved RNG/live
+motion/population. Existing state/current-authority/producing-identity/configuration
+and bounds checks still apply. It returns the unchanged CURRENT input state and
+its current authorized retained result, never the original admission state or a
+stale payload. Original contact entries are compared without new binding
+population. No second emission, effect, time, draw or budget reset occurs.
+
+A current disposition references main's single RecallSuccess contract, preserving
+all five successful statuses. Safe qualified reconstruction may instead retain
+an invalidated disposition with no success payload. Full original source values
+remain immutable/private/current-authority controlled; stored authority proves no
+future permission. Existing checkpoint/history reference carriers remain explicit
+unresolved owner bindings. Neither original-input nor result-disposition wrappers
+contain an enclosing state/snapshot or its self-referential hash. Public read
+failure, denials and storage/provider failures are not retained request variants.
+Every original source and duplicate value counts under existing budgets; no
+recovery/admission/cutoff/eviction change or whole-state closure is claimed.
+
+
+The complete original query and validated seed remain exact unselected input
+shapes. In particular, the source permits vector seeds; naming xorshift RNG
+state does not determine the request seed. The original physical budget is
+also distinct from global call/rebuild limits. Those definitions and actual
+producer compatibility must be selected before native readiness; the closed
+wrapper does not supply them by name.

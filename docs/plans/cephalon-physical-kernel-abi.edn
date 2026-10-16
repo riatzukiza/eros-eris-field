@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-elementary-carriers-and-transition-envelope"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-retained-recall-records"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -409,6 +409,307 @@
   :fixtures [:distinct-read-and-deposit-vectors-positive :each-closed-key-and-vector-negative
              :mapping-mismatch-refuses-before-emission :same-id-different-weight-bits-refuses
              :checkpoint-restore-rebuild-preserves-both-vectors-and-mapping-revision]}
+ :recall-request-admission-state
+ {:version "finite-recall-request-admission/1"
+  :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
+  :revision-binding :this-exact-representation-bound-by-qualified-kernel-revision
+  :state-field :recall-requests
+  :container :ordered-vector-of-admission-records
+  :order :strictly-increasing-request-id-by-exact-unsigned-utf8
+  :identity :one-record-per-request-id-across-all-principals-and-scopes-in-this-state
+  :empty []
+
+  :scoped-immutable-request
+  {:kind :closed-map
+   :exact-keys [:request-id :principal-scope :projection-revision :graph-revision
+                :query :embedding :kernel-binding :field-weights]
+   :fields
+   {:request-id :ID
+    :principal-scope
+    {:kind :closed-map :exact-keys [:stored-principal :scope-revision]
+     :fields {:stored-principal :ID :scope-revision :Revision}}
+    :projection-revision :Revision
+    :graph-revision :Revision
+    :query :FullOriginalQuery
+    :embedding
+    {:kind :closed-map :exact-keys [:vector :embedding-revision :source]
+     :fields {:vector :nonempty-ordered-finite-binary64-vector
+              :embedding-revision :Revision
+              :source :FullOriginalEmbeddingSource}
+     :dimension :exact-original-qualified-source-dimension-not-a-new-fixed-size
+     :vector-value :complete-original-admitted-vector-with-exact-binary64-bits
+     :source-value :complete-original-qualified-source-values-not-only-id-hash-or-fingerprint}
+    :kernel-binding
+    {:kind :closed-map :exact-keys [:qualified-producing-identity :config-revision :config-hash]
+     :fields
+     {:qualified-producing-identity
+      {:contract "docs/plans/cephalon-physical-kernel-abi.edn#qualified-producing-identity-contract"}
+      :config-revision :Revision :config-hash :Digest}}
+    :field-weights
+    {:contract "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"}}
+   :principal-scope-meaning :original-stored-principal-and-scope-revision-not-a-grant-or-complete-owner-scope-schema
+   :full-principal-scope-source :mandatory-in-original-custody-below
+   :graph-versus-projection :retain-both-actual-qualified-bindings-never-infer-one-from-the-other
+   :embedding-versus-validated-seed :no-assumed-identity-or-derived-fallback-without-the-existing-selected-seed-mapping}
+
+  :original-inputs
+  {:kind :closed-map
+   :exact-keys [:scoped-immutable-request :validated-seed :physical-budget
+                :mood-lens-revision :new-particle-contact-profile-bindings]
+   :fields
+   {:scoped-immutable-request :the-exact-scoped-immutable-request-map-above
+    :validated-seed :FullOriginalValidatedSeed
+    :physical-budget :FullOriginalPhysicalBudget
+    :mood-lens-revision :Revision
+    :new-particle-contact-profile-bindings
+    {:kind :vector :items :exact-existing-closed-emit-contact-entry
+     :entry-contract "docs/plans/cephalon-physical-kernel-abi.edn#contact-profile-binding-state/closed-emit-entry-keys"
+     :entry-exact-keys [:recipient-id :configuration-contact-id :configuration-contact-revision]
+     :fields {:recipient-id :ID :configuration-contact-id :ID :configuration-contact-revision :Revision}
+     :order :strictly-increasing-exact-recipient-id-unsigned-utf8
+     :population :existing-one-per-current-recipient-rule-at-original-new-emission-only}}}
+
+  :original-custody
+  {:kind :closed-map
+   :exact-keys [:principal-scope-source :authority-projection :qualified-producing-identity
+                :physical-configuration :source-evidence :history-binding]
+   :fields
+   {:principal-scope-source :FullOriginalQualifiedPrincipalScopeSource
+    :authority-projection :FullOriginalQualifiedAuthorityProjection
+    :qualified-producing-identity
+    {:contract "docs/plans/cephalon-physical-kernel-abi.edn#qualified-producing-identity-contract"}
+    :physical-configuration
+    {:contract "docs/plans/cephalon-finite-field-coupling.edn#configuration-schema"}
+    :source-evidence :FullOriginalRecallAdmissionSourceEvidence
+    :history-binding :QualifiedOriginalRequestHistoryBinding}
+   :authority-role :actual-original-admitted-owner-data-retained-as-provenance-never-a-future-current-grant
+   :source-role :complete-matching-original-query-embedding-seed-budget-mood-contact-projection-and-emission-evidence-where-existing-contract-requires-it
+   :population :only-actual-existing-qualified-input-state-provenance-explicit-arguments-and-owner-history-no-new-fetch-producer-or-input-parameter
+   :missing-producing-path :explicit-unresolved-before-readiness-not-a-synthesized-record
+   :snapshot-self-reference :forbidden-no-enclosing-state-snapshot-or-its-state-snapshot-hash}
+
+  :admission-record
+  {:kind :closed-map
+   :exact-keys [:request-id :original-inputs :original-custody :emitted-entity :result-disposition]
+   :fields
+   {:request-id :ID
+    :original-inputs :the-exact-original-inputs-map-above
+    :original-custody :the-exact-original-custody-map-above
+    :emitted-entity
+    {:contract "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract"
+     :variant :daimoi
+     :value :complete-actual-original-emitted-entity-at-admission-not-a-live-state-copy}
+    :result-disposition :one-of-the-two-exact-variants-below}
+   :request-id-equality :record-id-equals-original-request-id-and-emitted-entity-recall-request-id
+   :actual-emitted-identity :entity-id-and-emission-id-are-the-actual-existing-qualified-emission-values-never-minted-by-this-wrapper
+   :original-entity-role :immutable-emission-custody-not-a-source-to-overwrite-current-motion-or-revive-a-particle
+   :live-entity-relationship :existing-immutable-identity-and-owner-laws-not-equality-to-original-position-velocity-or-current-population}
+
+  :result-disposition
+  {:current
+   {:kind :closed-map
+    :exact-keys [:disposition :authority-projection-binding :authority-projection :result]
+    :fields {:disposition {:literal :current}
+             :authority-projection-binding :FullQualifiedResultAuthorityBinding
+             :authority-projection :FullQualifiedResultAuthorityProjection
+             :result {:named-reference :RecallSuccess
+                      :contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier"}}
+    :result-statuses [:admitted :no-contact :complete :incomplete :exhausted]
+    :meaning :actual-retained-current-success-under-its-exact-recorded-authority-not-a-new-read-status}
+   :invalidated
+   {:kind :closed-map
+    :exact-keys [:disposition :authority-projection-binding :authority-projection :reason]
+    :fields {:disposition {:literal :invalidated}
+             :authority-projection-binding :FullQualifiedResultAuthorityBinding
+             :authority-projection :FullQualifiedResultAuthorityProjection
+             :reason {:literal :stale-recall-authority}}
+    :result-key :absent-not-nil-or-an-empty-success
+    :meaning :only-the-existing-qualified-rebuild-safe-invalidation-no-exposable-old-success-payload}
+   :authority-custody :complete-actual-owner-values-and-matching-source-not-a-string-digest-or-local-policy-version
+   :stored-binding :not-proof-of-freshness-fresh-current-owner-admission-still-required-before-every-causal-use-and-exposure
+   :forbidden-variants [:stored-read-failure :retained-denial-as-success :synthetic-pending-provider-record]
+   :snapshot-self-reference :no-full-enclosing-state-snapshot-or-enclosing-state-snapshot-hash}
+
+  :exact-immutable-retry
+  {:compare :all-five-original-input-values-including-every-nested-request-value-and-original-principal-scope
+   :equality :exact-canonical-values-exact-scalar-utf8-spelling-vector-order-and-binary64-bits
+   :exclude-from-immutable-equality [:input-state :fresh-current-trusted-authority-projection
+                                   :fresh-qualified-producing-identity-argument
+                                   :evolving-result-disposition :current-live-entity-motion-and-population]
+   :excluded-does-not-mean-unchecked :all-existing-state-current-authority-producing-identity-configuration-binding-and-bound-checks-still-apply
+   :return :exact-current-input-state-and-its-existing-authorized-current-result-not-the-original-admission-state-or-original-admission-result
+   :original-contact-entries :compare-original-values-do-not-repopulate-against-current-recipient-set-as-if-new-emission
+   :original-seed :compare-call-seed-with-recorded-original-seed-never-with-evolved-state-rng
+   :changed-original-value-or-principal-scope :existing-invalid-recall-request-refusal-under-existing-precedence
+   :stale-denied-invalidated-or-unestablished-result :existing-specific-refusal-not-reemission-or-authority-retagging
+   :new-particle-binding-time-draw-feedback-budget-reset-or-id-mint :none}
+
+  :replacement-and-replay
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/replacement-reference-closure/once-only-precedence"
+   :originals :preserve-exact-applicable-original-inputs-custody-and-emitted-identity-never-retag-original-principal-scope-to-current
+   :current-result :only-existing-authorized-schedule-update-or-qualified-reconstruction-with-current-authority
+   :invalidation :existing-safe-complete-result-invalidation-only-never-copy-old-payload-or-new-failed-request
+   :physical-state :recompute-under-existing-permitted-world-law-never-copy-original-emitted-entity-over-current-reconstruction
+   :missing-conflicting-source-or-unsafe-invalidation :existing-whole-unchanged-refusal-and-outer-disposition}
+  :history-and-checkpoint-references
+  {:contracts ["docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/checkpoint-position"
+               "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"
+               "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/provenance-horizon"
+               "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/replacement-reference-closure"]
+   :exact-reference-carrier :explicit-unresolved-owner-binding-not-created-by-this-wrapper
+   :no-self-hash :no-enclosing-state-or-enclosing-snapshot-digest-in-request-inputs-or-result-disposition
+   :full-required-original-source :retained-in-existing-qualified-counted-provenance-and-history-not-replaced-by-id-or-digest
+   :no-event-generation-or-new-horizon :true}
+  :bounds :all-original-values-full-source-custody-entity-copy-and-results-count-under-existing-state-input-checkpoint-history-trace-work-time-and-continuation-limits
+  :readiness :all-named-original-leaves-and-RecallSuccess-must-be-authored-and-independently-qualified-before-this-is-a-closed-consumable-state-carrier}
+ :recall-success-carrier
+ {:version "finite-retained-recall-success/1"
+  :status :proposed-owned-structure-with-unselected-owner-leaves-not-implemented-or-qualified
+  :closed-keys [:status :motion :bonds :contacts :included-memory-ids :inclusion-reasons :kernel-horizon :budget-result]
+  :types :consume-the-exact-ID-Revision-Count-Digest-and-Vector2-definitions-in-canonical-state-elementary-carriers
+  :fields {:status [:enum :admitted :no-contact :complete :incomplete :exhausted]
+           :motion :request-motion :bonds :request-bond-trace :contacts :request-contact-trace
+           :included-memory-ids :ordered-unique-ID-vector :inclusion-reasons :ordered-inclusion-reason-vector
+           :kernel-horizon :request-horizon :budget-result :request-budget-result}
+  :status-selection :existing-request-lifecycle-only-no-inference-from-hit-count-empty-vector-or-this-shape
+  :status-qualification :the-five-existing-success-cases-and-their-actual-source-lifecycle-still-require-owning-laws-and-controls-before-consumption
+  :no-new-status-or-partial-success :true
+  :request-motion
+  {:closed-keys [:daimoi-id :samples]
+   :daimoi-id :the-exact-original-emitted-request-particle-ID
+   :samples :ordered-vector-of-the-exact-five-element-trail-state-sample-tuple
+   :sample-types "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
+   :order :strictly-increasing-actually-executed-step-id-for-this-request-incarnation
+   :coverage :every-actually-produced-request-particle-sample-in-the-retained-horizon-not-only-the-global-trail-window
+   :values :same-actual-moved-position-final-post-contact-cap-and-threshold-velocity-and-complete-support-references-as-the-existing-sample-producer
+   :global-window-N :does-not-truncate-this-required-request-result-or-original-history
+   :ended-incarnation :original-qualified-request-and-source-evidence-resolve-it-without-requiring-a-current-live-entity
+   :zero-time-read-checkpoint-or-queued-future-event :no-new-sample
+   :empty-samples :valid-only-when-no-quantum-produced-a-sample-for-that-request}
+  :request-bond-trace
+  {:container :ordered-vector-of-closed-maps
+   :closed-keys [:step-id :bond]
+   :step-id :Count :bond "docs/plans/cephalon-physical-kernel-abi.edn#bond-state-contract"
+   :bond-value :one-exact-closed-bond-entry-not-the-whole-container
+   :order [:executed-step-id :bond-id-unsigned-exact-utf8]
+   :coverage :every-logical-bond-actually-evaluated-for-this-request-particle-in-its-horizon-once-at-that-step
+   :identity :exact-step-id-and-logical-bond-id
+   :values :complete-original-bond-fields-and-matching-source-values-at-that-force-boundary
+   :structural-semantic-duplication-or-id-only-reference-without-original-source :forbidden
+   :other-causal-world-bonds :retain-their-complete-required-support-in-existing-provenance-and-operation-trace
+   :empty :only-when-no-such-request-bond-was-evaluated}
+  :request-contact-trace
+  {:closed-keys [:eligibility :observations]
+   :eligibility {:container :ordered-vector-of-closed-maps
+                 :closed-keys [:step-id :contact-eligibility-matrix-revision :eligible-pairs]
+                 :step-id :Count :contact-eligibility-matrix-revision "finite-particle-recipient/1"
+                 :eligible-pairs :ordered-vector-of-exact-two-distinct-ID-pairs-under-existing-canonical-unordered-pair-order
+                 :scope :every-eligible-pair-for-this-request-particle-in-the-actually-executed-step-including-separated-pairs
+                 :order :strictly-increasing-step-id-with-no-duplicate-pair-at-a-step
+                 :separated-entry :eligibility-evidence-not-a-contact-or-observation}
+   :observations {:container :ordered-vector-of-exact-overlap-records-below
+                  :order [:step-id :canonical-unordered-pair]
+                  :identity :the-existing-domain-key-step-id-and-pair
+                  :scope :every-actual-overlap-observation-for-this-request-particle-with-no-duplicate-or-invented-separated-observation}
+   :overlap-record
+   {:closed-keys [:step-id :pair :particle-id :recipient-id :contact-eligibility-matrix-revision
+                  :configuration-contact-id :configuration-contact-revision
+                  :particle-radius :recipient-radius :restitution :particle-position :recipient-position
+                  :particle-world-velocity-before :recipient-world-velocity :relative-velocity
+                  :raw-normal :distance :normal :dot-terms :dot :response :causal-provenance-ids]
+    :step-id :Count :pair :exact-existing-canonical-two-distinct-ID-pair
+    :particle-id :the-original-request-daimoi-ID :recipient-id :qualified-presence-or-nexus-ID
+    :contact-eligibility-matrix-revision "finite-particle-recipient/1"
+    :configuration-contact-id :ID :configuration-contact-revision :Revision
+    :particle-radius :finite-nonnegative-binary64 :recipient-radius :finite-positive-binary64
+    :restitution :finite-binary64-zero-through-one-inclusive
+    :particle-position :Vector2 :recipient-position :Vector2
+    :particle-world-velocity-before :Vector2 :recipient-world-velocity :Vector2 :relative-velocity :Vector2
+    :raw-normal :Vector2 :distance :finite-positive-binary64 :normal :Vector2
+    :dot-terms :exact-two-finite-binary64-products-in-the-declared-x-then-y-order
+    :dot :actual-finite-binary64-x-plus-y-dot-value
+    :response :one-of-the-two-exact-branch-maps-below
+    :causal-provenance-ids :ordered-distinct-ID-vector-with-full-qualified-transitive-support
+    :geometry-and-profile :all-values-exactly-match-the-existing-admitted-profile-and-frozen-moved-positions
+    :values :copy-the-existing-actually-produced-contact-intermediates-no-new-evaluation-order}
+   :nonnegative-response
+   {:closed-keys [:branch :world-velocity] :branch :nonnegative-preserved :world-velocity :Vector2
+    :agreement :dot-is-nonnegative-and-world-velocity-bit-exactly-equals-particle-world-velocity-before
+    :inactive-relative-reflection-and-world-restore-fields :absent-never-computed-for-a-shape}
+   :negative-response
+   {:closed-keys [:branch :one-plus-restitution :reflection-scale :scaled-normal :relative-response :world-response]
+    :branch :negative-reflected :one-plus-restitution :actual-finite-binary64-value-one-through-two
+    :reflection-scale :actual-finite-negative-binary64-value :scaled-normal :Vector2
+    :relative-response :Vector2 :world-response :Vector2
+    :agreement :dot-is-strictly-negative-and-all-values-are-the-existing-declared-reflection-and-world-restore-intermediates}
+   :response-stage :private-per-contact-pass-world-velocity-before-the-later-final-cap-and-threshold
+   :motion-stage :separate-actual-final-surviving-velocity-after-the-complete-contact-pass
+   :pair-role-and-id-order :preserve-existing-distinct-role-selection-and-unordered-pair-normalization
+   :native-effect-identity :not-created-by-these-domain-records-the-existing-qualified-Clio-outward-binding-remains-required
+   :other-operation-trace :complete-existing-global-eligibility-contact-and-physical-trace-custody-unchanged}
+  :inclusion-reason
+  {:closed-keys [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
+                 :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
+   :fields {:memory-id :ID :content-revision :Revision :nexus-id :ID :daimoi-id :ID
+            :step-id :Count :pair :exact-canonical-two-distinct-ID-pair
+            :contact-eligibility-matrix-revision "finite-particle-recipient/1"
+            :graph-revision :Revision :field-history :selected-qualified-history-binding
+            :fold-revision "finite-contact-inclusion/1"}
+   :agreement :the-existing-first-canonical-overlap-witness-for-that-exact-memory-content-graph-and-original-request-under-current-authority
+   :owner-records :complete-original-matching-nexus-memory-source-bindings-and-qualified-history-required-not-id-or-revision-label-alone}
+  :inclusion-vectors
+  {:included-memory-ids :the-existing-unique-first-witness-order
+   :inclusion-reasons :same-length-vector-of-the-exact-reason-map-above-in-corresponding-memory-id-order
+   :no-reranking-truncation-or-prompt-budget-subselection :true
+   :encoding "docs/plans/cephalon-finite-field-coupling.edn#inclusion-result-codec"
+   :counter :the-existing-complete-two-field-encoded-envelope-not-the-whole-read-success-map}
+  :checkpoint-position
+  {:closed-keys [:kernel-time-us :event-cursor :admitted-event-cursor]
+   :kernel-time-us :Count :event-cursor :canonical-state-elementary-cursor :admitted-event-cursor :canonical-state-elementary-cursor
+   :meaning :physical-position-under-the-same-qualified-history-producing-identity-scope-and-authority-binding-of-the-request-horizon
+   :not-an-authenticated-checkpoint :no-snapshot-state-sha256-field-revision-effect-id-or-new-native-identity-is-minted-by-this-position
+   :matching :the-existing-qualified-outer-checkpoint-record-must-independently-bind-the-actual-snapshot-and-this-exact-position
+   :self-reference :no-current-enclosing-state-snapshot-or-its-own-digest-in-a-retained-result
+   :history-alone-or-position-label-alone :does-not-authenticate-a-checkpoint}
+  :request-horizon
+  {:closed-keys [:start-checkpoint :selected-end-checkpoint :executed-horizon-quanta :field-history :fold-revision]
+   :start-checkpoint :exact-checkpoint-position-above :selected-end-checkpoint :exact-checkpoint-position-above
+   :executed-horizon-quanta :Count :field-history :selected-qualified-history-binding
+   :fold-revision "finite-contact-inclusion/1"
+   :agreement :the-existing-original-emission-to-selected-checkpoint-schedule-and-qualified-fold-history-with-no-new-time-or-draw
+   :qualified-checkpoints :the-position-values-reference-the-actual-qualified-original-start-and-selected-end-not-an-empty-or-later-baseline-substitute
+   :reference-custody :complete-original-checkpoint-history-and-actual-owner-authentication-remain-required-in-the-existing-qualified-source-port
+   :historical-replacement :retain-the-original-request-horizon-and-existing-complete-current-authority-reconstruction-or-invalidation-even-when-the-physical-target-rewinds
+   :clock-comparison :current-root-time-alone-cannot-prove-or-disprove-a-retained-historical-result
+   :bound :existing-request-and-total-horizon-quantum-cap-with-no-reset}
+  :request-budget-result
+  {:closed-keys [:original-physical-budget :executed-horizon-quanta :accumulated-semantic-fold-work
+                 :canonical-result-byte-count :trace-record-count :accumulated-trace-utf8-byte-count]
+   :original-physical-budget :complete-exact-original-physical-budget-from-the-retained-request-admission
+   :executed-horizon-quanta :Count :accumulated-semantic-fold-work :Count
+   :canonical-result-byte-count :Count :trace-record-count :Count :accumulated-trace-utf8-byte-count :Count
+   :agreement :exact-existing-retained-horizon-accounting-with-the-same-original-budget-and-qualified-fold-source-not-recomputed-or-reset-on-read
+   :canonical-result-byte-count-measure :existing-inclusion-result-envelope-measure-without-its-own-counter-in-that-payload
+   :trace-accounting :existing-complete-physical-trace-record-and-byte-measures-no-counter-encoded-into-the-payload-it-counts
+   :current-call-validation :separate-existing-whole-call-work-still-charged-without-mutating-the-retained-request-or-inventing-a-read-write
+   :limits :all-original-horizon-trace-work-state-continuation-and-complete-result-bounds-still-required}
+  :current-authority :validate-the-original-principal-scope-request-and-all-retained-transitive-support-before-every-read-and-exposure
+  :state-record-equality :a-successful-read-or-exact-emission-retry-returns-this-same-current-authorized-retained-success-no-new-time-draw-effect-or-feedback
+  :invalidation :existing-stale-recall-authority-without-any-of-these-payload-fields-after-explicit-qualified-result-invalidation
+  :public-failure :separate-existing-qualified-facade-three-key-failure-only-never-a-stored-request-or-success-variant
+  :still-unselected [:complete-original-request-and-physical-budget-shape :actual-history-checkpoint-source-record-and-authority-schema-bindings
+                     :the-existing-five-status-lifecycle-source-and-positive-controls]
+  :new-force-physics-stage-horizon-status-budget-eviction-replay-or-owner-law :none
+  :future-controls [:all-existing-five-success-status-variants-with-exact-closed-keys-and-original-source
+                    :no-self-snapshot-or-current-hash-cycle-in-retained-result
+                    :motion-retains-complete-request-horizon-beyond-derived-trail-window
+                    :ordered-bond-and-eligibility-traces-including-separated-pairs-with-no-invented-contact
+                    :negative-reflection-and-nonnegative-signed-zero-preservation-branch-shapes
+                    :exact-first-witness-reason-vector-and-original-memory-content-graph-binding
+                    :same-original-request-and-success-after-exact-retry-checkpoint-restore-and-qualified-rebuild
+                    :historical-once-only-facts-retained-across-a-rewound-physical-target
+                    :no-current-authority-invalidation-or-public-failure-payload-leak
+                    :every-existing-byte-work-time-history-and-continuation-cap-before-exposure]}
  :nexus/required [:memory-binding]
  :nexus-memory-binding
  {:version "finite-nexus-memory-binding/2" :location :ordered-entities-nexus-memory-binding
@@ -760,6 +1061,7 @@
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
                 :request-field-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
+                :retained-request-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state"
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
                 :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
                 :invalid-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
@@ -788,7 +1090,9 @@
                 :pure-result-variants [:success :refusal]
                 :success {:status [:admitted :no-contact :complete :incomplete :exhausted]
                           :fields [:motion :bonds :contacts :included-memory-ids
-                                   :inclusion-reasons :kernel-horizon :budget-result]}
+                                   :inclusion-reasons :kernel-horizon :budget-result]
+                          :closed-carrier-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier"
+                          :map-keys :exactly-status-plus-these-seven-fields}
                 :refusal {:required [:status :reason :reason-revision]
                           :additional-fields :forbidden
                           :reason-revision 1

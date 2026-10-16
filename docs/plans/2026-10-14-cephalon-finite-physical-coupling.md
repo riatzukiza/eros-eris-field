@@ -1906,3 +1906,34 @@ protected commit/exposure seam is qualified by those observations. Resolve the
 existing closed-schema/owner/freshness requirements before Ready. A wrapper or
 renamed fingerprint supplies no missing owner fact; these reads do not establish
 a new upstream feature or additional packet.
+
+
+## Retained recall result custody — 2026-10-16
+
+The [owning retained-success declaration](2026-10-07-cephalon-physical-kernel.md#retained-recall-success-representation--2026-10-16)
+and ABI `recall-success-carrier` fix exact result keys and typed request motion,
+bond, eligibility/overlap, inclusion-reason, horizon and counter carriers.
+Complete request motion outlives the separate derived-trail window. Separated
+eligible pairs remain trace evidence without becoming contacts; nonnegative
+response preserves original world components without evaluating reflection.
+The original inclusion codec, first-witness order and full trace/work bounds
+remain. Checkpoint positions stay separate from independently authenticated
+snapshot records, avoiding an enclosing-state/hash cycle. Original checkpoint
+history, current authority and historical-result reconstruction/invalidation
+remain required; unselected request, owner and lifecycle leaves are still open.
+
+
+## Retained request original inputs — 2026-10-16
+
+The [owning request/retry definition](2026-10-07-cephalon-physical-kernel.md#retained-recall-request-and-retry)
+and ABI `recall-request-admission-state` retain all five immutable emit input
+values, complete original custody, actual original emitted entity, and current
+or safely invalidated result. Retry compares complete original values and
+principal/scope without freezing changing input state, current authority,
+producing-identity checks, evolved RNG or current population. It returns the
+unchanged current state and authorized retained result without another emission
+or budget reset. The single retained-success contract supplies the result;
+invalidated disposition has no result key. Query, seed, budget and original
+owner/source leaves still need exact selected definitions, with every original
+byte and duplicate value counted under the same bounds. No new producer, input
+branch, event/grant, recovery rule or complete-state qualification is supplied.
