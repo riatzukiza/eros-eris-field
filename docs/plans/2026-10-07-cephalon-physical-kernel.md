@@ -1479,3 +1479,54 @@ Complete source/interface/birth mapping and fixture selection with existing
 upstream/native prerequisites precede Ready; own adapter/compiled implementation
 and independently executed controls follow lawful Ready before consumption/Done.
 No context, seed vector, embedding call, physical birth or live proof ran here.
+
+## Stored principal namespace and native binding path — 2026-10-16
+
+The actual Knoxx policy path distinguishes a membership's stored actor binding
+from a role-derived display/default actor label. `ctx-actor-binding` returns the
+stored assignment; `ctx-actor-id` can return the display convenience. The native
+membership resolver verifies actor against an explicit membership, and without
+that exact narrowing refuses multiple actor candidates within one organization
+or across organizations. Current actor resolution reloads the membership, user,
+organization, roles and policies and validates active statuses. The character
+resolver requires a server-bound actor or the actual unforgeable in-process event
+token, then checks selected actor/current stored binding and requested scope.
+
+The existing encounter `authorization-evidence` names membership ID as
+`principal-id`. Its graph snapshot separately retains all five native scope
+values: actor, organization, membership, user and derived policy revision. The
+Field proposal now explicitly selects that **membership-ID namespace** for
+original `stored-principal`, preserving the existing emitted-owner equality.
+This is a new owning input-mapping choice aligned with the observed native port;
+no existing Field producer or identity migration is claimed. Consume the native
+OpenPlanner scope/authority schemas and preserve the full original scope. Do not
+replace it with an actor label, a credential ID or a tuple hash. The explicit
+character presence ID remains distinct and still needs its actual original
+association to that scope and selected contract.
+
+`selected-spec!` re-resolves the canonical contract using actor and contract IDs
+and checks enabled status and exact identity. That selection, its actual explicit
+CharacterContext and the actual stored scope must have qualified original source
+custody together before emission. Contract actor allowlists or role resolution
+alone establish neither a stored grant nor a presence association. A JSON map
+cannot recreate the event-authority object token, and serialization of its keys
+is not original admission evidence. No second identity registry is selected.
+
+This resolves the proposed original principal's ID namespace, not the complete
+original source or current authority. The physical `scope-revision` source
+mapping remains unselected. Native `encounter-policy:` is a derived fingerprint;
+checked times and await-boundary rechecks establish no reservation or fence
+through commit/result exposure. The inspected Axxium session/schema surfaces
+supply identity/capability context without proving that required resource fence.
+All existing planned current Axxium decision/policy/grant/admission-or-fence
+requirements remain. These observations authorize no local policy evaluator or
+new upstream prerequisite/point, and supply no waiver for a missing port.
+
+ABI `stored-principal-source-port` pins fifteen actual source blobs and links the
+original seed's principal source selection. Full original principal/presence
+source, physical scope revision and current qualified authority/history remain
+open. All original runtime fields, mechanics, caps and fixtures are unchanged.
+Select complete source/association/interfaces/fixture obligations with existing
+upstream/native prerequisites before Ready; own adapter/compiled implementation
+and independent executed controls follow lawful Ready before consumption/Done.
+No live membership, policy decision, token, field emission or B proof ran here.

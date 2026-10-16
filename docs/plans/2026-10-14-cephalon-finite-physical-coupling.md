@@ -2169,3 +2169,30 @@ complete interfaces/mappings/fixture plan with existing upstream/native gates.
 Own implementation follows lawful Ready; independent executed qualification
 remains before consumption/Done. The existing five-key seed and all other
 mechanics, parameters, caps and fixtures are preserved. No live B proof is added.
+
+## Original stored-principal source mapping — 2026-10-16
+
+The [owning source trace](2026-10-07-cephalon-physical-kernel.md#stored-principal-namespace-and-native-binding-path--2026-10-16)
+and ABI `stored-principal-source-port` select the native original scope's
+membership-ID namespace for proposed Field `stored-principal`. Existing emitted
+owner equality remains. Actual actor, organization, membership, user and policy
+revision values remain in the complete original native scope; actual explicit
+presence identity remains separate. This is an owning mapping proposal, not an
+existing Field producer or principal migration.
+
+Stored actor assignment comes from `ctx-actor-binding`, with exact membership/
+actor validation and current active user/org/membership policy reload. Actor
+labels can name several memberships, including within one org, so native
+ambiguity refusal remains. Role/default labels and contract allowlists supply
+no stored grant. Only the actual process token can establish event authority;
+a serialized lookalike cannot. The actual selected contract and explicit context
+still need original qualified association to that full stored scope.
+
+A native scope or `encounter-policy:` fingerprint alone does not supply the
+unselected physical scope-revision mapping, full original source, current Axxium
+decision/grant binding or commit/exposure fence. Existing current-authority and
+upstream gates remain. Fifteen source bindings and static mapping authoring
+prove no actual context, policy, token, field producer or live B behavior. Own
+implementation and independently executed controls remain after lawful Ready
+before consumption/Done; existing source/interface/fixture prerequisites and
+all mechanics/types/caps are preserved.

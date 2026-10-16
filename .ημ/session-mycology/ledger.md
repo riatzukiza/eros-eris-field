@@ -933,3 +933,23 @@
   spore: none
   receipt-refs: cephalon-field-presence-character-source-port-qualified-local-20261016
   note: Independent read-only audit confirms actual explicit CharacterContext candidate shape(rootclosed/snapshotopen), native validator/contract source, render-before-conditional-toolmode-fallback, sourcecreative agent roleopen-hax with no explicit context, and donor spawn mixed inputs plus normalized/hash-fallback embedding path. These observations identify source substitutions, not live failures or prior-agent motives. No auto role/prompt/label-to-presence identity or grant; actual full original source/vector producer/principal-scope/birth remains unqualified. Candidate explicit persona/identity source and exclusions now authored under existing ABI8. No five-key seed/function/physics/RNG/cap/fixture change or complete-state/Ready claim. Exact final4hashes independently stable; no native review/approval/round credit. All96 committed receipt/reflection bytes remain exact; new98 records local/unpublished. Original source/interface/birth/fixture selection and existing upstream/native prerequisites precedeReady; own adapter/compiled implementation and independent execution followlawfulReady beforeconsumption/Done. Goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. No new scope/points/source push/provider request/board/runtime/credentials/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T14:46:37.797Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-stored-principal-native-source-start-20261016
+  note: Actual source distinguishes stored actor binding from role display fallback; actor label can name multiple memberships and exact membership narrows/validates. Existing encounter principal-id is membership ID, while full graph scope retains actor/org/membership/user/policy revision. Select that native membership namespace for proposed Field original stored-principal, keeping full original scope and distinct explicit presence identity; no equality inference from roles or credential labels. Physical scope-revision mapping, full qualified original principal/presence source and current authority/grant/fence remain open. Derived policy fingerprint and await rechecks do not satisfy a reserved atomic commit/exposure guarantee. No current Axxium requirement is waived and no new upstream feature/point is inferred from inspected missing surfaces. Existing ABI8 authoring only; no DB/token/policy/model runtime execution. Preserve98 prior journal prefixes; goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. No new scope/points/provider/native/push/board/runtime/credential/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T14:54:10.143Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-stored-principal-native-source-qualified-local-20261016
+  note: Actual native encounter evidence uses membership ID as principal, while full graph scope retains actor/org/member/user/policy revision. Proposed Field original stored-principal now selects that namespace with existing emitted-owner equality. Stored actor assignment stays distinct from role display/default; actual resolver checks exact membership actor or refuses ambiguity, reloads active principal/policy, rechecks selected actor/current scope and contract. Explicit character presence remains separate and needs qualified original association. Native policy fingerprint and await rechecks grant no physical scope-revision mapping or whole commit/exposure fence; existing Axxium/current authority requirements and full original source remain open/unchanged. Independent source reader matched15 immutable blobs and found no confirmed mismatch/overclaim at final4stablehashes;0 native approval/round credit. All98 prior committed journal bytes exact; new100records local/unpublished, no migration/native Ready/full-state claim. Existing source/interface/fixture/upstream prerequisites precedeReady; own implementation and independent proof followlawfulReady beforeconsumption/Done. Goal active/live0of3, heartbeat human-paused, fullETAunstarted below20GiB. No new scope/points/provider request/push/board/runtime/credential/paid/deployment/social/spore action.
