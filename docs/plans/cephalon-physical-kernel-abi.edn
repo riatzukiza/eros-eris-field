@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-active-fold-record"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-query-embedding-source"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -532,7 +532,107 @@
   {:before-ready :exact-owner-source-interface-and-adapter-id-mapping-selection-complete-fixture-plan-and-existing-required-upstream-native-prerequisites
    :after-lawful-ready :own-consumer-implementation-compiled-owner-consumption-actual-adapter-mapping-and-executed-fixture-fit-qualified-before-consumption-and-done
    :current-evidence :observed-candidate-source-blobs-only-not-implementation-or-executed-proof}
-  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :owner-custody :history :lifecycle-caller-counter-and-cut-qualification]}
+  :unchanged-unselected-leaves [:query-embedding-producer-capture-and-loaded-source-qualification :presence-seed-source :physical-birth-mapping :owner-custody :history :lifecycle-caller-counter-and-cut-qualification]}
+ :query-embedding-source-carrier
+ {:version "finite-original-query-embedding-source/1"
+  :status :proposed-field-owned-capture-of-observed-owner-boundary-not-an-existing-native-record
+  :location :recall-request-admission-state-scoped-immutable-request-embedding-source
+  :kind :closed-map
+  :exact-keys [:version :owner-query :model-selection :formatter-inputs
+               :formatted-query-text :generate-output :producer-source]
+  :fields
+  {:version {:literal "finite-original-query-embedding-source/1"}
+   :owner-query {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-query-carrier"
+                 :value :entire-exact-parent-original-owner-request-not-only-the-query-string}
+   :model-selection
+   {:kind :closed-map :exact-keys [:source :kind :project :model :expected-dimensions]
+    :fields {:source {:literal "graph-event"} :kind {:literal "graph.node"}
+             :project :ID :model :Revision
+             :expected-dimensions {:variants [:nil :positive-Count-at-most8192]}}
+    :values :actual-original-getModel-scope-project-and-returned-model-plus-selected-runtime-getEmbeddingDimensionsForModel-return-value
+    :project :same-actual-original-owner-authority-project-not-request-supplied-authority
+    :model :validate-with-pinned-owner-valid-identity-and-existing-field-scalar-byte-limit
+    :dimensions :nil-only-when-no-dimension-declaration-otherwise-equal-the-complete-returned-vector-length
+    :routing-config :selected-method-input-and-result-not-a-claim-to-retain-or-replay-the-entire-private-runtime-configuration}
+   :formatter-inputs
+   {:kind :closed-map :exact-keys [:query-template :query-prefix]
+    :fields {:query-template {:variants [:nil :scalar-utf8-string]}
+             :query-prefix
+             {:variants
+              [{:kind :closed-map :exact-keys [:read?]
+                :fields {:read? {:literal false}}}
+               {:kind :closed-map :exact-keys [:read? :value]
+                :fields {:read? {:literal true}
+                         :value {:variants [:nil :scalar-utf8-string]}}}]}}
+    :source :actual-query-template-read-and-only-when-reached-actual-query-prefix-read-in-selected-sdk-formatter-for-this-successful-invocation
+    :nil :an-actual-environment-read-returned-unset-not-empty-string-and-not-the-unread-prefix-case
+    :values :original-unexpanded-untrimmed-values-only-for-actual-reads
+    :prefix-not-read :exact-read-false-map-with-no-value-key-on-owner-nonempty-expanded-trimmed-template-return-never-read-unused-environment-for-capture
+    :prefix-read :exact-read-true-map-with-original-value-when-owner-reaches-prefix-read-distinguish-unset-empty-and-nonempty
+    :capture :qualified-outer-recorder-must-bind-the-actual-formatter-read-values-no-earlier-or-later-environment-snapshot-substitute
+    :evaluation :consume-selected-owner-formatter-no-second-field-owned-trim-template-or-prefix-implementation}
+   :formatted-query-text
+   {:type :scalar-utf8-string :value :actual-nonblank-owner-formatter-return-value-passed-as-the-only-generate-input
+    :original-query :parent-owner-query-retains-original-raw-message-even-when-this-distinct-formatted-value-differs}
+   :generate-output
+   {:kind :vector :length 1
+    :items {:owner-contract :openplanner.graph.recall.mongo-contract/embedding
+            :registry :openplanner.graph.recall.mongo-contract/registry
+            :validator :openplanner.graph.recall.mongo-contract/valid-embedding?
+            :owner-source-path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo_contract.cljc"}
+    :value :complete-original-normalized-public-generate-return-vector-with-exact-binary64-bits
+    :parent-vector :its-only-vector-exactly-equals-parent-original-query-embedding-vector
+    :dimensions :owner-one-through8192-components-and-declared-dimension-agreement-no-new-fixed-dimension}
+   :producer-source
+   {:kind :literal-closed-map
+    :value
+    {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+     :blobs [
+      {:path "packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc" :sha256 "350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94"}
+      {:path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo_contract.cljc" :sha256 "54d7ea1ac1ee05dde96deb45ea54f52e02dbd3ec45f72066bce1b90ed9adfad0"}
+      {:path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo.cljs" :sha256 "6f87640e0c0f4bb43078d2a1776de248a081c02309aa5b7730252d5c8a8ca917"}
+      {:path "packages/openplanner-sdk/src/embedding-runtime.ts" :sha256 "02573197f67a01581d6b63b85b564582fb3d3860049a678fea16540da0c52602"}
+      {:path "packages/openplanner-sdk/src/embedding-models.ts" :sha256 "892d3fa45be82b3c81e198909443d8000160cd6561138b8d2b03fc97c2a8fd24"}
+      {:path "packages/openplanner-sdk/src/embedding-text.ts" :sha256 "8e7d902630a15309a71d73621979186ebb54b0c54286f17fc847b96eb663b977"}
+      {:path "packages/openplanner-sdk/src/embeddings.ts" :sha256 "d93981ab0066bfa2212175bb021fa233a95b914719db1967647179ed43fa3181"}
+      {:path "packages/openplanner-sdk/src/embedding-cache.ts" :sha256 "344638890a69107eb5faa177a4728a0fcf1098daa0b0659037f9d901d590d066"}]}
+    :role :exact-observed-source-selection-not-proof-of-loaded-compiled-artifact-provider-execution-current-grant-or-native-persistence}}
+  :observed-path :scoped-mongo-stored-selection-selects-model-then-query-embedding-formats-original-query-and-consumes-one-normalized-generate-result
+  :native-output :factory-returns-graph-selection-with-field-status-not-loaded-no-source-record-is-currently-exported-or-persisted
+  :population :future-qualified-existing-consumer-adapter-capture-at-this-original-boundary-into-the-existing-explicit-embedding-source-input-no-new-pure-function-argument
+  :no-empty-generation :empty-or-incomplete-native-index-branch-without-an-actual-generate-result-cannot-fabricate-a-source-vector-or-source-record
+  :capture-origin :public-generate-may-return-cache-batched-or-normalized-network-and-chunk-results-this-record-is-not-raw-provider-http-and-asserts-no-cache-hit-or-network-origin
+  :model-identity :actual-selected-model-label-only-not-a-fixed-slug-hidden-weight-revision-or-proof-of-future-alias-stability
+  :embedding-revision
+  {:meaning :field-owned-content-revision-of-this-complete-original-source-record-not-a-native-model-version
+   :prefix "query-embedding-source/1:"
+   :suffix :exact64-lowercase-ascii-sha256
+   :hash-input :complete-source-map-under-existing-exact-finite-field-trace-1-tagged-value-algebra-no-trace-record-envelope-or-host-printer
+   :parent-agreement :parent-embedding-revision-is-exact-prefix-plus-that-digest
+   :self-reference :source-map-contains-no-embedding-revision-enclosing-state-snapshot-or-its-hash
+   :authority :digest-supplies-data-integrity-only-original-capture-and-current-authority-remain-independently-qualified}
+  :replay :validate-and-consume-the-complete-recorded-vector-and-source-no-provider-model-selection-formatting-cache-read-or-new-network-call
+  :retry :existing-all-original-value-comparison-includes-source-and-vector-even-when-model-label-or-source-revision-is-unchanged
+  :privacy :original-scoped-query-and-source-remain-under-original-and-current-owner-controls-no-provider-credentials-headers-private-url-or-error-text-in-this-record
+  :bounds :all-original-and-formatted-strings-both-vector-copies-source-manifest-hashing-and-validation-share-existing512-byte-other-string-input-state-checkpoint-work-and-continuation-limits
+  :oversize-or-malformed :existing-specific-finite-or-invalid-request-refusal-with-whole-prior-state-unchanged-no-truncation-or-cap-increase
+  :qualification
+  {:before-ready :exact-owner-source-interface-capture-mapping-and-full-fixture-plan-plus-all-existing-required-upstream-native-prerequisites
+   :after-lawful-ready :own-recorder-consumer-and-content-revision-implementation-then-actual-loaded-owner-source-capture-and-independent-executed-controls-before-consumption-and-done
+   :remaining-owner-leaves :original-principal-authority-history-and-admission-source-evidence-retain-their-existing-unselected-status-this-record-is-not-a-grant-or-whole-state-closure}
+  :future-controls [:original-spaced-query-distinct-from-actual-trim-prefix-template-and-escaped-newline-output
+                    :template-precedence-records-prefix-not-read-without-value-or-added-environment-read
+                    :actual-prefix-read-distinguishes-unset-from-empty-and-retains-original-value
+                    :literal-template-replacement-query-characters-retained-by-owning-formatter
+                    :selected-model-scope-and-optional-declared-dimensions-match-actual-invocation
+                    :missing-format-capture-or-unestablished-loaded-owner-source-refused
+                    :one-complete-normalized-output-and-native-vector-domain-dimension-controls
+                    :cache-or-batched-output-not-mislabelled-as-raw-http-or-hidden-model-revision
+                    :changed-original-source-text-model-dimension-or-vector-bits-changes-content-revision
+                    :same-map-insertion-order-independent-tagged-bytes-and-source-revision-golden
+                    :no-source-self-hash-enclosing-state-cycle-or-secret-runtime-object
+                    :exact-retry-checkpoint-restore-rebuild-preserve-original-source-and-revision-without-provider-call
+                    :all-existing-exact-and-one-over-byte-work-state-checkpoint-and-continuation-bounds]}
  :validated-recall-seed-carrier
  {:version "finite-origin-presence-seed/1"
   :status :proposed-owned-key-layout-with-unselected-original-presence-source-and-birth-mapping
@@ -702,7 +802,7 @@
      :meaning :original-query-embedding-not-the-origin-presence-seed
      :fields {:vector :nonempty-ordered-finite-binary64-vector
               :embedding-revision :Revision
-              :source :FullOriginalEmbeddingSource}
+              :source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#query-embedding-source-carrier"}}
      :dimension :exact-original-qualified-source-dimension-not-a-new-fixed-size
      :vector-value :complete-original-admitted-vector-with-exact-binary64-bits
      :source-value :complete-original-qualified-source-values-not-only-id-hash-or-fingerprint}

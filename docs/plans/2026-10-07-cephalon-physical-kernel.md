@@ -1366,3 +1366,67 @@ domain RED/GREEN follow lawful Ready; actual producer/cut/replay/counter and
 atomic-handoff controls require independent executed proof before consumption
 and Done. No fold algorithm, producer, actual checkpoint, profile fit, native
 readiness or B proof was executed by this representation edit.
+
+## Original query-embedding source — 2026-10-16
+
+The ABI now selects the existing query embedding's `source` as a closed
+`finite-original-query-embedding-source/1` capture record. Its seven keys are
+`version`, `owner-query`, `model-selection`, `formatter-inputs`,
+`formatted-query-text`, `generate-output`, and `producer-source`. This is a
+proposed Field adapter record; the observed OpenPlanner factory currently
+returns only graph selection with `field-status: not-loaded` and does not export
+or persist this record. No current embedding-capture implementation is claimed.
+
+The observed boundary at OpenPlanner
+`3ab5ffbb6e34a2ee3607a74bf421785d47d5391d` selects its actual hot model using
+source `graph-event`, kind `graph.node` and the authoritative project. Retain
+that exact scope/result and the selected runtime's optional declared dimension.
+A missing dimension declaration is nil, not a guessed dimension; a declared
+dimension must match the full returned vector. The native embedding validator
+and all existing Field bounds apply together. No fixed model or vector size is
+selected, and the model label establishes no hidden weight revision.
+
+Preserve the complete raw owner query separately from the actual formatted text.
+The selected SDK formatter can trim the query and apply a template or prefix,
+including escaped newlines. Retain the actual template-read value. A successful
+nonempty expanded/trimmed template returns before the owner reads the prefix:
+record that prefix as exactly `{:read? false}`, without a `value` key or an added
+environment read. When the owner reaches its prefix read, record exactly
+`{:read? true :value <original-value>}`. Nil then means read-and-unset; empty
+string remains distinct. Every read value is original, unexpanded and untrimmed.
+A later or earlier environment snapshot is not the actual capture. Consume the
+owning formatter; Field does not acquire a
+second text-formatting implementation. Retain the complete one-vector normalized
+public `generate` return, with exact binary64 bits equal to the parent embedding.
+Cache, batching and overflow/chunk normalization can precede that public return;
+this source asserts neither a raw HTTP response nor a cache/network origin.
+
+The record's exact source selection pins eight observed immutable blobs, including
+the request/vector contracts, Mongo boundary and SDK model/formatter/runtime/
+generator/cache sources. Those pins establish source selection only. The actual
+loaded artifact and trusted original capture still need independent qualification.
+Empty/incomplete-index branches that did not generate a vector cannot invent one.
+No provider credential, private endpoint, runtime object or error text belongs in
+this source record. Existing source authority and scoped storage remain required.
+
+The parent query `embedding-revision` is now explicitly selected as the owned
+content revision `query-embedding-source/1:` followed by lowercase SHA256 of the
+complete source map under the existing exact trace-1 tagged-value algebra. This
+is a new owning interface selection, not a recovered native model-version scheme.
+It omits no source field and hashes no enclosing state, trace-record envelope or
+host-printer representation. The source contains no own revision/hash, so there
+is no self-reference. The digest is an integrity binding, not original-source or
+permission evidence. Original query, formatted text, model/dimension, vector bits
+and source manifests participate. Replay/retry/restore/rebuild retain and validate
+that complete record without calling the formatter, cache or provider again.
+
+All copies, strings, source pins, encoding and hashing count under existing
+input/state/checkpoint/work/continuation limits, including the unchanged512-byte
+other-string cap. Oversize data refuses unchanged; no query truncation or cap
+increase is selected. This does not close the original principal/authority/
+history/admission evidence, presence-seed source or physical birth mapping.
+Before Ready, select the exact interface/capture mapping and complete fixture
+plan while preserving all existing native/upstream prerequisites. Own recorder/
+consumer implementation and actual loaded-source/capture/content-revision
+controls follow lawful Ready and require independent executed proof before
+consumption/Done. No domain, producer, persistence or live B proof ran here.

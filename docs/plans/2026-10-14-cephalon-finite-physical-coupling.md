@@ -2102,3 +2102,39 @@ existing upstream/native prerequisites remain before Ready; own implementation/
 R/G follows lawful Ready; actual counters/cuts/replay/handoff and independent
 executed proof remain required before consumption and Done. No domain behavior,
 native readiness or live proof is asserted.
+
+## Original query-embedding capture boundary — 2026-10-16
+
+The [owning source record](2026-10-07-cephalon-physical-kernel.md#original-query-embedding-source--2026-10-16)
+and ABI `query-embedding-source-carrier` bind the existing explicit embedding
+source input to seven closed keys: version, complete raw owner query, actual
+model scope/result and optional declared dimension, actual formatter-read values
+and explicit unread-prefix state, actual formatted query, full normalized single-vector `generate` output,
+and the exact selected eight-blob producer manifest. This is proposed capture
+plumbing, not a record currently returned by the observed native factory.
+
+The original raw query and formatted invocation text have distinct roles. Use
+the selected SDK formatter and preserve its actual template read. Its nonempty
+expanded/trimmed template returns before the prefix read: retain exactly
+`{:read? false}` without a value or an added environment read. A reached prefix
+read retains `{:read? true :value <original-value>}`, distinguishing unset nil
+from empty string. No second Field formatter is authorized. The full output equals the original parent
+query embedding, with the native vector contract and unchanged Field bounds.
+Cached, batched or normalized/chunked results do not become fabricated raw HTTP
+provenance. The selected model label supplies no hidden model/weight identity or
+fixed alias guarantee. No actual generate output means no fabricated source.
+
+The owned parent embedding revision is `query-embedding-source/1:` plus lowercase
+SHA256 of the entire source map under the existing exact trace-1 value encoding,
+without a trace-record envelope, host printer, source self-hash or enclosing
+state cycle. This newly selected content identity grants no authority. Exact
+retries and qualified replay retain the original record/vector with no new
+formatter, cache or provider call. Every duplicate value, source pin and hash
+operation counts under existing limits;512-byte other strings remain bounded.
+
+Existing owner/history/principal/source qualification gaps remain explicit.
+Source/interface/capture mapping and the full fixture plan plus existing native/
+upstream prerequisites precede Ready. Own adapter implementation and actual
+loaded-source/capture/revision controls follow lawful Ready; independent executed
+proof remains before consumption/Done. These source observations and static
+representation edits establish no physical integration, persistence or live proof.
