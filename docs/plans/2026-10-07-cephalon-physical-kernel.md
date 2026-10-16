@@ -1741,3 +1741,48 @@ Existing source/interface/fixture/upstream prerequisites precede Ready; own
 implementation follows lawful Ready and independent executed source/projection/
 fit controls precede consumption/Done. No native birth, particle, history write
 or runtime behavior was executed by this source-only amendment.
+
+
+## Native Clio boundary for original emission inputs — 2026-10-16
+
+The proposed Field consumer event `:field/recall-emission-inputs` records original
+inputs, not successful physical emission. Its two-key event data contains a
+literal domain version and the complete existing five-key original-inputs value,
+encoded with the Field's existing trace tagged-value algebra. The tagged tree is
+plain EDN data inside the native Clio envelope. It is not JSON text, a trace
+record envelope, or a replacement Clio codec. No physical number remains raw:
+its existing sixteen-digit binary64 string preserves signed zero and every
+admitted finite bit pattern. Native Clio canonicalization intentionally identifies
+both zeros and refuses unsafe integer-valued doubles; raw number custody would
+therefore fail the existing Field requirement.
+
+Clio retains native complete-envelope schema materialization, historical root and
+leaf validation, UUID/time creation, append admission and ledger serialization.
+Retain and recover the same complete native envelope for a retry. Calling the
+native runtime append convenience function again makes a fresh UUID and time;
+that is not an exact-envelope retry. Native append handles identity and stream
+slot conflicts, while complete union canonicalization separately checks parent
+availability, contiguous stream history, predecessor causes and cycles. A valid
+schema, actor string or append result supplies no current authorization or
+physical state success.
+
+This input record contains no enclosing event/cursor, output entity, state or
+snapshot self-reference. The complete six-key original custody remains mandatory
+in separately qualified, counted owner source/history, immutably bound to the
+actual complete native envelope and payload. A later mutable lookup or digest
+alone cannot substitute. Its shape and actual
+population, the request/event association, birth producer, native stream/actor/
+subject/cause selection, durable envelope retention, current authority and
+cross-store commit/exposure custody remain open. Existing private source access,
+whole-call guards and byte/work caps apply to all encoded inputs and native
+overhead. Native EDN transport does not redefine Field canonical admission
+lengths or bypass tagged expansion accounting. No truncation, extra budget,
+public ledger or identity alias is added.
+
+This is a prospective domain payload and native interface selection. The actual
+expanded schema, loaded encoder/decoder and producer still need source and
+fixture qualification under the existing Ready and implementation order. The
+seven newly recovered native blobs are bound to commit
+`788cdd3434615a7932b924e68520dbf7f88408c2` and its resolved tree; native responses,
+Git object hashes and decoded source bytes were retained. Inspection executed no
+Clio schema, codec, append, canonicalization, Field operation or runtime proof.

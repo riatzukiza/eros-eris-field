@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-original-emission-birth-source"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-clio-original-emission-inputs"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -13,6 +13,7 @@
  :original-character-principal-association "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
  :presence-seed-source "docs/plans/cephalon-physical-kernel-abi.edn#presence-seed-source-carrier"
  :original-emission-source "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-source-carrier"
+ :original-emission-clio "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-clio-port"
  :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
             :cell-key [:scope-revision :layer-index :exact-floor-x-over-cell-size

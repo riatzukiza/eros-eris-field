@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-original-emission-birth-source"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-clio-original-emission-inputs"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -1294,6 +1294,76 @@
                     :same-final-cut-result-and-counters-unsplit-split-restored
                     :changed-target-exact-retry-refused :closed-request-weight-binding-retained-during-later-world-motion
                     :all-original100-101-world64-rebuild-byte-work-privacy-and-required-positives]}
+ :original-emission-clio-port
+ {:version "finite-original-emission-clio-port/1"
+  :status :proposed-field-domain-payload-and-native-admission-binding-not-implemented-or-qualified
+  :semantic-role :immutable-original-input-record-not-proof-of-successful-physical-emission-state-commit-or-effect-termination
+  :schema-owner :field-owned-consumer-catalog-using-native-clio-law-schema-event-schema-without-changing-clio-envelope-or-protocol
+  :proposed-schema-id :field/recall-emission-inputs
+  :schema-id-status :prospective-consumer-selection-no-existing-loaded-or-materialized-leaf-claimed
+  :event-data
+  {:kind :closed-map :exact-keys [:version :original-inputs]
+   :fields {:version {:literal "finite-original-field-emission-inputs/1"}
+            :original-inputs :complete-existing-five-key-original-inputs-value-encoded-as-the-existing-trace-1-tagged-value-tree}}
+  :original-inputs-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/original-inputs"
+  :value-algebra "docs/plans/cephalon-finite-field-coupling.edn#trace-codec/values"
+  :payload-representation :plain-edn-tagged-value-vectors-strings-and-booleans-under-native-event-data-not-json-text-trace-envelope-or-new-clio-codec
+  :encoding :exact-existing-trace-1-recursive-tags-map-pair-order-and-scalar-validation-no-number-left-as-a-raw-physical-number
+  :decoding :strict-inverse-of-the-existing-tagged-value-algebra-with-all-owning-input-shape-and-source-checks-before-consumption-no-untyped-value-blob-admission
+  :numeric-source-fact :pinned-native-clio-canonical-number-identifies-both-signed-zeros-and-refuses-unsafe-integer-valued-doubles-so-raw-number-payload-is-not-field-bit-custody
+  :numeric-preservation :all-finite-binary64-bits-including-positive-negative-zero-subnormals-and-finite-large-integer-valued-doubles-retained-as-existing16-lowercase-hex-strings-nonfinite-refused
+  :payload-coverage :every-original-request-seed-source-wrapper-semantic-and-birth-component-budget-mood-and-contact-entry-value-once-no-id-or-digest-only-substitution
+  :not-in-payload [:input-state :complete-original-custody :enclosing-native-event :event-id :admitted-event-cursor :emitted-output-entity :result-disposition :post-emission-state-or-snapshot-hash]
+  :custody-boundary :complete-six-key-original-custody-and-required-source-values-remain-mandatory-in-separately-qualified-counted-owner-source-history-not-closed-or-replaced-by-this-input-record
+  :custody-event-binding :separate-original-custody-must-immutably-bind-complete-actual-native-envelope-including-id-schema-ref-stream-sequence-causes-and-this-exact-tagged-payload-no-later-mutable-lookup-or-digest-only-substitute
+  :no-self-reference :original-inputs-and-preexisting-source-evidence-cannot-embed-this-new-native-envelope-cursor-or-output-state
+  :native-schema :materialize-complete-consumer-event-form-through-native-catalog-and-retain-actual-historical-root-leaf-and-source-snapshots-no-handwritten-clio-event-version
+  :native-make :clio.infra.event-make-event-owns-new-event-uuid-type-schema-and-wall-time-once-for-an-original-candidate-not-inside-pure-field-transition
+  :native-append :clio.infra.ledger-append-event-with-actual-qualified-historical-revisions-and-existing-explicit-ledger-file
+  :retry :retain-and-recover-the-same-complete-native-envelope-before-any-append-retry-do-not-use-runtime-append-again-to-remint-uuid-and-time
+  :retry-admission :native-append-admission-owns-exact-existing-envelope-dedup-id-collision-and-stream-slot-conflict-no-local-clio-classifier
+  :uncertain-append :preserve-existing-uncertain-effect-and-ownership-rules-no-new-identity-replay-or-success-assumption
+  :native-history :qualify-complete-union-through-native-canonicalize-including-all-required-parents-contiguous-stream-sequences-predecessor-causes-slot-uniqueness-and-cycle-checks-local-append-alone-is-not-full-history-admission
+  :identity-boundary :domain-entity-emission-request-and-native-event-identities-remain-independent-no-automatic-alias-from-schema-or-payload
+  :authority-boundary :schema-validity-actor-string-native-id-and-append-result-are-not-authentication-current-grant-whole-call-or-commit-and-exposure-fencing
+  :privacy :complete-source-inputs-can-contain-private-purpose-and-query-data-existing-qualified-owner-scope-storage-access-and-current-causal-visibility-guards-remain-mandatory-no-publication-or-new-unscoped-ledger
+  :bounds :complete-native-envelope-tagged-inputs-historical-schema-and-source-copies-count-under-existing-input-state-checkpoint-tail-byte-work-and-continuation-caps-no-truncation-or-cap-increase
+  :byte-measures :native-clio-edn-transport-and-existing-field-canonical-byte-measures-remain-distinct-native-printer-cannot-redefine-field-admission-length-or-bypass-tagged-expansion-accounting
+  :still-open [:actual-birth-population-and-qualified-original-input-production
+               :expanded-consumer-schema-form-materialization-and-historical-leaf-qualification
+               :original-six-key-owner-source-and-history-bindings
+               :actual-native-actor-subject-stream-sequence-cause-and-envelope-retention-producer
+               :request-to-native-event-source-association-without-an-identity-alias
+               :current-authority-whole-call-commit-exposure-and-cross-store-state-effect-custody
+               :loaded-encoding-decoding-source-and-executed-roundtrip-retry-privacy-and-fit-controls]
+  :readiness :source-interface-and-complete-fixture-prerequisites-before-rheos-ready-own-implementation-after-lawful-ready-independent-executed-qualification-before-consumption-and-done
+  :future-controls [:all-five-original-inputs-roundtrip-with-complete-semantic-and-birth-source
+                    :signed-zero-distinction-native-dedupe-and-readback-preserve-tagged-bits
+                    :subnormal-and-finite-large-integer-valued-double-roundtrip
+                    :nonfinite-malformed-tags-duplicate-and-unsorted-map-keys-refused
+                    :missing-or-conflicting-original-owner-source-not-repaired-by-payload
+                    :same-retained-native-envelope-retry-no-second-event-or-particle
+                    :same-id-changed-tagged-bit-native-collision-and-distinct-id-same-slot-conflict
+                    :missing-parent-gap-broken-predecessor-and-cycle-native-union-refusal
+                    :unknown-historical-root-or-leaf-and-malformed-envelope-refused
+                    :valid-envelope-with-denied-identity-or-application-authority-refused
+                    :append-uncertainty-and-no-fabricated-field-success
+                    :complete-source-and-envelope-exact-byte-cap-and-one-over]
+  :source-manifest
+ [   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/shape/canonical.cljc" :sha256 "91cd722cbcdc4b8ff9c6533c33ec243c57faacb5baeea30e08afaa52f0205bcc"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/law/schema.cljc" :sha256 "e358238f405efa6f4547ed050ecfbc8e6ddac976af71f23ae997f0f449f99e56"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/infra/ledger.cljs" :sha256 "6246f04bf53ac43d3505ebdeba42801ef344f9d93b829d08de9d834753cf3d2f"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/infra/runtime.cljs" :sha256 "4be129e5b32a05f1ffa11d8eb219152893d2de1b5ac9cd4f1a308a2cb46932d3"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/domain/canonicalize.cljc" :sha256 "6b150544d545a3871bf2f9d10ea49dcfbb1c18b9755f47181073550088c976b9"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/law/ledger.cljc" :sha256 "d1df872f834d0d7369a639bb1ebfdeaa403a819d3d474db345dc1757079b4510"}
+   {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
+    :path "src/clio/shape/edn.cljc" :sha256 "8864bec7ad85bd6462181328a533ed38b792c219fcb16ba21405deffcfcf0a5f"}]}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
