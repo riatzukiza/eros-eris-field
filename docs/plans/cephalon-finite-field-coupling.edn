@@ -941,7 +941,7 @@
   :binding [:new-permitted-scope :new-projection-revision]
   :persistent-field-revision :qualified-outer-atomic-record-output-not-a-pure-rebuild-result-or-snapshot-state-field
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
-  :complete-admissible-history :successful-bounded-rebuild-required
+  :complete-admissible-history :successful-rebuild-required-from-qualified-clean-baseline-with-complete-owner-qualified-history-and-full-replacement-closure-within-all-existing-bounds
   :history {:coverage :every-earlier-main-provenance-operation-after-owner-verified-checkpoint-covered-prefix-through-independent-pre-operation-clio-tip-including-historical-replacements
             :independent-current-horizon :explicit-qualified-clio-owner-snapshot-admission-or-fence-through-result-exposure
             :snapshot-state-cursors :separate-physical-consumed-and-admitted-schedule-cursors-never-provenance-range-endpoints
@@ -1040,6 +1040,20 @@
            :outer-timeout :no-accepted-replacement-and-quarantine
            :controls [:each-exact-cap :each-one-over-with-other-bounds-valid
                       :each-shared-overflow-keeps-its-declared-specific-reason]}
+  :ordinary100-advance-then-revoke-negative
+  {:preconditions [:independently-qualified-clean-pre-influence-checkpoint
+                   :complete-owner-qualified-original-history-and-full-replacement-closure-including-revoked-source-events
+                   :current-authority-revocation-requires-the-complete-original100-quanta-reconstruction
+                   :all-other-existing-guards-and-bounds-valid]
+   :ordinary-advance :successful100-executed-quanta-under-unchanged-ordinary-call-contract
+   :required-replayed-quanta 100
+   :expected-refusal {:status :refused :reason :revocation-rebuild-budget-exceeded
+                      :reason-revision 1 :state :exact-byte-identical-prior-state}
+   :success-result :absent
+   :adapter :quarantine-retained-reference-or-refuse-load-before-any-causal-use
+   :substitute-state-partial-replacement-retag-or-post-return-catch-up :forbidden
+   :existing-controls :all-original-positives-and-exact-one-over-controls-retained-unchanged
+   :evidence :prospective-negative-no-executed-fixture-fit-or-readiness-claim}
   :missing-or-ambiguous-input :pure-typed-unchanged-prior-state-refusal
   :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
   :pure-quarantine-state-mutation :forbidden

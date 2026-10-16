@@ -506,8 +506,10 @@ Use immutable contribution history and a compatible trusted checkpoint; record
 the new scope/projection/field bindings without rewriting old history. Compare
 with a clean permitted-history control: remaining authorized contributions must
 survive and revoked pressure/trail influence must disappear from subsequent
-motion, contact and inclusion. Successful bounded rebuild is required where
-complete admissible history exists. Missing or ambiguous reconstruction inputs
+motion, contact and inclusion. Successful rebuild is required when otherwise
+valid complete owner-qualified original history and full replacement closure
+from a qualified clean baseline fit every existing bound. Missing or ambiguous
+reconstruction inputs
 make the pure transition return exactly its typed unchanged-prior-state refusal;
 it does not mutate that state into a quarantined alternative. The outer adapter
 must separately quarantine the retained snapshot reference or refuse to load it,
@@ -517,6 +519,20 @@ refusal separately from adapter no-causal-use enforcement; filtering display,
 retagging the old aggregate or zeroing all fields cannot pass. Keep this selected
 revocation case in the finite proof; broader sustained revocation/restart remains
 later work.
+
+Ordinary admission does not guarantee lifetime reconstruction availability. Add
+one prospective 100-advance → revoke negative with a qualified pre-influence clean
+baseline, complete original history/full closure and all other guards/bounds
+valid: the successful ordinary 100-quanta call requires 100 replayed quanta after
+revocation and returns refused/revocation-rebuild-budget-exceeded/revision1 with
+byte-identical prior state, no success payload and external quarantine before
+causal use. No substitute state, retag, partial replacement or post-return catch-up
+may supply recovery from that refusal. Preserve every original positive and
+exact/one-over control,
+including 100/101 ordinary success and 64-summed reconstruction. Complete source,
+fixture and cap-fit selection retains all existing before-Ready/upstream gates;
+own implementation/domain RED/GREEN follows lawful Ready, with independent
+executed qualification before consumption/Done. No fixture fit is asserted here.
 
 ## Reference numerical execution profile
 

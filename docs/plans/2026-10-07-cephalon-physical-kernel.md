@@ -144,6 +144,13 @@ Its exact names and fields require this source plan's review.
   replaces the complete state atomically; incomplete history or exhausted
   bounds preserves the prior state. No new elapsed time, random draw, storage,
   outcome execution or publication is admitted by this pure operation.
+  Complete owner-qualified original history and full replacement closure from a
+  qualified clean baseline must succeed when otherwise valid and within every
+  existing bound. Ordinary admission does not guarantee lifetime reconstruction
+  availability; over-cap calls retain the existing specific unchanged refusal
+  and external quarantine, with no substitute state, retag or post-return catch-up.
+  The additional 100-advance → revoke refusal control preserves every original
+  positive and exact/one-over control and asserts no executed fixture fit.
 - `apply-outcome` takes an immutable observed choice/outcome identity and the
   admitted prior recall reference. It proposes attributed semantic feedback
   once, retaining effect/outcome identity, payload hash, scope and recall reference

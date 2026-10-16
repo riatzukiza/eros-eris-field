@@ -2441,7 +2441,8 @@
                               :original-request-and-immutable-history :preserved
                               :state-binding-retag-alone :never-qualifies-a-result
                               :control :completed-horizon-revoke-rebuild-read-and-checkpoint-restore}
-   :success :complete-authorized-equivalent-of-clean-permitted-history-with-atomic-result-exposure
+   :success :complete-authorized-equivalent-of-clean-permitted-history-from-complete-owner-qualified-history-and-full-replacement-closure-within-all-existing-bounds-with-atomic-result-exposure
+   :bounded-availability :ordinary-admission-does-not-guarantee-later-reconstruction-of-every-admitted-history
    :budget-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation"
    :budget {:tail-events 128 :canonical-clio-tail-utf8-bytes 1048576
             :coverage :complete-materialized-tail-plus-replacement-reference-closure
@@ -2464,6 +2465,7 @@
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden
+   :over-cap-recovery-by-substitute-state-or-post-return-catch-up :forbidden
    :effects :none :new-elapsed-time :none
    :randomness :replay-only-recorded-qualified-seed-schedule-no-new-draws
    :outcome-or-publication-replay :forbidden
