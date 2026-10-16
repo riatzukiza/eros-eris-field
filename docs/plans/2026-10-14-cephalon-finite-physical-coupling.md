@@ -2504,3 +2504,34 @@ admission, cross-store commit/exposure protection and executed fit remain open.
 This amendment selects the explicit data route and history layout; it executes
 no producer, native store, Field transition or runtime behavior. Existing lawful
 Ready and implementation/independent qualification ordering remains required.
+
+
+## Original principal and scope data reuse — 2026-10-16
+
+Original custody's principal-scope-source now selects the entire existing
+six-key original-character-principal association: version, complete native
+scope, selected actor, selected contract, full explicit CharacterContext and
+source pins. It must exactly equal the association already retained inside the
+original semantic seed source, including its open snapshot and optional revision
+presence. No new runtime wrapper, custody key or call argument is added.
+
+The native scope retains actor, org, membership, user and policy revision. Its
+membership is the Field stored principal and emitted owner; selected actor must
+match scope actor, while explicit CharacterContext identity remains the distinct
+origin-presence identity. The existing thirteen-entry association source manifest
+and its runtime value layout are unchanged.
+
+This selects principal/scope data, not the authenticated origin of that data.
+Complete original membership/grant records, authored-context origin, native
+admission/source evidence and history remain mandatory in their existing separate
+custody fields. The qualified mapping to request/birth/state physical scope is
+still required; native policy-revision is not that physical revision or a current
+grant. Current owner decisions and commit/exposure protection remain independent.
+
+The native final source snapshot keeps its selected spec internally, but graph
+authority exports scope/project/records. Planned complete-context capture and
+reconciliation at that boundary therefore remain unimplemented and unqualified.
+No raw auth context, process-only token, credentials, whole resolved agent map or
+assembled prompt is selected for this leaf. Replay retains original data rather
+than refetching current context. Full owner values and copies remain subject to
+existing finite bounds, without dropping snapshot fields or changing limits.

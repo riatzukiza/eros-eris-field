@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-explicit-original-custody-input"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-original-principal-scope-value"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -619,7 +619,7 @@
   :qualification
   {:before-ready :exact-owner-source-interface-capture-mapping-and-full-fixture-plan-plus-all-existing-required-upstream-native-prerequisites
    :after-lawful-ready :own-recorder-consumer-and-content-revision-implementation-then-actual-loaded-owner-source-capture-and-independent-executed-controls-before-consumption-and-done
-   :remaining-owner-leaves :original-principal-authority-history-and-admission-source-evidence-retain-their-existing-unselected-status-this-record-is-not-a-grant-or-whole-state-closure}
+   :remaining-owner-leaves :original-principal-capture-authority-history-and-admission-source-evidence-remain-unqualified-despite-selected-principal-data-layout-this-record-is-not-a-grant-or-whole-state-closure}
   :future-controls [:original-spaced-query-distinct-from-actual-trim-prefix-template-and-escaped-newline-output
                     :template-precedence-records-prefix-not-read-without-value-or-added-environment-read
                     :actual-prefix-read-distinguishes-unset-from-empty-and-retains-original-value
@@ -715,13 +715,13 @@
    :reconciliation :require-exact-selected-actor-contract-and-complete-explicit-character-context-agreement-at-relevant-canonical-re-resolutions-and-agreement-with-actual-scope-before-original-custody-and-field-consuming-query-or-emission
    :native-export-limit :current-graph-authority-exports-only-scope-project-records-and-cannot-prove-unchanged-character-context
    :required-planned-access :owning-adapter-must-use-the-corresponding-canonical-selection-with-the-actual-final-snapshot-no-inference-from-scope-or-policy-digest
-   :transport :protected-existing-source-authority-inputs-and-original-owner-history-no-native-graph-authority-schema-change-or-new-field-abi-argument
+   :transport :protected-existing-source-authority-inputs-and-original-owner-history-through-existing-ninth-custody-and-semantic-source-slots-no-additional-field-argument-or-native-graph-authority-schema-change
    :retention :only-the-named-owner-values-no-raw-auth-context-credentials-process-token-whole-resolved-agent-map-or-assembled-prompt
    :finalization :only-after-these-original-source-checks-with-all-existing-owner-admission-and-custody-proofs-not-an-earlier-or-later-unrelated-context-snapshot}
   :current-creative-source :pinned-ussyverse-social-creative-contract-has-no-explicit-context-at-either-supported-location
   :missing-or-changed-context :existing-planned-field-source-or-seed-admission-refusal-before-emission-no-contract-auto-population-and-no-new-blanket-requirement-on-generic-native-graph-recall
-  :component-placement :existing-original-custody-principal-scope-source-and-original-presence-seed-source-must-agree-on-this-complete-association-no-extra-runtime-custody-key-selected-here
-  :incomplete-parent-leaves :FullOriginalQualifiedPrincipalScopeSource-FullOriginalQualifiedPresenceSeedSource-authored-contract-origin-original-admission-history-and-qualified-loaded-capture-producer-remain-open
+  :component-placement :entire-original-custody-principal-scope-source-is-this-complete-association-and-exactly-equals-original-presence-seed-source-association-no-extra-runtime-custody-key-or-wrapper
+  :incomplete-parent-leaves :original-principal-presence-capture-authored-context-origin-qualified-physical-scope-mapping-original-admission-source-evidence-history-and-loaded-producer-remain-open-despite-selected-principal-data-layout
   :authority :original-association-and-source-pins-are-provenance-only-all-current-qualified-owner-decisions-versions-denials-and-whole-call-commit-exposure-custody-remain-independent
   :replay :retain-and-compare-entire-original-association-through-retry-checkpoint-restore-rebuild-without-refetching-original-context-or-substituting-current-character-current-qualified-authority-inputs-still-required
   :self-reference :no-enclosing-state-or-result-snapshot-or-own-source-hash-in-this-component
@@ -805,7 +805,8 @@
    :planned-current-authority :qualified-current-owner-decisions-policy-grant-versions-and-admission-or-fence-with-required-identity-authority
    :inspected-axxium-surface :identity-capability-session-context-not-evidence-of-the-required-resource-projection-or-whole-exposure-fence
    :missing-port :remain-unselected-no-claim-that-a-new-upstream-feature-point-or-local-policy-evaluator-is-required-or-authorized-by-this-observation}
-  :full-original-source :FullOriginalQualifiedPrincipalScopeSource-and-original-presence-association-history-still-required-this-port-or-native-scope-map-alone-does-not-fill-them
+  :full-original-source {:value-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
+                         :qualification :complete-original-stored-principal-authenticated-context-origin-admission-and-physical-scope-source-evidence-in-existing-authority-source-evidence-and-history-remain-required-native-scope-or-source-pins-alone-do-not-fill-them}
   :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
   :current-versus-original :immutable-original-membership-actor-user-org-and-source-retained-as-provenance-new-binding-or-policy-state-cannot-retag-an-emitted-owner
   :source-manifest [
@@ -1504,7 +1505,7 @@
    :exact-keys [:principal-scope-source :authority-projection :qualified-producing-identity
                 :physical-configuration :source-evidence :history-binding]
    :fields
-   {:principal-scope-source :FullOriginalQualifiedPrincipalScopeSource
+   {:principal-scope-source {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"}
     :authority-projection :FullOriginalQualifiedAuthorityProjection
     :qualified-producing-identity
     {:contract "docs/plans/cephalon-physical-kernel-abi.edn#qualified-producing-identity-contract"}
@@ -1517,7 +1518,21 @@
    :population :exact-complete-original-admission-custody-explicit-final-emit-recall-argument-qualified-before-pure-call-no-ambient-state-authority-or-cursor-substitute-no-pure-fetch
    :missing-producing-path :explicit-unresolved-before-readiness-not-a-synthesized-record
    :snapshot-self-reference :forbidden-no-enclosing-state-snapshot-or-its-state-snapshot-hash
-   :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"}
+   :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
+   :principal-scope-source-binding
+   {:value :entire-original-character-principal-association-carrier-not-a-third-wrapper-or-raw-context
+    :same-value-as [:original-inputs :validated-seed :source :presence-seed-source :association]
+    :equality :complete-exact-original-value-including-owner-open-snapshot-source-pins-and-optional-revision-presence-under-existing-tagged-value-binary64-and-scalar-rules
+    :stored-principal :association-scope-membership-id-equals-original-request-stored-principal-parent-emitted-owner-and-original-emitted-entity-owner
+    :actor :association-actor-id-equals-its-native-scope-actor-id-and-the-qualified-original-canonical-selected-actor
+    :presence :character-context-identity-equals-qualified-original-origin-presence-id-no-actor-contract-membership-namespace-alias
+    :separate-required-evidence :complete-original-stored-membership-grant-authored-context-origin-and-native-source-admission-values-remain-in-existing-original-authority-projection-source-evidence-and-history-not-replaced-by-this-association
+    :physical-scope :qualified-mapping-to-original-request-birth-and-state-scope-revision-still-required-from-existing-source-evidence-native-policy-revision-is-not-an-alias
+    :current-authority :independent-current-owner-decisions-versions-and-whole-call-commit-exposure-protection-remain-required-association-is-historical-data-only
+    :capture :existing-planned-original-association-capture-and-final-snapshot-reconciliation-not-an-implemented-export-or-qualified-producer
+    :replay :retain-and-compare-the-original-value-without-refetching-original-character-or-membership-context-no-current-value-retagging
+    :private-boundary :no-raw-auth-context-process-token-credential-secret-whole-resolved-agent-map-or-assembled-prompt-is-selected-by-this-source-leaf
+    :bounds :retain-complete-owner-values-and-every-copy-under-existing-finite-value-string-input-state-checkpoint-history-and-work-limits-no-dropping-open-snapshot-fields-or-new-allowance}}
 
   :admission-record
   {:kind :closed-map

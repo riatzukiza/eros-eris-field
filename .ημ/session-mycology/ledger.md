@@ -1073,3 +1073,23 @@
   spore: none
   receipt-refs: cephalon-original-emission-custody-input-20261016-verified
   note: Confirmed previous eight-argument call had no selected first-admission source for separately mandatory original custody. Append explicit final ninth original-admission-custody argument, preserving earlier eight positions and five immutable inputs/native payload. Supply the existing complete six-field custody, retain exact original value only after successful admission, and separately compare complete custody on retry with fresh current authorization independent. History wrapper contains version and complete original native input event; event payload excludes custody and self-reference. Restored grouped checkpoint/fold/rebuild reference carrier to exact prior unresolved value after identifying its broader meaning; new wrapper closes only original-event value layout. All repeated ninth-argument source/envelope copies count under unchanged limits. Actual source/producer/owner leaves, historical admission, remaining references, commit/exposure protection and executed fit remain open. Earlier110 journals and both plan-note prefixes remain exact. Ordinary existing eight-point ABI interface authoring, no new point/upstream feature/native Ready/board/runtime/credential/paid model/deployment change. Local and unpushed; full suite held below accepted20GiB floor.
+
+- ts: 2026-10-16T16:42:57.315Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-principal-scope-source-20261016-start
+  note: Inspect the remaining FullOriginalQualifiedPrincipalScopeSource leaf and actual native original scope, stored actor selection and explicit character association. Existing association already has complete native scope, selected actor/contract, explicit owner CharacterContext and source pins; source pins and native fingerprint do not establish original admission or a current grant. Raw auth context/process token/credentials must not become retained source. Determine whether the existing complete association can supply principal/scope data with original admission/source evidence and physical-scope mapping still independently required. Ordinary existing ABI source authoring only; no new scope, point, upstream feature, readiness or runtime action. Full ETA suite remains held below accepted20GiB allocation floor.
+
+- ts: 2026-10-16T16:46:52.180Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-principal-scope-source-20261016-verified
+  note: Original principal-scope-source now directly selects the complete existing original association6, exactly equal to original semantic seed association. Membership, selected actor and distinct origin-presence relations are explicit; original complete stored membership/grant/authored-origin/native admission/history and physical-scope mapping evidence remain required in their existing separate custody fields. Current authorization and commit/exposure protection remain independent. No new runtime wrapper, custody key, call argument, raw auth context/process token/credential/prompt capture or source producer is introduced. One missing parenthesis in a private comparison script caused initial exit1 after source maps parsed; its bytes/output/proof are retained and corrected check passes without plan-source change. Prior112 journal and both plan-note prefixes exact. Local/unpushed source only, no new scope/point/upstream feature/native readiness/board/runtime/credential/paid/deployment/social/spore change. Full ETA suite remains held below accepted20GiB floor.
