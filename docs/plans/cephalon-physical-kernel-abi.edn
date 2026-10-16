@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-fixed-target-lifecycle"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-active-fold-record"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -328,12 +328,88 @@
  :inclusion-fold-state
  {:version "finite-contact-inclusion/1"
   :container :ordered-vector-by-exact-request-id-empty-when-no-active-horizon
+  :population :exactly-one-entry-per-qualified-current-parent-with-n-less-than-target-no-duplicates-or-entries-for-completed-zero-target-or-invalidated-requests
   :entry [:fold-revision :request-id :daimoi-id :stored-principal-binding
           :scope-authority-and-graph-versions :field-history :start-checkpoint
           :selected-end-checkpoint :target-horizon-quanta :processed-contact-cursor :executed-horizon-quanta
           :accumulated-semantic-fold-work :first-witnesses-in-canonical-contact-order
           :dedup-memory-ids :canonical-result-byte-count :trace-record-count
           :accumulated-trace-utf8-byte-count]
+  :entry-kind :closed-map-with-exactly-the-seventeen-entry-keys-no-extra-runtime-tag
+  :entry-fields
+  {:fold-revision {:literal "finite-contact-inclusion/1"}
+   :request-id :ID
+   :daimoi-id :ID
+   :stored-principal-binding
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/scoped-immutable-request/fields/principal-scope"
+    :value :exact-original-request-stored-principal-and-scope-revision-pair
+    :role :original-identity-provenance-not-a-grant-full-original-owner-source-still-required-in-parent-custody}
+   :scope-authority-and-graph-versions
+   {:kind :closed-map
+    :exact-keys [:scope-revision :projection-revision :graph-revision :authority-projection-binding :authority-projection]
+    :fields
+    {:scope-revision :Revision :projection-revision :Revision :graph-revision :Revision
+     :authority-projection-binding
+     {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/result-disposition/current/fields/authority-projection-binding"}
+     :authority-projection
+     {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/result-disposition/current/fields/authority-projection"}}
+    :role :owned-current-fold-context-wrapper-not-an-external-owner-schema-or-local-authorization-decision
+    :agreement :actual-qualified-current-fold-scope-graph-projection-and-parent-current-result-authority-values
+    :scalar-sources :actual-qualified-current-context-not-inferred-from-original-request-revisions-or-an-arbitrary-inclusion-witness
+    :original-versus-current :preserve-original-request-principal-scope-and-revisions-as-originals-only-existing-qualified-reconstruction-can-change-current-context
+    :authority-custody :same-complete-qualified-owner-values-and-matching-source-as-parent-current-result-not-digest-only-or-revision-only-freshness}
+   :field-history
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/request-horizon/field-history"
+    :value :complete-same-qualified-fold-and-parent-current-result-history-binding-not-a-new-label-or-id-only-substitute}
+   :start-checkpoint
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/checkpoint-position"
+    :value :actual-fixed-original-post-emission-start-position-with-required-independent-checkpoint-source}
+   :selected-end-checkpoint
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/checkpoint-position"
+    :value :actual-qualified-committed-prefix-end-position-matching-parent-current-result-no-future-target-position}
+   :target-horizon-quanta :Count
+   :processed-contact-cursor
+   {:variants [:nil :closed-map]
+    :closed-keys [:step-id :pair]
+    :fields {:step-id :Count :pair :exact-canonical-two-distinct-ID-pair}
+    :step-id-meaning :existing-absolute-kernel-substep-end-time-in-microseconds-not-relative-request-n-or-a-new-native-event-id
+    :nil-case :no-actual-qualified-request-overlap-observation-in-the-entire-prefix
+    :map-case :last-actual-qualified-request-overlap-in-existing-step-then-canonical-pair-order
+    :source :same-request-current-result-contacts-observations-not-separated-eligibility-inventory
+    :presence-and-non-memory :actual-overlaps-advance-this-cursor-even-without-an-inclusion-witness
+    :time :may-refer-to-an-earlier-executed-step-if-later-steps-have-no-contact-never-infer-n-from-this-cursor}
+   :executed-horizon-quanta :Count
+   :accumulated-semantic-fold-work :Count
+   :first-witnesses-in-canonical-contact-order
+   {:kind :vector
+    :items {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/inclusion-reason"}
+    :order :existing-first-canonical-qualifying-overlap-for-each-unique-memory-id
+    :value :exact-parent-current-result-inclusion-reasons-no-reranking-or-partial-contact-candidate}
+   :dedup-memory-ids
+   {:kind :vector :items :ID
+    :value :exact-memory-id-projection-of-first-witnesses-in-the-same-order-and-parent-current-result-included-memory-ids
+    :uniqueness :exact-existing-memory-id-equality-not-a-set-or-separately-id-sorted-copy}
+   :canonical-result-byte-count :Count
+   :trace-record-count :Count
+   :accumulated-trace-utf8-byte-count :Count}
+  :entry-identity :request-id-resolves-exactly-one-parent-recall-request-record-and-original-emitted-daimoi-id
+  :entry-parent :qualified-current-disposition-and-complete-current-retained-result-for-the-same-original-request-not-an-invalidated-or-foreign-payload
+  :source-leaves :existing-qualified-owner-authority-and-history-source-contracts-remain-unselected-where-parent-declares-them-no-whole-state-or-transitive-closure-claim
+  :target-and-progress :same-original-parent-target-and-current-result-horizon-n-with-zero-at-or-below-n-strictly-below-target-for-an-active-entry
+  :checkpoint-agreement :entry-start-end-target-n-history-and-fold-revision-exactly-match-the-parent-current-result-horizon-under-existing-real-cut-authentication
+  :witness-agreement :complete-qualified-actual-overlap-and-nexus-memory-content-source-for-every-first-witness-no-inclusion-from-presence-or-non-memory-nexus
+  :counter-agreement :entry-counters-equal-parent-result-counters-parent-original-budget-equals-original-admission-budget-counters-remain-within-corresponding-original-limits
+  :counter-meaning :existing-horizon-semantic-fold-result-envelope-and-complete-trace-measures-only-no-new-trace-subset-or-double-counting-of-retained-copies-as-new-physical-records
+  :initialization :only-counts-with-no-actual-produced-work-may-be-zero-required-empty-envelope-overhead-still-computed-and-charged-never-a-zero-filled-placeholder-record
+  :ordinary-commit :complete-existing-atomic-transition-only-no-persisted-partial-contact-pass-no-read-time-repair-counter-reset-or-reordered-witnesses
+  :terminal-handoff :on-whole-transition-success-at-n-equals-target-retain-the-complete-matching-terminal-result-and-status-in-parent-then-remove-only-that-active-fold-atomically
+  :late-world-failure :target-reached-inside-a-private-world-candidate-does-not-commit-a-terminal-cut-result-or-fold-removal-if-the-whole-operation-later-refuses
+  :after-closure :parent-request-original-inputs-source-history-and-field-weight-binding-remain-for-later-lawful-world-motion-and-qualified-read-or-retry
+  :replacement :existing-qualified-reconstruction-original-horizon-and-safe-invalidation-laws-only-no-raw-current-context-retag-or-n-zero-reset-because-world-time-rewinds
+  :invalidated-parent :existing-qualified-replacement-must-not-leave-an-exposable-or-processable-active-fold-against-an-invalidated-result-no-new-independent-deletion-or-repair-operation
+  :snapshot-self-reference :positions-and-source-bindings-do-not-embed-the-enclosing-state-snapshot-or-its-own-hash
+  :bounds :all-full-owner-history-source-and-duplicate-values-count-under-existing-input-state-checkpoint-trace-work-and-continuation-limits
+  :qualification :exact-interfaces-owner-source-bindings-and-full-fixture-plan-before-ready-with-existing-native-upstream-prerequisites-own-implementation-and-executed-controls-after-lawful-ready-before-consumption-and-done
   :dedup-memory-ids :exactly-the-unique-memory-ids-of-ordered-first-witnesses
   :result-byte-counter-codec "finite-contact-inclusion-result/1"
   :result-byte-counter :complete-canonical-two-field-inclusion-result-envelope-not-host-edn-or-json
@@ -353,7 +429,17 @@
              :split-versus-unsplit-same-horizon-and-first-witnesses
              :tampered-dedup-order-cursor-or-budget :missing-fold-revision
              :split-restore-trace-byte-exact-cap-and-one-over
-             :revoke-already-witnessed-memory-before-next-fold-use]}
+             :revoke-already-witnessed-memory-before-next-fold-use
+             :exact-seventeen-key-active-fold-and-five-key-current-context
+             :missing-extra-duplicate-foreign-parent-or-scalar-binding-as-grant-refusal
+             :separated-pairs-leave-cursor-nil-with-n-positive
+             :presence-only-overlap-advances-cursor-without-memory-witness
+             :last-contact-before-later-no-contact-steps-retains-older-cursor
+             :dedup-vector-first-witness-order-not-set-or-id-sort
+             :computed-empty-envelope-overhead-not-zero-placeholder
+             :terminal-complete-result-handoff-closes-only-fold-retains-request-weights
+             :private-target-cut-then-late-world-failure-commits-no-terminal-candidate
+             :qualified-replacement-preserves-original-target-and-once-only-facts-without-counter-reset]}
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
  :entity-state-contract

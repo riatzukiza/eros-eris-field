@@ -1300,3 +1300,69 @@ privacy, reconstruction, codec and cap controls remain. Independent executed
 qualification is required before consumption and Done. These are source-law and
 future executed-control obligations, not implemented lifecycle, compiled owner
 consumption, native Ready, whole-state closure or live B1–B3 proof.
+
+## Active inclusion-fold record — 2026-10-16
+
+The existing17 fold fields now have an exact owned closed-map/type layout in
+`inclusion-fold-state/entry-fields`. The vector under `entry` is the complete
+key set, not a runtime list or permission to accept additional keys. Retain one
+strictly request-ID-ordered entry per qualified current unfinished request with
+`n < target`; completed, zero-target and invalidated requests have no active
+entry. The original request/result/source records remain separately retained.
+
+| Field | Selected carrier or agreement |
+| --- | --- |
+| `fold-revision` | Exactly `finite-contact-inclusion/1` |
+| `request-id`, `daimoi-id` | Existing IDs matching the unique parent request and original emitted entity |
+| `stored-principal-binding` | Exact original parent principal/scope pair; provenance, not a grant |
+| `scope-authority-and-graph-versions` | Closed current-context map with scope, projection and graph revisions plus the parent's complete qualified authority binding/projection |
+| `field-history` | Same complete qualified current fold/result history binding |
+| `start-checkpoint`, `selected-end-checkpoint` | Existing real checkpoint-position carrier, with full independent matching source |
+| `target-horizon-quanta`, `executed-horizon-quanta` | Exact original target and actual `n`, matching the parent current result |
+| `processed-contact-cursor` | Nil or exactly step-id/pair for the last actual qualified overlap |
+| `accumulated-semantic-fold-work` | Existing retained semantic-fold work Count |
+| `first-witnesses-in-canonical-contact-order` | Vector of the existing ten-key inclusion reasons in first-witness order |
+| `dedup-memory-ids` | Unique vector equal to the ordered witness-memory-ID projection and retained inclusion IDs |
+| `canonical-result-byte-count`, `trace-record-count`, `accumulated-trace-utf8-byte-count` | Exact existing parent budget-result Counts |
+
+The original principal/scope pair and current authority context have different
+roles. Current scalar versions come from actual qualified current source, not
+original request versions or an arbitrary witness. Full parent original/current
+owner records and history remain mandatory. The existing unresolved qualified
+authority/history leaf schemas are referenced, not closed by a copied revision,
+digest or local authorization decision. This closes the owned key/type layout
+without claiming transitive or whole-state closure.
+
+The cursor is nil exactly when the actual per-request overlap vector is empty.
+Otherwise it identifies its last canonical step/pair, including duplicate-memory,
+presence and non-memory overlaps. Separated eligible pairs do not advance it.
+Step ID is the existing absolute kernel substep-end microsecond time, not relative
+`n` or a new event identity. Later no-contact steps can advance `n` while leaving
+the cursor at an earlier step. No accepted record represents only part of its
+committed prefix. First witnesses equal retained inclusion reasons; dedup IDs
+are neither a set nor a separately ID-sorted copy.
+
+All five counters exactly match the retained result's counters. Its complete
+original budget equals the admission budget, and counters stay at or below
+their corresponding limits. Their existing
+semantic/result/complete-trace measures do not become witness or overlap counts.
+Empty encoded envelopes retain their actual overhead; initial records cannot be
+filled with guessed zeros. Retaining another data copy adds its actual storage
+and validation costs under existing bounds, not a new logical physical record.
+Complete owner/source values and duplicates remain counted.
+
+At the target, one successful whole transition retains the complete matching
+terminal result/status in the parent and removes only that active fold. Request,
+source history and field-weight bindings remain for later lawful world motion,
+read and retry. If the private target cut is reached but a later step in that
+world operation refuses, neither terminal result/cut nor fold removal commits.
+Qualified reconstruction and safe invalidation retain their existing complete
+closure rules; clock rewind alone cannot reset `n`, cursor, target or counters.
+An invalidated result cannot leave an exposable/processable active fold.
+
+The full source/interface/binding and fixture plan, with existing required
+upstream/native prerequisites, precede Rheos Ready. Own implementation and
+domain RED/GREEN follow lawful Ready; actual producer/cut/replay/counter and
+atomic-handoff controls require independent executed proof before consumption
+and Done. No fold algorithm, producer, actual checkpoint, profile fit, native
+readiness or B proof was executed by this representation edit.

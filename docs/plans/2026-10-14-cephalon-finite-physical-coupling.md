@@ -2059,3 +2059,46 @@ plumbing, counter/history/cut materialization, all five positives and
 zero/overflow/split/retry/closed-weight controls; independent executed
 qualification remains required before consumption and Done. No implemented state machine,
 compiled artifact, whole-state closure or live B proof is asserted.
+
+## Exact active-fold record and handoff — 2026-10-16
+
+The [owning fold record](2026-10-07-cephalon-physical-kernel.md#active-inclusion-fold-record--2026-10-16)
+and ABI `inclusion-fold-state/entry-fields` provide an exact17-key owned map.
+There is exactly one entry per qualified current unfinished request, ordered by
+request ID, and none for completed, zero-target or invalidated requests. Original
+request/principal identity is distinct from the closed five-key current authority/
+scope/graph context. Full original/current parent owner records and actual history
+remain required; the existing unselected owner/history schemas are not replaced
+by strings, hashes or a local grant decision.
+
+The processed cursor is nil for no actual overlap, otherwise the last canonical
+actual step/pair, including presence, non-memory and repeated-memory contacts.
+Separated eligibility does not advance it. Its step is the existing absolute
+substep-end time, not the relative request count; later no-contact steps can
+advance `n` with an older cursor. First-witness vectors equal retained inclusion
+reasons. Dedup IDs are their exact unique memory-ID projection in the same order,
+matching retained inclusion IDs, without set or ID-sort serialization.
+
+Positions, target, progress, history, revision and the five budget counters agree
+with the complete parent current result. Its original budget equals admission's
+complete original budget; counters stay within the corresponding limits.
+Existing complete-envelope and semantic
+work accounting remains; neither witness count nor overlap count replaces trace
+record/byte measures. Required empty-envelope overhead is computed, not reset to
+zero. All owner/history/source duplicates and validation/storage work count under
+existing limits. No new trace subset, scalar default or resource cap is selected.
+
+Terminal handoff keeps the full matching parent result/status and closes only
+the active fold on whole-operation success. Later world motion retains the
+request/weight binding. A private target reached before a later world failure
+does not commit a terminal candidate or fold removal. Qualified replacement/
+invalidation remains the only reconstruction path; a world-clock rewind cannot
+erase logical once-only facts or reset counters. No processable active fold may
+remain against an invalidated result.
+
+This is a typed owned-wrapper proposal with unresolved existing owner/history
+leaves, not complete state closure. Interface/source/fixture selection and
+existing upstream/native prerequisites remain before Ready; own implementation/
+R/G follows lawful Ready; actual counters/cuts/replay/handoff and independent
+executed proof remain required before consumption and Done. No domain behavior,
+native readiness or live proof is asserted.
