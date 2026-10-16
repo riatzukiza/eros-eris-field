@@ -1113,3 +1113,23 @@
   spore: none
   receipt-refs: cephalon-original-authority-capture-20261016-verified
   note: A first successful new emission must retain the complete actual current Field authority argument as original custody; no earlier snapshot, subset, native graph scope/project/records output or digest can substitute. On retry/replay original custody remains immutable while fresh current authority is separately qualified, including after rebuild. Required original graph/query/source evidence remains independently retained. Native graph candidate data is plain callback output; inspected identity/application outputs do not establish full Field decisions, versions or whole-call protection. Their shape, producer, native policy/grant-version provenance and commit/exposure admission remain unselected/unqualified; no new upstream feature/point inferred. No callback, process token, credential, raw runtime context or opaque handle is stored as projection. Complete copies count under unchanged limits. Prior114 journal/plan-note prefixes exact. Local/unpushed source only; no new scope/point/Ready/board/runtime/paid/deployment/social/spore change. Full ETA suite held below accepted20GiB floor.
+
+- ts: 2026-10-16T18:47:39.538Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-pending-event-record-layout-20261016T1840-start
+  note: Continue existing ABI8 shape authoring from clean52 with116 committed receipt rows. Freeze six explicit owned baseline files. Selected work is an exact pending-event entry/current-authority disposition layout using existing ordering, boundary schedule, cursor, original event retention and cancelled-no-op semantics. Native Clio event/history validation and actual owner authority sources remain owners; unselected/unqualified leaves stay explicit. No new clock/event/admission/cancellation/authority policy, point, field implementation, Ready or fixture fit is authorized by this authoring. Preserve nine emit arguments, all100/101 ordinary positives,64 summed reconstruction and every original resource/privacy/recovery obligation. Independent immutable-source assessment of separate recovery clarification is read-only and unapplied. No full snapshot, dependency install, source push, runtime/board/credential/paid/deployment/social action. Goalactive/live0of3; heartbeat human-paused.
+
+- ts: 2026-10-16T18:58:29.197Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-pending-event-record-layout-20261016T1840-verified
+  note: Add finite-pending-event-state/1: original cursor, kernel-time schedule, complete native event, full original admission custody and separate permitted/cancelled-no-op current-authority disposition. Retain original qualified queue order subject to existing ordered kernel boundaries and owner cursor/history, complete payload/parents/source, both consumed/admitted cursors and all dispositions in state/snapshot hashes. Native Clio owns event-schema/validate-event!/canonicalize; seven-file emission manifest matches native capturedGitblobs, validator is separately pinned by existing physical-birth manifest at same788c source, no transitive qualification. Original/current custody remains distinct. All historical payload/custody/current full authority leaves and actual producers/whole-call/commit/exposure protection remain unselected/unqualified; this is partial owned structural closure, not whole-state closure, functioning source/fence, Ready, Fixed, executed fixture fit or acceptance. Preserve previous116 journal and complete MD-note prefixes. Local source preparation only, no push/newscope/point/board/runtime/credential/paid/deployment/social/spore action. ETA full suite remains unstarted under the existing resource hold; goalactive/live0of3/heartbeat human-paused.

@@ -2568,3 +2568,54 @@ is inferred from the bounded inspection. Finite projection data stays separate
 from outer admission/fence custody; callbacks, process tokens, credentials, raw
 auth contexts and native handles are not retained as the projection. All complete
 copies count under existing limits, without a graph-only fallback or cap change.
+
+
+## Owned pending-event entry and disposition layout — 2026-10-16
+
+The snapshot state shape and retained-revocation history now reference the ABI's
+proposed `pending-event-state`. Its semantics come from the existing
+`event-cursors`, `clock`, `causal-authority` and rebuild/6 `history-coverage`;
+the change selects an owned representation within the same eight-point ABI
+authoring task. The nine-argument emission interface is preserved.
+
+`pending-events` is an ordered vector, empty only when qualified history
+establishes that no boundary event remains pending. Each closed entry contains
+exactly `event-cursor`, `scheduled-kernel-time-us`, `original-event`,
+`original-admission-custody` and `current-authority-disposition`. The nonempty
+cursor uses the already declared event-id/stream/sequence field types and must
+match the same full original native event. Scheduled time is the existing exact
+safe nonnegative integer kernel time in microseconds, equal to the original
+qualified boundary schedule. It adds no clock, quantum alignment or rounding
+rule. The vector retains original qualified admission order, including equal-time
+order; IDs, timestamps and cross-stream sequence numbers do not create a new sort.
+
+The complete native envelope, payload/parents and original admission/source
+custody remain immutable and counted. Current authority is distinct: its closed
+disposition union selects `permitted` or `cancelled-no-op`, with exactly
+`disposition`, `authority-projection-binding` and `authority-projection` in each
+variant. Both require full matching qualified current owner data, not a digest,
+label or historical permission. These tags add no operation status or event kind.
+Existing complete qualified rebuild retains denied pending events with the
+cancelled/no-op disposition; later catch-up cannot activate their influence.
+Permitted entries keep original identity, inputs, order and schedule without
+early execution and still require current authority before later causal use.
+Ordinary authority changes and failed whole-call admission retain their existing
+unchanged refusals; no new admission or cancellation shortcut is selected.
+
+The layout consumes native Clio historical `event-schema`, `validate-event!`
+and complete-union `canonicalize` contracts, retaining their existing authority.
+Actual historical root/leaf/payload/source associations and the full original
+admission-custody and current authority carrier schemas remain explicit owner
+leaves requiring selection/qualification. No local Clio validator, new payload
+kind, native policy version, authority producer or fence is supplied. The
+complete state remains open despite the closed owned entry/union keys.
+
+The complete retained queue and both verified consumed/admitted cursors enter
+the existing canonical state/snapshot hash, with every original input, schedule,
+order and disposition. Restore and rebuild validate/reconstruct the whole queue
+before use or atomic replacement; a cancelled record cannot be silently dropped.
+All existing authorized controls, denial/refusal and recovery fixtures remain
+exact obligations. Ordinary calls keep 100 steps; the same summed 64 reconstruction
+quanta and unchanged event/byte/input/state/work/time/continuation limits count
+all copies and every nested/repeated reconstruction. This is source planning,
+with no fixture execution, native readiness, transitive closure or acceptance claim.

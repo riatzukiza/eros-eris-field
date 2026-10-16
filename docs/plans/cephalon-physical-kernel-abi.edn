@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-original-authority-capture"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-pending-event-layout"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -193,6 +193,8 @@
    :empty []}
   :other-existing-closed-carriers [:physical-configuration :qualified-producing-identity :entity-state-contract
                                    :bond-state-contract :trail-state :contact-profile-binding-state :request-weight-carrier]
+  :pending-events {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
+                   :closure :owned-entry-and-disposition-layout-only-owner-leaves-still-unselected}
   :whole-state-not-yet-closed
   [:authority-projection-binding :pending-events :contribution-provenance
    :recall-requests :inclusion-folds :pending-feedback
@@ -323,8 +325,83 @@
                  :admitted-event-cursor :last-admitted-event-including-queued-future-boundaries
                  :source :independently-verified-qualified-clio-cursor-order-and-payloads
                  :pending-events :exact-ordered-admitted-not-yet-consumed-queue-with-current-authority-dispositions
+                 :pending-event-layout "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
                  :snapshot :both-cursors-and-complete-pending-queue-identities-schedules-dispositions-hashed
                  :missing-gap-duplicate-conflict-or-copied-label :unchanged-refusal}
+ :pending-event-state
+ {:version "finite-pending-event-state/1"
+  :status :proposed-owned-entry-and-disposition-layout-with-unselected-owner-leaves-not-implemented-or-qualified
+  :revision-binding :this-exact-representation-bound-by-qualified-kernel-revision-no-new-state-root-or-call-argument
+  :state-field :pending-events
+  :types :consume-existing-Count-and-nonempty-cursor-types-in-canonical-state-elementary-carriers
+  :container :ordered-vector-of-closed-entry-maps
+  :empty []
+  :population :every-original-admitted-not-yet-consumed-boundary-event-including-cancelled-no-op-entries-no-omission-or-duplicate
+  :order :exact-original-qualified-admission-order-retained-by-the-queue-not-a-new-id-time-or-cross-stream-sequence-sort
+  :entry
+  {:kind :closed-map
+   :exact-keys [:event-cursor :scheduled-kernel-time-us :original-event :original-admission-custody :current-authority-disposition]
+   :fields
+   {:event-cursor {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/cursor/nonempty"}
+    :scheduled-kernel-time-us :Count
+    :original-event :CompleteOriginalQualifiedClioBoundaryEnvelope
+    :original-admission-custody :FullOriginalQualifiedBoundaryAdmissionCustody
+    :current-authority-disposition {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state/current-authority-disposition"}}
+   :identity :all-three-cursor-fields-match-the-same-original-event-native-id-stream-and-sequence-no-request-entity-or-emission-id-alias
+   :schedule :exact-original-declared-kernel-time-boundary-in-existing-integer-microseconds-with-no-rounding-rescheduling-wall-time-or-new-quantum-policy
+   :schedule-source :must-match-complete-qualified-original-boundary-input-and-recorded-schedule-not-inferred-from-envelope-wall-time-or-queue-position
+   :originals :complete-event-including-payload-and-parent-links-and-full-original-admission-custody-remain-immutable-not-only-ids-revisions-or-digests
+   :source-agreement :custody-matches-that-same-actual-native-event-original-inputs-principal-scope-and-original-admission-history-no-mixed-origin-copy
+   :no-self-reference :no-enclosing-state-snapshot-or-its-hash-in-original-event-custody-or-disposition}
+  :current-authority-disposition
+  {:kind :closed-discriminated-union :discriminator :disposition
+   :variants
+   {:permitted
+    {:kind :closed-map :exact-keys [:disposition :authority-projection-binding :authority-projection]
+     :fields {:disposition {:literal :permitted}
+              :authority-projection-binding :FullQualifiedCurrentAuthorityBinding
+              :authority-projection :FullQualifiedCurrentAuthorityProjection}
+     :meaning :existing-qualified-current-permission-for-this-entire-pending-influence-not-execution-or-a-future-grant}
+    :cancelled-no-op
+    {:kind :closed-map :exact-keys [:disposition :authority-projection-binding :authority-projection]
+     :fields {:disposition {:literal :cancelled-no-op}
+              :authority-projection-binding :FullQualifiedCurrentAuthorityBinding
+              :authority-projection :FullQualifiedCurrentAuthorityProjection}
+     :meaning :existing-qualified-rebuild-denied-pending-disposition-original-event-retained-never-later-causal-use}}
+   :authority-custody :complete-actual-qualified-current-owner-values-and-matching-source-for-the-stored-principal-scope-action-resources-request-and-every-retained-influence
+   :current-versus-original :current-disposition-values-are-separate-from-immutable-original-admission-custody-never-retag-original-permission-as-current
+   :state-agreement :disposition-binding-matches-the-complete-state-current-authority-binding-established-by-existing-admission-or-qualified-rebuild
+   :freshness :stored-permitted-tag-and-binding-never-replace-independent-current-owner-admission-before-later-causal-use-and-result-exposure
+   :ordinary-change :existing-whole-unchanged-authority-refusal-until-complete-qualified-rebuild-no-local-policy-evaluation-or-cancellation-shortcut
+   :failed-whole-call-authority-admission :retain-existing-operation-specific-refusals-not-a-new-successful-cancellation-path}
+  :owner-leaves
+  {:CompleteOriginalQualifiedClioBoundaryEnvelope
+   {:owner :clio :shape :clio.law.schema/event-schema :validation :clio.domain.schema/validate-event!
+    :history :clio.domain.canonicalize/canonicalize
+    :source-manifest "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-clio-port/source-manifest"
+    :payload :complete-actual-existing-boundary-event-input-under-its-qualified-historical-schema-no-new-kind-or-emission-schema-substitution
+    :remaining :actual-historical-root-leaf-source-payload-and-boundary-input-association-remain-unselected-or-unqualified-no-field-clio-validator}
+   :FullOriginalQualifiedBoundaryAdmissionCustody
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/history-coverage"
+    :value :complete-matching-original-owner-admission-and-source-history-evidence-including-original-principal-scope-and-authority-where-required
+    :closed-record-definition :unselected-qualified-owner-carrier-not-an-arbitrary-canonical-blob-or-self-authenticating-envelope}
+   :FullQualifiedCurrentAuthorityBinding
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
+    :value :complete-qualified-owner-current-binding-for-this-state-and-pending-influence
+    :closed-record-definition :unselected-no-local-version-digest-only-or-label-substitute}
+   :FullQualifiedCurrentAuthorityProjection
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
+    :value :complete-qualified-current-trusted-authority-projection-data-with-matching-owner-source-decisions-and-policy-grant-versions
+    :closed-record-definition :unselected-no-graph-only-subset-callback-process-token-credential-or-opaque-handle}}
+  :cursors :both-existing-consumed-and-admitted-cursors-are-independently-verified-against-complete-history-queue-is-exactly-the-admitted-not-consumed-boundary-events
+  :empty-queue :only-when-qualified-history-establishes-no-pending-boundary-event-not-an-excuse-to-drop-cancelled-or-unqualified-entries
+  :rebuild :existing-complete-reconstruction-reauthorizes-every-entry-before-atomic-replacement-permitted-events-retain-original-order-inputs-and-schedule-without-early-execution
+  :checkpoint :both-cursors-and-entire-ordered-queue-including-complete-originals-schedules-and-current-dispositions-enter-existing-state-and-snapshot-hash
+  :restore-and-catch-up :validate-entire-retained-queue-history-and-current-authority-before-use-no-pending-event-loss-early-application-or-cancelled-influence-reactivation
+  :refusals :existing-missing-gap-duplicate-conflict-unknown-history-authority-source-and-finite-limit-reasons-and-precedence-whole-prior-state-unchanged-no-partial-replacement
+  :bounds :all-complete-repeated-values-source-custody-decoding-validation-hashing-and-serialization-under-existing-ordinary100-and-summed-reconstruction64-quanta-event-byte-input-state-checkpoint-work-time-and-continuation-caps-no-new-budget-or-discount
+  :closure :owned-record-and-two-disposition-variants-only-every-owner-leaf-source-producer-history-admission-and-whole-call-commit-exposure-protection-still-needs-qualification-before-consumption
+  :existing-controls "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/history-controls"}
  :inclusion-fold-state
  {:version "finite-contact-inclusion/1"
   :container :ordered-vector-by-exact-request-id-empty-when-no-active-horizon
@@ -2081,7 +2158,7 @@
        {:kind :closed-map :exact-keys [:event-cursor :admitted-event-cursor]
         :fields {:event-cursor {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/cursor"}
                  :admitted-event-cursor {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/cursor"}}}
-       :reauthorized-complete-pending-queue {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required/pending-events"}}}
+       :reauthorized-complete-pending-queue {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"}}}
      :agreement ["replacement-checkpoint.state exactly equals rebuilt-state; its sha256 is existing canonical snapshot hash of that state"
                  "payload event-cursor, cursor-map event-cursor and rebuilt-state.event-cursor are identical; admitted cursor equals rebuilt-state.admitted-event-cursor"
                  "scope/authority composite exactly projects rebuilt-state.scope-revision and authority-projection-binding"
