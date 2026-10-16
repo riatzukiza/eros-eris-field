@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-pending-feedback-layout"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-rebuilt-result-accounting"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -2100,6 +2100,106 @@
   :fixtures [:grant-revoked-at-unchanged-scope-before-advance :denied-pending-event-before-catch-up
              :policy-changed-before-recall-emission-outcome-or-checkpoint
              :owner-binding-changes-before-exposure :qualified-rebuild-then-authorized-causal-call]}
+ :rebuilt-recall-dispositions-carrier
+ {:version "finite-rebuilt-recall-dispositions/1"
+  :status :proposed-owned-result-layout-not-implemented-or-transitively-qualified
+  :revision-binding :this-exact-layout-bound-by-qualified-kernel-revision-no-per-row-version-key
+  :location :rebuild-revocation-success-reconstructed-or-explicitly-invalidated-completed-recall-result-dispositions
+  :container :ordered-vector-of-closed-projection-rows
+  :empty :only-when-the-complete-rebuilt-state-retains-no-recall-request
+  :row
+  {:kind :closed-map :exact-keys [:request-id :result-disposition]
+   :fields
+   {:request-id {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"}
+    :result-disposition
+    {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/result-disposition"
+     :value :the-exact-existing-current-or-invalidated-variant-in-the-matching-rebuilt-request-record}}}
+  :inventory :exactly-one-row-for-every-retained-request-in-rebuilt-state-recall-requests
+  :existing-inventory-contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/completed-recall-results"
+  :inventory-not-a-new-filter :retain-existing-every-retained-request-rule-including-active-incomplete-exhausted-and-completed-results-and-invalidated-requests
+  :order :strictly-increasing-exact-request-id-unsigned-utf8-same-as-rebuilt-state-request-inventory
+  :identity :original-request-id-from-that-retained-record-no-new-event-effect-or-request-identity
+  :projection :select-only-request-id-and-result-disposition-from-each-complete-rebuilt-request-record
+  :equality :complete-exact-canonical-values-including-original-id-spelling-vector-order-and-binary64-bits-not-status-only-id-only-or-digest-only
+  :current :same-existing-four-key-current-variant-with-its-full-actual-authority-values-and-qualified-current-RecallSuccess
+  :invalidated :same-existing-four-key-invalidated-variant-with-stale-recall-authority-and-no-result-key-neither-nil-nor-an-empty-success
+  :agreement :each-row-and-every-nested-disposition-value-exactly-equal-the-corresponding-value-in-returned-rebuilt-state-and-qualified-replacement-checkpoint-state
+  :no-omission :empty-active-folds-or-ended-particles-do-not-remove-retained-requests-from-this-result-inventory
+  :source :existing-complete-current-authority-reconstruction-or-safe-invalidation-no-copy-from-prior-state-or-historical-output
+  :original-custody :complete-original-request-inputs-and-source-custody-remain-in-existing-state-and-qualified-history-not-replaced-by-this-result-projection
+  :authority :retained-authority-data-is-not-a-current-grant-existing-qualified-owner-admission-through-whole-call-commit-and-exposure-remains-required
+  :privacy :existing-no-denied-recall-payload-or-derived-influence-exposure-and-whole-unchanged-refusal-on-unestablished-or-unsafe-reconstruction-remain
+  :bounds :every-row-nested-value-copy-validation-order-and-encoding-share-existing-whole-invocation-input-state-checkpoint-trace-work-and-result-exposure-bounds-no-free-projection-or-partial-return
+  :snapshot :no-new-root-state-key-snapshot-field-storage-revision-or-self-hash-this-is-an-exact-result-projection-of-existing-state
+  :transitive-readiness :existing-authority-RecallSuccess-original-owner-source-and-reconstruction-contracts-must-be-selected-and-qualified-before-consumption-this-layout-does-not-close-their-unselected-leaves
+  :future-controls [:empty-inventory-exact-empty-vector
+                    :mixed-current-and-invalidated-retained-requests-exact-closed-two-key-rows
+                    :active-incomplete-and-completed-with-empty-active-folds-all-present-once
+                    :same-request-ids-dispositions-and-order-as-rebuilt-state-and-checkpoint-state
+                    :missing-extra-duplicate-unsorted-retagged-or-prior-state-derived-row-refused-before-exposure
+                    :invalidated-row-has-no-success-payload-and-current-row-keeps-complete-actual-source
+                    :all-existing-complete-result-byte-work-and-authority-controls]}
+ :rebuild-budget-accounting-carrier
+ {:version "finite-rebuild-budget-accounting/1"
+  :status :proposed-owned-counter-layout-not-implemented-or-qualified
+  :revision-binding :this-exact-layout-bound-by-qualified-kernel-revision-no-extra-version-key
+  :kind :closed-map
+  :exact-keys [:tail-events :canonical-clio-tail-utf8-bytes :history-argument-utf8-bytes
+               :input-wire-utf8-bytes :kernel-quanta :work-units
+               :peak-entities :peak-bonds :peak-scoped-layer-cells
+               :trace-records :trace-utf8-bytes
+               :peak-state-argument-utf8-bytes :peak-checkpoint-argument-utf8-bytes
+               :peak-other-arguments-and-framing-utf8-bytes
+               :peak-id-utf8-bytes :peak-other-string-utf8-bytes]
+  :value-type {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/Count"}
+  :fields
+  {:tail-events {:inclusive-maximum 128
+                 :measure :distinct-qualified-original-envelope-identities-in-complete-main-tail-and-materialized-reference-closure-exact-byte-and-binding-dedup-only}
+   :canonical-clio-tail-utf8-bytes {:inclusive-maximum 1048576
+                                  :measure :complete-original-canonical-Clio-envelope-bytes-for-that-exact-qualified-tail-and-reference-closure-under-existing-owner-byte-measure}
+   :history-argument-utf8-bytes {:inclusive-maximum 1048576
+                               :measure :complete-actually-supplied-materialized-history-argument-under-existing-tagged-argument-encoding-including-checkpoint-evidence-and-references}
+   :input-wire-utf8-bytes {:inclusive-maximum 4194304
+                         :measure :complete-actual-outer-invocation-wire-envelope-with-all-operation-arguments-before-any-reconstruction}
+   :kernel-quanta {:inclusive-maximum 64
+                   :measure :sum-of-all-actually-executed-main-nested-and-repeated-reconstruction-quanta-no-event-identity-dedup-or-counter-reset}
+   :work-units {:inclusive-maximum 67108864
+                :measure :final-existing-whole-invocation-meter-including-preflight-decode-validation-source-and-state-checks-ordering-all-reconstruction-checkpoints-and-complete-result-production-and-encoding}
+   :peak-entities {:inclusive-maximum 32 :measure :maximum-complete-entity-population-in-any-validated-input-or-private-candidate-state}
+   :peak-bonds {:inclusive-maximum 64 :measure :maximum-complete-bond-population-in-any-validated-input-or-private-candidate-state}
+   :peak-scoped-layer-cells {:inclusive-maximum 256 :measure :maximum-complete-scoped-layer-cell-population-in-any-validated-input-or-private-candidate-state}
+   :trace-records {:inclusive-maximum 131072 :measure :actual-existing-whole-invocation-count-of-every-required-produced-trace-record-no-discount-for-nested-or-repeated-reconstruction}
+   :trace-utf8-bytes {:inclusive-maximum 8388608 :measure :actual-existing-complete-trace-envelope-byte-measure-under-finite-field-trace-1-not-character-count-or-unwrapped-record-bytes}
+   :peak-state-argument-utf8-bytes {:inclusive-maximum 1048576 :measure :maximum-complete-canonical-state-argument-encoding-at-every-existing-input-candidate-and-continuation-closure-check}
+   :peak-checkpoint-argument-utf8-bytes {:inclusive-maximum 1048756 :measure :maximum-complete-canonical-checkpoint-domain-map-argument-encoding-at-every-existing-input-candidate-and-continuation-closure-check}
+   :peak-other-arguments-and-framing-utf8-bytes {:inclusive-maximum 524288 :measure :maximum-existing-remaining-arguments-plus-entire-invocation-framing-measure-without-double-counting-state-checkpoint-and-history-components}
+   :peak-id-utf8-bytes {:inclusive-maximum 128 :measure :maximum-actual-UTF8-width-among-all-existing-ID-values-validated-in-the-whole-invocation}
+   :peak-other-string-utf8-bytes {:inclusive-maximum 512 :measure :maximum-actual-UTF8-width-among-all-other-existing-variable-width-strings-validated-in-the-whole-invocation}}
+  :limits "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/budget"
+  :work-and-trace "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget"
+  :continuation "docs/plans/cephalon-finite-field-coupling.edn#continuation-closure"
+  :actual-values :observed-existing-meter-counts-and-high-water-marks-not-the-maximum-allowances-or-selected-profile-label
+  :peak-zero :only-when-no-value-of-that-resource-kind-is-actually-validated-or-produced-never-an-unobserved-resource-substitute
+  :peak-not-total :population-width-and-carrier-size-high-water-marks-are-not-sums-of-snapshots-the-existing-work-counter-still-charges-every-visit-and-copy
+  :no-new-accounting-engine :read-the-same-single-shared-admission-meters-that-enforce-existing-caps-never-replay-a-second-time-or-reconstruct-totals-from-event-identity-counts
+  :scope :one-outer-invocation-including-every-main-nested-and-repeated-reconstruction-no-per-path-allowance-or-reset
+  :complete-report :all-sixteen-keys-present-with-Count-values-on-complete-success-only-no-partial-success-or-counter-encoded-into-its-own-counted-input
+  :report-encoding :existing-finite-field-trace-1-canonical-tagged-map-all-sixteen-values-use-the-fixed-sixteen-hex-digit-binary64-number-encoding
+  :seal :all-other-charged-work-completes-before-report-seal-reserve-and-charge-the-exact-fixed-layout-report-production-and-encoding-work-before-writing-final-counter-values-verify-actual-reserved-work-is-consumed-exactly
+  :seal-not-an-estimate :derive-exact-reservation-from-this-qualified-fixed-layout-and-existing-unit-rules-no-worst-case-guess-refund-hidden-post-seal-work-or-discount
+  :seal-qualification :independently-qualified-counting-and-output-encoding-fixtures-required-before-consumption-no-separate-allowance-or-weakened-finite-work-refusal
+  :refusal :existing-reason-precedence-and-exact-unchanged-prior-state-no-success-accounting-returned-on-any-failed-or-incomplete-reconstruction
+  :outer-host-metrics :wall-time-and-RSS-remain-independent-outer-observations-never-pure-clock-or-process-reads-or-fields-in-this-record
+  :no-state-copy :report-is-an-operation-result-only-no-new-state-snapshot-history-field-or-native-identity
+  :future-controls [:empty-history-actual-nonzero-preflight-and-result-work
+                    :nonempty-complete-history-and-reference-closure-exact-actual-byte-and-event-counts
+                    :shared-reference-deduplicates-only-identity-count-never-repeated-quanta-or-work
+                    :different-intermediate-populations-and-carrier-sizes-report-actual-peaks-not-sums-or-final-state-only
+                    :exact-each-cap-accepted-and-each-one-over-preserves-existing-refusal
+                    :complete-sixteen-key-report-and-every-count-type-missing-extra-key-negative
+                    :independent-meter-matches-final-work-including-exact-report-seal-and-output-encoding
+                    :same-fixed-report-encoding-width-at-zero-and-each-count-maximum
+                    :no-report-no-partial-state-on-guard-budget-or-outer-timeout-failure]}
  :state-transition-result
  {:revision 1
   :applies-to [:admit-state :advance :catch-up :emit-recall :apply-outcome
@@ -2243,16 +2343,12 @@
        :new-projection-revision {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required/projection-revision"}
        :complete-inclusion-folds {:contract "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"}
        :rebuild-budget-accounting
-       {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/budget"
-        :work-contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget"
-        :value :actual-complete-whole-invocation-accounting
-        :closed-record-definition :unresolved-limit-declarations-are-not-a-counter-record-schema}
+       {:contract "docs/plans/cephalon-physical-kernel-abi.edn#rebuild-budget-accounting-carrier"
+        :value :actual-complete-whole-invocation-accounting}
        :reconstructed-or-explicitly-invalidated-completed-recall-result-dispositions
-       {:kind :vector :order :existing-canonical-request-id-order
-        :items {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/completed-recall-results"
-                :retention-contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required/recall-requests"
-                :value :exact-retained-completed-result-disposition
-                :closed-record-definition :unresolved-before-native-ready}}
+       {:contract "docs/plans/cephalon-physical-kernel-abi.edn#rebuilt-recall-dispositions-carrier"
+        :retention-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/admission-record"
+        :value :exact-complete-request-id-and-result-disposition-projection-of-rebuilt-state}
        :verified-consumed-and-admitted-cursors
        {:kind :closed-map :exact-keys [:event-cursor :admitted-event-cursor]
         :fields {:event-cursor {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/cursor"}

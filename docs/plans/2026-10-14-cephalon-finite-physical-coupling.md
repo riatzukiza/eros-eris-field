@@ -2665,3 +2665,74 @@ All source copies remain counted, and historical replacement once-only facts,
 existing limits/controls and before-Ready → own implementation after-Ready →
 executed qualification before consumption gates remain. Owned layout closure
 does not establish source fit, a functioning producer/fence or whole-state closure.
+
+## Rebuilt recall-result disposition projection — 2026-10-16
+
+The existing rebuild success payload now references the owned ABI
+`rebuilt-recall-dispositions-carrier`. It is an ordered vector of closed
+two-key rows: `request-id` and `result-disposition`. Each row projects those
+exact values from the corresponding retained request in the returned rebuilt
+state. The inventory remains every retained request, including active,
+incomplete, exhausted, completed and invalidated requests, even when active
+inclusion folds are empty. Exact unsigned UTF-8 request-ID order and uniqueness
+come from the existing retained-request inventory; an empty vector is valid
+only when that inventory is empty.
+
+The nested disposition consumes the existing closed four-key current or
+invalidated variant. Current results retain their complete actual authority
+values and qualified `RecallSuccess`. Invalidated results retain their actual
+authority binding and `stale-recall-authority` reason, with no result key or
+empty success substitute. Returned rows must agree completely with the rebuilt
+state and qualified replacement checkpoint state. Original request/source
+custody remains retained separately; this projection cannot copy historical
+output, retag authority or grant permission to expose denied information.
+
+This selects the layout of an already required result, without adding a state
+key, snapshot field, event identity, effect or budget. Every projected copy,
+validation and encoded value shares the existing whole-call limits. Planned
+controls cover empty and mixed inventories, retained active and completed
+requests, full state/checkpoint agreement, malformed or omitted rows, and
+invalidated-payload exclusion. These controls have not been executed.
+
+The remaining observation-record layout, full foreign
+authority/original-source/history contracts and producer qualification remain
+explicit obligations. This change does not settle the whole success-union
+finding, close the entire state, resolve the 100-step/64-rebuild mismatch,
+adopt the conditional restore estimate, admit a card to Ready or establish a
+served B1–B3 proof.
+
+## Actual rebuild accounting result layout — 2026-10-16
+
+The existing rebuild result's accounting field now selects ABI
+`rebuild-budget-accounting-carrier`, a closed sixteen-key map of exact safe
+nonnegative integer counts. Its fields report the actual distinct qualified
+envelope count, original canonical Clio bytes, complete materialized history
+argument bytes, whole input wire bytes, summed replayed quanta and whole-call
+work. It separately reports peak entity/bond/scoped-cell populations, actual
+trace records and encoded envelope bytes, peak state/checkpoint/remaining
+argument encodings, and the largest validated ID and other variable string.
+Each field names its existing measure and unchanged inclusive maximum.
+
+Population and encoded-carrier peaks cover every validated input and private
+candidate; they are neither snapshot sums nor final-state-only measurements.
+Identity deduplication applies only to qualified original envelope inventory.
+All main, nested and repeated reconstruction work and quanta remain charged
+to the existing single invocation meter. Full history/reference custody and
+continuation closure remain required; the report grants no resource allowance.
+It adds no state, snapshot or history field and cannot authorize an incomplete
+reconstruction or expose a success accounting record on refusal.
+
+The final work value includes report production and output encoding. The
+existing tagged binary64 codec gives every count a fixed sixteen-hex-digit
+representation, so the qualified fixed-layout report can reserve its exact
+remaining metered work before sealing the counter values. Actual consumption
+must match that reservation exactly, with no estimate, refund, omitted work
+or additional budget. Independent seal/meter and complete encoding controls
+are required before consumption. This source declaration and its literal
+encoding-width check do not execute a physical kernel or qualify that meter.
+Wall time and RSS remain independently observed outer host metrics.
+
+The ordinary advance/catch-up observation record grammar and the full foreign
+owner/source leaves remain open. This narrows the existing result-contract
+finding without claiming whole-state closure, resolved recovery-capacity fit,
+native Ready, implemented source or live B1–B3 proof.
