@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-closed-physical-carriers-and-checkpoint-overhead"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-closed-bonds-and-original-memory-source"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -316,14 +316,30 @@
              :checkpoint-restore-rebuild-preserves-both-vectors-and-mapping-revision]}
  :nexus/required [:memory-binding]
  :nexus-memory-binding
- {:version "finite-nexus-memory-binding/1" :location :ordered-entities-nexus-memory-binding
-  :memory-closed-keys [:version :binding-kind :memory-id :content-revision :graph-revision]
-  :memory-values {:version "finite-nexus-memory-binding/1" :binding-kind :memory
+ {:version "finite-nexus-memory-binding/2" :location :ordered-entities-nexus-memory-binding
+  :memory-closed-keys [:version :binding-kind :memory-id :content-revision :graph-revision :source-binding]
+  :memory-values {:version "finite-nexus-memory-binding/2" :binding-kind :memory
                   :memory-id :actual-qualified-canonical-memory-id
                   :content-revision :exact-qualified-owning-memory-content-revision
-                  :graph-revision :exact-qualified-owning-graph-snapshot-revision}
+                  :graph-revision :exact-qualified-owning-graph-snapshot-revision
+                  :source-binding :complete-original-owner-qualified-source-binding-below}
+  :source-binding
+  {:version "finite-nexus-memory-source/1"
+   :closed-keys [:version :stored-principal :memory-owner-principal :scope-id
+                 :memory-resource-id :source-event-id :original-authority-source-revision]
+   :version-value "finite-nexus-memory-source/1"
+   :principals-resource-and-event :nonempty-scalar-utf8-owner-qualified-id-strings-at-most128-exact-bytes
+   :scope-and-source-revision :nonempty-scalar-utf8-owner-qualified-strings-within-existing512-byte-cap
+   :memory-resource-id :exact-existing-owner-resource-for-the-same-memory-id-content-and-graph-record
+   :population :complete-binding-from-original-qualified-visible-memory-projection-and-matching-original-clio-source-envelope
+   :retention :complete-value-in-admitted-entity-canonical-state-snapshot-and-original-boundary-inputs-not-ids-or-hash-alone
+   :original-source :immutable-provenance-not-a-current-grant-or-policy-decision
+   :current-check :match-stored-principal-owner-scope-resource-and-original-source-against-explicit-qualified-current-axxium-authority-and-retained-qualified-clio-evidence-before-every-causal-use
+   :rebuild :same-original-binding-with-complete-current-authority-history-reconstruction-no-retagging-or-new-grant
+   :pure-fetch-inference-from-id-or-local-authorization :forbidden
+   :unknown-missing-mismatched-or-denied :whole-unchanged-refusal-before-contact-inclusion-with-existing-binding-or-authority-code}
   :non-memory-closed-keys [:version :binding-kind]
-  :non-memory-value {:version "finite-nexus-memory-binding/1" :binding-kind :non-memory}
+  :non-memory-value {:version "finite-nexus-memory-binding/2" :binding-kind :non-memory}
   :missing-field-nil-alias-or-inferred-non-memory :forbidden
   :population :explicit-owner-qualified-visible-projection-nexus-record-in-original-admit-state-or-existing-boundary-entity-update-input
   :source :actual-matching-memory-content-and-graph-records-with-original-principal-scope-and-qualified-provenance-retained-in-state
@@ -348,6 +364,31 @@
                   :mantle-lineage :intent-wallet :emission-id :recall-request-id]
  :bond/required [:id :endpoints :intent :contributions :provenance
                  :evidence-kinds :force-invariant :strength :rest-length]
+ :bond-state-contract
+ {:version "finite-physical-intent-bond/1"
+  :container :ordered-vector-of-unique-bond-records-strictly-increasing-by-exact-id-unsigned-utf8
+  :closed-keys [:id :endpoints :intent :contributions :provenance
+                :evidence-kinds :force-invariant :strength :rest-length]
+  :version-binding :this-exact-schema-bound-by-qualified-kernel-revision-no-optional-extension-fields
+  :id-and-intent :nonempty-scalar-utf8-owner-qualified-id-strings-at-most128-exact-bytes
+  :endpoints :ordered-vector-of-exactly-two-distinct-qualified-existing-entity-id-strings-in-original-owner-declared-endpoint-order
+  :endpoint-reordering-to-infer-direction-or-merge-bonds :forbidden
+  :contributions :ordered-vector-of-distinct-qualified-contribution-id-strings-in-exact-unsigned-utf8-order
+  :provenance :ordered-vector-of-distinct-original-qualified-clio-event-id-strings-in-exact-unsigned-utf8-order
+  :reference-type :same128-byte-id-string-type-with-complete-matching-source-values-retained-in-existing-canonical-contribution-provenance-and-counted-history-inputs
+  :references :validate-matching-immutable-source-bytes-principal-scope-and-current-authority-before-causal-use-never-id-equality-alone-or-host-lookup
+  :evidence-kinds :unique-subsequence-of-authored-reply-pin-inspiration-contradiction-in-that-exact-order
+  :force-invariant :exact-keyword-structural-and-semantic-counted-once
+  :strength-and-rest-length :finite-nonnegative-binary64-with-signed-zero-retained
+  :strength-source :actual-single-qualified-logical-bond-coefficient-no-invented-sum-or-second-global-multiplier
+  :population :complete-original-qualified-visible-projection-or-boundary-update-with-matching-existing-source-evidence
+  :snapshot-and-replay :all-and-only-exact-fields-retained-hashed-restored-and-rebuilt-with-original-evidence
+  :invalid-data {:status :refused :reason :invalid-intent-bond :reason-revision 1 :state :exact-unchanged-prior-state}
+  :authority-and-finite-refusals :retain-their-own-codes
+  :bounds :all-records-references-encoding-and-validation-within-existing-bond-byte-work-and-continuation-limits
+  :fixtures [:closed-bond-and-empty-collection-positive :extra-missing-key-nested-type-order-and-reference-refusals
+             :same-logical-bonds-two-adapters-identical-state-snapshot-bytes-and-hash
+             :checkpoint-restore-rebuild-preserve-exact-original-fields-and-source-bindings]}
  :bond/coefficients {:strength :finite-nonnegative :rest-length :finite-nonnegative
                      :source :one-admitted-logical-bond-never-a-second-global-multiplier}
  :bond/evidence-kinds [:authored :reply :pin :inspiration :contradiction]
@@ -403,7 +444,9 @@
                     :checkpoint-evidence-unestablished
                     :producing-identity-unestablished :mechanics-revision-mismatch
                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity
-                    :invalid-feedback-acknowledgement :feedback-storage-failed
+                    :invalid-feedback-acknowledgement :feedback-storage-failed :invalid-intent-bond
+                    :invalid-recall-request :missing-or-ambiguous-rebuild-history
+                    :invalid-rebuild-binding :revocation-rebuild-budget-exceeded
                     :finite-input-byte-limit :finite-trace-budget-exceeded
                     :finite-work-budget-exceeded :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
@@ -469,6 +512,7 @@
                                           :invalid-trail-state :refused
                                           :invalid-nexus-memory-binding :refused
                                           :invalid-physical-entity :refused
+                                          :invalid-intent-bond :refused
                                           :current-authority-unestablished :refused
                                           :stale-recall-authority :stale
                                           :denied-recall-authority :denied
@@ -512,7 +556,7 @@
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
                 :refusal-reasons [:producing-identity-unestablished :mechanics-revision-mismatch :invalid-recall-request :invalid-contact-profile-binding
-                                 :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :current-authority-unestablished
+                                 :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :invalid-intent-bond :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
                                   :finite-trace-budget-exceeded :finite-work-budget-exceeded]
@@ -647,7 +691,7 @@
                      :invalid-rebuild-binding :current-authority-unestablished
                      :checkpoint-evidence-unestablished
                     :producing-identity-unestablished :mechanics-revision-mismatch
-                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity
+                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :invalid-intent-bond
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden

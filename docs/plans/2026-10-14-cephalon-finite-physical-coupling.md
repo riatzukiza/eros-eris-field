@@ -1781,3 +1781,34 @@ take precedence; a matching authorized failed writer observation retains its
 separate `feedback-storage-failed` branch. All six corrections are proposed
 owning contract/prose changes. Parser checks establish EDN shape only; no domain,
 continuation, wallet, codec or live B1–B3 behavior is claimed implemented.
+
+
+### Canonical bond and memory-source custody — 2026-10-16
+
+Current Codex review5541694130 on d6 identifies roots4289777747/7750/7753.
+The proposed finite-physical-intent-bond/1 closes the complete bond collection
+and record, exact endpoint order, contribution/provenance reference vectors,
+intent/evidence kinds, invariant and finite coefficients. Original matching
+source values remain in existing canonical provenance/countable history; IDs
+alone grant no authority and pure transitions fetch no owner. Snapshot encoding
+retains all and only those fields, with no extra adapter metadata or invented
+coefficient aggregation. This is a proposed representation, not qualified code.
+
+Memory variant finite-nexus-memory-binding/2 now retains a closed original
+source-binding value: actual stored principal, memory owner, scope/resource,
+Clio source event and original authority source revision. The complete binding
+is populated from the qualified original projection/source envelope and retained
+in entity/state/snapshot/history; advance receives the existing explicit current
+Axxium projection to validate actual stored identities/resources before causal
+use. Original provenance is not a current grant. Rebuild retains that original
+binding and reconstructs against current authority; no ID inference, ambient
+lookup, authority minting or denied retagging.
+
+The shared result's declared reason set now includes operation-local
+invalid-recall-request, missing-or-ambiguous-rebuild-history,
+invalid-rebuild-binding and revocation-rebuild-budget-exceeded. New invalid
+bond data has invalid-intent-bond/refused/revision1 consistently in shared,
+read map/vector and rebuild declarations. All prior state-preservation, current
+authority and finite bounds remain. Declared closed-shape/hash/source-binding
+controls still require future owning RED/GREEN; parsing these maps executes no
+bond, authorization, snapshot or physical behavior.

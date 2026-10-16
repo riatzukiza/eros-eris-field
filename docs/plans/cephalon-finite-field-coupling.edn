@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-closed-physical-carriers-and-checkpoint-overhead"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-closed-bonds-and-original-memory-source"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -378,6 +378,7 @@
                 :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
                 :values :qualified-owning-abi-values-only
                 :ordered-entities "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract"
+                :intent-bonds "docs/plans/cephalon-physical-kernel-abi.edn#bond-state-contract"
                 :request-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
                 :coverage :all-physical-configuration-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
                 :projection-omission-or-unqualified-cache-substitution :forbidden}
