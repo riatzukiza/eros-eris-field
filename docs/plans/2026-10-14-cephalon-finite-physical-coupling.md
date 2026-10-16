@@ -2452,3 +2452,55 @@ seven newly recovered native blobs are bound to commit
 `788cdd3434615a7932b924e68520dbf7f88408c2` and its resolved tree; native responses,
 Git object hashes and decoded source bytes were retained. Inspection executed no
 Clio schema, codec, append, canonicalization, Field operation or runtime proof.
+
+
+## Explicit original custody at the emit call — 2026-10-16
+
+The previous eight-argument proposal required complete original custody but had
+no selected path for supplying the first emission's native input event. Its five
+original inputs are inside that event; putting the enclosing event into one of
+them creates self-reference. State cursors provide only identifiers, and neither
+current authority nor producing identity is a historical-source container.
+Unclosed provenance/state leaves cannot silently supply an implemented bridge.
+
+Append an explicit final `original-admission-custody` argument to emit-recall.
+The preceding eight argument positions and the five immutable input values stay
+unchanged. This is ordinary interface repair in the existing eight-point ABI
+card; that card's estimate is not an eight-argument requirement. Prior notes
+preserving eight arguments describe their historical source selections. There
+is no implemented API migration, extra point or upstream feature in this change.
+
+The new argument supplies the already-required complete six-field original
+custody map. Its history binding has two keys: version and input-event, holding
+the complete actual native Clio original-input envelope. Native schema/source and
+complete-history admission remain Clio-owned. The envelope's exact tagged
+payload must match all five supplied original input values; its schema reference
+cannot authenticate itself. The input event contains no custody, enclosing event,
+result or post-state, so custody can reference it without a cycle.
+Other checkpoint, fold and rebuild reference carriers remain explicitly
+unresolved; this history wrapper binds only the original input event.
+
+The outer source producer must prepare and qualify the inputs, native input
+record and complete original custody before the pure Field call. Validate them
+before causal work and retain exactly the supplied custody only on successful
+admission. Exact retry compares the original five inputs and, separately, all
+six supplied original custody values against the retained originals. Missing or
+different custody refuses; the caller cannot silently reuse a stored copy.
+Fresh current authorization, producing identity and result-exposure guards remain
+independent. Original authority stays historical and is never retagged as current.
+
+All nine arguments, including repeated complete envelope, payload, schema and
+source evidence, count under existing input/state/checkpoint/history/work limits.
+No default custody, ambient cache, eight-argument bypass, truncation or extra
+allowance is selected. Existing refusal precedence and whole unchanged-state
+behavior remain. Replay retains original source roles without refetching facts.
+
+Pinned Knoxx has canonical Clio history and a fixed accepted-operation store,
+but its provider result precedes construction of that operation's envelope. The
+encounter adapter uses existing OpenPlanner event rows. Neither inspected path
+already produces this Field input event or complete first-admission custody.
+Actual producer/source leaves, native envelope selection/retention, current
+admission, cross-store commit/exposure protection and executed fit remain open.
+This amendment selects the explicit data route and history layout; it executes
+no producer, native store, Field transition or runtime behavior. Existing lawful
+Ready and implementation/independent qualification ordering remains required.

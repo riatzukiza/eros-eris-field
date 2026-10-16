@@ -1053,3 +1053,23 @@
   spore: none
   receipt-refs: cephalon-clio-original-emission-payload-20261016-verified
   note: The proposed two-key Field event/data records complete five original inputs through the existing tagged-value tree, preserving finite binary64 bits without raw numeric canonicalization. Native Clio retains schema, identity, EDN transport, append conflicts and complete-union history authority. Retain the same complete envelope for retry; fresh runtime append would remint UUID/time. Six original custody fields remain mandatory, counted and immutably bound to actual envelope/payload; input recording proves no physical emission or state success. Actual producer, schema materialization, original source/history association, current authority, durable retention and cross-store commit/exposure custody remain unqualified. All earlier mechanics, caps, arguments, refusal and fixture values remain exact. Prior108 receipt/reflection prefixes and both Markdown prefixes preserved. Local/unpushed source only; no Ready, board, scope, runtime, credential, paid model or deployment change. Full suite remains held below accepted20GiB floor.
+
+- ts: 2026-10-16T16:28:21.229Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-emission-custody-input-20261016-start
+  note: Audit actual native request/event/full-custody route before another source selection. Existing Knoxx Clio application store records fixed operation-accepted method/args/result facts; encounter adapter uses OpenPlanner event rows. Neither inspected surface currently implements the selected Field input event. Current Field emit has eight arguments and the native event carries all five original inputs, excluding its own envelope. Check whether complete original native custody can enter without hidden state/authority payload or self-reference. Corrected the first absent Knoxx source-path read using actual backend inventory; no failed read is proof. Existing ABI8 refers to the eight-point card, not a separately authorized arity cap. No new scope/point/upstream feature is inferred. Full suite held below accepted20GiB floor; no clone/install/runtime action.
+
+- ts: 2026-10-16T16:37:12.270Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-emission-custody-input-20261016-verified
+  note: Confirmed previous eight-argument call had no selected first-admission source for separately mandatory original custody. Append explicit final ninth original-admission-custody argument, preserving earlier eight positions and five immutable inputs/native payload. Supply the existing complete six-field custody, retain exact original value only after successful admission, and separately compare complete custody on retry with fresh current authorization independent. History wrapper contains version and complete original native input event; event payload excludes custody and self-reference. Restored grouped checkpoint/fold/rebuild reference carrier to exact prior unresolved value after identifying its broader meaning; new wrapper closes only original-event value layout. All repeated ninth-argument source/envelope copies count under unchanged limits. Actual source/producer/owner leaves, historical admission, remaining references, commit/exposure protection and executed fit remain open. Earlier110 journals and both plan-note prefixes remain exact. Ordinary existing eight-point ABI interface authoring, no new point/upstream feature/native Ready/board/runtime/credential/paid model/deployment change. Local and unpushed; full suite held below accepted20GiB floor.

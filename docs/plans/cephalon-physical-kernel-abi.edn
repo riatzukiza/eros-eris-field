@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-clio-original-emission-inputs"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-explicit-original-custody-input"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -1316,6 +1316,7 @@
   :not-in-payload [:input-state :complete-original-custody :enclosing-native-event :event-id :admitted-event-cursor :emitted-output-entity :result-disposition :post-emission-state-or-snapshot-hash]
   :custody-boundary :complete-six-key-original-custody-and-required-source-values-remain-mandatory-in-separately-qualified-counted-owner-source-history-not-closed-or-replaced-by-this-input-record
   :custody-event-binding :separate-original-custody-must-immutably-bind-complete-actual-native-envelope-including-id-schema-ref-stream-sequence-causes-and-this-exact-tagged-payload-no-later-mutable-lookup-or-digest-only-substitute
+  :field-call-input "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-custody-input-port"
   :no-self-reference :original-inputs-and-preexisting-source-evidence-cannot-embed-this-new-native-envelope-cursor-or-output-state
   :native-schema :materialize-complete-consumer-event-form-through-native-catalog-and-retain-actual-historical-root-leaf-and-source-snapshots-no-handwritten-clio-event-version
   :native-make :clio.infra.event-make-event-owns-new-event-uuid-type-schema-and-wall-time-once-for-an-original-candidate-not-inside-pure-field-transition
@@ -1364,6 +1365,77 @@
     :path "src/clio/law/ledger.cljc" :sha256 "d1df872f834d0d7369a639bb1ebfdeaa403a819d3d474db345dc1757079b4510"}
    {:repository "open-hax/clio" :revision "788cdd3434615a7932b924e68520dbf7f88408c2"
     :path "src/clio/shape/edn.cljc" :sha256 "8864bec7ad85bd6462181328a533ed38b792c219fcb16ba21405deffcfcf0a5f"}]}
+ :original-emission-custody-input-port
+ {:version "finite-original-emission-custody-input/1"
+  :status :proposed-explicit-owned-call-input-repair-not-an-implemented-source-producer
+  :argument :original-admission-custody
+  :position :ninth-and-final-emit-recall-argument-all-previous-eight-positions-unchanged
+  :shape "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/original-custody"
+  :complete-value :all-existing-six-original-custody-fields-no-new-custody-root-key
+  :arity-rationale :previous-eight-inputs-have-no-selected-first-admission-envelope-source-original-five-cannot-contain-their-own-enclosing-event-and-current-authority-or-cursors-cannot-substitute-for-it
+  :source-order [:qualify-original-five-inputs-and-original-owner-source
+                 :native-make-append-readback-and-complete-history-qualification-of-the-input-record
+                 :assemble-complete-original-custody-with-actual-native-input-event
+                 :independent-current-authority-and-whole-call-admission
+                 :invoke-pure-emit-recall-with-nine-explicit-counted-arguments
+                 :retain-original-custody-with-result-only-after-success-and-qualified-commit]
+  :input-record "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-clio-port"
+  :event-equality :history-binding-input-event-data-original-inputs-is-the-exact-existing-tagged-value-tree-of-the-five-supplied-original-inputs-including-all-original-source-and-birth-values
+  :original-source-equality :all-six-fields-match-the-same-actual-qualified-original-principal-scope-authority-producing-identity-configuration-source-and-native-history-no-mixed-origin-copy
+  :no-pure-effects :all-event-creation-storage-history-and-authority-io-belongs-to-qualified-outer-adapters-before-the-pure-call-no-clock-model-fetch-or-new-clio-validator-in-field-domain
+  :first-admission :validate-complete-original-custody-and-source-event-agreement-before-any-particle-fold-contact-time-rng-or-state-commit-then-retain-the-exact-supplied-value
+  :retry-source-check :compare-complete-supplied-original-custody-to-recorded-original-custody-under-existing-exact-scalar-vector-and-binary64-rules-alongside-the-unchanged-five-input-comparison
+  :retry-missing-or-different :refuse-no-silent-substitution-from-retained-state-new-envelope-authority-retagging-or-reemission
+  :current-admission :fresh-current-authority-producing-identity-state-and-result-exposure-guards-remain-separate-original-authority-custody-is-historical-provenance-only
+  :replay :retain-and-reuse-original-nine-argument-source-roles-with-original-custody-and-independent-applicable-current-authority-no-refetch-or-new-event-id
+  :wire-and-bounds :existing-input-wire-encodes-all-nine-arguments-in-order-charge-full-custody-including-repeated-native-envelope-payload-schema-and-source-copies-under-existing-input-state-checkpoint-history-work-and-continuation-caps
+  :old-arity :not-a-complete-call-under-this-prospective-interface-no-default-custody-ambient-cache-or-silent-eight-argument-compatibility-path
+  :refusal :malformed-missing-or-conflicting-original-custody-and-input-event-bindings-use-existing-invalid-recall-request-where-applicable-preserve-owner-boundary-errors-and-all-existing-authority-producing-identity-finite-limit-precedence-and-whole-unchanged-refusals
+  :native-knoxx-observation :existing-application-store-history-exposes-native-envelopes-but-fixed-operation-accepted-catalog-and-post-provider-event-construction-do-not-produce-this-field-input-event-or-its-first-admission-custody
+  :generic-result-retry :ordinary-method-args-equality-and-stored-result-return-do-not-supply-field-bit-equality-current-result-authority-or-whole-call-fence
+  :still-open [:actual-qualified-original-input-event-and-custody-producer
+               :remaining-original-owner-source-leaf-shapes-and-admission
+               :native-actor-subject-stream-sequence-causes-durable-envelope-retention-and-history-qualification
+               :current-authority-and-cross-store-commit-exposure-custody
+               :loaded-encoding-and-source-plumbing-with-complete-independent-executed-fit-controls]
+  :readiness :ordinary-existing-eight-point-abi-card-interface-authoring-no-new-point-or-upstream-feature-source-and-fixture-prerequisites-before-lawful-ready-own-implementation-after-ready-qualified-execution-before-consumption-and-done
+  :future-controls [:first-emission-receives-complete-source-without-prior-request-row
+                    :event-excludes-custody-containing-event-no-self-cycle
+                    :input-payload-bit-mismatch-or-foreign-request-event-refused
+                    :same-five-inputs-with-missing-or-conflicting-custody-refused
+                    :exact-nine-argument-retry-unchanged-state-and-current-authorized-result
+                    :original-authority-not-retagged-or-used-as-current-grant
+                    :changed-current-authority-keeps-existing-refusal-or-qualified-rebuild
+                    :nine-argument-wire-and-complete-copy-exact-cap-and-one-over
+                    :no-particle-time-draw-feedback-budget-reset-on-refusal-or-retry]
+  :source-manifest
+ [   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/extern/clio_store.cljs" :sha256 "b69263b49332ad171c3d53178e5d2d2bab1e2a5a33f6751c00ffd4180ca6b818"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/clio_application_store.cljs" :sha256 "b2ee9c74d7bf91b162d8dfb03c526a7646c6ff9f8d466f98f8d9d87f6b9054f7"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/law/clio_application_store.cljc" :sha256 "b14c27f6943efd29f79beab64785d8ec1475ff1b0cc0ea681d63afa8b6b7d4cd"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/encounter_admission.cljs" :sha256 "82610eaa677cab7fcd7c1dafc41554cead4b3cd779cb12850bb5cbadedac6d68"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/encounter_openplanner.cljs" :sha256 "7d3eac3c987819f542a3b15a36fe87908df290de054b6d291f21c5deac9a2dd5"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/stores/clio_run_store.cljs" :sha256 "28e0b182e653974eb5f5ff6c04562516ee46b37246dcf4e32338a0a006424bc6"}]}
+ :original-emission-history-carrier
+ {:version "finite-original-emission-history/1"
+  :kind :closed-map :exact-keys [:version :input-event]
+  :fields {:version {:literal "finite-original-emission-history/1"}
+           :input-event :complete-actual-native-clio-envelope-of-the-original-field-recall-emission-inputs-event}
+  :native-envelope-owner :consume-clio-historical-event-schema-root-leaf-source-and-native-validation-no-field-redefinition-of-envelope-or-clio-admission
+  :payload "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-clio-port/event-data"
+  :association :exact-tagged-original-five-inputs-agreement-and-full-original-owner-source-required-not-native-id-or-schema-ref-alone
+  :historical-admission :actual-matching-native-append-readback-complete-history-and-historical-schema-source-evidence-retained-in-existing-qualified-source-evidence-no-envelope-self-authentication
+  :cursor :any-required-cursor-triple-must-match-this-same-complete-native-event-not-a-replacement-for-it
+  :no-effect-claim :input-record-is-not-physical-emission-success-checkpoint-proof-or-terminal-effect
+  :remaining-history :original-pre-operation-horizon-covered-prefix-current-whole-call-admission-and-complete-parent-source-obligations-remain-with-their-own-qualified-ports-this-wrapper-does-not-close-them
+  :retention :complete-original-envelope-and-all-required-native-source-values-inside-the-existing-counted-original-custody-and-qualified-history-no-digest-only-or-later-mutable-lookup
+  :self-reference :no-enclosing-field-state-result-success-event-or-snapshot-hash-in-this-original-input-record
+  :bounds :every-encoded-repeated-value-source-and-validation-visit-counts-under-existing-caps-no-truncation-or-new-allowance}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
@@ -1439,10 +1511,10 @@
     :physical-configuration
     {:contract "docs/plans/cephalon-finite-field-coupling.edn#configuration-schema"}
     :source-evidence :FullOriginalRecallAdmissionSourceEvidence
-    :history-binding :QualifiedOriginalRequestHistoryBinding}
+    :history-binding {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-history-carrier"}}
    :authority-role :actual-original-admitted-owner-data-retained-as-provenance-never-a-future-current-grant
    :source-role :complete-matching-original-query-embedding-seed-budget-mood-contact-projection-and-emission-evidence-where-existing-contract-requires-it
-   :population :only-actual-existing-qualified-input-state-provenance-explicit-arguments-and-owner-history-no-new-fetch-producer-or-input-parameter
+   :population :exact-complete-original-admission-custody-explicit-final-emit-recall-argument-qualified-before-pure-call-no-ambient-state-authority-or-cursor-substitute-no-pure-fetch
    :missing-producing-path :explicit-unresolved-before-readiness-not-a-synthesized-record
    :snapshot-self-reference :forbidden-no-enclosing-state-snapshot-or-its-state-snapshot-hash
    :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"}
@@ -1492,6 +1564,8 @@
   :exact-immutable-retry
   {:compare :all-five-original-input-values-including-every-nested-request-value-and-original-principal-scope
    :equality :exact-canonical-values-exact-scalar-utf8-spelling-vector-order-and-binary64-bits
+   :separate-original-custody-check :complete-supplied-original-admission-custody-exactly-equals-retained-original-custody-no-missing-or-changed-value-substitution
+   :original-custody-input "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-custody-input-port"
    :exclude-from-immutable-equality [:input-state :fresh-current-trusted-authority-projection
                                    :fresh-qualified-producing-identity-argument
                                    :evolving-result-disposition :current-live-entity-motion-and-population]
@@ -2021,7 +2095,9 @@
              :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
                        :physical-budget :mood-lens-revision :new-particle-contact-profile-bindings
-                       :current-trusted-authority-projection :qualified-producing-identity]
+                       :current-trusted-authority-projection :qualified-producing-identity
+                       :original-admission-custody]
+                :original-custody-input "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-custody-input-port"
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
                 :request-field-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
