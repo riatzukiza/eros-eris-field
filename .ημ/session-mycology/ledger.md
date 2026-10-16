@@ -913,3 +913,23 @@
   spore: none
   receipt-refs: cephalon-field-original-query-embedding-source-qualified-local-20261016
   note: Selected7-key Field-owned original embedding capture and content revision using existing exact tagged-value encoding. Raw owner query, actual model/dimension and actual formatter branch values remain distinct from normalized generate output; output may be cached/batched/chunked and supplies no rawHTTP or hidden-weight identity. Native factory currently exports no capture record and reports fieldnot-loaded. Independent review caught an initial impossible unused-prefix read requirement; final exact readfalse/no-value versus readtrue/value nil-or-string union matches owner template early return. Final independent four-file hashes stable, no remaining confirmed contradiction, no native approval/round credit. V1 private checker parser passed then analysis hit user-namespace imported source; V2 adds only private namespace, all assertions retained; V3 adds prefix variant checks. Original failed artifacts preserved. Actual recorder/loaded-source/content-revision implementation and independent execution remain afterlawfulReady beforeconsumption/Done; existing source/interface/fixture selection and upstream/native prerequisites retained. Owner/history/presence/birth and whole-state gaps remain. All94 committed receipt/reflection bytes exact; new96 receipts, localunpublished. Goal active/live0of3; heartbeat human-paused; fullETAunstarted below20GiB. No new scope/points/native request/push/board/runtime/credentials/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T14:32:55.649Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-presence-character-source-port-start-20261016
+  note: Observe existing explicit character context as candidate original identity/persona data, separate from rendered-system-prompt fallback, dynamic snapshot/mood/query and credentials. Actual creative agent source declares roleopen-hax without explicit charactercontext; role prompt380UTF8bytes is source evidence, not active context/seed/fit proof. Donor spawn blends directive/variant/target/queue into seed and helper may hash-fallback; preserve its meaning/purpose design without selecting those substitutions. Full actual original seed source/vector producer, presence-to-principal/scope binding and physical birth remain unqualified. This is existing ABI8 source archaeology, no new story/points/owner protocol or native Ready. Preserve all96 prior receipt/reflection bytes and cap/fixture/upstream obligations. Goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB, no new scope/provider/native/push/board/runtime/credentials/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T14:38:42.722Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-presence-character-source-port-qualified-local-20261016
+  note: Independent read-only audit confirms actual explicit CharacterContext candidate shape(rootclosed/snapshotopen), native validator/contract source, render-before-conditional-toolmode-fallback, sourcecreative agent roleopen-hax with no explicit context, and donor spawn mixed inputs plus normalized/hash-fallback embedding path. These observations identify source substitutions, not live failures or prior-agent motives. No auto role/prompt/label-to-presence identity or grant; actual full original source/vector producer/principal-scope/birth remains unqualified. Candidate explicit persona/identity source and exclusions now authored under existing ABI8. No five-key seed/function/physics/RNG/cap/fixture change or complete-state/Ready claim. Exact final4hashes independently stable; no native review/approval/round credit. All96 committed receipt/reflection bytes remain exact; new98 records local/unpublished. Original source/interface/birth/fixture selection and existing upstream/native prerequisites precedeReady; own adapter/compiled implementation and independent execution followlawfulReady beforeconsumption/Done. Goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. No new scope/points/source push/provider request/board/runtime/credentials/paid/deployment/social/spore action.

@@ -2138,3 +2138,34 @@ upstream prerequisites precede Ready. Own adapter implementation and actual
 loaded-source/capture/revision controls follow lawful Ready; independent executed
 proof remains before consumption/Done. These source observations and static
 representation edits establish no physical integration, persistence or live proof.
+
+## Presence meaning-data port selection — 2026-10-16
+
+The [owning source archaeology](2026-10-07-cephalon-physical-kernel.md#presence-meaning-source-and-observed-substitutions--2026-10-16)
+and ABI `presence-character-source-port` select the observed explicit native
+Knoxx CharacterContext as the candidate identity/persona data port, with its
+actual schema/validator and eleven immutable source bindings. The native root
+is closed but snapshot is open; this observation closes no full authority or
+original seed-source leaf. Retain the full original context under existing
+bounds, while treating only its qualified original explicit persona/identity as
+candidate meaning data. Snapshot, mood, query and outside content supply no
+replacement original meaning or instruction authority.
+
+The tool-mode fallback copies actor/contract ID and the already-rendered system
+prompt when explicit context is absent; it is not an original presence/seed
+binding. The observed creative resource has an Open-Hax role claim and no
+explicit context. Actual role text exists, but its identity/size grants no
+automatic context, semantic vector or physical seed. No runtime resource changed.
+
+The observed Fork Tales particle constructor adds variant/directive/target/queue
+to its seed text and its embedding helper can normalize or hash-fallback. These
+source observations distinguish that donor code from the selected separate seed
+roles; they establish no live incident or prior-agent motivation. No silent
+hash vector, mixed turn prompt or current query is selected as the presence seed.
+
+Actual full original source, principal/scope binding, semantic-vector/revision
+producer and physical birth mapping remain open. Before Ready, select their
+complete interfaces/mappings/fixture plan with existing upstream/native gates.
+Own implementation follows lawful Ready; independent executed qualification
+remains before consumption/Done. The existing five-key seed and all other
+mechanics, parameters, caps and fixtures are preserved. No live B proof is added.

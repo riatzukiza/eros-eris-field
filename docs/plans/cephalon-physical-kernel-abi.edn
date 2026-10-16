@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-query-embedding-source"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-presence-character-source-port"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -633,6 +633,83 @@
                     :no-source-self-hash-enclosing-state-cycle-or-secret-runtime-object
                     :exact-retry-checkpoint-restore-rebuild-preserve-original-source-and-revision-without-provider-call
                     :all-existing-exact-and-one-over-byte-work-state-checkpoint-and-continuation-bounds]}
+ :presence-character-source-port
+ {:status :observed-native-character-data-port-selected-as-candidate-not-qualified-presence-seed-production
+  :owner "riatzukiza/knoxx"
+  :source-revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+  :schema :knoxx.backend.shape.character.tool-modes/CharacterContext
+  :validator :knoxx.backend.law.character.tool-modes/character-refusal
+  :owner-shape :consume-actual-owner-schema-and-validator-no-field-owned-copy-or-shadow-registry
+  :shape-limits :owner-root-closed-with-identity-persona-snapshot-evidence-ids-and-optional-revision-nested-snapshot-explicitly-open
+  :original-value :entire-qualified-original-explicit-owner-CharacterContext-including-actual-snapshot-evidence-ids-and-optional-revision-presence-no-dropping-fields-to-fit
+  :candidate-origin :explicit-agent-character-context-or-root-contract-character-context-as-selected-by-owning-resolved-agent-map-before-any-rendered-prompt-fallback
+  :candidate-presence-id :actual-explicit-CharacterContext-identity-only-with-existing-qualified-original-presence-principal-scope-binding-not-default-actor-or-contract-id
+  :candidate-meaning-purpose :original-explicit-CharacterContext-persona-as-meaning-data-with-actual-trusted-authored-origin-not-the-assembled-turn-system-prompt
+  :not-purpose-inputs [:dynamic-snapshot :evidence-ids-as-instructions :current-query :outside-observation-text :transient-directive :target-presence :queue-ratio :mood-and-attention-projection]
+  :original-custody :all-owner-values-remain-provenance-only-and-existing-current-authority-owner-history-and-source-admission-still-required
+  :role-observation
+  {:role-id :role/open-hax
+   :resource "contracts/roles/open-hax.edn"
+   :source-system-prompt-utf8-bytes 380 :source-description-utf8-bytes 96
+   :meaning :observed-durable-creative-personality-material-not-a-selected-vector-or-complete-source-fit-proof
+   :no-auto-population :do-not-copy-role-name-or-system-prompt-into-a-new-presence-context-or-infer-presence-principal-identity-without-qualified-original-mapping}
+  :current-agent-observation
+  {:resource "contracts/agents/ussyverse_social_creative.edn"
+   :role-claim :role/open-hax
+   :explicit-character-context :absent-at-both-supported-contract-locations
+   :scope :candidate-source-blob-only-not-current-served-configuration-or-running-projection-observation}
+  :fallback-observation
+  {:source :knoxx.backend.infra.character.turn-context/character-spec
+   :guard :tool-modes-enabled-and-no-explicit-character-context
+   :identity :actor-id-or-contract-id :persona :already-rendered-system-prompt
+   :snapshot-and-evidence :empty
+   :selection :not-original-presence-meaning-source-proof-no-automatic-fallback-promotion}
+  :donor-runtime-observation
+  {:repository "octave-commons/fork_tales" :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+   :spawn :presence-prompt-plus-variant-directive-target-and-queue-ratio-before-embedding
+   :embedding :actual-semantic-result-may-be-sliced-padded-normalized-or-replaced-by-deterministic-token-SHA1-fallback-on-absent-error-result
+   :selection :observed-donor-runtime-not-the-selected-original-presence-seed-producer-or-qualified-semantic-vector
+   :interpretation :these-extra-and-fallback-inputs-differ-from-this-plans-separated-presence-query-mantle-intent-and-mood-roles-not-a-claim-about-prior-agent-motivation-or-a-live-incident}
+  :source-manifest [
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/shape/character/tool_modes.cljc" :sha256 "3f5e41379f6264f6e8c59f05a34ccff5c840cf12a558c5f982061ceabb0524dc"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/law/character/tool_modes.cljc" :sha256 "7de4d6c1c10767254f4c4e784d2547c4c65c82bf6d31e3537e4b8b254243aaac"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/character/tool_modes.cljc" :sha256 "df64074fd09ce9507312b1434a71736ef00e6cf3c306255d71e012e3c157322a"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/turn_context.cljs" :sha256 "946b6f8d2ba29867893ea9c36613987284cb89d3e3fbcf04b9e5e9bddb7e2f44"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/contracts/resolve.cljs" :sha256 "b2c0b78590123541bd955a72df117af9b8d9d981c82e6ae2155f0730a1ab6bd3"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/contracts/roles.cljs" :sha256 "22aee84595df8f8c0e81882bebdbff3e2ddd1bb47f304ac9e5b9e202d494d9e0"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/agent/agent_templates.cljs" :sha256 "64f6314281789749b509982872670c968cb1913271e2d1ded7f3e19680f6131b"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "contracts/roles/open-hax.edn" :sha256 "3784d3132b7425f1e0476f2df6b929c5cabcbe04cadbce77f7b9ce36b2045ba7"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "contracts/agents/ussyverse_social_creative.edn" :sha256 "f78208fc1ca24463f3402c3e919ab275776856618a26fa5e9009543a2a99fa61"}
+   {:repository "octave-commons/fork_tales" :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+    :path "part64/code/world_web/daimoi_probabilistic.py" :sha256 "be5da8022cfa15498c46db3b4fa95f1193f7e7d4bf7ec80b84c83201061009b2"}
+   {:repository "octave-commons/fork_tales" :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+    :path "docs/notes/system_design/2026-02-20-design-hole-responses-field-and-collisions.md" :sha256 "c4ef760eb2b1cd050a95391a0b36675c2971e351d17d3559dd97e962373185fc"}]
+  :actual-seed-vector-producer :unselected-not-established-by-native-character-schema-rendered-prompt-role-membership-or-donor-constructor
+  :full-original-source-shape :still-required-FullOriginalQualifiedPresenceSeedSource-not-filled-by-an-unvalidated-map-or-a-port-label
+  :still-unselected [:qualified-original-presence-to-principal-scope-source-binding
+                     :meaning-source-to-exact-semantic-vector-and-revision-production
+                     :physical-birth-position-velocity-mass-wallet-mantle-and-emission-identity-mapping]
+  :bounds :native-schema-and-existing-field-id-string-finite-value-state-input-history-work-and-continuation-bounds-all-apply-open-owner-snapshot-does-not-waive-them
+  :qualification
+  {:before-ready :exact-original-source-schema-identity-purpose-vector-producer-interface-and-birth-mapping-plus-complete-fixture-plan-and-existing-required-upstream-native-prerequisites
+   :after-lawful-ready :own-adapter-and-compiled-consumer-implementation-then-independent-executed-original-source-vector-and-birth-controls-before-consumption-and-done
+   :current-evidence :immutable-source-blob-and-plain-role-text-byte-observation-only-no-original-runtime-context-seed-vector-model-or-birth-execution}
+  :future-controls [:explicit-original-context-is-distinct-from-rendered-system-prompt-fallback
+                    :context-identity-does-not-infer-stored-principal-or-current-permission
+                    :snapshot-mood-query-or-transient-directive-does-not-substitute-for-original-meaning-source
+                    :actual-qualified-semantic-vector-never-a-silent-token-hash-or-query-vector-substitute
+                    :whole-original-context-source-and-original-vector-revision-retained-across-retry-restore-rebuild
+                    :missing-explicit-source-or-unqualified-vector-producer-refuses-before-emission
+                    :all-original-byte-work-state-history-and-continuation-bounds]}
  :validated-recall-seed-carrier
  {:version "finite-origin-presence-seed/1"
   :status :proposed-owned-key-layout-with-unselected-original-presence-source-and-birth-mapping
@@ -669,7 +746,8 @@
   :authority :source-provenance-is-not-current-authority-existing-fresh-principal-scope-and-source-checks-still-apply-before-causal-use-and-exposure
   :bounds :complete-source-vector-originals-and-copies-count-under-all-existing-input-state-checkpoint-history-work-and-trace-limits-no-fixed-dimension-or-new-default
   :readiness :exact-original-presence-source-schema-producer-and-binding-physical-birth-mapping-compiled-consumption-and-selected-fixture-fit-still-required
-  :actual-producer :unselected-not-established-by-openplanner-query-embedding-or-graph-seed-ranking}
+  :character-data-port "docs/plans/cephalon-physical-kernel-abi.edn#presence-character-source-port"
+  :actual-producer :unselected-not-established-by-native-character-data-port-rendered-prompt-role-membership-openplanner-query-or-donor-runtime}
  :request-physical-budget-carrier
  {:version "finite-request-physical-budget/1"
   :status :proposed-owned-layout-and-counter-binding-not-executed-budget-or-lifecycle-qualification

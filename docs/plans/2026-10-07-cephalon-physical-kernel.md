@@ -1430,3 +1430,52 @@ plan while preserving all existing native/upstream prerequisites. Own recorder/
 consumer implementation and actual loaded-source/capture/content-revision
 controls follow lawful Ready and require independent executed proof before
 consumption/Done. No domain, producer, persistence or live B proof ran here.
+
+## Presence meaning source and observed substitutions — 2026-10-16
+
+The selected Fork Tales note gives the presence seed a meaning/purpose role.
+The actual donor constructor is different evidence: `_spawn_particle` combines
+its presence prompt with variant, changing directive, target and queue ratio
+before embedding. `_embedding_from_text` can slice/pad/normalize a model result
+and can silently use a deterministic token/SHA1 vector after an absent/error
+semantic result. These are observed code paths, not a live failure or a claim
+about an agent's motivation. Copying them would not establish this plan's
+separate original presence/query/mantle/intent/mood inputs or qualified semantics.
+
+Knoxx has a real owner data port: `CharacterContext` in
+`knoxx.backend.shape.character.tool-modes`, validated by the owning
+`character-refusal`. Its root is closed with identity, persona, snapshot, evidence
+IDs and optional revision, but its nested snapshot is explicitly open. Consume
+the actual owner schema; do not restate it as a competing Field registry or
+claim it closes all original source/authority/history leaves. The candidate
+meaning source is the actual trusted explicitly authored original persona and
+identity, selected by `resolved-agent-map` from agent-level or root-level
+`character-context`. Retain the complete original owner value, including snapshot,
+evidence and optional-revision presence, under existing bounds. Snapshot, mood,
+query and outside text do not become original meaning or trusted instructions.
+
+The native preparation fallback is conditional: only with tool modes enabled
+and no explicit character context does `character-spec` copy actor/contract ID
+and the already-rendered system prompt, with empty snapshot/evidence. Rendering
+happens before that fallback. It supplies neither original stable purpose nor a
+proof that the actor/contract label is a presence identity. This source selection
+does not promote that fallback into the physical seed producer.
+
+The observed creative agent resource declares `role/open-hax` but no explicit
+character context at either supported location. The actual Open-Hax role carries
+creative personality material; its system text is380UTF8bytes and description
+96bytes. These measurements are neither complete source fit nor proof that an
+explicit original context or vector was produced. Do not automatically copy that
+role into a new presence, infer an identity/permission, or change the resource.
+This is candidate source evidence, not a served configuration observation.
+
+ABI `presence-character-source-port` pins eleven actual source blobs across
+Knoxx b6f4dfb and Fork Tales f4c43d7, records the candidate explicit context
+port, and excludes those automatic substitutions. The full original presence
+source, actual principal/scope binding, meaning-to-vector/revision producer and
+physical birth mapping remain unselected. The original five-key seed, all emit
+arguments, entity shapes, RNG, forces, caps and existing fixtures stay unchanged.
+Complete source/interface/birth mapping and fixture selection with existing
+upstream/native prerequisites precede Ready; own adapter/compiled implementation
+and independently executed controls follow lawful Ready before consumption/Done.
+No context, seed vector, embedding call, physical birth or live proof ran here.
