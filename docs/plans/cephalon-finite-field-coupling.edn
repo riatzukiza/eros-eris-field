@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-producing-identity-and-pre-operation-horizon"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-closed-physical-carriers-and-checkpoint-overhead"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -377,6 +377,8 @@
   :state-shape {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"
                 :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
                 :values :qualified-owning-abi-values-only
+                :ordered-entities "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract"
+                :request-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
                 :coverage :all-physical-configuration-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
                 :projection-omission-or-unqualified-cache-substitution :forbidden}
   :retained-carrier-contracts {:trails "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
@@ -446,7 +448,7 @@
              :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
              :outer-field-revision-and-component-mismatch-refused-without-invented-snapshot-field
              :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
-             :complete-checkpoint-argument-exact1048576-and-one-over
+             :complete-checkpoint-argument-exact1048756-and-one-over
              :payload-under-cap-but-complete-wrapper-one-over-refused]}
  :causal-entry-authority
  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
@@ -459,7 +461,11 @@
  {:owner :same-portable-field-shape-law-and-domain-before-any-successful-state-exposure
   :applies-to :every-operation-producing-or-restoring-a-state-or-checkpoint
   :state-argument-encoded-byte-cap 1048576
-  :checkpoint-argument-encoded-byte-cap 1048576
+  :checkpoint-argument-encoded-byte-cap 1048756
+  :checkpoint-wrapper-encoded-byte-overhead 180
+  :checkpoint-wrapper-overhead-rule :exact-trace-1-map-of-codec-state-and64-lowercase-hex-sha256-minus-encoded-state-value
+  :checkpoint-wrapper-overhead-components :map-tag-pair-vector-three-key-value-pairs-codec-string-and-digest-string-with-all-tags-separators-and-brackets
+  :checkpoint-cap-rule :state-argument-cap-plus-exact180-wrapper-bytes-no-reencoding-or-string-wrapping-of-state
   :event-tail-argument-encoded-byte-cap 1048576
   :other-arguments-and-complete-framing-aggregate-byte-cap 524288
   :component-byte-measure :exact-complete-encoded-argument-as-it-occurs-in-finite-field-input-1-including-the-declared-snapshot-domain-map-wrapper
@@ -469,7 +475,7 @@
   :remaining-byte-measure :all-other-argument-encodings-plus-entire-input-envelope-and-separators-without-double-counting-components
   :existing-canonical-clio-tail-byte-cap :separate-unchanged1048576-raw-clio-and-encoded-argument-caps-both-required
   :maximum-carriers :rebuild-prior-state-plus-checkpoint-plus-complete-event-tail
-  :maximum-composed-input-bytes 3670016
+  :maximum-composed-input-bytes 3670196
   :whole-input-byte-cap :unchanged4194304
   :before-success [:bounded-encode-complete-candidate-state
                    :bounded-encode-its-actual-qualified-checkpoint-argument
@@ -485,6 +491,7 @@
   :partial-inclusion-state-truncation-or-eviction-to-fit :forbidden
   :fixtures [:exact-state-argument-cap-and-one-over :exact-checkpoint-encoded-cap-and-one-over
              :complete-snapshot-tagged-map-wrapping-bytes-not-payload-only
+             :exact180-wrapper-overhead-with-distinct64-hex-digests-and-largest-state
              :snapshot-string-or-opaque-host-value-refused
              :complete-remaining-framing-and-tail-encoded-cap-and-one-over
              :largest-accepted-state-through-read-catchup-checkpoint-restore-and-rebuild
@@ -673,7 +680,8 @@
    :logical-bond :actual-admitted-bond-strength-and-rest-length-once-no-global-duplicate
    :field :field-cell-size-and-layer-gain-half-life-cell-cap-prune-values-in-index-order
    :passive-vectors :kinds-presence-or-nexus-read-and-deposit-vectors-with-field-mapping-revision
-   :daimoi-vectors :immutable-admitted-request-with-same-mapping-revision-no-configuration-fallback
+   :daimoi-vectors "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
+   :daimoi-vector-use :exact-field-weights-from-the-unique-retained-admitted-request-with-same-mapping-revision-no-configuration-fallback
    :motion :kinds-kind-gamma-static-threshold-speed-cap-wind-coupling-rate-and-forces-wind-cap
    :contact :exact-profile-id-revision-in-admitted-geometry-selects-recipient-kind-radii-and-restitution-no-override
    :exploration :complete-retained-law-revision-seed-permutation-gradients-scales-and-octaves-no-passive-propulsion}
@@ -728,7 +736,8 @@
                                 :trace-codec "finite-field-trace/1"
                                 :input-wire-codec "finite-field-input/1"
                                 :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
-                                :state-argument-encoded-bytes 1048576 :checkpoint-argument-encoded-bytes 1048576
+                                :state-argument-encoded-bytes 1048576 :checkpoint-argument-encoded-bytes 1048756
+                                :checkpoint-wrapper-encoded-byte-overhead 180
                                 :event-tail-argument-encoded-bytes 1048576
                                 :other-arguments-and-framing-aggregate-encoded-bytes 524288
                                 :successful-state-continuation :required-before-atomic-exposure

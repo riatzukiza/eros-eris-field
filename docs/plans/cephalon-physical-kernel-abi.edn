@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-producing-identity-and-pre-operation-horizon"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-closed-physical-carriers-and-checkpoint-overhead"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -258,6 +258,62 @@
              :revoke-already-witnessed-memory-before-next-fold-use]}
  :entity/required [:id :kind :position :velocity :mass :scope-revision]
  :entity/kinds [:presence :nexus :daimoi]
+ :entity-state-contract
+ {:version "finite-physical-entity/1"
+  :owner :portable-field-shape-not-a-replacement-for-owner-memory-or-authorization-contracts
+  :container :ordered-vector-of-unique-entity-records-strictly-increasing-by-exact-id-unsigned-utf8
+  :version-binding :this-exact-schema-revision-bound-by-the-qualified-kernel-revision-not-a-per-record-optional-tag
+  :presence-closed-keys [:id :kind :position :velocity :mass :scope-revision]
+  :nexus-closed-keys [:id :kind :position :velocity :mass :scope-revision :memory-binding]
+  :daimoi-closed-keys [:id :kind :position :velocity :mass :scope-revision
+                      :emitted-owner :seed-embedding :embedding-revision
+                      :mantle-lineage :intent-wallet :emission-id :recall-request-id]
+  :missing-additional-or-kind-inappropriate-keys :whole-unchanged-refusal-never-drop-fields-to-normalize
+  :id-and-reference-type :nonempty-scalar-utf8-string-at-most128-exact-bytes-qualified-by-the-existing-owner
+  :scope-and-revision-type :nonempty-scalar-utf8-string-within-existing512-byte-string-cap-and-exact-qualified-owner-binding
+  :kind :exactly-one-of-presence-nexus-daimoi-matching-the-selected-closed-variant
+  :position-and-velocity :ordered-vector-of-exactly-two-finite-binary64-values-with-signed-zero-retained
+  :mass :finite-binary64-strictly-positive
+  :memory-binding "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"
+  :emitted-owner :exact-original-stored-principal-id-from-the-qualified-request-no-reassignment
+  :seed-embedding :nonempty-ordered-vector-of-finite-binary64-values-with-exact-dimension-and-revision-from-the-qualified-admitted-embedding-input
+  :embedding-revision :exact-qualified-embedding-source-revision-not-a-local-model-alias
+  :mantle-lineage :ordered-vector-of-distinct-qualified-source-ids-in-original-lineage-order
+  :intent-wallet :map-from-qualified-intent-id-strings-to-exact-safe-nonnegative-integer-units-no-other-key-or-value-types
+  :wallet-key-order :canonical-trace-1-encoded-key-unsigned-utf8-order
+  :wallet-semantics :retained-original-qualified-payload-only-under-this-deflect-only-profile-no-absorption-exchange-or-new-intent-authority
+  :emission-id :actual-qualified-original-emission-id
+  :recall-request-id :exact-unique-retained-request-id-with-the-same-original-principal-and-scope
+  :external-graph-and-projection-metadata :stay-in-their-own-qualified-owner-records-not-extra-physical-entity-fields
+  :snapshot-and-replay :all-and-only-variant-fields-under-the-same-schema-in-admission-state-checkpoint-restore-and-rebuild
+  :invalid-data {:status :refused :reason :invalid-physical-entity :reason-revision 1 :state :exact-unchanged-prior-state}
+  :authority-and-finite-refusals :retain-their-own-codes
+  :bounds :all-vectors-wallet-entries-and-validation-share-existing-entity-byte-work-and-continuation-caps
+  :fixtures [:all-three-exact-variant-positive-goldens :missing-extra-and-kind-inappropriate-key-refusals
+             :duplicate-or-unsorted-entity-id-refusal :invalid-nested-vector-wallet-and-reference-refusals
+             :same-logical-entities-two-adapters-identical-snapshot-bytes-and-hash
+             :checkpoint-restore-rebuild-retain-all-exact-variant-fields]}
+ :request-weight-carrier
+ {:version "finite-request-field-weights/1"
+  :location :required-field-weights-key-in-the-scoped-immutable-request
+  :closed-keys [:version :mapping-revision :read-weights :deposit-weights]
+  :version-value "finite-request-field-weights/1"
+  :mapping-revision :nonempty-scalar-utf8-string-exactly-equal-to-retained-physical-configuration-field-mapping-revision
+  :read-weights :ordered-vector-of-exactly-eight-finite-nonnegative-binary64-values-in-layer-index-order
+  :deposit-weights :separate-ordered-vector-of-exactly-eight-finite-nonnegative-binary64-values-in-layer-index-order
+  :admission :validate-the-complete-carrier-before-emit-recall-and-retain-it-byte-exact-inside-the-original-request-in-its-canonical-recall-requests-record
+  :request-record-custody :retained-original-immutable-admission-inputs-include-this-complete-carrier-not-only-a-hash-or-revision
+  :lookup :daimoi-recall-request-id-selects-exactly-one-retained-original-request-with-matching-original-principal-and-scope
+  :sampling :use-read-weights-only :deposit :use-deposit-weights-only
+  :retry :same-request-id-requires-exact-original-carrier-match-including-binary64-bits
+  :snapshot-and-replay :complete-carrier-in-state-hash-checkpoint-and-original-event-inputs-restored-and-rebuilt-before-use
+  :missing-extra-malformed-wrong-length-nonfinite-negative-or-mapping-mismatch :invalid-recall-request-revision1-refused-with-unchanged-state
+  :authority-and-finite-refusals :retain-their-own-codes
+  :implicit-global-average-passive-or-read-to-deposit-fallback :forbidden
+  :bounds :all-carrier-bytes-and-validation-count-under-existing-input-state-checkpoint-work-and-continuation-caps
+  :fixtures [:distinct-read-and-deposit-vectors-positive :each-closed-key-and-vector-negative
+             :mapping-mismatch-refuses-before-emission :same-id-different-weight-bits-refuses
+             :checkpoint-restore-rebuild-preserves-both-vectors-and-mapping-revision]}
  :nexus/required [:memory-binding]
  :nexus-memory-binding
  {:version "finite-nexus-memory-binding/1" :location :ordered-entities-nexus-memory-binding
@@ -346,7 +402,8 @@
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :checkpoint-evidence-unestablished
                     :producing-identity-unestablished :mechanics-revision-mismatch
-                    :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
+                    :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity
+                    :invalid-feedback-acknowledgement :feedback-storage-failed
                     :finite-input-byte-limit :finite-trace-budget-exceeded
                     :finite-work-budget-exceeded :finite-state-continuation-byte-limit]}
  :input-wire-codec "finite-field-input/1"
@@ -372,6 +429,7 @@
                        :current-trusted-authority-projection :qualified-producing-identity]
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
+                :request-field-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
                 :request-uniqueness :all-admitted-requests-in-this-state-across-principals-and-scopes
                 :invalid-or-conflicting-request :unchanged-refusal-before-state-ordering-or-hashing
@@ -410,10 +468,12 @@
                                           :invalid-contact-profile-binding :refused
                                           :invalid-trail-state :refused
                                           :invalid-nexus-memory-binding :refused
+                                          :invalid-physical-entity :refused
                                           :current-authority-unestablished :refused
                                           :stale-recall-authority :stale
                                           :denied-recall-authority :denied
                                           :finite-input-byte-limit :refused
+                                          :finite-trace-budget-exceeded :refused
                                           :finite-state-continuation-byte-limit :refused
                                           :finite-work-budget-exceeded :refused}
                           :prior-state :untouched-and-not-returned
@@ -452,10 +512,10 @@
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
                 :refusal-reasons [:producing-identity-unestablished :mechanics-revision-mismatch :invalid-recall-request :invalid-contact-profile-binding
-                                 :invalid-trail-state :invalid-nexus-memory-binding :current-authority-unestablished
+                                 :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
-                                  :finite-work-budget-exceeded]
+                                  :finite-trace-budget-exceeded :finite-work-budget-exceeded]
                 :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
@@ -587,7 +647,7 @@
                      :invalid-rebuild-binding :current-authority-unestablished
                      :checkpoint-evidence-unestablished
                     :producing-identity-unestablished :mechanics-revision-mismatch
-                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
+                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
    :partial-replacement-or-retagging :forbidden
@@ -630,7 +690,18 @@
     :observation-provenance :outer-qualified-clio-retains-the-actual-failed-writer-observation
     :retry :same-pending-effect-id-with-a-new-actual-authorized-writer-observation
     :already-confirmed-or-conflicting-reference :not-a-matching-pending-failure}
-   :conflicting-or-untrusted-ack :unchanged-refusal
+   :conflicting-or-untrusted-ack
+   {:variant :refusal :status :refused :reason :invalid-feedback-acknowledgement :reason-revision 1
+    :state :exact-unchanged-prior-state :pending-feedback :unchanged
+    :confirmation :absent :reinforcement :none :confirmed-outcome-ids :unchanged
+    :cases [:malformed-ack :unknown-or-unauthorized-writer :missing-pending-effect
+            :different-effect-outcome-payload-or-original-scope :conflicting-prior-ack]
+    :authority-precedence :missing-stale-or-denied-current-causal-authority-keeps-its-declared-authority-refusal-before-ack-matching
+    :matching-authorized-failed-storage :feedback-storage-failed-not-this-branch
+    :fixtures [:mismatched-effect-outcome-payload-and-scope-exact-refusal
+               :unknown-untrusted-or-revoked-writer-exact-refusal-under-otherwise-valid-current-authority
+               :current-authority-revocation-keeps-own-code :matching-failed-storage-keeps-own-code
+               :matching-authorized-success-and-idempotent-confirmed-retry-unchanged]}
    :effects :none :new-elapsed-time :none :rng-draws :none}
   :checkpoint {:input [:state :current-trusted-authority-projection :qualified-producing-identity]
                :output [:state-transition-result]

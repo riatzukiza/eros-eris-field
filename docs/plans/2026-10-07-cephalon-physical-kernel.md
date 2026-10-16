@@ -762,3 +762,45 @@ Rheos changes before implementation. No current native point, dependency, status
 or agreed primary body is changed by this source proposal. Existing Incoming
 card text still requires owning Foresight mirror/review and native adoption;
 links or this conditional allocation supply no Ready.
+
+
+## Closed physical carriers and exact checkpoint overhead — 2026-10-16
+
+Current CodeRabbit review5541484661 identifies the state/checkpoint boundary
+mismatch and historical credential tense. The checkpoint's exact tagged wrapper
+adds180bytes to its encoded state: state1,048,576, checkpoint1,048,756, encoded
+tail1,048,576 and remaining arguments/framing524,288 compose to3,670,196bytes
+within the unchanged4,194,304-byte input cap. This is a derivation of proposed
+codec bytes, not an executed kernel fixture. The exact-state-cap positive,
+checkpoint cap, one-over and largest-state lifecycle controls remain required.
+The historical workflow section now consistently describes its then-active
+credential mapping in past tense; current caller isolation is unchanged.
+
+Current Codex review5541487995 adds four connected contract corrections.
+`finite-physical-entity/1` now closes each presence/nexus/daimoi variant and its
+nested physical values. Extra source graph metadata stays in its owner records;
+adapters cannot silently retain different extra entity fields and still claim
+the same snapshot. Source IDs, embedding revision/dimension and principal remain
+qualified by their existing owners. This proposed field shape grants no memory
+or authorization authority and enables no reserved wallet transfer operation.
+The complete exact variant is hashed, restored and rebuilt under the qualified
+kernel revision, with two-adapter snapshot equality as a future qualification.
+
+`finite-request-field-weights/1` is a mandatory closed `field-weights` carrier
+inside the original immutable admitted request: version, actual configuration
+mapping revision, eight read weights and eight separate deposit weights. Retain
+the complete value with the original admission inputs in `recall-requests` and
+original events. The daimoi's request ID selects exactly one matching original
+principal/scope record; retry, hashing, replay, restore and rebuild consume those
+exact values. Missing/invalid/mismatched carriers use revision1
+`invalid-recall-request`; authority and byte/work refusals keep their own codes.
+
+The read-only closed refusal map and its reason vector both include revision1
+`finite-trace-budget-exceeded` with status `refused`. Conflicting or untrusted
+feedback acknowledgements have an explicit revision1
+`invalid-feedback-acknowledgement` refusal with unchanged prior/pending/confirmed
+state and no confirmation or reinforcement. Current causal-authority refusals
+take precedence; a matching authorized failed writer observation retains its
+separate `feedback-storage-failed` branch. All six corrections are proposed
+owning contract/prose changes. Parser checks establish EDN shape only; no domain,
+continuation, wallet, codec or live B1–B3 behavior is claimed implemented.

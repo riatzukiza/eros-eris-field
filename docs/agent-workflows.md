@@ -148,17 +148,17 @@ clj-kondo 2025.10.23/pnpm 10.14.0 plus configured Node 22. The caller's custom g
 script replaces default dependency-install gates. Actual producer 116163403965
 completed SUCCESS, declaring bb 1.13.219 and proposed_abi_parse exit 0.
 
-Unlike the old skipped path, credential detection now receives the existing
-ETA_MU_APP_ID and ETA_MU_APP_PRIVATE_KEY secret mappings and, if both are present,
-the shared workflow can mint the existing scoped cross-repository read token
-for katamorph and mirror that dependency. These steps are not isolated merely
-because they are outside the gate step. The deterministic gate environment
-still maps only PR identifiers/script/checkout outputs, and the model step
-declares no App key; that declaration is not proof against process/runner
+Unlike the old skipped path, credential detection then received the existing
+ETA_MU_APP_ID and ETA_MU_APP_PRIVATE_KEY secret mappings and, if both were present,
+the shared workflow could mint the existing scoped cross-repository read token
+for katamorph and mirror that dependency. Those steps were not isolated merely
+because they were outside the gate step. The deterministic gate environment
+still mapped only PR identifiers/script/checkout outputs, and the model step
+declared no App key; that declaration was not proof against process/runner
 compromise or later-step environment inheritance. No secret value, new secret,
-provider credential or runtime deployment is introduced by this caller change.
-Actual privileged-step outcomes and exact source/check bindings remain part of
-qualification; previous receiver approval does not transfer to the caller.
+provider credential or runtime deployment was introduced by that caller change.
+Actual privileged-step outcomes and exact source/check bindings remained part of
+qualification; previous receiver approval did not transfer to that caller.
 
 ## Isolated parser and disabled private dependency path — 2026-10-15 UTC
 

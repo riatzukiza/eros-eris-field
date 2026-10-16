@@ -867,7 +867,7 @@ using the declared strict map order, scalar escaping and binary64 bit strings;
 SHA256 of those exact payload bytes yields the lowercase64-hex wrapper hash.
 The hash field is outside its own payload, avoiding self-reference.
 
-The separate 1,048,576-byte checkpoint **argument** cap measures the complete
+The separate 1,048,756-byte checkpoint **argument** cap measures the complete
 domain-map argument as encoded once inside `finite-field-input/1`, including
 the codec/state/hash fields, tags, separators and all required escaping.
 Payload bytes alone do not determine admission. The checkpoint's separately
@@ -1218,17 +1218,23 @@ Every successful state must remain encodable for its required continuation
 operations under the unchanged4,194,304-byte complete-input bound. The proposed
 `continuation-closure` data makes this finite and testable: the complete
 canonical argument encoding of state is capped at1,048,576bytes, the actual
-qualified checkpoint argument encoding at1,048,576bytes, and an event-tail
+qualified checkpoint argument encoding at1,048,756bytes, and an event-tail
 argument encoding at1,048,576bytes. All other argument encodings plus the
 complete operation/version envelope, keys, separators and framing together
 are capped at524,288bytes. Measure each component exactly as it occurs in
-finite-field-input/1, including escaped checkpoint strings; underlying snapshot
+finite-field-input/1, including the closed tagged snapshot map; underlying snapshot
 bytes or raw Clio bytes alone are insufficient. Raw canonical Clio history
 retains its separate1MiB cap, and the encoded-tail cap must also pass.
 
 The largest declared continuation carriers are rebuild and restore/2, each
 with prior state, checkpoint and complete history/closure:
-3*1,048,576+524,288=3,670,016bytes, below4,194,304. Read/catch-up/checkpoint have
+1,048,576+1,048,756+1,048,576+524,288=3,670,196bytes, below4,194,304.
+The checkpoint cap is the state cap plus exactly180bytes for the canonical
+`finite-field-snapshot/1` map wrapper, its three encoded keys, codec string,
+64-character lowercase hex digest, tags, brackets and separators. The state is
+embedded as its encoded value, without a second string encoding. A state at the
+exact1,048,576-byte cap therefore has a checkpoint at the exact1,048,756-byte cap.
+Read/catch-up/checkpoint have
 one state carrier. Their remaining arguments include actual current authority, configuration,
 projection, cursors, request IDs and full framing under the aggregate bound.
 Apply these component/aggregate limits to every actual input before use.
@@ -1733,3 +1739,45 @@ Rheos changes before implementation. No current native point, dependency, status
 or agreed primary body is changed by this source proposal. Existing Incoming
 card text still requires owning Foresight mirror/review and native adoption;
 links or this conditional allocation supply no Ready.
+
+
+## Closed physical carriers and exact checkpoint overhead — 2026-10-16
+
+Current CodeRabbit review5541484661 identifies the state/checkpoint boundary
+mismatch and historical credential tense. The checkpoint's exact tagged wrapper
+adds180bytes to its encoded state: state1,048,576, checkpoint1,048,756, encoded
+tail1,048,576 and remaining arguments/framing524,288 compose to3,670,196bytes
+within the unchanged4,194,304-byte input cap. This is a derivation of proposed
+codec bytes, not an executed kernel fixture. The exact-state-cap positive,
+checkpoint cap, one-over and largest-state lifecycle controls remain required.
+The historical workflow section now consistently describes its then-active
+credential mapping in past tense; current caller isolation is unchanged.
+
+Current Codex review5541487995 adds four connected contract corrections.
+`finite-physical-entity/1` now closes each presence/nexus/daimoi variant and its
+nested physical values. Extra source graph metadata stays in its owner records;
+adapters cannot silently retain different extra entity fields and still claim
+the same snapshot. Source IDs, embedding revision/dimension and principal remain
+qualified by their existing owners. This proposed field shape grants no memory
+or authorization authority and enables no reserved wallet transfer operation.
+The complete exact variant is hashed, restored and rebuilt under the qualified
+kernel revision, with two-adapter snapshot equality as a future qualification.
+
+`finite-request-field-weights/1` is a mandatory closed `field-weights` carrier
+inside the original immutable admitted request: version, actual configuration
+mapping revision, eight read weights and eight separate deposit weights. Retain
+the complete value with the original admission inputs in `recall-requests` and
+original events. The daimoi's request ID selects exactly one matching original
+principal/scope record; retry, hashing, replay, restore and rebuild consume those
+exact values. Missing/invalid/mismatched carriers use revision1
+`invalid-recall-request`; authority and byte/work refusals keep their own codes.
+
+The read-only closed refusal map and its reason vector both include revision1
+`finite-trace-budget-exceeded` with status `refused`. Conflicting or untrusted
+feedback acknowledgements have an explicit revision1
+`invalid-feedback-acknowledgement` refusal with unchanged prior/pending/confirmed
+state and no confirmation or reinforcement. Current causal-authority refusals
+take precedence; a matching authorized failed writer observation retains its
+separate `feedback-storage-failed` branch. All six corrections are proposed
+owning contract/prose changes. Parser checks establish EDN shape only; no domain,
+continuation, wallet, codec or live B1–B3 behavior is claimed implemented.
