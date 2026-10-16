@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-pending-event-layout"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-pending-feedback-layout"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -195,6 +195,8 @@
                                    :bond-state-contract :trail-state :contact-profile-binding-state :request-weight-carrier]
   :pending-events {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
                    :closure :owned-entry-and-disposition-layout-only-owner-leaves-still-unselected}
+  :pending-feedback {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state"
+                     :closure :owned-entry-and-confirmation-disposition-only-owner-leaves-still-unselected}
   :whole-state-not-yet-closed
   [:authority-projection-binding :pending-events :contribution-provenance
    :recall-requests :inclusion-folds :pending-feedback
@@ -212,6 +214,103 @@
                     :confirmed-outcome-vector-exact-membership-and-order
                     :checkpoint-restore-rebuild-preserve-every-exact-value-and-original-source
                     :all-existing-exact-and-one-over-state-input-checkpoint-history-and-work-bounds]}
+ :pending-feedback-state
+ {:version "finite-pending-feedback-state/1"
+  :status :proposed-owned-layout-with-unselected-owner-leaves-not-implemented-or-qualified
+  :state-field :pending-feedback
+  :revision-binding :this-exact-layout-bound-by-qualified-kernel-revision-no-new-state-root-or-call-argument
+  :types :consume-existing-ID-Digest-and-Revision-in-canonical-state-elementary-carriers
+  :container :ordered-vector-of-closed-outcome-retry-records
+  :order [:effect-id-unsigned-exact-utf8 :outcome-id-unsigned-exact-utf8]
+  :identity :one-record-per-existing-immutable-outcome-id-with-its-actual-original-effect-binding-no-duplicate-new-identity-or-effect
+  :empty []
+  :entry
+  {:kind :closed-map
+   :exact-keys [:effect-id :outcome-id :payload-hash :scope-revision :prior-recall-reference
+                :observed-choice-outcome :proposed-feedback :original-custody :confirmation-disposition]
+   :fields
+   {:effect-id :ID :outcome-id :ID :payload-hash :Digest :scope-revision :Revision
+    :prior-recall-reference :FullOriginalQualifiedPriorRecallReference
+    :observed-choice-outcome :FullOriginalQualifiedObservedChoiceOutcome
+    :proposed-feedback :FullOriginalDesignatedFeedbackProposal
+    :original-custody :FullOriginalQualifiedFeedbackSourceCustody
+    :confirmation-disposition {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state/confirmation-disposition"}}
+   :five-required-bindings :exact-existing-functions-apply-outcome-pending-required-values-not-a-replacement-or-new-input-tuple
+   :originals :retain-complete-original-outcome-prior-recall-proposal-and-author-principal-scope-source-history-custody-not-only-ids-hashes-or-current-source-lookups
+   :proposal-agreement :actual-complete-designated-value-and-qualified-source-match-the-same-original-effect-outcome-payload-hash-scope-and-prior-recall-bindings-no-new-body-fields-or-hash-recipe
+   :self-reference :no-enclosing-state-snapshot-or-its-hash-in-this-record}
+  :confirmation-disposition
+  {:kind :closed-discriminated-union :discriminator :disposition
+   :variants
+   {:pending
+    {:kind :closed-map :exact-keys [:disposition]
+     :fields {:disposition {:literal :pending}}
+     :meaning :existing-unconfirmed-proposal-no-successful-confirmation-or-confirmed-outcome-membership}
+    :confirmed
+    {:kind :closed-map :exact-keys [:disposition :confirmation]
+     :fields {:disposition {:literal :confirmed}
+              :confirmation {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/feedback-confirmations"
+                             :value :single-exact-existing-six-key-confirmation-entry-with-existing-field-types}}
+     :meaning :existing-confirmed-once-only-fact-with-retained-original-proposal-retry-custody-not-an-actionable-pending-write
+     :agreement :confirmation-is-the-exact-existing-six-key-entry-with-matching-effect-outcome-payload-hash-and-original-scope-and-matching-confirmed-outcome-id}}
+   :population :exact-existing-successful-confirmation-and-confirmed-outcome-membership-determine-variant-no-duplicate-conflicting-or-invented-confirmation
+   :actual-acknowledgement :confirmed-only-after-existing-matching-authorized-actual-persisted-writer-acknowledgement-or-its-existing-matching-confirmed-retry-complete-original-ack-and-source-remain-in-qualified-counted-provenance-history
+   :failed-or-invalid-ack :existing-whole-unchanged-specific-refusal-no-reinforcement-or-new-confirmed-id-no-confirmed-to-pending-demotion}
+  :apply-outcome-retry
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state-transition-result/success/by-operation/apply-outcome/agreement"
+   :input-agreement :existing-immutable-original-observed-outcome-and-prior-recall-bindings-with-complete-original-source-custody-no-new-successful-input-branch
+   :before-confirmation :return-the-exact-retained-proposed-feedback-value-with-the-original-effect-id-and-unchanged-state
+   :after-confirmation :same-original-proposed-feedback-and-unchanged-confirmed-state-confirmation-and-outcome-identities-no-new-write-reinforcement-or-pending-reactivation
+   :retention-derivation :existing-idempotent-outcome-retrieval-requires-original-proposal-in-both-variants-confirmation-summary-alone-cannot-return-it
+   :forbidden-substitutes [:id-or-digest-only :regenerated-body :new-effect :retagged-current-source :confirmation-instead-of-proposal]
+   :current-authority :independently-qualified-for-original-stored-principal-scope-request-and-all-retained-influence-before-every-use-and-exposure-original-payload-or-custody-is-not-a-grant
+   :failure-and-precedence :all-existing-operation-specific-authority-source-binding-and-finite-refusals-remain-no-payload-on-refusal}
+  :owner-source-hooks
+  {:FullOriginalQualifiedPriorRecallReference
+   {:input :existing-apply-outcome-prior-recall-reference
+    :value :complete-original-reference-and-matching-qualified-admitted-recall-source-not-an-unqualified-id
+    :closed-record-definition :unselected-actual-owner-reference-and-history-association}
+   :FullOriginalQualifiedObservedChoiceOutcome
+   {:input :existing-apply-outcome-observed-choice-outcome
+    :value :complete-actual-original-observed-outcome-with-qualified-original-author-and-source
+    :closed-record-definition :unselected-actual-owner-observation-and-source-schema}
+   :FullOriginalDesignatedFeedbackProposal
+   {:output :existing-apply-outcome-proposed-feedback
+    :value :entire-actual-original-designated-proposal-not-a-new-field-wrapper-or-strength-algorithm
+    :owner-routing "docs/plans/cephalon-finite-field-coupling.edn#reinforcement-contribution"
+    :closed-record-definition :unselected-real-owning-feedback-output-schema-producer-and-field-mapping-declared-openplanner-routing-is-not-a-selected-writer-or-payload-schema}
+   :FullOriginalQualifiedFeedbackSourceCustody
+   {:value :complete-original-owner-author-principal-scope-outcome-recall-proposal-and-admission-history-source-evidence
+    :input-source-hook :actual-existing-observed-outcome-and-prior-recall-input-source-carriers-and-qualified-owner-history-mapping-still-unselected-no-hidden-argument-ambient-lookup-or-payload-authority
+    :closed-record-definition :unselected-actual-owner-custody-and-historical-source-carriers-not-an-arbitrary-canonical-blob}
+   :writer-acknowledgement
+   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/confirm-feedback"
+    :remaining :complete-actual-native-acknowledgement-and-matching-source-history-schema-and-producing-interface-remain-unselected-or-unqualified-no-new-ack-semantics}
+   :main-targeted-source-observation
+   {:status :source-inspection-only-not-qualified-feedback-production :observer :main
+    :openplanner
+    {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+     :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc"
+     :sha256 "350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94"
+     :request {:line 23 :observed "[:feedback [:= :none]]"}
+     :feedback {:lines [46 47] :status :not-requested :attempted 0 :completed 0}}
+    :knoxx
+    {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+     :searched-paths ["backend/src/cljs/knoxx/backend/infra/character"
+                      "backend/src/cljs/knoxx/backend/law/character"
+                      "backend/src/cljs/knoxx/backend/shape/character"]
+     :result :no-feedback-or-reinforcement-producer-in-these-inspected-trees
+     :mention {:path "backend/src/cljs/knoxx/backend/infra/character/turn_context.cljs"
+               :sha256 "946b6f8d2ba29867893ea9c36613987284cb89d3e3fbcf04b9e5e9bddb7e2f44"
+               :role :disclosed-outcomes-docstring-not-a-producer}
+     :scope :targeted-source-search-not-repository-wide-absence-or-foreign-schema-existence-proof}
+    :conclusion :real-owning-feedback-proposal-ack-source-and-producer-selection-remain-open-no-foreign-payload-strength-or-ack-shape-inferred}}
+  :confirm-feedback-precedence :existing-current-authority-checks-before-ack-matching-matching-failed-storage-keeps-feedback-storage-failed-conflicting-or-untrusted-ack-keeps-invalid-feedback-acknowledgement-neither-creates-success-or-reinforcement
+  :replacement :existing-replacement-reference-closure-once-only-precedence-reconstructs-applicable-original-proposal-custody-and-confirmation-facts-without-live-effects-or-erasing-them-because-the-physical-target-is-older
+  :snapshot :entire-ordered-records-original-values-and-dispositions-in-existing-state-and-checkpoint-hash-with-full-required-source-values-retained-and-counted
+  :bounds :all-original-proposal-outcome-recall-custody-ack-source-copies-and-actual-validation-encoding-hashing-work-share-unchanged-input-state-checkpoint-history-work-and-continuation-caps-no-truncation-or-discount
+  :retention-policy :only-existing-original-proposal-retrievability-and-once-only-preservation-no-new-removal-expiry-or-eviction-policy
+  :qualification :owned-layout-only-all-owner-source-schema-producer-current-authority-and-whole-call-commit-exposure-qualification-still-required-no-whole-state-closure}
  :trail-state
  {:version "finite-physical-trails/2" :state-key :trails
   :root-closed-keys [:version :entries] :version-value "finite-physical-trails/2"
@@ -2077,8 +2176,8 @@
      {:kind :closed-map :exact-keys [:state :proposed-feedback]
       :fields
       {:state {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"}
-       :proposed-feedback {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/apply-outcome"
-                           :retention-contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required/pending-feedback"
+       :proposed-feedback {:contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state/entry/fields/proposed-feedback"
+                           :retention-contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state"
                            :value :complete-original-proposal-value-designated-by-owning-feedback-carrier}}}
      :agreement ["proposal and retained retry facts share exact original effect/outcome/payload-hash/scope/prior-recall bindings"
                  "return the actual complete proposal, not an ID/hash-only substitute or newly fabricated retry payload"
@@ -2478,6 +2577,7 @@
                   :idempotency :immutable-outcome-id
                   :storage-success :outer-writer-observation-required
                   :pending-feedback :retry-same-effect-id
+                  :retained-proposal-contract "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state"
                   :pending/required [:effect-id :outcome-id :payload-hash
                                      :scope-revision :prior-recall-reference]
                   :confirmation :actual-writer-acknowledgement}

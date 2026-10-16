@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-pending-event-layout"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-pending-feedback-layout"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -393,6 +393,7 @@
                 :values :qualified-owning-abi-values-only
                 :elementary-carriers "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers"
                 :pending-events "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
+                :pending-feedback "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state"
                 :recall-request-admission "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state"
                 :retained-recall-success "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier"
                 :whole-state-closure :not-established-by-elementary-carriers-complete-remaining-owned-and-owner-leaf-bindings-before-consumption

@@ -1960,3 +1960,34 @@ cursor tampering and exact/one-over queue limits. Ordinary calls retain the
 100-step limit; every actual nested/repeated reconstruction shares the summed
 64-quantum limit and all unchanged event/byte/input/state/work/time/continuation
 caps. No fixture execution, readiness or acceptance is established by this layout.
+
+
+## Retained feedback proposal and confirmation layout — 2026-10-16
+
+The proposed `pending-feedback-state` closes the owned vector/record layout in
+the existing state slot. Each effect/outcome-ordered record keeps the five
+required effect-id/outcome-id/payload-hash/scope-revision/prior-recall-reference
+bindings, complete original observed outcome and designated proposal, original
+author/source custody, and a closed pending/confirmed disposition. Confirmed
+custody matches the existing six-key confirmation and confirmed-outcome ID;
+it is not an actionable pending write. Full actual writer acknowledgement and
+source history remain required before confirmation, with the existing separate
+failure codes, authority precedence and no reinforcement on failure/untrusted input.
+
+The existing immutable-outcome retry guarantee returns the complete original
+proposal before and after confirmation. Both variants therefore retain that
+value; the confirmation summary cannot replace it. Retry returns unchanged state
+without a new effect, regenerated body or pending reactivation. This selects
+representation for the existing guarantee, without a new removal/eviction policy.
+Current authority remains independent of original payload/custody. Actual owner
+proposal, outcome, recall-reference and custody schemas/producers remain explicit
+source hooks. Main's exact OpenPlanner3ab `graph/recall/contract.cljc` anchors are
+request line23 (`feedback = :none`) and feedback lines46–47 (`:not-requested`,
+attempted/completed zero). Its bounded Knoxxb6 infra/law/shape character-tree
+search finds no feedback/reinforcement producer; the disclosed-outcomes mention
+is a `turn_context.cljs` docstring. Full paths/revisions/source hashes are in the
+ABI hook. The real owning-feedback leaf remains unselected; these observations
+select no foreign payload/ack schema, strength or algorithm.
+Complete values and copies remain counted under existing limits and replacement
+once-only rules. Historical notes, all controls and qualification gates remain;
+this layout establishes neither full state closure nor executed qualification.

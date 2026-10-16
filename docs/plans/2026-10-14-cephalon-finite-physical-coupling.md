@@ -2635,3 +2635,33 @@ exact obligations. Ordinary calls keep 100 steps; the same summed 64 reconstruct
 quanta and unchanged event/byte/input/state/work/time/continuation limits count
 all copies and every nested/repeated reconstruction. This is source planning,
 with no fixture execution, native readiness, transitive closure or acceptance claim.
+
+
+## Retained feedback proposal and confirmation layout — 2026-10-16
+
+Snapshot state now references ABI `pending-feedback-state`: an effect/outcome-
+ordered vector of exact records retaining the five existing pending bindings,
+full original observed outcome/proposal/author-source custody and a closed
+pending/confirmed disposition. Confirmed retry custody matches the existing
+confirmation and outcome ID; it does not request another write. Confirmation
+still requires the actual matching authorized persisted acknowledgement and full
+source history. Failed storage and conflicting/untrusted acknowledgements retain
+their separate unchanged refusals, current-authority precedence and no reinforcement.
+
+The existing success union requires immutable-outcome retries to return the
+actual original proposal, with no confirmation-time exception. The retained value
+therefore remains available in both variants, without regenerating a body,
+returning a digest/confirmation substitute, mutating state or reactivating pending
+feedback. This adds no lifetime/removal/eviction rule. Original payload is never
+current permission. Owner proposal/outcome/recall-reference/custody and full native
+ack/source schemas and producers remain explicit unresolved source hooks; the
+ABI hook binds Main's exact OpenPlanner3ab `graph/recall/contract.cljc` request23
+and feedback46–47 observations (none/not-requested, attempted/completed zero),
+and the bounded Knoxxb6 infra/law/shape character searches with only a disclosed-
+outcomes docstring mention. It records full paths/revisions/source hashes. The
+real owning-feedback leaf remains open; routing selects no foreign payload/ack
+schema, strength or algorithm.
+All source copies remain counted, and historical replacement once-only facts,
+existing limits/controls and before-Ready → own implementation after-Ready →
+executed qualification before consumption gates remain. Owned layout closure
+does not establish source fit, a functioning producer/fence or whole-state closure.
