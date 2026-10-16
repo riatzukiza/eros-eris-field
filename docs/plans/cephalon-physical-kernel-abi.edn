@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-original-query-owner"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-origin-presence-seed"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -371,8 +371,8 @@
   :mass :finite-binary64-strictly-positive
   :memory-binding "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"
   :emitted-owner :exact-original-stored-principal-id-from-the-qualified-request-no-reassignment
-  :seed-embedding :nonempty-ordered-vector-of-finite-binary64-values-with-exact-dimension-and-revision-from-the-qualified-admitted-embedding-input
-  :embedding-revision :exact-qualified-embedding-source-revision-not-a-local-model-alias
+  :seed-embedding :complete-original-validated-origin-presence-seed-embedding-with-exact-finite-binary64-bits-and-qualified-source-dimension-not-the-request-query-vector
+  :embedding-revision :exact-original-validated-origin-presence-seed-revision-not-a-query-model-alias-or-current-lens-replacement
   :mantle-lineage :ordered-vector-of-distinct-qualified-source-ids-in-original-lineage-order
   :intent-wallet :map-from-qualified-intent-id-strings-to-exact-safe-nonnegative-integer-units-no-other-key-or-value-types
   :wallet-key-order :canonical-trace-1-encoded-key-unsigned-utf8-order
@@ -440,7 +440,44 @@
   :id-namespace :existing-owner-request-id-not-a-clio-event-uuid-or-new-effect-identity
   :authority :a-valid-owner-request-and-its-id-confer-no-principal-scope-source-grant-or-current-permission
   :qualification :observed-candidate-source-blobs-only-review-compiled-owner-consumption-actual-physical-adapter-mapping-and-selected-fixture-fit-still-required-before-ready
-  :unchanged-unselected-leaves [:embedding-source :validated-seed :physical-budget :owner-custody :history :result-lifecycle]}
+  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :physical-budget :owner-custody :history :result-lifecycle]}
+ :validated-recall-seed-carrier
+ {:version "finite-origin-presence-seed/1"
+  :status :proposed-owned-key-layout-with-unselected-original-presence-source-and-birth-mapping
+  :revision-binding :this-exact-five-key-representation-bound-by-qualified-kernel-revision
+  :kind :closed-map
+  :exact-keys [:origin-presence-id :emitted-owner :embedding :embedding-revision :source]
+  :fields
+  {:origin-presence-id :ID
+   :emitted-owner :ID
+   :embedding :nonempty-ordered-vector-of-finite-binary64-values-with-source-established-exact-dimension
+   :embedding-revision :Revision
+   :source :FullOriginalQualifiedPresenceSeedSource}
+  :selected-design
+  {:repository "octave-commons/fork_tales"
+   :revision "f4c43d7b9c832a54bc5d224cb4d5d2497c04423b"
+   :path "docs/notes/system_design/2026-02-20-design-hole-responses-field-and-collisions.md"
+   :sha256 "c4ef760eb2b1cd050a95391a0b36675c2971e351d17d3559dd97e962373185fc"
+   :seed-origin-lines [98 99 100]
+   :presence-lens-lines [122 123 124 125 126 127 128]
+   :meaning :seed-from-originating-presence-meaning-and-purpose-distinct-from-nearby-particle-mantle-and-weighted-intent}
+  :origin-presence-id :actual-qualified-original-presence-identity-not-assumed-equal-to-a-stored-principal-id
+  :emitted-owner :exact-request-original-stored-principal-and-original-emitted-entity-emitted-owner
+  :original-owner-binding :complete-qualified-presence-source-must-bind-the-original-presence-to-that-original-principal-and-scope-never-infer-a-grant-from-an-id
+  :embedding-and-revision :exact-full-original-qualified-presence-source-values-and-original-emitted-entity-seed-embedding-and-embedding-revision
+  :seed-stability :retain-the-original-emission-snapshot-never-substitute-a-later-presence-lens-or-change-an-emitted-particle-seed
+  :distinct-roles [:request-query-vector :ranked-graph-entry-node :nearby-particle-mantle :weighted-intent-embedding :mood-lens-revision :global-xorshift-state]
+  :coincident-values :numerically-equal-vectors-do-not-establish-identical-origin-role-or-authority
+  :source :complete-original-qualified-presence-seed-source-values-not-only-id-model-alias-digest-or-fabricated-prompt-embedding
+  :source-custody :existing-original-admission-source-projection-and-history-without-a-new-input-parameter
+  :presence-entity-shape :unchanged-the-closed-physical-presence-variant-has-no-seed-lens-field-so-it-cannot-supply-the-source-by-itself
+  :retry :compare-this-entire-original-seed-map-under-existing-exact-input-equality-without-requiring-a-current-live-origin-presence
+  :physical-birth :position-velocity-mass-wallet-mantle-lineage-and-emission-identity-retain-their-existing-original-qualified-emission-source-obligations-not-inferred-from-this-vector
+  :rng :no-scalar-seed-substitution-no-reseed-reset-or-extra-draw
+  :authority :source-provenance-is-not-current-authority-existing-fresh-principal-scope-and-source-checks-still-apply-before-causal-use-and-exposure
+  :bounds :complete-source-vector-originals-and-copies-count-under-all-existing-input-state-checkpoint-history-work-and-trace-limits-no-fixed-dimension-or-new-default
+  :readiness :exact-original-presence-source-schema-producer-and-binding-physical-birth-mapping-compiled-consumption-and-selected-fixture-fit-still-required
+  :actual-producer :unselected-not-established-by-openplanner-query-embedding-or-graph-seed-ranking}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
@@ -465,6 +502,7 @@
     :query {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-query-carrier"}
     :embedding
     {:kind :closed-map :exact-keys [:vector :embedding-revision :source]
+     :meaning :original-query-embedding-not-the-origin-presence-seed
      :fields {:vector :nonempty-ordered-finite-binary64-vector
               :embedding-revision :Revision
               :source :FullOriginalEmbeddingSource}
@@ -482,7 +520,7 @@
    :principal-scope-meaning :original-stored-principal-and-scope-revision-not-a-grant-or-complete-owner-scope-schema
    :full-principal-scope-source :mandatory-in-original-custody-below
    :graph-versus-projection :retain-both-actual-qualified-bindings-never-infer-one-from-the-other
-   :embedding-versus-validated-seed :no-assumed-identity-or-derived-fallback-without-the-existing-selected-seed-mapping}
+   :embedding-versus-validated-seed :distinct-original-query-and-origin-presence-roles-with-separate-source-custody-even-when-vector-values-coincide}
 
   :original-inputs
   {:kind :closed-map
@@ -490,7 +528,7 @@
                 :mood-lens-revision :new-particle-contact-profile-bindings]
    :fields
    {:scoped-immutable-request :the-exact-scoped-immutable-request-map-above
-    :validated-seed :FullOriginalValidatedSeed
+    :validated-seed {:contract "docs/plans/cephalon-physical-kernel-abi.edn#validated-recall-seed-carrier"}
     :physical-budget :FullOriginalPhysicalBudget
     :mood-lens-revision :Revision
     :new-particle-contact-profile-bindings

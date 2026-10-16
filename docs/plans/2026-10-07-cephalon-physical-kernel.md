@@ -1033,12 +1033,12 @@ Every original source and duplicate value counts under existing budgets; no
 recovery/admission/cutoff/eviction change or whole-state closure is claimed.
 
 
-The validated seed remains an exact unselected input shape. In particular, the
-source permits vector seeds; naming xorshift RNG
-state does not determine the request seed. The original physical budget is
-also distinct from global call/rebuild limits. Those definitions and actual
-producer compatibility must be selected before native readiness; the closed
-wrapper does not supply them by name.
+The validated seed's owned key layout is specified below; its complete original
+presence source and physical birth mapping remain unselected. Naming xorshift
+RNG state or an available query vector does not determine that seed. The original
+physical budget is also distinct from global call/rebuild limits. Those source
+definitions and actual producer compatibility must be selected before native
+readiness; the closed wrapper does not supply them by name.
 
 ## Original query owner — 2026-10-16
 
@@ -1084,5 +1084,55 @@ returns the existing `finite-input-byte-limit` unchanged-state refusal, without
 truncation, normalization or a changed profile. All original bytes, copies and
 validation count under the existing input/state/checkpoint/work limits. Before
 Ready, qualify exact owner consumption, the actual adapter/ID mapping and real
-selected-fixture fit. Embedding source, seed, physical budget, original custody,
-history and lifecycle leaves remain open.
+selected-fixture fit. Query-embedding and presence-seed source, physical birth
+mapping, physical budget, original custody, history and lifecycle leaves remain
+open.
+
+## Originating-presence seed — 2026-10-16
+
+The selected Fork Tales correction at
+`f4c43d7b9c832a54bc5d224cb4d5d2497c04423b`,
+`docs/notes/system_design/2026-02-20-design-hole-responses-field-and-collisions.md`,
+SHA256 `c4ef760eb2b1cd050a95391a0b36675c2971e351d17d3559dd97e962373185fc`,
+distinguishes the seed embedding from the originating presence (lines98–100),
+the nearby-particle mantle, and the weighted intent embedding. It describes the
+presence seed/lens in terms of that presence's meaning and purpose (lines122–128).
+The checked local note matched its immutable selected Git blob. This recovers
+the intended semantic roles; it does not adopt donor runtime defaults or prove
+a current Knoxx producer.
+
+The proposed `validated-recall-seed-carrier` owns exactly five keys:
+`origin-presence-id`, `emitted-owner`, `embedding`, `embedding-revision`, `source`.
+Retain the complete finite binary64 vector with its original qualified source
+dimension and revision. The origin is an actual qualified presence ID; do not
+assume it equals a stored principal ID. The original qualified source must bind
+that presence to the original principal/scope. The emitted owner equals the
+request's original stored principal and the original emitted entity's owner.
+The vector/revision exactly match the original presence source and the emitted
+daimoi's seed fields. The entity contract now names that source explicitly.
+
+This snapshot is immutable for the emitted particle. Exact retries compare the
+whole original seed record, without requiring the origin presence to remain
+live or substituting its current lens. The scoped request's separate embedding
+is the original query vector. A query vector, ranked graph entry node, mantle,
+weighted intent, mood/lens revision or xorshift word is not a fallback for the
+originating-presence seed. Even numerically equal vectors do not prove identical
+roles, source or permission. Global RNG initialization/draw rules are unchanged.
+
+OpenPlanner's inspected `query-embedding!` and `rank-nodes` at candidate
+`3ab5ffbb6e34a2ee3607a74bf421785d47d5391d` produce a query vector and a ranked
+semantic graph entry. The route returns field not loaded. Neither supplies the
+presence-seed producer or the initial physical particle mapping. Position,
+velocity, mass, wallet, mantle lineage and emission identity keep their existing
+qualified original source obligations; the seed vector cannot invent them.
+
+The physical presence entity's closed shape stays unchanged and has no seed/lens
+field. Consume the complete original qualified presence source through existing
+admission projection/source/history custody; do not infer it from an entity ID
+or add a hidden field. `FullOriginalQualifiedPresenceSeedSource` remains a named
+unselected source schema and producer. A generic map, model alias, digest or
+invented prompt embedding does not close it. Full original values and copies
+count under the existing caps. Native source/binding, physical birth, compiled
+consumption and real selected-fixture fit must qualify before Ready. This source
+correction resolves an ambiguous planned embedding origin; it demonstrates no
+running seed defect, new authority, complete-state closure or physical behavior.

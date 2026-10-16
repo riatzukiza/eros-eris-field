@@ -1949,3 +1949,24 @@ The observed Knoxx producer derives its ID without retrieval options or
 principal/scope, so changed options or principal/scope under the same ID retain
 conflicting-retry refusal. These are proposed
 owner-consumption choices, not qualified wiring, fixture fit or Ready.
+
+## Originating-presence seed custody — 2026-10-16
+
+The [owning seed definition](2026-10-07-cephalon-physical-kernel.md#originating-presence-seed--2026-10-16)
+and ABI `validated-recall-seed-carrier` distinguish the immutable origin-presence
+seed from query embedding, graph entry nodes, mantle, weighted intent, mood/lens
+revision and global RNG. This follows the selected Fork Tales correction's
+presence-derived meaning/purpose seed. Its five-key owned layout retains actual
+origin presence, original emitted owner, full vector, revision and full original
+source. Original presence ID and principal are separately bound, never assumed
+identical. Entity seed fields match that original source; query embedding keeps
+its own request role. Exact retry preserves the original seed, without a live
+presence requirement or a current-lens substitution.
+
+The closed physical presence shape, physical birth source obligations, current
+authority, RNG rules, all caps and required positives stay unchanged. The actual
+complete presence source/schema/producer, birth mapping, compiled consumption
+and fixture fit remain unselected/unqualified before Ready. Existing OpenPlanner
+query embedding and graph ranking with field not loaded do not supply them.
+This is a correction to an ambiguous planned origin, not a running behavior or
+whole-state closure claim.
