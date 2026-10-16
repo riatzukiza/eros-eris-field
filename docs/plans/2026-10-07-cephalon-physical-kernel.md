@@ -1036,7 +1036,8 @@ recovery/admission/cutoff/eviction change or whole-state closure is claimed.
 The validated seed's owned key layout is specified below; its complete original
 presence source and physical birth mapping remain unselected. Naming xorshift
 RNG state or an available query vector does not determine that seed. The original
-physical budget is also distinct from global call/rebuild limits. Those source
+physical budget's owned layout below is also distinct from global call/rebuild
+limits. Those source
 definitions and actual producer compatibility must be selected before native
 readiness; the closed wrapper does not supply them by name.
 
@@ -1136,3 +1137,61 @@ count under the existing caps. Native source/binding, physical birth, compiled
 consumption and real selected-fixture fit must qualify before Ready. This source
 correction resolves an ambiguous planned embedding origin; it demonstrates no
 running seed defect, new authority, complete-state closure or physical behavior.
+
+## Original per-request physical budget — 2026-10-16
+
+The proposed `request-physical-budget-carrier` owns exactly five required original
+caller values. Each is an exact safe nonnegative integer. Zero means zero;
+there is no omitted-key default or unlimited sentinel.
+
+| Budget key | Inclusive ceiling | Existing retained counter |
+| --- | ---: | --- |
+| `max-horizon-quanta` | 100 | `executed-horizon-quanta` |
+| `max-semantic-fold-work` | 67,108,864 | `accumulated-semantic-fold-work` |
+| `max-inclusion-result-utf8-bytes` | 8,388,608 | `canonical-result-byte-count` |
+| `max-trace-records` | 131,072 | `trace-record-count` |
+| `max-trace-utf8-bytes` | 8,388,608 | `accumulated-trace-utf8-byte-count` |
+
+These are proposed per-request limits under existing source ceilings, not a
+claim that the per-call profile was already a stored request budget. The original
+map is retained in admission and budget-result custody. Exact retry compares
+the entire original map; the remaining balance cannot replace it. All five
+counters retain the same qualified start-to-selected-end horizon across split
+calls, catch-up, checkpoints, restore and reconstruction, without reset.
+
+In particular, 67,108,864 fold-work units and 131,072 trace records across an
+entire request horizon are newly explicit owning selections using the existing
+per-call numeric ceilings. They are not recovered frozen per-horizon policy.
+A lower selected request limit can refuse a transition earlier; it cannot
+shorten the selected horizon or alter the force law.
+
+The inclusion-byte count measures the complete two-field
+`finite-contact-inclusion-result/1` envelope at that result, not summed repeated
+reads or the whole read-success map.
+The trace uses the complete existing `finite-field-trace/1` envelope. Empty
+envelopes still have encoded overhead; a structurally valid zero budget may not
+fit an actual operation. No trace, required record or serialization work may be
+omitted to make it pass. Every actual retained counter must stay within its
+original limit; equality alone guarantees no broader admission.
+
+Existing global call and rebuild guards still charge all actual work. A request
+budget accounts for its semantic fold; it does not grant separate physical-world
+work, a multiplied allowance per request, or a reset after transport/restore.
+State/input/checkpoint/history/continuation limits and every original budget-copy
+byte remain charged. The 100-step call limit and an otherwise admissible
+101-quantum world input's 100-executed/one-backlog behavior remain unchanged.
+Active-horizon and other resource obligations still apply; elapsed time above
+100 quanta is not itself a new refusal. The 64-total-reconstruction limit remains
+independent, even if an original request permits 100 quanta.
+
+Inclusion-result or trace overflow keeps `finite-trace-budget-exceeded`; semantic
+fold work overflow keeps `finite-work-budget-exceeded`. Refuse the whole
+unchanged operation, without a shortened horizon, partial result or truncation.
+Malformed budget shape/value keeps the existing request-refusal contract and
+byte/authority/request precedence. The exact horizon-overflow reason/precedence
+and selection among the five existing lifecycle statuses remain unselected;
+counter equality or exhaustion cannot manufacture a successful `exhausted`
+result. Qualify the actual caller/counter source, lifecycle, zero/exact/one-over,
+split/restored replay and unchanged required positives before consumption.
+This is an owned representation proposal, not executed budget behavior, complete
+state closure, native Ready or a larger resource allowance.

@@ -1970,3 +1970,34 @@ and fixture fit remain unselected/unqualified before Ready. Existing OpenPlanner
 query embedding and graph ranking with field not loaded do not supply them.
 This is a correction to an ambiguous planned origin, not a running behavior or
 whole-state closure claim.
+
+## Original physical budget custody — 2026-10-16
+
+The [owning budget definition](2026-10-07-cephalon-physical-kernel.md#original-per-request-physical-budget--2026-10-16)
+and ABI `request-physical-budget-carrier` propose five explicit original
+nonnegative count limits for horizon quanta, semantic fold work, inclusion-result
+UTF8 bytes, trace records and trace UTF8 bytes. Their ceilings come from the
+unchanged existing horizon/result/profile limits. This selects a per-request
+representation; existing per-call profile limits retain their own scope and
+are not reinterpreted as previously stored request fields.
+
+The fold-work and trace-record numbers as whole-request ceilings are new owning
+selections from the existing per-call ceilings. Lower selected limits can refuse
+earlier under the already required request budget; no frozen per-horizon numeric
+policy is claimed and no selected horizon is silently shortened.
+
+The complete original map and its five counter relationships persist across
+retry, split/catch-up, checkpoints, restore and reconstruction without reset.
+The result-byte measure remains the whole two-field inclusion envelope; complete
+trace-envelope overhead and every actual work/input/state/copy cost still count.
+Zero does not mean unlimited, and exact counter equality guarantees no broader
+admission. There is no multiplied global allowance per request. Otherwise
+admissible world101-quanta still executes100 with one backlog; active-horizon
+and other resource obligations remain. The64-summed-reconstruction bound is unchanged.
+
+Existing trace/result-byte and work overflow codes refuse the entire unchanged
+operation without truncation or partial credit. Exact horizon-rejection reason/
+precedence and lifecycle-status meaning remain unselected before readiness;
+`exhausted` is not inferred from a counter. Actual caller/counter source and
+zero/exact/one-over/split/restored controls still require qualification. No
+budget behavior, physical implementation, Ready or full-state closure is proved.

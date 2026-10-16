@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-origin-presence-seed"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-request-physical-budget"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -440,7 +440,7 @@
   :id-namespace :existing-owner-request-id-not-a-clio-event-uuid-or-new-effect-identity
   :authority :a-valid-owner-request-and-its-id-confer-no-principal-scope-source-grant-or-current-permission
   :qualification :observed-candidate-source-blobs-only-review-compiled-owner-consumption-actual-physical-adapter-mapping-and-selected-fixture-fit-still-required-before-ready
-  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :physical-budget :owner-custody :history :result-lifecycle]}
+  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :owner-custody :history :result-lifecycle-and-horizon-refusal]}
  :validated-recall-seed-carrier
  {:version "finite-origin-presence-seed/1"
   :status :proposed-owned-key-layout-with-unselected-original-presence-source-and-birth-mapping
@@ -478,6 +478,54 @@
   :bounds :complete-source-vector-originals-and-copies-count-under-all-existing-input-state-checkpoint-history-work-and-trace-limits-no-fixed-dimension-or-new-default
   :readiness :exact-original-presence-source-schema-producer-and-binding-physical-birth-mapping-compiled-consumption-and-selected-fixture-fit-still-required
   :actual-producer :unselected-not-established-by-openplanner-query-embedding-or-graph-seed-ranking}
+ :request-physical-budget-carrier
+ {:version "finite-request-physical-budget/1"
+  :status :proposed-owned-layout-and-counter-binding-not-executed-budget-or-lifecycle-qualification
+  :revision-binding :this-exact-five-key-representation-bound-by-qualified-kernel-revision
+  :kind :closed-map
+  :exact-keys [:max-horizon-quanta :max-semantic-fold-work :max-inclusion-result-utf8-bytes
+               :max-trace-records :max-trace-utf8-bytes]
+  :fields
+  {:max-horizon-quanta {:type :Count :inclusive-maximum 100}
+   :max-semantic-fold-work {:type :Count :inclusive-maximum 67108864}
+   :max-inclusion-result-utf8-bytes {:type :Count :inclusive-maximum 8388608}
+   :max-trace-records {:type :Count :inclusive-maximum 131072}
+   :max-trace-utf8-bytes {:type :Count :inclusive-maximum 8388608}}
+  :value-domain :exact-safe-nonnegative-integers-zero-is-a-value-not-unlimited-or-a-default
+  :presence :all-five-explicit-original-caller-values-required-no-optional-key-or-inferred-profile
+  :source-ceilings
+  {:horizon "docs/plans/cephalon-finite-field-coupling.edn#contact-inclusion/maximum-quanta"
+   :ordinary-profile "docs/plans/cephalon-finite-field-coupling.edn#calibration/finite-profile"
+   :inclusion-result "docs/plans/cephalon-finite-field-coupling.edn#inclusion-result-codec/utf8-bytes-per-horizon"}
+  :ceiling-scope :ordinary-profile-work-and-trace-values-are-existing-per-call-ceilings-this-carrier-proposes-separate-per-request-limits-no-relabeling-or-increase-of-those-global-limits
+  :work-and-record-horizon-ceilings :67108864-fold-work-and131072-trace-records-over-the-whole-request-are-new-explicit-owning-selections-using-existing-per-call-ceilings-not-claims-of-previously-frozen-horizon-policy
+  :stricter-request-limit :can-refuse-a-transition-earlier-under-the-original-physical-budget-obligation-never-shorten-the-selected-horizon-or-change-the-force-law
+  :counter-bindings
+  {:max-horizon-quanta :executed-horizon-quanta
+   :max-semantic-fold-work :accumulated-semantic-fold-work
+   :max-inclusion-result-utf8-bytes :canonical-result-byte-count
+   :max-trace-records :trace-record-count
+   :max-trace-utf8-bytes :accumulated-trace-utf8-byte-count}
+  :counter-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/request-budget-result"
+  :scope :the-same-original-request-and-qualified-start-to-selected-end-horizon-across-split-calls-catch-up-checkpoint-restore-and-qualified-reconstruction
+  :retention :entire-original-map-in-original-admission-inputs-and-original-physical-budget-result-field-with-exact-value-equality
+  :retry :entire-original-budget-in-existing-immutable-five-input-comparison-no-current-remaining-balance-substitution
+  :comparison :every-actual-retained-counter-must-be-at-or-below-its-corresponding-original-selected-limit-under-existing-qualified-accounting
+  :exact-limit :otherwise-admissible-values-eligible-only-no-claim-that-all-other-input-state-work-trace-and-authority-checks-pass
+  :zero-limit :structurally-valid-but-actual-required-nonempty-envelope-trace-or-work-can-make-the-operation-not-fit-never-omit-costs-to-admit-it
+  :inclusion-bytes :current-complete-finite-contact-inclusion-result-1-two-field-envelope-not-summed-repeated-reads-not-whole-read-success-not-free-empty-result-and-no-counter-in-its-own-payload
+  :trace-bytes :existing-complete-finite-field-trace-1-envelope-records-tags-separators-escaping-and-required-overhead-for-the-original-horizon
+  :work :existing-accumulated-semantic-fold-work-only-all-other-actual-domain-preflight-decoding-comparison-hashing-and-serialization-work-still-charged-to-the-independent-whole-call-or-rebuild-guard
+  :multiple-requests :no-reset-duplication-reservation-or-multiplication-of-global-call-or-rebuild-allowance
+  :result-or-trace-overflow :existing-finite-trace-budget-exceeded-whole-unchanged-refusal-no-partial-result-or-truncation
+  :semantic-fold-work-overflow :existing-finite-work-budget-exceeded-whole-unchanged-refusal-no-partial-credit
+  :horizon-overflow :existing-whole-unchanged-refusal-obligation-exact-reason-and-precedence-still-unselected-under-the-existing-result-refusal-lifecycle-contract-before-ready
+  :structurally-invalid-budget :existing-invalid-recall-request-revision1-refusal-with-original-byte-authority-and-request-precedence-preserved
+  :lifecycle :counter-equality-or-exhaustion-does-not-select-admitted-no-contact-complete-incomplete-or-exhausted-no-new-success-branch-or-shorter-horizon
+  :ordinary-elapsed-time :unchanged-backlog-law-otherwise-admissible101-quantum-world-input-executes100-and-retains-one-backlog-quantum-with-existing-active-horizon-and-resource-obligations-still-required-no-elapsed-over100-rejection-rule
+  :recovery :original64-summed-reconstruction-quantum-limit-and-all-other-rebuild-bounds-still-independent-no-request-budget-reset-discount-or-extra-replay-credit
+  :input-and-state :all-budget-map-and-retained-copy-bytes-validated-and-charged-under-existing-input-state-checkpoint-history-work-and-continuation-caps
+  :readiness :caller-binding-actual-counter-producer-and-complete-lifecycle-horizon-refusal-precedence-zero-exact-one-over-and-split-replay-controls-must-qualify-before-consumption}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
@@ -529,7 +577,7 @@
    :fields
    {:scoped-immutable-request :the-exact-scoped-immutable-request-map-above
     :validated-seed {:contract "docs/plans/cephalon-physical-kernel-abi.edn#validated-recall-seed-carrier"}
-    :physical-budget :FullOriginalPhysicalBudget
+    :physical-budget {:contract "docs/plans/cephalon-physical-kernel-abi.edn#request-physical-budget-carrier"}
     :mood-lens-revision :Revision
     :new-particle-contact-profile-bindings
     {:kind :vector :items :exact-existing-closed-emit-contact-entry
@@ -755,7 +803,8 @@
   :request-budget-result
   {:closed-keys [:original-physical-budget :executed-horizon-quanta :accumulated-semantic-fold-work
                  :canonical-result-byte-count :trace-record-count :accumulated-trace-utf8-byte-count]
-   :original-physical-budget :complete-exact-original-physical-budget-from-the-retained-request-admission
+   :original-physical-budget {:contract "docs/plans/cephalon-physical-kernel-abi.edn#request-physical-budget-carrier"
+                              :value :complete-exact-original-budget-from-the-retained-request-admission}
    :executed-horizon-quanta :Count :accumulated-semantic-fold-work :Count
    :canonical-result-byte-count :Count :trace-record-count :Count :accumulated-trace-utf8-byte-count :Count
    :agreement :exact-existing-retained-horizon-accounting-with-the-same-original-budget-and-qualified-fold-source-not-recomputed-or-reset-on-read
@@ -767,7 +816,8 @@
   :state-record-equality :a-successful-read-or-exact-emission-retry-returns-this-same-current-authorized-retained-success-no-new-time-draw-effect-or-feedback
   :invalidation :existing-stale-recall-authority-without-any-of-these-payload-fields-after-explicit-qualified-result-invalidation
   :public-failure :separate-existing-qualified-facade-three-key-failure-only-never-a-stored-request-or-success-variant
-  :still-unselected [:complete-original-request-and-physical-budget-shape :actual-history-checkpoint-source-record-and-authority-schema-bindings
+  :still-unselected [:remaining-original-request-source-and-physical-birth-bindings :actual-history-checkpoint-source-record-and-authority-schema-bindings
+                     :physical-budget-caller-counter-producer-and-horizon-refusal-code-and-precedence
                      :the-existing-five-status-lifecycle-source-and-positive-controls]
   :new-force-physics-stage-horizon-status-budget-eviction-replay-or-owner-law :none
   :future-controls [:all-existing-five-success-status-variants-with-exact-closed-keys-and-original-source
