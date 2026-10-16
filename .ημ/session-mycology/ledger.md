@@ -973,3 +973,23 @@
   spore: none
   receipt-refs: cephalon-field-authority-owner-routing-qualified-local-20261016
   note: Explicitly correct earlier attribution of application policy/grant decisions and protection to Axxium using existing facade source: Axxium retains canonical identity/authentication/applicable capabilities, Knoxx existing stored-policy/character boundaries own application membership/roles/source-resource policy/current-grant resolution. Existing single current authority projection remains carrier; no new argument/runtime schema. Full original identity/principal/presence/ownership/scope/source and current owner/version/denial/whole-call/atomic-commit/result-exposure custody remain mandatory. Both required Axxium denial and current owning-application denial prevent writes/exposure. Exact source association/physical scope revision/current qualified outputs/identity validity/fence remain unqualified. No second evaluator/local version/fence, common-law lift/new upstream/scope/points/Ready/credential/grant migration. All100 earlier committed journal bytes remain exact; goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. Initial tool-code syntax failure occurred before any tool/file action and was corrected; not production verification. No push/provider/native PR request/board/runtime/credentials/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T15:25:40.331Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-original-character-principal-association-start-20261016
+  note: Trace confirms explicit canonical CharacterContext is selected before later rendered fallback, but no original association record is retained and graph authority exports only scope/project/records. Author a closed six-key Field-owned provenance component referencing actual owner Scope and CharacterContext, with planned capture before render/fallback and reconciliation against exact canonical selection plus actual scope after awaits. Actual full source/admission/producer and original seed/birth remain open; no ID inference, fallback promotion or source-code hash as authority. Current creative contract lacks explicit context; planned Field admission must refuse, without imposing a new requirement on generic graph recall or auto-populating contracts. Preserve102 prior journals, all ABI/runtime shapes/caps/fixtures/current-owner guards. Existing scope/points only; Ready precedes own implementation and executed qualification precedes consumption/Done. Wrong guessed OpenPlanner workdir failed before execution; actual inventory resolved existing bounded worktree and exact blobs. Goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. No push/new review/provider/board/runtime/credential/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T15:29:36.981Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-original-character-principal-association-qualified-local-20261016
+  note: Proposed six-key original association component retains entire native Scope, exact selected actor/contract, entire explicit CharacterContext and source pins; membership and distinct presence identity remain separate with no ID inference. Future capture before rendering/fallback must reconcile exact complete canonical selection with actual final scope; current exported graph authority cannot establish that agreement. Existing source/authority/history transport only, no native graph schema/ABIarg change or raw auth/credential/token/whole-agent/assembledprompt retention. Current creative context is absent; planned Field seed admission refuses without auto-population or imposing new generic graph requirement. Complete parent principal/presence source, authored origin/admission history, physical scope revision, qualified loaded recorder and seed/birth remain open. Replay preserves original source while independent current authority remains required. All102 previous receipt/reflection bytes exact. Existing beforeReady source/interface/fixture/upstream and afterReady own implementation/executed qualification ordering preserved. Goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. No new scope/points/upstream feature/push/provider request/board/runtime/credentials/paid/deployment/social/spore action.

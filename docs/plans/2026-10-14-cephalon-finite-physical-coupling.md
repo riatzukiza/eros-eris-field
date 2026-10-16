@@ -2245,3 +2245,54 @@ are planned, not executed. This amendment changes no runtime shape/arity,
 mechanics, cap, source provenance, native event identity or replay requirement,
 and authorizes no new upstream feature, point, scope, credential, grant
 migration or board transition. Prior immutable history remains intact.
+
+
+## Original explicit character/principal association component — 2026-10-16
+
+ABI original-character-principal-association-carrier selects a proposed closed
+six-key provenance component: version, scope, actor-id, contract-id,
+character-context and source-pins. Consume the entire actual native Scope
+through the existing OpenPlanner owner schema, and the entire explicit original
+Knoxx CharacterContext through its owner schema/validator. Retain its open
+snapshot, evidence IDs and optional-revision presence. The selected actor must
+equal the scope actor; membership remains the original stored principal.
+Character identity remains the separate original presence ID. No identity
+equality or grant is inferred from labels.
+
+The planned owning-adapter capture starts at canonical actor/contract selection
+before prompt rendering and character-spec fallback, then reconciles that
+original explicit context with the actual final scope after asynchronous source/
+account/policy checks. Require exact selected actor, contract and complete
+explicit context agreement at the relevant canonical re-resolutions before
+finalizing original custody and entering the Field-consuming query/emission
+path. Current graph-authority exports only scope/project/records: unchanged
+scope or policy fingerprint cannot prove unchanged CharacterContext. The adapter
+must have the corresponding canonical selection and actual final snapshot.
+That access/capture integration is planned and unimplemented.
+
+Carry only these named owner values through the existing protected source/
+authority inputs and original history. No new graph-authority key or Field ABI
+argument is selected; raw auth-context, credentials, process token, assembled
+prompt and whole resolved-agent maps are excluded. Source-pins bind thirteen
+inspected immutable files; they do not attest to authored-contract origin,
+loaded capture code, original admission or current permission/custody.
+
+The current pinned creative contract has no explicit context in either supported
+location. This planned Field association/seed admission must refuse that case;
+it neither auto-populates the contract nor adds a blanket context requirement
+to generic native graph recall. A malformed truthy agent-level context cannot
+be replaced by a root context or rendered fallback. Existing original-source
+association, current authority/version/denial and whole-call/commit/exposure
+protection remain required.
+
+Only this component's outer value layout is selected. Complete qualified
+principal-scope and presence-seed sources, authored origin/admission history,
+physical scope revision, actual capture producer and semantic seed/birth
+production remain open. Retain and compare the whole original component during
+retry/checkpoint/restore/rebuild without refetching or retagging the original
+source. Independent current authority inputs remain required.
+Every copied value remains charged to the existing finite limits; no owner-open
+snapshot field is dropped to fit. Existing source/interface/fixture/upstream
+prerequisites precede Ready; own implementation follows lawful Ready and
+independent executed qualification precedes consumption/Done. These are source
+declarations, not executed association, field or live B evidence.

@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-authority-owner-routing"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-original-character-principal-association"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -683,6 +683,87 @@
     :path "src/cljs/axxium/routes/actor.cljs" :sha256 "f90fbc3cc7a65eafd71e43eaa20267735ff67e8100a568fd2c032e1a6ec70147"}
    {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
     :path "src/cljs/axxium/routes/agents.cljs" :sha256 "2d2ee10321947e0b4ed892a36ac521fa798eaf9564f2fc6e41e69341bf4c1ec7"}]}
+ :original-character-principal-association-carrier
+ {:version "finite-original-character-principal-association/1"
+  :status :proposed-field-owned-provenance-component-not-existing-native-capture-or-complete-qualified-source
+  :kind :closed-map
+  :exact-keys [:version :scope :actor-id :contract-id :character-context :source-pins]
+  :fields
+  {:version {:literal "finite-original-character-principal-association/1"}
+   :scope {:owner-contract :openplanner.graph.recall.contract/scope
+           :owner-registry :openplanner.graph.recall.contract/registry
+           :owner-validator :openplanner.graph.recall.contract/validator
+           :value :entire-actual-original-native-scope-no-field-owned-copy-or-shadow-schema}
+   :actor-id {:owner-contract :openplanner.graph.recall.contract/identity
+              :value :exact-canonical-selected-actor-and-exact-scope-actor-id}
+   :contract-id {:owner-contract :openplanner.graph.recall.contract/identity
+                 :value :exact-canonical-selected-contract-id-not-a-role-default-or-caller-only-label}
+   :character-context {:owner-schema :knoxx.backend.shape.character.tool-modes/CharacterContext
+                       :owner-validator :knoxx.backend.law.character.tool-modes/character-refusal
+                       :value :entire-original-explicit-canonical-owner-value-preserving-snapshot-evidence-ids-and-optional-revision-presence}
+   :source-pins {:kind :literal-vector :value :exact-selected-source-manifest-below
+                 :role :implementation-source-provenance-not-authored-contract-origin-loaded-recorder-proof-or-original-admission}}
+  :principal :scope-membership-id-exact-original-stored-principal-with-complete-actor-org-user-membership-and-policy-provenance
+  :presence :character-context-identity-exact-original-origin-presence-id-no-actor-contract-membership-identity-inference
+  :physical-scope-revision :existing-qualified-mapping-still-unselected-never-alias-native-policy-fingerprint
+  :meaning :original-explicit-persona-only-for-later-qualified-presence-meaning-producer-not-rendered-system-prompt-query-snapshot-or-mood-substitution
+  :planned-capture
+  {:status :unimplemented-existing-owning-adapter-integration-interface-only
+   :original-selection :canonical-resolve-agent-contract-with-exact-requested-actor-and-contract-before-render-agent-prompts-and-character-spec-fallback-never-trust-caller-agent-spec-alone
+   :explicit-context :same-owner-nested-agent-then-root-contract-or-selection-with-owner-validation-no-fallback-promotion
+   :scope-boundary :actual-final-source-snapshot-current-principal-and-native-graph-scope-after-async-source-account-policy-checks
+   :reconciliation :require-exact-selected-actor-contract-and-complete-explicit-character-context-agreement-at-relevant-canonical-re-resolutions-and-agreement-with-actual-scope-before-original-custody-and-field-consuming-query-or-emission
+   :native-export-limit :current-graph-authority-exports-only-scope-project-records-and-cannot-prove-unchanged-character-context
+   :required-planned-access :owning-adapter-must-use-the-corresponding-canonical-selection-with-the-actual-final-snapshot-no-inference-from-scope-or-policy-digest
+   :transport :protected-existing-source-authority-inputs-and-original-owner-history-no-native-graph-authority-schema-change-or-new-field-abi-argument
+   :retention :only-the-named-owner-values-no-raw-auth-context-credentials-process-token-whole-resolved-agent-map-or-assembled-prompt
+   :finalization :only-after-these-original-source-checks-with-all-existing-owner-admission-and-custody-proofs-not-an-earlier-or-later-unrelated-context-snapshot}
+  :current-creative-source :pinned-ussyverse-social-creative-contract-has-no-explicit-context-at-either-supported-location
+  :missing-or-changed-context :existing-planned-field-source-or-seed-admission-refusal-before-emission-no-contract-auto-population-and-no-new-blanket-requirement-on-generic-native-graph-recall
+  :component-placement :existing-original-custody-principal-scope-source-and-original-presence-seed-source-must-agree-on-this-complete-association-no-extra-runtime-custody-key-selected-here
+  :incomplete-parent-leaves :FullOriginalQualifiedPrincipalScopeSource-FullOriginalQualifiedPresenceSeedSource-authored-contract-origin-original-admission-history-and-qualified-loaded-capture-producer-remain-open
+  :authority :original-association-and-source-pins-are-provenance-only-all-current-qualified-owner-decisions-versions-denials-and-whole-call-commit-exposure-custody-remain-independent
+  :replay :retain-and-compare-entire-original-association-through-retry-checkpoint-restore-rebuild-without-refetching-original-context-or-substituting-current-character-current-qualified-authority-inputs-still-required
+  :self-reference :no-enclosing-state-or-result-snapshot-or-own-source-hash-in-this-component
+  :bounds :all-owner-schema-and-existing-field-id-other-string-finite-value-whole-input-state-checkpoint-history-work-and-continuation-bounds-apply-to-all-values-and-copies-no-dropping-open-snapshot-fields-or-cap-increase
+  :qualification-order :complete-existing-source-interface-fixture-and-required-upstream-prerequisites-before-ready-own-adapter-and-compiled-implementation-after-lawful-ready-independent-executed-controls-before-consumption-or-done
+  :future-controls [:explicit-nested-context-precedence-and-root-selection-follow-owning-resolver
+                    :malformed-truthy-nested-context-refuses-not-fallback-to-root-or-rendered-prompt
+                    :same-native-scope-with-changed-complete-context-refuses-before-field-seed-admission
+                    :changed-actor-contract-user-org-or-membership-refuses-without-owner-retagging
+                    :context-identity-preserved-distinct-from-actor-contract-and-membership
+                    :missing-explicit-context-refuses-planned-field-admission-with-generic-native-graph-recall-unchanged
+                    :complete-owner-open-snapshot-evidence-and-optional-revision-presence-retained
+                    :source-code-pins-never-substitute-authored-source-origin-current-grant-or-fence
+                    :exact-retry-restore-and-rebuild-retain-original-source-without-refetching-it-and-with-independent-current-authority
+                    :all-original-exact-and-one-over-byte-work-state-history-and-continuation-controls]
+  :source-manifest [
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/contracts/resolve.cljs" :sha256 "b2c0b78590123541bd955a72df117af9b8d9d981c82e6ae2155f0730a1ab6bd3"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/shape/character/tool_modes.cljc" :sha256 "3f5e41379f6264f6e8c59f05a34ccff5c840cf12a558c5f982061ceabb0524dc"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/law/character/tool_modes.cljc" :sha256 "7de4d6c1c10767254f4c4e784d2547c4c65c82bf6d31e3537e4b8b254243aaac"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/turn_context.cljs" :sha256 "946b6f8d2ba29867893ea9c36613987284cb89d3e3fbcf04b9e5e9bddb7e2f44"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/authority.cljs" :sha256 "1180262275377df776b5866913e92ffeeeb93bf8eff2ddac0f4526b5f217ae39"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/encounter_runtime.cljs" :sha256 "d7441acc7f1b2b2157cd1a6f6b80608d800ec07909a67585eff9344da7b5322f"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/agent/hydration.cljs" :sha256 "a7632b6194e190c560e343c6148807bb9de3a0bfdf96fa96a48ccec83744769e"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/agent/turn.cljs" :sha256 "75322b45cd735762ab354e547c9c3ba68e94fa924a5482f83f5b237e5a97254c"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/extern/openplanner_sdk.cljs" :sha256 "c0d6359a9f679cc4ecf7c78dcf55b992dee407398f77cf6e098c0fcf25400172"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/clients/openplanner.cljs" :sha256 "d29be514559723f76e05161789fa55281d8de6cac9e65bd95c03336543ae6678"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "contracts/agents/ussyverse_social_creative.edn" :sha256 "f78208fc1ca24463f3402c3e919ab275776856618a26fa5e9009543a2a99fa61"}
+   {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+    :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc" :sha256 "350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94"}
+   {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+    :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo_contract.cljc" :sha256 "54d7ea1ac1ee05dde96deb45ea54f52e02dbd3ec45f72066bce1b90ed9adfad0"}]}
  :stored-principal-source-port
  {:status :observed-native-scope-port-and-proposed-owned-original-principal-id-mapping-not-qualified-authority-production
   :owner-scope-contract :openplanner.graph.recall.contract/scope
@@ -725,6 +806,7 @@
    :inspected-axxium-surface :identity-capability-session-context-not-evidence-of-the-required-resource-projection-or-whole-exposure-fence
    :missing-port :remain-unselected-no-claim-that-a-new-upstream-feature-point-or-local-policy-evaluator-is-required-or-authorized-by-this-observation}
   :full-original-source :FullOriginalQualifiedPrincipalScopeSource-and-original-presence-association-history-still-required-this-port-or-native-scope-map-alone-does-not-fill-them
+  :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
   :current-versus-original :immutable-original-membership-actor-user-org-and-source-retained-as-provenance-new-binding-or-policy-state-cannot-retag-an-emitted-owner
   :source-manifest [
    {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
@@ -832,6 +914,7 @@
     :path "docs/notes/system_design/2026-02-20-design-hole-responses-field-and-collisions.md" :sha256 "c4ef760eb2b1cd050a95391a0b36675c2971e351d17d3559dd97e962373185fc"}]
   :actual-seed-vector-producer :unselected-not-established-by-native-character-schema-rendered-prompt-role-membership-or-donor-constructor
   :full-original-source-shape :still-required-FullOriginalQualifiedPresenceSeedSource-not-filled-by-an-unvalidated-map-or-a-port-label
+  :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
   :still-unselected [:qualified-original-presence-to-principal-scope-source-binding
                      :meaning-source-to-exact-semantic-vector-and-revision-production
                      :physical-birth-position-velocity-mass-wallet-mantle-and-emission-identity-mapping]
@@ -1069,7 +1152,8 @@
    :source-role :complete-matching-original-query-embedding-seed-budget-mood-contact-projection-and-emission-evidence-where-existing-contract-requires-it
    :population :only-actual-existing-qualified-input-state-provenance-explicit-arguments-and-owner-history-no-new-fetch-producer-or-input-parameter
    :missing-producing-path :explicit-unresolved-before-readiness-not-a-synthesized-record
-   :snapshot-self-reference :forbidden-no-enclosing-state-snapshot-or-its-state-snapshot-hash}
+   :snapshot-self-reference :forbidden-no-enclosing-state-snapshot-or-its-state-snapshot-hash
+   :association-component-contract "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"}
 
   :admission-record
   {:kind :closed-map
