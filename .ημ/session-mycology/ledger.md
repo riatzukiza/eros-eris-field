@@ -953,3 +953,23 @@
   spore: none
   receipt-refs: cephalon-field-stored-principal-native-source-qualified-local-20261016
   note: Actual native encounter evidence uses membership ID as principal, while full graph scope retains actor/org/member/user/policy revision. Proposed Field original stored-principal now selects that namespace with existing emitted-owner equality. Stored actor assignment stays distinct from role display/default; actual resolver checks exact membership actor or refuses ambiguity, reloads active principal/policy, rechecks selected actor/current scope and contract. Explicit character presence remains separate and needs qualified original association. Native policy fingerprint and await rechecks grant no physical scope-revision mapping or whole commit/exposure fence; existing Axxium/current authority requirements and full original source remain open/unchanged. Independent source reader matched15 immutable blobs and found no confirmed mismatch/overclaim at final4stablehashes;0 native approval/round credit. All98 prior committed journal bytes exact; new100records local/unpublished, no migration/native Ready/full-state claim. Existing source/interface/fixture/upstream prerequisites precedeReady; own implementation and independent proof followlawfulReady beforeconsumption/Done. Goal active/live0of3, heartbeat human-paused, fullETAunstarted below20GiB. No new scope/points/provider request/push/board/runtime/credential/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T15:10:32.049Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-authority-owner-routing-start-20261016
+  note: Knoxx existing Axxium facade explicitly retains local roles; application stored membership/resource policy and current-grant resolution belong to existing Knoxx owner boundaries. Correct earlier plan attribution of those app decisions/fences to Axxium, visibly and consistently, while preserving canonical Axxium identity/authentication and applicable capability authority and all original source, current binding, denial, freshness and qualified custody obligations. Exact output/version/fence interfaces remain unqualified; no login/roles/digest equals qualification. No second Field evaluator/fence or common-law promotion, new scope/points/upstream feature, grant migration or Ready. All100 prior receipt and reflection bytes remain exact. Goal active/live0of3; heartbeat human-paused; ETA full unstarted below accepted20GiB floor. No provider/native PR request/push/board/runtime/credential/paid/deployment/social/spore action.
+
+- ts: 2026-10-16T15:15:42.634Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-authority-owner-routing-qualified-local-20261016
+  note: Explicitly correct earlier attribution of application policy/grant decisions and protection to Axxium using existing facade source: Axxium retains canonical identity/authentication/applicable capabilities, Knoxx existing stored-policy/character boundaries own application membership/roles/source-resource policy/current-grant resolution. Existing single current authority projection remains carrier; no new argument/runtime schema. Full original identity/principal/presence/ownership/scope/source and current owner/version/denial/whole-call/atomic-commit/result-exposure custody remain mandatory. Both required Axxium denial and current owning-application denial prevent writes/exposure. Exact source association/physical scope revision/current qualified outputs/identity validity/fence remain unqualified. No second evaluator/local version/fence, common-law lift/new upstream/scope/points/Ready/credential/grant migration. All100 earlier committed journal bytes remain exact; goal active/live0of3, heartbeat human-paused; fullETAunstarted below20GiB. Initial tool-code syntax failure occurred before any tool/file action and was corrected; not production verification. No push/provider/native PR request/board/runtime/credentials/paid/deployment/social/spore action.

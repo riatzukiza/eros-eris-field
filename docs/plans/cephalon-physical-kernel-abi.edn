@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-stored-principal-source-port"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-authority-owner-routing"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -633,6 +633,56 @@
                     :no-source-self-hash-enclosing-state-cycle-or-secret-runtime-object
                     :exact-retry-checkpoint-restore-rebuild-preserve-original-source-and-revision-without-provider-call
                     :all-existing-exact-and-one-over-byte-work-state-checkpoint-and-continuation-bounds]}
+ :authority-owner-routing-port
+ {:status :source-grounded-routing-amendment-not-qualified-producer-or-fence
+  :correction :earlier-axxium-owned-application-decision-and-fence-attribution-replaced-by-inspected-existing-owner-routing
+  :scope :this-pinned-knoxx-integration-not-common-foresight-law-or-authority-transfer
+  :identity-owner :canonical-axxium-identity-authentication-and-applicable-capability-authority-through-existing-knoxx-facade
+  :application-owner :knoxx-existing-stored-membership-role-source-resource-policy-and-current-grant-resolution
+  :facade-observation :issuer-subject-binding-active-actor-validation-and-independent-local-context-roles-remain-local-no-remote-privilege-copy
+  :native-event-admission :retain-actual-owner-qualified-unforgeable-server-event-authority-route-no-fabricated-axxium-login-subject
+  :field-consumer :independently-qualified-owner-outputs-only-no-second-policy-evaluator-local-version-authority-or-local-fence
+  :existing-projection-carrier :same-single-current-trusted-authority-projection-no-new-argument-or-runtime-schema
+  :original-binding :all-original-identity-principal-presence-ownership-scope-and-source-provenance-remain-mandatory
+  :current-binding :qualified-current-owner-decisions-and-policy-grant-versions-for-every-retained-causal-influence
+  :custody :qualified-owning-authority-admission-or-fencing-through-whole-call-atomic-commit-where-applicable-and-result-exposure
+  :refusal :missing-denied-stale-changed-or-unsupported-authority-or-protection-retains-existing-unchanged-no-effect-no-partial-exposure-contract
+  :not-qualification [:successful-login :local-membership-role-or-scope-map :derived-policy-fingerprint :await-boundary-recheck :copied-version-label]
+  :unqualified [:complete-original-principal-presence-association :physical-scope-revision-mapping
+                :exact-current-owner-output-shapes-and-policy-grant-versions :current-identity-validity-where-required
+                :whole-call-commit-and-exposure-admission-or-fence]
+  :no-inferred-new-work :source-routing-does-not-authorize-new-upstream-feature-points-scope-credentials-grant-migration-or-ready-status
+  :qualification-order :existing-source-interface-fixture-and-upstream-prerequisites-before-ready-own-implementation-and-independent-executed-controls-after-lawful-ready-before-consumption-or-done
+  :future-controls [:required-axxium-identity-or-capability-denial-writes-and-exposes-nothing
+                    :cached-application-allow-versus-current-owning-application-denial-writes-and-exposes-nothing
+                    :changed-missing-stale-or-unsupported-owner-version-or-custody-refuses-without-effect]
+  :source-manifest [
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/domain/auth/axxium.cljs" :sha256 "bdb1eee788cb3962f6b701c555663c4353b5471329f0870b70b115a26d3a9f3c"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/auth/axxium.cljs" :sha256 "e68074225ab3cacbb8b0e0000b4ba3a99b6907fbfb8da3a74aa988508f6c51a0"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/extern/axxium_authority.cljs" :sha256 "38aa635382b6418fe85695087f6e34bcb17832f678a0b71e6b0e589371a60cfb"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/law/axxium_identity.cljs" :sha256 "e15e488926cea261287cd728eca7662464a4a8786b58123b421b26c7e9b48360"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/db/policy.cljs" :sha256 "744809fbbe1ab6010a617c1aa07e299aec06faf11195c5ea6abfaafa35637b66"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/authority.cljs" :sha256 "1180262275377df776b5866913e92ffeeeb93bf8eff2ddac0f4526b5f217ae39"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/character/encounter_runtime.cljs" :sha256 "d7441acc7f1b2b2157cd1a6f6b80608d800ec07909a67585eff9344da7b5322f"}
+   {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+    :path "backend/src/cljs/knoxx/backend/infra/agent/event_policy_authority.cljs" :sha256 "af2760e613bb77999e3e57c1bad4c6c85fea02341748200445384b42711fe5eb"}
+   {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+    :path "README.md" :sha256 "a3f3c394019aee45f7df99c0061ca55c721d0e5662f56eb2c64fba6d7d06efef"}
+   {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+    :path "src/cljs/axxium/auth/session.cljs" :sha256 "498a6fbd88822b506881f8c8069cf8a8489e04557b07a51a96cef49a935cdbb9"}
+   {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+    :path "src/cljs/axxium/schema.cljs" :sha256 "ee5bb98a55e7c2b2acb90cbdad617e2250496ad78682ef8cd4ef611f2770455f"}
+   {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+    :path "src/cljs/axxium/routes/actor.cljs" :sha256 "f90fbc3cc7a65eafd71e43eaa20267735ff67e8100a568fd2c032e1a6ec70147"}
+   {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+    :path "src/cljs/axxium/routes/agents.cljs" :sha256 "2d2ee10321947e0b4ed892a36ac521fa798eaf9564f2fc6e41e69341bf4c1ec7"}]}
  :stored-principal-source-port
  {:status :observed-native-scope-port-and-proposed-owned-original-principal-id-mapping-not-qualified-authority-production
   :owner-scope-contract :openplanner.graph.recall.contract/scope
@@ -671,7 +721,7 @@
   :freshness-and-fence
   {:native-rechecks :observed-knoxx-and-openplanner-await-boundary-source-and-principal-rechecks-only
    :whole-call-commit-exposure :not-established-by-native-scope-schema-fingerprint-or-these-rechecks
-   :planned-current-authority :existing-qualified-axxium-decision-policy-grant-version-and-admission-or-fence-obligations-remain-unchanged
+   :planned-current-authority :qualified-current-owner-decisions-policy-grant-versions-and-admission-or-fence-with-required-identity-authority
    :inspected-axxium-surface :identity-capability-session-context-not-evidence-of-the-required-resource-projection-or-whole-exposure-fence
    :missing-port :remain-unselected-no-claim-that-a-new-upstream-feature-point-or-local-policy-evaluator-is-required-or-authorized-by-this-observation}
   :full-original-source :FullOriginalQualifiedPrincipalScopeSource-and-original-presence-association-history-still-required-this-port-or-native-scope-map-alone-does-not-fill-them
@@ -1268,7 +1318,7 @@
    :population :complete-binding-from-original-qualified-visible-memory-projection-and-matching-original-clio-source-envelope
    :retention :complete-value-in-admitted-entity-canonical-state-snapshot-and-original-boundary-inputs-not-ids-or-hash-alone
    :original-source :immutable-provenance-not-a-current-grant-or-policy-decision
-   :current-check :match-stored-principal-owner-scope-resource-and-original-source-against-explicit-qualified-current-axxium-authority-and-retained-qualified-clio-evidence-before-every-causal-use
+   :current-check :match-stored-principal-owner-scope-resource-and-original-source-against-explicit-qualified-current-identity-and-application-authorities-and-retained-qualified-clio-evidence-before-every-causal-use
    :rebuild :same-original-binding-with-complete-current-authority-history-reconstruction-no-retagging-or-new-grant
    :pure-fetch-inference-from-id-or-local-authorization :forbidden
    :unknown-missing-mismatched-or-denied :whole-unchanged-refusal-before-contact-inclusion-with-existing-binding-or-authority-code}
@@ -1349,7 +1399,7 @@
              :implicit-fallback :forbidden
              :emitted-owner-change :forbidden}
  :causal-authority
- {:owner :qualified-axxium-current-authority-projection-and-admission-or-fence
+ {:owner :qualified-current-identity-and-application-authority-projections-and-admission-or-fence
   :entry-points :every-declared-abi-operation-including-advance-catch-up-and-read
   :input :explicit-current-trusted-authority-projection-never-a-locally-minted-version-or-state-only-cache
   :binding :qualified-owner-decision-policy-and-grant-versions-for-every-actual-stored-principal-scope-request-and-retained-causal-influence
@@ -1358,7 +1408,7 @@
   :ordinary-binding-change :whole-unchanged-refusal-until-complete-qualified-current-authority-rebuild
   :rebuild-exception :old-prior-binding-only-inside-complete-private-reconstruction-under-current-qualified-authority
   :fresh-admission :empty-prior-state-only-with-qualified-current-visible-projection-and-authority
-  :outer-custody :qualified-axxium-admission-or-fence-through-whole-call-and-result-exposure-otherwise-refuse
+  :outer-custody :qualified-owning-authority-admission-or-fence-through-whole-call-and-result-exposure-otherwise-refuse
   :pure-authority-lookup-policy-evaluation-or-local-fence-implementation :forbidden
   :state-transition-refusal-reasons [:current-authority-unestablished :stale-causal-authority :denied-causal-authority]
   :read-only-refusal :read-recall-declared-closed-reason-status-union
@@ -1675,8 +1725,8 @@
                             :ordinary-success-unchanged]}
                 :inclusion-result-codec "finite-contact-inclusion-result/1"
                 :lookup :the-single-state-unique-admitted-request-with-unchanged-original-principal-and-scope-binding
-                :authority-owner :qualified-axxium-current-decision-and-policy-grant-version
-                :authority-shape :consume-qualified-axxium-binding-no-local-decision-or-version-authority
+                :authority-owner :qualified-current-identity-and-application-authorities-with-current-policy-grant-versions
+                :authority-shape :consume-qualified-owner-bindings-no-local-decision-or-version-authority
                 :required-current-binding [:stored-principal :actual-read-action-and-resources
                                            :permitted-scope :current-policy-and-grant-versions]
                 :before-exposure :verify-request-fold-and-all-retained-causal-influences-under-exact-current-authority
@@ -1690,7 +1740,7 @@
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
                                   :finite-trace-budget-exceeded :finite-work-budget-exceeded]
-                :outer-freshness :qualified-axxium-admission-or-fence-through-result-exposure-otherwise-refuse
+                :outer-freshness :qualified-owning-authority-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
   {:version "finite-revocation-rebuild/6"
@@ -1698,7 +1748,7 @@
            :current-trusted-clio-provenance-horizon
            :immutable-complete-ordered-history-and-replacement-closure :current-trusted-authority-projection
            :physical-configuration :qualified-producing-identity]
-   :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
+   :input-authority :consume-qualified-current-identity-and-application-authority-decisions-and-versions-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
    :history-coverage {:from :exclusive-owner-verified-checkpoint-covered-provenance-cursor
                       :through :inclusive-independently-trusted-clio-pre-operation-tip-excluding-current-invocation
@@ -1910,7 +1960,7 @@
              :top-level-horizon :same-qualified-pre-operation-boundary-and-pre-recorded-invocation-contract-as-rebuild-provenance-horizon
              :current-invocation :never-part-of-its-own-reconstruction-or-replacement-reference-closure
              :state-cursors :never-substitute-for-provenance-range-or-authorize-omitted-post-checkpoint-operations
-             :authority :same-qualified-current-axxium-and-clio-admission-before-every-causal-influence-and-through-result-exposure
+             :authority :same-qualified-current-identity-application-and-clio-admission-before-every-causal-influence-and-through-result-exposure
              :reconstruct [:complete-physical-state :trails :contact-profile-bindings :nexus-memory-bindings :both-state-cursors :original-pending-event-queue
                            :recall-requests :inclusion-folds :pending-feedback
                            :feedback-confirmations :confirmed-outcome-ids]

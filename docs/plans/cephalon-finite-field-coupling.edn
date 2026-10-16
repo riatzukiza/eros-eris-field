@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-fixed-target-lifecycle"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-authority-owner-routing"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -9,6 +9,7 @@
  :selection/compatibility :reviewed-signed-cell-index-amendment
  :source-rights-task "5ce9c975-1d30-4679-b607-e2dcd76f8192"
  :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
+ :authority-owner-routing "docs/plans/cephalon-physical-kernel-abi.edn#authority-owner-routing-port"
  :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
  :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
             :cell-key [:scope-revision :layer-index :exact-floor-x-over-cell-size
@@ -406,7 +407,7 @@
   :authentication {:self-contained-digest :integrity-only-never-origin-or-persistence-authentication
                    :applies-to [:restore :rebuild-revocation-checkpoint-admission]
                    :input :current-trusted-checkpoint-evidence-separate-from-untrusted-snapshot-and-storage-response
-                   :owner :existing-qualified-clio-immutable-history-and-openplanner-atomic-effect-receipt-under-axxium-authority
+                   :owner :existing-qualified-clio-immutable-history-and-openplanner-atomic-effect-receipt-under-qualified-identity-and-application-authorities
                    :outer-read :independently-authenticate-and-admit-the-actual-persistence-record-through-those-existing-owners
                    :binding [:actual-stored-principal :permitted-scope :field-revision
                              :checkpoint-effect-id :event-cursor :checkpoint-covered-provenance-cursor
@@ -466,7 +467,7 @@
   :current-owner-projection :explicit-argument-at-every-abi-entry-including-advance-catch-up
   :ordinary-mismatch :unchanged-refusal-before-any-sampling-pending-event-or-causal-work
   :complete-rebuild :only-declared-old-state-to-current-authority-reconstruction-exception
-  :through-exposure :outer-qualified-axxium-admission-or-fence-not-an-epoch-label
+  :through-exposure :outer-qualified-owning-authority-admission-or-fence-not-an-epoch-label
   :pure-lookup-or-second-policy-engine :forbidden}
  :continuation-closure
  {:owner :same-portable-field-shape-law-and-domain-before-any-successful-state-exposure
@@ -601,7 +602,7 @@
   :reason [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
            :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
   :missing-denied-or-conflicting-binding :whole-transition-unchanged-refusal
-  :read-revalidation :current-qualified-axxium-policy-grant-decision-for-original-principal-scope-and-all-retained-influences-before-exposure
+  :read-revalidation :current-qualified-identity-and-application-authority-decisions-and-policy-grant-versions-for-original-principal-scope-and-all-retained-influences-before-exposure
   :unchanged-scope-with-revoked-grant :stale-or-denied-with-no-recall-payload-until-qualified-current-authority-rebuild
   :budget :owning-finite-state-work-trace-byte-and-record-caps-before-exposure
   :partial-ranking-or-truncation :forbidden
@@ -846,10 +847,10 @@
                :empty-folds-and-requests :valid-only-when-no-request-or-fold-was-produced
                :handwritten-snapshot-or-synthetic-authentication-flag :not-qualification
                :full-contact-driven-paired-consumer-proof-task "f503ae5a-e414-4da8-a8d4-328a7218bcf3"
-               :authorization-owner :axxium
-               :current-decision :qualified-axxium-decision-and-policy-grant-version
+               :authorization-owner :qualified-identity-and-owning-application-authorities
+               :current-decision :qualified-owning-application-decision-and-policy-grant-version-plus-required-identity-authority
                :decision-binding [:actual-stored-principal :action :resource :permitted-scope]
-               :commit-decision-guard :qualified-axxium-admission-or-fencing-through-commit
+               :commit-decision-guard :qualified-owning-authority-admission-or-fencing-through-commit
                :stale-local-policy-or-locally-minted-version :not-authority
                :unsupported-authority-guard :refuse-all-components-before-commit :independent-readback :required
                :atomic-components [:graph-projection :field-checkpoint :effect-receipt]

@@ -133,7 +133,7 @@ Its exact names and fields require this source plan's review.
 - `rebuild-revocation` privately reconstructs the complete permitted world from
   a compatible independently established clean checkpoint, separate trusted
   checkpoint evidence and complete ordered immutable history under current
-  Axxium authority, plus an independently trusted current Clio provenance
+  identity and application authorities, plus an independently trusted current Clio provenance
   horizon. Snapshot state cursors may rewind; the main history range runs from
   the owner-attested checkpoint covered prefix through that unrewound tip.
   The checkpoint's storage position is not proof of the prefix it represents.
@@ -189,7 +189,7 @@ Its exact names and fields require this source plan's review.
   causal operation consume those actual values without an external cache or
   default; explicit restore/rebuild configuration must match them exactly.
   The snapshot's unkeyed SHA256 proves byte integrity only. Existing qualified
-  Clio/OpenPlanner/Axxium adapters must independently admit the committed atomic
+  Clio/OpenPlanner and identity/application authority adapters must independently admit the committed atomic
   effect record binding its expected snapshot digest, cursor, field revision,
   checkpoint effect ID, stored principal and scope. Restore/rebuild compare that
   separately admitted expected digest with the actual payload and wrapper
@@ -871,8 +871,9 @@ Memory variant finite-nexus-memory-binding/2 now retains a closed original
 source-binding value: actual stored principal, memory owner, scope/resource,
 Clio source event and original authority source revision. The complete binding
 is populated from the qualified original projection/source envelope and retained
-in entity/state/snapshot/history; advance receives the existing explicit current
-Axxium projection to validate actual stored identities/resources before causal
+in entity/state/snapshot/history; advance receives the existing single explicit
+current trusted authority projection, qualified from the identity and application
+owners, to validate actual stored identities/resources before causal
 use. Original provenance is not a current grant. Rebuild retains that original
 binding and reconstructs against current authority; no ID inference, ambient
 lookup, authority minting or denied retagging.
@@ -1518,8 +1519,9 @@ mapping remains unselected. Native `encounter-policy:` is a derived fingerprint;
 checked times and await-boundary rechecks establish no reservation or fence
 through commit/result exposure. The inspected Axxium session/schema surfaces
 supply identity/capability context without proving that required resource fence.
-All existing planned current Axxium decision/policy/grant/admission-or-fence
-requirements remain. These observations authorize no local policy evaluator or
+The explicit owner-routing amendment below corrects the earlier attribution of
+application decisions to Axxium. All current decision/policy/grant/admission-or-fence
+requirements remain, assigned to their qualified existing owners. These observations authorize no local policy evaluator or
 new upstream prerequisite/point, and supply no waiver for a missing port.
 
 ABI `stored-principal-source-port` pins fifteen actual source blobs and links the
@@ -1530,3 +1532,50 @@ Select complete source/association/interfaces/fixture obligations with existing
 upstream/native prerequisites before Ready; own adapter/compiled implementation
 and independent executed controls follow lawful Ready before consumption/Done.
 No live membership, policy decision, token, field emission or B proof ran here.
+
+
+## Existing authority-owner routing correction — 2026-10-16
+
+The earlier wording attributed application policy/grant decisions and their
+whole-call/commit/exposure protection specifically to Axxium. That source
+attribution is corrected here. The inspected Knoxx Axxium facade explicitly
+binds authenticated issuer/subject identity while leaving roles under local
+control. Axxium retains canonical identity/authentication and applicable
+capability authority through that facade. Knoxx owns application membership,
+roles, source/resource policy and current-grant resolution through its existing
+stored-policy and character-authority boundaries. This is routing for the
+pinned integration, not promotion to common Foresight law or a transfer of
+canonical authority.
+
+Field consumes independently qualified outputs from those existing owners;
+it implements no second evaluator, local authority version or local fence.
+Retain the full original identity/principal/presence/ownership/scope/source
+association. Current decisions and qualified policy/grant-version bindings
+must cover every retained causal influence. Qualified admission/fencing must
+hold through the whole call, atomic commit where applicable, and result
+exposure. Missing, denied, stale, changed or unsupported authority/protection
+keeps the existing refusal, unchanged state, no effect and no partial payload.
+Both required Axxium identity/capability denial and current owning-application
+denial must remain effective; cached application allowance overrides neither.
+
+ABI authority-owner-routing-port pins thirteen actual facade/owner source
+blobs at Knoxx b6f4dfbb4a006934a191c8fb3f26f270579e7e62 and Axxium
+603ea4cd88f589c621234f73d3afd6e4e08788b8. The native server-event route
+retains its actual owner-qualified process authority; no Axxium login/subject
+is fabricated for it. Successful authentication, local roles or a scope map
+do not establish the full original association, physical scope revision,
+current qualified decision/version output, current identity validity where
+required, or whole-call/commit/exposure custody. Native policy fingerprints
+and await-boundary checks remain observations, not fences. The inspected
+Axxium interfaces do not establish those application outputs or protection;
+this bounded observation is no claim about all possible repository behavior.
+
+Those producer shapes, versions and custody interfaces remain unqualified.
+Select complete source/interface/fixture obligations with existing upstream
+prerequisites before Ready; implement the owning adapters and execute
+independent controls after lawful Ready before consumption/Done. The two
+denial controls and the missing/stale/changed/unsupported protection controls
+are planned, not executed. This amendment changes no runtime shape/arity,
+mechanics, cap, source provenance, native event identity or replay requirement,
+and authorizes no new upstream feature, point, scope, credential, grant
+migration or board transition. Prior immutable history remains intact.

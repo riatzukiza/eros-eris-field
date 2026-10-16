@@ -847,7 +847,7 @@ Classify artifact and destination evidence audiences separately from the maker's
 
 ## Canonical event/authorization and producing-artifact custody — 2026-10-15
 
-Atomic authorization consumes an Axxium-owned current decision and its policy/grant version through the qualified Axxium interface, bound to actual stored principal, action, resource and permitted scope. Validate that Axxium decision/version through commit under its qualified admission/fencing seam, not just an OpenPlanner cached grants/policy snapshot or a locally minted version. Reload actual owner inputs and refuse revocation/mismatch/unsupported commit protection before any graph/field/effect component commits. Use the actual qualified Axxium shape/field names at the adapter; this declaration invents no competing authorization implementation. A fixture with stale local grants but current Axxium denial must write nothing.
+Atomic authorization consumes the current owning application decision and its policy/grant version, plus every required identity/authentication or applicable capability decision through the qualified owner interfaces, bound to actual stored principal, action, resource and permitted scope. For the inspected Knoxx route, Axxium retains identity/authentication and applicable capability authority through its existing facade; Knoxx retains application membership, roles and source/resource policy through its existing stored-policy and character-authority boundaries. Validate those decisions/versions through commit under qualified owning admission/fencing seams; cached application grants, an OpenPlanner policy snapshot or a locally minted version do not establish that protection. Reload actual owner inputs and refuse revocation/mismatch/unsupported commit protection before any graph/field/effect component commits. Consume actual qualified owner shapes; Field implements no competing evaluator or fence. The earlier stale-local-grants/current-Axxium-denial control remains mandatory wherever that identity/capability authority is required. A further stale-application-allow/current-owning-application-denial control must also write/expose nothing. Neither control is executed by this source amendment.
 
 The tuple of end-boundary step ID and canonical unordered pair is a deterministic contact/domain key within the admitted kernel history, not native event identity. Pure kernel observations are data. The outward adapter maps that key, immutable source/history and ownership to the qualified canonical Clio event envelope; Clio owns emitted event identity, causal stream and idempotency admission. Retain the actual admitted Clio event reference beside the domain key so replay recovers the same event/effect without reminting. Never deduplicate or authorize a downstream effect solely with the tuple or implement a local event-identity scheme; unsupported Clio admission refuses outward effects. Split/catch-up/restore fixtures verify the same domain observations and canonical admitted event/effect references.
 
@@ -1067,7 +1067,7 @@ reactivated by catch-up. Contribution-only history is insufficient. This
 replaces the obsolete proposed/2 contract in this section; prior Git and native
 receipt/comment evidence remains unchanged.
 
-Consume qualified Axxium decisions/versions and Clio complete cursor/history
+Consume qualified identity/application owner decisions/versions and Clio complete cursor/history
 bindings; the pure kernel does no authorization or history I/O. Validate all
 restore artifact/configuration/cursor obligations, both consumed/admitted
 cursors and every pending identity/schedule/disposition. Reconstruct retained
@@ -1144,7 +1144,7 @@ Pure snapshot authentication compares only represented values: complete payload
 and wrapper digests equal the independently admitted expected digest; the state
 cursor equals the bound snapshot-state cursor; principal/scope and existing
 artifact/configuration bindings match. Field revision remains authenticated
-outer record metadata. Qualified OpenPlanner/Clio/Axxium still check its actual
+outer record metadata. Qualified OpenPlanner/Clio and identity/application owners still check its actual
 record/effect, expected graph/field revisions and component association with
 independent graph/checkpoint/effect readback. No field revision is added to the
 closed snapshot state, substituted from projection revision or minted/returned
@@ -1205,7 +1205,7 @@ above is replaced with current/4 and complete consumed/admitted/pending custody.
 These corrections change prospective contracts, not an implemented kernel.
 
 `read-recall` additionally receives a current trusted authority projection from
-the qualified Axxium boundary. Validate its original stored principal, actual
+the qualified identity and application owner boundaries. Validate its original stored principal, actual
 read action/resources, permitted scope and current policy/grant versions before
 exposing any recalled ID, reason, motion, bond or contact. Compare the request,
 fold and every retained causal influence with that exact current authority.
@@ -1272,7 +1272,8 @@ not executed field laws, implementation RED/GREEN, board Ready or live B proof.
 
 Native Codex roots4285761799/4285761810/4285761818/4285761828 refine
 the same existing privacy and typed-result obligations. Every declared ABI
-entry now receives an explicit current trusted Axxium authority projection,
+entry retains the existing single explicit current trusted authority projection,
+qualified from the required identity and application owner boundaries,
 including advance, catch-up, recall emission, outcome/feedback, checkpoint,
 restore and read. The complete state/checkpoint binds that owner projection.
 Before any retained-field sample, contact, pending event or other causal work,
@@ -1426,7 +1427,7 @@ and physical scope; they add no delivery, estimate or native readiness.
   that expected digest before admission. A snapshot or the same untrusted
   storage response cannot attest to itself. A forged velocity/cell/fold with a
   recomputed self-hash refuses; matching independently admitted evidence is the
-  future positive control. Existing Clio/OpenPlanner/Axxium owners retain event,
+  future positive control. Existing Clio/OpenPlanner and identity/application owners retain event,
   persistence and authorization authority; pure checkpoint grants none.
 
 All new evidence is explicit, counted input. No network, clock, signature
@@ -1840,8 +1841,9 @@ Memory variant finite-nexus-memory-binding/2 now retains a closed original
 source-binding value: actual stored principal, memory owner, scope/resource,
 Clio source event and original authority source revision. The complete binding
 is populated from the qualified original projection/source envelope and retained
-in entity/state/snapshot/history; advance receives the existing explicit current
-Axxium projection to validate actual stored identities/resources before causal
+in entity/state/snapshot/history; advance receives the existing single explicit
+current trusted authority projection, qualified from the identity and application
+owners, to validate actual stored identities/resources before causal
 use. Original provenance is not a current grant. Rebuild retains that original
 binding and reconstructs against current authority; no ID inference, ambient
 lookup, authority minting or denied retagging.
@@ -2189,10 +2191,57 @@ a serialized lookalike cannot. The actual selected contract and explicit context
 still need original qualified association to that full stored scope.
 
 A native scope or `encounter-policy:` fingerprint alone does not supply the
-unselected physical scope-revision mapping, full original source, current Axxium
-decision/grant binding or commit/exposure fence. Existing current-authority and
+unselected physical scope-revision mapping, full original source, current qualified
+identity/application decision/grant bindings or commit/exposure fence. Existing current-authority and
 upstream gates remain. Fifteen source bindings and static mapping authoring
 prove no actual context, policy, token, field producer or live B behavior. Own
 implementation and independently executed controls remain after lawful Ready
 before consumption/Done; existing source/interface/fixture prerequisites and
 all mechanics/types/caps are preserved.
+
+
+## Existing authority-owner routing correction — 2026-10-16
+
+The earlier wording attributed application policy/grant decisions and their
+whole-call/commit/exposure protection specifically to Axxium. That source
+attribution is corrected here. The inspected Knoxx Axxium facade explicitly
+binds authenticated issuer/subject identity while leaving roles under local
+control. Axxium retains canonical identity/authentication and applicable
+capability authority through that facade. Knoxx owns application membership,
+roles, source/resource policy and current-grant resolution through its existing
+stored-policy and character-authority boundaries. This is routing for the
+pinned integration, not promotion to common Foresight law or a transfer of
+canonical authority.
+
+Field consumes independently qualified outputs from those existing owners;
+it implements no second evaluator, local authority version or local fence.
+Retain the full original identity/principal/presence/ownership/scope/source
+association. Current decisions and qualified policy/grant-version bindings
+must cover every retained causal influence. Qualified admission/fencing must
+hold through the whole call, atomic commit where applicable, and result
+exposure. Missing, denied, stale, changed or unsupported authority/protection
+keeps the existing refusal, unchanged state, no effect and no partial payload.
+Both required Axxium identity/capability denial and current owning-application
+denial must remain effective; cached application allowance overrides neither.
+
+ABI authority-owner-routing-port pins thirteen actual facade/owner source
+blobs at Knoxx b6f4dfbb4a006934a191c8fb3f26f270579e7e62 and Axxium
+603ea4cd88f589c621234f73d3afd6e4e08788b8. The native server-event route
+retains its actual owner-qualified process authority; no Axxium login/subject
+is fabricated for it. Successful authentication, local roles or a scope map
+do not establish the full original association, physical scope revision,
+current qualified decision/version output, current identity validity where
+required, or whole-call/commit/exposure custody. Native policy fingerprints
+and await-boundary checks remain observations, not fences. The inspected
+Axxium interfaces do not establish those application outputs or protection;
+this bounded observation is no claim about all possible repository behavior.
+
+Those producer shapes, versions and custody interfaces remain unqualified.
+Select complete source/interface/fixture obligations with existing upstream
+prerequisites before Ready; implement the owning adapters and execute
+independent controls after lawful Ready before consumption/Done. The two
+denial controls and the missing/stale/changed/unsupported protection controls
+are planned, not executed. This amendment changes no runtime shape/arity,
+mechanics, cap, source provenance, native event identity or replay requirement,
+and authorizes no new upstream feature, point, scope, credential, grant
+migration or board transition. Prior immutable history remains intact.
