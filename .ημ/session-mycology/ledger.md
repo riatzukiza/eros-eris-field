@@ -1093,3 +1093,23 @@
   spore: none
   receipt-refs: cephalon-original-principal-scope-source-20261016-verified
   note: Original principal-scope-source now directly selects the complete existing original association6, exactly equal to original semantic seed association. Membership, selected actor and distinct origin-presence relations are explicit; original complete stored membership/grant/authored-origin/native admission/history and physical-scope mapping evidence remain required in their existing separate custody fields. Current authorization and commit/exposure protection remain independent. No new runtime wrapper, custody key, call argument, raw auth context/process token/credential/prompt capture or source producer is introduced. One missing parenthesis in a private comparison script caused initial exit1 after source maps parsed; its bytes/output/proof are retained and corrected check passes without plan-source change. Prior112 journal and both plan-note prefixes exact. Local/unpushed source only, no new scope/point/upstream feature/native readiness/board/runtime/credential/paid/deployment/social/spore change. Full ETA suite remains held below accepted20GiB floor.
+
+- ts: 2026-10-16T16:54:21.199Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-authority-capture-20261016-start
+  note: Inspect complete original authority meaning and source. Native Mongo authority is plain scope/project/records data returned by a separate trusted host callback. It is graph-candidate evidence, not a complete Field principal/action/resource decision-version projection or whole-call fence. Native identity/session and encounter await-boundary checks keep their actual scope. Evaluate exact first-admission capture/equality with the existing explicit full current Field projection, retaining historical original value independently of fresh retry authority. Do not invent native versions, local policy/fence, raw auth token storage, producer or new upstream feature/point. Full ETA suite remains held below accepted20GiB floor; no clone/install/native/runtime/board action.
+
+- ts: 2026-10-16T16:59:13.386Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory-graph
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-original-authority-capture-20261016-verified
+  note: A first successful new emission must retain the complete actual current Field authority argument as original custody; no earlier snapshot, subset, native graph scope/project/records output or digest can substitute. On retry/replay original custody remains immutable while fresh current authority is separately qualified, including after rebuild. Required original graph/query/source evidence remains independently retained. Native graph candidate data is plain callback output; inspected identity/application outputs do not establish full Field decisions, versions or whole-call protection. Their shape, producer, native policy/grant-version provenance and commit/exposure admission remain unselected/unqualified; no new upstream feature/point inferred. No callback, process token, credential, raw runtime context or opaque handle is stored as projection. Complete copies count under unchanged limits. Prior114 journal/plan-note prefixes exact. Local/unpushed source only; no new scope/point/Ready/board/runtime/paid/deployment/social/spore change. Full ETA suite held below accepted20GiB floor.

@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-original-principal-scope-value"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-original-authority-capture"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -1514,6 +1514,50 @@
     :source-evidence :FullOriginalRecallAdmissionSourceEvidence
     :history-binding {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-history-carrier"}}
    :authority-role :actual-original-admitted-owner-data-retained-as-provenance-never-a-future-current-grant
+   :original-authority-capture
+   {:status :proposed-direct-existing-input-capture-not-a-selected-closed-owner-shape-or-implemented-producer
+    :value :complete-original-qualified-field-current-authority-projection-data-not-a-native-graph-candidate-subset
+    :first-admission :request-id-has-no-retained-admission-record-and-all-existing-current-owner-and-source-guards-pass
+    :first-source :actual-complete-current-trusted-authority-projection-argument-to-that-successful-original-emit-recall-call
+    :first-equality :supplied-original-admission-custody-authority-projection-exactly-equals-that-complete-current-argument-before-causal-work-no-earlier-separately-acquired-snapshot-or-id-digest-only-copy
+    :first-retention :retain-exactly-that-supplied-original-value-only-in-the-successful-admission-record-with-all-qualified-outer-commit-and-exposure-guards-no-record-on-refusal
+    :full-field-obligations :existing-qualified-owner-identity-and-application-decisions-for-every-actual-principal-scope-action-resource-request-and-retained-causal-influence-with-policy-and-grant-versions
+    :native-mongo-authority :actual-closed-scope-project-records-data-result-of-the-trusted-host-callback-not-the-callback-itself-and-not-this-complete-field-projection
+    :native-graph-source :retain-complete-required-original-native-graph-authority-and-query-projection-values-in-existing-source-evidence-and-history-where-their-own-contracts-require-them-not-erased-by-this-field-authority-capture
+    :native-identity-source :inspected-axxium-identity-capability-context-and-knoxx-stored-application-context-do-not-establish-this-full-field-output-or-protection
+    :retry-equality :incoming-original-authority-value-equals-retained-original-custody-value-under-existing-complete-custody-comparison-not-unconditionally-the-fresh-current-argument
+    :retry-current :fresh-current-authority-still-must-qualify-current-state-and-result-under-existing-authority-and-rebuild-laws-original-value-stays-immutable-even-after-qualified-rebuild
+    :replay :use-complete-retained-original-value-and-source-history-with-independent-applicable-current-owner-admission-no-refetch-original-permission-or-retagging
+    :data-versus-protection :this-field-retains-finite-canonical-projection-data-actual-outer-admission-or-fence-is-separate-and-required-through-whole-call-commit-and-exposure
+    :not-retained [:callback :process-object-token :credential-or-session-secret :raw-runtime-auth-context :opaque-native-handle :enclosing-state-result-or-snapshot-self-hash]
+    :owner-qualification :closed-serializable-owner-output-shape-actual-producing-interface-loaded-code-policy-grant-version-provenance-and-whole-call-protection-remain-unselected-or-unqualified-no-local-field-policy-version-or-fence-minted
+    :bounded-source-conclusion :no-complete-field-output-established-by-these-inspected-pinned-owner-ports-not-a-repository-wide-absence-proof-or-authorization-for-a-new-upstream-feature-or-point
+    :refusal :preserve-existing-current-authority-producing-identity-source-binding-and-finite-limit-reasons-precedence-and-whole-unchanged-state-no-graph-only-fallback
+    :bounds :complete-original-and-current-projection-values-and-every-repeated-source-copy-count-under-existing-input-state-checkpoint-history-work-and-continuation-limits-no-truncation-or-new-allowance
+    :future-controls [:new-emission-mismatched-original-and-actual-current-projection-refused
+                      :new-emission-complete-original-equals-qualified-current-argument
+                      :graph-candidate-scope-project-records-not-admitted-as-full-field-authority
+                      :after-qualified-rebuild-old-original-and-new-current-remain-distinct
+                      :missing-denied-or-unprotected-current-authority-keeps-existing-refusal
+                      :complete-original-retention-without-callback-token-or-secret
+                      :all-repeated-projection-source-bytes-exact-cap-and-one-over]
+    :source-manifest
+   [     {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+      :path "backend/src/cljs/knoxx/backend/infra/character/authority.cljs" :sha256 "1180262275377df776b5866913e92ffeeeb93bf8eff2ddac0f4526b5f217ae39"}
+     {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+      :path "backend/src/cljs/knoxx/backend/infra/character/encounter_runtime.cljs" :sha256 "d7441acc7f1b2b2157cd1a6f6b80608d800ec07909a67585eff9344da7b5322f"}
+     {:repository "riatzukiza/knoxx" :revision "b6f4dfbb4a006934a191c8fb3f26f270579e7e62"
+      :path "backend/src/cljs/knoxx/backend/infra/agent/event_policy_authority.cljs" :sha256 "af2760e613bb77999e3e57c1bad4c6c85fea02341748200445384b42711fe5eb"}
+     {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+      :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/contract.cljc" :sha256 "350499515a80c71c6c9afc9ca463e9a4813e5d637da257049ec35eb8eb3f9d94"}
+     {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+      :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo_contract.cljc" :sha256 "54d7ea1ac1ee05dde96deb45ea54f52e02dbd3ec45f72066bce1b90ed9adfad0"}
+     {:repository "riatzukiza/openplanner" :revision "3ab5ffbb6e34a2ee3607a74bf421785d47d5391d"
+      :path "packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo.cljs" :sha256 "6f87640e0c0f4bb43078d2a1776de248a081c02309aa5b7730252d5c8a8ca917"}
+     {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+      :path "src/cljs/axxium/schema.cljs" :sha256 "ee5bb98a55e7c2b2acb90cbdad617e2250496ad78682ef8cd4ef611f2770455f"}
+     {:repository "open-hax/axxium" :revision "603ea4cd88f589c621234f73d3afd6e4e08788b8"
+      :path "src/cljs/axxium/auth/session.cljs" :sha256 "498a6fbd88822b506881f8c8069cf8a8489e04557b07a51a96cef49a935cdbb9"}]}
    :source-role :complete-matching-original-query-embedding-seed-budget-mood-contact-projection-and-emission-evidence-where-existing-contract-requires-it
    :population :exact-complete-original-admission-custody-explicit-final-emit-recall-argument-qualified-before-pure-call-no-ambient-state-authority-or-cursor-substitute-no-pure-fetch
    :missing-producing-path :explicit-unresolved-before-readiness-not-a-synthesized-record
@@ -2113,6 +2157,7 @@
                        :current-trusted-authority-projection :qualified-producing-identity
                        :original-admission-custody]
                 :original-custody-input "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-custody-input-port"
+                :original-authority-capture "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/original-custody/original-authority-capture"
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
                 :request-field-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"

@@ -1869,3 +1869,36 @@ No raw auth context, process-only token, credentials, whole resolved agent map o
 assembled prompt is selected for this leaf. Replay retains original data rather
 than refetching current context. Full owner values and copies remain subject to
 existing finite bounds, without dropping snapshot fields or changing limits.
+
+
+## Original authority capture at first admission — 2026-10-16
+
+For a genuinely new successful emission, original custody's authority-projection
+must exactly equal the complete current-trusted-authority-projection argument
+that actually admits that call. Validate that agreement before causal work and
+retain the complete original value only on successful admission with the existing
+qualified outer commit/exposure guards. A separately acquired earlier snapshot,
+subset, digest or scope label cannot substitute.
+
+On retry, the supplied original value must equal the retained original custody.
+Fresh current authority remains independently checked. A qualified rebuild may
+change current authority while original custody remains immutable, so equality
+to the fresh current argument is not imposed on every later retry. Original
+permission is never refetched or retagged as a new current grant.
+
+The inspected OpenPlanner Mongo authority is plain scope/project/eligible-records
+data returned by a separate host callback. It is graph-candidate evidence. The
+full Field port additionally requires canonical identity/application decisions
+for every retained causal influence, actual actions/resources and policy/grant
+versions, with whole-call/commit/exposure protection. The inspected native graph,
+identity and stored application outputs do not establish that complete port.
+Required original native graph/query/source values remain in their existing
+source-evidence/history obligations; this capture does not discard them.
+
+This selects a direct relation between existing inputs, not a closed owner-output
+shape or an implemented producer. Those owner shape, source/version and protection
+requirements remain unselected or unqualified. No new upstream feature or point
+is inferred from the bounded inspection. Finite projection data stays separate
+from outer admission/fence custody; callbacks, process tokens, credentials, raw
+auth contexts and native handles are not retained as the projection. All complete
+copies count under existing limits, without a graph-only fallback or cap change.
