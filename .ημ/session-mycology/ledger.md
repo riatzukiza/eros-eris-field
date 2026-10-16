@@ -753,3 +753,23 @@
   spore: none
   receipt-refs: cephalon-field9e-exact-configuration-refusal-preparation-20261016
   note: The proposal now names invalid-physical-configuration/statusrefused/revision1, a closed unchanged-prior-state shared result without operation result, and the read-only exact three-key variant. Shared required-reasons, both read declarations and rebuild codes agree. Both MD views name the same normative coupling EDN mapping. Existing authority, producingidentity, mechanics mismatch, unsupported operations, arithmetic and byte/work distinctions stay explicit. Two active workflow documentation identifiers have the requested spaces; historical receipts remain untouched. This is partial source preparation for2of5current roots, not a published Fixed/native settlement or full plan qualification. Closedcanonicalstate, closedsharedsuccess and100ordinary/64summedrebuild findings remain unaddressed; original frozen budgets and all required positive fixtures are unchanged. Native physical cards remain Incoming and no implementation was started. Independent owner-schema and required-success audit is read-only. Required ETA full remains unstarted under the accepted20GiB free-space floor; no snapshot/install/cleanup/waiver. No source push or review request, runtime/provider/credential/paid/deployment/social change. GoalACTIVE/live0of3/heartbeatHUMAN-PAUSED.
+
+- ts: 2026-10-16T11:55:19.714Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-elementary-carriers-and-result-union-start-20261016
+  note: Author closed representations for elementary existing state carriers and an exact shared outer result/per-operation payload contract. Preserve every physical law, original source and once-only identity. Leave unselected native owner schema/payload/decision/grant/horizon/exposure bindings explicit; no arbitrary blob or locally minted authority supplies closure. More complex provenance, request and fold shapes remain existing ABI8 work, without pretending a partial carrier contract closes the whole state. Shared read union,9operations,100ordinary/64summedrebuild budgets, all frozen positive controls and native Incoming states remain. Independent worker prepares only private unapplied result contract; main owns source. ETA full remains unstarted under acceptedfloor; no human answer inferred. GoalACTIVE/live0of3/heartbeatHUMAN-PAUSED; no scope/points/runtime/provider/credential/paid/deployment/social change.
+
+- ts: 2026-10-16T12:11:38.233Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-elementary-carriers-and-result-union-preparation-20261016
+  note: Existing ABI8 plan now chooses exact nil emptyprior, closed cursor triple/nil, ordered sparse-cell pair vectors, existing three-key RNG, closed six-key successful confirmations and exact sorted confirmed outcomes. Full state remains explicitly open through authority,pending-events,provenance,recall,folds,pendingfeedback and historicalownerleaves. Shared success is exact status/result; refusal exact status/state/reason/reasonrevision. All9operations have exactpayloadkeys/status/equality, includingzero/backlog, exactretry and10fieldrebuildstate/cursor/snapshotagreement. These are proposed representation choices requiring owningreview; nested observation,recall,feedback,accounting/disposition/source shapes remain unresolved. No codec/trace/snapshot/wire/globalstatus/sideeffect/100ordinary/64summedrebuild cap or frozen positive fixture changed. Source notes now distinguish Axxiumidentity/capability context, Knoxxstoredpolicyresolver andderivedencounterfingerprint, andOpenPlannertrustedcallbackrechecks/fieldnotloaded. No fingerprint is relabeled nativegrantversion or fence; exact supplierselection remains required, without asserting a newupstreamfeature or packet. Small source lineage records proposed expectations, not delivered capability. Initial broad OpenPlannersearch reached generatedshadowoutput, then restricted exactsourcepaths; guessed adapter/authz paths were corrected from canonicalimports/inventory, no effects. Bothnativephysicalcards andgoalproof states retain their prior datedIncoming/live0of3; no boardwrite. Agentcompletedandclosed. FullETAremainsunstartedbelow20GiB actualfree floor, humanspacequestionpending. No sourcepush/newreview/Fixed/approval, scope/points, runtime/credential/paid/deployment/social or sporechange. GoalACTIVE/heartbeatHUMAN-PAUSED.

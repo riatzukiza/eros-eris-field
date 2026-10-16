@@ -1287,16 +1287,38 @@ without it, refuse. The pure kernel performs no authority I/O or second policy
 evaluation. All added authority arguments count in the existing512KiB remaining
 argument/framing bound, with the same3.5MiB maximum continuation carrier.
 
-State-producing operations and checkpoint explicitly return the existing
-state-transition-result union, with their declared operation payload only on
-success. Rebuild's closed refusal-code list includes the continuation-limit
-code and current causal authority codes. The read-only recall result has a
-separate pure success/refusal union, exposed by the qualified public facade as
-success/refusal/failure. A refusal contains exactly status,
-reason and reason-revision1, with invalid request/current-authority-unestablished
-→refused, stale-recall-authority→stale and denied-recall-authority→denied.
-It returns no state or partial recall payload. Thus callers can distinguish the
-promised reason without exposing old memory IDs, contacts or motion. All
+All nine transition entries, including checkpoint, use the exact revision1 shared
+ABI union: success `{:status S :result P}` with the invoked entrypoint's exact
+closed payload keys, or refusal `{:status :refused :state PRIOR :reason R
+:reason-revision 1}` without result/partial payload. Admitted applies to admission,
+emission and existing feedback preparation/retrieval. Advance/catch-up use complete
+iff returned backlog is zero, otherwise incomplete, exactly agreeing with payload
+completeness and state counters. Zero advance never drains backlog or changes
+state, even when unchanged backlog yields incomplete. Existing 100-step/schedule
+semantics and admission checks remain. Confirm-feedback requires its actual
+successful writer acknowledgement or existing matching confirmed retry for
+complete; checkpoint is pure snapshot construction; restore/rebuild are complete
+only after existing full reconciliation and may retain admitted physical backlog.
+
+Every duplicated snapshot/state/cursor/scope/authority/projection/fold/queue/
+completed-result value must agree exactly with the same returned state. Rebuild
+returns its exact ten payload keys; its pure qualified checkpoint is not a new
+persistent record/authentication grant/field revision. All reason eligibility and
+precedence, current-authority/history/once-only rules, caps and no-effect laws
+remain. Owning complete-state/configuration/recall/source/authority/snapshot and
+bounded-accounting definitions are forward references; open nested leaves remain
+open until that existing authoring is completed. This creates no result-wire
+codec or budget and leaves trace1/inclusion-result1/snapshot1/input1 unchanged.
+
+Read-recall remains separate: pure success/refusal and qualified public
+success/refusal/failure. Its refusal remains exactly status/reason/reason-revision1
+without returned state or recall payload, retaining every existing reason/status
+mapping including stale and denied. Only the existing actual unexpected qualified
+facade-evaluation throw produces its exact failed/recall-evaluation-failed/revision1
+result; typed refusals, authority/policy/finite failures and external I/O are never
+remapped. The shared transition union neither broadens read nor stores failure.
+
+
 At this earlier correction, operative revocation prose named /4. The current
 ABI and later provenance-horizon correction name /6; earlier versions remain
 superseded history.
@@ -1832,3 +1854,55 @@ read map/vector and rebuild declarations. All prior state-preservation, current
 authority and finite bounds remain. Declared closed-shape/hash/source-binding
 controls still require future owning RED/GREEN; parsing these maps executes no
 bond, authorization, snapshot or physical behavior.
+
+
+## Exact elementary state representations — 2026-10-16
+
+The ABI's proposed `finite-state-elementary-carriers/1` fixes previously open
+representations without adding a state field or physical law. Initial empty
+prior state is exactly `nil` for admit/restore; it is not a retained state.
+Consumed and admitted cursors each use `nil` for an owner-established empty
+role or exactly the map `{:event-id ID :stream STREAM :seq SEQUENCE}`. All three
+values must match the same complete original qualified Clio envelope. These
+maps do not attest a covered history prefix, current horizon or freshness.
+
+Sparse cells are one ordered vector of exact `[cell-key velocity]` entries.
+Each key is `[scope-revision layer-index cell-x cell-y]`, with the existing
+signed-safe cell indices and exact two-component finite binary64 velocity.
+Order is scope UTF8, numeric layer, numeric x, numeric y; keys are unique.
+The state retains only the committed prior buffer. Existing zero-absence,
+sampling, saturation, pruning and signed-zero component laws remain unchanged.
+RNG is exactly the existing initial-seed/word/draw-counter map, without an
+optional per-record version field or a counter reset.
+
+Successful feedback confirmations are an effect/outcome-ordered vector of
+closed six-key maps: effect-id, outcome-id, payload-hash, scope-revision,
+writer-principal and ack-observation-id. Existing full original acknowledgement
+and payload/principal/scope evidence remains in qualified provenance/history;
+the IDs and digest do not establish writer success. Confirmed outcome IDs are
+exactly the distinct successful confirmation outcomes in strict unsigned UTF8
+order. Existing once-only admission, exact retry and replacement precedence
+remain required; failed acknowledgements do not become confirmation records.
+
+This closes these elementary representations only. Complete pending-event,
+provenance, request/result, inclusion-fold, pending-feedback and native authority
+leaf shapes still need their exact owning definitions and selected actual
+historical payload schemas. The complete state is not yet closed or Ready.
+No generic canonical blob, label or wrapper supplies missing owner authority.
+The existing ABI8 authoring/qualification boundary, all original caps, required
+positive fixtures and native Incoming states remain. Future independent adapter,
+malformed-container, cursor/source, signed-cell/zero, confirmation/retry and
+full checkpoint/restore/rebuild controls qualify these proposed choices.
+
+
+## Observed authority supplier selection — 2026-10-16
+
+The [exact immutable source inventory](2026-10-07-cephalon-physical-kernel.md#observed-authority-ports)
+records Axxium 603ea4c identity/capability context, Knoxx b6f4dfb stored-policy
+reload and derived graph fingerprint, and OpenPlanner 3ab5ffb trusted callback
+rechecks with field status `not-loaded`. Commit existence was independently
+read back; no source/artifact selection, native grant-version production or
+protected commit/exposure seam is qualified by those observations. Resolve the
+existing closed-schema/owner/freshness requirements before Ready. A wrapper or
+renamed fingerprint supplies no missing owner fact; these reads do not establish
+a new upstream feature or additional packet.

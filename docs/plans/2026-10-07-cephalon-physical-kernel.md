@@ -245,22 +245,57 @@ JS strings/arrays/objects convert at the adapter boundary to Clojure data. Nativ
 provider and storage output is untrusted input. Both sides of replaceable seams
 are validated. ABI refusal reason names remain explicit and revisioned.
 
-All nine operations listed in `:state-transition-result :applies-to` use the
-shared revision1 transition result: `admit-state`, `advance`, `catch-up`,
-`emit-recall`, `apply-outcome`, `confirm-feedback`, `checkpoint`, `restore` and
-`rebuild-revocation`. This is a result-shape list, not a claim that the pure
-`checkpoint` operation changes state. The separate `read-recall` union remains
-read-only. For the shared transition result,
-success carries the operation's declared result; refusal carries the exact
-unchanged prior state, an operation-specific reason and reason revision1.
-The required reasons include `invalid-elapsed-us`, `unsafe-arithmetic` and
-`overflow`; these three do not replace the other specific admission, revision,
-scope, identity or writer refusal reasons. `admit-state` receives an explicit
-empty prior state on first admission, so refusal has no implicit host state.
-The ABI preserves the advancement observation, residual, backlog and completeness
-fields inside the successful operation result. Its `catch-up` declaration
-explicitly drains existing backlog only and reproduces the recorded quantum and
-event schedule; it cannot admit new elapsed time or select a new schedule.
+The nine entries in `:state-transition-result :applies-to` use revision1 success
+exactly `{:status S :result P}` and refusal exactly `{:status :refused :state PRIOR
+:reason R :reason-revision 1}`. The actual entrypoint selects its exact closed
+payload keys/types/status in the ABI's `:success :by-operation` table. There is no
+flat alias, operation tag, extra key, reason on success or result/partial payload
+on refusal. Operation-local result vectors are exact key-list mirrors of that
+table. Refusal preserves the exact prior argument, including the same explicit
+empty value for initial admission/restore, and every existing reason/precedence.
+Local unchanged/absence notes constrain the result; they are not extra runtime
+keys or nil placeholders. No shared failed branch is introduced.
+
+Admit-state, emit-recall and feedback preparation/idempotent retrieval use
+admitted. Advance/catch-up use complete iff the returned state has zero backlog,
+otherwise incomplete, exactly matching payload completeness and mirrored state
+counters. A nonzero subquantum residual alone is not incomplete. Valid zero
+advance returns exact input state and empty observations, drains nothing and
+reports the unchanged backlog; no-backlog catch-up is complete and unchanged.
+Existing admission checks, 100-step ceiling and original schedule remain.
+
+Emit's request-result is its exact current authorized retained recall success;
+its own existing recall status remains independent of outer admitted. Exact
+retry returns original state/result without another emission, binding, time,
+draw, feedback or budget reset. Apply-outcome's admitted means preparation or its
+existing idempotent retrieval, never storage/confirmation success. Confirm-feedback
+is complete only after its existing matching actual authorized successful writer
+acknowledgement or admitted matching confirmed retry; returned confirmation equals
+the retained entry. Exact retry leaves state/confirmation unchanged. Failed
+storage and invalid/conflicting acknowledgements keep their specific refusals.
+
+Checkpoint, restore and rebuild use complete for their existing completed pure
+operation. Checkpoint returns the existing canonical snapshot map and matching
+consumed cursor without changing state or manufacturing a persistence receipt.
+Restore returns complete current reconciled state/cursor only after existing
+restore/2 history/authority/once-only/bounds checks. Rebuild returns exactly its
+ten-field payload; snapshot, cursor map, scope/authority map, projection, folds,
+pending queue and completed-result dispositions must all agree with its same
+rebuilt state. Whole-invocation accounting covers actual main/nested/repeated
+reconstruction under the unchanged limits. Its qualified replacement checkpoint
+is the existing pure snapshot value, not a new authenticated storage record or
+field revision. Complete reconciliation can retain admitted physical backlog;
+no partial-history or post-return recovery success is introduced.
+
+The separate read-recall success/refusal/public-failure unions, global status
+vocabulary and all effect restrictions remain unchanged. Complete state,
+configuration/identity, recall, source/authority, snapshot and bounded-accounting
+references retain their owning meaning. This closes outer/payload-key structure
+only where explicitly specified: still-open nested values do not become closed
+through a reference or version label. Trace/inclusion/snapshot/input codecs and
+existing work/byte/time/cutoff laws remain; there is no new result wire envelope,
+operation, registry, admission/recovery rule, authority or budget.
+
 
 ## Numeric, temporal and replay commitments
 
@@ -850,3 +885,66 @@ read map/vector and rebuild declarations. All prior state-preservation, current
 authority and finite bounds remain. Declared closed-shape/hash/source-binding
 controls still require future owning RED/GREEN; parsing these maps executes no
 bond, authorization, snapshot or physical behavior.
+
+
+## Exact elementary state representations — 2026-10-16
+
+The ABI's proposed `finite-state-elementary-carriers/1` fixes previously open
+representations without adding a state field or physical law. Initial empty
+prior state is exactly `nil` for admit/restore; it is not a retained state.
+Consumed and admitted cursors each use `nil` for an owner-established empty
+role or exactly the map `{:event-id ID :stream STREAM :seq SEQUENCE}`. All three
+values must match the same complete original qualified Clio envelope. These
+maps do not attest a covered history prefix, current horizon or freshness.
+
+Sparse cells are one ordered vector of exact `[cell-key velocity]` entries.
+Each key is `[scope-revision layer-index cell-x cell-y]`, with the existing
+signed-safe cell indices and exact two-component finite binary64 velocity.
+Order is scope UTF8, numeric layer, numeric x, numeric y; keys are unique.
+The state retains only the committed prior buffer. Existing zero-absence,
+sampling, saturation, pruning and signed-zero component laws remain unchanged.
+RNG is exactly the existing initial-seed/word/draw-counter map, without an
+optional per-record version field or a counter reset.
+
+Successful feedback confirmations are an effect/outcome-ordered vector of
+closed six-key maps: effect-id, outcome-id, payload-hash, scope-revision,
+writer-principal and ack-observation-id. Existing full original acknowledgement
+and payload/principal/scope evidence remains in qualified provenance/history;
+the IDs and digest do not establish writer success. Confirmed outcome IDs are
+exactly the distinct successful confirmation outcomes in strict unsigned UTF8
+order. Existing once-only admission, exact retry and replacement precedence
+remain required; failed acknowledgements do not become confirmation records.
+
+This closes these elementary representations only. Complete pending-event,
+provenance, request/result, inclusion-fold, pending-feedback and native authority
+leaf shapes still need their exact owning definitions and selected actual
+historical payload schemas. The complete state is not yet closed or Ready.
+No generic canonical blob, label or wrapper supplies missing owner authority.
+The existing ABI8 authoring/qualification boundary, all original caps, required
+positive fixtures and native Incoming states remain. Future independent adapter,
+malformed-container, cursor/source, signed-cell/zero, confirmation/retry and
+full checkpoint/restore/rebuild controls qualify these proposed choices.
+
+
+## Observed authority ports
+
+Source inspection on 2026-10-16 separates three actual pieces of the current consumer path.
+These exact commits were read as immutable local blobs and GitHub separately
+confirmed each commit exists. This is source evidence, not a selected Field
+supplier, reviewed artifact, default-branch assertion or live qualification.
+
+| Observed source | Actual supplying behavior | Remaining Field qualification |
+| --- | --- | --- |
+| [Axxium 603ea4c](https://github.com/open-hax/axxium/blob/603ea4cd88f589c621234f73d3afd6e4e08788b8/src/cljs/axxium/auth/session.cljs#L70), with its [AuthContext](https://github.com/open-hax/axxium/blob/603ea4cd88f589c621234f73d3afd6e4e08788b8/src/cljs/axxium/schema.cljs#L76) | Resolves actor, entity, email, capabilities and roles from current session/credential storage. The registered context map is open. | An actual Field action/resource decision, native policy/grant-version binding and through-exposure custody are not supplied by those functions. |
+| [Knoxx b6f4dfb authority resolver](https://github.com/riatzukiza/knoxx/blob/b6f4dfbb4a006934a191c8fb3f26f270579e7e62/backend/src/cljs/knoxx/backend/infra/character/authority.cljs#L9) and [graph snapshot](https://github.com/riatzukiza/knoxx/blob/b6f4dfbb4a006934a191c8fb3f26f270579e7e62/backend/src/cljs/knoxx/backend/infra/character/encounter_runtime.cljs#L332) | Reloads stored actor/org/membership policy through the canonical Knoxx resolver. Its graph `policy-revision` is an `encounter-policy:` digest of principal/source bindings. | That derived snapshot fingerprint does not establish an Axxium-native grant version, a protected commit or custody through Field result exposure. |
+| [OpenPlanner 3ab5ffb trusted callback adapter](https://github.com/riatzukiza/openplanner/blob/3ab5ffbb6e34a2ee3607a74bf421785d47d5391d/packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo.cljs#L21), with its [closed callback contract](https://github.com/riatzukiza/openplanner/blob/3ab5ffbb6e34a2ee3607a74bf421785d47d5391d/packages/graph/graph-claim-core/src/openplanner/graph/recall/mongo_contract.cljc#L12) | Accepts server-supplied scope/project/records, re-reads the binding after awaits and reports field status `not-loaded`. | No owner-native decision/version producer or atomic authority/exposure fence is established by these source functions. |
+
+The older Axxium 2439 and Clio 788 routing observations remain historical source
+references. Selecting a concrete supplier must reconcile actual owner source,
+full closed value schema, principal/action/resource/version meanings and custody
+with the existing Field contract. A wrapper, renamed digest, actor label or
+injected callback alone cannot establish the missing owner facts. These reads
+also do not demonstrate that a new upstream feature or additional packet is
+necessary: an existing qualified owning interface may still supply them. No
+owner reassignment, policy implementation, scope/point change or native Ready
+transition is made by this source inventory.
