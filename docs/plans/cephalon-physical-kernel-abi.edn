@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-closed-bonds-and-original-memory-source"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-exact-configuration-refusal"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -442,7 +442,7 @@
   :required-reasons [:unsupported-contact-operation :invalid-elapsed-us :unsafe-arithmetic :overflow
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :checkpoint-evidence-unestablished
-                    :producing-identity-unestablished :mechanics-revision-mismatch
+                    :producing-identity-unestablished :mechanics-revision-mismatch :invalid-physical-configuration
                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity
                     :invalid-feedback-acknowledgement :feedback-storage-failed :invalid-intent-bond
                     :invalid-recall-request :missing-or-ambiguous-rebuild-history
@@ -508,6 +508,7 @@
                           :reason-status {:invalid-recall-request :refused
                                           :producing-identity-unestablished :refused
                                           :mechanics-revision-mismatch :refused
+                                          :invalid-physical-configuration :refused
                                           :invalid-contact-profile-binding :refused
                                           :invalid-trail-state :refused
                                           :invalid-nexus-memory-binding :refused
@@ -555,7 +556,7 @@
                 :completed-result-binding :this-retained-result-must-be-reconstructed-under-exact-current-authority
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
-                :refusal-reasons [:producing-identity-unestablished :mechanics-revision-mismatch :invalid-recall-request :invalid-contact-profile-binding
+                :refusal-reasons [:producing-identity-unestablished :mechanics-revision-mismatch :invalid-physical-configuration :invalid-recall-request :invalid-contact-profile-binding
                                  :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :invalid-intent-bond :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
@@ -690,7 +691,7 @@
                      :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
                      :checkpoint-evidence-unestablished
-                    :producing-identity-unestablished :mechanics-revision-mismatch
+                    :producing-identity-unestablished :mechanics-revision-mismatch :invalid-physical-configuration
                      :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding :invalid-physical-entity :invalid-intent-bond
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}

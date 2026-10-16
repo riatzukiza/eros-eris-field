@@ -733,3 +733,23 @@
   spore: none
   receipt-refs: cephalon-field-map-pair-layout-and-documentation-spacing-20261016
   note: Use the exact reviewer map-layout clarification: ["map", one untagged outer vector of untagged two-element key/value vectors], sorted by existing complete encoded-key order. Pair elements recursively use the existing tagged value algebra; vec tags apply only to actual domain vector keys or values, never these map containers. Add explicit empty and one-pair JSON goldens and the honest independent-reference status; paired operative prose states the same layout. The 180-byte wrapper, state/checkpoint/whole-input limits and other semantics are unchanged. Separately insert spaces around the identified run/job/producer/version labels and exited 0 in current documentation; preserve every ID, version and surrounding claim. No historical receipt, event or raw snapshot rewrite. This is a concrete two-finding source correction, not an observation-only review retry. Goal ACTIVE, live B1/B2/B3 remain 0/3, heartbeat human-paused; no board readiness, runtime, provider, credential, budget, paid, deployment, social or spore change.
+
+- ts: 2026-10-16T11:43:15.155Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field9e-exact-configuration-refusal-start-20261016
+  note: Preparing only routine existing planning-contract corrections. Use exact invalid-physical-configuration/refused/revision1 with unchanged prior state and no operation result, and the read-only three-key variant; preserve every authority, producing identity, mechanics, finite-byte/work and unsupported-operation distinction. Broader canonical-state closure, shared success union and100ordinary/64summedrebuild findings remain unaddressed pending exact owning-shape and required-positive assessment; no budget or frozen fixture changed. Initial read of a physical UUID from the separate coordinator board returned unknown task; corrected owning Root37 native read found the original Incoming cards without creating or mutating any card. This is not an implementation RED/GREEN step. GoalACTIVE/live0of3/heartbeatHUMAN-PAUSED. Existing ETA full-run storage question remains pending; no new install/copy/runtime/provider/social/deployment or paid usage.
+
+- ts: 2026-10-16T11:46:06.688Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: cephalon-character-memory/finite-loop/B1-B2-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field9e-exact-configuration-refusal-preparation-20261016
+  note: The proposal now names invalid-physical-configuration/statusrefused/revision1, a closed unchanged-prior-state shared result without operation result, and the read-only exact three-key variant. Shared required-reasons, both read declarations and rebuild codes agree. Both MD views name the same normative coupling EDN mapping. Existing authority, producingidentity, mechanics mismatch, unsupported operations, arithmetic and byte/work distinctions stay explicit. Two active workflow documentation identifiers have the requested spaces; historical receipts remain untouched. This is partial source preparation for2of5current roots, not a published Fixed/native settlement or full plan qualification. Closedcanonicalstate, closedsharedsuccess and100ordinary/64summedrebuild findings remain unaddressed; original frozen budgets and all required positive fixtures are unchanged. Native physical cards remain Incoming and no implementation was started. Independent owner-schema and required-success audit is read-only. Required ETA full remains unstarted under the accepted20GiB free-space floor; no snapshot/install/cleanup/waiver. No source push or review request, runtime/provider/credential/paid/deployment/social change. GoalACTIVE/live0of3/heartbeatHUMAN-PAUSED.

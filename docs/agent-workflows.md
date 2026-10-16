@@ -186,7 +186,7 @@ or executed to establish this boundary.
 
 ## Trailing reader-discard correction — 2026-10-15 UTC
 
-Native Codex4286659389 exposed a limit in the earlier true-EOF claim: a second
+Native Codex 4286659389 exposed a limit in the earlier true-EOF claim: a second
 standard edn/read skips trailing #_ forms. On the isolated committed fixture,
 the actual old abce job exited 0 for a map followed by a discarded map. The
 updated job still uses the standard reader for the map and checks the raw
@@ -196,7 +196,7 @@ valid map string or tail comment. Eight inline contract controls and seven
 actual extracted-step source cases cover positive and refusal behavior.
 
 The initial new-control run used unsupported `bb -` syntax and stopped before
-the intended test. Commit54e9eea corrects the invocation to /dev/stdin and
+the intended test. Commit 54e9eea corrects the invocation to /dev/stdin and
 records the actual causal RED: discarded trailing map accepted by the old
 second-read logic. GREEN then passes the real declarations and valid marker/
 Unicode controls and refuses each ordinary/discarded extra-form source. These

@@ -556,6 +556,21 @@ defaults. Owning source review must accept them; forces/noise laws, table genera
 indexing and draw placement still require qualification. A revision string does
 not adopt hidden donor formulas, clamps, constants, defaults or arbitrary code.
 
+Missing/extra/duplicate keys, wrong containers or nesting, invalid vector lengths,
+coefficient-domain errors and failed configuration invariants use exactly
+`:invalid-physical-configuration`, status `:refused`, reason revision `1`.
+The shared transition returns exactly `:status`, the exact unchanged prior
+`:state`, `:reason` and `:reason-revision`, without an operation result. Read
+returns exactly the three status/reason/revision keys, without state or recall
+payload. The normative mapping is the coupling EDN configuration schema's
+`:invalid-configuration-result`; both read reason declarations and rebuild's
+closed reason codes include it. Existing authority, producing-identity and
+finite-byte/work checks retain their precedence and distinct reasons. A
+structurally valid foreign mechanics revision keeps
+`:mechanics-revision-mismatch`; unsupported contact operations and actual
+arithmetic overflow keep their existing codes. Future schema-negative controls
+isolate each defect with other gates valid, including admit/read/restore/rebuild.
+
 Restore/2 input cursor identifies the authenticated checkpoint; output cursor
 identifies the reconciled current consumed state, with admitted cursor retained.
 Empty-tail roundtrip remains exact. An older checkpoint is valid input without

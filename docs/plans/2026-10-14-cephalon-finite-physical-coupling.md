@@ -1531,6 +1531,21 @@ its original recorded boundary input, covered by state/snapshot/history custody;
 automatic enumeration cannot choose by kind or first table entry. Bond coefficients
 and request weights stay in their explicit state/input carriers with complete hash coverage.
 
+Missing/extra/duplicate keys, wrong containers or nesting, invalid vector lengths,
+coefficient-domain errors and failed configuration invariants use exactly
+`:invalid-physical-configuration`, status `:refused`, reason revision `1`.
+The shared transition returns exactly `:status`, the exact unchanged prior
+`:state`, `:reason` and `:reason-revision`, without an operation result. Read
+returns exactly the three status/reason/revision keys, without state or recall
+payload. The normative mapping is the coupling EDN configuration schema's
+`:invalid-configuration-result`; both read reason declarations and rebuild's
+closed reason codes include it. Existing authority, producing-identity and
+finite-byte/work checks retain their precedence and distinct reasons. A
+structurally valid foreign mechanics revision keeps
+`:mechanics-revision-mismatch`; unsupported contact operations and actual
+arithmetic overflow keep their existing codes. Future schema-negative controls
+isolate each defect with other gates valid, including admit/read/restore/rebuild.
+
 ABI `xorshift32/1` fixes sequential left13/logical-right17/left5, unsigned32
 coercion after each stage and post-update output divided by2^32, retained original
 seed/current word/counter and refusal on invalid input/overflow. Twenty independent
