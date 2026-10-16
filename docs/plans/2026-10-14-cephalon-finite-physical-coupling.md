@@ -2296,3 +2296,60 @@ snapshot field is dropped to fit. Existing source/interface/fixture/upstream
 prerequisites precede Ready; own implementation follows lawful Ready and
 independent executed qualification precedes consumption/Done. These are source
 declarations, not executed association, field or live B evidence.
+
+
+## Original presence-purpose seed source interface — 2026-10-16
+
+ABI presence-seed-source-carrier selects seven source keys: version, association,
+model-selection, formatter-inputs, formatted-purpose-text, generate-output and
+producer-source. The complete original association is retained. Raw purpose is
+exactly its CharacterContext persona, including original untrimmed bytes; no
+second purpose field, rendered prompt, query, snapshot or mood value replaces it.
+
+The planned owning adapter reuses the actual original graph query's complete
+model-selection tuple and qualified loaded SDK runtime. It does not route a new
+model or invent an observation where the native query never produced its source.
+It invokes the existing passage formatter and separately calls that runtime's
+getEmbeddingFunctionForModel(model).generate with the one formatted purpose.
+Graph ingestion already uses this passage formatter; this presence integration
+is selected source work, not existing or qualified native seed production.
+Capture the qualified original association before the query; retain the actual
+original query source before this separate presence generation; validate the
+source and seed before Field emission. No query/seed source cycle is introduced.
+
+Capture only the formatter reads actually reached: template and, conditionally,
+the unread/read prefix variant preserving nil, empty and nonempty values. Empty
+or whitespace persona returns before both environment reads, so it cannot
+produce a successful nonblank seed source. A nonblank template can omit the
+persona entirely. Nonblank output alone therefore proves neither meaning nor
+qualification: the actual purpose-preserving formatter/model/configuration and
+paired controls must qualify before consumption. Field adds no second formatter
+or placeholder evaluator.
+
+Retain the complete one-vector public generate result with exact binary64 bits.
+It must equal the parent seed and original emitted entity's seed vector, satisfy
+the native vector/dimension contract and the independently qualified participating
+model/configuration bindings. Same label and dimensions alone do not establish
+compatible query, Nexus and presence semantics. The SDK may return cache/batched
+or split-and-averaged output; it performs no general L2 normalization. Coincident
+query/passage inputs may reuse one cached vector. Distinct invocation/source
+roles remain required, but no fresh HTTP call, hidden weight revision, numerical
+difference or independent network origin is claimed. No query-vector assignment,
+donor hash fallback, slicing, padding or adapter normalization is selected.
+
+The parent seed/emitted embedding revision is presence-seed-source/1: followed by
+the lowercase SHA256 of the complete original source map under the existing exact
+trace tagged-value algebra, without a trace envelope, host printer or self-hash.
+That content revision grants no authority. Replay retains the original source,
+vector and revision without reformatting/routing/provider/cache/network work;
+independent current owner authorization is still required.
+
+Thirteen pinned source files establish interface provenance only. Original
+source/admission/history, current authority/custody, loaded capture code,
+purpose-preserving configuration, semantic compatibility and physical birth
+remain unqualified. The current creative contract's missing explicit context is
+not repaired by this declaration. All source copies/validation/hashing remain
+under existing finite bounds, with no truncation/cap change. Existing before-Ready
+source/interface/fixture/upstream prerequisites remain; own implementation follows
+lawful Ready and independent executed source/fit controls precede consumption/Done.
+No vector, provider call, physical seed or live B behavior was executed here.
