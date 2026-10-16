@@ -953,7 +953,7 @@ All allocation/traversal uses the existing bounded input, ID, state, trace and w
 
 ## Contact-to-memory inclusion — finite-contact-inclusion/1
 
-Contact task `ba078119-482c-49dc-bd18-c2dfcaad9024` owns the portable pure fold after its qualified contact observations; OpenPlanner/Knoxx consume that result rather than implementing a second physical inclusion rule. Bind one actual admitted request/daimoi, stored principal/scope/authority, graph revision, field history, explicit request-emission start checkpoint and selected end checkpoint, plus this fold revision. The horizon is validated against those immutable inputs and the ABI's maximum substeps (currently 100) across the ENTIRE horizon. Split calls/catch-up/restored replay retain the same start/end and the complete qualified `inclusion-fold-state` in the canonical checkpoint ABI; an unqualified private cache cannot supply continuity. Restore validates the fold revision, actual request/authority/history, cursor, accumulated horizon quanta/semantic fold work, ordered first witnesses, exact dedup IDs and byte/record counters before use. All fields enter the state/snapshot hash. Missing/stale/forged/reset fields refuse unchanged state; fresh whole-call decode/validation/serialization work is charged separately rather than erasing accumulated fold work. Missing, reversed or oversized horizons refuse unchanged state. This is source qualification on candidate snapshots, with no dependency on later atomic storage or served proof.
+Contact task `ba078119-482c-49dc-bd18-c2dfcaad9024` owns the portable pure fold after its qualified contact observations; OpenPlanner/Knoxx consume that result rather than implementing a second physical inclusion rule. Bind one actual admitted request/daimoi, stored principal/scope/authority, graph revision, field history, explicit request-emission start checkpoint and selected end checkpoint, plus this fold revision. The horizon is validated against those immutable inputs and the ABI's maximum substeps (currently 100) across the ENTIRE horizon. Split calls/catch-up/restored replay retain the same original start and explicit target; the actual qualified observed prefix endpoint advances only through execution, with identical final cuts/traces/counters for equivalent schedules. Retain the complete qualified `inclusion-fold-state` in the canonical checkpoint ABI; an unqualified private cache cannot supply continuity. Restore validates the fold revision, actual request/authority/history, cursor, accumulated horizon quanta/semantic fold work, ordered first witnesses, exact dedup IDs and byte/record counters before use. All fields enter the state/snapshot hash. Missing/stale/forged/reset fields refuse unchanged state; fresh whole-call decode/validation/serialization work is charged separately rather than erasing accumulated fold work. Missing, reversed or oversized horizons refuse unchanged state. This is source qualification on candidate snapshots, with no dependency on later atomic storage or served proof.
 
 Fold actual eligible overlapping contacts in exact `(step-end-time-us, canonical unordered pair)` order. Only contacts for the bound request's daimoi with an authorized memory-nexus recipient can add an item, using the actual qualified nexus-to-canonical-memory/content-revision binding. Presence contacts remain physical trace only, separated pairs add nothing, and another request's daimoi supplies no inclusion. Missing, conflicting or denied recipient/memory authority refuses the whole result. Deduplicate exact canonical memory IDs across repeated substeps and multiple nexuses, retaining the first contact in that order as the inclusion witness; output unique items in first-witness order. Every reason carries the exact memory/content revision, nexus/daimoi, step/pair, eligibility revision, graph/field history and fold revision. All contacts remain in the bounded physical trace; duplicate inclusion suppression never deletes observed contact provenance.
 
@@ -1920,7 +1920,8 @@ The original inclusion codec, first-witness order and full trace/work bounds
 remain. Checkpoint positions stay separate from independently authenticated
 snapshot records, avoiding an enclosing-state/hash cycle. Original checkpoint
 history, current authority and historical-result reconstruction/invalidation
-remain required; unselected request, owner and lifecycle leaves are still open.
+remain required; owner/source and production of the selected lifecycle facts
+still need qualification.
 
 
 ## Retained request original inputs — 2026-10-16
@@ -1933,9 +1934,11 @@ principal/scope without freezing changing input state, current authority,
 producing-identity checks, evolved RNG or current population. It returns the
 unchanged current state and authorized retained result without another emission
 or budget reset. The single retained-success contract supplies the result;
-invalidated disposition has no result key. Seed, budget and original
-owner/source leaves still need exact selected definitions, with every original
-byte and duplicate value counted under the same bounds. No new producer, input
+invalidated disposition has no result key. Owned seed and physical-budget layouts
+are selected. Complete original seed and owner/source leaves still require exact
+source definitions; actual caller, producer and counter bindings remain
+unqualified. Every original byte and duplicate value remains counted under the
+same bounds. No new producer, input
 branch, event/grant, recovery rule or complete-state qualification is supplied.
 
 The [original-query selection](2026-10-07-cephalon-physical-kernel.md#original-query-owner--2026-10-16)
@@ -1964,9 +1967,12 @@ its own request role. Exact retry preserves the original seed, without a live
 presence requirement or a current-lens substitution.
 
 The closed physical presence shape, physical birth source obligations, current
-authority, RNG rules, all caps and required positives stay unchanged. The actual
-complete presence source/schema/producer, birth mapping, compiled consumption
-and fixture fit remain unselected/unqualified before Ready. Existing OpenPlanner
+authority, RNG rules, all caps and required positives stay unchanged. Select exact
+presence source/schema/binding, birth mapping and the fixture plan before Rheos
+Ready, preserving existing required upstream/native prerequisites. Owning
+implementation follows lawful Ready; actual producer, compiled consumption and
+executed fixture fit still require qualification before consumption and Done.
+Existing OpenPlanner
 query embedding and graph ranking with field not loaded do not supply them.
 This is a correction to an ambiguous planned origin, not a running behavior or
 whole-state closure claim.
@@ -1996,8 +2002,60 @@ admissible world101-quanta still executes100 with one backlog; active-horizon
 and other resource obligations remain. The64-summed-reconstruction bound is unchanged.
 
 Existing trace/result-byte and work overflow codes refuse the entire unchanged
-operation without truncation or partial credit. Exact horizon-rejection reason/
-precedence and lifecycle-status meaning remain unselected before readiness;
-`exhausted` is not inferred from a counter. Actual caller/counter source and
+operation without truncation or partial credit. Target/progress consistency and
+lifecycle follow the explicit selection below; counter equality alone never
+supplies `exhausted`. Actual caller/counter/cut source and
 zero/exact/one-over/split/restored controls still require qualification. No
 budget behavior, physical implementation, Ready or full-state closure is proved.
+
+
+## Fixed target, actual progress and terminal recall — 2026-10-16
+
+The [owning lifecycle selection](2026-10-07-cephalon-physical-kernel.md#fixed-recall-target-and-lifecycle--2026-10-16)
+and ABI `request-lifecycle-contract` choose explicit source semantics for the
+five previously declared planning labels. They were not recovered from an
+existing native lifecycle implementation. The Field-owned immutable request
+adds mandatory `target-horizon-quanta`, an actual original caller Count from
+zero through100 and at most its separate physical horizon budget. No budget
+maximum default or future checkpoint supplies the value. The native OpenPlanner
+query shape and the original five emit input values/function arity stay unchanged.
+
+The original post-emission start and target are fixed. The observed endpoint is
+the actual qualified complete committed prefix, advancing only through executed
+quanta. Horizon/result/fold custody retains the target separately from its actual
+checkpoint positions. Full trace, source, counter and current-authority checks
+still apply. The same final cut, traces and counters must survive equivalent
+unsplit/split/restored schedules. Incomplete progress is not completion of the
+original target and never contains a partial candidate from a failed operation.
+
+The producer commits the matching status with the whole result; read/retry
+validate its predicate agreement without retagging or writing state.
+
+After all guards, zero progress before a positive target is admitted; positive
+progress below target is incomplete. At the fully completed target, a positive
+original budget limit exactly consumed selects exhausted first; otherwise no
+actual qualified overlap observations selects no-contact, and the remaining
+contact case selects complete. Physical presence/non-memory contacts count, so
+complete can have empty memory inclusion. Zero target is terminal; positive
+mandatory-envelope byte cost at its exact positive limit may select exhausted,
+while zero-limit equality alone cannot. Overflow before target still refuses
+whole unchanged state, never an early exhausted or shortened horizon.
+
+A request finishing inside a longer world call requires its real earlier
+checkpoint cut and independent source binding. Relabelling the later world
+snapshot is forbidden. Freeze the completed result while closing only its active
+fold; retain the request and field-weight binding for later lawful particle/world
+motion. No particle termination, force, clock or resource limit changes. Target/
+progress inconsistencies use the existing operation-specific request or binding/
+history/state refusal and precedence; rebuild never inherits a universal
+invalid-request code outside its union. All original100/101 world,64-rebuild,
+privacy, codec, complete-source and resource controls remain.
+
+This is a new owning interface/predicate selection within ABI8. Before Rheos
+Ready, select exact caller/source/interface bindings and the complete fixture
+plan, and satisfy existing required upstream/native prerequisites. Owning
+implementation and domain RED/GREEN follow lawful Ready. Execute actual caller
+plumbing, counter/history/cut materialization, all five positives and
+zero/overflow/split/retry/closed-weight controls; independent executed
+qualification remains required before consumption and Done. No implemented state machine,
+compiled artifact, whole-state closure or live B proof is asserted.

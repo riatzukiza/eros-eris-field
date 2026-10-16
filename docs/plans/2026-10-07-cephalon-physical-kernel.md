@@ -954,9 +954,10 @@ transition is made by this source inventory.
 
 The proposed ABI `finite-retained-recall-success/1` gives read success exactly
 status, motion, bonds, contacts, included-memory-ids, inclusion-reasons,
-kernel-horizon and budget-result. It retains the existing five statuses; the
-actual lifecycle source and positive controls for each still require owning
-qualification. An empty vector or hit count cannot invent a status. Pure refusal
+kernel-horizon and budget-result. It retains the five declared statuses under
+the explicit fixed-target lifecycle selection below. Actual caller, counter,
+checkpoint production and positive controls still require qualification. An
+empty inclusion vector or hit count cannot invent a status. Pure refusal
 and qualified public failure remain their existing separate three-key results.
 
 Motion contains the original emitted particle ID and every produced sample in
@@ -990,11 +991,13 @@ and all authentication requirements remain. Historical replacement preserves
 the original result horizon or explicitly invalidates it under the existing
 rules; the current root clock alone cannot judge a retained historical result.
 
-Original request/physical-budget types, actual owner history/checkpoint/authority
-leaves and the five lifecycle-status meanings still require their exact source
-selection. These representation choices supply no complete-state closure or
-Ready claim. No original physical law, stage order, trace coverage, positive
-fixture, admission/recovery rule, budget, effect or native owner was changed.
+Actual owner history/checkpoint/authority source leaves and production of the
+selected target/lifecycle facts still require qualification. These representation
+choices supply no complete-state closure or
+Ready claim. The explicit target/lifecycle selection below changes the owned
+request shape and predicates. Original force formulas, stage order, complete
+trace coverage, required positives, global caps, recovery/replay, effects and
+external-owner authority remain.
 
 
 ## Retained recall request and retry
@@ -1009,7 +1012,7 @@ original principal/scope, projection/graph bindings, full query, complete embedd
 vector/source, kernel/configuration binding and exact read/deposit weights. The
 existing weight/contact/entity/scalar contracts apply without normalization,
 new producer or ID generation. Closed key layout does not close the explicitly
-unselected seed/budget/owner/history leaves. The original query consumes the
+unqualified seed-source/owner/history/production leaves. The original query consumes the
 observed owner contract below; candidate source observation does not qualify its
 Field adapter.
 
@@ -1084,10 +1087,12 @@ or 128-byte request-ID cap. An owner-valid query exceeding a Field byte bound
 returns the existing `finite-input-byte-limit` unchanged-state refusal, without
 truncation, normalization or a changed profile. All original bytes, copies and
 validation count under the existing input/state/checkpoint/work limits. Before
-Ready, qualify exact owner consumption, the actual adapter/ID mapping and real
-selected-fixture fit. Query-embedding and presence-seed source, physical birth
-mapping, physical budget, original custody, history and lifecycle leaves remain
-open.
+Rheos Ready, select exact owner/source/interface and adapter/ID mappings plus the
+complete fixture plan, preserving existing required upstream/native prerequisites.
+Implement the owning consumer after lawful Ready; qualify actual compiled owner
+consumption, adapter mappings and executed fixture fit before consumption and
+Done. Query-embedding and presence-seed source, physical birth
+mapping, original custody, history and lifecycle production remain unqualified.
 
 ## Originating-presence seed — 2026-10-16
 
@@ -1133,8 +1138,11 @@ admission projection/source/history custody; do not infer it from an entity ID
 or add a hidden field. `FullOriginalQualifiedPresenceSeedSource` remains a named
 unselected source schema and producer. A generic map, model alias, digest or
 invented prompt embedding does not close it. Full original values and copies
-count under the existing caps. Native source/binding, physical birth, compiled
-consumption and real selected-fixture fit must qualify before Ready. This source
+count under the existing caps. Before Rheos Ready, select exact source/binding,
+physical birth mapping and fixture obligations, satisfying existing required
+upstream/native prerequisites. Owning implementation follows lawful Ready;
+actual source production, compiled consumption and executed fixture fit still
+require qualification before consumption and Done. This source
 correction resolves an ambiguous planned embedding origin; it demonstrates no
 running seed defect, new authority, complete-state closure or physical behavior.
 
@@ -1156,8 +1164,11 @@ These are proposed per-request limits under existing source ceilings, not a
 claim that the per-call profile was already a stored request budget. The original
 map is retained in admission and budget-result custody. Exact retry compares
 the entire original map; the remaining balance cannot replace it. All five
-counters retain the same qualified start-to-selected-end horizon across split
-calls, catch-up, checkpoints, restore and reconstruction, without reset.
+counters retain the same original qualified start and explicit target across
+split calls, catch-up, checkpoints, restore and reconstruction, without reset.
+The observed prefix endpoint advances only through qualified execution; the
+completed target has the same final cut, trace and counters across equivalent
+split/unsplit schedules.
 
 In particular, 67,108,864 fold-work units and 131,072 trace records across an
 entire request horizon are newly explicit owning selections using the existing
@@ -1188,10 +1199,104 @@ Inclusion-result or trace overflow keeps `finite-trace-budget-exceeded`; semanti
 fold work overflow keeps `finite-work-budget-exceeded`. Refuse the whole
 unchanged operation, without a shortened horizon, partial result or truncation.
 Malformed budget shape/value keeps the existing request-refusal contract and
-byte/authority/request precedence. The exact horizon-overflow reason/precedence
-and selection among the five existing lifecycle statuses remain unselected;
-counter equality or exhaustion cannot manufacture a successful `exhausted`
-result. Qualify the actual caller/counter source, lifecycle, zero/exact/one-over,
+byte/authority/request precedence. Target/progress inconsistencies use the
+operation-specific refusal selection below. Counter equality alone cannot
+manufacture success: the selected `exhausted` predicate additionally requires
+the entire explicit target to be complete and a positive original limit consumed
+exactly. Qualify the actual caller/counter/cut source, lifecycle, zero/exact/one-over,
 split/restored replay and unchanged required positives before consumption.
 This is an owned representation proposal, not executed budget behavior, complete
 state closure, native Ready or a larger resource allowance.
+
+## Fixed recall target and lifecycle — 2026-10-16
+
+This is an explicit owning ABI8 interface and semantic selection. Git history
+shows that `6d8b610b390839178a8c3e100a8b3c3a4ce1e4bd` added the five-success
+enum to its parent `4a286aedfdc01bb25c7fc457ad7ddff7fce7dc68`; it did not
+define exclusive lifecycle predicates. The inspected six current `src/` files
+do not supply that mapping. The labels are planning vocabulary, not evidence of
+an existing native lifecycle that an adapter can import.
+
+The Field-owned scoped immutable request now requires one additional owned key,
+`target-horizon-quanta`: an explicit original caller Count from zero through100,
+at most the original physical budget's `max-horizon-quanta`. Do not infer the
+target from that maximum, query options or a future checkpoint. This changes the
+proposed Field request shape; the original five `emit-recall` input values and
+function arity are unchanged. The nested native OpenPlanner request remains its
+unchanged owner shape. Actual target plumbing remains unimplemented.
+
+Retain the target in original inputs, retries, folds, history and result horizon.
+Let `n` be the actual executed request quanta from qualified history. Require
+`0 <= n <= target <= original horizon budget <= 100`, with all existing resource,
+state, authority, trace and source checks. The start is the actual qualified
+post-emission admission cut. The result's selected end is its actual committed
+observed prefix cut. A target is an execution objective, never a fabricated
+future authenticated checkpoint. Safe clock/history arithmetic must bind both
+real positions and `n`. The result horizon has six keys, adding the immutable
+target to its existing actual positions/count/history/fold revision.
+
+After every validity and current-authority guard passes, evaluate these
+exclusive predicates in order:
+
+The producer commits the matching status with the whole result. Read/retry
+validate that agreement and return the stored result; they cannot repair a
+mismatched status through read-time retagging or a hidden state write.
+
+| Predicate | Read status |
+| --- | --- |
+| `n = 0 < target` | `admitted` |
+| `0 < n < target` | `incomplete` |
+| `n = target`, with at least one positive original budget limit exactly equal to its matching retained counter | `exhausted` |
+| `n = target`, no preceding exhausted predicate, and no actual qualified overlap observations | `no-contact` |
+| Remaining `n = target` case, with actual qualified overlap observations | `complete` |
+
+Use `contacts.observations`, not eligible separated pairs or the count of
+included memories. A fully completed presence-only or non-memory-nexus contact
+may therefore be `complete` with empty inclusion vectors. A zero target is
+terminal at the actual start cut, not `admitted`. At zero target, positive byte
+limits exactly consumed by mandatory envelope overhead can select `exhausted`;
+equality to a zero-valued limit cannot. This is the selected successful meaning
+of exhausted: all original requested work is complete at a positive budget
+boundary. It never means an unaffordable next step or a failed/truncated horizon.
+
+All eight read fields remain mandatory for every status. A nonterminal success
+contains the complete, untruncated actual committed prefix and its explicit
+unfinished target. It cannot claim target completion. Failure in an attempted
+later operation preserves the previous committed state/result, not a partially
+updated candidate or an early exhausted closure. This distinguishes truthful
+progress from partial output of a failed operation; it does not relax trace,
+inclusion, privacy or checkpoint authentication.
+
+If target3 finishes inside a world100 call, materialize and independently qualify
+the actual target3 cut. The world100 snapshot cannot be relabelled as that cut.
+The qualified cut/source must fit all existing state, history, input and work
+limits. Freeze the completed request endpoint, trace and counters, retaining the
+full result in `recall-requests` as the completed active fold closes atomically.
+The particle and original request record/weight binding remain available for
+later lawful world motion; closing recall does not terminate a particle, delete
+its immutable request or extend the closed recall horizon. Current-authority
+reconstruction and safe invalidation retain their existing obligations.
+
+Malformed/conflicting target/progress data uses `invalid-recall-request`,
+revision1, for emit/read where that reason is admitted, preserving original
+byte/authority/request precedence and the existing result shapes. Restore and
+rebuild retain their applicable existing binding/history/state reasons; do not
+introduce a universal invalid-request remapping into their different unions.
+Real authority/source/history/byte/work failures retain their specific codes.
+No new refusal/status vocabulary, event identity, clock, force or resource cap
+is selected. The otherwise-admissible100/101 world control and64-total rebuild
+limit remain.
+
+Before Rheos Ready, select exact caller/source/interface bindings and the full
+fixture plan, preserving existing required upstream/native prerequisites. This
+does not claim implemented Field plumbing or executed domain controls. After
+lawful Ready, implement and qualify actual caller target input, zero and
+in-progress cuts, mid-call cut
+materialization, counter/history production and all five executed positives,
+including the lawful exhausted case and budget failure before target. Equivalent
+split/restored schedules must retain the same original target and final cut,
+trace and counters; a changed-target retry refuses. All original required
+privacy, reconstruction, codec and cap controls remain. Independent executed
+qualification is required before consumption and Done. These are source-law and
+future executed-control obligations, not implemented lifecycle, compiled owner
+consumption, native Ready, whole-state closure or live B1–B3 proof.

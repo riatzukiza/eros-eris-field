@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-request-physical-budget"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-fixed-target-lifecycle"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -330,7 +330,7 @@
   :container :ordered-vector-by-exact-request-id-empty-when-no-active-horizon
   :entry [:fold-revision :request-id :daimoi-id :stored-principal-binding
           :scope-authority-and-graph-versions :field-history :start-checkpoint
-          :selected-end-checkpoint :processed-contact-cursor :executed-horizon-quanta
+          :selected-end-checkpoint :target-horizon-quanta :processed-contact-cursor :executed-horizon-quanta
           :accumulated-semantic-fold-work :first-witnesses-in-canonical-contact-order
           :dedup-memory-ids :canonical-result-byte-count :trace-record-count
           :accumulated-trace-utf8-byte-count]
@@ -341,6 +341,9 @@
   :request-id-contract :exact-validated-scalar-utf8-id-at-admission-and-every-restored-reference
   :snapshot :all-fields-included-in-canonical-state-and-snapshot-hash
   :transition :charge-new-contact-fold-work-before-use-and-never-reset-horizon-counters
+  :lifecycle-contract "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"
+  :target :same-explicit-original-scoped-request-target-not-a-future-checkpoint
+  :observed-end :actual-qualified-committed-prefix-cut-advances-only-through-executed-quanta-until-the-fixed-target
   :trace-byte-counter :complete-finite-field-trace-1-envelope-bytes-across-entire-horizon
   :whole-call-work :also-charge-all-actual-decode-validate-encode-hash-and-restore-work
   :restore :validate-all-fields-and-budgets-against-qualified-checkpoint-history-and-current-authority
@@ -439,8 +442,11 @@
   :producer-identity-risk :observed-recall-id-derivation-uses-conversation-id-and-message-not-options-or-principal-scope-so-changed-options-or-principal-scope-with-the-same-id-follow-existing-conflicting-retry-refusal-never-mint-a-replacement-id-here
   :id-namespace :existing-owner-request-id-not-a-clio-event-uuid-or-new-effect-identity
   :authority :a-valid-owner-request-and-its-id-confer-no-principal-scope-source-grant-or-current-permission
-  :qualification :observed-candidate-source-blobs-only-review-compiled-owner-consumption-actual-physical-adapter-mapping-and-selected-fixture-fit-still-required-before-ready
-  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :owner-custody :history :result-lifecycle-and-horizon-refusal]}
+  :qualification
+  {:before-ready :exact-owner-source-interface-and-adapter-id-mapping-selection-complete-fixture-plan-and-existing-required-upstream-native-prerequisites
+   :after-lawful-ready :own-consumer-implementation-compiled-owner-consumption-actual-adapter-mapping-and-executed-fixture-fit-qualified-before-consumption-and-done
+   :current-evidence :observed-candidate-source-blobs-only-not-implementation-or-executed-proof}
+  :unchanged-unselected-leaves [:query-embedding-source :presence-seed-source :physical-birth-mapping :owner-custody :history :lifecycle-caller-counter-and-cut-qualification]}
  :validated-recall-seed-carrier
  {:version "finite-origin-presence-seed/1"
   :status :proposed-owned-key-layout-with-unselected-original-presence-source-and-birth-mapping
@@ -507,7 +513,7 @@
    :max-trace-records :trace-record-count
    :max-trace-utf8-bytes :accumulated-trace-utf8-byte-count}
   :counter-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/request-budget-result"
-  :scope :the-same-original-request-and-qualified-start-to-selected-end-horizon-across-split-calls-catch-up-checkpoint-restore-and-qualified-reconstruction
+  :scope :same-original-request-fixed-start-and-explicit-target-across-split-calls-catch-up-checkpoint-restore-and-qualified-reconstruction-with-qualified-observed-prefix-end-advancing-only-through-execution
   :retention :entire-original-map-in-original-admission-inputs-and-original-physical-budget-result-field-with-exact-value-equality
   :retry :entire-original-budget-in-existing-immutable-five-input-comparison-no-current-remaining-balance-substitution
   :comparison :every-actual-retained-counter-must-be-at-or-below-its-corresponding-original-selected-limit-under-existing-qualified-accounting
@@ -519,13 +525,68 @@
   :multiple-requests :no-reset-duplication-reservation-or-multiplication-of-global-call-or-rebuild-allowance
   :result-or-trace-overflow :existing-finite-trace-budget-exceeded-whole-unchanged-refusal-no-partial-result-or-truncation
   :semantic-fold-work-overflow :existing-finite-work-budget-exceeded-whole-unchanged-refusal-no-partial-credit
-  :horizon-overflow :existing-whole-unchanged-refusal-obligation-exact-reason-and-precedence-still-unselected-under-the-existing-result-refusal-lifecycle-contract-before-ready
+  :horizon-overflow :target-and-progress-consistency-under-request-lifecycle-contract-with-operation-specific-existing-refusal-and-precedence-never-early-successful-closure
   :structurally-invalid-budget :existing-invalid-recall-request-revision1-refusal-with-original-byte-authority-and-request-precedence-preserved
-  :lifecycle :counter-equality-or-exhaustion-does-not-select-admitted-no-contact-complete-incomplete-or-exhausted-no-new-success-branch-or-shorter-horizon
+  :lifecycle :request-lifecycle-contract-selects-only-after-all-guards-full-target-completion-plus-positive-limit-equality-can-select-exhausted-counter-equality-alone-or-overflow-cannot
   :ordinary-elapsed-time :unchanged-backlog-law-otherwise-admissible101-quantum-world-input-executes100-and-retains-one-backlog-quantum-with-existing-active-horizon-and-resource-obligations-still-required-no-elapsed-over100-rejection-rule
   :recovery :original64-summed-reconstruction-quantum-limit-and-all-other-rebuild-bounds-still-independent-no-request-budget-reset-discount-or-extra-replay-credit
   :input-and-state :all-budget-map-and-retained-copy-bytes-validated-and-charged-under-existing-input-state-checkpoint-history-work-and-continuation-caps
-  :readiness :caller-binding-actual-counter-producer-and-complete-lifecycle-horizon-refusal-precedence-zero-exact-one-over-and-split-replay-controls-must-qualify-before-consumption}
+  :readiness :caller-binding-actual-counter-and-cut-producer-and-selected-lifecycle-refusal-precedence-zero-exact-one-over-and-split-replay-controls-must-qualify-before-consumption}
+ :request-lifecycle-contract
+ {:version "finite-recall-lifecycle/1"
+  :status :proposed-owning-interface-and-semantic-selection-not-an-existing-or-executed-native-lifecycle
+  :declared-enum-origin
+  {:revision "6d8b610b390839178a8c3e100a8b3c3a4ce1e4bd"
+   :parent "4a286aedfdc01bb25c7fc457ad7ddff7fce7dc68"
+   :path "docs/plans/cephalon-physical-kernel-abi.edn"
+   :meaning :five-success-labels-added-as-planning-data-without-exclusive-predicates-not-proof-of-an-existing-provider}
+  :target-source :mandatory-original-caller-supplied-target-horizon-quanta-in-field-owned-scoped-immutable-request
+  :target-domain :Count-zero-through100-and-at-or-below-the-separate-original-physical-budget-max-horizon-quanta
+  :target-selection :explicit-value-no-default-no-inference-from-budget-maximum-query-options-clock-or-future-checkpoint
+  :interface-change :one-new-owned-request-key-not-a-native-openplanner-request-field-not-an-additional-emit-function-argument
+  :target-retention :same-original-value-in-request-inputs-fold-horizon-result-retry-and-qualified-history-no-mid-request-target-change
+  :start :actual-qualified-post-emission-admission-cut-at-zero-request-quanta-with-original-emitted-entity-present
+  :observed-end :actual-qualified-complete-committed-prefix-cut-never-a-planned-future-authenticated-checkpoint
+  :progress :executed-horizon-quanta-is-exact-actual-request-execution-count-n-with-zero-at-or-below-n-at-or-below-original-target
+  :time-agreement :actual-history-and-existing-safe-clock-arithmetic-bind-observed-end-to-start-and-n-executed-quanta-no-inferred-new-time-or-draw
+  :prerequisites :all-existing-state-source-checkpoint-history-current-authority-counter-trace-budget-and-bound-guards-pass-before-any-success-predicate
+  :retained-status :producer-commits-the-matching-status-with-the-whole-result-read-and-retry-validate-that-agreement-and-return-the-stored-result-no-read-time-retagging-or-state-write
+  :ordered-exclusive-predicates
+  [{:status :admitted :when :n-zero-and-original-target-positive}
+   {:status :incomplete :when :n-positive-and-strictly-less-than-original-target}
+   {:status :exhausted :when :n-equals-original-target-and-at-least-one-positive-original-physical-budget-limit-equals-its-matching-retained-counter}
+   {:status :no-contact :when :n-equals-original-target-no-preceding-exhausted-predicate-and-actual-qualified-contact-observations-vector-empty}
+   {:status :complete :when :remaining-n-equals-original-target-case-with-actual-qualified-contact-observations}]
+  :contact-predicate :request-result-contacts-observations-actual-eligible-overlaps-not-eligibility-inventory-separated-pairs-or-included-memory-count
+  :presence-or-non-memory-contact :can-complete-with-empty-memory-inclusion-vectors-under-the-selected-terminal-precedence
+  :exhausted-meaning :successful-fully-completed-original-target-at-a-positively-consumed-original-budget-boundary-no-unexecuted-request-work-or-failed-overflow
+  :zero-target :terminal-at-the-actual-start-cut-not-admitted-positive-envelope-overhead-exactly-at-a-positive-byte-limit-can-select-exhausted-zero-limit-equality-alone-cannot
+  :insufficient-budget-before-target :existing-whole-unchanged-refusal-no-counter-commit-no-early-exhausted-no-shorter-target-or-partial-failed-operation-data
+  :nonterminal-success :all-eight-read-fields-contain-complete-untruncated-actual-prefix-evidence-and-the-explicit-unfinished-original-target-never-claim-full-target-completion
+  :terminal-success :all-original-target-quanta-and-complete-matching-trace-counter-cut-and-source-facts-required-not-a-status-label-alone
+  :mid-world-call-target :materialize-and-qualify-the-real-request-target-cut-if-it-occurs-before-the-world-call-ends-never-label-the-later-world-snapshot-as-that-earlier-cut
+  :completed-retention :freeze-the-completed-request-endpoint-trace-and-counters-under-existing-current-authority-reconstruction-or-safe-invalidation-laws
+  :active-fold :retain-while-n-less-than-target-on-terminal-closure-retain-full-result-in-recall-requests-and-remove-only-the-completed-active-fold-atomically
+  :later-world-motion :same-particle-and-original-request-weight-binding-may-continue-under-unchanged-world-law-without-extending-the-closed-request-horizon-or-deleting-its-request-record
+  :invalid-target-or-progress
+  {:emit-and-read :existing-invalid-recall-request-revision1-for-original-request-target-progress-or-cross-binding-inconsistency-where-that-reason-is-admitted
+   :restore-and-rebuild :existing-applicable-operation-binding-history-or-state-reason-and-precedence-no-universal-invalid-request-remapping
+   :source-authority-history-byte-and-work-failure :retain-their-own-specific-existing-refusals
+   :state :preserve-whole-prior-state-under-existing-operation-result-shapes-read-returns-no-state-or-partial-recall-payload}
+  :caller-and-checkpoint-interface-selection :exact-source-and-interface-bindings-and-complete-fixture-plan-before-rheos-ready-with-existing-upstream-native-prerequisites-preserved
+  :caller-and-checkpoint-plumbing :unimplemented-own-implementation-and-domain-red-green-after-rheos-ready-actual-source-consumption-cut-materialization-and-independent-executed-qualification-required-before-consumption-and-done
+  :future-controls [:explicit-target-not-budget-default :target-zero-terminal-with-real-zero-cut
+                    :all-five-exclusive-statuses-with-complete-actual-source
+                    :admitted-zero-of-positive-target :incomplete-real-prefix-with-unfinished-target
+                    :complete-with-contact-and-budget-headroom :no-contact-with-fully-assessed-target
+                    :fully-complete-target-at-positive-budget-limit-exhausted
+                    :presence-only-contact-complete-with-empty-inclusion :zero-limit-equality-not-exhausted
+                    :positive-empty-envelope-byte-boundary-at-zero-target
+                    :target-inside-longer-world-call-authenticates-actual-earlier-cut
+                    :budget-overflow-before-target-refuses-without-early-closure
+                    :same-final-cut-result-and-counters-unsplit-split-restored
+                    :changed-target-exact-retry-refused :closed-request-weight-binding-retained-during-later-world-motion
+                    :all-original100-101-world64-rebuild-byte-work-privacy-and-required-positives]}
  :recall-request-admission-state
  {:version "finite-recall-request-admission/1"
   :status :proposed-owned-key-layout-with-explicit-unresolved-leaves
@@ -538,7 +599,7 @@
 
   :scoped-immutable-request
   {:kind :closed-map
-   :exact-keys [:request-id :principal-scope :projection-revision :graph-revision
+   :exact-keys [:request-id :principal-scope :projection-revision :graph-revision :target-horizon-quanta
                 :query :embedding :kernel-binding :field-weights]
    :fields
    {:request-id :ID
@@ -547,6 +608,8 @@
      :fields {:stored-principal :ID :scope-revision :Revision}}
     :projection-revision :Revision
     :graph-revision :Revision
+    :target-horizon-quanta {:type :Count :inclusive-maximum 100
+                           :contract "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"}
     :query {:contract "docs/plans/cephalon-physical-kernel-abi.edn#original-query-carrier"}
     :embedding
     {:kind :closed-map :exact-keys [:vector :embedding-revision :source]
@@ -689,9 +752,9 @@
            :motion :request-motion :bonds :request-bond-trace :contacts :request-contact-trace
            :included-memory-ids :ordered-unique-ID-vector :inclusion-reasons :ordered-inclusion-reason-vector
            :kernel-horizon :request-horizon :budget-result :request-budget-result}
-  :status-selection :existing-request-lifecycle-only-no-inference-from-hit-count-empty-vector-or-this-shape
-  :status-qualification :the-five-existing-success-cases-and-their-actual-source-lifecycle-still-require-owning-laws-and-controls-before-consumption
-  :no-new-status-or-partial-success :true
+  :status-selection "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract/ordered-exclusive-predicates"
+  :status-qualification :all-five-selected-predicates-and-their-complete-actual-caller-counter-cut-and-history-source-still-require-owning-laws-and-executed-controls-before-consumption
+  :no-new-status-or-failed-operation-partial-success :true
   :request-motion
   {:closed-keys [:daimoi-id :samples]
    :daimoi-id :the-exact-original-emitted-request-particle-ID
@@ -790,16 +853,18 @@
    :self-reference :no-current-enclosing-state-snapshot-or-its-own-digest-in-a-retained-result
    :history-alone-or-position-label-alone :does-not-authenticate-a-checkpoint}
   :request-horizon
-  {:closed-keys [:start-checkpoint :selected-end-checkpoint :executed-horizon-quanta :field-history :fold-revision]
+  {:closed-keys [:start-checkpoint :selected-end-checkpoint :target-horizon-quanta :executed-horizon-quanta :field-history :fold-revision]
    :start-checkpoint :exact-checkpoint-position-above :selected-end-checkpoint :exact-checkpoint-position-above
+   :target-horizon-quanta :same-explicit-original-request-Count-target-not-a-future-checkpoint
    :executed-horizon-quanta :Count :field-history :selected-qualified-history-binding
    :fold-revision "finite-contact-inclusion/1"
-   :agreement :the-existing-original-emission-to-selected-checkpoint-schedule-and-qualified-fold-history-with-no-new-time-or-draw
+   :agreement :fixed-original-post-emission-start-and-explicit-target-with-actual-qualified-observed-prefix-end-advancing-only-through-execution-no-new-time-or-draw
    :qualified-checkpoints :the-position-values-reference-the-actual-qualified-original-start-and-selected-end-not-an-empty-or-later-baseline-substitute
    :reference-custody :complete-original-checkpoint-history-and-actual-owner-authentication-remain-required-in-the-existing-qualified-source-port
    :historical-replacement :retain-the-original-request-horizon-and-existing-complete-current-authority-reconstruction-or-invalidation-even-when-the-physical-target-rewinds
    :clock-comparison :current-root-time-alone-cannot-prove-or-disprove-a-retained-historical-result
-   :bound :existing-request-and-total-horizon-quantum-cap-with-no-reset}
+   :bound :actual-executed-count-at-or-below-fixed-original-target-at-or-below-original-request-budget-and-existing-total-horizon-cap-no-reset
+   :lifecycle-contract "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"}
   :request-budget-result
   {:closed-keys [:original-physical-budget :executed-horizon-quanta :accumulated-semantic-fold-work
                  :canonical-result-byte-count :trace-record-count :accumulated-trace-utf8-byte-count]
@@ -817,9 +882,10 @@
   :invalidation :existing-stale-recall-authority-without-any-of-these-payload-fields-after-explicit-qualified-result-invalidation
   :public-failure :separate-existing-qualified-facade-three-key-failure-only-never-a-stored-request-or-success-variant
   :still-unselected [:remaining-original-request-source-and-physical-birth-bindings :actual-history-checkpoint-source-record-and-authority-schema-bindings
-                     :physical-budget-caller-counter-producer-and-horizon-refusal-code-and-precedence
-                     :the-existing-five-status-lifecycle-source-and-positive-controls]
-  :new-force-physics-stage-horizon-status-budget-eviction-replay-or-owner-law :none
+                     :selected-target-lifecycle-caller-counter-and-checkpoint-cut-production-and-executed-controls]
+  :unchanged-boundaries [:force-formulas :physics-stage-order :function-arity :status-and-refusal-vocabulary
+                         :global-resource-ceilings :eviction-recovery-and-replay-law :external-owner-authority]
+  :selected-target-and-status-semantics "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"
   :future-controls [:all-existing-five-success-status-variants-with-exact-closed-keys-and-original-source
                     :no-self-snapshot-or-current-hash-cycle-in-retained-result
                     :motion-retains-complete-request-horizon-beyond-derived-trail-window

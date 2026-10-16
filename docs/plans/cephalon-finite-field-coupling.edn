@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-retained-recall-records"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-fixed-target-lifecycle"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -581,10 +581,12 @@
   :owner-task "ba078119-482c-49dc-bd18-c2dfcaad9024"
   :pure-owner :field-contact-domain-fold-not-consumer-reimplementation
   :binding [:actual-request-daimoi :principal :scope :authority :graph-revision
-            :field-history :start-checkpoint :end-checkpoint :fold-revision]
-  :horizon :explicit-validated-request-emission-to-selected-checkpoint
+            :field-history :start-checkpoint :end-checkpoint :target-horizon-quanta :fold-revision]
+  :horizon :fixed-original-post-emission-start-and-explicit-request-target-with-actual-qualified-observed-end-cut-for-the-complete-executed-prefix
+  :target :mandatory-original-field-scoped-request-count-not-a-budget-default-or-future-authenticated-checkpoint
+  :lifecycle-contract "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"
   :maximum-quanta :qualified-abi-maximum-substeps-across-entire-horizon
-  :split-calls :restore-qualified-canonical-checkpoint-fold-state-without-horizon-budget-reset
+  :split-calls :restore-qualified-original-start-target-and-complete-prefix-fold-state-without-counter-reset-identical-final-cut-trace-and-counters-for-equivalent-execution
   :checkpoint-contract "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"
   :result-codec "finite-contact-inclusion-result/1"
   :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
