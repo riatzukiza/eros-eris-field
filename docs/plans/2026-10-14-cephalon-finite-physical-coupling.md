@@ -1614,3 +1614,122 @@ ended legitimate source, revocation and nested replacement, genuine explicit
 non-memory nexus and exact/conflicting request retry, plus all existing exact/
 one-over bounds. No domain/carrier/transaction/load fixture was executed by this
 planning edit; same14 packets75/physical21 and no native readiness/estimate change.
+
+
+## Current producing identity and pre-operation horizon — 2026-10-15
+
+Actual native Codex review5541153717 identified missing explicit inputs, not an
+implemented runtime failure. Every ABI operation now receives the same closed
+`finite-qualified-producing-identity/1` argument: kernel revision, actual compiled
+artifact SHA256, build qualification ID, launch-profile ID/SHA256 and numeric
+profile ID. The existing qualified source/build/loaded-runtime adapter verifies
+the actual identity before the call and retains its binding through exposure;
+a copied label or `qualified=true` flag supplies no qualification. Pure code
+consumes validated data and performs no host discovery. First empty-state
+admission populates all six state fields from this input. Existing state and
+checkpoint fields must exactly match it before use, including restore/rebuild.
+Original argument bytes remain in qualified history and all existing wire/work/
+continuation caps apply, including the unchanged512KiB remaining-argument bound.
+
+Configuration `:mechanics-revision` must exactly equal that qualified kernel
+revision and the admitted state's kernel revision. Its root `:revision` remains
+the separate calibration/config revision. No range alias, copied config hash,
+same-revision different binary or silent migration creates compatibility.
+Missing/unqualified/changed producing identity returns revision1 refused
+`producing-identity-unestablished`; established identity with different mechanics
+returns revision1 refused `mechanics-revision-mismatch`. Both preserve the exact
+prior state and expose no operation result; read returns its exact three-key
+refusal without state or recall payload. Future actual positive/mismatch and
+empty-admission fixtures are required, not executed here.
+
+The top-level restore/rebuild reconstruction horizon is the qualified Clio tip
+immediately BEFORE that current invocation. It includes every earlier admitted
+operation and excludes only the actual current invocation, never an arbitrary
+filtered tail. If Clio records the invocation first, qualified owner evidence
+must bind that actual invocation, its immediate predecessor and the absence of
+intervening unaccounted operations. Otherwise the owner reserves the exact
+pre-operation boundary before recording the invocation. Qualified admission or
+fencing protects that boundary through result exposure; missing capability or
+concurrent unaccounted history refuses before any replacement is exposed.
+The current invocation never recursively reconstructs itself. Historical nested
+replacements still use their own recorded pre-operation horizons. Future
+pre-recorded-with-attested-predecessor positive, inclusive-self, missing/foreign
+predecessor and changed-boundary controls keep the existing history refusal and
+all unchanged caps. No local Clio engine/fence, event rewrite, new time/draw,
+external effect or physical implementation is introduced.
+
+
+## Current finite observation and collision boundary — 2026-10-16
+
+The preceding canonical-carrier proposal's dense unbounded motion-sample history
+was an owning representation choice, not recovered donor physics. Native
+Codex4289442134 correctly identified that indefinite appends would permanently
+fill the continuation cap. The operative `finite-physical-trails/2` replaces
+that choice with a **derived motion observation window**, separate from causal
+field retention. The reviewed configuration must explicitly supply N, a positive
+safe integer at most256; no production value/default is selected here. Across
+ALL live and ended incarnations keep at most N samples total, not N per entity.
+After each actual executed quantum, keep the newest min(N,total) by executed
+step ID, exact unsigned-UTF8 entity ID, then origin-provenance ID; remove empty
+projection entries. Identical original schedules produce identical windows
+regardless of call partition, catch-up or restore. Missing/invalid configuration
+refuses; independent profile-fit qualification precedes consumption.
+
+Only this derived observation window may evict samples. It supplies no force,
+deposit, memory-inclusion, authority or reconstruction input. Current causal
+field/contribution state and qualified provenance, original immutable Clio
+history/checkpoints, complete request motion/contact evidence, inclusion
+witnesses and full recall trace accounting stay in their existing carriers.
+Reconstruct the window from the qualified physical schedule; never turn it into
+a substitute for missing source history or a lossy recall result. No field-force
+retention or source-compaction rule is introduced. All bytes, visits, references
+and reconstruction still count under the unchanged caps. A full valid N-window
+must continue by replacing its oldest observation, with independent controls
+for ended incarnations, ties, many quanta, split/restore and unchanged causal
+results. This prevents trail-only gratuitous growth; it does not establish
+indefinite capacity for every other retained state or a successful load profile.
+
+The finite selected Scope already refuses unavailable absorption/exchange. The
+ABI now states supported operations `[:deflect]` and separately reserves full
+absorption/bounded exchange for the broader program. Attempting either reserved
+operation returns revision1 refused `unsupported-contact-operation`, exact
+unchanged state and no transfer, termination or binding removal. The original
+wallet/capacity/conservation/termination obligations remain future obligations,
+not enabled operations or hidden ambient inputs. No new wallet model enters
+this finite milestone. Any separately qualified supported population removal
+must atomically remove all incident contact bindings and replay the same removal;
+complete projection replacement leaves exactly the resulting current pair set.
+Unsupported absorption removes neither entity nor bindings.
+
+For a structurally valid128-UTF8-byte request ID, the ordinary valid control
+applies. A structurally valid129-byte ID returns revision1 refused
+`finite-input-byte-limit`; structural-invalid-request controls stay within the
+byte cap. Existing authority and finite-resource failures retain their own codes.
+The complete parser check does not execute any of these future domain controls.
+
+## Explicit conditional restore allocation — 2026-10-16
+
+Native4289311646 is addressed by naming the integration work and its actual
+completion boundary. The existing ABI8 codec/restore3 allocation owns closed
+signatures/carriers, pure codec/private decoding, identity/mechanics guards,
+public boundary wiring and independently executable interface/refusal
+qualification. It does NOT claim full successful history reconciliation as an
+ABI8 Done condition: that implementation depends on the later shared engine.
+Contact8's existing shared-rebuild3 owns BOTH the shared reconstruction engine
+and actual public restore/rebuild integration acceptance: authenticated nonempty
+history, nested replacements, once-only recovery, exact/one-over bounds and
+outer quarantine. A module's file location does not transfer that packet's work.
+Atomic8 supplies the genuinely qualified transaction/checkpoint-evidence port;
+causal8 retains the later complete contact-driven paired persistence/readback/
+served proof. No acceptance cycle through a not-yet-implemented engine is allowed.
+
+Fourteen packets75/physical21 is now expressly a **conditional estimate proposal**,
+not an assertion that new integration work costs zero because of reuse. Before
+Ready, independent owning planning review must price the complete boundary,
+engine, integration and fixture matrix exactly once against those allocations.
+If they do not fit, re-estimate an existing packet or propose a separately
+estimated packet and obtain the required inclusion/owning review and lawful
+Rheos changes before implementation. No current native point, dependency, status
+or agreed primary body is changed by this source proposal. Existing Incoming
+card text still requires owning Foresight mirror/review and native adoption;
+links or this conditional allocation supply no Ready.

@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-15-canonical-carriers"
+{:proposal/version "cephalon-physical-kernel/2026-10-15-producing-identity-and-pre-operation-horizon"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -78,6 +78,35 @@
          :deposit :velocity-amplitude-times-gain-weight-step
          :buffers :prior-and-next :decay :elapsed-exponential
          :semantic-bindings :required-versioned-configuration}
+ :qualified-producing-identity-contract
+ {:version "finite-qualified-producing-identity/1"
+  :input :qualified-producing-identity
+  :closed-keys [:kernel-revision :compiled-artifact-sha256 :build-qualification-id
+                :launch-profile-id :launch-profile-sha256 :numeric-profile-id]
+  :kernel-build-and-launch-identifiers :nonempty-scalar-utf8-under-existing-owner-and-byte-limits
+  :digests :lowercase-ascii-sha256-exactly64-hex-characters
+  :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
+  :outer-producer :independently-qualified-source-build-loaded-artifact-and-actual-launch-profile
+  :outer-admission :verify-actual-loaded-identity-and-retain-qualified-binding-through-every-call-and-result-exposure
+  :all-entries :explicit-validated-data-argument-to-every-abi-operation-not-an-ambient-host-read
+  :first-admission :populate-the-six-required-state-fields-from-this-actual-qualified-input
+  :existing-state :all-six-fields-exactly-equal-current-qualified-input-before-causal-use
+  :checkpoint-admission :stored-six-fields-exactly-equal-current-qualified-input-before-restore-or-rebuild
+  :mechanics-compatibility :physical-configuration-mechanics-revision-exactly-equals-qualified-input-kernel-revision-and-state-kernel-revision
+  :configuration-revision :separate-value-equals-state-config-revision-not-a-mechanics-compatibility-alias
+  :aliases-compatible-ranges-label-copying-host-discovery-and-silent-migration :forbidden
+  :identity-refusal {:status :refused :reason :producing-identity-unestablished :reason-revision 1
+                     :state :exact-unchanged-prior-state :operation-result :absent}
+  :mechanics-refusal {:status :refused :reason :mechanics-revision-mismatch :reason-revision 1
+                      :state :exact-unchanged-prior-state :operation-result :absent}
+  :read-refusal :same-three-key-reason-status-union-with-no-returned-state-or-payload
+  :wire-history-and-bounds :retain-original-input-in-qualified-history-and-count-every-byte-and-validation-within-existing-caps
+  :fixtures [:empty-state-admission-with-real-qualified-identity-populates-all-six-fields
+             :missing-forged-unqualified-or-changed-loaded-build-launch-or-numeric-identity-refuses
+             :same-mechanics-revision-different-actual-binary-refuses
+             :matching-kernel-state-configuration-mechanics-positive
+             :admit-restore-rebuild-with-copied-config-revision-but-foreign-mechanics-refuse
+             :every-call-current-producing-identity-and-exact-one-over-existing-byte-work-bounds]}
  :state/required [:kernel-revision :config-revision :config-hash :physical-configuration
                   :compiled-artifact-sha256 :build-qualification-id
                   :launch-profile-id :launch-profile-sha256
@@ -87,8 +116,8 @@
                   :contribution-provenance :recall-requests :inclusion-folds :rng
                   :pending-feedback :feedback-confirmations :confirmed-outcome-ids]
  :trail-state
- {:version "finite-physical-trails/1" :state-key :trails
-  :root-closed-keys [:version :entries] :version-value "finite-physical-trails/1"
+ {:version "finite-physical-trails/2" :state-key :trails
+  :root-closed-keys [:version :entries] :version-value "finite-physical-trails/2"
   :entry-closed-keys [:entity-id :origin-provenance-id :samples]
   :sample-tuple [:step-id :moved-position :final-velocity :causal-provenance-ids :deposit-contribution-ids]
   :sample-tuple-length 5
@@ -97,8 +126,15 @@
           :moved-position :exact-two-finite-binary64-world-components
           :final-velocity :exact-two-finite-binary64-world-unit-per-second-components
           :references :ordered-vector-of-distinct-actual-qualified-provenance-or-contribution-ids}
-  :empty {:version "finite-physical-trails/1" :entries []}
-  :empty-admission :only-a-genuinely-trail-free-initial-or-reconstructed-state-never-copy-empty-over-retained-history
+  :empty {:version "finite-physical-trails/2" :entries []}
+  :meaning :bounded-derived-motion-observation-window-not-a-separate-force-or-complete-history
+  :window-size :explicit-physical-configuration-trail-observations-max-samples
+  :window-domain :exact-positive-safe-integer-at-most256-no-runtime-default
+  :global-bound :at-most-N-total-samples-across-all-live-and-ended-source-incarnations-not-N-per-entity
+  :window-order :ascending-step-id-then-exact-unsigned-utf8-entity-id-then-origin-provenance-id
+  :retention :after-each-executed-quantum-retain-exactly-the-newest-min-N-total-samples-in-window-order-and-remove-empty-entries
+  :partition-invariance :same-original-quantum-schedule-produces-identical-window-under-unsplit-split-catch-up-and-restored-execution
+  :empty-admission :only-a-genuinely-trail-free-initial-or-qualified-reconstructed-window-never-copy-empty-over-current-window
   :entry-identity [:entity-id :origin-provenance-id]
   :entries :ordered-vector-of-closed-entries-unique-by-entity-id-and-origin-provenance-id
   :sample-collection :ordered-vector-of-exact-five-element-sample-tuples
@@ -115,7 +151,7 @@
   :append :one-sample-per-surviving-entity-per-actually-executed-quantum
   :zero-deposit :empty-deposit-reference-vector-valid-no-invented-contribution
   :zero-advance-read-checkpoint-or-queued-future-event :no-sample-or-step-invention
-  :ended-source :retained-qualified-origin-resolves-incarnation-without-requiring-live-entity
+  :ended-source :retained-window-entry-qualified-origin-resolves-incarnation-without-requiring-live-entity-and-still-counts-under-global-N
   :current-authority :before-append-any-causal-use-or-exposure-for-source-request-principal-scope-and-all-transitive-support
   :reconstruct :existing-clean-history-motion-contact-deposit-field-and-trail-reconstruction-together-preserving-permitted-control
   :delete-row-alone-while-retaining-downstream-revoked-effects :forbidden
@@ -125,10 +161,22 @@
   :work :charge-each-entry-sample-and-support-visit-under-existing-entity-contribution-byte-and-order-counters-without-reset
   :no-fit :existing-exact-unchanged-finite-input-state-continuation-work-or-rebuild-budget-refusal-no-partial-commit
   :invalid-data {:status :refused :reason :invalid-trail-state :reason-revision 1 :state :exact-unchanged-prior-state}
-  :new-force-pheromone-coefficient-decay-ring-eviction-truncation-resampling-or-compaction-law :none
+  :observation-eviction :only-the-derived-window-samples-and-empty-window-entries-not-causal-state-or-source-history
+  :never-evict [:current-retained-field-and-contribution-state :qualified-causal-provenance
+                :request-motion-and-contact-evidence :inclusion-witnesses-and-complete-recall-result-trace-accounting
+                :immutable-original-clio-history-or-checkpoints]
+  :eviction-effect-on-forces-deposits-authority-inclusion-or-reconstruction-inputs :none
+  :reconstruction :recompute-window-from-existing-qualified-recorded-physical-schedule-with-no-window-row-used-as-causal-authority
+  :profile-fit :independently-qualify-explicit-N-and-complete-largest-current-state-under-unchanged-caps-before-consumption
+  :no-fit-fallback :refuse-profile-not-silent-window-shrink-or-budget-increase
+  :new-force-pheromone-coefficient-decay-resampling-or-source-compaction-law :none
   :historical-sample-redeposit-new-event-id-or-disposable-ui-sidecar :forbidden
   :owning-review-choice :explicit-physical-motion-deposit-carrier-interpretation-stage-frequency-and-support-layout-not-adopted-donor-physics
-  :fixtures [:nonempty-trail-checkpoint-restore-continuation :split-unsplit-catch-up-identical-samples
+  :fixtures [:nonempty-trail-checkpoint-restore-continuation
+             :global-N-exact-and-N-plus-one-retains-newest-canonical-N-with-source-history-unchanged
+             :ended-incarnations-and-equal-step-id-multi-entity-ties-stay-under-total-N
+             :window-eviction-preserves-field-force-deposit-inclusion-and-complete-recall-evidence
+             :many-quanta-beyond-N-no-trail-only-permanent-continuation-refusal :split-unsplit-catch-up-identical-samples
              :wrong-version-key-tuple-step-order-or-unresolved-support-refused
              :revoked-upstream-cause-full-derived-trail-and-field-rebuild-with-permitted-control
              :ended-source-legitimate-trail :nested-replacement-no-ghost-or-duplicated-samples
@@ -155,7 +203,11 @@
   :emit-record :complete-original-input-entries-and-actual-emitted-particle-identity-in-qualified-boundary-history
   :idempotent-emit-retry :no-second-binding-population-or-change-to-existing-bindings
   :projection-replacement :explicit-complete-validated-new-container-in-original-admission-input-no-hidden-pair-selection
-  :other-operations :preserve-bindings-except-original-qualified-replayed-admission-or-emission-inputs
+  :other-operations :preserve-exact-resulting-population-bindings-except-original-qualified-replayed-population-inputs
+  :qualified-entity-removal :any-separately-supported-authorized-removal-atomically-removes-all-incident-particle-and-recipient-bindings
+  :removal-replay :same-original-qualified-removal-and-exact-resulting-pair-set-before-exposure
+  :unsupported-absorption-or-exchange :no-termination-transfer-or-binding-removal
+  :projection-replacement-result :exactly-the-eligible-pairs-of-resulting-entities-no-ended-extra-bindings
   :zero-eligible-pairs :explicit-empty-bindings-vector-valid
   :unknown-missing-duplicate-extra-foreign-kind-revision-or-conflicting-binding :whole-unchanged-refusal-before-contact-enumeration
   :kind-only-first-entry-unrecorded-selection-or-local-lookup :forbidden
@@ -166,6 +218,8 @@
   :fixtures [:multiple-same-kind-profiles-explicit-distinct-pair-bindings
              :admit-then-advance-separated-pair-later-contact-with-same-profile
              :emit-input-binding-population-and-exact-idempotent-retry
+             :qualified-projection-population-removal-and-replay-removes-only-incident-bindings
+             :unsupported-absorption-preserves-entity-and-bindings-unchanged
              :checkpoint-restore-and-rebuild-identical-profile-ids-radii-and-restitution
              :missing-extra-duplicate-unknown-foreign-or-numeric-override-refused
              :reverse-projection-map-and-input-order-same-canonical-state
@@ -242,7 +296,12 @@
                      :source :one-admitted-logical-bond-never-a-second-global-multiplier}
  :bond/evidence-kinds [:authored :reply :pin :inspiration :contradiction]
  :bond/force-invariant :structural-and-semantic-counted-once
- :collision {:operations [:absorb-full :deflect :exchange-bounded]
+ :collision {:supported-operations [:deflect]
+             :reserved-broader-program-operations [:absorb-full :exchange-bounded]
+             :reserved-not-currently-supported :requires-separate-qualified-wallet-capacity-cap-and-termination-contracts-before-enabling
+             :unsupported-operation {:status :refused :reason :unsupported-contact-operation :reason-revision 1
+                                     :state :exact-unchanged-prior-state :transfer :none :termination :none :binding-removal :none}
+             :reserved-operation-laws-below :future-broader-program-obligations-not-currently-enabled-code-or-implicit-fallback
              :finite-deflection-arithmetic-contract "docs/plans/cephalon-finite-field-coupling.edn"
              :normal :outward-from-recipient-surface-toward-incident-particle
              :relative-velocity :particle-world-minus-recipient-world
@@ -283,9 +342,10 @@
   :refusal {:state :unchanged-prior-state
             :reason :operation-specific-refusal-reason
             :reason-revision 1}
-  :required-reasons [:invalid-elapsed-us :unsafe-arithmetic :overflow
+  :required-reasons [:unsupported-contact-operation :invalid-elapsed-us :unsafe-arithmetic :overflow
                     :current-authority-unestablished :stale-causal-authority :denied-causal-authority
                     :checkpoint-evidence-unestablished
+                    :producing-identity-unestablished :mechanics-revision-mismatch
                     :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
                     :finite-input-byte-limit :finite-trace-budget-exceeded
                     :finite-work-budget-exceeded :finite-state-continuation-byte-limit]}
@@ -294,14 +354,14 @@
  :state-continuation-contract "docs/plans/cephalon-finite-field-coupling.edn#continuation-closure"
  :functions
  {:admit-state {:input [:prior-state-or-empty
-                       :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
+                       :trusted-visible-projection :physical-configuration :current-trusted-authority-projection :qualified-producing-identity]
                 :output [:state-transition-result]
                 :operation-result [:admitted-state]
                 :contact-profiles :validate-and-retain-complete-explicit-projection-contact-profile-bindings-under-contact-profile-binding-state}
-  :advance {:input [:state :elapsed-us :ordered-boundary-events :current-trusted-authority-projection]
+  :advance {:input [:state :elapsed-us :ordered-boundary-events :current-trusted-authority-projection :qualified-producing-identity]
             :output [:state-transition-result]
             :operation-result [:state :observations :residual-us :backlog-us :completeness]}
-  :catch-up {:input [:state :current-trusted-authority-projection]
+  :catch-up {:input [:state :current-trusted-authority-projection :qualified-producing-identity]
              :output [:state-transition-result]
              :operation-result [:state :observations :residual-us :backlog-us :completeness]
              :new-elapsed-time :none :max-substeps 100
@@ -309,7 +369,7 @@
              :schedule :reproduce-recorded-quantum-and-event-schedule}
   :emit-recall {:input [:state :scoped-immutable-request :validated-seed
                        :physical-budget :mood-lens-revision :new-particle-contact-profile-bindings
-                       :current-trusted-authority-projection]
+                       :current-trusted-authority-projection :qualified-producing-identity]
                 :output [:state-transition-result]
                 :operation-result [:state :request-result] :idempotency :request-id
                 :request-id :nonempty-scalar-string-at-most128-exact-utf8-bytes
@@ -325,12 +385,15 @@
                 :retry-source :retained-canonical-recall-request-record-not-external-cache-or-revived-historical-result
                 :retry-effects :no-new-particle-binding-time-draw-feedback-or-budget-reset
                 :authority-and-other-finite-refusals :retain-their-own-existing-codes-never-remap-to-invalid-request
+                :byte-preflight-precedence :well-formed-id-over128-utf8-bytes-is-finite-input-byte-limit-before-structural-request-refusal
                 :contact-profiles :validate-new-particle-input-before-any-new-state-commit-under-contact-profile-binding-state
-                :fixtures [:invalid-empty-malformed-or-overlong-id-exact-request-refusal
+                :fixtures [:invalid-empty-or-malformed-id-within-byte-cap-exact-request-refusal
+                           :well-formed128-utf8-byte-id-positive
+                           :well-formed129-utf8-byte-id-exact-finite-input-byte-limit-refusal
                            :conflicting-input-principal-scope-or-contact-binding-same-id-exact-refusal
                            :exact-authorized-retry-same-result-and-unchanged-state-counters
                            :denied-stale-or-unestablished-authority-keeps-own-refusal]}
-  :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection]
+  :read-recall {:input [:state :request-id :current-scope-revision :current-trusted-authority-projection :qualified-producing-identity]
                 :output [:recall-result]
                 :result-boundary :qualified-public-read-facade
                 :result-variants [:success :refusal :failure]
@@ -342,6 +405,8 @@
                           :additional-fields :forbidden
                           :reason-revision 1
                           :reason-status {:invalid-recall-request :refused
+                                          :producing-identity-unestablished :refused
+                                          :mechanics-revision-mismatch :refused
                                           :invalid-contact-profile-binding :refused
                                           :invalid-trail-state :refused
                                           :invalid-nexus-memory-binding :refused
@@ -386,7 +451,7 @@
                 :completed-result-binding :this-retained-result-must-be-reconstructed-under-exact-current-authority
                 :invalidated-completed-result :stale-recall-authority-without-any-recall-payload
                 :missing-denied-unknown-or-stale-authority :refuse-without-partial-recall-payload
-                :refusal-reasons [:invalid-recall-request :invalid-contact-profile-binding
+                :refusal-reasons [:producing-identity-unestablished :mechanics-revision-mismatch :invalid-recall-request :invalid-contact-profile-binding
                                  :invalid-trail-state :invalid-nexus-memory-binding :current-authority-unestablished
                                   :stale-recall-authority :denied-recall-authority
                                   :finite-input-byte-limit :finite-state-continuation-byte-limit
@@ -398,11 +463,11 @@
    :input [:prior-state :compatible-trusted-checkpoint :current-trusted-checkpoint-evidence
            :current-trusted-clio-provenance-horizon
            :immutable-complete-ordered-history-and-replacement-closure :current-trusted-authority-projection
-           :physical-configuration]
+           :physical-configuration :qualified-producing-identity]
    :input-authority :consume-qualified-axxium-current-decision-and-version-for-stored-principal-and-every-retained-influence
    :input-history :consume-qualified-clio-envelopes-cursor-order-and-complete-checkpoint-to-current-horizon-coverage
    :history-coverage {:from :exclusive-owner-verified-checkpoint-covered-provenance-cursor
-                      :through :inclusive-independently-trusted-current-clio-provenance-tip
+                      :through :inclusive-independently-trusted-clio-pre-operation-tip-excluding-current-invocation
                       :state-admitted-cursor :separately-verified-physical-schedule-cursor-never-the-main-provenance-endpoint
                       :consumed-boundary :separately-verified-current-consumed-cursor
                       :consumed-prefix :replay-each-main-operations-recorded-consumed-physical-schedule-never-truncate-provenance-at-state-cursor
@@ -418,12 +483,16 @@
                       :missing-unknown-duplicate-or-conflicting-event :typed-unchanged-refusal}
    :provenance-horizon
    {:owner :qualified-clio-current-history-snapshot-and-admission-or-fence
-    :input :independently-obtained-current-tip-bound-to-actual-retained-state-record-and-selected-stream-or-lineage
+    :input :independently-obtained-pre-operation-tip-bound-to-actual-retained-state-record-selected-stream-and-this-invocation
+    :excludes :the-current-replacement-invocation-itself-never-any-earlier-admitted-operation
+    :pre-recorded-invocation :require-qualified-clio-actual-invocation-record-and-immediate-predecessor-attestation-with-no-intervening-unaccounted-operation
+    :not-yet-recorded-invocation :qualified-owner-admission-or-fence-reserves-the-exact-pre-operation-tip
+    :including-self-or-unestablished-predecessor :missing-or-ambiguous-rebuild-history
     :checkpoint-start :separate-owner-attested-prefix-covered-by-checkpoint-not-its-storage-event-position-or-state-cursor
-    :main-range :every-original-operation-through-unrewound-current-tip-including-restores-and-rebuilds
+    :main-range :every-earlier-original-operation-through-unrewound-pre-operation-tip-including-historical-restores-and-rebuilds
     :state-cursor-rewind :cannot-rewind-main-provenance-range-or-hide-replacement-operations
     :supporting-references :cannot-substitute-for-omitted-main-range-operations
-    :outer-freshness :qualified-owner-admission-or-fence-retains-this-tip-through-result-exposure-otherwise-refuse
+    :outer-freshness :qualified-owner-admission-or-fence-retains-this-pre-operation-boundary-and-excludes-unaccounted-concurrent-events-through-result-exposure-otherwise-refuse
     :untrusted-state-tail-storage-time-or-self-asserted-tip :not-authority
     :missing-stale-foreign-gapped-or-changed-horizon :missing-or-ambiguous-rebuild-history
     :pure-lookup-local-fencing-or-new-event-engine :forbidden
@@ -432,7 +501,10 @@
                :prior-rebuild-rewinds-state-cursor-with-complete-permitted-control
                :truncated-tail-ending-at-rewound-cursor :omitted-restore
                :missing-stale-copied-or-foreign-horizon :horizon-changes-before-exposure
-               :checkpoint-storage-position-is-not-covered-prefix :existing-exact-and-one-over-bounds]}
+               :checkpoint-storage-position-is-not-covered-prefix
+               :pre-recorded-invocation-with-owner-attested-immediate-predecessor-positive
+               :inclusive-self-reference-or-missing-foreign-predecessor-refused
+               :existing-exact-and-one-over-bounds]}
    :replacement-reference-closure
    {:input :complete-explicit-materialized-checkpoint-evidence-and-supporting-history-in-the-counted-history-argument
     :main-tail :original-ordered-checkpoint-to-admitted-cursor-events
@@ -514,6 +586,7 @@
                      :missing-or-ambiguous-rebuild-history
                      :invalid-rebuild-binding :current-authority-unestablished
                      :checkpoint-evidence-unestablished
+                    :producing-identity-unestablished :mechanics-revision-mismatch
                      :invalid-contact-profile-binding :invalid-trail-state :invalid-nexus-memory-binding
                      :stale-causal-authority :denied-causal-authority :finite-state-continuation-byte-limit
                      :unsafe-arithmetic :overflow]}
@@ -524,7 +597,7 @@
    :outer-disposition :quarantine-or-refuse-retained-reference-before-causal-use-until-success
    :outer-wall-budget-ms 2000
    :outer-timeout :no-accepted-replacement-never-a-pure-clock-read}
-  :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference :current-trusted-authority-projection]
+  :apply-outcome {:input [:state :observed-choice-outcome :prior-recall-reference :current-trusted-authority-projection :qualified-producing-identity]
                   :output [:state-transition-result]
                   :operation-result [:state :proposed-feedback]
                   :idempotency :immutable-outcome-id
@@ -534,7 +607,7 @@
                                      :scope-revision :prior-recall-reference]
                   :confirmation :actual-writer-acknowledgement}
   :confirm-feedback
-  {:input [:state :trusted-writer-acknowledgement :current-trusted-authority-projection]
+  {:input [:state :trusted-writer-acknowledgement :current-trusted-authority-projection :qualified-producing-identity]
    :output [:state-transition-result]
    :operation-result [:state :confirmation]
    :acknowledgement/required [:observation-id :writer-principal :effect-id
@@ -559,7 +632,7 @@
     :already-confirmed-or-conflicting-reference :not-a-matching-pending-failure}
    :conflicting-or-untrusted-ack :unchanged-refusal
    :effects :none :new-elapsed-time :none :rng-draws :none}
-  :checkpoint {:input [:state :current-trusted-authority-projection]
+  :checkpoint {:input [:state :current-trusted-authority-projection :qualified-producing-identity]
                :output [:state-transition-result]
                :operation-result [:canonical-snapshot :event-cursor]
                :encoding "finite-field-snapshot/1"
@@ -576,7 +649,7 @@
             :input [:prior-state-or-empty :canonical-snapshot :event-cursor :current-trusted-checkpoint-evidence
                     :current-trusted-clio-provenance-horizon
                     :immutable-complete-ordered-history-and-replacement-closure
-                    :trusted-visible-projection :physical-configuration :current-trusted-authority-projection]
+                    :trusted-visible-projection :physical-configuration :current-trusted-authority-projection :qualified-producing-identity]
             :output [:state-transition-result]
             :operation-result [:restored-state :event-cursor]
             :input-event-cursor :authenticated-checkpoint-state-cursor-before-reconciliation
@@ -588,7 +661,9 @@
             :decoded-checkpoint :private-intermediate-never-returned-or-causally-used-before-complete-reconciliation
             :history-reconciliation
             {:protocol :reuse-existing-rebuild-revocation-complete-history-and-replacement-reconstruction-not-a-second-engine
-             :range :exclusive-owner-attested-checkpoint-covered-provenance-prefix-through-inclusive-independent-current-clio-tip
+             :range :exclusive-owner-attested-checkpoint-covered-provenance-prefix-through-inclusive-independent-tip-immediately-before-this-restore
+             :top-level-horizon :same-qualified-pre-operation-boundary-and-pre-recorded-invocation-contract-as-rebuild-provenance-horizon
+             :current-invocation :never-part-of-its-own-reconstruction-or-replacement-reference-closure
              :state-cursors :never-substitute-for-provenance-range-or-authorize-omitted-post-checkpoint-operations
              :authority :same-qualified-current-axxium-and-clio-admission-before-every-causal-influence-and-through-result-exposure
              :reconstruct [:complete-physical-state :trails :contact-profile-bindings :nexus-memory-bindings :both-state-cursors :original-pending-event-queue
@@ -614,6 +689,8 @@
                         :later-physical-contact-and-fold-effects-preserved-after-historical-checkpoint
                         :nested-restore-and-prior-rebuild-use-their-own-recorded-horizons
                         :empty-tail-current-checkpoint-positive :truncated-tail-and-changing-tip-refuse-before-exposure
+                        :pre-recorded-current-restore-with-qualified-immediate-predecessor-positive
+                        :self-inclusive-current-restore-or-unestablished-predecessor-refuses-before-exposure
                         :all-existing-exact-and-one-over-input-history-work-and-continuation-controls]}
             :validates [:separately-trusted-persisted-checkpoint-digest-and-binding
                         :kernel-revision :config-revision :config-hash :complete-physical-configuration

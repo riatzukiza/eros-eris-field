@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-15-canonical-carriers"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-15-producing-identity-and-pre-operation-horizon"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -167,7 +167,7 @@
                 :explicit-excluded-contact-pair :whole-transition-unchanged-refusal
                 :eligible-separated :no-contact-or-observation
                 :eligible-overlap :declared-finite-deflection
-                :unsupported-absorption-or-exchange :whole-transition-unchanged-refusal
+                :unsupported-absorption-or-exchange :refused-unsupported-contact-operation-revision1-exact-unchanged-state-no-transfer-termination-or-binding-removal
                 :fixtures [:six-kind-combinations-overlap-and-separation
                            :eligible-pairs-both-input-orders :unknown-kind :missing-conflicting-role
                            :explicit-excluded-pair :late-pair-refusal-discards-all-private-updates]
@@ -422,7 +422,8 @@
   :restore {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/restore"
             :version "finite-field-restore/2"
             :checkpoint :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-as-private-intermediate
-            :required-history :independent-current-clio-horizon-and-complete-counted-post-checkpoint-tail-and-replacement-closure
+            :required-history :independent-qualified-pre-operation-clio-horizon-excluding-this-invocation-and-complete-counted-post-checkpoint-tail-and-replacement-closure
+            :pre-recorded-invocation :qualified-owner-attested-immediate-predecessor-under-the-abi-provenance-horizon-contract-otherwise-refuse
             :reconciliation :existing-qualified-current-authority-reconstruction-before-any-state-result-or-causal-use
             :retained-facts :complete-recall-outcome-pending-feedback-confirmation-and-once-only-identities-plus-physical-state-cursors-and-queue
             :nested-replacement :own-recorded-preceding-provenance-horizon-never-the-outer-current-tip
@@ -475,6 +476,7 @@
                    :check-all-full-continuation-envelope-shapes-against-declared-component-and-remaining-bounds]
   :required-continuations [:zero-advance :catch-up :read-recall :checkpoint :restore :rebuild-revocation]
   :current-read-authority-projection :included-in-the-remaining-arguments-and-framing-bound-never-unmetered
+  :qualified-producing-identity-and-invocation-boundary-evidence :also-included-in-the-same-remaining-arguments-and-framing-bound-never-unmetered
   :candidate-and-next-input-custody :same-canonical-value-and-checkpoint-with-no-dropped-fold-witness-dedup-id-or-pending-event
   :result-trace-limits :separate-upper-bounds-never-permission-to-exceed-state-continuation-caps
   :counter-work :all-actual-encode-validate-checkpoint-and-closure-work-charged-under-existing-whole-call-or-rebuild-limit
@@ -613,7 +615,12 @@
           :R :nonempty-scalar-utf8-revision-under-existing-byte-limits :ID :existing-qualified-scalar-utf8-identifier
           :u32 :exact-integer-one-through-4294967295 :u8 :exact-integer-zero-through-255}
   :root {:schema "finite-physical-configuration/1" :revision :R :mechanics-revision :R
+         :trail-observations :trail-observation-shape
          :field :field-shape :kinds :kinds-shape :forces :forces-shape :contact :contact-shape}
+  :trail-observation-shape {:max-samples :exact-positive-safe-integer-one-through256}
+  :trail-observation-contract "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
+  :trail-observation-window :explicit-reviewed-profile-value-no-default-global-total-not-per-entity
+  :trail-observation-authority :derived-motion-projection-only-no-eviction-of-causal-field-contributions-request-evidence-or-immutable-history
   :field-shape {:cell-size :P :mapping-revision :R :layers [:layer-shape :exactly-eight]}
   :layer-shape {:binding :ID :gain :N :half-life :P :cell-cap :P :prune-epsilon :N}
   :kinds-shape {:presence :passive-kind-shape :nexus :passive-kind-shape :daimoi :moving-kind-shape}
@@ -639,6 +646,14 @@
                   :parameter-sets [:contact-parameter-shape :nonempty-vector-in-unsigned-utf8-id-order]}
   :contact-parameter-shape {:id :ID :revision :R :recipient-kind [:enum :presence :nexus]
                             :particle-radius :N :recipient-radius :P :restitution :U}
+  :mechanics-compatibility
+  {:rule :mechanics-revision-exactly-equals-qualified-producing-identity-kernel-revision-and-admitted-state-kernel-revision
+   :qualified-identity-contract "docs/plans/cephalon-physical-kernel-abi.edn#qualified-producing-identity-contract"
+   :configuration-root-revision :distinct-calibration-revision-equals-state-config-revision
+   :scope [:admit-state :every-causal-use :restore :rebuild-revocation]
+   :missing-unqualified-identity :producing-identity-unestablished
+   :different-mechanics :mechanics-revision-mismatch
+   :aliases-range-compatibility-and-label-copying :forbidden}
   :invariants {:gamma-and-static-threshold :presence-strictly-greater-than-nexus-strictly-greater-than-daimoi-at-least-zero
                :prune-epsilon :strictly-less-than-corresponding-layer-cap
                :vector-index :same-layer-zero-through-seven-in-every-corresponding-vector
@@ -665,13 +680,16 @@
   :excluded-carriers [:actual-entity-mass-position-velocity :actual-graph-and-bond-instances :request-weights-wallets-authority
                       :fixed-abi-quantum-substep-resource-and-numeric-profile-laws]
   :explicit-proposed-choices [:named-force-parameter-families-and-ranges :per-bond-strength-and-rest-length
-                              :revision-bound-contact-parameter-reference :256-entry-permutation-and-explicit-gradient-scale-octave-carriers]
+                              :revision-bound-contact-parameter-reference :256-entry-permutation-and-explicit-gradient-scale-octave-carriers
+                              :bounded-derived-motion-observation-window-not-physical-force-retention]
   :qualification :owning-reviewed-shape-force-law-noise-indexing-generation-and-draw-placement-before-consumption
   :revision-label-or-opaque-parameter-map :not-qualification-or-permission-to-load-code
   :donor-formulas-defaults-hidden-clamps-or-constants :not-adopted-by-this-representation
   :absorption-exchange-or-unqualified-profile :existing-unsupported-unchanged-refusal
   :future-controls [:independent-canonical-value-bytes-and-hash-golden :map-insertion-order-identical-bytes
                     :missing-extra-wrong-key-tag-nesting-length-or-revision-refused
+                    :matching-mechanics-kernel-and-qualified-producing-identity-positive
+                    :foreign-mechanics-with-copied-config-revision-admit-restore-rebuild-refused
                     :every-coefficient-or-table-change-alters-hash :matching-and-foreign-duplicate-or-overridden-contact-profile
                     :retained-values-consumed-after-admit-advance-catch-up-restore-and-rebuild
                     :existing-exact-and-one-over-input-state-checkpoint-and-work-bounds]}
@@ -872,7 +890,7 @@
   :persistent-field-revision :qualified-outer-atomic-record-output-not-a-pure-rebuild-result-or-snapshot-state-field
   :required-control :same-clean-permitted-history-with-authorized-contributions-retained
   :complete-admissible-history :successful-bounded-rebuild-required
-  :history {:coverage :every-main-provenance-operation-after-owner-verified-checkpoint-covered-prefix-through-independent-current-clio-tip-including-replacements
+  :history {:coverage :every-earlier-main-provenance-operation-after-owner-verified-checkpoint-covered-prefix-through-independent-pre-operation-clio-tip-including-historical-replacements
             :independent-current-horizon :explicit-qualified-clio-owner-snapshot-admission-or-fence-through-result-exposure
             :snapshot-state-cursors :separate-physical-consumed-and-admitted-schedule-cursors-never-provenance-range-endpoints
             :consumed-cursor :independently-bound-separate-from-admitted-cursor
@@ -895,7 +913,9 @@
             :count-all-events-and-quanta :under-unchanged-whole-rebuild-caps}
   :provenance-horizon
   {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/provenance-horizon"
-   :input :current-trusted-clio-provenance-horizon-independent-of-state-tail-and-checkpoint-self-assertions
+   :input :qualified-pre-operation-clio-horizon-independent-of-state-tail-and-checkpoint-self-assertions
+   :current-invocation :excluded-only-with-qualified-invocation-and-immediate-predecessor-admission-evidence
+   :pre-recorded-or-reserved-invocation :exact-abi-owner-contract-no-local-history-filter-or-fence
    :checkpoint-start :owner-attested-covered-prefix-not-checkpoint-storage-position-or-rewound-state-cursor
    :rewind :restored-state-cursors-cannot-remove-main-range-restore-or-subsequent-events
    :missing-foreign-stale-truncated-or-changing-tip :missing-or-ambiguous-rebuild-history-with-exact-unchanged-state
