@@ -408,3 +408,47 @@ Actual preparation checks are recorded append-only in `.ημ/receipts.edn`:
 source-manifest byte equality, EDN parse, YAML parse and diff hygiene. They check
 the submitted planning artifacts and workflow syntax. They do not test physics,
 compile the future kernel, validate board readiness or establish deployment.
+
+
+## Current selection handoff: signed field-cell indices
+
+The original acknowledgement above preserves selection 6a4438982fdf1eca98f856748bb23b19ab017c0a.
+This owning plan additionally acknowledges the current coordinator decision
+[020d97fecae4a8d0d277b9b2695d9482620b4a76](https://github.com/riatzukiza/foresight/blob/020d97fecae4a8d0d277b9b2695d9482620b4a76/docs/notes/2026-10-07-cephalon-field-kernel-selection.md),
+merged as [8c649fee2e95e5ec6b5304a3351a0e16fca60533](https://github.com/riatzukiza/foresight/commit/8c649fee2e95e5ec6b5304a3351a0e16fca60533).
+The accompanying ABI declaration records both the original and current identities.
+
+Only floor-derived field-cell coordinates are exact signed safe integers in
+[-9007199254740991,9007199254740991]. Counts, IDs with integer representations,
+wallets, elapsed/residual/backlog time and RNG counters retain their existing
+nonnegative safe-integer constraints. Finite negative world coordinates use the
+existing floor(x/cell-size),floor(y/cell-size) mapping; nonfinite or out-of-range
+quotients/indices refuse unchanged before exposure. No coordinate clamp, unsigned
+wrap, origin shift, numeric tolerance, force or runtime change is introduced.
+Binary64 compiled-CLJS Node authority, exact discrete replay and the existing
+continuous tolerance, fixed quantum/residual schedule and source ownership
+boundaries remain those of the acknowledged decision. This is interface data
+and owning-plan acknowledgement, not an implemented or executed numeric profile.
+
+The existing eros-eris-field.law/shape/domain module ownership and one compiled
+Node computation authority remain. OpenPlanner owns persistence/query adapters;
+Knoxx owns character/mood composition. Axxium, Katamorph and Clio retain their
+existing independent authority. No compatibility facade or consumer may use this
+plan as proof of compiled-source qualification. The organizational repository
+remains a separately qualified release destination.
+
+This amendment is the already required owning acknowledgement for the existing
+three-point selection-handoff card b5f2ba9e-8d67-4c73-9919-e275983aca87. It proposes
+no new behavior, task, point or native relationship. Its independent source
+review/merge and the coordinator's actual native readiness/review remain required
+before declaring that handoff complete. The card's explicit successor obligations
+keep solver/contact/collision execution, complete calibration, selected-byte
+rights/notices and distribution qualification in their owning deliveries. They
+are not supplied by this acknowledgement.
+
+The broader finite-coupling proposal in personal FieldPR2 remains unqualified.
+Its original open canonical-state-carrier and restore-allocation findings stay
+open; neither their whole-state layout nor restore/2/rebuild is adopted here.
+This small selection amendment changes none of those operations or requirements,
+and gives them no approval, readiness or implementation credit. No runtime,
+maker/clock/gateway/owner/cloud/deployment/social effect or paused-heartbeat change.
