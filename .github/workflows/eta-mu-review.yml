@@ -84,12 +84,14 @@ jobs:
     # Evaluate the supported PR path even when the parser failed or was skipped;
     # the existing producer gate accepts only the literal success result.
     if: ${{ always() && github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415
+    uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@e8e50a96fbd13edfcf0b4cf65dbeb2b544b4133f
     with:
       pr_head_sha: ${{ github.event.pull_request.head.sha }}
-      muse_revision: 0b9a91492c8355e6933dc2164d35668cb76d9e60
+      muse_revision: 259c76eee9ac2def944e9191c1da23d3647ba32e
       agents_revision: 4b4f48dae1b804b2581974e604cca618ecedadf1
       opencode_version: 1.18.31
+      review_timeout_minutes: 60
+      node_version: "22.23.3"
       # The pinned producer gates credential detection and private mirrors on this input.
       setup_eta_mu_toolchain: false
       evidence_gates_script: |
