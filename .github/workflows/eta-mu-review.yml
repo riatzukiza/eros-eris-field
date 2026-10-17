@@ -81,6 +81,9 @@ jobs:
   review:
     name: Evidence-first review (eta-mu)
     needs: proposed_abi_parse
+    # Evaluate the supported PR path even when the parser failed or was skipped;
+    # the existing producer gate accepts only the literal success result.
+    if: ${{ always() && github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository }}
     uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415
     with:
       pr_head_sha: ${{ github.event.pull_request.head.sha }}

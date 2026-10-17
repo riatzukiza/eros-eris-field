@@ -2979,3 +2979,23 @@ interface selection, requiring fresh review and actual full-profile fit.
 Full foreign owner/provenance/history state leaves and restore allocation/
 native adoption remain outstanding. No original finding is settled by these
 unpublished declarations, and no implementation, Ready or served proof follows.
+
+
+## Integer fields and signed-zero representation — 2026-10-17 UTC
+
+Integer-typed values use the existing finite-field-trace/1 `f64` tag and exact
+binary64 bits. An integer zero has the positive-zero bit pattern; a negative
+zero is refused by its owning integer shape before encoding. Configuration
+integer fields, including permutation entries, use the existing
+`invalid-physical-configuration` refusal and existing precedence. Physical
+noninteger float domains retain their distinct signed-zero bits. No new tag,
+global float normalization, cap, seed or physics change is introduced.
+
+An independent format reference on the selected Node22.20.0 binary demonstrates
+the ambiguity: both the ordinary256-entry permutation and the one with its
+zero replaced by-0 satisfy integer/range/distinct-value checks, but their `f64`
+encodings and hashes differ. The selected integer rule accepts the ordinary
+permutation and refuses the negative-zero control. This is a scalar/encoding
+reference, not an executed field codec or configuration validator. The owning
+future fixture matrix now includes that negative permutation and retains all
+existing physical signed-zero and exact/one-over controls before qualification.

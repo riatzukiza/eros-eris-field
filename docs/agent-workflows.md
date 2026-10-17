@@ -203,3 +203,22 @@ Unicode controls and refuses each ordinary/discarded extra-form source. These
 are actual local parser results, not hosted qualification or a field solver
 test. Permissions, pins, secrets, private-mirror disablement, immutable-head
 and clean-checkout guards remain unchanged; fresh hosted proof is required.
+
+
+## Explicit supported review path and skipped parser — 2026-10-17 UTC
+
+Development review is for ready, non-draft pull requests whose head and base are
+the personal `riatzukiza/eros-eris-field` repository. The caller now explicitly
+uses `always()` with that eligibility condition for `review`; an eligible parse
+failure, cancellation or unexpected skip therefore does not silently bypass
+the reusable review path. Its existing producer gate accepts only the literal
+`needs.proposed_abi_parse.result == success`. Every other result fails evidence
+production before model review/publication; no skipped parser supplies proof.
+
+Drafts and unsupported fork heads remain ineligible, receive no approval and
+supply no review/check/round credit. `ready_for_review` starts the supported
+path for a former draft. No private dependency setting, permission, App-secret
+mapping, source pin or timeout is changed. The isolated parser still has only
+contents:read. This clarifies the conditional review request without enabling
+model execution or credential access on unsupported heads. Local shell-result
+controls and syntax checks are preparation; no live draft/fork run is claimed.

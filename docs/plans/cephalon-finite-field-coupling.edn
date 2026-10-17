@@ -337,7 +337,10 @@
   :string-escaping {:quote :backslash-quote :backslash :double-backslash
                     :controls :lowercase-u00xx-for-u0000-through-u001f
                     :other-scalars :exact-utf8-no-normalization-no-optional-ascii-escaping}
-  :numbers {:positive-and-negative-zero :distinct-bits :nonfinite :unchanged-refusal}
+  :numbers {:positive-and-negative-zero :distinct-bits :nonfinite :unchanged-refusal
+            :integer-typed-values :same-existing-f64-tag-with-exact-integer-binary64-bits-and-positive-zero-only
+            :negative-zero-in-integer-domain :refused-before-encoding-by-the-owning-integer-shape
+            :noninteger-physical-domains :retain-existing-distinct-signed-zero-bits-no-normalization}
   :unsupported-values :whole-unchanged-refusal
   :byte-count :complete-envelope-including-tags-separators-brackets-and-escapes
   :counter :before-each-byte-or-record-exposure-in-the-whole-call-work-budget
@@ -656,6 +659,7 @@
           :U :finite-binary64-zero-through-one-inclusive :S :finite-binary64-minus-one-through-one-inclusive
           :R :nonempty-scalar-utf8-revision-under-existing-byte-limits :ID :existing-qualified-scalar-utf8-identifier
           :u32 :exact-integer-one-through-4294967295 :u8 :exact-integer-zero-through-255}
+  :integer-encoding :trace-1-f64-bits-of-the-exact-integer-positive-zero-only-negative-zero-refused-as-invalid-physical-configuration
   :root {:schema "finite-physical-configuration/1" :revision :R :mechanics-revision :R
          :trail-observations :trail-observation-shape
          :field :field-shape :kinds :kinds-shape :forces :forces-shape :contact :contact-shape}
@@ -747,6 +751,7 @@
   :donor-formulas-defaults-hidden-clamps-or-constants :not-adopted-by-this-representation
   :absorption-exchange-or-unqualified-profile :existing-unsupported-unchanged-refusal
   :future-controls [:independent-canonical-value-bytes-and-hash-golden :map-insertion-order-identical-bytes
+                    :negative-zero-in-integer-typed-field-refused
                     :schema-negative-admit-read-restore-and-rebuild-exact-closed-status-reason-revision
                     :otherwise-valid-authority-identity-and-limits-isolate-each-configuration-negative
                     :every-existing-authority-mechanics-unsupported-operation-and-finite-limit-refusal-preserved
