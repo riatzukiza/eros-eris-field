@@ -412,10 +412,10 @@ compile the future kernel, validate board readiness or establish deployment.
 
 ## Current selection handoff: signed field-cell indices
 
-The original acknowledgement above preserves selection6a4438982fdf1eca98f856748bb23b19ab017c0a.
+The original acknowledgement above preserves selection 6a4438982fdf1eca98f856748bb23b19ab017c0a.
 This owning plan additionally acknowledges the current coordinator decision
 [020d97fecae4a8d0d277b9b2695d9482620b4a76](https://github.com/riatzukiza/foresight/blob/020d97fecae4a8d0d277b9b2695d9482620b4a76/docs/notes/2026-10-07-cephalon-field-kernel-selection.md),
-merged as[8c649fee2e95e5ec6b5304a3351a0e16fca60533](https://github.com/riatzukiza/foresight/commit/8c649fee2e95e5ec6b5304a3351a0e16fca60533).
+merged as [8c649fee2e95e5ec6b5304a3351a0e16fca60533](https://github.com/riatzukiza/foresight/commit/8c649fee2e95e5ec6b5304a3351a0e16fca60533).
 The accompanying ABI declaration records both the original and current identities.
 
 Only floor-derived field-cell coordinates are exact signed safe integers in
