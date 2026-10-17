@@ -481,8 +481,7 @@
              :empty-world-positive-quanta-restore-charges-every-actual-quantum
              :empty-world-positive-quanta-restore-work-exhaustion-refuses-before-next-quantum-with-finite-work-budget-exceeded
              :nested-repeated-and-partitioned-restore-shares-one-counter-and-charges-each-actual-quantum-once
-             :complete-checkpoint-argument-exact1048756-and-one-over
-             :payload-under-cap-but-complete-wrapper-one-over-refused]}
+             :complete-checkpoint-argument-exact1048756-and-one-over]}
  :causal-entry-authority
  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
   :current-owner-projection :explicit-argument-at-every-abi-entry-including-advance-catch-up

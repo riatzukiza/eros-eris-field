@@ -1353,3 +1353,23 @@
   spore: none
   receipt-refs: cephalon-observation-packet-canonical-index-zero-20261017
   note: Small owned follow-through before first publication of the observation-layout batch: packet-local node/root references now explicitly require canonical positive-zero index0 and reject negative-zero/fractional/negative/out-of-range references. Numeric physical VALUES still preserve bothsignedzeros. This prevents an alternate reference representation from bypassing first-postorder canonicality; no change to globalCount/Vector2/physics/state/input/snapshot/budget semantics. Completeowned-layout parsedcomparison/31declarations/42localrefs/12rootinventory againPASS/stderr0; negative-reference cases are declared futurecontrols, not executed productiondecoder tests. Prior24a8267 localcommit preserved; ordinaryhistory-preserving correction, no amend/force. Newhead stillrequires actualnativeparser/fullreview andalloldsource/state/allocation/Readygates. No runtime/paid/credential/maker/clock/owner/PM2/cloud/creativepublication/heartbeat/sporechange.
+
+- ts: 2026-10-17T02:11:58.597Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existing Field finding4290131871; accepted finite B1-B3 delivery
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field7f5-native-published-parser-and-success-settlement-20261017
+  note: Published ordinary7f5 after retained24a/7f5 source commits. Initial immediate native read retained old869 head despite exactnewbody; fresh independent native/local/fetched bindings confirm7f5/a2 and body6799B/SHA580b71a1b9ff691c3f84f86ecea021eb5c198fdda2b10c2badc42e478f0ac0e7/autoMergeNull, no repeat push/patch. Actual parser log22308B/SHA9cdc83c92d68b1dc595c905f3c9fdc55459b522522251089a6189278b01d6a7e retained. Canonical Fixed-in settlement of shared success union4290131871 posted4300854477/readback exact and resolved, including proposed result2/all9operations/12root packet union; outdatedlocation verified, not used as substitute for sourcefix. Original state/history4290131865 and restoreallocation/adoption4289311646 remainOPEN. Fresh complete11-input planningrequest6228320061/all121postbase receipts/fullreflection accepted and bot6228321410triggered; completionnotyetobserved/noapproval or roundcredit. CurrentMiMo117280337990running; earlier869 approval not transferred. GoalACTIVE/0of3served/heartbeatHUMANpaused. Below20GiB so no newfullcopy/install. No observation-onlycommit/push, source/runtime/maker/owner/clock/PM2/cloud/credential/paid/deploy/social/spore mutation.
+
+- ts: 2026-10-17T02:14:45.370Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Native CodeRabbit5555507447/comment4300861157; existing Field source refinement
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-impossible-checkpoint-fixture-correction-20261017
+  note: Verified new native current7f5 CodeRabbit full request6228320061 completed6228321410 at02:11:15 with review5555507447,11selectedinputs and reviewed7f5 marker; actual1finding4300861157 means no clean approval/round credit. Following its expressly allowed minimal correction, remove only payload-under-cap-but-complete-wrapper-one-over-refused. Complete keyword-domain checkpoint encoding is exactly statebytes+180; state<=1048576 therefore wrapper<=1048756, and wrapper1048757 requires state1048577. Existing exactcheckpointoneover/stateoneover/complete-snapshot-wrapping-bytes-not-payload-only controls retained; no checkprecedence/schema/resource/physical behavior change or cap increase. Exact parsed old/new comparison verifies this sole coupling-vector deletion. Independentformat probe first mistakenly encoded keywordkeys as stringkeys and failed at174bytes; corrected actual kw/empty-namespace/name tags yield180 on3representative taggedvalues. Originalfailure remains explicit/preparationonly; not a production defect or physicalstate-admission test. No new fixture/test/prerequisite or sourcecleanup scope. Include owned observation141/reflection from genuine current native publication/parser/settlement with this concrete sourcefix. Sharedsuccess4290131871 remains actuallyresolved/writer4300854477; foreignstate4290131865 andrestoreallocation4289311646remainOPEN. Current7f5MiMo run117280337990 stays its own live invocation; candidate fix will need fresh current-head review on publication, no staleapprovaltransfer. Hold one corrective batch for actual current-review result, no restart/duplicate/paiduse. GoalACTIVE/0of3served/heartbeatHUMANpaused; below20GiB/noadditionalfullcopy orinstall; no maker/runtime/owner/clock/PM2/cloud/credential/deployment/publication mutation.
