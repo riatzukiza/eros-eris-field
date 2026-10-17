@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-17-restore-work-bounded-reconstruction"
+{:proposal/version "cephalon-physical-kernel/2026-10-17-ordinary-physical-observation-packets"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -2204,8 +2204,533 @@
                     :independent-meter-matches-final-work-including-exact-report-seal-and-output-encoding
                     :same-fixed-report-encoding-width-at-zero-and-each-count-maximum
                     :no-report-no-partial-state-on-guard-budget-or-outer-timeout-failure]}
+ :observation-value-packet
+ {:version "finite-physical-observation-packet/1"
+  :status :proposed-lossless-observation-representation-not-implemented-or-qualified
+  :scope :one-actually-executed-quantum-only-no-new-physical-memory-graph-state-store-or-native-event
+  :kind :closed-map :exact-keys [:version :step-id :nodes :roots]
+  :fields {:version {:literal "finite-physical-observation-packet/1"}
+           :step-id {:contract "docs/plans/cephalon-finite-field-coupling.edn#contact-observation/step-id"}
+           :nodes :ValueNodeVector :roots :RootReferenceVector}
+  :domain :the-complete-existing-required-physical-observation-values-for-this-quantum-in-their-full-selected-order-not-a-truncated-summary
+  :root-record-grammar "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier/root-record"
+  :root-population-and-order "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier/groups"
+  :ValueNodeVector
+  {:container :ordered-vector :index :exact-safe-nonnegative-integer-zero-based
+   :node {:kind :closed-discriminated-tuple :discriminator-index 0
+          :variants
+          {:scalar {:tuple [:scalar :value] :length 2
+                    :value [:nil :boolean :finite-binary64 :exact-scalar-string :keyword]
+                    :identity :exact-existing-trace-1-tagged-scalar-bytes-including-type-tags-and-signed-zero-bits}
+           :vector {:tuple [:vector :child-references] :length 2
+                    :child-references :ordered-vector-of-exact-prior-node-indices
+                    :identity :same-ordered-complete-child-index-vector-no-set-list-or-truncated-value}
+           :map {:tuple [:map :entry-references] :length 2
+                 :entry-references :ordered-vector-of-exact-two-index-key-value-pairs
+                 :order :existing-canonical-encoded-key-unsigned-utf8-order-of-the-expanded-domain-keys-never-node-index-order
+                 :identity :same-complete-ordered-key-value-reference-vector-no-dropped-or-overridden-entry}}}
+   :references :every-child-index-strictly-less-than-the-containing-node-index-no-forward-self-external-or-cyclic-reference
+   :first-encounter :canonical-postorder-first-visit-of-full-ordered-root-records-vector-elements-in-order-and-map-keys-in-existing-trace-key-order
+   :assignment :append-a-node-on-its-first-exact-structural-encounter-reuse-that-index-on-subsequent-exact-encounters
+   :structural-key :selected-node-kind-and-complete-scalar-bits-or-complete-ordered-prior-child-references-under-existing-canonical-value-and-order-rules
+   :lookup-and-insertion :existing-finite-order-work-1-fixed-byte-trie-over-the-exact-structural-key-stream-no-adaptive-host-hash-collision-path-or-unmetered-lookup
+   :lookup-work :charge-every-actually-processed-key-code-unit-and-utf8-byte-trie-edge-node-creation-and-required-branch-probe-to-the-existing-named-work-units-without-reset-or-refund
+   :key-storage :bounded-internal-canonical-key-byte-stream-not-a-new-unbounded-domain-string-or-input-string-cap-exception
+   :structural-not-host-equality :host-numeric-equality-cannot-merge-signed-zeros-or-coerce-numbers-booleans-nil-keywords-or-strings
+   :canonicality :no-duplicate-structurally-identical-node-no-unused-node-and-no-alternate-node-order-or-declaration
+   :no-authority-inference :equal-value-reuse-never-merges-native-identities-source-records-principals-scopes-grants-or-effects-each-root-and-field-retains-its-original-role-and-qualified-custody}
+  :RootReferenceVector
+  {:container :ordered-vector-of-exact-existing-node-indices
+   :population :one-reference-for-every-complete-required-physical-root-record-at-that-quantum-with-identical-order-and-multiplicity
+   :repeated-equal-root :repeat-the-reference-never-collapse-an-actual-occurrence
+   :empty :only-if-the-complete-qualified-ordinary-observation-grammar-produces-no-physical-root-record-for-that-executed-quantum
+   :root-shapes :expand-and-validate-every-root-against-its-actual-selected-closed-physical-record-variant-no-arbitrary-canonical-blob}
+  :expansion
+  {:scalar :the-exact-retained-scalar-value
+   :vector :the-exact-ordered-vector-of-expanded-children
+   :map :the-exact-closed-domain-map-with-expanded-key-value-pairs
+   :equality :expanded-root-record-vector-equals-complete-actual-prepacking-root-record-vector-including-all-field-values-signed-zero-bits-order-and-occurrences
+   :bound :expansion-and-validation-are-bounded-under-existing-full-call-work-byte-and-record-admission-no-unmetered-materialization-of-an-amplifying-reference-graph
+   :producer :bounded-private-incremental-capture-of-actual-values-not-reexecution-of-physics-to-fill-a-table
+   :independent-readback :retain-packet-and-complete-required-original-inputs-source-custody-and-history-for-independent-exact-expansion-and-causal-comparison-before-consumption}
+  :partition
+  {:reset :new-empty-table-at-every-actual-quantum-even-within-one-call
+   :cross-quantum-or-call-reference :forbidden
+   :ordering :actual-original-quantum-schedule-and-existing-step-id-law
+   :ordinary-split-catch-up-restore :same-quantum-values-produce-identical-packet-bytes-independent-of-call-boundaries
+   :horizon :existing-whole-horizon-envelope-and-physical-record-accounting-count-the-same-ordered-packets-once-per-actual-occurrence-not-one-extra-envelope-per-API-call
+   :reconstruction :every-main-nested-and-repeated-quantum-still-produces-and-charges-its-actual-packet-and-records-no-identity-based-execution-or-work-discount
+   :zero-time :no-packet-or-new-step-for-the-existing-zero-advance-no-op}
+  :encoding
+  {:wire :existing-finite-field-trace-1-tagged-values-and-complete-envelope
+   :packet :an-ordinary-domain-map-and-domain-tuples-inside-that-codec-no-new-map-tag-scalar-printer-compression-library-or-native-object
+   :byte-measure :all-packet-keys-tags-node-values-child-indices-root-indices-separators-escapes-and-existing-whole-envelope-bytes
+   :physical-record-measure :every-expanded-required-root-record-occurrence-counts-before-capture-including-repeated-references-never-count-only-distinct-nodes-or-packets
+   :table-work :every-actual-value-visit-lookup-structural-key-byte-comparison-ordering-insertion-and-encoding-is-additionally-charged-to-the-same-existing-work-meter
+   :byte-preflight :bounded-capture-before-each-node-root-or-output-byte-append-no-large-expanded-intermediate-before-admission
+   :input-state-snapshot-and-inclusion-codecs :unchanged-this-table-does-not-replace-or-discount-their-original-full-value-custody-size-hash-or-authority-checks}
+  :limits :all-existing-input-state-checkpoint-history-trace-work-and-horizon-limits-remain-no-new-pool-cap-increase-or-refund
+  :failure :existing-exact-unchanged-finite-trace-or-work-refusal-with-no-partial-packet-state-or-result-exposure
+  :qualification :the-complete-frozen-layout-and-full-existing-load-matrix-must-actually-fit-before-use-a-static-wire-reference-is-not-executed-physics-performance-or-Ready-proof
+  :future-controls [:exact-expanded-value-and-signed-zero-type-and-order-roundtrip
+                    :different-map-insertion-orders-identical-table-and-packet-bytes
+                    :repeated-equal-root-occurrences-retained-and-counted
+                    :duplicate-unused-forward-self-cyclic-foreign-or-noncanonical-node-refused
+                    :small-encoded-table-with-overexpanding-root-refused-before-large-materialization
+                    :wrong-expanded-record-shape-and-missing-source-custody-refused
+                    :one-quantum-unsplit-split-catch-up-restored-identical-packets
+                    :repeated-reconstruction-charges-every-quantum-record-and-actual-table-work
+                    :actual-complete-high-density-quiet-and-catch-up-loads-under-unchanged-caps
+                    :actual-complete-wire-work-record-and-expansion-exact-and-one-over-controls]}
+ :numeric-observation-carriers
+ {:version "finite-numeric-observation-carriers/1"
+  :status :proposed-owned-computation-record-grammar-not-implemented-or-transitively-qualified
+  :scope :numeric-sampling-force-rng-motion-deposit-and-cell-payloads-for-the-ordinary-observation-root-union
+  :revision-binding :this-exact-layout-bound-by-qualified-kernel-revision-no-new-call-state-or-native-event-identity
+  :types {:F :finite-binary64 :N :finite-binary64-at-least-zero :P :finite-binary64-strictly-positive
+          :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+          :Revision "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/Revision"
+          :Vector2 "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/Vector2"}
+  :closedness :each-selected-map-has-exactly-its-declared-keys-no-nil-inactive-fields-extra-host-values-or-arbitrary-detail-map
+  :numeric-values :actual-operation-intermediates-in-the-existing-selected-profile-not-recomputed-by-an-observer
+  :equality :exact-existing-tagged-value-and-binary64-bit-equality-including-signed-zero-not-replay-tolerance-for-record-admission
+  :semantic-authority ["docs/plans/cephalon-finite-field-coupling.edn#norm"
+                       "docs/plans/cephalon-finite-field-coupling.edn#radial-cap"
+                       "docs/plans/cephalon-finite-field-coupling.edn#static-threshold"]
+  :new-force-formula-cap-threshold-time-draw-or-refusal :none
+  :norm
+  {:kind :closed-discriminated-union :discriminator :branch
+   :variants
+   {:zero-scale
+    {:exact-keys [:branch :input :scale :value]
+     :fields {:branch {:literal :zero-scale} :input :Vector2 :scale :N :value :N}
+     :selection :the-existing-max-absolute-component-is-zero
+     :agreement :scale-and-value-are-the-actual-existing-zero-scale-and-zero-norm-result-input-keeps-original-component-bits
+     :inactive-normalization-squares-root-or-product :absent-never-evaluated-for-observation}
+    :scaled
+    {:exact-keys [:branch :input :scale :normalized :squares :sum :root :value]
+     :fields {:branch {:literal :scaled} :input :Vector2 :scale :P
+              :normalized :Vector2 :squares :Vector2 :sum :N :root :N :value :N}
+     :selection :the-existing-max-absolute-component-is-strictly-positive
+     :order [:max-absolute-component :x-divide-scale :y-divide-scale
+             :square-normalized-x :square-normalized-y :add-x-square-then-y-square
+             :selected-profile-square-root :scale-times-root]
+     :agreement :each-field-is-the-exact-intermediate-from-that-one-execution-in-the-existing-order-no-hypot-unscaled-squares-or-reassociation}}
+   :population :one-selected-record-per-actual-required-norm-execution-not-an-extra-norm-call-or-one-record-per-component
+   :unsafe-intermediate :existing-whole-transition-unchanged-refusal-no-success-record-or-partial-trace}
+  :radial-cap
+  {:kind :closed-discriminated-union :discriminator :branch
+   :operation {:enum [:aggregate-wind :kind-speed :cell-saturation]}
+   :domain-check :existing-operation-specific-cap-domain-before-any-shortcut-kind-speed-allows-zero-other-two-require-positive
+   :variants
+   {:zero-kind-cap
+    {:exact-keys [:branch :operation :input :cap :value]
+     :fields {:branch {:literal :zero-kind-cap} :operation {:literal :kind-speed}
+              :input :Vector2 :cap :N :value :Vector2}
+     :selection :valid-kind-speed-cap-is-zero
+     :agreement :cap-is-the-actual-zero-input-value-and-value-is-the-existing-exact-zero-vector-result
+     :inactive-norm-ratio-unit-and-corrections :absent-never-evaluated}
+    :zero-norm
+    {:exact-keys [:branch :operation :input :cap :norm :value]
+     :fields {:branch {:literal :zero-norm} :operation :selected-operation
+              :input :Vector2 :cap :P :norm :Norm :value :Vector2}
+     :selection :after-domain-and-zero-kind-cap-checks-the-actual-norm-is-zero
+     :agreement :norm-input-equals-input-and-value-is-the-existing-exact-zero-vector-result
+     :inactive-ratio-unit-and-corrections :absent-never-evaluated}
+    :within-cap
+    {:exact-keys [:branch :operation :input :cap :norm :value]
+     :fields {:branch {:literal :within-cap} :operation :selected-operation
+              :input :Vector2 :cap :P :norm :Norm :value :Vector2}
+     :selection :actual-norm-is-positive-and-at-or-below-cap
+     :agreement :norm-input-equals-input-and-value-preserves-input-component-bits-before-any-division
+     :inactive-ratio-unit-and-corrections :absent-never-evaluated}
+    :scaled-ratio
+    {:exact-keys [:branch :operation :input :cap :norm :ratio :candidate :candidate-norm :corrections :value]
+     :fields {:branch {:literal :scaled-ratio} :operation :selected-operation
+              :input :Vector2 :cap :P :norm :Norm :ratio :P :candidate :Vector2
+              :candidate-norm :Norm :corrections :CorrectionVector :value :Vector2}
+     :selection :actual-norm-is-above-cap-and-the-existing-cap-divide-norm-ratio-is-nonzero
+     :agreement :norm-input-equals-input-ratio-is-the-actual-quotient-and-candidate-is-existing-x-then-y-component-multiplication
+     :inactive-unit-vector :absent-never-evaluated}
+    :unit-fallback
+    {:exact-keys [:branch :operation :input :cap :norm :ratio :unit :candidate :candidate-norm :corrections :value]
+     :fields {:branch {:literal :unit-fallback} :operation :selected-operation
+              :input :Vector2 :cap :P :norm :Norm :ratio :N :unit :Vector2 :candidate :Vector2
+              :candidate-norm :Norm :corrections :CorrectionVector :value :Vector2}
+     :selection :actual-norm-is-above-positive-cap-and-the-existing-cap-divide-norm-ratio-underflows-to-zero
+     :agreement :ratio-is-that-actual-zero-quotient-and-unit-and-candidate-are-existing-x-divide-norm-x-times-cap-then-y-divide-norm-y-times-cap-intermediates}}
+   :Norm {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/norm"}
+   :selected-operation :the-exact-operation-enum-value-with-the-existing-operation-specific-cap-domain
+   :CorrectionVector
+   {:container :ordered-vector :length {:minimum 0 :maximum 2}
+    :item
+    {:kind :closed-map
+     :exact-keys [:before :before-norm :quotient :factor :after :after-norm]
+     :fields {:before :Vector2 :before-norm :Norm :quotient :P :factor :P :after :Vector2 :after-norm :Norm}
+     :order [:existing-cap-divide-current-norm :preceding-nonnegative-binary64
+             :multiply-current-x :multiply-current-y :existing-norm-recertification]
+     :agreement :before-norm-input-equals-before-after-norm-input-equals-after-quotient-is-the-actual-division-and-factor-is-its-existing-positive-ieee64-predecessor
+     :before-norm :strictly-above-the-same-cap
+     :unsafe-zero-factor-or-nonfinite-value :existing-whole-unchanged-refusal-not-a-successful-correction}
+    :first-before :exact-candidate-value-and-candidate-norm-not-a-second-copy-derived-by-new-arithmetic
+    :later-before :exact-preceding-correction-after-and-after-norm
+    :zero-items :if-and-only-if-the-actual-candidate-norm-is-at-or-below-cap
+    :one-item :if-and-only-if-the-first-existing-correction-certifies-at-or-below-cap
+    :two-items :if-and-only-if-the-first-is-still-over-cap-and-the-second-certifies-at-or-below-cap
+    :unexecuted-pass :absent-never-added-as-empty-or-identity-correction
+    :value :exact-candidate-if-no-correction-otherwise-last-correction-after
+    :certification :existing-final-norm-at-or-below-cap-otherwise-existing-whole-unchanged-refusal}
+   :candidate-certification :candidate-norm-input-exactly-equals-candidate-and-the-value-and-correction-chain-follow-the-existing-at-most-two-pass-law
+   :stage :provided-only-by-the-closed-enclosing-physical-record-do-not-mint-a-second-cap-stage-or-perform-a-cap-to-obtain-a-trace
+   :unsafe-intermediate :existing-whole-transition-unchanged-refusal-no-success-record-or-partial-trace}
+  :static-threshold
+  {:kind :closed-map
+   :exact-keys [:stage :input :threshold :norm :stopped :value]
+   :fields {:stage {:enum [:after-pre-movement-cap :after-final-post-contact-cap]}
+            :input :Vector2 :threshold :N
+            :norm {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/norm"}
+            :stopped :boolean :value :Vector2}
+   :agreement [:norm-input-exactly-equals-input-and-threshold-is-the-actual-kind-configuration-value
+               :stopped-if-and-only-if-the-existing-norm-value-is-strictly-below-threshold
+               :stopped-value-is-the-existing-exact-zero-vector-otherwise-input-component-bits-are-retained
+               :equality-does-not-stop-and-zero-threshold-does-not-stop-nonzero-motion]
+   :population :each-existing-pre-movement-and-final-post-contact-threshold-only-never-between-pairs-or-a-second-position-advance
+   :unsafe-intermediate :existing-whole-transition-unchanged-refusal-no-success-record-or-partial-trace}
+  :field-sample
+  {:kind :closed-map
+   :exact-keys [:entity-id :position :weight-source :layers :aggregate :saturation
+                :coupling-rate :mass :wind-acceleration :wind-force]
+   :fields {:entity-id :ID :position :Vector2 :weight-source :ReadWeightSource
+            :layers :LayerSamples :aggregate :Vector2 :saturation :RadialCap
+            :coupling-rate :N :mass :P :wind-acceleration :Vector2 :wind-force :Vector2}
+   :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+   :ReadWeightSource
+   {:kind :closed-discriminated-union :discriminator :kind
+    :variants
+    {:request
+     {:exact-keys [:kind :request-id :field-mapping-revision :read-weights]
+      :fields {:kind {:literal :request} :request-id :ID :field-mapping-revision :Revision :read-weights :Weights8}
+      :agreement :the-same-unique-admitted-same-scope-daimoi-request-and-its-complete-immutable-original-read-vector-and-mapping-revision}
+     :passive
+     {:exact-keys [:kind :entity-kind :field-mapping-revision :read-weights]
+      :fields {:kind {:literal :passive} :entity-kind {:enum [:presence :nexus]}
+               :field-mapping-revision :Revision :read-weights :Weights8}
+      :agreement :the-actual-entity-kind-and-complete-retained-configuration-read-vector-and-mapping-revision}}
+    :Revision "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/Revision"
+    :Weights8 {:kind :vector :length 8 :items :N}
+    :binding :existing-complete-admitted-entity-request-and-configuration-bindings-remain-required-record-is-neither-a-grant-nor-a-substitute-for-their-original-custody}
+   :LayerSamples
+   {:container :ordered-vector :length 8 :order :exact-layer-indices-zero-through-seven
+    :item
+    {:kind :closed-map
+     :exact-keys [:layer-index :cell-key :present :cell-velocity :weight :weighted :accumulator-before :accumulator-after]
+     :fields {:layer-index {:enum [0 1 2 3 4 5 6 7]}
+              :cell-key {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/sparse-cells/cell-key"}
+              :present :boolean :cell-velocity :Vector2 :weight :N :weighted :Vector2
+              :accumulator-before :Vector2 :accumulator-after :Vector2}
+     :cell :existing-exact-rational-floor-of-the-original-position-at-current-scope-and-this-layer-in-prior-buffer-no-floating-quotient-or-cross-scope-fallback
+     :presence :present-if-and-only-if-that-exact-prior-cell-exists-absent-cell-record-keeps-the-existing-zero-vector-contribution
+     :weight :the-exact-same-index-value-in-this-records-admitted-read-vector-never-deposit-weights
+     :order [:multiply-weight-x :add-to-x :multiply-weight-y :add-to-y]
+     :weighted :actual-two-products-even-when-zero-no-host-vector-reduction-or-fused-product
+     :accumulator :existing-zero-at-first-layer-then-the-exact-previous-layer-accumulator-after}}
+   :RadialCap {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/radial-cap"}
+   :aggregate :exact-final-layer-accumulator-after
+   :saturation :the-existing-aggregate-wind-operation-with-input-equal-to-aggregate-and-cap-equal-to-actual-positive-configured-wind-cap
+   :wind :coupling-rate-is-the-actual-kind-value-wind-acceleration-is-rate-times-saturated-components-and-wind-force-is-actual-positive-mass-times-acceleration
+   :force-agreement :the-corresponding-existing-wind-class-force-contribution-retains-this-exact-force-value-without-a-second-application-or-computation
+   :population :every-actually-sampled-entity-at-the-existing-prior-buffer-boundary-in-canonical-entity-id-order-including-passive-kinds-and-zero-or-absent-field
+   :bounds-and-failure :existing-whole-call-and-horizon-limits-and-whole-unchanged-refusals-no-shortened-layer-vector-or-empty-sample-substitute}
+  :pre-contact-motion
+  {:kind :closed-map
+   :exact-keys [:entity-id :kind :prior-position :prior-velocity :mass :step-seconds
+                :force-sum :acceleration :delta-velocity :pre-friction :friction
+                :pre-movement-cap :pre-movement-threshold :movement]
+   :fields {:entity-id :ID :kind {:enum [:presence :nexus :daimoi]}
+            :prior-position :Vector2 :prior-velocity :Vector2 :mass :P :step-seconds :P
+            :force-sum :Vector2 :acceleration :Vector2 :delta-velocity :Vector2
+            :pre-friction :Vector2 :friction :Friction
+            :pre-movement-cap :RadialCap :pre-movement-threshold :Threshold :movement :Movement}
+   :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+   :RadialCap {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/radial-cap"}
+   :Threshold {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/static-threshold"}
+   :step :the-actual-existing-10000-microsecond-quantum-divided-by-one-million-not-call-elapsed-backlog-residual-or-a-new-time-input
+   :force-sum :exact-existing-complete-canonical-class-and-contribution-left-fold-result-not-only-wind-or-a-subset
+   :component-order [:force-sum-divide-positive-mass :multiply-by-step-seconds :add-original-prior-velocity]
+   :Friction
+   {:kind :closed-map :exact-keys [:gamma :gamma-times-step :exponent :factor :value]
+    :fields {:gamma :N :gamma-times-step :N :exponent :F :factor :N :value :Vector2}
+    :source :actual-retained-kind-gamma-with-existing-presence-greater-than-nexus-greater-than-daimoi-order-not-a-shared-fallback
+    :order [:gamma-times-step :negate :existing-selected-profile-exp :multiply-pre-friction-x :multiply-pre-friction-y]
+    :agreement :all-fields-retain-actual-intermediates-factor-shared-once-for-both-components-and-value-is-the-actual-post-friction-vector
+    :factor-underflow-to-zero :retained-as-actual-finite-result-not-replaced-by-epsilon-or-a-refusal}
+   :pre-movement-cap :existing-kind-speed-operation-on-the-exact-friction-value-with-that-kinds-actual-speed-cap
+   :pre-movement-threshold :existing-after-pre-movement-cap-stage-on-the-exact-cap-value-with-that-kinds-actual-static-threshold
+   :Movement
+   {:kind :closed-map :exact-keys [:delta-position :value]
+    :fields {:delta-position :Vector2 :value :Vector2}
+    :order [:existing-thresholded-velocity-times-step :existing-prior-position-plus-delta]
+    :agreement :one-actual-existing-position-advance-using-exact-threshold-result-no-contact-time-position-update}
+   :contact-input :movement-value-and-pre-movement-threshold-value-are-exact-p-move-and-v-move-used-by-the-existing-frozen-position-private-velocity-contact-pass
+   :population :every-actually-integrated-entity-in-existing-canonical-entity-id-order-no-passive-self-propulsion-or-extra-integration
+   :failure :existing-whole-transition-unchanged-refusal-no-success-record-partial-motion-or-extra-arithmetic}
+  :post-contact-motion
+  {:kind :closed-map :exact-keys [:entity-id :contact-world-velocity :final-cap :final-threshold]
+   :fields {:entity-id :ID :contact-world-velocity :Vector2 :final-cap :RadialCap :final-threshold :Threshold}
+   :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+   :RadialCap {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/radial-cap"}
+   :Threshold {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/static-threshold"}
+   :contact-world-velocity :exact-final-private-working-velocity-after-the-entire-canonical-contact-pass-not-the-relative-velocity-or-only-first-response
+   :final-cap :existing-kind-speed-cap-on-that-exact-world-velocity-with-the-actual-kind-limit
+   :final-threshold :existing-after-final-post-contact-cap-stage-on-the-exact-final-cap-value
+   :continuity :retained-final-state-and-existing-trail-and-motion-deposit-use-the-exact-final-threshold-value
+   :position :the-existing-p-move-is-unchanged-no-position-field-recalculation-second-advance-or-contact-snap
+   :population :each-actual-existing-final-cap-and-threshold-execution-in-canonical-entity-id-order-never-between-contact-pairs
+   :failure :existing-whole-transition-unchanged-refusal-no-partial-world-velocity-or-observation}
+  :motion-deposit
+  {:kind :closed-map
+   :exact-keys [:entity-id :contribution-id :layer-index :cell-key :weight-source
+                :position :velocity :gain :weight :step-seconds :gain-times-weight :scaled-velocity :value]
+   :fields {:entity-id :ID :contribution-id :ID :layer-index {:enum [0 1 2 3 4 5 6 7]}
+            :cell-key :CellKey :weight-source :DepositWeightSource :position :Vector2 :velocity :Vector2
+            :gain :N :weight :N :step-seconds :P :gain-times-weight :N :scaled-velocity :Vector2 :value :Vector2}
+   :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+   :CellKey {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/sparse-cells/cell-key"}
+   :DepositWeightSource
+   {:kind :closed-discriminated-union :discriminator :kind
+    :variants
+    {:request
+     {:exact-keys [:kind :request-id :field-mapping-revision :deposit-weights]
+      :fields {:kind {:literal :request} :request-id :ID :field-mapping-revision :Revision :deposit-weights :Weights8}
+      :agreement :the-same-unique-admitted-same-scope-request-as-that-entitys-read-binding-with-its-distinct-complete-immutable-deposit-vector}
+     :passive
+     {:exact-keys [:kind :entity-kind :field-mapping-revision :deposit-weights]
+      :fields {:kind {:literal :passive} :entity-kind {:enum [:presence :nexus]}
+               :field-mapping-revision :Revision :deposit-weights :Weights8}
+      :agreement :the-actual-retained-kind-configuration-deposit-vector-not-its-read-vector}}
+    :Revision "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/Revision"
+    :Weights8 {:kind :vector :length 8 :items :N}
+    :binding :existing-complete-qualified-original-entity-request-configuration-and-source-bindings-remain-required-no-label-or-vector-alone-establishes-authority}
+   :position :exact-existing-survivor-p-move-and-exact-same-scope-layer-rational-floor-cell-with-no-post-contact-position-change
+   :velocity :exact-existing-final-post-contact-cap-and-threshold-survivor-velocity
+   :weight :the-same-layer-index-value-in-the-distinct-deposit-vector-and-gain-is-that-retained-layer-configuration-gain
+   :step :same-existing-quantum-seconds-as-motion-not-call-elapsed-or-newly-deposited-age
+   :order [:gain-times-weight :result-times-velocity-component :result-times-step]
+   :agreement :one-shared-gain-times-weight-intermediate-then-actual-scaled-velocity-and-deposit-value-with-existing-component-order-and-finite-checks
+   :population :exactly-actual-motion-deposit-contributions-in-existing-entity-id-and-contribution-id-order-no-new-id-for-an-inactive-layer
+   :zero-weight-or-zero-velocity :existing-skip-before-products-no-deposit-record-no-artificial-cell-key-or-products-computed-for-tracing
+   :other-zero-results :retain-any-actual-produced-zero-or-underflowed-value-no-unqualified-zero-elision
+   :absorbed-or-nonsurviving-entity :no-motion-deposit-record-no-new-support-for-the-existing-unsupported-contact-operations
+   :failure :existing-whole-transition-unchanged-refusal-no-partial-deposit-state-or-trace}
+  :field-cell-update
+  {:kind :closed-map
+   :exact-keys [:cell-key :prior-present :prior :half-life :lambda :lambda-times-step :exponent
+                :decay-factor :decayed-prior :deposits :pre-saturation :saturation
+                :prune-norm :prune-epsilon :result]
+   :fields {:cell-key :CellKey :prior-present :boolean :prior :Vector2 :half-life :P
+            :lambda :N :lambda-times-step :N :exponent :F :decay-factor :N :decayed-prior :Vector2
+            :deposits :DepositFold :pre-saturation :Vector2 :saturation :RadialCap
+            :prune-norm :Norm :prune-epsilon :N :result :CellDisposition}
+   :CellKey {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/sparse-cells/cell-key"}
+   :RadialCap {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/radial-cap"}
+   :Norm {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/norm"}
+   :prior :actual-prior-buffer-presence-and-vector-or-the-existing-zero-vector-only-for-an-absent-prior-key
+   :decay-order [:selected-profile-ln-two-divide-actual-positive-layer-half-life
+                 :lambda-times-existing-quantum-seconds :negate :selected-profile-exp
+                 :multiply-prior-x :multiply-prior-y]
+   :decay-values :all-actual-intermediates-with-one-factor-shared-by-both-components-no-second-decay-of-new-substep-end-deposits
+   :DepositFold
+   {:container :ordered-vector
+    :order :existing-canonical-entity-id-and-deposit-contribution-id-order-for-this-exact-cell
+    :item
+    {:kind :closed-map :exact-keys [:entity-id :contribution-id :value :accumulator-before :accumulator-after]
+     :fields {:entity-id :ID :contribution-id :ID :value :Vector2 :accumulator-before :Vector2 :accumulator-after :Vector2}
+     :ID "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/common-types/ID"
+     :agreement :same-original-actual-motion-deposit-identity-and-value-at-this-exact-cell-not-a-renumbered-copy-or-new-feedback-event
+     :first-accumulator-before :the-exact-decayed-prior-vector
+     :later-accumulator-before :the-exact-preceding-accumulator-after
+     :component-add-order [:x :y]
+     :accumulator-after :actual-direct-left-fold-addition-of-this-deposit-never-sum-deposits-from-zero-and-add-prior-later}
+    :empty :only-when-no-actual-new-deposit-targets-this-key
+    :coverage :all-actual-new-deposits-for-this-cell-once-including-actual-produced-zero-values-no-omission-or-discount}
+   :pre-saturation :actual-last-deposit-accumulator-after-or-exact-decayed-prior-when-deposit-vector-is-empty
+   :saturation :existing-cell-saturation-operation-on-exact-pre-saturation-with-actual-positive-layer-cap
+   :pruning :actual-existing-norm-of-exact-saturation-value-and-actual-layer-epsilon-strictly-below-that-positive-cap
+   :CellDisposition
+   {:kind :closed-discriminated-union :discriminator :disposition
+    :variants
+    {:pruned {:exact-keys [:disposition] :fields {:disposition {:literal :pruned}}
+              :selection :actual-prune-norm-value-at-or-below-actual-epsilon
+              :storage :key-is-absent-from-next-buffer-not-stored-as-nil-or-zero}
+     :retained {:exact-keys [:disposition :velocity]
+                :fields {:disposition {:literal :retained} :velocity :Vector2}
+                :selection :actual-prune-norm-value-strictly-above-actual-epsilon
+                :storage :next-buffer-vector-is-bit-identical-to-saturation-value}}
+    :epsilon-zero :only-existing-exact-zero-pruning-not-a-new-near-zero-policy}
+   :population :exact-union-of-prior-and-actual-new-deposit-cell-keys-in-existing-scope-layer-signed-x-signed-y-order-including-every-pruned-key
+   :provenance :pruning-never-erases-existing-immutable-source-contribution-events-effect-receipts-or-once-only-facts
+   :failure :existing-whole-transition-unchanged-refusal-no-partial-next-buffer-or-prune-record}
+  :rng-draw
+  {:kind :closed-map
+   :exact-keys [:draw-counter :word-before :a :b :word-after :unit :causal-provenance-ids]
+   :fields {:draw-counter :PositiveCount :word-before :NonzeroU32 :a :NonzeroU32
+            :b :NonzeroU32 :word-after :NonzeroU32 :unit :P :causal-provenance-ids :SourceIds}
+   :PositiveCount :exact-safe-positive-integer-under-existing-counter-overflow-guard
+   :NonzeroU32 :exact-integer-one-through4294967295
+   :SourceIds :ordered-distinct-existing-qualified-source-ID-vector-in-exact-unsigned-utf8-order
+   :order :strictly-increasing-actual-draw-counter-with-every-existing-counter-increment-once-no-gap-or-reset
+   :recurrence :exact-existing-seed-sequential-a-b-y-recurrence-with-unsigned-coercions-after-the-declared-xor-and-shift-steps
+   :word-after :actual-existing-y-output-also-stored-as-next-word
+   :unit :actual-existing-y-divided-by4294967296-strictly-between-zero-and-one-not-pre-update-output
+   :population :every-actual-existing-draw-including-rejected-selection-draws-not-only-draws-leading-to-a-nonzero-force
+   :custody :complete-original-qualified-force-selection-noise-or-configuration-source-and-declared-draw-placement-remain-in-existing-counted-history-not-an-ID-only-proof-or-new-draw-purpose
+   :qualification :recurrence-records-do-not-select-the-still-separately-qualified-generation-indexing-or-draw-placement-law
+   :failure :existing-whole-unchanged-counter-overflow-arithmetic-or-source-refusal-no-partial-word-or-counter}
+  :force-contribution
+  {:kind :closed-map
+   :exact-keys [:force-class :target-id :source-id :contribution-id :force
+                :accumulator-before :accumulator-after :draw-counters :causal-provenance-ids]
+   :fields {:force-class {:enum [:non-bond-semantic-attraction :unified-intent-bond
+                                :repulsion :boundary :wind :seeded-exploration]}
+            :target-id :ID :source-id :ID :contribution-id :ID :force :Vector2
+            :accumulator-before :Vector2 :accumulator-after :Vector2
+            :draw-counters :ActualDrawCounters :causal-provenance-ids :SourceIds}
+   :ActualDrawCounters :strictly-increasing-vector-of-actual-current-quantum-draw-counters-attributed-to-this-contribution-by-the-qualified-existing-generation-law-empty-when-none
+   :SourceIds :ordered-distinct-existing-qualified-source-ID-vector-in-exact-unsigned-utf8-order
+   :source-id :actual-existing-source-namespace-and-binding-not-necessarily-an-entity-ID-no-synthetic-label-or-config-to-entity-alias
+   :order :existing-six-class-order-then-target-source-and-contribution-unsigned-exact-utf8-order
+   :fold :the-existing-binary64-left-fold-from-zero-for-each-target-through-all-classes-with-no-class-reset
+   :continuity :accumulator-before-is-that-targets-exact-previous-accumulator-after-or-original-zero-and-accumulator-after-is-the-actual-existing-ordered-addition
+   :force :complete-actual-qualified-contribution-not-only-wind-a-force-summary-or-a-second-structural-semantic-bond-application
+   :wind-agreement :wind-value-equals-that-targets-actual-field-sample-wind-force
+   :draw-agreement :every-named-counter-matches-the-actual-rng-draw-record-and-complete-original-consumer-source-with-no-new-random-call-or-historical-draw-retagging
+   :table-or-history-random-source :complete-original-retained-qualified-permutation-seed-table-and-source-remain-required-even-when-no-new-draw-occurs-in-this-quantum
+   :causal-source :complete-matching-original-contribution-and-transitive-authority-source-in-existing-state-and-counted-history-required-before-use-reference-equality-alone-is-insufficient
+   :population :every-actual-contribution-application-once-including-any-actual-zero-value-no-invented-contribution-for-an-inactive-class-or-skipped-source
+   :failure :existing-whole-unchanged-source-duplicate-arithmetic-authority-or-finite-refusal-no-partial-force-or-trace}
+  :encoding :lossless-ordinary-observation-value-packet-using-existing-finite-field-trace-1-tags-no-new-byte-codec-or-native-number-printer
+  :bounds :all-actual-record-production-copy-validation-order-and-encoding-work-and-complete-bytes-share-existing-whole-call-and-horizon-caps-no-new-pool-reset-discount-truncation-or-partial-success
+  :root-record-population "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier"
+  :transitive-readiness :all-existing-original-owner-provenance-and-qualified-force-generation-law-leaves-remain-required-before-consumption-no-closure-or-grant-from-these-owned-records-alone
+  :future-controls [:each-norm-and-cap-branch-exact-closed-key-positive
+                    :missing-extra-wrong-type-inactive-field-and-wrong-branch-negative
+                    :original-signed-zero-preserved-on-retain-branches
+                    :positive-cap-zero-ratio-unit-fallback-and-each-actual-inward-correction-count
+                    :no-extra-norm-division-draw-force-or-observation-to-produce-a-record
+                    :threshold-below-equal-above-at-both-existing-stages
+                    :all-eight-actual-prior-layer-reads-with-absent-zero-and-varied-field
+                    :request-read-weights-distinct-from-deposit-weights-and-passive-configuration-source
+                    :force-mass-step-friction-cap-threshold-and-single-position-movement-continuity
+                    :distinct-kind-friction-zero-friction-and-actual-exponential-underflow
+                    :final-private-contact-velocity-through-final-cap-threshold-trail-and-motion-deposit
+                    :actual-zero-skip-with-no-artificial-deposit-and-retained-produced-underflow-value
+                    :decayed-prior-direct-ordered-deposit-fold-versus-forbidden-zero-first-sum
+                    :complete-cell-key-union-absent-prior-saturation-and-exact-pruning-dispositions
+                    :complete-trace-byte-work-and-horizon-exact-and-one-over-refusals]}
+ :ordinary-observation-carrier
+ {:version "finite-ordinary-physical-observations/1"
+  :status :proposed-owned-packet-and-logical-root-layout-not-implemented-or-transitively-qualified
+  :container :ordered-vector-of-complete-observation-value-packets
+  :packet "docs/plans/cephalon-physical-kernel-abi.edn#observation-value-packet"
+  :population :exactly-one-complete-packet-for-every-actually-executed-ordinary-quantum-in-this-invocation-in-original-execution-order-no-packet-for-merely-admitted-backlog-or-residual
+  :step-id :actual-safe-kernel-time-before-plus-existing10000-microsecond-quantum-equals-packet-step-id-and-every-nested-contact-or-trail-step-id
+  :packet-root-order [:quantum-context :field-sample :rng-draw :bond-evaluation :force-contribution
+                      :pre-contact-motion :contact-eligibility :contact-overlap :post-contact-motion
+                      :motion-deposit :field-cell-update :trail-sample]
+  :order-role :canonical-serialization-of-actual-observations-not-permission-to-reorder-physical-evaluation-draws-or-existing-event-boundaries
+  :root-record
+  {:kind :closed-discriminated-union :discriminator :record-kind
+   :exact-keys [:record-kind :value]
+   :fields {:record-kind :selected-record-kind :value :selected-complete-payload}
+   :variants
+   {:quantum-context {:value :QuantumContext}
+    :field-sample {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/field-sample"}}
+    :rng-draw {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/rng-draw"}}
+    :bond-evaluation {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#bond-state-contract" :record :one-exact-bond-entry-not-the-container}}
+    :force-contribution {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/force-contribution"}}
+    :pre-contact-motion {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/pre-contact-motion"}}
+    :contact-eligibility {:value :ContactEligibility}
+    :contact-overlap {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/request-contact-trace/overlap-record"
+                              :record :same-intrinsic-closed-overlap-and-response-grammar-for-every-actual-global-eligible-pair-not-only-one-request-subset}}
+    :post-contact-motion {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/post-contact-motion"}}
+    :motion-deposit {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/motion-deposit"}}
+    :field-cell-update {:value {:contract "docs/plans/cephalon-physical-kernel-abi.edn#numeric-observation-carriers/field-cell-update"}}
+    :trail-sample {:value :TrailSample}}}
+  :QuantumContext
+  {:kind :closed-map
+   :exact-keys [:kernel-time-before-us :scope-revision :projection-revision
+                :event-cursor-before :event-cursor-after :admitted-event-cursor
+                :entity-ids-before :entity-ids-after :cell-keys-before :cell-keys-after :rng-before :rng-after]
+   :fields {:kernel-time-before-us :Count :scope-revision :Revision :projection-revision :Revision
+            :event-cursor-before :Cursor :event-cursor-after :Cursor :admitted-event-cursor :Cursor
+            :entity-ids-before :EntityIds :entity-ids-after :EntityIds
+            :cell-keys-before :CellKeys :cell-keys-after :CellKeys :rng-before :Rng :rng-after :Rng}
+   :Cursor {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/cursor"}
+   :Rng {:contract "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers/rng"}
+   :EntityIds :complete-vector-of-actual-entity-IDs-at-that-existing-stage-in-strict-unsigned-exact-utf8-order
+   :CellKeys :complete-vector-of-actual-existing-canonical-scoped-layer-cell-keys-in-existing-scope-layer-signed-x-signed-y-order
+   :before :actual-qualified-state-at-the-existing-before-sampling-boundary
+   :after :actual-state-at-the-existing-completed-quantum-boundary-no-new-event-application-or-clock-order
+   :cursor-roles :preserve-distinct-original-consumed-and-admitted-roles-and-complete-qualified-owner-source-history-no-cursor-is-a-grant-or-an-event-envelope
+   :rng-agreement :same-original-initial-seed-word-and-counter-chain-through-every-actual-rng-draw-root-unchanged-when-no-draw-occurs
+   :entity-and-cell-inventories :independently-bind-complete-root-populations-and-final-state-no-ID-only-substitute-for-original-values-or-provenance
+   :scope-and-projection :actual-state-values-diagnostic-binding-only-not-new-authority-admission}
+  :ContactEligibility
+  {:kind :closed-map :exact-keys [:step-id :contact-eligibility-matrix-revision :eligible-pairs]
+   :fields {:step-id :Count :contact-eligibility-matrix-revision {:literal "finite-particle-recipient/1"}
+            :eligible-pairs :ordered-vector-of-exact-canonical-two-distinct-ID-unordered-pairs}
+   :population :every-existing-eligible-global-pair-once-including-separated-pairs-no-excluded-kind-combination-or-request-only-subset
+   :order :existing-normalized-unordered-pair-lexicographic-unsigned-utf8-order
+   :overlap-separation :separated-pair-remains-only-in-this-inventory-overlap-records-are-exactly-actual-overlaps-in-the-same-pair-order
+   :roles :existing-validated-particle-recipient-kind-role-and-profile-bindings-never-swapped-to-match-ID-order}
+  :TrailSample
+  {:kind :closed-map :exact-keys [:entity-id :origin-provenance-id :sample]
+   :fields {:entity-id :ID :origin-provenance-id :ID
+            :sample {:contract "docs/plans/cephalon-physical-kernel-abi.edn#trail-state" :record :one-exact-existing-five-element-sample-tuple}}
+   :population :every-actual-new-survivor-sample-before-derived-window-eviction-not-only-the-newest-N-retained-window
+   :agreement :exact-same-step-moved-position-final-thresholded-velocity-and-full-existing-support-and-deposit-reference-vectors-as-the-original-producer
+   :origin :actual-qualified-original-source-incarnation-not-a-new-emission-or-reused-current-ID-for-an-ended-source}
+  :types :consume-existing-ID-Revision-and-Count-in-canonical-state-elementary-carriers
+  :groups
+  {:quantum-context :exactly-one-first-root-even-for-an-empty-world-executed-quantum
+   :field-sample :all-actual-sampled-entities-in-existing-canonical-entity-ID-order
+   :rng-draw :all-actual-draws-in-strict-draw-counter-order-including-rejected-draws-no-draw-or-physics-reexecution-for-serialization
+   :bond-evaluation :every-actually-evaluated-logical-bond-once-in-bond-ID-order-with-full-original-bond-value-no-second-structural-semantic-force
+   :force-contribution :all-actual-applications-in-existing-six-class-target-source-contribution-order-with-continuous-per-target-accumulators
+   :pre-contact-motion :all-actual-integrated-entities-in-existing-canonical-entity-ID-order
+   :contact-eligibility :exactly-one-complete-existing-matrix-and-eligible-pair-inventory-root-even-when-pairs-is-empty
+   :contact-overlap :all-and-only-actual-overlaps-in-existing-global-canonical-pair-order-including-non-impulse-branches
+   :post-contact-motion :all-actual-final-surviving-cap-threshold-executions-in-existing-canonical-entity-ID-order
+   :motion-deposit :all-actual-produced-deposits-in-existing-entity-and-contribution-ID-order-with-canonical-cell-key-as-serialization-only-tie-breaker-for-an-otherwise-equal-logical-layered-contribution
+   :field-cell-update :every-existing-prior-or-new-deposit-key-in-existing-canonical-cell-order-including-pruned-cells
+   :trail-sample :all-new-actual-samples-in-existing-entity-ID-and-origin-provenance-ID-order-before-window-eviction}
+  :contribution-order-tie :ties-must-be-the-same-qualified-logical-source-in-distinct-layer-cells-not-different-IDs-with-equal-sort-keys-or-a-duplicate-application
+  :cross-record-agreement
+  [:all-records-bind-the-same-actual-quantum-state-configuration-principal-scope-and-qualified-original-source-history
+   :sampling-wind-force-equals-the-matching-existing-wind-contribution
+   :last-force-accumulator-for-each-target-equals-that-motion-records-force-sum-zero-only-with-no-applied-force
+   :pre-contact-movement-and-threshold-values-initialize-frozen-contact-positions-and-private-working-velocities
+   :every-next-contact-uses-the-actual-preceding-private-world-response-without-interleaved-cap-threshold-or-position-update
+   :final-contact-working-velocity-enters-the-single-final-cap-threshold-and-exact-trail-and-deposit-velocity
+   :every-actual-deposit-value-and-identity-appears-once-in-its-exact-cell-fold-with-no-prior-plus-zero-first-reassociation
+   :retained-and-pruned-cell-results-exactly-match-complete-returned-state-and-context-after-inventory
+   :all-original-bond-trail-contact-draw-and-contribution-source-references-match-complete-qualified-counted-originals-not-ID-equality-alone]
+  :zero-or-no-quantum :existing-zero-advance-or-no-backlog-catch-up-returns-exact-empty-packet-vector-no-marker-table-draw-sample-or-new-step
+  :return-agreement :last-completed-packet-state-boundaries-agree-with-the-returned-state-and-existing-residual-backlog-completeness-never-publish-unexecuted-backlog-as-observed-quanta
+  :effects :domain-records-and-packet-indices-create-no-Clio-event-effect-publication-feedback-or-native-identity-the-existing-qualified-outward-admission-remains-separate
+  :bounds :all-packets-expanded-required-root-occurrences-source-copies-table-work-and-complete-envelope-bytes-share-existing-call-and-entire-horizon-meters-no-root-dedup-work-refund-or-hidden-source-lookup
+  :refusal :existing-whole-unchanged-specific-refusal-with-no-partial-packet-observation-or-state
+  :transitive-qualification :full-actual-owner-state-provenance-and-history-leaf-definitions-source-rights-calibration-force-laws-current-authority-and-commit-exposure-qualification-remain-before-readiness-this-owned-layout-does-not-close-or-waive-them
+  :future-controls [:exact-complete-twelve-kind-root-union-and-group-populations
+                    :missing-extra-reordered-duplicated-or-wrong-step-root-refused
+                    :empty-world-step-still-has-context-and-empty-eligibility-inventory
+                    :all-six-force-classes-and-rejected-rng-draws-with-original-source
+                    :all-separated-eligible-pairs-retained-and-no-separated-overlap-record
+                    :actual-full-sampling-force-motion-contact-deposit-cell-trail-continuity
+                    :partition-and-restored-identical-packets-and-whole-horizon-counters
+                    :full-frozen-profile-byte-record-work-and-continuation-exact-one-over-controls]}
  :state-transition-result
- {:revision 1
+ {:revision 2
   :applies-to [:admit-state :advance :catch-up :emit-recall :apply-outcome
                :confirm-feedback :checkpoint :restore :rebuild-revocation]
   :case-selection :actual-invoked-entrypoint
@@ -2227,10 +2752,10 @@
      {:kind :closed-map :exact-keys [:state :observations :residual-us :backlog-us :completeness]
       :fields
       {:state {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"}
-       :observations {:kind :vector :order :existing-canonical-produced-observation-order
-                      :items {:contract "docs/plans/cephalon-finite-field-coupling.edn#trace-codec"
-                              :value :pure-domain-observation-record
-                              :record-definition :unresolved-codec-alone-does-not-close-records}}
+       :observations {:contract "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier"
+                      :kind :vector :order :actual-original-executed-quantum-order
+                      :items {:contract "docs/plans/cephalon-physical-kernel-abi.edn#observation-value-packet"}
+                      :expanded-root-record {:contract "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier/root-record"}}
        :residual-us {:kind :exact-safe-integer :minimum 0 :exclusive-maximum 10000}
        :backlog-us {:kind :exact-safe-nonnegative-integer :multiple-of 10000}
        :completeness {:enum [:complete :incomplete]}}}
@@ -2248,10 +2773,10 @@
      {:kind :closed-map :exact-keys [:state :observations :residual-us :backlog-us :completeness]
       :fields
       {:state {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"}
-       :observations {:kind :vector :order :existing-canonical-produced-observation-order
-                      :items {:contract "docs/plans/cephalon-finite-field-coupling.edn#trace-codec"
-                              :value :pure-domain-observation-record
-                              :record-definition :unresolved-codec-alone-does-not-close-records}}
+       :observations {:contract "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier"
+                      :kind :vector :order :actual-original-executed-quantum-order
+                      :items {:contract "docs/plans/cephalon-physical-kernel-abi.edn#observation-value-packet"}
+                      :expanded-root-record {:contract "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier/root-record"}}
        :residual-us {:kind :exact-safe-integer :minimum 0 :exclusive-maximum 10000}
        :backlog-us {:kind :exact-safe-nonnegative-integer :multiple-of 10000}
        :completeness {:enum [:complete :incomplete]}}}

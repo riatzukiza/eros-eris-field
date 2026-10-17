@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-17-restore-work-bounded-reconstruction"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-17-ordinary-physical-observation-packets"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -316,6 +316,9 @@
   :owner :portable-field-law-and-shape-consuming-qualified-abi-binary64-bits
   :wire :utf8-json-no-whitespace-no-bom-no-newline
   :envelope ["finite-field-trace/1" :ordered-encoded-record-vector]
+  :physical-observation-record-domain "docs/plans/cephalon-physical-kernel-abi.edn#observation-value-packet"
+  :physical-record-accounting :all-expanded-required-root-record-occurrences-never-only-distinct-value-table-nodes-or-quantum-packets
+  :packet-status :proposed-domain-record-layout-full-ordinary-root-qualification-and-executed-complete-load-fit-still-required
   :values {:nil ["nil"] :boolean ["bool" :literal-true-or-false]
            :number ["f64" :exact-16-lowercase-hex-big-endian-ieee754-bits]
            :string ["str" :exact-scalar-string]

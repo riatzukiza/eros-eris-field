@@ -2833,3 +2833,149 @@ its numeric resource allowance or the conditional implementation allocation.
 Current-head reviews and native parser evidence are still required. Full
 owner/state leaves, ordinary observation grammar, estimate adoption, lawful
 Ready, implementation qualification and served B1–B3 proofs remain outstanding.
+
+## Ordinary observation grammar: current proposed record layout
+
+The owned `numeric-observation-carriers` declaration now specifies closed
+records for the existing scaled norm, radial cap, static threshold, eight-layer
+sampling, motion before and after contact, motion deposits, and cell updates.
+The separate ordinary root union and per-quantum packet below now define the
+advance/catch-up observation field. This is owned prospective interface data;
+all transitive source, force, profile and authority qualification remains
+required before consumption. No original finding has been settled by this
+unpublished draft.
+
+Norm observations distinguish the zero-scale shortcut from the actual scaled
+intermediates. Radial-cap observations distinguish the kind-speed-only zero
+cap, zero norm, retained input, nonzero ratio and positive-cap/zero-ratio unit
+fallback. Only the scaling branches contain candidate recertification and the
+actual zero, one or two inward corrections. Each correction retains its
+before/after vectors and norm computations, division and positive predecessor
+factor in execution order. Inactive arithmetic and unexecuted corrections have
+no placeholder fields. Threshold records retain the original two declared
+stages, exact strict comparison, actual norm and retained or stopped vector.
+
+Each field sample keeps all eight prior-buffer cell reads, exact weight-source
+binding, per-layer products and accumulator chain, wind saturation and actual
+wind acceleration/force. Motion keeps the mass/force/step intermediates,
+kind-specific exponential friction, pre-movement cap/threshold and the one
+position advance. The separate post-contact record starts with the final
+private world velocity after the entire ordered contact pass and retains the
+final cap/threshold used by trails and deposits.
+
+Actual motion deposits retain their distinct deposit-weight source, gain and
+products, unchanged moved position, final velocity and exact destination cell.
+An existing zero-weight/velocity skip produces no invented contribution,
+cell key or arithmetic for a trace. Cell records cover the complete prior/new
+key union, retain actual decay intermediates, fold each ordered deposit
+directly into decayed prior state, and record saturation and explicit pruning
+or retained velocity. They cannot substitute a zero-first sum, remove a
+produced zero contribution, or erase immutable provenance when pruning.
+
+These are records of existing computations, not instructions to perform extra
+computations to populate a trace. The existing operation-specific cap checks,
+numeric profile, signed-zero behavior, arithmetic order and whole unchanged
+refusals remain authoritative. Encoding, record production, every retained
+copy and validation share the existing trace, work and whole-horizon bounds.
+No limit, extra pool, new force, stage, elapsed time, draw or source grant is
+introduced.
+
+The current ordinary root union below selects the force/RNG records, complete
+eligible-pair inventory, existing overlap/response and trail/bond shapes and
+population/order rules. Their full original source custody remains in the
+existing counted state and history and must independently qualify. Neither
+an empty observation vector nor a generic detail map can satisfy the required
+trace. This draft is not implemented, published source qualification, native
+Ready admission or a served proof.
+
+### Wire-layout correction before publication
+
+The first local record draft cannot satisfy the selected load profile as a
+literal repeated-map wire layout. An independent reference to the existing
+tagged trace codec gives a sampling-only lower bound of13,733,888 bytes for
+32entities over64quanta, already above the unchanged8,388,608-byte whole-trace
+cap. This is a structural lower bound, not a failing physical execution: it
+uses the shortest possible nonempty identifiers and excludes every other
+required trace record and framing. The pre-correction local draft bytes and
+reference output are retained. A parser pass did not establish resource fit.
+
+The new proposed `observation-value-packet` keeps every complete domain record
+and exact value through a separate canonical value table for each executed
+quantum. Only exact scalar bits or identical complete ordered child references
+share a table entry. Each actual root occurrence remains in its original
+order, including repetitions. This is a wire representation of physical
+observations; the selected physical graph, native identities, source records,
+grants, effects and computation schedule retain their own semantics.
+
+Table nodes are scalar, vector or map tuples with only backward references.
+First postorder encounter determines their indices. Map entries retain the
+existing expanded-key unsignedUTF8 order. Expansion must reproduce the entire
+original record vector, including signed zeros, type tags, vector/map contents
+and occurrences. Expanded values still need their actual closed physical
+record and source-custody validation. A table containing arbitrary canonical
+values cannot establish the missing ordinary record grammar.
+
+Each quantum starts a fresh table. There are no cross-quantum or cross-call
+references or new persistent dictionary state. Equivalent split, catch-up and
+restored schedules therefore select the same ordered packets. Reconstruction
+still charges every actual repeated quantum and physical record. Work for
+every value visit, table key, lookup, comparison and output byte is metered in
+the same existing call budget. The trace byte measure includes the entire
+packet, table and root references and the existing whole-horizon envelope.
+The physical record counter counts every expanded required root occurrence,
+including repeated references. It cannot count only distinct table entries.
+
+The existing tagged byte codec and all input, state, checkpoint, inclusion,
+trace, work and horizon limits remain. This new domain packet layout and its
+physical-root accounting are proposed representation choices requiring owning
+review and the actual complete frozen load matrix before use. A sampling-only
+format reference measured2,515,738bytes for the32-entity/64-quantum sampling
+payloads, versus13,750,810bytes for their literal repeated-map encoding. Exact
+expanded values, signed-zero/type/order controls, map insertion-order
+independence and repeated occurrences passed. These are sampling-only
+structural payloads, excluding the complete required root wrappers and other
+physical stages; they eliminate the known sampling-payload lower-bound failure
+without qualifying the full profile, physical solver, runtime performance or
+native Ready admission.
+
+### Complete owned root layout and operation link
+
+The proposed `ordinary-observation-carrier` now selects the twelve closed
+root variants and their complete group order: quantum context, field sample,
+RNG draw, evaluated bond, force contribution, motion before contact, global
+contact eligibility, actual overlap, final motion after contact, motion
+deposit, cell update and new trail sample. This is canonical serialization of
+captured values; it does not reorder existing computation or event boundaries.
+Each actual ordinary quantum has one complete packet and its own fresh value
+table. Even an empty-world quantum has its context and complete empty eligible
+pair inventory; zero advance and no-backlog catch-up produce no packet.
+
+Context retains the actual before/after entity and cell inventories, original
+cursor roles, scope/projection binding and RNG states. Every actual draw,
+including rejected selection draws, retains its counter, original word,
+unsigned a/b/y intermediates, unit value and source references. Force records
+retain the full six-class target/source/contribution sequence, actual vector,
+continuous target accumulator and actual attributed draw/source references.
+Those references require the complete qualified originals in existing counted
+state/history; they do not create a source, grant or generation law. Current
+force/noise generation and draw placement still require their owning
+qualification.
+
+The root layout reuses complete owned bond, overlap/response and trail-sample
+shapes. Contact inventory covers all global eligible pairs, including separated
+pairs, while overlap roots contain only actual overlaps. New trail roots
+retain every produced sample before the separate derived window evicts any
+entry. Record links constrain sampling→force→motion→ordered contact→final
+velocity→deposit→cell/trail continuity. The layer-cell tie-breaker for otherwise
+equal logical motion contributions determines serialization only; each cell's
+actual arithmetic fold keeps its existing order and source identity.
+
+`state-transition-result` is now proposed revision2. Its unchanged outer
+status/result maps and per-operation statuses link advance/catch-up
+observations to this packet/root grammar, replacing the explicit unspecified
+record leaf. The other payloads, refusal reasons, actual physics, input/state/
+snapshot codecs and all numeric budgets remain. This is an owned prospective
+interface selection, requiring fresh review and actual full-profile fit.
+Full foreign owner/provenance/history state leaves and restore allocation/
+native adoption remain outstanding. No original finding is settled by these
+unpublished declarations, and no implementation, Ready or served proof follows.

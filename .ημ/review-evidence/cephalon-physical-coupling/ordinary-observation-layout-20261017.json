@@ -1,0 +1,60 @@
+{
+  "schema": "cephalon-source-observation/v1",
+  "evidence_tier": "observed-and-derived-command-output-transcription-not-raw-provider-response-or-approval",
+  "observed_at": "2026-10-17T01:52:50.818453+00:00",
+  "baseline_head": "869e76cbdca6f138ac3456b4e27352a0e993487b",
+  "existing_native_findings": {
+    "shared_success_union": 4290131871,
+    "full_state_leaves_still_open": 4290131865,
+    "allocation_and_native_adoption_still_open": 4289311646
+  },
+  "owned_proposal": {
+    "state_transition_result_revision": 2,
+    "ordinary_observation_version": "finite-ordinary-physical-observations/1",
+    "value_packet_version": "finite-physical-observation-packet/1",
+    "computation_record_version": "finite-numeric-observation-carriers/1",
+    "root_variant_count": 12,
+    "representation": "Per-quantum canonical lossless scalar/vector/map value table; every expanded physical root occurrence retained and counted; complete packet/envelope bytes and all actual visits/lookup/key/order/output work metered under existing budgets. No cross-quantum/call dictionary."
+  },
+  "source_verification": {
+    "actual_existing_edn_parser": "8controls/bothmapsPASS/exit0/stderr0/localBB1.12.207",
+    "complete_parsed_source_comparison": "PASS: only proposal revisions, three new observation blocks, result revision2, two result links and three trace domain/accounting/status links; previous physics/numeric budgets/clock/state/input/snapshot/other ABI values unchanged",
+    "closed_key_field_declarations": 31,
+    "new_local_contract_references_resolved": 42,
+    "union_groups_and_order": "all12 match",
+    "diff_hygiene": "PASS"
+  },
+  "static_wire_discovery": {
+    "initial_uncompressed_sampling_only_lower_bound_bytes": 13733888,
+    "unchanged_trace_byte_cap": 8388608,
+    "finding": "Initial local verbose sampling layout alone cannot fit; complete pre-correction draft bytes retained privately, without rewriting prior receipts."
+  },
+  "independent_format_reference": {
+    "raw_unique32entity_sampling_payloads64quanta_bytes": 13750810,
+    "packed_sampling_payloads64quanta_bytes": 2515738,
+    "nodes_per_quantum": 166,
+    "root_occurrences_per_quantum": 32,
+    "controls": [
+      "exact full expanded value bytes",
+      "positive/negative zero and scalar type/order",
+      "map insertion-order independence",
+      "repeated equal root occurrences retained"
+    ],
+    "scope": "Independent source-format reference on sampling-only structural payloads; no complete root wrapper/context/contact/force/etc load fixture, no production physical execution/performance or native Ready proof."
+  },
+  "retained_requirements": [
+    "full original qualified owner/provenance/history/state leaves and authority through commit/exposure",
+    "source rights and actual force/noise generation/draw placement qualification",
+    "full frozen high-density/quiet/catch-up load matrix and every existing exact/one-over bound",
+    "conditional restore allocation independent pricing and native Rheos adoption before Ready",
+    "actual implementation and served B1/B2/B3 proof"
+  ],
+  "limits": {
+    "implementation": "UNIMPLEMENTED",
+    "full_profile_fit": "UNVERIFIED",
+    "native_ready": false,
+    "finding_settlement": "No blanket source/state qualification from these declarations; native settlement and new exact-head review remain separate",
+    "source_approval_transfer": false,
+    "runtime_or_service_change": false
+  }
+}
