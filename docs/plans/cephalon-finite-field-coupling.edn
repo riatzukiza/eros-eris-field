@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-pending-feedback-layout"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-16-work-bounded-reconstruction"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -917,7 +917,7 @@
  :retained-revocation
  {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
   :abi-operation :rebuild-revocation
-  :abi-operation-version "finite-revocation-rebuild/6"
+  :abi-operation-version "finite-revocation-rebuild/7"
   :rebuild [:retained-field :trails :contact-profile-bindings :nexus-memory-bindings :causally-affected-world-projection :active-inclusion-folds
             :completed-and-restored-recall-results-under-recall-requests
             :complete-admitted-pending-boundary-queue]
@@ -1013,16 +1013,29 @@
                          :rewound-state-cursor-does-not-reorder-provenance
                          :missing-forward-cyclic-conflicting-or-contaminated-reference-refusal
                          :each-complete-closure-exact-and-one-over-limit]
-  :budget {:version "finite-revocation-rebuild/6" :tail-events 128
+  :budget {:version "finite-revocation-rebuild/7" :tail-events 128
            :coverage :complete-main-tail-plus-all-materialized-replacement-reference-closure
            :event-count :distinct-qualified-envelopes-with-exact-identical-bytes-and-bindings-only
            :history-argument-utf8-bytes 1048576
            :all-materialized-checkpoint-evidence-and-reference-values :also-counted-in-existing-argument-and-complete-input-limits
            :quanta-and-work :every-reconstruction-path-and-repeated-execution-with-no-nested-counter-reset
-           :tail-canonical-clio-utf8-bytes 1048576 :kernel-quanta 64 :work-units 67108864
+           :tail-canonical-clio-utf8-bytes 1048576
+           :kernel-quanta :bounded-by-actual-shared-work-not-a-separate-admission-cap
+           :reconstruction-quantum-work
+           {:unit :reconstruction-quantum-execution :cost 1
+            :when :before-every-actual-replayed-quantum
+            :scope :all-main-nested-and-repeated-reconstruction-in-one-outer-invocation
+            :existing-work :additional-to-all-existing-entity-cell-pair-contribution-byte-order-trace-and-output-charges-never-a-replacement
+            :empty-world :still-charge-one-before-every-quantum-even-with-no-entities-bonds-cells-contacts-or-observations
+            :identity-dedup-checkpoint-reference-or-same-schedule-discount :forbidden
+            :derived-relation :actual-replayed-quanta-less-than-or-equal-to-actual-work-units-less-than-or-equal-to67108864
+            :independent-quantum-allowance-or-work-reset :none
+            :exhaustion :existing-finite-work-budget-exceeded-before-executing-the-next-quantum
+            :ordinary-clock :unchanged100-substeps-per-call-and-explicit-backlog-no-elapsed-time-discard-or-new-schedule}
+           :work-units 67108864
            :variable-input-and-trace-byte-caps :finite-character-load-v2
            :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000
-           :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+           :work-unit [:reconstruction-quantum-execution :entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
                                             :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
                                             :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
                                 :canonical-order-work "finite-order-work/1"
@@ -1034,15 +1047,38 @@
                                    :continuation :finite-state-continuation-byte-limit}
            :exhaustion {:status :refused
                         :rebuild-specific-code :revocation-rebuild-budget-exceeded
-                        :rebuild-specific-bounds [:tail-events :tail-canonical-clio-utf8-bytes :kernel-quanta
+                        :rebuild-specific-bounds [:tail-events :tail-canonical-clio-utf8-bytes
                                                   :entities :bonds :scoped-layer-cells]
                         :shared-bounds :preserve-shared-limit-refusals-never-remap-to-rebuild-specific-code
                         :prior-state :byte-identical :adapter :quarantine-before-any-causal-use}
            :outer-timeout :no-accepted-replacement-and-quarantine
-           :controls [:each-exact-cap :each-one-over-with-other-bounds-valid
+           :controls [:each-independent-exact-cap :each-one-over-with-other-bounds-valid
+                      :each-replayed-quantum-charged-before-execution-including-empty-world
+                      :derived-quantum-count-no-second-admission-cap-or-allowance
                       :each-shared-overflow-keeps-its-declared-specific-reason]}
-  :ordinary100-advance-then-revoke-negative
-  {:preconditions [:independently-qualified-clean-pre-influence-checkpoint
+  :ordinary-schedule-reconstruction-controls
+  {:version "finite-revocation-rebuild/7"
+   :preconditions [:independently-qualified-clean-pre-influence-checkpoint
+                   :complete-owner-qualified-original-history-and-full-replacement-closure
+                   :current-authority-and-all-other-existing-resource-guards-valid]
+   :single-ordinary100
+   {:ordinary :one-accepted-advance-executes100-quanta-under-unchanged-clock-contract
+    :rebuild :reconstruct-all100-recorded-quanta-with-revoked-influence-excluded-and-authorized-control-retained
+    :expected :complete-qualified-rebuild-not-a-refusal-due-only-to-the-former64-quantum-ceiling}
+   :ordinary101-and-catch-up
+   {:ordinary :accepted-advance-executes100-and-retains-exactly-one-quantum-of-backlog-then-catch-up-executes-that-one-without-new-elapsed-time
+    :rebuild :reconstruct-all101-recorded-quanta-in-their-original-two-call-schedule-with-the-same-authorized-control
+    :expected :complete-qualified-rebuild-no-old-ceiling-and-no-discarded-catch-up-quantum}
+   :partition-and-replacements :unsplit-split-catch-up-and-nested-replacement-recordings-use-the-same-full-actual-schedule-and-summed-quantum-work-never-deduplicate-occurrences
+   :empty-world :positive-replayed-quanta-still-cost-at-least-that-many-work-units-no-zero-cost-loop
+   :work-exhaustion :next-quantum-would-exceed-the-single-shared-work-limit-so-refuse-before-it-with-finite-work-budget-exceeded-and-exact-prior-state
+   :other-bounds :all-existing-event-input-state-checkpoint-history-trace-population-byte-and-outer-wall-caps-and-their-exact-one-over-controls-retained
+   :scope :removes-only-the-independent64-quantum-ceiling-no-increase-to-work-time-memory-byte-or-state-limits-no-indefinite-recovery-guarantee
+   :evidence :prospective-controls-not-executed-kernel-or-performance-proof}
+  :historical-version6-ordinary100-advance-then-revoke-negative
+  {:status :superseded-version6-proposed-counterexample-not-current-acceptance
+   :profile "finite-revocation-rebuild/6"
+   :preconditions [:independently-qualified-clean-pre-influence-checkpoint
                    :complete-owner-qualified-original-history-and-full-replacement-closure-including-revoked-source-events
                    :current-authority-revocation-requires-the-complete-original100-quanta-reconstruction
                    :all-other-existing-guards-and-bounds-valid]

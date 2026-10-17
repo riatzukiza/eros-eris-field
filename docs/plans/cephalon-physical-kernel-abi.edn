@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-rebuilt-result-accounting"
+{:proposal/version "cephalon-physical-kernel/2026-10-16-work-bounded-reconstruction"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -2140,7 +2140,7 @@
                     :invalidated-row-has-no-success-payload-and-current-row-keeps-complete-actual-source
                     :all-existing-complete-result-byte-work-and-authority-controls]}
  :rebuild-budget-accounting-carrier
- {:version "finite-rebuild-budget-accounting/1"
+ {:version "finite-rebuild-budget-accounting/2"
   :status :proposed-owned-counter-layout-not-implemented-or-qualified
   :revision-binding :this-exact-layout-bound-by-qualified-kernel-revision-no-extra-version-key
   :kind :closed-map
@@ -2161,8 +2161,11 @@
                                :measure :complete-actually-supplied-materialized-history-argument-under-existing-tagged-argument-encoding-including-checkpoint-evidence-and-references}
    :input-wire-utf8-bytes {:inclusive-maximum 4194304
                          :measure :complete-actual-outer-invocation-wire-envelope-with-all-operation-arguments-before-any-reconstruction}
-   :kernel-quanta {:inclusive-maximum 64
-                   :measure :sum-of-all-actually-executed-main-nested-and-repeated-reconstruction-quanta-no-event-identity-dedup-or-counter-reset}
+   :kernel-quanta {:inclusive-maximum 67108864
+                   :maximum-kind :derived-from-existing-shared-work-limit-not-an-independent-quantum-admission-cap
+                   :measure :sum-of-all-actually-executed-main-nested-and-repeated-reconstruction-quanta-no-event-identity-dedup-or-counter-reset
+                   :relation :kernel-quanta-less-than-or-equal-to-actual-work-units
+                   :charge "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget/reconstruction-quantum-work"}
    :work-units {:inclusive-maximum 67108864
                 :measure :final-existing-whole-invocation-meter-including-preflight-decode-validation-source-and-state-checks-ordering-all-reconstruction-checkpoints-and-complete-result-production-and-encoding}
    :peak-entities {:inclusive-maximum 32 :measure :maximum-complete-entity-population-in-any-validated-input-or-private-candidate-state}
@@ -2195,7 +2198,8 @@
                     :nonempty-complete-history-and-reference-closure-exact-actual-byte-and-event-counts
                     :shared-reference-deduplicates-only-identity-count-never-repeated-quanta-or-work
                     :different-intermediate-populations-and-carrier-sizes-report-actual-peaks-not-sums-or-final-state-only
-                    :exact-each-cap-accepted-and-each-one-over-preserves-existing-refusal
+                    :exact-each-independent-cap-accepted-and-each-one-over-preserves-existing-refusal
+                    :derived-quantum-count-never-exceeds-actual-work-and-is-not-a-second-allowance
                     :complete-sixteen-key-report-and-every-count-type-missing-extra-key-negative
                     :independent-meter-matches-final-work-including-exact-report-seal-and-output-encoding
                     :same-fixed-report-encoding-width-at-zero-and-each-count-maximum
@@ -2527,7 +2531,7 @@
                 :outer-freshness :qualified-owning-authority-admission-or-fence-through-result-exposure-otherwise-refuse
                 :effects :none}
   :rebuild-revocation
-  {:version "finite-revocation-rebuild/6"
+  {:version "finite-revocation-rebuild/7"
    :input [:prior-state :compatible-trusted-checkpoint :current-trusted-checkpoint-evidence
            :current-trusted-clio-provenance-horizon
            :immutable-complete-ordered-history-and-replacement-closure :current-trusted-authority-projection
@@ -2645,7 +2649,10 @@
             :history-argument-utf8-bytes 1048576
             :all-checkpoint-evidence-and-reference-bytes :also-counted-under-existing-complete-input-argument-bounds
             :quanta-and-work :every-actual-reconstruction-no-nested-reset
-            :kernel-quanta 64 :work-units 67108864
+            :kernel-quanta :bounded-by-actual-shared-work-not-a-separate-admission-cap
+            :reconstruction-quantum-work
+            {:contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget/reconstruction-quantum-work"}
+            :work-units 67108864
             :entities 32 :bonds 64 :scoped-layer-cells 256
             :variable-input-string-and-complete-trace-result-byte-caps :finite-character-load-v2-and-inclusion-result-codec}
    :refusal {:state :exact-unchanged-prior-state :status :refused :reason-revision 1

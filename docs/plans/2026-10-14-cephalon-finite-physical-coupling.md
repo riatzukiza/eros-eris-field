@@ -520,8 +520,9 @@ retagging the old aggregate or zeroing all fields cannot pass. Keep this selecte
 revocation case in the finite proof; broader sustained revocation/restart remains
 later work.
 
-Ordinary admission does not guarantee lifetime reconstruction availability. Add
-one prospective 100-advance → revoke negative with a qualified pre-influence clean
+Historical version6 counterexample, retained as an unexecuted diagnostic: ordinary
+admission did not guarantee lifetime reconstruction availability. Its proposed
+100-advance → revoke negative used a qualified pre-influence clean
 baseline, complete original history/full closure and all other guards/bounds
 valid: the successful ordinary 100-quanta call requires 100 replayed quanta after
 revocation and returns refused/revocation-rebuild-budget-exceeded/revision1 with
@@ -529,7 +530,9 @@ byte-identical prior state, no success payload and external quarantine before
 causal use. No substitute state, retag, partial replacement or post-return catch-up
 may supply recovery from that refusal. Preserve every original positive and
 exact/one-over control,
-including 100/101 ordinary success and 64-summed reconstruction. Complete source,
+including 100/101 ordinary success and the then-proposed64-summed reconstruction.
+The work-bounded version7 amendment below supersedes that independent ceiling
+and this diagnostic negative; it requires100/101 reconstruction positives. Complete source,
 fixture and cap-fit selection retains all existing before-Ready/upstream gates;
 own implementation/domain RED/GREEN follows lawful Ready, with independent
 executed qualification before consumption/Done. No fixture fit is asserted here.
@@ -936,7 +939,7 @@ Before timing, freeze reviewed fixture bytes/layouts/seed42, calibration and sou
 
 A dedicated fixed causal fixture must produce at least one different eligible contact and at least one different actually included authorized memory beyond the vector seed between permitted field-intervention arms, with every other declared input fixed. A finite nonzero vector alone or saturation hiding every downstream change fails calibration. Retain complete force/contact/bounds/layer/threshold/radius/restitution/half-life/noise/prune/saturation values, domains, source/review and revisions. Missing values fail; no library default or source pin adopts calibration.
 
-The current finite revocation profile `finite-revocation-rebuild/6` admits at most128 complete immutable boundary events from an independently established clean checkpoint covered-provenance prefix through the independently trusted unrewound current Clio horizon, including replacement operations and every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail,64 consumed-prefix replayed quanta and67108864 total rebuild work units. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte, replay-quantum and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
+The current proposed finite revocation profile `finite-revocation-rebuild/7` admits at most128 complete immutable boundary events from an independently established clean checkpoint covered-provenance prefix through the independently trusted unrewound current Clio horizon, including replacement operations and every queued pending event,1048576 canonical Clio envelope UTF8 bytes for that complete tail and67108864 total rebuild work units. Each actually replayed consumed-prefix quantum costs one additional unit from that same work meter before execution, including every nested/repeated reconstruction and an empty world; there is no independent64-quantum admission ceiling. Actual replayed quanta are therefore bounded by actual work, which is at most67108864. Other existing work charges remain additional, and work exhaustion refuses before the next quantum. Verify the separate consumed cursor, replay only that original consumed schedule and reconstruct/reauthorize the entire pending tail before atomic replacement. Preserve permitted IDs/order/schedules with no early execution, and immutable cancelled/no-op dispositions for denied pending influence. Contribution-only or consumed-cursor-only history cannot qualify. State/checkpoint/encoded-tail/remaining-framing continuation limits retain their separate finite-state-continuation-byte-limit refusal; they are not coerced into an unrelated budget code. It respects finite-character-load/2 state, variable-width input/ID/string and trace byte/record caps; selected codecs stay owned by ABI/Clio. Charge all visits and actual scalar/UTF8 validation, encoding, comparison, hashing and serialization before each operation across the ENTIRE private rebuild, including preflight. Preflight tail count/bytes with bounded readers before replay; no component commits until complete authorization and every budget pass. Test each exact/one-over bound independently, including multibyte/long-ID and trace-byte exhaustion. Only the rebuild-specific tail-event count, canonical Clio tail-byte and retained-state cardinality caps return refused/revocation-rebuild-budget-exceeded. Preserve the shared reasons without remapping: input/ID/string overflow returns finite-input-byte-limit, trace record/byte overflow finite-trace-budget-exceeded, work exhaustion finite-work-budget-exceeded, and continuation overflow finite-state-continuation-byte-limit. Every refusal retains byte-identical prior state. The outer adapter separately quarantines/refuses the retained reference and permits no causal use until successful authorized rebuild. The outer rebuild call has2000ms wall budget; timeout yields no accepted replacement and the same quarantine, never a pure clock read/partial commit. Missing/ambiguous history retains its distinct refusal. No automatic budget increase, new scheduler or broad recovery program is included.
 
 Embedding production failure returns failed/embedding-failed with a bounded typed category from timeout,unavailable,rate-limited,invalid-output,internal-error,unclassified. The existing qualified embedding-provider seam consumed by atomic8 owns versioned mapping `embedding-failure-category/1`; consumers retain that category/mapping revision verbatim rather than reinterpret errors. At that protected seam, shape validated actual HTTP status and explicit transport-timeout/unavailable, invalid-output and internal-failure indicators from the actual provider outcome. Do not parse or retain exception prose. If the bound indicator attestation is unavailable or malformed, return unclassified before evaluating rules1–5. Otherwise apply FIRST matching rule: (1) HTTP429 => rate-limited; (2) explicit timeout OR HTTP408/504 => timeout; (3) explicit transport-unavailable OR other HTTP500–599 => unavailable; (4) explicit validated invalid-output => invalid-output; (5) explicit validated internal-failure => internal-error; (6) no match, unavailable/malformed attestation or unknown => unclassified. A contradictory lower-priority flag cannot override the first match. Tests require timed-out429=>rate-limited,503+invalid-output=>unavailable,timeout+invalid-output=>timeout,invalid-output+internal=>invalid-output, and missing/unknown=>unclassified, with exact stable replay/category/revision and no raw-string heuristics. Atomic8 owns delivery/qualification at the actual existing provider seam as part of its failure handling, not a second classifier in Eros/Eris or another unowned prerequisite.
 
@@ -1062,7 +1065,7 @@ empty inclusion, Unicode/control escaping, map insertion order, duplicate
 memory witnesses and split/restored equality. Host EDN/JSON printer choices
 cannot determine the count.
 
-The current ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/6.
+The current proposed ABI exposes `rebuild-revocation`, version finite-revocation-rebuild/7.
 Its exact inputs are prior state, compatible independently established clean
 trusted checkpoint, separate trusted checkpoint evidence, complete ordered
 immutable history with materialized replacement-reference closure, independently
@@ -1101,7 +1104,8 @@ queue, new scope/authority/projection bindings, complete folds, completed
 result reconstruction/invalidation dispositions and budget accounting atomically. Missing/unknown/ambiguous/gapped/conflicting history,
 contaminated or unestablished baseline, failed authority/binding or excess
 returns exact unchanged prior state with the declared reason. The unchanged
-128events/1,048,576canonicalClio bytes/64consumed quanta/67,108,864work units,
+128events/1,048,576canonicalClio bytes/67,108,864work units (including one
+unit before every actual main/nested/repeated reconstruction quantum),
 complete input/trace/result bounds and the continuation caps below cover the
 entire private rebuild, including pending events. No partial replacement,
 retagging, new elapsed/draws or live outcome/publication replay. The outer
@@ -1130,7 +1134,8 @@ The entire materialized closure shares the existing128 distinct qualified event
 envelopes/1MiB canonical-Clio-envelope cap and1MiB encoded history-argument cap.
 All checkpoint/evidence/reference values also count under existing argument and
 complete-input limits. Every actually replayed quantum and repeated
-reconstruction shares64 quanta/67,108,864 work units/2,000ms outer wall; no nested
+reconstruction shares67,108,864 work units/2,000ms outer wall, with one
+additional work unit before each actual replayed quantum; no nested
 reset or discounted work. Complete admissible closure within every bound still
 requires successful clean rebuild with the permitted control retained. Future
 positive fixtures include restore → later revoke → rebuild/read and prior
@@ -1502,7 +1507,7 @@ contract and the explicit unapplied handoff above.
 ## Unrewound history and payload-checkable evidence — 2026-10-15
 
 Codex5540187865 roots4288485532/4288485542 identify two further gaps in the
-preceding proposed/5. The operative rebuild/6 now consumes the independently
+preceding proposed/5. The version6 proposal introduced the independently
 trusted current Clio provenance horizon and an independently attested checkpoint
 covered prefix. State consumed/admitted cursors retain their physical meaning
 and may rewind; they cannot truncate provenance coverage. The qualified owner
@@ -2017,7 +2022,9 @@ trace-envelope overhead and every actual work/input/state/copy cost still count.
 Zero does not mean unlimited, and exact counter equality guarantees no broader
 admission. There is no multiplied global allowance per request. Otherwise
 admissible world101-quanta still executes100 with one backlog; active-horizon
-and other resource obligations remain. The64-summed-reconstruction bound is unchanged.
+and other resource obligations remain. Current proposed reconstruction follows
+version7's single work meter and per-quantum charge; the earlier64 ceiling is
+retained only as historical version6 evidence.
 
 Existing trace/result-byte and work overflow codes refuse the entire unchanged
 operation without truncation or partial credit. Target/progress consistency and
@@ -2066,7 +2073,7 @@ fold; retain the request and field-weight binding for later lawful particle/worl
 motion. No particle termination, force, clock or resource limit changes. Target/
 progress inconsistencies use the existing operation-specific request or binding/
 history/state refusal and precedence; rebuild never inherits a universal
-invalid-request code outside its union. All original100/101 world,64-rebuild,
+invalid-request code outside its union. All original100/101 world and64-quantum measured-workload,
 privacy, codec, complete-source and resource controls remain.
 
 This is a new owning interface/predicate selection within ABI8. Before Rheos
@@ -2590,7 +2597,7 @@ copies count under existing limits, without a graph-only fallback or cap change.
 
 The snapshot state shape and retained-revocation history now reference the ABI's
 proposed `pending-event-state`. Its semantics come from the existing
-`event-cursors`, `clock`, `causal-authority` and rebuild/6 `history-coverage`;
+`event-cursors`, `clock`, `causal-authority` and current rebuild/7 `history-coverage`;
 the change selects an owned representation within the same eight-point ABI
 authoring task. The nine-argument emission interface is preserved.
 
@@ -2631,8 +2638,9 @@ the existing canonical state/snapshot hash, with every original input, schedule,
 order and disposition. Restore and rebuild validate/reconstruct the whole queue
 before use or atomic replacement; a cancelled record cannot be silently dropped.
 All existing authorized controls, denial/refusal and recovery fixtures remain
-exact obligations. Ordinary calls keep 100 steps; the same summed 64 reconstruction
-quanta and unchanged event/byte/input/state/work/time/continuation limits count
+exact obligations. Ordinary calls keep100 steps; version7 charges every
+reconstruction quantum against the same unchanged work limit, and unchanged
+event/byte/input/state/time/continuation limits count
 all copies and every nested/repeated reconstruction. This is source planning,
 with no fixture execution, native readiness, transitive closure or acceptance claim.
 
@@ -2736,3 +2744,51 @@ The ordinary advance/catch-up observation record grammar and the full foreign
 owner/source leaves remain open. This narrows the existing result-contract
 finding without claiming whole-state closure, resolved recovery-capacity fit,
 native Ready, implemented source or live B1–B3 proof.
+
+
+## Reconstruction bound aligned with admitted schedules — 2026-10-16
+
+Native finding4290131881 identifies a real inconsistency in the version6
+proposal: an ordinary100-step call was valid, while the independent64-step
+reconstruction ceiling necessarily quarantined that accepted state after a
+relevant revocation. Raising that ceiling to100 alone would still exclude the
+required101-input/one-step catch-up schedule and would leave nested replay
+accounting unclear.
+
+The proposed `finite-revocation-rebuild/7` removes the independent quantum
+admission ceiling. It charges one `reconstruction-quantum-execution` work unit
+**before every actually replayed quantum**, including empty-world, main, nested
+and repeated occurrences. The charge is additional to all existing visits,
+bytes, ordering, trace and result-production work in the same single
+67,108,864-unit budget. Thus actual replayed quanta ≤ actual work ≤67,108,864;
+no separate allowance, counter reset or event-identity deduplication can make
+replay free. Work exhaustion keeps `finite-work-budget-exceeded`, exact prior
+state and outer quarantine. The ordinary100-step ceiling and explicit backlog
+schedule remain unchanged.
+
+The128-event/full-history limits, all byte/input/state/trace/population limits,
+2,000ms rebuild wall budget and host memory qualification are unchanged. This
+is a source correction within the existing bounded-rebuild work, with no new
+character behavior or increased host/time/work/storage budget. It does not
+promise reconstruction of an arbitrarily long history outside those bounds.
+The derived upper value in accounting/2's `kernel-quanta` field is a reporting
+constraint, not an independently tested admission limit; every reported quantum
+must be covered by actual charged work.
+
+Current planned controls require complete authorized rebuild after one accepted
+100-step call, and after an accepted101-input advance plus its one-step catch-up,
+whenever the complete qualified source and all remaining guards/budgets are
+valid. They retain permitted contributions and original schedule/IDs, excluding
+revoked influence without copying or retagging state. Split and nested controls
+count all actual executions. Empty-world and work-exhaustion controls prevent
+a zero-cost replay loop. The earlier proposed version6 negative is retained
+under an explicit historical/superseded key in the coupling declaration and in
+Git history; it is not the new expected outcome. Earlier prose retaining a
+64-summed ceiling describes that superseded proposal.
+
+These are revised proposed laws and fixture obligations. No kernel execution,
+performance fit, native finding settlement, current-head approval, Ready or
+served B1–B3 proof follows. Independent current-source review, lawful readiness,
+RED/GREEN implementation and complete load/source qualification remain required
+before adoption. The full foreign owner/state leaves and ordinary operation
+observation grammar also remain open.
