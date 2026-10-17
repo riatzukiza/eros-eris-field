@@ -1,0 +1,1163 @@
+;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
+{:proposal/version "cephalon-finite-field-coupling/2026-10-17-ordinary-physical-observation-packets"
+ :proposal/status :unimplemented
+ :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
+ :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
+ :selection/original-revision "6a4438982fdf1eca98f856748bb23b19ab017c0a"
+ :selection/revision "020d97fecae4a8d0d277b9b2695d9482620b4a76"
+ :selection/merge "8c649fee2e95e5ec6b5304a3351a0e16fca60533"
+ :selection/compatibility :reviewed-signed-cell-index-amendment
+ :source-rights-task "5ce9c975-1d30-4679-b607-e2dcd76f8192"
+ :selected-abi "docs/plans/cephalon-physical-kernel-abi.edn"
+ :authority-owner-routing "docs/plans/cephalon-physical-kernel-abi.edn#authority-owner-routing-port"
+ :original-character-principal-association "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
+ :presence-seed-source "docs/plans/cephalon-physical-kernel-abi.edn#presence-seed-source-carrier"
+ :original-emission-source "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-source-carrier"
+ :original-emission-clio "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-clio-port"
+ :original-emission-custody "docs/plans/cephalon-physical-kernel-abi.edn#original-emission-custody-input-port"
+ :original-principal-scope-source "docs/plans/cephalon-physical-kernel-abi.edn#original-character-principal-association-carrier"
+ :original-authority-capture "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state/original-custody/original-authority-capture"
+ :numeric-profile-id "cephalon-node22.20.0-linux-x64/1"
+ :sampling {:space :world-units :layers [0 1 2 3 4 5 6 7]
+            :cell-key [:scope-revision :layer-index :exact-floor-x-over-cell-size
+                       :exact-floor-y-over-cell-size]
+            :floor-rule :exact-integer-floor-of-binary64-rational-ratio
+            :binary64-decode {:subnormal-significand :fraction-bits :subnormal-exponent -1074
+                              :normal-significand :two-to-52-plus-fraction-bits
+                              :normal-exponent :exponent-bits-minus-1023-minus-52}
+            :ratio-arithmetic :exact-integer-shifts-quotient-and-remainder
+            :negative-nonintegral-quotient :round-toward-negative-infinity
+            :stored-index :signed-safe-integer-checked-before-conversion
+            :zero-and-negative-zero :canonical-zero
+            :rounded-floating-quotient :forbidden
+            :cell-index-range [-9007199254740991 9007199254740991]
+            :cell-index-overflow :unchanged-refusal
+            :negative-counts-wallets-or-time :forbidden
+            :buffer :prior :absence :zero-vector
+            :interpolation :none :border-clamping :forbidden
+            :scope-fallback :forbidden
+            :read-weights :exact-eight-finite-nonnegative-revisioned-inputs
+            :daimoi-weight-source :unique-admitted-same-scope-recall-request-id
+            :passive-weight-source :physical-configuration-by-entity-kind
+            :passive-kinds [:presence :nexus]
+            :request-binding :immutable-and-revision-bound
+            :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
+            :latest-request-or-average-fallback :forbidden
+            :accumulation :ascending-layer-order
+            :component-accumulator :exact-zero
+            :component-order [:multiply-weight-x :add-to-x :multiply-weight-y :add-to-y]
+            :finite-check :after-every-product-and-addition
+            :fused-reassociated-or-tree-arithmetic :forbidden}
+ :norm {:rule :scaled-binary64-components
+        :order [:validate-finite-x-y :max-absolute-component
+                :x-divide-scale :y-divide-scale :square-scaled-x :square-scaled-y
+                :add-squares-x-then-y :selected-node-square-root :scale-times-root]
+        :zero-scale :exact-zero
+        :finite-check :after-every-intermediate
+        :unsafe-result :unchanged-refusal
+        :substitutions [:naive-unscaled-squares :math-hypot :approximation]
+        :substitution-policy :forbidden
+        :applies-to [:aggregate-wind-cap :both-speed-caps :both-static-thresholds
+                     :cell-saturation :cell-pruning :contact-normal-and-overlap]}
+ :radial-cap {:operation-cap-domains {:aggregate-wind :finite-strictly-positive
+                                      :cell-saturation :finite-strictly-positive
+                                      :kind-speed :finite-nonnegative}
+              :operation-domain-validation :before-any-generic-shortcut
+              :invalid-zero-wind-or-cell-cap :whole-transition-unchanged-refusal
+              :zero-cap-shortcut :kind-speed-only
+              :input-order [:validate-operation-specific-cap-domain
+                            :validate-finite-components-and-nonnegative-finite-cap
+                            :valid-zero-kind-speed-cap-shortcut-before-norm :scaled-norm]
+              :zero-norm :exact-zero-vector
+              :valid-zero-kind-speed-cap :exact-zero-vector
+              :at-or-below-cap :retain-original-vector-before-division
+              :above-cap-order [:divide-cap-by-norm :branch-on-zero-ratio]
+              :nonzero-ratio-order [:multiply-x-by-ratio :multiply-y-by-ratio]
+              :positive-cap-zero-ratio-order [:x-divide-norm :unit-x-times-cap
+                                              :y-divide-norm :unit-y-times-cap]
+              :trace :actual-ratio-branch
+              :result-certification :same-declared-scaled-norm-at-or-below-cap
+              :inward-correction {:maximum-passes 2
+                                  :order [:cap-divide-current-norm :preceding-nonnegative-binary64
+                                          :multiply-current-x :multiply-current-y :recertify]
+                                  :predecessor :positive-ieee64-bit-pattern-minus-one
+                                  :zero-factor :unchanged-refusal
+                                  :unsafe-intermediate :unchanged-refusal
+                                  :after-limit-over-cap :unchanged-refusal
+                                  :trace [:factor :vector-before :vector-after :certified-norm]}
+              :finite-check :after-every-intermediate
+              :inactive-division :forbidden
+              :applies-to [:aggregate-wind :both-speed-caps :cell-saturation]}
+ :aggregate-saturation {:rule :radial-min-one-cap-over-norm :zero :zero-vector
+                        :cap :required-positive-finite-wind-cap
+                        :overflow :unchanged-refusal}
+ :wind {:velocity-unit :world-unit-per-second
+        :acceleration :kind-coupling-rate-times-saturated-field-velocity
+        :coupling-rate-unit :inverse-second
+        :coupling-rate :required-finite-nonnegative-by-kind
+        :force :positive-mass-times-acceleration
+        :direction-normalization :forbidden
+        :passive-entity-self-propulsion :forbidden}
+ :ids {:shape :nonempty-well-formed-unicode-scalar-strings
+       :lone-utf16-surrogates :unchanged-refusal-before-encoding
+       :encoding :exact-utf8-no-normalization-or-replacement
+       :uniqueness :exact-utf8-bytes-within-declared-id-namespace
+       :different-id-sort-key-ties :unchanged-refusal
+       :applies-to [:entity :target :source :contribution :deposit :recall-request]
+       :request-namespace :all-admitted-recall-requests-in-one-kernel-state-across-principals-and-scopes
+       :request-admission :before-recall-state-fold-creation-ordering-or-checkpoint-hashing
+       :request-reference :exact-match-to-one-previously-admitted-request-with-its-original-principal-and-scope-binding
+       :utf8-byte-cap 128
+       :order :unsigned-utf8-byte-order}
+ :force-order {:classes [:non-bond-semantic-attraction :unified-intent-bond
+                        :repulsion :boundary :wind :seeded-exploration]
+               :contributions [:target-id :source-id :contribution-id]
+               :id-order :unsigned-utf8-byte-order
+               :sum :left-fold-binary64-from-zero-vector
+               :duplicate-contribution :unchanged-refusal
+               :bond-semantic-double-count :forbidden}
+ :integration {:friction-coefficients {:kinds [:presence :nexus :daimoi]
+                                      :source :reviewed-mechanics-and-complete-calibration-revision
+                                      :shared-or-default-fallback :forbidden
+                                      :positive-isolated-fixture :three-distinct-gamma-values
+                                      :separate-controls [:each-kind-own-exponential :daimoi-motion
+                                                          :valid-zero-friction :quiet-repeated-split]
+                                      :required-order [:presence-greater-than-nexus :nexus-greater-than-daimoi
+                                                       :daimoi-nonnegative]
+                                      :source-order "gamma-presence > gamma-nexus > gamma-daimoi >= 0"
+                                      :invalid-order :whole-transition-unchanged-refusal
+                                      :order-controls [:equal-adjacent :reversed-distinct :negative-daimoi]
+                                      :new-inferred-ordering :forbidden}
+               :friction-order [:gamma-times-step :negate :numeric-profile-exp
+                                :multiply-pre-friction-x :multiply-pre-friction-y]
+               :friction-factor :shared-by-both-components
+               :force-unit :world-unit-per-second-squared-times-dimensionless-inertia
+               :mass :positive-finite-dimensionless-inertia
+               :step-seconds :quantum-us-divided-by-one-million
+               :component-order [:force-sum-divide-mass :acceleration-times-step
+                                 :prior-velocity-plus-delta :elapsed-friction]
+               :fused-arithmetic :forbidden
+               :position-order [:thresholded-velocity-times-step :prior-position-plus-delta]
+               :unsafe-intermediate :unchanged-refusal}
+ :static-threshold {:range :finite-nonnegative-by-kind :unit :world-unit-per-second
+                    :ordering [:presence-greater-than-nexus :nexus-greater-than-daimoi]
+                    :rule :zero-only-when-speed-strictly-below-threshold
+                    :equality :retain :zero-threshold :retain-nonzero-velocity
+                    :stages [:after-pre-movement-cap :after-final-post-contact-cap]
+                    :between-contact-pairs :forbidden :second-position-advance :none
+                    :trace [:stage :velocity-before :velocity-after :stopped]
+                    :comparison :exact-no-replay-tolerance
+                    :unsafe-intermediate :unchanged-refusal}
+ :speed-cap {:range :finite-nonnegative-by-kind :unit :world-unit-per-second
+             :rule :radial-min-one-kind-cap-over-norm :zero-velocity :zero-vector
+             :zero-cap :zero-vector :overflow :unchanged-refusal
+             :stages [:after-elapsed-friction-before-movement
+                      :after-entire-ordered-contact-pass-before-deposit]
+             :between-contact-pairs :forbidden :second-position-advance :none
+             :trace [:stage :velocity-before :velocity-after :limit-applied]
+             :raw-contact-response :retained-separately
+             :constraint :explicit-dissipative-not-kinetic-energy-conservation}
+ :contact-deflection
+ {:geometry :declared-spherical-recipient
+  :eligibility {:revision "finite-particle-recipient/1"
+                :kind-role {:presence :recipient :nexus :recipient :daimoi :particle}
+                :unordered-kind-matrix {[:presence :presence] :excluded
+                                        [:presence :nexus] :excluded
+                                        [:nexus :nexus] :excluded
+                                        [:daimoi :presence] :eligible
+                                        [:daimoi :nexus] :eligible
+                                        [:daimoi :daimoi] :excluded}
+                :matrix-pair-order :unordered-kind-combination-not-entity-id-order
+                :roles :derived-from-kind-and-validated-against-revision-bound-role
+                :validation :all-entities-before-enumeration
+                :unknown-kind-or-missing-conflicting-role :whole-transition-unchanged-refusal
+                :excluded-overlap-and-separation :no-contact-or-observation
+                :explicit-excluded-contact-pair :whole-transition-unchanged-refusal
+                :eligible-separated :no-contact-or-observation
+                :eligible-overlap :declared-finite-deflection
+                :unsupported-absorption-or-exchange :refused-unsupported-contact-operation-revision1-exact-unchanged-state-no-transfer-termination-or-binding-removal
+                :fixtures [:six-kind-combinations-overlap-and-separation
+                           :eligible-pairs-both-input-orders :unknown-kind :missing-conflicting-role
+                           :explicit-excluded-pair :late-pair-refusal-discards-all-private-updates]
+                :refusal :no-state-observation-or-deposit-commit
+                :trace [:contact-eligibility-matrix-revision :eligible-ordered-contact-pairs]
+                :replay-comparison :exact-including-separated-eligible-pairs
+                :replay-negative [:alter-only-matrix-revision
+                                  :omit-or-reorder-separated-eligible-pair-with-state-and-contacts-unchanged]}
+  :radii :finite-nonnegative-particle-and-positive-recipient
+  :roles-and-restitution :revision-bound-validated-input
+  :configuration-binding {:input [:configuration-contact-id :configuration-contact-revision]
+                          :state-contract "docs/plans/cephalon-physical-kernel-abi.edn#contact-profile-binding-state"
+                          :state-field :contact-profile-bindings
+                          :source :exactly-one-matching-configuration-contact-parameter-set
+                          :selection-source :closed-canonical-binding-container-populated-by-explicit-projection-or-new-particle-emission-input
+                          :custody :selection-retained-in-complete-canonical-state-snapshot-and-original-history-for-identical-replay
+                          :automatic-enumeration :consume-that-bound-selection-for-each-eligible-pair-before-contact
+                          :kind-only-first-table-entry-or-unrecorded-selection :forbidden
+                          :recipient-kind-radii-and-restitution :exact-match-with-admitted-geometry-no-override
+                          :missing-duplicate-foreign-or-conflicting-profile :whole-unchanged-refusal}
+  :restitution :finite-zero-through-one-inclusive
+  :normal-construction [:particle-minus-recipient-moved-x
+                        :particle-minus-recipient-moved-y :declared-scaled-norm
+                        :divide-x-by-norm :divide-y-by-norm]
+  :overlap :norm-at-or-below-single-finite-particle-plus-recipient-radius
+  :coincident-centers :unchanged-refusal
+  :alternative-or-renormalized-normal :forbidden
+  :velocity-input :private-canonical-contact-pass-working-buffer-initialized-v-move
+  :relative-order [:particle-minus-recipient-x :particle-minus-recipient-y]
+  :dot-order [:relative-x-times-normal-x :relative-y-times-normal-y :x-product-plus-y-product]
+  :reflection-when :dot-strictly-negative
+  :reflection-order [:one-plus-restitution :result-times-dot
+                     :scale-times-normal-x :relative-x-minus-scaled-x
+                     :scale-times-normal-y :relative-y-minus-scaled-y]
+  :nonnegative-dot :retain-original-particle-world-x-y-bit-exact-without-reflection-or-world-restore
+  :world-restore-order [:resolved-relative-x-plus-recipient-x
+                        :resolved-relative-y-plus-recipient-y]
+  :world-restore-applies :strictly-negative-dot-reflection-branch-only
+  :non-impulse-relative-subtract-add-round-trip :forbidden
+  :non-impulse-fixtures [:separating-1-versus-minus2pow53-world-x-preserved
+                         :tangent-with-large-recipient-world-component
+                         :signed-zero-original-components-preserved
+                         :later-ordered-contact-observes-original-world-velocity]
+  :finite-check :after-every-intermediate
+  :unsafe-arithmetic :whole-transition-unchanged-refusal
+  :fused-reassociated-or-alternate-primitives :forbidden
+  :positions :frozen-p-move-through-pass
+  :within-pass-mutation :private-contact-velocity-only
+  :trace [:geometry-and-configuration :raw-and-normalized-normal :dot-terms
+          :dot-sign-branch :resolved-relative-and-world-response]}
+ :contact-observation {:overlap :recompute-from-each-substep-moved-positions
+                       :overlapping-unordered-pair :one-observation-per-substep
+                       :tangent-zero-or-separating-velocity :observe-without-required-impulse
+                       :separated-pair :no-observation
+                       :order :canonical-pair-order
+                       :pair-normalization {:input :unordered-two-distinct-canonical-entity-ids
+                                            :id-comparator :declared-unsigned-exact-utf8-byte-order
+                                            :output [:lower-id :higher-id]
+                                            :encoding-normalization :none
+                                            :proper-byte-prefix :shorter-first
+                                            :particle-recipient-role-swap :forbidden}
+                       :pair-comparator [:first-normalized-id-unsigned-utf8
+                                         :second-normalized-id-unsigned-utf8]
+                       :pair-enumeration :every-eligible-unordered-pair-exactly-once
+                       :pair-traversal :strict-lexicographic-pair-order-per-substep
+                       :invalid-or-duplicate-pair :whole-transition-unchanged-refusal
+                       :order-fixture [:three-or-more-overlapping-eligible-entities
+                                       :reversed-entity-pair-and-map-input
+                                       :non-ascii-ids-and-common-prefixes
+                                       :identical-private-velocity-observations-deposits-and-state]
+                       :domain-key [:step-id :exact-unordered-pair]
+                       :domain-key-namespace :same-admitted-kernel-history
+                       :emitted-event-identity :canonical-clio-envelope
+                       :causal-stream-and-idempotency :canonical-clio-admission
+                       :outward-binding :retain-admitted-clio-reference-with-domain-key
+                       :domain-tuple-only-effect-admission :forbidden
+                       :unsupported-clio-admission :refuse-outward-effect
+                       :step-id {:value :exact-safe-integer-substep-end-kernel-time-us
+                                 :derivation :prior-kernel-time-plus-quantum-us
+                                 :namespace :same-admitted-immutable-kernel-history
+                                 :advance-split-catch-up-restore :identical-recorded-schedule
+                                 :zero-time-and-non-time-operations :no-new-step
+                                 :call-counter-wall-utc-event-cursor :not-identity
+                                 :overflow :whole-transition-unchanged-refusal}
+                       :cross-substep-suppression :none
+                       :repeat-replay-effect-or-feedback :forbidden
+                       :fixture :penetration-through-next-substep
+                       :work-or-trace-overflow :unchanged-refusal}
+ :deposit {:rule :gain-times-deposit-weight-times-velocity-times-step
+           :gain-unit :inverse-second :gain :finite-nonnegative
+           :component-order [:gain-times-weight :result-times-velocity-component
+                             :result-times-step]
+           :gain-weight-intermediate :shared-for-x-and-y
+           :finite-check :after-every-product
+           :reordered-or-fused-arithmetic :forbidden
+           :unsafe-intermediate :unchanged-refusal
+           :zero-weight-or-zero-vector :skip-before-products
+           :weights :distinct-from-read-weights
+           :deposit-weights :exact-eight-finite-nonnegative-revisioned-inputs
+           :daimoi-weight-source :same-unique-admitted-same-scope-recall-request-id
+           :passive-weight-source :physical-configuration-by-entity-kind
+           :request-binding :immutable-and-revision-bound
+           :missing-ambiguous-stale-or-foreign-binding :unchanged-refusal
+           :latest-global-average-or-read-weight-fallback :forbidden
+           :invalid-deposit-weights :unchanged-refusal
+           :position :survivor-p-move-unchanged-after-contact
+           :contact-position-rule :velocity-only-no-snap-penetration-correction-or-second-advance
+           :velocity :survivor-post-contact-cap-and-threshold-velocity
+           :absorbed-entity :no-motion-deposit
+           :order [:entity-id :deposit-contribution-id]
+           :id-order :unsigned-utf8-byte-order
+           :target :next-buffer :zero-weight-or-velocity :no-deposit
+           :saturation-and-pruning :required-separate-calibration}
+ :decay {:rule :elapsed-exponential :lambda :ln-two-over-positive-half-life
+         :ln-two-source :numeric-profile :exp-source :numeric-profile
+         :factor :shared-by-both-components
+         :sample :prior-field-at-substep-start
+         :next-order [:decay-prior :add-ordered-new-deposits :saturate-cell :prune]
+         :prior-decay-order [:ln-two-divide-half-life :lambda-times-step :negate :exponentiate
+                            :multiply-prior-x :multiply-prior-y]
+         :deposit-accumulator :decayed-prior-vector
+         :deposit-fold :left-fold-canonical-deposits-directly-into-accumulator
+         :component-add-order [:x :y]
+         :finite-check :after-every-intermediate
+         :zero-deposit-sum-before-prior-addition :forbidden
+         :reassociated-or-fused-arithmetic :forbidden
+         :new-deposit-time :substep-end-boundary
+         :pre-creation-deposit-decay :forbidden}
+ :cell-saturation {:rule :declared-radial-cap :cap :positive-finite-per-layer
+                   :unit :world-unit-per-second :componentwise-clipping :forbidden}
+ :pruning {:rule :omit-cell-when-scaled-norm-at-or-below-epsilon
+           :epsilon :finite-nonnegative-strictly-below-layer-cell-cap
+           :equality :prune :epsilon-zero :prune-only-exact-zero
+           :retained-provenance :immutable-contribution-events-and-effect-receipts
+           :observation :explicit-pruned-cell :unsafe-intermediate :unchanged-refusal}
+ :trace-codec
+ {:version "finite-field-trace/1"
+  :owner :portable-field-law-and-shape-consuming-qualified-abi-binary64-bits
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :envelope ["finite-field-trace/1" :ordered-encoded-record-vector]
+  :physical-observation-record-domain "docs/plans/cephalon-physical-kernel-abi.edn#observation-value-packet"
+  :physical-record-accounting :all-expanded-required-root-record-occurrences-never-only-distinct-value-table-nodes-or-quantum-packets
+  :packet-status :proposed-domain-record-layout-full-ordinary-root-qualification-and-executed-complete-load-fit-still-required
+  :values {:nil ["nil"] :boolean ["bool" :literal-true-or-false]
+           :number ["f64" :exact-16-lowercase-hex-big-endian-ieee754-bits]
+           :string ["str" :exact-scalar-string]
+           :keyword ["kw" :namespace-or-empty-string :name]
+           :vector ["vec" :ordered-encoded-values]
+           :map ["map" :one-untagged-outer-vector-of-untagged-two-element-key-value-vectors-strictly-increasing-by-canonical-encoded-key-unsigned-utf8]}
+  :map-pair-elements [:recursively-encoded-key :recursively-encoded-value]
+  :map-container-vec-tags :forbidden-for-the-outer-pair-array-and-two-element-pair-arrays
+  :map-domain-vector-values :normal-vec-tag-applies-only-when-the-actual-key-or-value-is-a-domain-vector
+  :map-goldens [{:value {} :utf8-json "[\"map\",[]]"}
+                {:value {:k "v"} :utf8-json "[\"map\",[[[\"kw\",\"\",\"k\"],[\"str\",\"v\"]]]]"}]
+  :map-golden-status :independent-literal-encoding-reference-not-executed-kernel-codec-proof
+  :map-keys {:order :strictly-increasing-complete-encoded-key-unsigned-utf8
+             :duplicates :whole-unchanged-refusal-before-map-construction-hashing-or-admission
+             :scope :every-nested-tagged-map}
+  :string-escaping {:quote :backslash-quote :backslash :double-backslash
+                    :controls :lowercase-u00xx-for-u0000-through-u001f
+                    :other-scalars :exact-utf8-no-normalization-no-optional-ascii-escaping}
+  :numbers {:positive-and-negative-zero :distinct-bits :nonfinite :unchanged-refusal
+            :integer-typed-values :same-existing-f64-tag-with-exact-integer-binary64-bits-and-positive-zero-only
+            :negative-zero-in-integer-domain :refused-before-encoding-by-the-owning-integer-shape
+            :noninteger-physical-domains :retain-existing-distinct-signed-zero-bits-no-normalization}
+  :unsupported-values :whole-unchanged-refusal
+  :byte-count :complete-envelope-including-tags-separators-brackets-and-escapes
+  :counter :before-each-byte-or-record-exposure-in-the-whole-call-work-budget
+  :alternate-edn-json-or-native-printer :cannot-determine-admission
+  :fixtures [:map-insertion-order :duplicate-map-key-refused :nonincreasing-map-key-refused
+             :multibyte-and-control-strings :positive-negative-zero
+             :finite-binary64-vectors :complete-envelope-exact-one-over-bytes]}
+ :input-wire-codec
+ {:version "finite-field-input/1"
+  :owner :portable-field-shape-consuming-qualified-abi
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :envelope ["finite-field-input/1" :encoded-closed-invocation-map]
+  :invocation/required [:operation :arguments]
+  :invocation/additional-keys :refused
+  :operation :exact-keyword-from-owning-abi-functions
+  :arguments :ordered-vector-of-all-operation-arguments-in-exact-owning-abi-input-order
+  :values :exact-finite-field-trace-1-tagged-algebra-including-keywords-maps-vectors-and-finite-binary64-bits
+  :maps :pairs-strictly-increasing-by-complete-canonical-encoded-key-unsigned-utf8
+  :duplicate-map-keys :whole-unchanged-refusal-before-map-construction-hashing-or-admission
+  :required-key-duplicates :operation-or-arguments-refused-never-first-or-last-wins
+  :strings :exact-trace-1-scalar-validation-and-escaping-no-unicode-normalization-or-optional-ascii-escaping
+  :numbers :exact-trace-1-binary64-including-distinct-signed-zero-nonfinite-refused
+  :prior-state-checkpoint-configuration-and-tail :included-in-complete-arguments-not-unmetered-side-input
+  :byte-count :complete-version-envelope-tags-operation-argument-values-keys-separators-and-escapes
+  :counter-in-wire :forbidden-no-self-reference
+  :max-complete-wire-utf8-bytes 4194304
+  :component-and-continuation-bounds :apply-declared-continuation-closure-bounds-to-every-input-before-use-and-every-candidate-before-success
+  :preflight :bounded-stream-or-known-length-before-full-allocation-and-before-decode
+  :semantic-input-adapter :same-canonical-encoder-and-bound-before-transition-or-hashing
+  :alternate-edn-json-whitespace-bom-escaping-or-native-printer :not-an-authoritative-admission-length
+  :external-transport :accept-only-exact-canonical-wire-before-decode
+  :already-resident-domain-input :qualified-abi-values-only-same-canonical-encoder-bound-and-work-before-transition
+  :alternate-wire-to-parsed-value-bypass :forbidden
+  :unsupported-or-noncanonical-untrusted-wire :whole-unchanged-refusal
+  :over-budget :whole-unchanged-refusal-with-finite-input-byte-limit
+  :work :charge-all-encoding-validation-byte-and-order-work-under-existing-whole-call-or-rebuild-counter
+  :fixtures [:empty-and-complete-operation-envelope-goldens :map-insertion-order-equality
+             :duplicate-operation-key-refused :duplicate-arguments-key-refused
+             :duplicate-nested-map-key-refused :nonincreasing-encoded-map-key-refused
+             :multibyte-control-quote-and-backslash-goldens :signed-zero-bits
+             :all-arguments-including-prior-state-and-rebuild-tail-counted
+             :exact4194304-complete-bytes :one-byte-over
+             :alternate-edn-optional-escape-whitespace-and-bom-refused-as-wire
+             :bounded-decode-and-no-large-allocation-before-preflight]}
+ :snapshot-codec
+ {:version "finite-field-snapshot/1"
+  :status :proposed-not-an-existing-qualified-implementation
+  :owner :same-portable-field-law-and-shape-consuming-the-owning-abi-complete-state
+  :qualification :owning-source-review-native-readiness-red-laws-green-code-and-qualified-artifact-before-consumption
+  :domain-value {:kind :closed-map :exact-keys [:codec :state :sha256]
+                 :codec "finite-field-snapshot/1"
+                 :state :complete-validated-canonical-kernel-state
+                 :sha256 :exact64-lowercase-hex}
+  :state-shape {:contract "docs/plans/cephalon-physical-kernel-abi.edn#state/required"
+                :keys :exactly-the-owning-abi-state-required-keys-no-omitted-or-additional-fields
+                :values :qualified-owning-abi-values-only
+                :elementary-carriers "docs/plans/cephalon-physical-kernel-abi.edn#canonical-state-elementary-carriers"
+                :pending-events "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
+                :pending-feedback "docs/plans/cephalon-physical-kernel-abi.edn#pending-feedback-state"
+                :recall-request-admission "docs/plans/cephalon-physical-kernel-abi.edn#recall-request-admission-state"
+                :retained-recall-success "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier"
+                :whole-state-closure :not-established-by-elementary-carriers-complete-remaining-owned-and-owner-leaf-bindings-before-consumption
+                :ordered-entities "docs/plans/cephalon-physical-kernel-abi.edn#entity-state-contract"
+                :intent-bonds "docs/plans/cephalon-physical-kernel-abi.edn#bond-state-contract"
+                :request-weights "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
+                :coverage :all-physical-configuration-producing-identity-scope-authority-cursors-pending-events-rng-feedback-recall-results-and-inclusion-fold-state
+                :projection-omission-or-unqualified-cache-substitution :forbidden}
+  :retained-carrier-contracts {:trails "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
+                               :contact-profiles "docs/plans/cephalon-physical-kernel-abi.edn#contact-profile-binding-state"
+                               :nexus-memory "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"}
+  :hash-payload ["finite-field-snapshot/1" :encoded-complete-canonical-state-map]
+  :value-encoding :exact-finite-field-trace-1-tagged-value-algebra-not-the-trace-record-envelope
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :maps :strictly-increasing-complete-encoded-key-unsigned-utf8-duplicates-refused-before-construction
+  :numbers :exact-big-endian-binary64-bits-including-distinct-signed-zero-nonfinite-refused
+  :strings :exact-trace-1-scalar-validation-and-escaping
+  :hash {:algorithm :sha256 :input :exact-complete-hash-payload-bytes :output :exact64-lowercase-hex
+         :wrapper-sha256-field :not-in-its-own-payload-no-self-reference}
+  :authentication {:self-contained-digest :integrity-only-never-origin-or-persistence-authentication
+                   :applies-to [:restore :rebuild-revocation-checkpoint-admission]
+                   :input :current-trusted-checkpoint-evidence-separate-from-untrusted-snapshot-and-storage-response
+                   :owner :existing-qualified-clio-immutable-history-and-openplanner-atomic-effect-receipt-under-qualified-identity-and-application-authorities
+                   :outer-read :independently-authenticate-and-admit-the-actual-persistence-record-through-those-existing-owners
+                   :binding [:actual-stored-principal :permitted-scope :field-revision
+                             :checkpoint-effect-id :event-cursor :checkpoint-covered-provenance-cursor
+                             :expected-snapshot-sha256]
+                   :event-cursor-role :snapshot-state-cursor-distinct-from-owner-attested-covered-provenance-prefix
+                   :covered-provenance-cursor :qualified-clio-prefix-represented-by-this-checkpoint-not-inferred-from-storage-time-or-record-position
+                   :expected-digest :exact-lowercase-sha256-in-the-separately-trusted-committed-record
+                   :comparison :snapshot-payload-digest-wrapper-digest-and-trusted-expected-digest-all-equal-with-exact-snapshot-state-cursor-scope-principal-and-existing-artifact-configuration-bindings
+                   :field-revision :outer-authenticated-record-metadata-not-a-pure-snapshot-field-comparison
+                   :outer-record-validation :authenticate-actual-record-effect-and-field-revision-expected-graph-field-revisions-and-record-component-association-through-qualified-owners
+                   :outer-readback :independently-bind-committed-graph-checkpoint-and-effect-record-no-arbitrary-historical-record
+                   :pure-pass-alone :does-not-establish-outer-record-authority-or-storage-revision
+                   :projection-revision-as-field-revision-or-local-storage-revision-minting :forbidden
+                   :copied-self-asserted-or-same-storage-response-evidence :not-authority
+                   :missing-unknown-stale-conflicting-or-mismatched-evidence :whole-unchanged-refusal-before-any-state-admission
+                   :evidence-refusal {:status :refused :reason :checkpoint-evidence-unestablished
+                                      :reason-revision 1 :state :exact-unchanged-prior-state
+                                      :scope [:restore :rebuild-revocation-checkpoint-admission]}
+                   :pure-kernel :compare-admitted-owner-data-only-no-authority-lookup-signature-system-or-second-event-engine
+                   :checkpoint-output :not-a-persistence-receipt-or-authentication-grant
+                   :bounds :all-evidence-is-an-explicit-counted-argument-under-existing-input-work-and-continuation-limits}
+  :abi-checkpoint-cursor :exactly-the-snapshot-state-event-cursor
+  :input-argument :the-closed-domain-map-encoded-once-as-an-argument-by-finite-field-input-1
+  :input-argument-byte-cap :complete-map-encoding-including-codec-state-hash-keys-tags-and-separators-not-payload-only
+  :string-opaque-bytes-host-printer-or-alternate-wrapper :whole-unchanged-refusal
+  :restore {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/restore"
+            :version "finite-field-restore/2"
+            :checkpoint :validate-exact-domain-shape-complete-state-canonical-payload-hash-cursor-and-producing-identity-as-private-intermediate
+            :required-history :independent-qualified-pre-operation-clio-horizon-excluding-this-invocation-and-complete-counted-post-checkpoint-tail-and-replacement-closure
+            :pre-recorded-invocation :qualified-owner-attested-immediate-predecessor-under-the-abi-provenance-horizon-contract-otherwise-refuse
+            :reconciliation :existing-qualified-current-authority-reconstruction-before-any-state-result-or-causal-use
+            :retained-facts :complete-recall-outcome-pending-feedback-confirmation-and-once-only-identities-plus-physical-state-cursors-and-queue
+            :nested-replacement :own-recorded-preceding-provenance-horizon-never-the-outer-current-tip
+            :bounds :existing-reconstruction-caps-and-any-stricter-ordinary-call-cap-for-entire-call-no-reset-or-increase
+            :reconstruction-quantum-work
+            {:contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget/reconstruction-quantum-work"
+             :meter :single-outer-restore-whole-call-counter-under-finite-character-load-v2-and-any-stricter-existing-reconstruction-cap
+             :occurrence :charge-once-before-each-actual-main-nested-repeated-or-empty-world-replay-quantum-never-once-per-delegating-helper
+             :reused-rebuild-helper :same-outer-counter-no-second-pool-reset-discount-or-double-charge
+             :exhaustion :finite-work-budget-exceeded-with-exact-unchanged-prior-state-and-no-exposure}
+            :history-failure :revision1-missing-or-ambiguous-rebuild-history-with-exact-unchanged-prior-state
+            :external-effect-reexecution-or-post-return-catch-up :forbidden}
+  :work :charge-all-actual-encode-validate-order-and-hash-work-under-the-existing-whole-call-or-rebuild-counter
+  :allocation :bounded-measurement-before-full-payload-or-argument-allocation
+  :fixture-ownership {:atomic-predecessor :qualifies-real-independent-persistence-and-authenticated-digest-readback-with-actual-abi-forces-snapshots
+                      :contact-successor :qualifies-positive-restore-and-rebuild-with-that-completed-port-and-its-actual-candidate-artifact-identity
+                      :earlier-artifact-fixture :does-not-qualify-a-different-later-contact-binary
+                      :full-paired-persistence :existing-later-causal-eight-point-packet}
+  :fixtures [:complete-state-roundtrip-and-map-insertion-order-golden
+             :known-payload-bytes-and-sha256-golden :signed-zero-and-multibyte-string-hash-difference
+             :wrapper-hash-not-self-referential :missing-extra-or-duplicate-wrapper-or-state-key-refused
+             :changed-producing-identity-fold-or-pending-event-changes-hash
+             :changed-authorized-velocity-cell-or-fold-with-recomputed-self-hash-but-original-trusted-digest-refused
+             :missing-copied-or-foreign-checkpoint-evidence-refused
+             :missing-stale-foreign-and-mismatched-evidence-exact-revision1-checkpoint-evidence-unestablished-refusal
+             :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
+             :outer-field-revision-and-component-mismatch-refused-without-invented-snapshot-field
+             :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
+             :empty-world-positive-quanta-restore-charges-every-actual-quantum
+             :empty-world-positive-quanta-restore-work-exhaustion-refuses-before-next-quantum-with-finite-work-budget-exceeded
+             :nested-repeated-and-partitioned-restore-shares-one-counter-and-charges-each-actual-quantum-once
+             :complete-checkpoint-argument-exact1048756-and-one-over]}
+ :causal-entry-authority
+ {:contract "docs/plans/cephalon-physical-kernel-abi.edn#causal-authority"
+  :current-owner-projection :explicit-argument-at-every-abi-entry-including-advance-catch-up
+  :ordinary-mismatch :unchanged-refusal-before-any-sampling-pending-event-or-causal-work
+  :complete-rebuild :only-declared-old-state-to-current-authority-reconstruction-exception
+  :through-exposure :outer-qualified-owning-authority-admission-or-fence-not-an-epoch-label
+  :pure-lookup-or-second-policy-engine :forbidden}
+ :continuation-closure
+ {:owner :same-portable-field-shape-law-and-domain-before-any-successful-state-exposure
+  :applies-to :every-operation-producing-or-restoring-a-state-or-checkpoint
+  :state-argument-encoded-byte-cap 1048576
+  :checkpoint-argument-encoded-byte-cap 1048756
+  :checkpoint-wrapper-encoded-byte-overhead 180
+  :checkpoint-wrapper-overhead-rule :exact-trace-1-map-of-codec-state-and64-lowercase-hex-sha256-minus-encoded-state-value
+  :checkpoint-wrapper-overhead-components :map-tag-pair-vector-three-key-value-pairs-codec-string-and-digest-string-with-all-tags-separators-and-brackets
+  :checkpoint-cap-rule :state-argument-cap-plus-exact180-wrapper-bytes-no-reencoding-or-string-wrapping-of-state
+  :event-tail-argument-encoded-byte-cap 1048576
+  :other-arguments-and-complete-framing-aggregate-byte-cap 524288
+  :component-byte-measure :exact-complete-encoded-argument-as-it-occurs-in-finite-field-input-1-including-the-declared-snapshot-domain-map-wrapper
+  :checkpoint-codec "finite-field-snapshot/1"
+  :checkpoint-contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec"
+  :checkpoint-contract-qualification :required-before-any-continuation-admission-or-consumption
+  :remaining-byte-measure :all-other-argument-encodings-plus-entire-input-envelope-and-separators-without-double-counting-components
+  :existing-canonical-clio-tail-byte-cap :separate-unchanged1048576-raw-clio-and-encoded-argument-caps-both-required
+  :maximum-carriers :rebuild-prior-state-plus-checkpoint-plus-complete-event-tail
+  :maximum-composed-input-bytes 3670196
+  :whole-input-byte-cap :unchanged4194304
+  :before-success [:bounded-encode-complete-candidate-state
+                   :bounded-encode-its-actual-qualified-checkpoint-argument
+                   :check-all-full-continuation-envelope-shapes-against-declared-component-and-remaining-bounds]
+  :required-continuations [:zero-advance :catch-up :read-recall :checkpoint :restore :rebuild-revocation]
+  :current-read-authority-projection :included-in-the-remaining-arguments-and-framing-bound-never-unmetered
+  :qualified-producing-identity-and-invocation-boundary-evidence :also-included-in-the-same-remaining-arguments-and-framing-bound-never-unmetered
+  :candidate-and-next-input-custody :same-canonical-value-and-checkpoint-with-no-dropped-fold-witness-dedup-id-or-pending-event
+  :result-trace-limits :separate-upper-bounds-never-permission-to-exceed-state-continuation-caps
+  :counter-work :all-actual-encode-validate-checkpoint-and-closure-work-charged-under-existing-whole-call-or-rebuild-limit
+  :allocation :bounded-before-full-encoding-allocation
+  :overflow-or-unestablished-closure :whole-unchanged-refusal-with-finite-state-continuation-byte-limit
+  :partial-inclusion-state-truncation-or-eviction-to-fit :forbidden
+  :fixtures [:exact-state-argument-cap-and-one-over :exact-checkpoint-encoded-cap-and-one-over
+             :complete-snapshot-tagged-map-wrapping-bytes-not-payload-only
+             :exact180-wrapper-overhead-with-distinct64-hex-digests-and-largest-state
+             :snapshot-string-or-opaque-host-value-refused
+             :complete-remaining-framing-and-tail-encoded-cap-and-one-over
+             :largest-accepted-state-through-read-catchup-checkpoint-restore-and-rebuild
+             :inclusion-result-below8mib-but-state-one-over-refuses-before-success
+             :split-restored-horizon-overflow-preserves-prior-state-and-all-original-witnesses]}
+ :canonical-order-work
+ {:version "finite-order-work/1"
+  :owner :field-pure-law-and-domain-consuming-qualified-abi-key-shapes
+  :id-key :exact-unsigned-utf8-no-normalization
+  :tuple-key :componentwise-qualified-abi-order
+  :algorithm :bounded-most-significant-component-trie
+  :insertion :scan-each-complete-key-once-charge-each-unit-before-use
+  :traversal :terminator-first-then-all-256-unsigned-byte-branches
+  :fixed-branch-probes {:per-visited-node 257
+                        :order [:non-byte-terminator :unsigned-bytes-0-through-255]
+                        :absent-branches :charged
+                        :terminator :charged-including-empty-component
+                        :followed-edge :charge-one-for-byte-or-terminator-before-following}
+  :tuple-components :ordered-component-tries-with-distinct-component-roots
+  :component-boundary :terminator-edge-enters-next-component-root-or-final-key
+  :component-types :fixed-by-qualified-abi-key-position-no-mixed-type-coercion
+  :node-creation :once-per-distinct-component-prefix-including-each-component-root
+  :numeric-component
+  {:version "finite-integer-trie-key/1"
+   :domain :qualified-abi-signed-safe-integers
+   :width-unsigned-bytes 8
+   :nonnegative {:first-byte 128 :remaining-seven :unsigned-big-endian-magnitude}
+   :negative {:first-byte 127 :remaining-seven :bytewise-255-minus-big-endian-abs-n-minus-one}
+   :arithmetic :validate-safe-integer-first-then-abs-n-and-minus-one-before-seven-base256-digits
+   :unsafe-wide-bias-or-out-of-range-intermediate :forbidden
+   :zero :positive-and-negative-zero-use-the-same-integer-key
+   :float-trace-zero-bits :remain-distinct-under-finite-field-trace-1
+   :golden-hex [[-9007199254740991 "7fe0000000000001"] [-1 "7fffffffffffffff"]
+                [0 "8000000000000000"] [1 "8000000000000001"]
+                [9007199254740991 "801fffffffffffff"]]
+   :key-work :charge-all-eight-bytes-plus-each-actual-encoding-operation-before-use}
+  :charge [:all-input-code-units-and-key-bytes :each-trie-edge-visit
+           :each-distinct-node-creation :each-fixed-branch-probe :each-emitted-key]
+  :adaptive-sort-comparison-charge :forbidden
+  :collection-order :cannot-change-total-charge-acceptance-or-canonical-output
+  :duplicates-or-invalid-keys :whole-transition-unchanged-refusal
+  :budget :same-whole-call-or-whole-rebuild-counter-no-reset
+  :no-partial-output :true
+  :fixtures [:sorted-reversed-shuffled-same-multiset-at-exact-work-bound
+             :same-multiset-one-unit-short :long-prefix-unicode-and-tuples
+             :signed-integer-golden-boundaries-and-zero :charged-terminator-and-absent-branches]}
+ :inclusion-result-codec
+ {:version "finite-contact-inclusion-result/1"
+  :wire :utf8-json-no-whitespace-no-bom-no-newline
+  :value-algebra-and-escaping :exact-finite-field-trace-1-tags-map-order-and-scalar-escaping
+  :envelope ["finite-contact-inclusion-result/1" :encoded-closed-result-map]
+  :payload/required [:included-memory-ids :inclusion-reasons]
+  :payload/additional-keys :refused
+  :included-memory-ids :unique-canonical-memory-id-vector-in-first-witness-order
+  :inclusion-reasons :same-length-vector-of-contact-inclusion-reason-maps-in-matching-id-order
+  :reason/required [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
+                    :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
+  :reason/additional-keys :refused
+  :reason/value-shapes :consume-qualified-owning-abi-and-memory-bindings
+  :reason/closed-contract "docs/plans/cephalon-physical-kernel-abi.edn#recall-success-carrier/inclusion-reason"
+  :byte-count :complete-version-envelope-tags-map-keys-values-separators-and-escapes
+  :counter-field :canonical-result-byte-count
+  :counter-in-payload :forbidden-no-self-reference
+  :status-motion-bonds-contacts-and-fold-custody :outside-this-two-field-payload-with-their-own-full-trace-state-and-work-accounting
+  :utf8-bytes-per-horizon 8388608
+  :trace-cap :separate-unchanged-complete-trace-envelope-cap
+  :split-restore :recompute-exact-same-full-result-bytes-and-counter-from-qualified-first-witnesses
+  :encoding-hashing-and-restore-work :charged-before-every-operation-under-existing-whole-call-or-rebuild-budget
+  :invalid-or-unsupported :whole-unchanged-refusal
+  :byte-overflow :whole-unchanged-refusal-with-existing-finite-trace-budget-exceeded-code
+  :fixtures [:empty-inclusion-envelope :unicode-control-and-map-order-goldens
+             :duplicate-memory-first-witness :exact-byte-cap-and-one-over
+             :unsplit-split-restored-identical-result-bytes-and-count]}
+ :contact-inclusion
+ {:version "finite-contact-inclusion/1"
+  :owner-task "ba078119-482c-49dc-bd18-c2dfcaad9024"
+  :pure-owner :field-contact-domain-fold-not-consumer-reimplementation
+  :binding [:actual-request-daimoi :principal :scope :authority :graph-revision
+            :field-history :start-checkpoint :end-checkpoint :target-horizon-quanta :fold-revision]
+  :horizon :fixed-original-post-emission-start-and-explicit-request-target-with-actual-qualified-observed-end-cut-for-the-complete-executed-prefix
+  :target :mandatory-original-field-scoped-request-count-not-a-budget-default-or-future-authenticated-checkpoint
+  :lifecycle-contract "docs/plans/cephalon-physical-kernel-abi.edn#request-lifecycle-contract"
+  :maximum-quanta :qualified-abi-maximum-substeps-across-entire-horizon
+  :split-calls :restore-qualified-original-start-target-and-complete-prefix-fold-state-without-counter-reset-identical-final-cut-trace-and-counters-for-equivalent-execution
+  :checkpoint-contract "docs/plans/cephalon-physical-kernel-abi.edn#inclusion-fold-state"
+  :result-codec "finite-contact-inclusion-result/1"
+  :eligible :authorized-memory-nexus-recipient-in-actual-eligible-overlap-for-bound-request-daimoi
+  :presence-contact :trace-only-no-memory-inclusion
+  :other-daimoi-or-separated-pair :no-memory-inclusion
+  :memory-binding :closed-versioned-ordered-entities-nexus-memory-binding-with-actual-owner-memory-content-and-graph-revisions
+  :memory-binding-contract "docs/plans/cephalon-physical-kernel-abi.edn#nexus-memory-binding"
+  :explicit-non-memory-nexus :physical-contact-without-memory-inclusion-not-an-inferred-missing-binding
+  :fold-order [:step-end-time-us :canonical-unordered-contact-pair]
+  :deduplicate :exact-memory-id-keep-first-canonical-contact-witness
+  :output-order :first-canonical-witness-order
+  :reason [:memory-id :content-revision :nexus-id :daimoi-id :step-id :pair
+           :contact-eligibility-matrix-revision :graph-revision :field-history :fold-revision]
+  :missing-denied-or-conflicting-binding :whole-transition-unchanged-refusal
+  :read-revalidation :current-qualified-identity-and-application-authority-decisions-and-policy-grant-versions-for-original-principal-scope-and-all-retained-influences-before-exposure
+  :unchanged-scope-with-revoked-grant :stale-or-denied-with-no-recall-payload-until-qualified-current-authority-rebuild
+  :budget :owning-finite-state-work-trace-byte-and-record-caps-before-exposure
+  :partial-ranking-or-truncation :forbidden
+  :later-prompt-budget :explicit-consumer-subselection-with-full-fold-custody-not-altered-physical-result
+  :fixtures [:two-memory-contacts :repeat-one-memory-across-substeps
+             :several-nexuses-same-memory :reversed-input :split-catchup-restored-replay
+             :presence-only :other-request-daimoi :denied-or-missing-memory-binding
+             :completed-fold-revoked-before-read-with-unchanged-scope-revision
+             :policy-version-change-with-same-scope :missing-or-forged-current-authority
+             :qualified-rebuild-under-current-authority-then-read :authority-change-before-exposure
+             :horizon-exact-one-over :work-and-trace-exact-one-over]}
+ :public-read-failure
+ {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/read-recall/failure"
+  :producer :actual-unexpected-local-read-evaluation-throw-at-existing-qualified-outer-facade-after-current-authority-admission
+  :pure-result :success-or-existing-declared-refusal-only
+  :public-result :success-refusal-or-declared-closed-failure
+  :retained-request-failure-state-or-failure-recording-operation :none
+  :typed-or-returned-declared-refusal-remapping :forbidden
+  :authority-policy-freshness-or-provider-storage-failure-remapping :forbidden
+  :result-work-and-byte-bounds :existing-shared-limits-no-reset
+  :future-controls [:real-facade-injected-evaluation-throw-exact-three-key-failure
+                    :prior-state-unchanged-no-payload-no-reinforcement
+                    :private-exception-marker-never-returned-or-retained
+                    :every-existing-refusal-and-success-unchanged]}
+ :configuration-schema
+ {:version "finite-physical-configuration/1"
+  :status :proposed-owning-representation-not-executable-validator-or-qualified-mechanics
+  :maps :exact-listed-keyword-keys-no-missing-extra-duplicate-alias-string-key-nil-or-extension
+  :vectors :ordered-vectors-only-never-lists-or-sets
+  :types {:F :finite-binary64 :N :finite-binary64-at-least-zero :P :finite-binary64-strictly-positive
+          :U :finite-binary64-zero-through-one-inclusive :S :finite-binary64-minus-one-through-one-inclusive
+          :R :nonempty-scalar-utf8-revision-under-existing-byte-limits :ID :existing-qualified-scalar-utf8-identifier
+          :u32 :exact-integer-one-through-4294967295 :u8 :exact-integer-zero-through-255}
+  :integer-encoding :trace-1-f64-bits-of-the-exact-integer-positive-zero-only-negative-zero-refused-as-invalid-physical-configuration
+  :root {:schema "finite-physical-configuration/1" :revision :R :mechanics-revision :R
+         :trail-observations :trail-observation-shape
+         :field :field-shape :kinds :kinds-shape :forces :forces-shape :contact :contact-shape}
+  :trail-observation-shape {:max-samples :exact-positive-safe-integer-one-through256}
+  :trail-observation-contract "docs/plans/cephalon-physical-kernel-abi.edn#trail-state"
+  :trail-observation-window :explicit-reviewed-profile-value-no-default-global-total-not-per-entity
+  :trail-observation-authority :derived-motion-projection-only-no-eviction-of-causal-field-contributions-request-evidence-or-immutable-history
+  :field-shape {:cell-size :P :mapping-revision :R :layers [:layer-shape :exactly-eight]}
+  :layer-shape {:binding :ID :gain :N :half-life :P :cell-cap :P :prune-epsilon :N}
+  :kinds-shape {:presence :passive-kind-shape :nexus :passive-kind-shape :daimoi :moving-kind-shape}
+  :moving-kind-shape {:gamma :N :static-threshold :N :speed-cap :N :wind-coupling-rate :N}
+  :passive-kind-shape {:gamma :N :static-threshold :N :speed-cap :N :wind-coupling-rate :N
+                       :read-weights [:N :exactly-eight] :deposit-weights [:N :exactly-eight]}
+  :forces-shape {:non-bond-semantic-attraction :attraction-shape :unified-intent-bond :bond-parameter-shape
+                 :repulsion :repulsion-shape :boundary :boundary-shape :wind :wind-shape :seeded-exploration :exploration-shape}
+  :attraction-shape {:threshold :S :strength :N :rest-length :N}
+  :bond-parameter-shape {:parameter-source :admitted-intent-bonds}
+  :repulsion-shape {:barnes-hut :barnes-hut-shape :local :local-repulsion-shape :separation :separation-shape :semantic :semantic-repulsion-shape}
+  :barnes-hut-shape {:theta :P :strength :N :softening :N}
+  :local-repulsion-shape {:radius :N :strength :N :power :P}
+  :separation-shape {:radius :N :strength :N}
+  :semantic-repulsion-shape {:threshold :S :strength :N :radius :N}
+  :boundary-shape {:target-radius :N :thickness :N :pressure :N :edge-fraction :U}
+  :wind-shape {:cap :P}
+  :exploration-shape {:law-revision :R :permutation-seed :u32 :permutation [:u8 :exactly-256-each-value-once]
+                      :gradients [[:F :F] :nonempty-ordered-vector] :coordinate-scales [:P :P]
+                      :octaves [:octave-shape :nonempty-ordered-vector]}
+  :octave-shape {:frequency :P :amplitude :N}
+  :contact-shape {:matrix-revision "finite-particle-recipient/1" :geometry :declared-spherical-recipient
+                  :parameter-sets [:contact-parameter-shape :nonempty-vector-in-unsigned-utf8-id-order]}
+  :contact-parameter-shape {:id :ID :revision :R :recipient-kind [:enum :presence :nexus]
+                            :particle-radius :N :recipient-radius :P :restitution :U}
+  :mechanics-compatibility
+  {:rule :mechanics-revision-exactly-equals-qualified-producing-identity-kernel-revision-and-admitted-state-kernel-revision
+   :qualified-identity-contract "docs/plans/cephalon-physical-kernel-abi.edn#qualified-producing-identity-contract"
+   :configuration-root-revision :distinct-calibration-revision-equals-state-config-revision
+   :scope [:admit-state :every-causal-use :restore :rebuild-revocation]
+   :missing-unqualified-identity :producing-identity-unestablished
+   :different-mechanics :mechanics-revision-mismatch
+   :aliases-range-compatibility-and-label-copying :forbidden}
+  :invariants {:gamma-and-static-threshold :presence-strictly-greater-than-nexus-strictly-greater-than-daimoi-at-least-zero
+               :prune-epsilon :strictly-less-than-corresponding-layer-cap
+               :vector-index :same-layer-zero-through-seven-in-every-corresponding-vector
+               :contact-ids :unique-under-exact-existing-identifier-identity
+               :gradients :each-exact-two-vector-nonzero-with-finite-components
+               :variable-vectors :complete-values-count-under-existing-input-state-checkpoint-and-work-caps
+               :signed-zero :existing-exact-bit-preservation-no-normalization}
+  :hash {:input :complete-root-value-using-exact-existing-trace-1-tagged-value-encoding
+         :trace-record-envelope-bom-whitespace-or-newline :none :algorithm :sha256 :output :exact64-lowercase-ascii-hex
+         :state-config-revision :exactly-root-revision :state-config-hash :exactly-this-digest :self-hash-or-host-printer :forbidden}
+  :coefficient-mapping
+  {:barnes-hut :forces-repulsion-barnes-hut-theta-strength-softening-with-softening-as-squared-distance-addend-not-squared-again
+   :local :forces-repulsion-local-radius-strength-power :separation :forces-repulsion-separation-radius-strength
+   :non-bond-attraction :forces-non-bond-semantic-attraction-threshold-strength-rest-length-excludes-represented-logical-bond
+   :semantic-repulsion :forces-repulsion-semantic-threshold-strength-radius
+   :boundary :forces-boundary-target-radius-thickness-pressure-edge-fraction
+   :logical-bond :actual-admitted-bond-strength-and-rest-length-once-no-global-duplicate
+   :field :field-cell-size-and-layer-gain-half-life-cell-cap-prune-values-in-index-order
+   :passive-vectors :kinds-presence-or-nexus-read-and-deposit-vectors-with-field-mapping-revision
+   :daimoi-vectors "docs/plans/cephalon-physical-kernel-abi.edn#request-weight-carrier"
+   :daimoi-vector-use :exact-field-weights-from-the-unique-retained-admitted-request-with-same-mapping-revision-no-configuration-fallback
+   :motion :kinds-kind-gamma-static-threshold-speed-cap-wind-coupling-rate-and-forces-wind-cap
+   :contact :exact-profile-id-revision-in-admitted-geometry-selects-recipient-kind-radii-and-restitution-no-override
+   :exploration :complete-retained-law-revision-seed-permutation-gradients-scales-and-octaves-no-passive-propulsion}
+  :excluded-carriers [:actual-entity-mass-position-velocity :actual-graph-and-bond-instances :request-weights-wallets-authority
+                      :fixed-abi-quantum-substep-resource-and-numeric-profile-laws]
+  :explicit-proposed-choices [:named-force-parameter-families-and-ranges :per-bond-strength-and-rest-length
+                              :revision-bound-contact-parameter-reference :256-entry-permutation-and-explicit-gradient-scale-octave-carriers
+                              :bounded-derived-motion-observation-window-not-physical-force-retention]
+  :invalid-configuration-result
+  {:cases [:missing-extra-duplicate-or-wrong-key :wrong-container-nesting-type-or-vector-length
+           :invalid-coefficient-domain :failed-configuration-invariant]
+   :mutating {:closed-keys [:status :state :reason :reason-revision]
+              :status :refused :state :exact-unchanged-prior-state
+              :reason :invalid-physical-configuration :reason-revision 1
+              :operation-result :absent}
+   :read-only {:closed-keys [:status :reason :reason-revision]
+               :status :refused :reason :invalid-physical-configuration :reason-revision 1
+               :state-and-recall-payload :absent}
+   :all-consumers :every-abi-operation-that-validates-the-explicit-or-retained-physical-configuration
+   :shared-result-contract "docs/plans/cephalon-physical-kernel-abi.edn#state-transition-result"
+   :read-result-contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/read-recall/refusal"
+   :existing-precedence :preserve-every-existing-authority-producing-identity-and-finite-byte-work-check-and-its-own-reason
+   :valid-shape-foreign-mechanics-revision :mechanics-revision-mismatch
+   :reserved-unsupported-contact-or-actual-arithmetic-overflow :retain-existing-distinct-refusal
+   :no-partial-result-new-failure-or-reinforcement :true}
+  :qualification :owning-reviewed-shape-force-law-noise-indexing-generation-and-draw-placement-before-consumption
+  :revision-label-or-opaque-parameter-map :not-qualification-or-permission-to-load-code
+  :donor-formulas-defaults-hidden-clamps-or-constants :not-adopted-by-this-representation
+  :absorption-exchange-or-unqualified-profile :existing-unsupported-unchanged-refusal
+  :future-controls [:independent-canonical-value-bytes-and-hash-golden :map-insertion-order-identical-bytes
+                    :negative-zero-in-integer-typed-field-refused
+                    :schema-negative-admit-read-restore-and-rebuild-exact-closed-status-reason-revision
+                    :otherwise-valid-authority-identity-and-limits-isolate-each-configuration-negative
+                    :every-existing-authority-mechanics-unsupported-operation-and-finite-limit-refusal-preserved
+                    :missing-extra-wrong-key-tag-nesting-length-or-revision-refused
+                    :matching-mechanics-kernel-and-qualified-producing-identity-positive
+                    :foreign-mechanics-with-copied-config-revision-admit-restore-rebuild-refused
+                    :every-coefficient-or-table-change-alters-hash :matching-and-foreign-duplicate-or-overridden-contact-profile
+                    :retained-values-consumed-after-admit-advance-catch-up-restore-and-rebuild
+                    :existing-exact-and-one-over-input-state-checkpoint-and-work-bounds]}
+ :calibration {:production-defaults :none :complete-input :required
+               :configuration-contract "docs/plans/cephalon-finite-field-coupling.edn#configuration-schema"
+               :state-carrier :physical-configuration-in-the-complete-canonical-state
+               :admission :retain-the-complete-validated-configuration-value-with-its-revision-and-hash
+               :hash :sha256-of-exact-existing-trace-1-tagged-encoding-of-the-complete-configuration-value
+               :hash-input :configuration-value-only-not-the-surrounding-state-or-its-config-hash-field
+               :hash-output {:type :string :encoding :lowercase-ascii-hex :length 64
+                             :pattern "^[0-9a-f]{64}$" :prefix :none}
+               :all-causal-operations :consume-the-retained-configuration-never-external-cache-clock-or-defaults
+               :restore-and-rebuild :explicit-configuration-must-exactly-match-the-snapshot-value-revision-and-canonical-hash-before-use
+               :silent-mid-history-configuration-replacement :forbidden
+               :byte-and-work-bounds :count-the-complete-retained-configuration-in-state-snapshot-and-all-explicit-operation-arguments-with-existing-limits
+               :fixtures [:admit-then-advance-and-catch-up-with-no-external-configuration-source
+                          :checkpoint-restore-then-repeat-same-physical-transition
+                          :missing-configuration-value-with-retained-hash-refused
+                          :changed-configuration-with-copied-revision-or-hash-refused
+                          :configuration-hash-known-bytes-and-lowercase64-string-golden
+                          :raw-byte-uppercase-prefixed-or-wrong-length-configuration-hash-refused
+                          :configuration-carrying-state-exact-continuation-limit-and-one-over]
+               :layer-semantic-bindings :versioned-input-not-keyword-counters
+               :missing-nonfinite-or-revision-mismatch :unchanged-refusal
+               :task "4f4c7cf6-9be8-47b9-b03a-be235c4dd519"
+               :finite-profile {:version "finite-character-load/2"
+                                :entities {:presence 8 :nexus 8 :daimoi 16 :total 32}
+                                :bonds 64 :scoped-layer-cells 256 :max-substeps-per-call 100
+                                :ordinary-workload-partition [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4]
+                                :maximum-call-workload {:quanta 100 :partition [100]
+                                                       :valid-elapsed-over-cap-quanta 101
+                                                       :expected-executed-quanta 100 :expected-backlog-quanta 1
+                                                       :expected-completeness :incomplete
+                                                       :catch-up :drain-one-without-new-elapsed-time}
+                                :trace-records-per-call 131072 :trace-utf8-bytes-per-call 8388608
+                                :trace-codec "finite-field-trace/1"
+                                :input-wire-codec "finite-field-input/1"
+                                :input-wire-utf8-bytes 4194304 :id-utf8-bytes 128 :other-string-utf8-bytes 512
+                                :state-argument-encoded-bytes 1048576 :checkpoint-argument-encoded-bytes 1048756
+                                :checkpoint-wrapper-encoded-byte-overhead 180
+                                :event-tail-argument-encoded-bytes 1048576
+                                :other-arguments-and-framing-aggregate-encoded-bytes 524288
+                                :successful-state-continuation :required-before-atomic-exposure
+                                :work-units-per-call 67108864
+                                :work-unit [:reconstruction-quantum-execution :entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
+                                            :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
+                                :canonical-order-work "finite-order-work/1"
+                                :counter :before-every-operation-across-preflight-and-entire-call
+                                :bounded-input-read :before-full-allocation-or-decode
+                                :bounded-trace :before-append-or-whole-result-exposure
+                                :identity-shortening-or-normalization :forbidden
+                                :byte-overflow {:input :finite-input-byte-limit :trace :finite-trace-budget-exceeded
+                                                :state-continuation :finite-state-continuation-byte-limit}
+                                :work-overflow :finite-work-budget-exceeded
+                                :overflow-state :whole-unchanged-refusal
+                                :ordinary-workloads [:high-density-at-all-state-caps :quiet :four-step-catch-up]
+                                :ordinary-quanta-per-workload-arm 64 :warmup-calls 5 :seed 42
+                                :arms [:zero-varied-field-baseline :selected-contribution]
+                                :arm-kind :lower-level-workload-fixture-not-served-comparison
+                                :call-wall-ms 1000 :peak-rss-mib 512 :whole-job-wall-ms 120000
+                                :freeze-before-execution [:reviewed-layout-and-fixture-bytes :calibration :source-build-runtime-host]
+                                :sensitivity {:different-eligible-contacts-min 1 :different-included-memories-beyond-seed-min 1}
+                                :exits [:all-complete-values :all-budgets :exact-cap-and-one-over :causal-sensitivity]
+                                :failure :no-qualification :adopted-production-defaults :none}}
+ :causal-proof [:admitted-encounter :attributed-deposit :sampled-vector
+                :force-and-velocity :trajectory-and-contact :consumed-memory]
+ :cell-traversal {:keys :union-of-prior-and-current-deposit-keys
+                  :order [:scope-revision-unsigned-utf8 :layer-index-numeric
+                          :signed-cell-x-numeric :signed-cell-y-numeric]
+                  :prune-observations :same-canonical-complete-key-order
+                  :persistent-map-and-serialized-number-order :forbidden
+                  :fixture :multi-cell-pruning-reversed-insertion-same-exact-trace}
+ :paired-case {:kind :lower-level-pure-kernel-intervention
+               :not-proof-of [:admitted-persisted-control :restore :actual-live-maker]
+               :fixed [:principal :graph :query :embeddings :configuration
+                       :seed :event-order :timestep-schedule :mood-revision
+                       :lens-revision :attention-inputs :exact-eight-read-weights
+                       :read-weight-mapping-revision :entity-request-bindings
+                       :passive-kind-read-weights :passive-weight-mapping-revisions]
+               :varied :field-vector-contribution
+               :required-change [:physical-contact :included-memory]
+               :altered-buffer-admission-storage-or-restore :forbidden}
+ :admitted-input-comparison
+ {:arms :two-independently-valid-outside-encounter-effect-histories
+  :prior :same-qualified-graph-field-snapshot
+  :contact-packet-each-arm [:admission :validated-uncommitted-candidate-projection
+                            :kernel-transition :contact-inclusion :unchanged-kernel-replay]
+  :causal-packet "f503ae5a-e414-4da8-a8d4-328a7218bcf3"
+  :causal-packet-each-arm [:contact-driven-consistent-atomic-commit :independent-readback
+                           :unchanged-persisted-history-replay :served-recall-and-prompt-causality]
+  :contact-checkpoint-evidence-predecessor :qualified-atomic-packet
+  :contact-completion-requires-later-paired-persistence-proof false
+  :atomic-qualification-fixtures :actual-qualified-abi-and-forces-produced-complete-canonical-snapshots-without-contact-execution
+  :atomic-qualification-not-proof-of [:contact-inclusion :revocation-rebuild :full-contact-driven-paired-persistence]
+  :atomic-isolation :distinct-owned-fixture-stores-or-namespaces
+  :each-store-baseline [:independent-content-hash-revision-readback :same-stored-authority]
+  :store-routing :outer-adapter-only-never-kernel-input-or-payload-grant
+  :shared-revision-advancement :forbidden
+  :execution-order-control :same-per-arm-result-on-fresh-isolated-baselines
+  :required-change [:motion :contact :recall-path :included-memory]
+  :fixed [:scope :principal :query :seed :calibration :mood-lens-attention
+          :exact-read-weights-and-mapping-revisions
+          :daimoi-request-exact-eight-deposit-weights-and-mapping-revision
+          :presence-and-nexus-config-exact-deposit-weights-and-mapping-revisions]
+  :identity-hash-cursor-and-revision-consistency :required-per-arm
+  :forged-or-duplicate-history :refused}
+ :persistence {:owner :openplanner
+               :qualification-task "2f4421ee-2e48-405e-96d2-fee1a5597ff2"
+               :independent-qualification :actual-qualified-abi-and-forces-produced-complete-canonical-state-snapshots
+               :before-contact :transaction-identity-authority-fencing-fault-recovery-and-authenticated-checkpoint-readback
+               :empty-folds-and-requests :valid-only-when-no-request-or-fold-was-produced
+               :handwritten-snapshot-or-synthetic-authentication-flag :not-qualification
+               :full-contact-driven-paired-consumer-proof-task "f503ae5a-e414-4da8-a8d4-328a7218bcf3"
+               :authorization-owner :qualified-identity-and-owning-application-authorities
+               :current-decision :qualified-owning-application-decision-and-policy-grant-version-plus-required-identity-authority
+               :decision-binding [:actual-stored-principal :action :resource :permitted-scope]
+               :commit-decision-guard :qualified-owning-authority-admission-or-fencing-through-commit
+               :stale-local-policy-or-locally-minted-version :not-authority
+               :unsupported-authority-guard :refuse-all-components-before-commit :independent-readback :required
+               :atomic-components [:graph-projection :field-checkpoint :effect-receipt]
+               :checkpoint-authentication :record-the-exact-canonical-snapshot-digest-snapshot-state-cursor-owner-attested-covered-provenance-prefix-field-revision-scope-principal-and-checkpoint-effect-id-in-the-same-qualified-atomic-effect-receipt
+               :restore-evidence :independent-owner-authenticated-read-of-that-committed-record-not-the-snapshot-or-storage-response-asserting-its-own-digest
+               :transaction-and-unique-effect-identity :required
+               :expected-revisions [:graph :field]
+               :current-authority :independently-reload-stored-principal-grants-policy-scope-before-transaction
+               :commit-authority :assert-same-authority-and-policy-versions-through-commit
+               :authority-change :abort-all-components-before-commit
+               :new-encounter-embedding [:admitted-content-revision-and-hash :exact-bytes-and-hash
+                                         :shape-and-dimensions :model-and-configuration-revision]
+               :embedding-custody [:same-candidate-projection :same-atomic-commit :independent-readback]
+               :embedding-unavailable-outcomes
+               {:missing {:status :refused :code :embedding-missing}
+                :indexing-pending {:status :refused :code :embedding-pending}
+                :production-failed {:status :failed :code :embedding-failed :cause {:category [:timeout :unavailable :rate-limited :invalid-output :internal-error :unclassified]
+                                                        :mapping-revision "embedding-failure-category/1"
+                                                        :authority :qualified-existing-embedding-provider-seam
+                                                        :attestation-preflight :unclassified-before-rules-on-unavailable-or-malformed
+                                                        :consumers :retain-category-and-revision-without-reinterpretation
+                                                        :precedence [{:when :http429 :category :rate-limited}
+                                                                     {:when :explicit-timeout-or-http408-or504 :category :timeout}
+                                                                     {:when :explicit-transport-unavailable-or-other-http5xx :category :unavailable}
+                                                                     {:when :explicit-validated-invalid-output :category :invalid-output}
+                                                                     {:when :explicit-validated-internal-failure :category :internal-error}
+                                                                     {:when :unknown-unavailable-malformed-or-no-match :category :unclassified}]
+                                                        :raw-error-prose-classification :forbidden
+                                                        :unknown :unclassified :diagnostic-ref-max-utf8-bytes 128
+                                                        :diagnostic-ref :optional-opaque-independently-audience-authorized
+                                                        :raw-provider-data :protected-diagnostic-store-only}}
+                :binding-mismatch {:status :refused :code :embedding-binding-mismatch}}
+               :embedding-unavailable-state [:graph-unchanged :field-unchanged :effect-receipt-unchanged
+                                             :existing-admitted-envelope-unchanged :cursor-unchanged]
+               :embedding-unavailable-retained-incomplete-state :none
+               :embedding-retry {:owner "2f4421ee-2e48-405e-96d2-fee1a5597ff2"
+                                 :scope :finite-source-caller-fixture-and-idempotent-entry-point
+                                 :trigger :caller-only-after-controlled-valid-embedding-availability
+                                 :max-total-calls 2 :max-resubmissions 1 :fixture-wall-ms 10000
+                                 :production-retry-orchestration :outside-this-fixture-exit
+                                 :automatic :none :authority :fresh-qualified-owner-decision
+                                 :binding :same-admitted-content-and-effect-identity
+                                 :validation :fresh-authority-and-valid-embedding
+                                 :changed-content :new-admitted-predecessor-binding
+                                 :complete-effect :once-only-atomic-commit}
+               :unsupported-transaction :refuse-before-either-write
+               :uncertain-commit :read-matching-receipt-and-both-components
+               :duplicate-effect :recover-prior-result-without-second-deposit
+               :absent-effect :retry-same-transaction-with-same-expected-revisions
+               :conflicting-hash-scope-or-revision :refuse
+               :inconsistent-component-pair :quarantine-without-replay-or-success
+               :persistent-replay :unchanged-admitted-snapshot-and-history
+               :tampered-contribution-hash-or-cursor :unchanged-refusal
+               :failed-or-partial-write :explicit-not-success}
+ :retained-revocation
+ {:fixture :authorized-deposit-then-revoke-before-next-causal-sample
+  :abi-operation :rebuild-revocation
+  :abi-operation-version "finite-revocation-rebuild/7"
+  :rebuild [:retained-field :trails :contact-profile-bindings :nexus-memory-bindings :causally-affected-world-projection :active-inclusion-folds
+            :completed-and-restored-recall-results-under-recall-requests
+            :complete-admitted-pending-boundary-queue]
+  :active-inclusion-folds
+  {:before :every-next-causal-use-including-restored-or-completed-inclusion
+   :reauthorize :all-retained-first-witnesses-under-current-principal-scope-and-graph-authority
+   :reconstruct :ordered-first-witnesses-dedup-reasons-and-budget-counters-from-admissible-history
+   :unreconstructable :invalidate-and-refuse-or-quarantine-before-use
+   :forbidden :retag-or-reuse-an-old-fold-result-under-new-authority
+   :control :revoke-memory-after-first-witness-then-checkpoint-restore-and-finish-horizon}
+  :completed-recall-results
+  {:inventory :all-retained-recall-requests-including-completed-horizons-with-no-active-fold
+   :reconstruct :result-ids-reasons-and-derived-influence-from-clean-currently-permitted-history
+   :unreconstructable :explicitly-invalidate-result-before-success-and-refuse-read-with-stale-recall-authority
+   :invalidation :remove-exposable-recall-payload-and-retain-original-request-and-immutable-history
+   :unsafe-or-unestablished-invalidation :whole-unchanged-refusal-and-outer-quarantine
+   :read :requires-this-result-reconstructed-under-exact-current-authority-not-only-state-binding
+   :forbidden :copy-or-retag-completed-result-or-its-checkpoint-under-new-authority
+   :control :finish-horizon-with-empty-active-folds-then-revoke-rebuild-and-read-without-revoked-ids-or-reasons
+   :permitted-control :unrelated-authorized-completed-result-retained-after-qualified-reconstruction}
+  :source [:immutable-complete-ordered-boundary-event-history :compatible-verified-clean-checkpoint]
+  :binding [:new-permitted-scope :new-projection-revision]
+  :persistent-field-revision :qualified-outer-atomic-record-output-not-a-pure-rebuild-result-or-snapshot-state-field
+  :required-control :same-clean-permitted-history-with-authorized-contributions-retained
+  :complete-admissible-history :successful-rebuild-required-from-qualified-clean-baseline-with-complete-owner-qualified-history-and-full-replacement-closure-within-all-existing-bounds
+  :history {:coverage :every-earlier-main-provenance-operation-after-owner-verified-checkpoint-covered-prefix-through-independent-pre-operation-clio-tip-including-historical-replacements
+            :independent-current-horizon :explicit-qualified-clio-owner-snapshot-admission-or-fence-through-result-exposure
+            :snapshot-state-cursors :separate-physical-consumed-and-admitted-schedule-cursors-never-provenance-range-endpoints
+            :consumed-cursor :independently-bound-separate-from-admitted-cursor
+            :consumed-prefix :recompute-each-main-operations-recorded-consumed-physical-schedule-never-cut-provenance-at-state-cursor
+            :pending-tail :reconstruct-original-ordered-admitted-future-queue-with-current-authority-before-exposure
+            :pending-event-layout "docs/plans/cephalon-physical-kernel-abi.edn#pending-event-state"
+            :permitted-pending :retain-original-ids-inputs-order-and-boundary-schedules-no-early-application
+            :denied-pending :explicit-current-authority-bound-cancelled-no-op-disposition-with-original-event-retained
+            :future-catch-up :cannot-reactivate-denied-pending-influence-and-must-revalidate-current-authority
+            :checkpoint :hash-both-cursors-and-complete-pending-queue-dispositions
+            :not-only :contribution-events
+            :retain [:all-mutating-abi-inputs :consumed-advance-events :catch-up-events
+                     :elapsed-quanta-residual-backlog-schedule :recall-emissions
+                     :outcome-and-confirmation-state-events :recorded-seed-schedule
+                     :restore-inputs :prior-rebuild-inputs :complete-replacement-reference-closure
+                     :original-clio-identities-order-payloads-and-parent-links]
+            :baseline :independently-established-before-earliest-revoked-causal-influence-or-qualified-clean-equivalent
+            :unknown-or-gapped-or-contaminated :typed-unchanged-refusal-and-outer-quarantine
+            :authority :recompute-derived-world-and-folds-with-only-currently-authorized-influence
+            :source-event-rewrite-or-live-effect-reexecution :forbidden
+            :count-all-events-and-quanta :under-unchanged-whole-rebuild-caps}
+  :provenance-horizon
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/provenance-horizon"
+   :input :qualified-pre-operation-clio-horizon-independent-of-state-tail-and-checkpoint-self-assertions
+   :current-invocation :excluded-only-with-qualified-invocation-and-immediate-predecessor-admission-evidence
+   :pre-recorded-or-reserved-invocation :exact-abi-owner-contract-no-local-history-filter-or-fence
+   :checkpoint-start :owner-attested-covered-prefix-not-checkpoint-storage-position-or-rewound-state-cursor
+   :rewind :restored-state-cursors-cannot-remove-main-range-restore-or-subsequent-events
+   :missing-foreign-stale-truncated-or-changing-tip :missing-or-ambiguous-rebuild-history-with-exact-unchanged-state
+   :outer-freshness :qualified-clio-owner-holds-admission-or-fence-through-result-exposure-otherwise-refuse
+   :unsupported-owner-capability :upstream-owner-gap-no-local-fence-or-event-engine
+   :bounds :all-explicit-horizon-and-covered-prefix-evidence-counted-within-existing-limits
+   :fixtures [:restore-and-prior-rebuild-to-older-state-cursor-then-later-operations-and-revocation
+              :tail-truncated-at-rewound-cursor :omitted-replacement
+              :missing-copied-stale-or-foreign-horizon :owner-tip-change-before-exposure
+              :storage-position-does-not-prove-checkpoint-covered-prefix]}
+  :replacement-reference-closure
+  {:contract "docs/plans/cephalon-physical-kernel-abi.edn#functions/rebuild-revocation/replacement-reference-closure"
+   :input :explicit-complete-materialized-target-checkpoints-evidence-and-supporting-history-in-existing-counted-argument
+   :well-founded :references-strictly-precede-referring-operation-in-qualified-clio-provenance-order-not-restored-state-cursor
+   :clean-root :every-reconstruction-path-needs-independent-clean-pre-revocation-baseline-or-qualified-clean-current-authority-equivalent
+   :replacement :install-complete-current-authority-reconstructed-target-at-recorded-boundary-not-historical-output
+   :once-only-precedence :reconstruct-applicable-qualified-original-idempotency-facts-through-that-boundary-in-existing-recall-and-feedback-collections
+   :once-only-binding :same-original-bindings-applicable-to-each-fact-variant-or-refuse-no-new-journal
+   :acknowledgement :successful-actual-writer-ack-required-only-for-confirmation-absent-ack-preserves-pending-failed-writer-preserves-refusal-and-no-reinforcement
+   :older-target-erases-later-applicable-once-only-fact :forbidden
+   :dedup :exact-qualified-identity-and-bytes-only-never-scheduled-occurrences-or-actual-reconstruction-work
+   :missing-conflicting-forward-self-or-cyclic-reference :missing-or-ambiguous-rebuild-history
+   :bounds :entire-closure-shares-all-existing-input-tail-checkpoint-event-byte-quanta-work-and-wall-bounds
+   :copy-retag-pure-lookup-new-effect-or-nested-budget-reset :forbidden
+   :complete-admissible-closure-within-bounds :successful-bounded-rebuild-required}
+  :history-controls [:revoked-deposit-then-advance-motion-before-current-cursor
+                     :interleaved-permitted-and-revoked-deposits-with-advance-and-catch-up
+                     :retained-recall-emission-and-inclusion-fold-after-boundary
+                     :omitted-or-reordered-advance-event :missing-cursor-range
+                     :contaminated-checkpoint-before-insufficient-tail
+                     :clean-permitted-world-motion-contact-fold-and-residual-equality
+                     :admitted-future-revoked-event-beyond-consumed-cursor
+                     :mixed-permitted-and-revoked-pending-events-after-capped-advance
+                     :rebuild-checkpoint-restore-catch-up-no-revoked-causal-effect
+                     :permitted-pending-executes-once-at-original-boundary-not-during-rebuild
+                     :both-cursor-gap-or-tamper-refusal :pending-tail-counts-toward-all-exact-and-one-over-caps]
+  :replacement-controls [:restore-then-later-revoke-successful-clean-rebuild-and-read
+                         :prior-rebuild-then-later-revoke-successful-clean-rebuild-and-read
+                         :interleaved-permitted-control-retained-after-each-replacement
+                         :backward-shared-reference-with-distinct-scheduled-occurrences
+                         :rewound-state-cursor-does-not-reorder-provenance
+                         :missing-forward-cyclic-conflicting-or-contaminated-reference-refusal
+                         :each-complete-closure-exact-and-one-over-limit]
+  :budget {:version "finite-revocation-rebuild/7" :tail-events 128
+           :coverage :complete-main-tail-plus-all-materialized-replacement-reference-closure
+           :event-count :distinct-qualified-envelopes-with-exact-identical-bytes-and-bindings-only
+           :history-argument-utf8-bytes 1048576
+           :all-materialized-checkpoint-evidence-and-reference-values :also-counted-in-existing-argument-and-complete-input-limits
+           :quanta-and-work :every-reconstruction-path-and-repeated-execution-with-no-nested-counter-reset
+           :tail-canonical-clio-utf8-bytes 1048576
+           :kernel-quanta :bounded-by-actual-shared-work-not-a-separate-admission-cap
+           :reconstruction-quantum-work
+           {:unit :reconstruction-quantum-execution :cost 1
+            :when :before-every-actual-replayed-quantum
+            :applicable-operations [:restore :rebuild-revocation]
+            :scope :all-main-nested-and-repeated-reconstruction-in-one-outer-invocation
+            :existing-work :additional-to-all-existing-entity-cell-pair-contribution-byte-order-trace-and-output-charges-never-a-replacement
+            :empty-world :still-charge-one-before-every-quantum-even-with-no-entities-bonds-cells-contacts-or-observations
+            :identity-dedup-checkpoint-reference-or-same-schedule-discount :forbidden
+            :derived-relation :actual-replayed-quanta-less-than-or-equal-to-actual-work-units-less-than-or-equal-to67108864
+            :independent-quantum-allowance-or-work-reset :none
+            :exhaustion :existing-finite-work-budget-exceeded-before-executing-the-next-quantum
+            :ordinary-clock :unchanged100-substeps-per-call-and-explicit-backlog-no-elapsed-time-discard-or-new-schedule}
+           :work-units 67108864
+           :variable-input-and-trace-byte-caps :finite-character-load-v2
+           :entities 32 :bonds 64 :scoped-layer-cells 256 :outer-wall-ms 2000
+           :work-unit [:reconstruction-quantum-execution :entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+                                            :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
+                                            :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
+                                :canonical-order-work "finite-order-work/1"
+           :counter :before-every-operation-across-entire-private-rebuild
+           :count-byte-preflight :before-replay :effects :none-before-complete-authorization-and-bounds
+           :shared-limit-refusals {:input-wire-id-or-other-string :finite-input-byte-limit
+                                   :trace-records-or-utf8-bytes :finite-trace-budget-exceeded
+                                   :work-units :finite-work-budget-exceeded
+                                   :continuation :finite-state-continuation-byte-limit}
+           :exhaustion {:status :refused
+                        :rebuild-specific-code :revocation-rebuild-budget-exceeded
+                        :rebuild-specific-bounds [:tail-events :tail-canonical-clio-utf8-bytes
+                                                  :entities :bonds :scoped-layer-cells]
+                        :shared-bounds :preserve-shared-limit-refusals-never-remap-to-rebuild-specific-code
+                        :prior-state :byte-identical :adapter :quarantine-before-any-causal-use}
+           :outer-timeout :no-accepted-replacement-and-quarantine
+           :controls [:each-independent-exact-cap :each-one-over-with-other-bounds-valid
+                      :each-replayed-quantum-charged-before-execution-including-empty-world
+                      :derived-quantum-count-no-second-admission-cap-or-allowance
+                      :each-shared-overflow-keeps-its-declared-specific-reason]}
+  :ordinary-schedule-reconstruction-controls
+  {:version "finite-revocation-rebuild/7"
+   :preconditions [:independently-qualified-clean-pre-influence-checkpoint
+                   :complete-owner-qualified-original-history-and-full-replacement-closure
+                   :current-authority-and-all-other-existing-resource-guards-valid]
+   :single-ordinary100
+   {:ordinary :one-accepted-advance-executes100-quanta-under-unchanged-clock-contract
+    :rebuild :reconstruct-all100-recorded-quanta-with-revoked-influence-excluded-and-authorized-control-retained
+    :expected :complete-qualified-rebuild-not-a-refusal-due-only-to-the-former64-quantum-ceiling}
+   :ordinary101-and-catch-up
+   {:ordinary :accepted-advance-executes100-and-retains-exactly-one-quantum-of-backlog-then-catch-up-executes-that-one-without-new-elapsed-time
+    :rebuild :reconstruct-all101-recorded-quanta-in-their-original-two-call-schedule-with-the-same-authorized-control
+    :expected :complete-qualified-rebuild-no-old-ceiling-and-no-discarded-catch-up-quantum}
+   :partition-and-replacements :unsplit-split-catch-up-and-nested-replacement-recordings-use-the-same-full-actual-schedule-and-summed-quantum-work-never-deduplicate-occurrences
+   :empty-world :positive-replayed-quanta-still-cost-at-least-that-many-work-units-no-zero-cost-loop
+   :work-exhaustion :next-quantum-would-exceed-the-single-shared-work-limit-so-refuse-before-it-with-finite-work-budget-exceeded-and-exact-prior-state
+   :other-bounds :all-existing-event-input-state-checkpoint-history-trace-population-byte-and-outer-wall-caps-and-their-exact-one-over-controls-retained
+   :scope :removes-only-the-independent64-quantum-ceiling-no-increase-to-work-time-memory-byte-or-state-limits-no-indefinite-recovery-guarantee
+   :evidence :prospective-controls-not-executed-kernel-or-performance-proof}
+  :historical-version6-ordinary100-advance-then-revoke-negative
+  {:status :superseded-version6-proposed-counterexample-not-current-acceptance
+   :profile "finite-revocation-rebuild/6"
+   :preconditions [:independently-qualified-clean-pre-influence-checkpoint
+                   :complete-owner-qualified-original-history-and-full-replacement-closure-including-revoked-source-events
+                   :current-authority-revocation-requires-the-complete-original100-quanta-reconstruction
+                   :all-other-existing-guards-and-bounds-valid]
+   :ordinary-advance :successful100-executed-quanta-under-unchanged-ordinary-call-contract
+   :required-replayed-quanta 100
+   :expected-refusal {:status :refused :reason :revocation-rebuild-budget-exceeded
+                      :reason-revision 1 :state :exact-byte-identical-prior-state}
+   :success-result :absent
+   :adapter :quarantine-retained-reference-or-refuse-load-before-any-causal-use
+   :substitute-state-partial-replacement-retag-or-post-return-catch-up :forbidden
+   :existing-controls :all-original-positives-and-exact-one-over-controls-retained-unchanged
+   :evidence :prospective-negative-no-executed-fixture-fit-or-readiness-claim}
+  :missing-or-ambiguous-input :pure-typed-unchanged-prior-state-refusal
+  :adapter-disposition :quarantine-retained-reference-or-refuse-load-before-causal-use
+  :pure-quarantine-state-mutation :forbidden
+  :forbidden [:display-only-filter :old-aggregate-retag :zero-all-fields :rewrite-old-history]}
+ :served-selected-intervention
+ {:source :same-selected-outside-encounter-and-root-effect-as-b1-readback
+  :manifest-version "selected-encounter-comparison/1"
+  :equal-lineage [:encounter-id :content-revision-and-hash :root-effect-reference
+                  :deposit-or-bond-domain-source :qualified-pre-selected-effect-graph-field-checkpoint]
+  :comparison-identities :distinct-canonical-clio-admitted-event-and-effect-per-arm
+  :admission :qualified-clio-interface-or-refuse-proof
+  :parent-links :same-selected-root-and-exact-manifest-arm-value
+  :isolation :distinct-authorized-diagnostic-stores-and-streams
+  :apply :one-comparison-effect-from-shared-pre-effect-baseline-not-both-production-and-comparison
+  :varied :one-declared-admitted-nonzero-physical-deposit-or-bond-value
+  :control-value :same-as-observed-natural-value
+  :permitted-differences [:declared-value :necessary-comparison-manifest-and-identity-provenance]
+  :comparison-provenance :independently-prove-no-extra-physical-or-recall-input
+  :all-other-causal-inputs :fixed
+  :derived-history-graph-field-bindings :independently-traced-and-read-back-per-arm-not-equal
+  :replay :reuse-existing-admitted-comparison-identities
+  :production-reinforcement-or-publication :forbidden
+  :history-rewrite :forbidden
+  :unrelated-valid-encounter-deposit :refuse-proof
+  :scope :distinct-from-two-lawful-different-encounter-storage-arms}
+ :evidence-audience
+ {:artifact-and-destination :independently-classified
+  :restricted-full-inspection :authorized-protected-seam-outside-git-and-public-logs
+  :retained-public-or-reviewer :only-explicitly-audience-authorized-digest-redacted-binding
+  :maker-access :not-reviewer-or-public-permission
+  :unsafe-or-unavailable-protected-proof :refuse-outcome-and-reinforcement
+  :publication-replay :forbidden}
+ :reinforcement-contribution
+ {:owner :openplanner-feedback-interface
+  :task "deliver-outcome-attributed-once-only-graph-feedback"
+  :field-kernel-implementation :none
+  :version "recalled-item-contribution/1"
+  :required-with :independent-artifact-and-destination-outcome-readbacks
+  :binding [:recalled-item-content-and-graph-revision :actual-turn-action-and-effect
+            :actual-persisted-artifact-bytes-and-hash :actual-destination-outcome]
+  :witness [:independent-qualified-consumed-input-or-choice-to-artifact-provenance
+            :matched-bounded-causal-intervention]
+  :intervention {:max-isolated-transformation-executions 2 :wall-ms 10000
+                 :publication :disabled :other-inputs :frozen}
+  :unqualified-or-uncertain :no-reinforcement
+  :mere-prompt-inclusion-unused-metadata-or-item-label :not-a-contribution-witness}
+ :consumer {:owner :knoxx :actual-stored-principal :required
+            :physical-causal-trace :actual-automatic-recall-and-provider-prompt
+            :model-visible-revisions [:matching-graph-projection :matching-physical-field]
+            :field-revision-only-in-diagnostics :not-b3-proof
+            :mood :separate-persisted-model-with-same-field-revision}
+ :admission :reviewed-native-readiness-before-red-green
+ :board-mutation :none :behavioral-proof :not-performed}

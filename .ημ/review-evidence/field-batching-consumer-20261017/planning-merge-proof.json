@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-17T06:08:18.508492+00:00",
+  "pr": "https://github.com/riatzukiza/foresight/pull/46",
+  "head": "55a34cac1237cae29acd98d4f815bb03ab189d5b",
+  "base": "52b550110fdea19074990cc89d738735789c1dc3",
+  "merge": "7a130df1672e5415c77a63ee2ca0cd74b76f75ef",
+  "mergedAt": "2026-10-17T06:08:12Z",
+  "parents": [
+    "52b550110fdea19074990cc89d738735789c1dc3",
+    "55a34cac1237cae29acd98d4f815bb03ab189d5b"
+  ],
+  "reviewedAndMergedTree": "7d3f60efe57f3e71fe4f50a32a30d737e2178930",
+  "currentMiMoReview": 5556386547,
+  "completeScope": "6/6 pages,missing[],oneattempt,actualbody==submission; all4inputs/9receiptappends/90reflectionlines",
+  "optionalCodeRabbitQuota": 6230461684,
+  "quotaRequest": 6230460792,
+  "quotaSuppliesNoApprovalOrRoundCredit": true,
+  "canonicalQualification": "3PASS/1settledthread/1availableplanningcohort/PASS",
+  "standingAuthorizedMergeMethod": "MERGE"
+}

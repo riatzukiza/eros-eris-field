@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-10-17T06:16:29.685032+00:00",
+  "oldHead": "ed7d5654f34056886308b63046bcc05bd1dd9e2a",
+  "base": "a2c64bee9878fef3abd2b38481b972e6aa29cd37",
+  "planningMerge": "7a130df1672e5415c77a63ee2ca0cd74b76f75ef",
+  "nativeReadyProof": "field-batching-native-ready-inprogress-proof.json",
+  "workflowSHA256": "b73f997f6ff0994af4bcf043c1fd7c07467308929c1ccd55ce6ac06da6e560a0",
+  "oldWorkflowSHA256": "29c7d56bafefbeb1112308974fb0f1437fe219445352cc8acfd6ea29dd27f76d",
+  "parsedReverseExactlyFourInputs": true,
+  "byteExactReverseExactlyFourInputs": true,
+  "parserAndEligibilityAndProducerGatesPreserved": true,
+  "reviewTimeoutMinutes": 60,
+  "reviewNode": "22.23.3",
+  "physicalNode": "22.20.0 unchanged",
+  "newMuse14SourceNotAdopted": true,
+  "actionlintExit": 0,
+  "actionlintScope": "workflow YAML/expressions; existing shell script byte-identical; no new shellcheck claim",
+  "diffHygiene": true
+}

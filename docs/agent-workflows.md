@@ -134,3 +134,91 @@ explicit credential and token steps. The
 retains the exact declarations and inspection boundary without secret values.
 This resolves that source-mapping question; it does not establish immunity to
 runner or process compromise, or execute physical behavior.
+
+
+## Historical enabled toolchain inspection — 2026-10-15 UTC
+
+The former caller enabled `setup_eta_mu_toolchain: true` for standard Babashka
+EDN parsing. This historical state superseded the October 9 observation, and
+is itself superseded by the isolated parser boundary below. The
+shared workflow remains exact b03cb58407cc333b7cabd77431842d44f0deb415; caller
+Muse/agents/OpenCode selectors and explicit secret mappings remain unchanged.
+The enabled path installs declared Java 21/Clojure 1.12.5.1654/Babashka 1.13.219/
+clj-kondo 2025.10.23/pnpm 10.14.0 plus configured Node 22. The caller's custom gate
+script replaces default dependency-install gates. Actual producer 116163403965
+completed SUCCESS, declaring bb 1.13.219 and proposed_abi_parse exit 0.
+
+Unlike the old skipped path, credential detection then received the existing
+ETA_MU_APP_ID and ETA_MU_APP_PRIVATE_KEY secret mappings and, if both were present,
+the shared workflow could mint the existing scoped cross-repository read token
+for katamorph and mirror that dependency. Those steps were not isolated merely
+because they were outside the gate step. The deterministic gate environment
+still mapped only PR identifiers/script/checkout outputs, and the model step
+declared no App key; that declaration was not proof against process/runner
+compromise or later-step environment inheritance. No secret value, new secret,
+provider credential or runtime deployment was introduced by that caller change.
+Actual privileged-step outcomes and exact source/check bindings remained part of
+qualification; previous receiver approval did not transfer to that caller.
+
+## Isolated parser and disabled private dependency path — 2026-10-15 UTC
+
+The caller now runs the standard EDN single-map and actual trailing-source check in a separate
+`proposed_abi_parse` job with permissions exactly contents:read and no App
+secrets, inherited secrets, private dependency mirror or candidate dependency
+installation. It checks the immutable event head and clean checkout before and
+after parsing. `bb --config /dev/null` excludes candidate initialization.
+The reusable reviewer needs parser success and passes
+`setup_eta_mu_toolchain: false`; its diff evidence records the actual successful
+dependency result. Existing reviewer/publication source pins and guards remain.
+
+At exact 2d7a02d61ffc8118704d3778f9b06bc984ddbca7, actual run 38685018571 parser
+job 116257775574 passed both declarations and its earlier second-`edn/read`
+check. The actual workflow at that immutable run head uses a second read, which
+silently consumes trailing reader-discard forms; this is not true trailing-source
+EOF evidence. Actual deterministic
+producer 116257825490 passed while credential detection, cross-repository token
+creation and private-mirror steps were all skipped. This is observed hosted
+workflow evidence, distinct from local Babashka 1.12.207 parser fixtures and
+requested hosted 1.13.219. New heads still require fresh native checks/reviews;
+no secret/private content, actual exploit or physical solver behavior was read
+or executed to establish this boundary.
+
+
+## Trailing reader-discard correction — 2026-10-15 UTC
+
+Native Codex 4286659389 exposed a limit in the earlier true-EOF claim: a second
+standard edn/read skips trailing #_ forms. On the isolated committed fixture,
+the actual old abce job exited 0 for a map followed by a discarded map. The
+updated job still uses the standard reader for the map and checks the raw
+remainder for only EDN whitespace, commas and line comments. It rejects
+trailing data and reader-discard forms without rejecting marker text inside a
+valid map string or tail comment. Eight inline contract controls and seven
+actual extracted-step source cases cover positive and refusal behavior.
+
+The initial new-control run used unsupported `bb -` syntax and stopped before
+the intended test. Commit 54e9eea corrects the invocation to /dev/stdin and
+records the actual causal RED: discarded trailing map accepted by the old
+second-read logic. GREEN then passes the real declarations and valid marker/
+Unicode controls and refuses each ordinary/discarded extra-form source. These
+are actual local parser results, not hosted qualification or a field solver
+test. Permissions, pins, secrets, private-mirror disablement, immutable-head
+and clean-checkout guards remain unchanged; fresh hosted proof is required.
+
+
+## Explicit supported review path and skipped parser — 2026-10-17 UTC
+
+Development review is for ready, non-draft pull requests whose head and base are
+the personal `riatzukiza/eros-eris-field` repository. The caller now explicitly
+uses `always()` with that eligibility condition for `review`; an eligible parse
+failure, cancellation or unexpected skip therefore does not silently bypass
+the reusable review path. Its existing producer gate accepts only the literal
+`needs.proposed_abi_parse.result == success`. Every other result fails evidence
+production before model review/publication; no skipped parser supplies proof.
+
+Drafts and unsupported fork heads remain ineligible, receive no approval and
+supply no review/check/round credit. `ready_for_review` starts the supported
+path for a former draft. No private dependency setting, permission, App-secret
+mapping, source pin or timeout is changed. The isolated parser still has only
+contents:read. This clarifies the conditional review request without enabling
+model execution or credential access on unsupported heads. Local shell-result
+controls and syntax checks are preparation; no live draft/fork run is claimed.

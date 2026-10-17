@@ -1,0 +1,90 @@
+{
+  "kind": "observed-source-comparison-and-derived-accounting-proof-not-kernel-or-provider-approval",
+  "observedAt": "2026-10-17T00:00:56.475175+00:00",
+  "predecessorLocalHead": "4c6a3ea3b6c68a8e8d7a639fa84eb8fc0aed76ce",
+  "publishedHeadBeforeChange": "7a3aab76f84a7e23cd6cfd85e6d8ed7090b1ced4",
+  "nativeFinding": 4290131881,
+  "change": {
+    "version": "finite-revocation-rebuild/7",
+    "independent64QuantumCeiling": "removed",
+    "newCharge": {
+      "unit": "reconstruction-quantum-execution",
+      "cost": 1,
+      "beforeEveryActualReplayQuantum": true,
+      "includes": [
+        "empty world",
+        "main replay",
+        "nested reconstruction",
+        "repeated reconstruction"
+      ]
+    },
+    "otherWorkCharges": "all retained and additional in the same meter",
+    "derivedInvariant": "actual replayed quanta <= actual work units <= 67108864",
+    "ordinaryClock": "unchanged100substeps/explicit101backlog/catch-up schedule",
+    "workOverflowReason": "finite-work-budget-exceeded",
+    "separateQuantumCapOrAllowance": false
+  },
+  "unchangedIndependentLimits": {
+    "tail-events": 128,
+    "tail-canonical-clio-utf8-bytes": 1048576,
+    "history-argument-utf8-bytes": 1048576,
+    "work-units": 67108864,
+    "entities": 32,
+    "bonds": 64,
+    "scoped-layer-cells": 256,
+    "outer-wall-ms": 2000
+  },
+  "unchangedSourceContracts": [
+    "ordinary clock",
+    "calibration",
+    "trace codec",
+    "input wire codec",
+    "snapshot codec",
+    "continuation closure",
+    "configuration schema",
+    "contact deflection",
+    "decay",
+    "pruning",
+    "deposit",
+    "wind",
+    "sampling",
+    "radial cap"
+  ],
+  "requiredCurrentProspectiveControls": [
+    "complete authorized reconstruction of100accepted ordinary quanta when all other existing guards/bounds valid",
+    "complete authorized reconstruction of101input advance plus1quantum catch-up under original two-call schedule",
+    "split and nested schedules charge every actual repeated occurrence",
+    "empty-world positive quantum count has positive corresponding work charge",
+    "work exhaustion refuses before next quantum with exact prior state",
+    "all independent resource/authority/history/refusal controls retained"
+  ],
+  "historicalVersion6Counterexample": {
+    "retainedUnder": "retained-revocation/historical-version6-ordinary100-advance-then-revoke-negative",
+    "allOriginalCounterexampleValuesByteValueEquivalent": true,
+    "newStatus": "superseded-version6-proposed-counterexample-not-current-acceptance",
+    "executed": false
+  },
+  "verification": {
+    "existingWorkflowParser": {
+      "runtime": "localBabashka1.12.207",
+      "positiveRefusalControls": 8,
+      "bothEDNMapsParsed": true,
+      "exit": 0,
+      "domainLawsExecuted": false
+    },
+    "sourceConsistencyAndDerivedCounting": {
+      "exit": 0,
+      "stderrBytes": 0,
+      "stdoutSHA256": "1440803e17a0fc0888ef6a06d23f543bf19904b1aee2b2dd9b67914f05623e04",
+      "scope": "cross-reference versions/cost and unchanged literal budgets/contracts; arithmetic invariant with nonnegative other work, not real performance or physical execution"
+    },
+    "preparationErrors": "private proof helper initially collided with SCI dir binding, then had an unmatched delimiter; both failures retained before corrected final source-comparison pass; not production RED or a failed solver"
+  },
+  "adoption": "UNIMPLEMENTED/UNQUALIFIED; source planning review and nativeReady then RED/GREEN/actualload and privacy qualification required; no source-finding settlement supplied",
+  "remaining": [
+    "full original owner/source/state leaf contracts",
+    "ordinary operation observation grammar",
+    "restore integration allocation fair-fit/owning mirror/nativeadoption"
+  ],
+  "boundaries": "No new host/time/work/storage limit, behavior subset, alternate field physics, event engine, scheduler, grant, board status, clock/runtime/owner/PM2/cloud/model/credential/paid/deployment/social/heartbeat change."
+}

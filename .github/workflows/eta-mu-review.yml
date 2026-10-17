@@ -9,19 +9,95 @@ permissions:
   pull-requests: read
 
 jobs:
+  proposed_abi_parse:
+    name: Parse proposed EDN
+    if: ${{ github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout exact pull request head
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Set up Babashka for the isolated parser
+        uses: DeLaGuardo/setup-clojure@ada62bb3282a01a296659d48378b812b8e097360 # 13.4
+        with:
+          bb: "1.13.219"
+
+      # Candidate parsing has no App secrets or private dependency mirror.
+      - name: Parse standard EDN maps with true EOF
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          [[ "$PR_HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
+          test -z "$(git status --porcelain --untracked-files=all)"
+          bb --config /dev/null /dev/stdin <<'CLJ'
+          (require '[clojure.edn :as edn] '[clojure.java.io :as io]
+                   '[clojure.string :as str])
+          (defn read-single-map! [reader label]
+            (let [eof (Object.)
+                  value (edn/read {:eof eof} reader)]
+              (assert (map? value) (str "Expected an EDN map: " label))
+              ;; A second edn/read silently consumes reader-discard forms.
+              ;; After the one map, inspect the remaining source itself: only
+              ;; standard EDN whitespace, commas and line comments may remain.
+              (assert (every? #(or (= \, %) (Character/isWhitespace (char %)))
+                              (str/replace (slurp reader) #";[^\r\n]*" ""))
+                      (str "Unexpected trailing EDN source: " label))
+              value))
+          (doseq [[label source accepted?]
+                  [["plain map" "{:safe true}" true]
+                   ["comments and commas" "{:safe true}, ; #_ inert comment\n" true]
+                   ["marker inside string" "{:marker \"#_\"}" true]
+                   ["Unicode whitespace" "{:safe true}\u2003" true]
+                   ["second map" "{:safe true} {:second true}" false]
+                   ["second scalar" "{:safe true} nil" false]
+                   ["discarded trailing map" "{:safe true} #_ {:second true}" false]
+                   ["nested trailing discards" "{:safe true} #_ #_ nil true" false]]]
+            (let [observed (try
+                             (with-open [reader (java.io.PushbackReader. (java.io.StringReader. source))]
+                               (read-single-map! reader label))
+                             true
+                             (catch Throwable _ false))]
+              (assert (= accepted? observed) (str "Parser contract control: " label))))
+          (println "EDN parser positive/refusal controls passed: 8")
+          (doseq [p ["docs/plans/cephalon-physical-kernel-abi.edn"
+                     "docs/plans/cephalon-finite-field-coupling.edn"]]
+            (with-open [reader (java.io.PushbackReader. (io/reader p))]
+              (read-single-map! reader p))
+            (println "Proposed EDN parsed:" p))
+          (println "No domain law executed")
+          CLJ
+          test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
+          test -z "$(git status --porcelain --untracked-files=all)"
+
   review:
     name: Evidence-first review (eta-mu)
-    uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@b03cb58407cc333b7cabd77431842d44f0deb415
+    needs: proposed_abi_parse
+    # Evaluate the supported PR path even when the parser failed or was skipped;
+    # the existing producer gate accepts only the literal success result.
+    if: ${{ always() && github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository }}
+    uses: riatzukiza/eta-mu/.github/workflows/opencode-code-review.yml@e8e50a96fbd13edfcf0b4cf65dbeb2b544b4133f
     with:
       pr_head_sha: ${{ github.event.pull_request.head.sha }}
-      muse_revision: 0b9a91492c8355e6933dc2164d35668cb76d9e60
+      muse_revision: 259c76eee9ac2def944e9191c1da23d3647ba32e
       agents_revision: 4b4f48dae1b804b2581974e604cca618ecedadf1
       opencode_version: 1.18.31
+      review_timeout_minutes: 60
+      node_version: "22.23.3"
+      # The pinned producer gates credential detection and private mirrors on this input.
       setup_eta_mu_toolchain: false
       evidence_gates_script: |
         run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
         run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
-        run_gate proposed_abi_parse npx --yes nbb@1.4.207 -e '(require (quote [clojure.edn :as edn]) (quote ["node:fs" :as fs])) (edn/read-string (.readFileSync fs "docs/plans/cephalon-physical-kernel-abi.edn" "utf8")) (println "Proposed ABI EDN parsed; no domain law executed")'
+        run_gate proposed_abi_parse_job test "${{ needs.proposed_abi_parse.result }}" = success
     secrets:
       ETA_MU_APP_ID: ${{ secrets.ETA_MU_APP_ID }}
       ETA_MU_APP_PRIVATE_KEY: ${{ secrets.ETA_MU_APP_PRIVATE_KEY }}

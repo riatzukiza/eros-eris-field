@@ -1,0 +1,22 @@
+{
+  "observedAt": "2026-10-17T06:10:17.178900+00:00",
+  "planningMerge": "7a130df1672e5415c77a63ee2ca0cd74b76f75ef",
+  "card": "f333d683-344f-4fab-a26f-208ff154ed97",
+  "actualNativePath": [
+    "incoming",
+    "accepted",
+    "breakdown",
+    "ready",
+    "todo",
+    "in_progress"
+  ],
+  "bodyExact": true,
+  "otherFrontmatterExact": true,
+  "eventPrefixExact": true,
+  "eventSuffixBytes": 4197,
+  "nativeWriteId": "1792217416753-0.rwwxko27dcd5iuqxt5",
+  "humanIncludedPoints": 1,
+  "consumerWorkflowNotYetPatched": true,
+  "lifecycleBranch": "codex/field-review-batching-lifecycle-20261017",
+  "qualifiedRheosSHA256": "85369213440634989365f75929045d36eb69b6c6b1e7679f68d483374a0d526b"
+}
