@@ -2792,3 +2792,44 @@ served B1–B3 proof follows. Independent current-source review, lawful readines
 RED/GREEN implementation and complete load/source qualification remain required
 before adoption. The full foreign owner/state leaves and ordinary operation
 observation grammar also remain open.
+
+## Restore shares the reconstruction work charge — 2026-10-17
+
+Native CodeRabbit finding4300412359 on72483642 identifies a missing propagation
+path in the version7 proposal. Restore reconstructs complete history and nested
+replacements, but the ordinary `finite-character-load/2` work-unit inventory
+did not name the new quantum charge. Empty-world replay could therefore avoid
+that charge after removal of the independent64-quantum ceiling.
+
+The proposed ordinary profile now includes `reconstruction-quantum-execution`.
+Restore and revocation reconstruction both reference the same canonical
+one-unit definition. Restore charges it once **before each actual replayed
+quantum**, including empty worlds, nested replacements and repeated execution,
+under the single outer restore whole-call work counter. A delegated rebuild
+helper uses that counter; delegation neither adds a second pool nor charges
+the same actual execution twice. All existing non-quantum work remains charged.
+Exhaustion refuses before the next quantum with
+`finite-work-budget-exceeded`, exact prior state and no exposed replacement.
+The ordinary advance clock and its100-step/backlog rule are unchanged; this
+charge applies to actual reconstruction, not to every ordinary clock step.
+
+The ordinary profile's work-unit **inventory changes**, while all numeric
+limits, the other calibration selections, physical laws and codecs remain
+unchanged. Two stale ABI references to the superseded64-quantum reconstruction
+ceiling now point to version7 work-bounded reconstruction. Their original
+bytes remain in Git history. Planned restore controls cover empty-world
+positive replay, work exhaustion before another quantum, and single-counter
+agreement across nested, repeated and partitioned reconstruction. These are
+fixture obligations; source parsing and source comparison do not execute them.
+
+The earlier whole-ledger wording is also corrected: on72483642 the ledger has
+133 physical rows. All114 post-base rows validate through Receipt River; four
+unchanged rows in the original19-row base retain legacy timestamp formats.
+The original base and published prefixes remain byte-identical. This is no
+claim of a133-row canonical validation pass and does not rewrite those rows.
+
+This corrects the existing bounded-reconstruction proposal without changing
+its numeric resource allowance or the conditional implementation allocation.
+Current-head reviews and native parser evidence are still required. Full
+owner/state leaves, ordinary observation grammar, estimate adoption, lawful
+Ready, implementation qualification and served B1–B3 proofs remain outstanding.

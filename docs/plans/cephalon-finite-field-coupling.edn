@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Declared proposal, not an executable schema or solver.
-{:proposal/version "cephalon-finite-field-coupling/2026-10-16-work-bounded-reconstruction"
+{:proposal/version "cephalon-finite-field-coupling/2026-10-17-restore-work-bounded-reconstruction"
  :proposal/status :unimplemented
  :proposal/owning-baseline "a2c64bee9878fef3abd2b38481b972e6aa29cd37"
  :task/physical-field "ff3e628b-cd5c-4a89-a397-42cc88dbde70"
@@ -451,6 +451,12 @@
             :retained-facts :complete-recall-outcome-pending-feedback-confirmation-and-once-only-identities-plus-physical-state-cursors-and-queue
             :nested-replacement :own-recorded-preceding-provenance-horizon-never-the-outer-current-tip
             :bounds :existing-reconstruction-caps-and-any-stricter-ordinary-call-cap-for-entire-call-no-reset-or-increase
+            :reconstruction-quantum-work
+            {:contract "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/budget/reconstruction-quantum-work"
+             :meter :single-outer-restore-whole-call-counter-under-finite-character-load-v2-and-any-stricter-existing-reconstruction-cap
+             :occurrence :charge-once-before-each-actual-main-nested-repeated-or-empty-world-replay-quantum-never-once-per-delegating-helper
+             :reused-rebuild-helper :same-outer-counter-no-second-pool-reset-discount-or-double-charge
+             :exhaustion :finite-work-budget-exceeded-with-exact-unchanged-prior-state-and-no-exposure}
             :history-failure :revision1-missing-or-ambiguous-rebuild-history-with-exact-unchanged-prior-state
             :external-effect-reexecution-or-post-return-catch-up :forbidden}
   :work :charge-all-actual-encode-validate-order-and-hash-work-under-the-existing-whole-call-or-rebuild-counter
@@ -469,6 +475,9 @@
              :qualified-independent-atomic-record-and-matching-snapshot-positive-restore-and-rebuild
              :outer-field-revision-and-component-mismatch-refused-without-invented-snapshot-field
              :wrong-codec-hash-cursor-opaque-bytes-or-string-refused
+             :empty-world-positive-quanta-restore-charges-every-actual-quantum
+             :empty-world-positive-quanta-restore-work-exhaustion-refuses-before-next-quantum-with-finite-work-budget-exceeded
+             :nested-repeated-and-partitioned-restore-shares-one-counter-and-charges-each-actual-quantum-once
              :complete-checkpoint-argument-exact1048756-and-one-over
              :payload-under-cap-but-complete-wrapper-one-over-refused]}
  :causal-entry-authority
@@ -786,7 +795,7 @@
                                 :other-arguments-and-framing-aggregate-encoded-bytes 524288
                                 :successful-state-continuation :required-before-atomic-exposure
                                 :work-units-per-call 67108864
-                                :work-unit [:entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
+                                :work-unit [:reconstruction-quantum-execution :entity-update-visit :layer-cell-visit :eligible-pair-evaluation :contribution-application
                                             :input-code-unit-processed :utf8-byte-processed-per-operand :trace-append
                                             :trie-edge-visit :distinct-trie-node-creation :fixed-trie-branch-probe :emitted-key]
                                 :canonical-order-work "finite-order-work/1"
@@ -1024,6 +1033,7 @@
            :reconstruction-quantum-work
            {:unit :reconstruction-quantum-execution :cost 1
             :when :before-every-actual-replayed-quantum
+            :applicable-operations [:restore :rebuild-revocation]
             :scope :all-main-nested-and-repeated-reconstruction-in-one-outer-invocation
             :existing-work :additional-to-all-existing-entity-cell-pair-contribution-byte-order-trace-and-output-charges-never-a-replacement
             :empty-world :still-charge-one-before-every-quantum-even-with-no-entities-bonds-cells-contacts-or-observations

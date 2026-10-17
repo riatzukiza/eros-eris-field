@@ -1,5 +1,5 @@
 ;; GPL-3.0-or-later. Proposed interface data; not an executable schema or API.
-{:proposal/version "cephalon-physical-kernel/2026-10-16-work-bounded-reconstruction"
+{:proposal/version "cephalon-physical-kernel/2026-10-17-restore-work-bounded-reconstruction"
  :proposal/status :unimplemented
  :source/base "3af779f3ec306834710719ccb46f49370343eed9"
  :selection/repository "riatzukiza/foresight"
@@ -498,7 +498,7 @@
   :checkpoint :both-cursors-and-entire-ordered-queue-including-complete-originals-schedules-and-current-dispositions-enter-existing-state-and-snapshot-hash
   :restore-and-catch-up :validate-entire-retained-queue-history-and-current-authority-before-use-no-pending-event-loss-early-application-or-cancelled-influence-reactivation
   :refusals :existing-missing-gap-duplicate-conflict-unknown-history-authority-source-and-finite-limit-reasons-and-precedence-whole-prior-state-unchanged-no-partial-replacement
-  :bounds :all-complete-repeated-values-source-custody-decoding-validation-hashing-and-serialization-under-existing-ordinary100-and-summed-reconstruction64-quanta-event-byte-input-state-checkpoint-work-time-and-continuation-caps-no-new-budget-or-discount
+  :bounds :all-complete-repeated-values-source-custody-decoding-validation-hashing-and-serialization-under-existing-ordinary100-and-version7-work-bounded-reconstruction-event-byte-input-state-checkpoint-work-time-and-continuation-caps-no-new-budget-or-discount
   :closure :owned-record-and-two-disposition-variants-only-every-owner-leaf-source-producer-history-admission-and-whole-call-commit-exposure-protection-still-needs-qualification-before-consumption
   :existing-controls "docs/plans/cephalon-finite-field-coupling.edn#retained-revocation/history-controls"}
  :inclusion-fold-state
@@ -1413,7 +1413,7 @@
   :structurally-invalid-budget :existing-invalid-recall-request-revision1-refusal-with-original-byte-authority-and-request-precedence-preserved
   :lifecycle :request-lifecycle-contract-selects-only-after-all-guards-full-target-completion-plus-positive-limit-equality-can-select-exhausted-counter-equality-alone-or-overflow-cannot
   :ordinary-elapsed-time :unchanged-backlog-law-otherwise-admissible101-quantum-world-input-executes100-and-retains-one-backlog-quantum-with-existing-active-horizon-and-resource-obligations-still-required-no-elapsed-over100-rejection-rule
-  :recovery :original64-summed-reconstruction-quantum-limit-and-all-other-rebuild-bounds-still-independent-no-request-budget-reset-discount-or-extra-replay-credit
+  :recovery :version7-each-actual-replayed-quantum-charges-shared-whole-call-work-with-all-other-rebuild-bounds-still-independent-no-request-budget-reset-discount-or-extra-replay-credit
   :input-and-state :all-budget-map-and-retained-copy-bytes-validated-and-charged-under-existing-input-state-checkpoint-history-work-and-continuation-caps
   :readiness :caller-binding-actual-counter-and-cut-producer-and-selected-lifecycle-refusal-precedence-zero-exact-one-over-and-split-replay-controls-must-qualify-before-consumption}
  :request-lifecycle-contract
@@ -2770,6 +2770,12 @@
              :checkpoint-decoding :shared-pure-validation-never-recursively-calls-public-restore-or-fetches-owners
              :exposure :only-complete-reconciled-current-state-and-cursors-after-all-existing-authority-identity-and-history-checks
              :limits :all-actual-reconstruction-and-explicit-closure-share-existing-caps-and-any-stricter-ordinary-call-cap-no-reset-or-increase
+             :reconstruction-quantum-work
+             {:contract "docs/plans/cephalon-finite-field-coupling.edn#snapshot-codec/restore/reconstruction-quantum-work"
+              :unit :reconstruction-quantum-execution
+              :counter :same-single-outer-restore-whole-call-work-counter-including-empty-world-main-nested-and-repeated-replay
+              :when :once-before-every-actual-replayed-quantum-not-per-helper
+              :exhaustion :finite-work-budget-exceeded-with-exact-unchanged-prior-state-before-exposure}
              :historical-copy-partial-exposure-or-post-return-catch-up :forbidden
              :missing-stale-truncated-foreign-conflicting-forward-or-cyclic-history :missing-or-ambiguous-rebuild-history
              :fixtures [:checkpoint-then-complete-recall-and-confirm-outcome-then-restore-older-checkpoint
@@ -2780,6 +2786,9 @@
                         :empty-tail-current-checkpoint-positive :truncated-tail-and-changing-tip-refuse-before-exposure
                         :pre-recorded-current-restore-with-qualified-immediate-predecessor-positive
                         :self-inclusive-current-restore-or-unestablished-predecessor-refuses-before-exposure
+                        :empty-world-positive-quanta-restore-charges-every-actual-quantum
+                        :empty-world-positive-quanta-restore-work-exhaustion-refuses-before-next-quantum-with-finite-work-budget-exceeded
+                        :nested-repeated-and-partitioned-restore-shares-one-counter-and-charges-each-actual-quantum-once
                         :all-existing-exact-and-one-over-input-history-work-and-continuation-controls]}
             :validates [:separately-trusted-persisted-checkpoint-digest-and-binding
                         :kernel-revision :config-revision :config-hash :complete-physical-configuration

@@ -1,0 +1,79 @@
+{
+  "schema": "cephalon.source-observation/1",
+  "epistemic_tier": "observed-source-and-command-output-transcription-with-derived-comparison",
+  "observed_at": "2026-10-17T00:19:49.506338+00:00",
+  "published_head": "72483642d998ca5f64bc56feca3acfc3fec8939b",
+  "base": "a2c64bee9878fef3abd2b38481b972e6aa29cd37",
+  "source_status": "uncommitted-successor-plan-not-implementation-or-qualification",
+  "native_finding": {
+    "id": 4300412359,
+    "review_id": 5554978183,
+    "review_state": "COMMENTED",
+    "finding_raw_sha256": "88ce28d0711619dbf506b3b81accbd3c22b1daa8d1a28bce7a4f52ac47cf1779",
+    "request": 6227072325,
+    "completion": 6227073505,
+    "summary": 6176077032,
+    "completed_at": "2026-10-17T00:09:54Z",
+    "verdict": "finding-bearing-not-approval"
+  },
+  "changes": [
+    "Restore consumes same canonical cost1 reconstruction-quantum-execution charge before every actual replay quantum under its single outer work counter.",
+    "Ordinary finite-character-load/2 work-unit inventory gains that kind; numeric limits and all other calibration selections remain unchanged.",
+    "Empty-world/main/nested/repeated replay and helper delegation share meter without new pool, reset, free execution or double charge.",
+    "Three future restore controls require actual positive charging, exhaustion before next quantum and nested/repeated/partitioned counter agreement.",
+    "Two stale current ABI64-quantum references now use version7 shared-work binding; original history preserved."
+  ],
+  "verification": {
+    "existing_parser": {
+      "command": "bb existing-parser.clj (verbatim existing workflow parser)",
+      "local_babashka": "1.12.207",
+      "controls": 8,
+      "both_maps": "PASS",
+      "stderr_bytes": 0
+    },
+    "complete_source_comparison": {
+      "result": "PASS",
+      "stderr_bytes": 0,
+      "scope": "Only explicitly enumerated restore charge links, work-unit kind, three control names, two stale references and proposal descriptive revisions; entire remaining parsed maps equal exact parent copies."
+    },
+    "preparation_failure": "Private comparison first used pending-event-state-carrier instead of actual pending-event-state; assertion failed, corrected helper path and added nonnil guards. Original stderr retained; not a physical domain RED."
+  },
+  "ledger_wording_correction": {
+    "physical_rows_at_parent": 133,
+    "original_base_rows": 19,
+    "validated_post_base_rows": 114,
+    "legacy_format_rows_in_unchanged_base": [
+      9,
+      10,
+      11,
+      17
+    ],
+    "historical_rows_rewritten": false,
+    "native_description_correction_sha256": "a1a7c6f733ad3ed407be579c3a230ba6eba46d1c77fb0ca61e0b2cb17fd8cc22",
+    "whole_ledger_canonical_claim": false
+  },
+  "source_files": [
+    {
+      "path": "docs/plans/cephalon-finite-field-coupling.edn",
+      "bytes": 95390,
+      "sha256": "21d76d44813585b963013882a48e3b090dc14df2bef5b57d5eb0ae32ef43572c"
+    },
+    {
+      "path": "docs/plans/cephalon-physical-kernel-abi.edn",
+      "bytes": 271360,
+      "sha256": "efda94793335fcc40962e3876866b970403531ad4a01f450744b849156207c07"
+    },
+    {
+      "path": "docs/plans/2026-10-14-cephalon-finite-physical-coupling.md",
+      "bytes": 227565,
+      "sha256": "5641ba1dee339c399d4d809b05fded304b8aa40e237a43dec43ed8d8e87a3de4"
+    }
+  ],
+  "limits": [
+    "No domain RED/GREEN, physical replay, resource measurement, Ready/adoption, current-successor review or served proof.",
+    "Current published724 model review retained in flight; no replacement invocation.",
+    "Old native P1 quantum mismatch root4290131881 settled separately via writer reply4300407440 on724; does not settle new restore finding.",
+    "Owner/state leaf, observation grammar and conditional allocation obligations remain open.",
+    "Goal ACTIVE;0of3served proofs; heartbeat human-paused."
+  ]
+}
