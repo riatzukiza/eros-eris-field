@@ -2217,6 +2217,7 @@
   :root-population-and-order "docs/plans/cephalon-physical-kernel-abi.edn#ordinary-observation-carrier/groups"
   :ValueNodeVector
   {:container :ordered-vector :index :exact-safe-nonnegative-integer-zero-based
+   :index-zero :canonical-positive-zero-only-no-negative-zero-fractional-or-coerced-reference
    :node {:kind :closed-discriminated-tuple :discriminator-index 0
           :variants
           {:scalar {:tuple [:scalar :value] :length 2
@@ -2276,6 +2277,7 @@
                     :different-map-insertion-orders-identical-table-and-packet-bytes
                     :repeated-equal-root-occurrences-retained-and-counted
                     :duplicate-unused-forward-self-cyclic-foreign-or-noncanonical-node-refused
+                    :negative-zero-fractional-negative-or-out-of-range-node-and-root-index-refused
                     :small-encoded-table-with-overexpanding-root-refused-before-large-materialization
                     :wrong-expanded-record-shape-and-missing-source-custody-refused
                     :one-quantum-unsplit-split-catch-up-restored-identical-packets
