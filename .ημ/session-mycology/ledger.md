@@ -143,3 +143,23 @@
 - Actual receiver source inspection answers the new pinned-environment question without reading secret values. Complete ac2 MiMo approval remains historical once this concrete fix advances head. CodeRabbit automatic6-input review explicitly skipped two inputs and grants no full review credit.
 - Original receipt, reflection and raw native review bytes remain intact. Fixes need their own fresh full review and hosted qualification, followed by native Rheos gates; they support B1 and do not finish B1/B2/B3.
 - No spore incubated/promoted; no runtime/publication/deployment operation; heartbeat paused.
+
+- ts: 2026-10-17T07:41:50.454Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: b5f2ba9e-8d67-4c73-9919-e275983aca87/accepted finite B1-B3
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-owning-selection-index-ack-20261017
+  note: Prepare the already required owning-plan acknowledgement for existing3point kernel-selection cardb5, which explicitly leaves executedsolver/calibration/collision/selectedbytepermissions/distribution as successor obligations. ActualFieldmainstillacknowledgesoriginal6a; currentcoordinator020signed-cellamendmentmerged8c withidenticaltree. Add explicit currentdecision/merge/originalprovenance and signedfield-cell-onlysafeintegerrange, while allotherABIvalues and positivecount/time/wallet/RNG ranges remainexact. Owningmodulelaw/shape/domain and OpenPlannerstorage/Knoxxcharacter independentauthority unchanged. No newtask/point/solver/worldmodel/numericprofile/forcecode/Rheosparser or sourcepermission claim. StaticNBBparsedold/newandrestoringonlydeclaredmetadata/exceptionsgivesexactbaselinevalue; kondo0/0/hygienePASS. No executablephysicaltestingorNode22.20runtimechange; processlocalNode22.23.3orproviderreviewisnotphysicalprofilequalification. RootqualifiedRheosactualplancomment/readbackleavesb5Incomingandbody/points/edgespriorcomments/eventsintact; ownreview/sourceMERGE/upstreamnativeadmission/readinessstillrequired. ReusedFieldworkingtreeonly: exactoldField2held149journalfilesstoredprivatelyandinnamedownedstashf8d96879, verifiedGitstashfilebytes; original8cbranchunchanged. Newmain-basedselectionbranchhasownbaseprefix; neverapplyField2-onlyjournalstoit; retainstashwithoutdropandrestoreexactbytesonoldbranchwhenreturning. Field2P1/P2stillopen/no fullstateorrestore/rebuildadoption/approvaltransfer. Field60minworkflowconsumerremainsinoldPR2history8cunchanged; thisackPRdoesnottouchreviewworkflow orconsumeunqualifiednewAPI. Originalsource6filesarelayoutdonor, notfullForkTalesconformance; allnamedmechanics/privatecausalprotectionstillrequiredinownsuccessors. No fullcopy/install, credentials/paid/globalNode/runtime/maker/clock/owner/cloud/deploy/social/heartbeat/sporechange. GoalACTIVE/served0of3/heartbeatHUMANpaused.
+
+- ts: 2026-10-17T07:42:33.311Z
+  session: /home/err/spaces/cephalon-field-kernel/eros-eris-field
+  task: Existingb5 selection owning acknowledgement
+  p-efficiency: 0.8
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  receipt-refs: cephalon-field-selection-ack-comparison-command-correction-20261017
+  note: Correction: first nbb -e command also supplied positional filenames; actual CLI selected/printed the first EDN file instead of executing the intended comparison. Its exit0/oldmap output did not prove before/after equality, contrary to receipt20 narrative. Preserve that operator error and20 unchanged. Execute the same static comparison via an actual private .cljs entrypoint with two arguments; actual process0/stderr0 and exactPASS line now prove all data equal after restoring only declaredselectionmetadata and signedcell exception; positiveotherinteger ranges remain. Existing realkondo0/0/hygiene result unchanged. No source edit, physicalkernel execution/testing, newcap/point/Ready/policy/credential/runtime/paid/model/heartbeatchange or inventedGatepass. New source acknowledgement stillrequiresactualfullinputreview/MERGE/nativehandoff; Field2allfailures/stash149 remainuntouched. No spore.
