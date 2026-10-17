@@ -252,7 +252,7 @@ JS strings/arrays/objects convert at the adapter boundary to Clojure data. Nativ
 provider and storage output is untrusted input. Both sides of replaceable seams
 are validated. ABI refusal reason names remain explicit and revisioned.
 
-The nine entries in `:state-transition-result :applies-to` use revision1 success
+The nine entries in `:state-transition-result :applies-to` use revision2 success
 exactly `{:status S :result P}` and refusal exactly `{:status :refused :state PRIOR
 :reason R :reason-revision 1}`. The actual entrypoint selects its exact closed
 payload keys/types/status in the ABI's `:success :by-operation` table. There is no

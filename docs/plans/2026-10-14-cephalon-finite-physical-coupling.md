@@ -1309,7 +1309,7 @@ without it, refuse. The pure kernel performs no authority I/O or second policy
 evaluation. All added authority arguments count in the existing512KiB remaining
 argument/framing bound, with the same3.5MiB maximum continuation carrier.
 
-All nine transition entries, including checkpoint, use the exact revision1 shared
+All nine transition entries, including checkpoint, use the exact revision2 shared
 ABI union: success `{:status S :result P}` with the invoked entrypoint's exact
 closed payload keys, or refusal `{:status :refused :state PRIOR :reason R
 :reason-revision 1}` without result/partial payload. Admitted applies to admission,
