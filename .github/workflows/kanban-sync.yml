@@ -5,8 +5,8 @@ on:
     branches: [main]
     paths:
       - 'kanban/**'
-  schedule:
-    - cron: "0 */6 * * *"
+  # The operational board is owned by Foresight; no local kanban board exists.
+  # Restore a schedule only with a real board and matching pinned eta-mu-ref.
   workflow_dispatch:
     inputs:
       dry_run:
